@@ -253,7 +253,7 @@ export default function HomePage() {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy/60 to-transparent" />
 
-        <div className="container-custom relative z-10 pt-36 pb-20 lg:pt-44 lg:pb-28">
+        <div className="container-custom relative z-10 pt-24 pb-20 lg:pt-32 lg:pb-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             {/* Left — text content */}
