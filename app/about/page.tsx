@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TeacherCard from "@/components/TeacherCard";
 import CTASection from "@/components/CTASection";
+import { Users, Award, Globe, Heart, BarChart2, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Ease Quran Online Academy | Wifaq ul Madaris Certified Teachers",
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     title: "About Ease Quran Online Academy | Wifaq ul Madaris Certified Teachers",
     description:
       "Learn about Ease Quran Online Academy, founded by Shah Zaib — certified from Wifaq ul Madaris. Our mission is to bring trusted Quran education to Muslim families across the USA.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -37,19 +38,19 @@ const founderSchema = {
 
 const values = [
   {
-    icon: "🤝",
+    icon: Users,
     title: "Trust",
     description:
       "Every teacher at Ease Quran is personally vetted and holds a recognized Islamic credential. We understand that inviting a teacher into your home—even virtually—requires complete confidence. We earn that trust every single day.",
   },
   {
-    icon: "🏆",
+    icon: Award,
     title: "Excellence",
     description:
       "We hold our teachers to the highest academic and pedagogical standards. Certification from Wifaq ul Madaris Al-Arabia is the baseline—not the ceiling. Continuous improvement and student progress are what drive us.",
   },
   {
-    icon: "🌍",
+    icon: Globe,
     title: "Accessibility",
     description:
       "Geography should never be a barrier to learning the Quran. Whether you're in New York, California, Texas, or a small town with no Islamic center nearby, we bring qualified Quran education directly to your home via a simple video call.",
@@ -58,19 +59,19 @@ const values = [
 
 const philosophyCards = [
   {
-    icon: "🕊️",
+    icon: Heart,
     title: "Patience Above All",
     description:
       "Every student learns at their own pace. Our teachers are trained to meet students where they are—whether that's a 5-year-old learning their first Arabic letters or an adult reciting the Quran for the very first time. Frustration has no place in our classrooms.",
   },
   {
-    icon: "📈",
+    icon: BarChart2,
     title: "Measurable Results",
     description:
       "We track every student's progress and provide regular updates to parents. From pronouncing individual letters correctly to completing full Surahs with proper Tajweed, every milestone is celebrated and documented.",
   },
   {
-    icon: "☪️",
+    icon: BookOpen,
     title: "Islamic Values First",
     description:
       "Quran education is not just about reading—it's about building a relationship with the Book of Allah. We embed Islamic values, manners, and love for the Quran into every lesson, nurturing students who don't just read but understand and connect.",
@@ -137,16 +138,21 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((v) => (
+            {values.map((v) => {
+              const Icon = v.icon;
+              return (
               <div
                 key={v.title}
                 className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
               >
-                <div className="text-4xl mb-4">{v.icon}</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-5">
+                  <Icon size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">{v.title}</h3>
                 <p className="text-grey text-sm leading-relaxed">{v.description}</p>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -310,16 +316,21 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {philosophyCards.map((card) => (
+            {philosophyCards.map((card) => {
+              const Icon = card.icon;
+              return (
               <div
                 key={card.title}
                 className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100 text-center"
               >
-                <div className="text-5xl mb-5">{card.icon}</div>
+                <div className="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center mb-5 mx-auto">
+                  <Icon size={26} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">{card.title}</h3>
                 <p className="text-grey text-sm leading-relaxed">{card.description}</p>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

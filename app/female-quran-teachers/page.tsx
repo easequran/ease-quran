@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { User, Users, CheckCircle, BookOpen } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     title: "Female Quran Teacher Online USA | Sister Quran Teacher | Ease Quran",
     description:
       "Certified female Quran teacher online for women and children across the USA. Sister Almas Fatima — Qaria e Quran, available for sisters now.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -326,37 +327,42 @@ export default function FemaleQuranTeachersPage() {
                   name: "Quran for Kids",
                   desc: "Designed for young learners aged 4 and up — Sister Almas makes early Quran education fun, gentle, and progressive. Children quickly feel comfortable with her patient, encouraging style.",
                   href: "/courses/noorani-qaida",
-                  icon: "👧",
+                  icon: User,
                 },
                 {
                   name: "Tajweed — Quran Recitation",
                   desc: "Systematic Tajweed instruction from beginner through advanced levels. Sister Almas herself is a certified Qaria e Quran — meaning she has mastered the rules of recitation and teaches them with expert precision.",
                   href: "/courses/tajweed",
-                  icon: "📖",
+                  icon: BookOpen,
                 },
                 {
                   name: "Noorani Qaida",
                   desc: "The ideal starting course for any beginner — children or adults. Learn Arabic letters, vowels, and Quran reading fundamentals under Sister Almas's careful, structured guidance.",
                   href: "/courses/noorani-qaida",
-                  icon: "✏️",
+                  icon: BookOpen,
                 },
                 {
                   name: "Islamic Studies",
                   desc: "Core Islamic knowledge including beliefs, the five pillars, prayer, manners, and Seerah. Sister Almas teaches Islamic Studies in an age-appropriate way that resonates deeply with young Muslim girls in the West.",
                   href: "/courses/islamic-studies",
-                  icon: "🕌",
+                  icon: CheckCircle,
                 },
-              ].map((course) => (
+              ].map((course) => {
+                const Icon = course.icon;
+                return (
                 <Link
                   key={course.name}
                   href={course.href}
                   className="group bg-white hover:bg-navy rounded-2xl p-8 shadow-sm border border-gray-100 hover:border-navy transition-all duration-200"
                 >
-                  <div className="text-4xl mb-4">{course.icon}</div>
+                  <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                    <Icon size={22} className="text-gold" />
+                  </div>
                   <h3 className="font-playfair font-bold text-xl text-navy group-hover:text-gold mb-3 transition-colors">{course.name}</h3>
                   <p className="text-grey group-hover:text-white/70 text-sm leading-relaxed transition-colors">{course.desc}</p>
                 </Link>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
@@ -376,21 +382,27 @@ export default function FemaleQuranTeachersPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center p-8 bg-offwhite rounded-2xl border border-gray-100">
-                <div className="text-5xl mb-5">👧</div>
+                <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-5 mx-auto">
+                  <User size={28} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Girls of All Ages</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   From young girls aged 4 starting with their first Arabic letters, to teenage girls working on Tajweed or Hifz — Sister Almas teaches girls at every stage with patience, skill, and Islamic wisdom.
                 </p>
               </div>
               <div className="text-center p-8 bg-offwhite rounded-2xl border border-gray-100">
-                <div className="text-5xl mb-5">👩</div>
+                <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-5 mx-auto">
+                  <Users size={28} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Sisters (Adult Women)</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Adult Muslim women who are learning Quran for the first time, improving their recitation, or returning to Quran education after many years are warmly welcomed. Age is never a barrier — it is never too late to begin.
                 </p>
               </div>
               <div className="text-center p-8 bg-offwhite rounded-2xl border border-gray-100">
-                <div className="text-5xl mb-5">🧒</div>
+                <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-5 mx-auto">
+                  <User size={28} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Children from Age 4</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Very young children — boys and girls — can begin with Sister Almas from around age 4. She specializes in making early Quran education engaging and gentle for the youngest learners, building strong foundations from the very beginning.

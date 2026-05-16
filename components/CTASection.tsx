@@ -22,7 +22,7 @@ export default function CTASection({
     <section className="bg-navy section-padding">
       <div className="container-custom text-center">
         <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
-          🇺🇸 Serving Families Across All 50 States
+          Serving Families Across All 50 States
         </span>
         <h2 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-5 leading-tight max-w-3xl mx-auto">
           {headline}

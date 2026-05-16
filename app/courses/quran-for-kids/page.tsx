@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BookOpen, Star, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes for Kids in USA | Ease Quran",
     description:
       "Fun, structured online Quran classes for children ages 4–14. Certified teachers, female teachers available. Book a free trial class today.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -320,30 +321,34 @@ export default function QuranForKidsPage() {
               {
                 age: "Ages 4–7",
                 label: "Early Beginners",
-                icon: "🌱",
+                icon: Star,
                 desc: "Children at this age begin with letter recognition, sounds, and basic Arabic through interactive games and visual aids. Classes are 20–25 minutes and highly engaging.",
                 points: ["Arabic letter sounds", "Coloring and tracing activities", "Islamic songs and rhymes", "Noorani Qaida Part 1"],
               },
               {
                 age: "Ages 8–12",
                 label: "Intermediate Learners",
-                icon: "📚",
+                icon: BookOpen,
                 desc: "Children who can concentrate for longer sessions. This group works through Noorani Qaida, Quran reading, and begins Surah memorization with proper Tajweed.",
                 points: ["Complete Noorani Qaida", "Begin Quran reading from Juz Amma", "Basic Tajweed rules", "Memorize 10+ short Surahs"],
               },
               {
                 age: "Ages 13+",
                 label: "Teen Level",
-                icon: "🎓",
+                icon: GraduationCap,
                 desc: "Teens ready for a more academic approach. This level covers Quran reading with Tajweed, extended memorization, and can move toward Hifz if desired.",
                 points: ["Fluent Quran recitation", "Full Tajweed rules", "Extended Surah memorization", "Pathway to Hifz program"],
               },
-            ].map((card) => (
+            ].map((card) => {
+              const Icon = card.icon;
+              return (
               <div
                 key={card.age}
                 className="bg-offwhite rounded-2xl p-7 border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="text-4xl mb-3">{card.icon}</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-3">
+                  <Icon size={22} className="text-gold" />
+                </div>
                 <div className="text-gold text-xs font-bold uppercase tracking-widest mb-1">{card.age}</div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">{card.label}</h3>
                 <p className="text-grey text-sm leading-relaxed mb-4">{card.desc}</p>
@@ -356,7 +361,8 @@ export default function QuranForKidsPage() {
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

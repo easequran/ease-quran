@@ -4,6 +4,7 @@ import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
+import { BookOpen, Heart, GraduationCap } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Online Hifz Program | Quran Memorization Classes USA",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Online Hifz Program | Quran Memorization Classes USA",
     description:
       "Structured online Hifz program for kids and adults. Certified teachers, proven memorization methods. Serving Muslim families across the USA.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -276,29 +277,33 @@ export default function HifzPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                icon: "📖",
+                icon: BookOpen,
                 title: "Children With a Strong Reading Foundation",
                 desc: "Children who can read the Quran fluently with basic Tajweed are ready to begin Hifz. The younger the child starts, the faster the memorization — ages 7–12 are the ideal window.",
                 points: ["Must read Quran fluently", "Age 7 minimum recommended", "Ages 7–12 ideal for Hifz", "Parental support essential"],
               },
               {
-                icon: "🙏",
+                icon: Heart,
                 title: "Adults With a Sincere Intention",
                 desc: "Adults who have always wanted to memorize the Quran but never had the right structure or teacher. Our program is adapted for adult learners who have limited time but strong commitment.",
                 points: ["Reading fluency required", "Minimum 30 min daily practice", "Flexible class scheduling", "Long-term commitment needed"],
               },
               {
-                icon: "🎓",
+                icon: GraduationCap,
                 title: "Students Who Completed Noorani Qaida",
                 desc: "Students who recently completed Noorani Qaida or our Quran reading course and are now ready to take on the extraordinary challenge and blessing of Quran memorization.",
                 points: ["Completed Quran reading", "Basic Tajweed knowledge", "Ready for structured program", "Motivated to memorize"],
               },
-            ].map((card) => (
+            ].map((card) => {
+              const Icon = card.icon;
+              return (
               <div
                 key={card.title}
                 className="bg-offwhite rounded-2xl p-7 border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="text-4xl mb-3">{card.icon}</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Icon size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">{card.title}</h3>
                 <p className="text-grey text-sm leading-relaxed mb-4">{card.desc}</p>
                 <ul className="space-y-1.5">
@@ -310,7 +315,8 @@ export default function HifzPage() {
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

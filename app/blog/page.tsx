@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Quran & Islamic Education Blog | Ease Quran Academy",
     description:
       "Read articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and how to choose the best online Quran academy for your family.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 

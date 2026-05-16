@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in Chicago, Illinois | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in Chicago, IL. Serving Bridgeview, Orland Park, north suburbs, and all Chicagoland.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -199,21 +200,27 @@ export default function ChicagoPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">❄️</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Navigation size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">No Chicago Winter Disruptions</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Chicago winters are legendary — and they regularly disrupt in-person activities for months at a time. With online Quran classes, a snowstorm, polar vortex, or icy roads will never interrupt your child's lessons. Learning continues year-round, regardless of the forecast.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🗺️</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Calendar size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Serving All of Chicagoland Equally</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Whether you're in Bridgeview, Schaumburg, Evanston, or the South Side, you get the same quality of certified instruction. Families in the north suburbs no longer have to choose between a long drive to the southwest suburbs or settling for an unqualified local option.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">📖</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">True One-on-One Instruction</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Chicago's popular Islamic schools often have excellent reputations but limited capacity. Waitlists are common and class sizes can be large. Every Ease Quran session is a private lesson — your child's teacher is focused entirely on them, tracking individual progress and adapting to their specific needs every single class.

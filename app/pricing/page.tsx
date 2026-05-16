@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Online Quran Class Pricing Plans | Ease Quran Academy",
     description:
       "Affordable online Quran class pricing. Plans from $40/month. Free first trial class. Wifaq ul Madaris certified teachers. Serving Muslim families in USA.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 

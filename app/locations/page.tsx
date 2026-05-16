@@ -15,70 +15,60 @@ const cities = [
     href: "/locations/new-york",
     state: "NY",
     desc: "Serving 800,000+ Muslim families across all 5 boroughs",
-    icon: "🗽",
   },
   {
     name: "Houston",
     href: "/locations/houston",
     state: "TX",
     desc: "One of the fastest-growing Muslim communities in Texas",
-    icon: "🤠",
   },
   {
     name: "Chicago",
     href: "/locations/chicago",
     state: "IL",
     desc: "Top 5 Muslim city in the USA — 400,000+ strong",
-    icon: "🌆",
   },
   {
     name: "Los Angeles",
     href: "/locations/los-angeles",
     state: "CA",
     desc: "Serving a diverse Muslim community of 500,000+",
-    icon: "🌴",
   },
   {
     name: "New Jersey",
     href: "/locations/new-jersey",
     state: "NJ",
     desc: "Paterson, Jersey City, Edison and beyond",
-    icon: "🏙️",
   },
   {
     name: "Dearborn, Michigan",
     href: "/locations/dearborn-michigan",
     state: "MI",
     desc: "Highest concentration of Arab Americans in the USA",
-    icon: "🕌",
   },
   {
     name: "Dallas",
     href: "/locations/dallas",
     state: "TX",
     desc: "Richardson, Plano, Irving and the DFW metro",
-    icon: "⭐",
   },
   {
     name: "Philadelphia",
     href: "/locations/philadelphia",
     state: "PA",
     desc: "Serving a rich and historic Muslim community",
-    icon: "🔔",
   },
   {
     name: "Atlanta",
     href: "/locations/atlanta",
     state: "GA",
     desc: "One of the fastest-growing Muslim communities in the South",
-    icon: "🍑",
   },
   {
     name: "Columbus, Ohio",
     href: "/locations/columbus-ohio",
     state: "OH",
     desc: "Home to one of the largest Somali communities in the USA",
-    icon: "🌸",
   },
 ];
 
@@ -89,7 +79,6 @@ export default function LocationsPage() {
       <section className="bg-navy pt-36 pb-20">
         <div className="container-custom text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 text-white text-xs px-4 py-2 rounded-full mb-5 border border-white/20">
-            <span>🇺🇸</span>
             <span>Available in All 50 States</span>
           </div>
           <h1 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-5 leading-tight">
@@ -120,23 +109,20 @@ export default function LocationsPage() {
               <Link
                 key={city.href}
                 href={city.href}
-                className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-xl transition-all duration-300 flex items-start gap-4"
+                className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-xl transition-all duration-300"
               >
-                <div className="text-4xl shrink-0">{city.icon}</div>
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-playfair font-bold text-lg text-navy group-hover:text-gold transition-colors">
-                      {city.name}
-                    </h3>
-                    <span className="text-xs font-semibold text-grey bg-offwhite px-2 py-0.5 rounded-full">
-                      {city.state}
-                    </span>
-                  </div>
-                  <p className="text-grey text-sm leading-relaxed">{city.desc}</p>
-                  <span className="text-gold text-xs font-semibold mt-2 inline-block group-hover:underline">
-                    View classes →
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="font-playfair font-bold text-lg text-navy group-hover:text-gold transition-colors">
+                    {city.name}
+                  </h3>
+                  <span className="text-xs font-semibold text-grey bg-offwhite px-2 py-0.5 rounded-full">
+                    {city.state}
                   </span>
                 </div>
+                <p className="text-grey text-sm leading-relaxed mb-3">{city.desc}</p>
+                <span className="text-gold text-xs font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                  View Quran classes →
+                </span>
               </Link>
             ))}
           </div>

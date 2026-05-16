@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BookOpen, Heart } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Learn Arabic Online | Arabic Language Classes USA",
     description:
       "Online Arabic language classes for English speakers. Classical and conversational Arabic. Understand the Quran in its original language. Free trial class.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -275,29 +276,33 @@ export default function ArabicLanguagePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                icon: "🕌",
+                icon: BookOpen,
                 title: "Muslims Who Want to Understand the Quran Directly",
                 desc: "You recite the Quran in Salah but do not understand what you are saying. This course changes that — building a direct connection between the words you recite and their meaning.",
                 points: ["Can already read Arabic script", "Wants deeper Quranic connection", "Understand Salah prayers", "All ages from 12+"],
               },
               {
-                icon: "📚",
+                icon: BookOpen,
                 title: "Students With Basic Quran Reading Skills",
                 desc: "Students who have completed Noorani Qaida or can read the Quran are ideally positioned to start Arabic language study. Reading skill is the prerequisite — vocabulary and grammar come next.",
                 points: ["Completed Noorani Qaida", "Can read Arabic text", "Ready for deeper learning", "Teens and adults"],
               },
               {
-                icon: "❤️",
+                icon: Heart,
                 title: "Adults Wanting a Deeper Connection with Islam",
                 desc: "Many Muslim adults feel disconnected from their faith partly because they cannot understand the Quran's words. Learning Arabic transforms your relationship with the Quran, Salah, and Islamic learning.",
                 points: ["Any adult, any background", "No time pressure", "Flexible scheduling", "Transformative experience"],
               },
-            ].map((card) => (
+            ].map((card) => {
+              const Icon = card.icon;
+              return (
               <div
                 key={card.title}
                 className="bg-offwhite rounded-2xl p-7 border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="text-4xl mb-3">{card.icon}</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-3">
+                  <Icon size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">{card.title}</h3>
                 <p className="text-grey text-sm leading-relaxed mb-4">{card.desc}</p>
                 <ul className="space-y-1.5">
@@ -309,7 +314,8 @@ export default function ArabicLanguagePage() {
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

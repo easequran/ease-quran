@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in Philadelphia, Pennsylvania | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families across Philadelphia and the surrounding suburbs — serving a proud and historic Muslim community.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -199,21 +200,27 @@ export default function PhiladelphiaPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🏙️</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Navigation size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Serving City and Suburb Equally</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Whether you're in West Philadelphia, Northeast Philly, Cherry Hill, or Montgomery County — you get the same quality of certified instruction online. Geography within the metro area is no longer a factor in determining the quality of your child's Quran education.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🎓</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Calendar size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Honoring a Tradition of Islamic Education</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Philadelphia's Muslim community has always placed a high value on Islamic knowledge and Quran education. Ease Quran upholds that tradition — connecting families to certified scholars who take the teaching of the Quran as seriously as Philadelphia's Muslim community does.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🤲</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Welcoming Adults and Children Equally</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Many Philadelphia adults — particularly in the African American Muslim community — are returning to Quran education or beginning for the first time as adults. Our teachers create an environment of warmth and encouragement, welcoming every student regardless of age or prior experience.

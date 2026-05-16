@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in Dallas, Texas | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in Dallas-Fort Worth — serving Richardson, Plano, Irving, and all DFW suburbs.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -199,21 +200,27 @@ export default function DallasPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🛣️</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Navigation size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Skip the DFW Highway Maze</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   The DFW Metroplex is enormous and the highways are consistently congested. Driving your child to an Islamic center across town after school or work is a real time cost. Online classes eliminate that entirely — your child opens Zoom at home, and the lesson begins, right on schedule.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">📈</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Calendar size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Faster Progress with Private Classes</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   In a one-on-one class, the teacher corrects every single mistake immediately and moves at your child's optimal pace. There is no waiting for slower students or being left behind by faster ones. DFW families consistently report that their children advance faster in private online lessons than they ever did in group settings.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🌍</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Welcoming All Muslim Communities</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   DFW's Muslim community spans South Asian, Arab, Somali, and many other backgrounds. Ease Quran is a welcoming space for every Muslim family, regardless of cultural background or linguistic heritage. All instruction is in clear English, making it accessible for families across the Metroplex's diverse Muslim community.

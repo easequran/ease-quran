@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in Los Angeles, California | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families across the LA metro — Culver City, Inglewood, Pomona, and beyond.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -199,21 +200,27 @@ export default function LosAngelesPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🚦</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Navigation size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Escape LA's Famous Traffic</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Los Angeles has some of the worst traffic congestion in the world. A 15-mile trip to an Islamic center can consume 90 minutes during evening rush hour. Online classes mean your child learns Quran from home — no freeway stress, no fighting for parking, no late arrivals after sitting in gridlock.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🌐</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Calendar size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Access Regardless of Your Part of LA</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   LA's Islamic centers are unevenly distributed across its vast geography. Families in Pomona, Lancaster, or Palmdale have far fewer local options than those near Culver City or Inglewood. Online classes level the playing field — every Muslim family in every corner of LA County gets the same top-quality certified instruction.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🔄</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Designed for Reverts and Beginners</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   LA's large revert community includes many adults who are beginning Quran education with no prior Arabic background. Our teachers are trained specifically for complete beginners and create a warm, supportive environment where adults can start their Quran journey without embarrassment or judgment.

@@ -25,16 +25,16 @@ const navLinks = [
     label: "Locations",
     href: "/locations",
     dropdown: [
-      { label: "🗽 New York", href: "/locations/new-york" },
-      { label: "🤠 Houston", href: "/locations/houston" },
-      { label: "🌆 Chicago", href: "/locations/chicago" },
-      { label: "🌴 Los Angeles", href: "/locations/los-angeles" },
-      { label: "🏙️ New Jersey", href: "/locations/new-jersey" },
-      { label: "🕌 Dearborn, MI", href: "/locations/dearborn-michigan" },
-      { label: "⭐ Dallas", href: "/locations/dallas" },
-      { label: "🔔 Philadelphia", href: "/locations/philadelphia" },
-      { label: "🍑 Atlanta", href: "/locations/atlanta" },
-      { label: "🌸 Columbus, OH", href: "/locations/columbus-ohio" },
+      { label: "New York", href: "/locations/new-york" },
+      { label: "Houston", href: "/locations/houston" },
+      { label: "Chicago", href: "/locations/chicago" },
+      { label: "Los Angeles", href: "/locations/los-angeles" },
+      { label: "New Jersey", href: "/locations/new-jersey" },
+      { label: "Dearborn, MI", href: "/locations/dearborn-michigan" },
+      { label: "Dallas", href: "/locations/dallas" },
+      { label: "Philadelphia", href: "/locations/philadelphia" },
+      { label: "Atlanta", href: "/locations/atlanta" },
+      { label: "Columbus, OH", href: "/locations/columbus-ohio" },
     ],
   },
   { label: "About", href: "/about" },
@@ -76,7 +76,7 @@ export default function Navbar() {
               scrolled ? "bg-navy" : "bg-white/10"
             }`}>
               <Image
-                src="/images/logo.webp"
+                src="/images/logo.png"
                 alt="Ease Quran Online Academy"
                 width={140}
                 height={44}

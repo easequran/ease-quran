@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BookOpen, CheckCircle } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Quran Classes for New Muslims (Reverts) in USA | Ease Quran",
     description:
       "Specially designed online Quran classes for new Muslims (reverts) in the USA. Start from zero with a patient, certified teacher. Free trial class.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -295,29 +296,35 @@ export default function QuranForRevertsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                icon: "☪️",
+                icon: null,
                 title: "New Muslims Who Just Took Their Shahada",
                 desc: "You recently embraced Islam and want to learn the basics — from Wudu and Salah to the Quran. This course is your starting point, taught with the patience and sensitivity your journey deserves.",
                 points: ["Shahada just taken", "Want to learn Salah first", "No Arabic knowledge", "Need a trusted guide"],
               },
               {
-                icon: "🕌",
+                icon: BookOpen,
                 title: "Reverts Who Have Been Muslim But Never Learned Quran",
                 desc: "You took your Shahada some years ago but have been relying on transliterations, YouTube videos, and informal learning. You want structured, correct Quran education from a real certified teacher.",
                 points: ["Muslim for some years", "Relying on transliteration", "Ready for proper learning", "Improving Salah quality"],
               },
               {
-                icon: "🇺🇸",
+                icon: CheckCircle,
                 title: "English-Speaking Muslims With No Prior Quran Education",
                 desc: "Born into a Muslim family but raised without Quran education. You identify as Muslim but cannot read the Quran. No prior Arabic knowledge, no connection to traditional Islamic education. This course builds that connection.",
                 points: ["Muslim identity, no Quran education", "English as primary language", "Starting from scratch", "Any age, any background"],
               },
-            ].map((card) => (
+            ].map((card) => {
+              const Icon = card.icon;
+              return (
               <div
                 key={card.title}
                 className="bg-offwhite rounded-2xl p-7 border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="text-4xl mb-3">{card.icon}</div>
+                {Icon && (
+                  <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-3">
+                    <Icon size={22} className="text-gold" />
+                  </div>
+                )}
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">{card.title}</h3>
                 <p className="text-grey text-sm leading-relaxed mb-4">{card.desc}</p>
                 <ul className="space-y-1.5">
@@ -329,7 +336,8 @@ export default function QuranForRevertsPage() {
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

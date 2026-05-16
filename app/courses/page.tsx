@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Online Quran Courses | Ease Quran Online Academy USA",
     description:
       "Browse all online Quran courses at Ease Quran Academy — Tajweed, Hifz, Noorani Qaida, Arabic, Islamic Studies, and more. Free first class.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 

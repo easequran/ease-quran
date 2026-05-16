@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in Atlanta, Georgia | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families across Atlanta — serving one of the South's fastest-growing Muslim communities.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -199,21 +200,27 @@ export default function AtlantaPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🚗</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Navigation size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Zero Atlanta Traffic</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Atlanta traffic is a defining feature of life in the metro — and it's not getting better. Online Quran classes mean your child learns without a single minute of sitting in traffic. From Gwinnett County to Cobb County, every family gets the same quality instruction without fighting I-285 to get there.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🌿</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Calendar size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Serving Atlanta's Growing Muslim Population</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   As Atlanta's Muslim community continues to grow rapidly, demand for quality Islamic education is outpacing supply of local in-person resources. Online classes allow Atlanta's entire Muslim population — across all its diverse backgrounds and all its sprawling suburbs — to access certified Quran education right now.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🤝</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Embracing Atlanta's Muslim Diversity</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Atlanta's Muslim community spans African American, South Asian, Arab, West African, and many other backgrounds. Ease Quran teaches in English and welcomes every Muslim family, providing a consistent and high-quality Quran education experience that serves the full diversity of Atlanta's Muslim community equally.

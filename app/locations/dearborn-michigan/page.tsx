@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in Dearborn, Michigan | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in Dearborn, Michigan — serving the largest Arab-American Muslim community in the USA.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -199,21 +200,27 @@ export default function DearbornMichiganPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🎯</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Navigation size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Private Attention No Group Can Match</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Community Quran classes — even in Dearborn's excellent masjids — have multiple students per teacher. Our classes are always one-on-one. Your child's teacher tracks only their progress, corrects only their mistakes, and adapts entirely to their learning pace. The results speak for themselves.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">⏰</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Calendar size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Scheduling That Fits Your Life</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Even in a Muslim-majority city, schedules get full. Work shifts, school activities, and family commitments mean that getting to the Islamic center at a specific time isn't always possible. Online classes give you total flexibility — choose your slot from a wide range of morning, afternoon, and evening options.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🌨️</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Michigan Winters? No Problem</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Michigan winters bring heavy snowfall, icy roads, and school closures. Online classes are completely immune to weather disruptions. Your child's Quran education continues every week, regardless of what's happening outside — a real advantage in a Great Lakes state with unpredictable winters.

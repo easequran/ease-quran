@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { User, BookOpen } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Noorani Qaida Online Classes | Learn to Read Quran USA",
     description:
       "Start your Quran journey with online Noorani Qaida classes. Perfect for complete beginners of all ages. Certified teachers. Free first class.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -280,29 +281,35 @@ export default function NooraniQaidaPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                icon: "🌱",
+                icon: null,
                 title: "Complete Beginners — No Arabic Knowledge",
                 desc: "If you or your child cannot identify a single Arabic letter, this is exactly where to start. No prerequisites, no assumptions. We begin from the very first letter.",
                 points: ["Zero Arabic knowledge needed", "English instructions throughout", "Patient, structured approach", "Any age from 4 upward"],
               },
               {
-                icon: "👧",
+                icon: User,
                 title: "Children Starting Their Quran Journey",
                 desc: "For families who want their child to begin learning the Quran at a young age, Noorani Qaida is the universally recommended first step — taught in a child-friendly, encouraging way.",
                 points: ["Ages 4–12 ideal", "Short, engaging sessions", "Visual and interactive learning", "Female teacher option available"],
               },
               {
-                icon: "🕌",
+                icon: BookOpen,
                 title: "Adults and Reverts Learning for the First Time",
                 desc: "Adults who grew up without Quran education, and new Muslims who took their Shahada and are starting their Islamic journey — this course is designed for you with patience and respect.",
                 points: ["No prior Islamic education needed", "Adult-friendly pace", "English-medium instruction", "Flexible scheduling"],
               },
-            ].map((card) => (
+            ].map((card) => {
+              const Icon = card.icon;
+              return (
               <div
                 key={card.title}
                 className="bg-offwhite rounded-2xl p-7 border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="text-4xl mb-3">{card.icon}</div>
+                {Icon && (
+                  <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-3">
+                    <Icon size={22} className="text-gold" />
+                  </div>
+                )}
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">{card.title}</h3>
                 <p className="text-grey text-sm leading-relaxed mb-4">{card.desc}</p>
                 <ul className="space-y-1.5">
@@ -314,7 +321,8 @@ export default function NooraniQaidaPage() {
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

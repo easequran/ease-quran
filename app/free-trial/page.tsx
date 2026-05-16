@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GraduationCap, CheckCircle, Award } from "lucide-react";
 import FreeTrialForm from "./FreeTrialForm";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
     title: "Book Your Free Quran Trial Class | Ease Quran Online Academy",
     description:
       "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers, flexible scheduling. Muslim families across the USA trust Ease Quran.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -49,31 +50,34 @@ export default function FreeTrialPage() {
                 <ul className="space-y-4">
                   {[
                     {
-                      icon: "🎓",
+                      icon: GraduationCap,
                       text: "All teachers certified by Wifaq ul Madaris Al-Arabia — the world's largest Islamic education board",
                     },
                     {
-                      icon: "⏰",
+                      icon: CheckCircle,
                       text: "We respond within 2 hours on WhatsApp to confirm your booking",
                     },
                     {
-                      icon: "👩‍🏫",
+                      icon: GraduationCap,
                       text: "Female teacher available for sisters and young children",
                     },
                     {
-                      icon: "🗓️",
+                      icon: CheckCircle,
                       text: "Fully flexible scheduling — morning, evening, and weekends to fit your family's routine",
                     },
                     {
-                      icon: "🇺🇸",
+                      icon: CheckCircle,
                       text: "Trusted by Muslim families across all 50 states in America",
                     },
-                  ].map((item, i) => (
+                  ].map((item, i) => {
+                    const Icon = item.icon;
+                    return (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="text-xl shrink-0">{item.icon}</span>
+                      <Icon size={20} className="text-gold shrink-0 mt-0.5" />
                       <p className="text-grey text-sm leading-relaxed">{item.text}</p>
                     </li>
-                  ))}
+                    );
+                  })}
                 </ul>
               </div>
 
@@ -140,12 +144,10 @@ export default function FreeTrialPage() {
               {/* Geo + Response */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-navy rounded-2xl p-6 text-center">
-                  <p className="text-3xl mb-2">🇺🇸</p>
                   <p className="text-white font-semibold text-sm">Trusted by families</p>
                   <p className="text-gold font-bold">in all 50 states</p>
                 </div>
                 <div className="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
-                  <p className="text-3xl mb-2">⚡</p>
                   <p className="text-navy font-semibold text-sm">We respond</p>
                   <p className="text-gold font-bold">within 2 hours</p>
                 </div>
@@ -154,7 +156,7 @@ export default function FreeTrialPage() {
               {/* Wifaq credential badge */}
               <div className="bg-gold/10 border border-gold/30 rounded-2xl p-6">
                 <div className="flex items-start gap-3">
-                  <span className="text-2xl">🏅</span>
+                  <Award size={20} className="text-gold shrink-0 mt-1" />
                   <div>
                     <p className="font-playfair font-bold text-navy text-base mb-1">
                       Wifaq ul Madaris Al-Arabia Certified

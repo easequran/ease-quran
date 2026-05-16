@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Users, BookOpen, Star } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Online Islamic Studies Classes | Ease Quran Academy USA",
     description:
       "Comprehensive Islamic studies online for kids and adults. Aqeedah, Fiqh, Seerah, Islamic manners. Certified teachers. Free trial class for US families.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -277,29 +278,33 @@ export default function IslamicStudiesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                icon: "📖",
+                icon: BookOpen,
                 title: "Children Wanting Islamic Knowledge Alongside Quran",
                 desc: "Children who are already taking Quran classes can add Islamic Studies to build a complete Islamic identity — knowing what they believe, how to worship, and how to carry themselves as Muslims.",
                 points: ["Ages 5 and above", "Story-based learning", "Age-appropriate content", "Taught by female teacher"],
               },
               {
-                icon: "👨‍👩‍👧",
+                icon: Users,
                 title: "Parents Raising Children with Islamic Values",
                 desc: "For families who want their children to grow up with not just Quran reading ability but a full Islamic identity — knowing their Deen, their history, and their purpose as Muslims in America.",
                 points: ["Complement Quran education", "Islamic values framework", "Character building", "Family Islam alignment"],
               },
               {
-                icon: "🌙",
+                icon: Star,
                 title: "Adults Who Grew Up Without Islamic Education",
                 desc: "Many Muslim adults in the USA received little or no formal Islamic education growing up. This course provides a structured, shame-free, adult-friendly path to the knowledge they never received.",
                 points: ["No prior knowledge needed", "Non-judgmental environment", "Practical modern focus", "English-medium instruction"],
               },
-            ].map((card) => (
+            ].map((card) => {
+              const Icon = card.icon;
+              return (
               <div
                 key={card.title}
                 className="bg-offwhite rounded-2xl p-7 border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="text-4xl mb-3">{card.icon}</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-3">
+                  <Icon size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">{card.title}</h3>
                 <p className="text-grey text-sm leading-relaxed mb-4">{card.desc}</p>
                 <ul className="space-y-1.5">
@@ -311,7 +316,8 @@ export default function IslamicStudiesPage() {
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

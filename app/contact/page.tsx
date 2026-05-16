@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Contact Ease Quran Online Academy | Get in Touch",
     description:
       "Contact Ease Quran Online Academy. Email us at info@easequran.com or WhatsApp us. We respond within 2 hours. Online Quran classes for families across the USA.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 

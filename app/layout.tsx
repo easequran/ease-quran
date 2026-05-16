@@ -48,7 +48,7 @@ export const metadata: Metadata = {
       "Certified online Quran classes for kids and adults across the USA. Expert teachers, flexible schedules, free first class.",
     images: [
       {
-        url: "/images/og-image.webp",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Ease Quran Online Academy",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "Ease Quran Online Academy | Online Quran Classes USA",
     description:
       "Certified online Quran classes for kids and adults across the USA. Free first class. Wifaq ul Madaris certified teachers.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,
@@ -74,8 +74,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/images/favicon.webp",
-    apple: "/images/favicon.webp",
+    icon: "/images/favicon.png",
+    apple: "/images/favicon.png",
   },
 };
 

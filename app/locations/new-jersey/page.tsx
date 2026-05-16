@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in New Jersey | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in New Jersey — Paterson, Jersey City, Newark, Edison and statewide.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -198,21 +199,27 @@ export default function NewJerseyPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🚂</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Navigation size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Built for the NJ Commuter Lifestyle</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Thousands of NJ Muslim families spend their days commuting into New York City. Evening and weekend Quran classes that require additional driving are simply unrealistic. Online classes can happen right after your child comes home from school, before dinner, without a single minute of extra commuting.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🕌</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Calendar size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Access Beyond Your Local Masjid</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   While communities like Paterson have a strong local Islamic presence, many NJ Muslims in suburban or less-served areas have limited local options. Ease Quran brings the same quality of certified instruction to families in every part of the state — no matter how small or suburban their location.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">👨‍👩‍👧</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">The Whole Family Can Enroll</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Many New Jersey families enroll multiple children — or parents alongside their kids — because our flexible scheduling makes it easy to coordinate. Siblings can take classes back-to-back, and adults can book their own separate slots. One family, multiple students, one trusted teacher.

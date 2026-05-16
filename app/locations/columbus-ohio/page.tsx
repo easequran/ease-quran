@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in Columbus, Ohio | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in Columbus, Ohio — serving one of America's largest Somali communities and beyond.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -199,21 +200,27 @@ export default function ColumbusOhioPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🌍</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Navigation size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Serving Columbus's Full Muslim Diversity</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Columbus's Muslim community spans Somali, South Asian, Arab, and many other backgrounds. Ease Quran teaches in English and is designed specifically for Western Muslim families — making it equally accessible and valuable for families from every cultural background in Columbus's diverse community.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🏠</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Calendar size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Convenience for Families Across the Metro</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Columbus is a growing city where Muslim families are spread across increasingly suburban areas — Dublin, Hilliard, Westerville, and beyond. Online classes mean that suburban families don't have to drive into the city for Islamic education. The teacher comes to your home, wherever in central Ohio you live.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">📚</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Personalized for Every Child</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Columbus's Muslim children represent a wide range of starting points — some have been learning Arabic from an early age in community settings, others are complete beginners. Our one-on-one format means every child starts exactly where they are and progresses at the pace that's right for them, with no pressure to keep up with a classroom.

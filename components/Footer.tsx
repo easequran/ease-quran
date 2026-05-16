@@ -74,15 +74,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <div className="bg-white/10 rounded-xl px-3 py-2 inline-flex items-center border border-white/10">
-                <Image
-                  src="/images/logo.webp"
-                  alt="Ease Quran Online Academy"
-                  width={140}
-                  height={44}
-                  className="h-10 w-auto object-contain"
-                />
-              </div>
+              <Image
+                src="/images/footer.png"
+                alt="Ease Quran Online Academy"
+                width={160}
+                height={50}
+                className="h-12 w-auto object-contain"
+              />
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed mb-5">
               Certified online Quran education for Muslim families across
@@ -177,7 +175,7 @@ export default function Footer() {
           {/* Cities */}
           <div>
             <h3 className="font-playfair font-semibold text-lg mb-5 text-gold">
-              🇺🇸 Serving USA Cities
+              Serving USA Cities
             </h3>
             <ul className="space-y-2.5">
               {cities.map((c) => (

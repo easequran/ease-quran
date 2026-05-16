@@ -7,7 +7,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
-import { Shield, Users, BookOpen, Star } from "lucide-react";
+import { Shield, Users, BookOpen, Star, AlertCircle, Globe, UserCheck, CheckCircle, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes for Kids & Adults in USA | Ease Quran Academy",
@@ -85,19 +85,19 @@ const steps = [
 
 const painPoints = [
   {
-    icon: "😤",
+    icon: AlertCircle,
     title: "Teachers Who Cancel Last Minute",
     description:
       "Unreliable schedules and constant teacher changes leave your child's education inconsistent and frustrating.",
   },
   {
-    icon: "🌐",
+    icon: Globe,
     title: "Uncertified, Unverified Teachers",
     description:
       "You can never be sure of the credentials, background, or teaching quality of random online teachers.",
   },
   {
-    icon: "👧",
+    icon: UserCheck,
     title: "No Female Teachers for Sisters",
     description:
       "Finding a qualified, female Quran teacher for your daughters or wife shouldn't be this difficult.",
@@ -194,7 +194,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Ease Quran Online Academy",
   url: "https://easequran.com",
-  logo: "https://easequran.com/images/logo.webp",
+  logo: "https://easequran.com/images/logo.png",
   email: "info@easequran.com",
   description:
     "Certified online Quran academy serving Muslim families across the United States.",
@@ -242,7 +242,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="inline-flex items-center gap-2 bg-white/10 text-white text-xs px-4 py-2 rounded-full mb-6 border border-white/20">
-                <span>🇺🇸</span>
+                <CheckCircle size={12} className="text-gold" />
                 <span>Trusted by Muslim Families in 50 States</span>
               </div>
               <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
@@ -298,9 +298,14 @@ export default function HomePage() {
                 </div>
               </div>
               {/* Floating badge top-right */}
-              <div className="absolute -top-5 right-4 bg-white rounded-2xl shadow-2xl p-4 border border-gray-100">
-                <p className="font-bold text-navy text-sm">🏅 Wifaq ul Madaris</p>
-                <p className="text-grey text-xs mt-0.5">Globally Certified</p>
+              <div className="absolute -top-5 right-4 bg-white rounded-2xl shadow-2xl p-4 border border-gray-100 flex items-center gap-3">
+                <div className="bg-gold/10 rounded-xl p-2">
+                  <Award size={18} className="text-gold" />
+                </div>
+                <div>
+                  <p className="font-bold text-navy text-sm">Wifaq ul Madaris</p>
+                  <p className="text-grey text-xs mt-0.5">Globally Certified</p>
+                </div>
               </div>
             </div>
           </div>
@@ -343,13 +348,18 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-            {painPoints.map((p) => (
+            {painPoints.map((p) => {
+              const Icon = p.icon;
+              return (
               <div key={p.title} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
-                <div className="text-4xl mb-4">{p.icon}</div>
+                <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4">
+                  <Icon size={22} className="text-red-400" />
+                </div>
                 <h3 className="font-playfair font-bold text-lg text-navy mb-2">{p.title}</h3>
                 <p className="text-grey text-sm leading-relaxed">{p.description}</p>
               </div>
-            ))}
+              );
+            })}
           </div>
           <div className="bg-navy rounded-3xl p-8 md:p-12 text-center">
             <h3 className="font-playfair font-bold text-2xl md:text-3xl text-white mb-3">
@@ -452,9 +462,12 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent" />
               </div>
-              <div className="absolute -bottom-5 -right-5 bg-gold rounded-2xl p-4 shadow-xl">
-                <p className="font-bold text-navy text-sm">🏅 Wifaq ul Madaris</p>
-                <p className="text-navy/70 text-xs">Globally Recognized</p>
+              <div className="absolute -bottom-5 -right-5 bg-gold rounded-2xl p-4 shadow-xl flex items-center gap-3">
+                <Award size={20} className="text-navy shrink-0" />
+                <div>
+                  <p className="font-bold text-navy text-sm">Wifaq ul Madaris</p>
+                  <p className="text-navy/70 text-xs">Globally Recognized</p>
+                </div>
               </div>
             </div>
             <div>
@@ -480,7 +493,7 @@ export default function HomePage() {
               </blockquote>
               <div className="flex flex-wrap gap-3">
                 {[
-                  "🏅 Wifaq ul Madaris Certified",
+                  "Wifaq ul Madaris Certified",
                   "6+ Years Teaching Experience",
                   "Speciality: Western Students",
                   "English-Speaking Teaching Style",
@@ -598,8 +611,8 @@ export default function HomePage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <div className="text-5xl mb-4">🇺🇸</div>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-3">
+            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Available in All 50 States</span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-3">
               Online Quran Classes Available Nationwide
             </h2>
             <p className="text-grey max-w-xl mx-auto">

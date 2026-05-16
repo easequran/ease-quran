@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in New York City | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in New York City. Serving Queens, Brooklyn, the Bronx, and all NYC boroughs.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -214,21 +215,27 @@ export default function NewYorkPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🚇</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Navigation size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">No More Borough-Crossing Commutes</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Getting from Queens to a masjid in Brooklyn for a 45-minute class is a two-hour round trip on the subway. Online classes eliminate that entirely. Your child sits down at home after school, opens Zoom, and the lesson begins — no train delays, no parking stress, no rush.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">📅</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Calendar size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Fits the NYC Schedule</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   New York kids are busy — extracurriculars, homework, family commitments, and the competitive pace of NYC schooling leave narrow windows. We schedule Quran classes around your life, not the other way around, offering flexible slots from early morning through evening seven days a week.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">👨‍🏫</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Certified Teachers, Not Volunteers</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   In a city as competitive as New York, you expect credentials. Our teachers hold Wifaq ul Madaris Al-Arabia certifications — the gold standard of Islamic education. Every lesson is one-on-one, structured, and measurably progressive. Your child's Quran education should be held to the same standard as any other subject.

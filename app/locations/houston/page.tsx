@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in Houston, Texas | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in Houston, TX. Serving Sugar Land, Katy, Memorial, and all Houston suburbs.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -199,21 +200,27 @@ export default function HoustonPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🚗</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Navigation size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Skip Houston's Highway Traffic</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Houston has some of the worst traffic in the country. Driving your child to an Islamic center across Sugar Land or through the Beltway during the evening rush is a significant time cost. Online classes bring the teacher to your living room — no traffic, no parking, no stress.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🌡️</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Calendar size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">No Fighting Houston Heat or Weather</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Houston summers are brutal and storm season is unpredictable. Online classes mean your child never misses a lesson due to extreme heat, flooding, or severe weather warnings — a real benefit in a city that regularly deals with tropical weather disruptions.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="text-3xl mb-4">🤲</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <GraduationCap size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">One-on-One Attention, Always</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Community classes and weekend Islamic schools often have 15–25 students per teacher. At Ease Quran, your child is always the only student in the room. This personalized focus accelerates progress dramatically — Houston families regularly report that their children advance faster than they did in group settings.

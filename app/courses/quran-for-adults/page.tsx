@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { CheckCircle, User, BarChart2 } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes for Adults | Learn Quran USA",
     description:
       "Online Quran classes for adults — beginners to advanced. Learn to read, recite and understand the Quran with certified teachers. Free first class.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -277,29 +278,33 @@ export default function QuranForAdultsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                icon: "🌱",
+                icon: User,
                 title: "Adults Who Never Learned Quran as Children",
                 desc: "You grew up in America and your Quran education was minimal or non-existent. This course begins at the very beginning — with Arabic letters — and takes you all the way to reading the Quran.",
                 points: ["Start from zero letters", "No prior knowledge assumed", "Adult learning pace", "Private classes only"],
               },
               {
-                icon: "📈",
+                icon: BarChart2,
                 title: "Adults Who Want to Improve Weak Recitation",
                 desc: "You can read some of the Quran but you know your pronunciation is off, your Tajweed is non-existent, and you are not confident. This course systematically rebuilds your recitation from the ground up.",
                 points: ["Level assessment first", "Identify and fix errors", "Tajweed rules applied", "Gain lasting confidence"],
               },
               {
-                icon: "🇺🇸",
+                icon: CheckCircle,
                 title: "Non-Arab Muslims Who Grew Up in the West",
                 desc: "South Asian, African, Southeast Asian, and convert Muslims raised in the USA or UK who speak English as their primary language. Our teacher specializes specifically in this demographic.",
                 points: ["English-medium instruction", "Cultural sensitivity", "No Arabic prerequisite", "Understanding the Western Muslim experience"],
               },
-            ].map((card) => (
+            ].map((card) => {
+              const Icon = card.icon;
+              return (
               <div
                 key={card.title}
                 className="bg-offwhite rounded-2xl p-7 border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="text-4xl mb-3">{card.icon}</div>
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-3">
+                  <Icon size={22} className="text-gold" />
+                </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">{card.title}</h3>
                 <p className="text-grey text-sm leading-relaxed mb-4">{card.desc}</p>
                 <ul className="space-y-1.5">
@@ -311,7 +316,8 @@ export default function QuranForAdultsPage() {
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { CheckCircle } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Online Tajweed Classes | Learn Quran Recitation USA",
     description:
       "Master Tajweed online with certified Wifaq ul Madaris teachers. Learn proper Quran pronunciation and recitation. Free trial class available.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/og-image.png"],
   },
 };
 
@@ -280,29 +281,35 @@ export default function TajweedPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                icon: "🌱",
+                icon: null,
                 title: "Beginners Who Cannot Read Properly",
                 desc: "If you can read some Arabic letters but your pronunciation is uncertain and your recitation lacks confidence, this course systematically corrects and rebuilds your foundation.",
                 points: ["Letter sounds corrected from the start", "Basic rules with simple examples", "Build recitation confidence", "No judgment for current level"],
               },
               {
-                icon: "📈",
+                icon: null,
                 title: "Intermediate Students Wanting to Improve",
                 desc: "You can read the Quran but you know your Tajweed is not correct. This level focuses on identifying and fixing specific mistakes while learning the advanced rules of recitation.",
                 points: ["Diagnose and fix existing errors", "Learn all major Tajweed rules", "Practice on full Quranic pages", "Reach fluent, correct recitation"],
               },
               {
-                icon: "🇺🇸",
+                icon: CheckCircle,
                 title: "Adults Who Grew Up in the West",
                 desc: "Many Muslims born or raised in the US, UK, or Canada learned to read the Quran informally — often with serious Tajweed errors. This course is specifically structured for Western adult learners.",
                 points: ["English-medium instruction", "Patient, non-judgmental approach", "Flexible scheduling", "Start at any level"],
               },
-            ].map((card) => (
+            ].map((card) => {
+              const Icon = card.icon;
+              return (
               <div
                 key={card.title}
                 className="bg-offwhite rounded-2xl p-7 border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <div className="text-4xl mb-3">{card.icon}</div>
+                {Icon && (
+                  <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-3">
+                    <Icon size={22} className="text-gold" />
+                  </div>
+                )}
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">{card.title}</h3>
                 <p className="text-grey text-sm leading-relaxed mb-4">{card.desc}</p>
                 <ul className="space-y-1.5">
@@ -314,7 +321,8 @@ export default function TajweedPage() {
                   ))}
                 </ul>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
