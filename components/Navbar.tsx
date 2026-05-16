@@ -70,20 +70,16 @@ export default function Navbar() {
       <div className="container-custom">
         <nav className="flex items-center justify-between h-20">
 
-          {/* Logo — always on navy pill so it looks premium on both dark and white bg */}
+          {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
-            <div className={`flex items-center px-3 py-1.5 rounded-xl transition-all duration-300 ${
-              scrolled ? "bg-navy" : "bg-white/10"
-            }`}>
-              <Image
-                src="/images/logo.png"
-                alt="Ease Quran Online Academy"
-                width={140}
-                height={44}
-                className="h-10 w-auto object-contain"
-                priority
-              />
-            </div>
+            <Image
+              src="/images/logo.png"
+              alt="Ease Quran Online Academy"
+              width={150}
+              height={48}
+              className="h-11 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
