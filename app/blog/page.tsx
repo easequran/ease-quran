@@ -27,55 +27,10 @@ const posts: BlogPost[] = [
     title: "How to Choose the Best Online Quran Academy for Your Child in America",
     slug: "how-to-choose-online-quran-academy",
     excerpt:
-      "With hundreds of online Quran academies claiming to be the best, how does a Muslim parent in America know who to trust? In this guide, we walk you through the 5 most important factors — teacher certification, free trial availability, female teacher options, and what credentials to look for before committing your family's time and money.",
-    date: "December 15, 2024",
+      "With hundreds of online Quran academies claiming to be the best, how does a Muslim parent in America know who to trust? Learn the 6 most important factors — teacher certification, free trial availability, female teacher options, curriculum quality, flexible scheduling, and red flags to avoid.",
+    date: "January 15, 2025",
     category: "Parenting & Education",
-    readTime: "7 min",
-  },
-  {
-    title: "What Is Wifaq ul Madaris? Why Teacher Certification Matters for Your Child",
-    slug: "what-is-wifaq-ul-madaris",
-    excerpt:
-      "Wifaq ul Madaris Al-Arabia is the largest Islamic education board in Pakistan, certifying thousands of Islamic scholars annually. Its credentials are recognized by institutions across the Middle East, Europe, and North America. Here's why this certification is the gold standard for online Quran teachers — and what it means for your child's education.",
-    date: "January 8, 2025",
-    category: "Islamic Education",
-    readTime: "5 min",
-  },
-  {
-    title: "The Complete Guide to Tajweed Rules for Beginners (with Examples)",
-    slug: "tajweed-rules-for-beginners",
-    excerpt:
-      "Tajweed is not just about reciting the Quran beautifully — it is about reciting it correctly, exactly as it was revealed. In this beginner-friendly guide, we break down the 5 most essential Tajweed rules every new student must learn, with practical English examples and tips from our certified teachers to get you started the right way.",
-    date: "January 22, 2025",
-    category: "Tajweed & Recitation",
-    readTime: "10 min",
-  },
-  {
-    title: "How to Help Your Child Memorize the Quran (Hifz) While Living in America",
-    slug: "hifz-tips-for-muslim-kids-in-america",
-    excerpt:
-      "Raising a Hafiz or Hafiza in America comes with unique challenges — school schedules, sports, social pressures, and limited Islamic environment. But it is absolutely achievable. Our certified Hifz teachers share proven daily routines, revision strategies, and motivational techniques that have helped dozens of American Muslim children complete their memorization.",
-    date: "February 5, 2025",
-    category: "Hifz Program",
     readTime: "8 min",
-  },
-  {
-    title: "Female Quran Teachers Online: Why It Matters and Where to Find One in USA",
-    slug: "female-quran-teacher-online-usa",
-    excerpt:
-      "For many Muslim families in America, having a female Quran teacher is not a preference — it is a requirement rooted in Islamic values. Whether for your daughter, for a sister learning as an adult, or simply a parental comfort level, access to a qualified, certified female Quran teacher online can be surprisingly difficult to find. We explain why it matters and how Ease Quran makes it simple.",
-    date: "February 18, 2025",
-    category: "Female Teachers",
-    readTime: "6 min",
-  },
-  {
-    title: "Noorani Qaida for Kids: How to Teach Your Child to Read Arabic from Scratch",
-    slug: "noorani-qaida-for-kids",
-    excerpt:
-      "Noorani Qaida is the most widely used and trusted method for teaching children to read Arabic letters from scratch — the essential first step before they can recite the Quran. In this beginner's guide, we explain what Noorani Qaida is, how it works, what a typical course looks like, and why it remains the best starting point for any child beginning their Quran journey.",
-    date: "March 3, 2025",
-    category: "Quran for Kids",
-    readTime: "6 min",
   },
 ];
 
@@ -156,7 +111,7 @@ export default function BlogPage() {
                 Latest Articles
               </span>
               <h2 className="font-playfair font-bold text-2xl text-navy">
-                {posts.length} Articles Published
+                1 Article Published
               </h2>
             </div>
           </div>
