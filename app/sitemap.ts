@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/free-trial`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/female-quran-teachers`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/terms-conditions`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     // Blog articles
     { url: `${base}/blog/how-to-choose-online-quran-academy`, lastModified: "2025-01-15T00:00:00.000Z", changeFrequency: "monthly", priority: 0.7 },

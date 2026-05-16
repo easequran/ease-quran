@@ -199,6 +199,15 @@ export default function Footer() {
           <p>
             © 2025 Ease Quran Online Academy. All rights reserved.
           </p>
+          <div className="flex items-center gap-4 flex-wrap justify-center">
+            <Link href="/privacy-policy" className="hover:text-gold transition-colors text-xs">
+              Privacy Policy
+            </Link>
+            <span className="text-white/20">|</span>
+            <Link href="/terms-conditions" className="hover:text-gold transition-colors text-xs">
+              Terms &amp; Conditions
+            </Link>
+          </div>
           <p className="text-center">
             🇺🇸 Proudly serving Muslim families across the United States
           </p>
