@@ -238,11 +238,13 @@ export default function HomePage() {
           className="object-cover object-center"
           priority
         />
-        {/* Deep navy overlay for readability */}
-        <div className="absolute inset-0 bg-navy/82" />
+        {/* Black base layer for maximum text contrast */}
+        <div className="absolute inset-0 bg-black/60" />
+        {/* Navy tint on top */}
+        <div className="absolute inset-0 bg-navy/70" />
         {/* Gold glow accents */}
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-10"
           style={{
             backgroundImage:
               "radial-gradient(circle at 15% 60%, #F5A623 0%, transparent 45%), radial-gradient(circle at 85% 15%, #F5A623 0%, transparent 35%)",
