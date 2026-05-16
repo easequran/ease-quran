@@ -238,10 +238,9 @@ export default function HomePage() {
           className="object-cover object-center"
           priority
         />
-        {/* Black base layer for maximum text contrast */}
-        <div className="absolute inset-0 bg-black/60" />
-        {/* Navy tint on top */}
-        <div className="absolute inset-0 bg-navy/70" />
+        {/* Overlay — dark enough for text, light enough to see the image */}
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-navy/60" />
         {/* Gold glow accents */}
         <div
           className="absolute inset-0 opacity-10"
@@ -253,7 +252,7 @@ export default function HomePage() {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy/60 to-transparent" />
 
-        <div className="container-custom relative z-10 pt-24 pb-20 lg:pt-32 lg:pb-28">
+        <div className="container-custom relative z-10 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             {/* Left — text content */}

@@ -89,9 +89,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header>
-
-      {/* ── Premium top bar — scrolls away ── */}
+    <>
+      {/* ── Top social bar — scrolls away with page ── */}
       <div className="bg-navy border-b border-gold/20">
         <div className="container-custom flex items-center justify-between py-2.5">
 
@@ -130,8 +129,8 @@ export default function Navbar() {
         <div className="h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
       </div>
 
-      {/* ── Main nav bar — sticky ── */}
-      <div className="bg-white sticky top-0 z-50 shadow-md">
+      {/* ── White nav — sticky to top on scroll ── */}
+      <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container-custom">
           <nav className="flex items-center justify-between h-20">
 
@@ -217,11 +216,10 @@ export default function Navbar() {
             </div>
           </nav>
         </div>
-      </div>
 
-      {/* Mobile Menu — sticky below the white nav */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl max-h-[80vh] overflow-y-auto sticky top-20 z-50">
+        {/* Mobile Menu — inside sticky header so it stays pinned */}
+        {mobileOpen && (
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl max-h-[80vh] overflow-y-auto">
           <div className="container-custom py-5 flex flex-col gap-1">
             {navLinks.map((link) => (
               <div key={link.label}>
@@ -279,7 +277,8 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      )}
-    </header>
+        )}
+      </header>
+    </>
   );
 }
