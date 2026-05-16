@@ -91,30 +91,43 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 shadow-md">
 
-      {/* ── Top social bar ── */}
-      <div className="bg-navy">
-        <div className="container-custom flex items-center justify-between py-2">
-          {/* Social icons */}
+      {/* ── Premium top bar ── */}
+      <div className="bg-navy border-b border-gold/20">
+        <div className="container-custom flex items-center justify-between py-2.5">
+
+          {/* Left: Follow Us + social icons */}
           <div className="flex items-center gap-3">
+            <span className="text-white/50 text-xs font-medium uppercase tracking-wider hidden sm:inline pr-1 border-r border-white/20 mr-1">
+              Follow Us
+            </span>
             <a href="https://www.facebook.com/share/18WdHQVNWT/" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook" className="text-white/70 hover:text-gold transition-colors">
+              aria-label="Facebook"
+              className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-200">
               <FacebookIcon />
             </a>
             <a href="https://www.instagram.com/contacteasequran" target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram" className="text-white/70 hover:text-gold transition-colors">
+              aria-label="Instagram"
+              className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-200">
               <InstagramIcon />
             </a>
             <a href="https://youtube.com/@contacteasequran" target="_blank" rel="noopener noreferrer"
-              aria-label="YouTube" className="text-white/70 hover:text-gold transition-colors">
+              aria-label="YouTube"
+              className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-200">
               <YoutubeIcon />
             </a>
           </div>
-          {/* US flag */}
-          <div className="flex items-center gap-2 text-white/80 text-xs font-medium">
+
+          {/* Right: US flag + tagline */}
+          <div className="flex items-center gap-2">
             <span className="text-base leading-none">🇺🇸</span>
-            <span className="hidden sm:inline">Serving All 50 States</span>
+            <span className="text-white/70 text-xs font-medium">
+              <span className="hidden sm:inline">Serving All </span>50 States
+            </span>
           </div>
+
         </div>
+        {/* Gold accent line at bottom of top bar */}
+        <div className="h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
       </div>
 
       {/* ── Main nav bar ── */}
@@ -179,18 +192,19 @@ export default function Navbar() {
 
             {/* Mobile right-side actions */}
             <div className="lg:hidden flex items-center gap-2">
-              {/* WhatsApp button */}
+
+              {/* WhatsApp button — brand colors (gold bg, navy icon) */}
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp us"
-                className="w-10 h-10 bg-[#25D366] rounded-xl flex items-center justify-center hover:bg-[#1ebd5a] transition-colors"
+                className="w-10 h-10 bg-gold text-navy rounded-xl flex items-center justify-center hover:bg-gold-dark transition-colors shadow-md"
               >
                 <WhatsAppIcon />
               </a>
 
-              {/* Hamburger */}
+              {/* Hamburger — navy bg with gold bars */}
               <button
                 className="w-10 h-10 bg-navy rounded-xl flex flex-col items-center justify-center gap-[5px] hover:bg-navy/80 transition-colors"
                 onClick={() => setMobileOpen(!mobileOpen)}
@@ -256,7 +270,7 @@ export default function Navbar() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 bg-[#25D366] text-white font-bold py-3.5 rounded-xl text-sm hover:bg-[#1ebd5a] transition-all"
+                className="flex items-center justify-center gap-2.5 bg-navy text-white font-bold py-3.5 rounded-xl text-sm hover:bg-navy/80 transition-all border border-gold/30"
                 onClick={() => setMobileOpen(false)}
               >
                 <WhatsAppIcon />
