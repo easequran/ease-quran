@@ -5,11 +5,12 @@ export const metadata: Metadata = {
   title: "Quran & Islamic Education Blog | Ease Quran Academy",
   description:
     "Read articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and how to choose the best online Quran academy for your family.",
+  alternates: { canonical: "https://easequran.com/blog" },
   openGraph: {
     title: "Quran & Islamic Education Blog | Ease Quran Academy",
     description:
       "Read articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and how to choose the best online Quran academy for your family.",
-    images: ["/images/og-image.png"],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Quran & Islamic Education Blog — Ease Quran Academy" }],
   },
 };
 

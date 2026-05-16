@@ -8,11 +8,55 @@ export const metadata: Metadata = {
   title: "Online Quran Class Pricing Plans | Ease Quran Academy",
   description:
     "Affordable online Quran class pricing. Plans from $40/month. Free first trial class. Wifaq ul Madaris certified teachers. Serving Muslim families in USA.",
+  alternates: { canonical: "https://easequran.com/pricing" },
   openGraph: {
     title: "Online Quran Class Pricing Plans | Ease Quran Academy",
     description:
       "Affordable online Quran class pricing. Plans from $40/month. Free first trial class. Wifaq ul Madaris certified teachers. Serving Muslim families in USA.",
-    images: ["/images/og-image.png"],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Class Pricing Plans — Ease Quran Academy" }],
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Online Quran Classes",
+  provider: {
+    "@type": "EducationalOrganization",
+    name: "Ease Quran Online Academy",
+    url: "https://easequran.com",
+  },
+  serviceType: "Online Education",
+  areaServed: { "@type": "Country", name: "United States" },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Quran Class Plans",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Starter Plan",
+        price: "40",
+        priceCurrency: "USD",
+        description: "4 classes per month, 30 minutes each. Perfect for beginners.",
+        url: "https://easequran.com/pricing",
+      },
+      {
+        "@type": "Offer",
+        name: "Basic Plan",
+        price: "59",
+        priceCurrency: "USD",
+        description: "8 classes per month, 30 minutes each. For regular learners.",
+        url: "https://easequran.com/pricing",
+      },
+      {
+        "@type": "Offer",
+        name: "Popular Plan",
+        price: "79",
+        priceCurrency: "USD",
+        description: "12 classes per month, 45 minutes each. Our most popular plan.",
+        url: "https://easequran.com/pricing",
+      },
+    ],
   },
 };
 
@@ -138,6 +182,10 @@ const pricingFaqs = [
 export default function PricingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       {/* Hero */}
       <section className="bg-navy section-padding">
         <div className="container-custom text-center">

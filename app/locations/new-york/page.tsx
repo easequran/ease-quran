@@ -16,8 +16,18 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in New York City | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in New York City. Serving Queens, Brooklyn, the Bronx, and all NYC boroughs.",
-    images: ["/images/og-image.png"],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in New York City — Ease Quran Academy" }],
   },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "New York", item: "https://easequran.com/locations/new-york" },
+  ],
 };
 
 const localBusinessSchema = {
@@ -125,6 +135,7 @@ const faqs = [
 export default function NewYorkPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

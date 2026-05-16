@@ -6,17 +6,39 @@ export const metadata: Metadata = {
   title: "Book Your Free Quran Trial Class | Ease Quran Online Academy",
   description:
     "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers, flexible scheduling. Muslim families across the USA trust Ease Quran.",
+  alternates: { canonical: "https://easequran.com/free-trial" },
   openGraph: {
     title: "Book Your Free Quran Trial Class | Ease Quran Online Academy",
     description:
       "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers, flexible scheduling. Muslim families across the USA trust Ease Quran.",
-    images: ["/images/og-image.png"],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Book Your Free Quran Trial Class — Ease Quran Academy" }],
   },
+};
+
+const freeTrialSchema = {
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  name: "Free Online Quran Trial Class",
+  description: "Book your first online Quran class completely free. No credit card required. Certified teacher, one-on-one session, flexible scheduling.",
+  price: "0",
+  priceCurrency: "USD",
+  availability: "https://schema.org/InStock",
+  url: "https://easequran.com/free-trial",
+  seller: {
+    "@type": "EducationalOrganization",
+    name: "Ease Quran Online Academy",
+    url: "https://easequran.com",
+  },
+  validFrom: "2025-01-01",
 };
 
 export default function FreeTrialPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(freeTrialSchema) }}
+      />
       {/* Hero */}
       <section className="bg-navy py-14">
         <div className="container-custom text-center">

@@ -20,6 +20,16 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "Columbus, Ohio", item: "https://easequran.com/locations/columbus-ohio" },
+  ],
+};
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
@@ -114,6 +124,7 @@ const faqs = [
 export default function ColumbusOhioPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}

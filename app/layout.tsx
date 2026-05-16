@@ -77,6 +77,10 @@ export const metadata: Metadata = {
     icon: "/images/favicon.png",
     apple: "/images/favicon.png",
   },
+  alternates: {
+    canonical: "https://easequran.com",
+  },
+  category: "Education",
 };
 
 export default function RootLayout({
@@ -87,6 +91,51 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="antialiased bg-white text-navy font-inter">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              name: "Ease Quran Online Academy",
+              alternateName: "Ease Quran",
+              url: "https://easequran.com",
+              logo: "https://easequran.com/images/logo.png",
+              image: "https://easequran.com/images/og-image.png",
+              description: "Certified online Quran academy serving Muslim families across all 50 US states. Wifaq ul Madaris certified teachers, female teachers available, free first class.",
+              email: "info@easequran.com",
+              telephone: "+923195657389",
+              foundingDate: "2019",
+              founder: {
+                "@type": "Person",
+                name: "Shah Zaib",
+                jobTitle: "Founder & Head Teacher",
+              },
+              areaServed: {
+                "@type": "Country",
+                name: "United States",
+              },
+              sameAs: [
+                "https://www.facebook.com/share/18WdHQVNWT/",
+                "https://www.instagram.com/contacteasequran",
+                "https://www.linkedin.com/company/ease-quran/",
+                "https://youtube.com/@contacteasequran",
+              ],
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Online Quran Courses",
+                itemListElement: [
+                  { "@type": "Offer", itemOffered: { "@type": "Course", name: "Quran for Kids" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Course", name: "Tajweed" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Course", name: "Hifz Program" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Course", name: "Noorani Qaida" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Course", name: "Arabic Language" } },
+                  { "@type": "Offer", itemOffered: { "@type": "Course", name: "Islamic Studies" } },
+                ],
+              },
+            }),
+          }}
+        />
         <Navbar />
         <main>{children}</main>
         <Footer />

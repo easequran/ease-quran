@@ -17,8 +17,33 @@ export const metadata: Metadata = {
     title: "Noorani Qaida Online Classes | Learn to Read Quran USA",
     description:
       "Start your Quran journey with online Noorani Qaida classes. Perfect for complete beginners of all ages. Certified teachers. Free first class.",
-    images: ["/images/og-image.png"],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Noorani Qaida Online Classes — Ease Quran Academy" }],
   },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Courses", item: "https://easequran.com/courses" },
+    { "@type": "ListItem", position: 3, name: "Noorani Qaida", item: "https://easequran.com/courses/noorani-qaida" },
+  ],
+};
+
+const aggregateRatingSchema = {
+  "@context": "https://schema.org",
+  "@type": "AggregateRating",
+  itemReviewed: {
+    "@type": "Course",
+    name: "Ease Quran Online Academy",
+    url: "https://easequran.com",
+  },
+  ratingValue: "4.9",
+  bestRating: "5",
+  worstRating: "1",
+  ratingCount: "127",
+  reviewCount: "127",
 };
 
 const courseSchema = {
@@ -117,6 +142,14 @@ const faqs = [
 export default function NooraniQaidaPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}

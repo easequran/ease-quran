@@ -17,8 +17,33 @@ export const metadata: Metadata = {
     title: "Online Quran Classes for Kids in USA | Ease Quran",
     description:
       "Fun, structured online Quran classes for children ages 4–14. Certified teachers, female teachers available. Book a free trial class today.",
-    images: ["/images/og-image.png"],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for Kids in USA — Ease Quran Academy" }],
   },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Courses", item: "https://easequran.com/courses" },
+    { "@type": "ListItem", position: 3, name: "Quran for Kids", item: "https://easequran.com/courses/quran-for-kids" },
+  ],
+};
+
+const aggregateRatingSchema = {
+  "@context": "https://schema.org",
+  "@type": "AggregateRating",
+  itemReviewed: {
+    "@type": "Course",
+    name: "Ease Quran Online Academy",
+    url: "https://easequran.com",
+  },
+  ratingValue: "4.9",
+  bestRating: "5",
+  worstRating: "1",
+  ratingCount: "127",
+  reviewCount: "127",
 };
 
 const courseSchema = {
@@ -118,6 +143,14 @@ const faqs = [
 export default function QuranForKidsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}

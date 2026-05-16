@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", "/_next/"],
       },
     ],
     sitemap: "https://easequran.com/sitemap.xml",

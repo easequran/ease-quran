@@ -1,78 +1,42 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://easequran.com";
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
-  const staticPages = [
-    { url: "/", priority: 1.0, changeFrequency: "weekly" as const },
-    { url: "/about", priority: 0.9, changeFrequency: "monthly" as const },
-    { url: "/courses", priority: 0.9, changeFrequency: "weekly" as const },
-    { url: "/pricing", priority: 0.9, changeFrequency: "monthly" as const },
-    { url: "/free-trial", priority: 1.0, changeFrequency: "weekly" as const },
-    { url: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
-    { url: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
-    { url: "/female-quran-teachers", priority: 0.9, changeFrequency: "monthly" as const },
-  ];
-
-  const coursePages = [
-    "/courses/quran-for-kids",
-    "/courses/tajweed",
-    "/courses/hifz",
-    "/courses/noorani-qaida",
-    "/courses/arabic-language",
-    "/courses/islamic-studies",
-    "/courses/quran-for-adults",
-    "/courses/quran-for-reverts",
-  ];
-
-  const locationPages = [
-    "/locations/new-york",
-    "/locations/houston",
-    "/locations/chicago",
-    "/locations/los-angeles",
-    "/locations/new-jersey",
-    "/locations/dearborn-michigan",
-    "/locations/dallas",
-    "/locations/philadelphia",
-    "/locations/atlanta",
-    "/locations/columbus-ohio",
-  ];
-
-  const blogSlugs = [
-    "/blog/how-to-choose-online-quran-academy",
-    "/blog/what-is-wifaq-ul-madaris",
-    "/blog/tajweed-rules-for-beginners",
-    "/blog/hifz-tips-for-muslim-kids-in-america",
-    "/blog/female-quran-teacher-online-usa",
-    "/blog/noorani-qaida-for-kids",
-  ];
+  const base = "https://easequran.com";
+  const now = new Date().toISOString();
 
   return [
-    ...staticPages.map((p) => ({
-      url: `${BASE_URL}${p.url}`,
-      lastModified: now,
-      changeFrequency: p.changeFrequency,
-      priority: p.priority,
-    })),
-    ...coursePages.map((path) => ({
-      url: `${BASE_URL}${path}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    })),
-    ...locationPages.map((path) => ({
-      url: `${BASE_URL}${path}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    })),
-    ...blogSlugs.map((path) => ({
-      url: `${BASE_URL}${path}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    })),
+    // Homepage — highest priority
+    { url: base, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
+    // Core pages
+    { url: `${base}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/courses`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/pricing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/free-trial`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/female-quran-teachers`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    // Blog articles
+    { url: `${base}/blog/how-to-choose-online-quran-academy`, lastModified: "2025-01-15T00:00:00.000Z", changeFrequency: "monthly", priority: 0.7 },
+    // Course pages
+    { url: `${base}/courses/quran-for-kids`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/courses/tajweed`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/courses/hifz`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/courses/noorani-qaida`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/courses/arabic-language`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/courses/islamic-studies`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/courses/quran-for-adults`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/courses/quran-for-reverts`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    // Location pages
+    { url: `${base}/locations`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/locations/new-york`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/locations/houston`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/locations/chicago`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/locations/los-angeles`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/locations/new-jersey`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/locations/dearborn-michigan`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/locations/dallas`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/locations/philadelphia`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/locations/atlanta`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/locations/columbus-ohio`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
 }

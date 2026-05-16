@@ -7,7 +7,19 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(curl -s http://localhost:3002)",
       "Bash(gh auth *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git push *)",
+      "Bash(xargs grep -l \"og-image.webp\")",
+      "Bash(xargs sed -i 's|og-image\\\\.webp|og-image.png|g')",
+      "Bash(npx tsc *)",
+      "Read(//c/Users/Administrator/Downloads/**)",
+      "Bash(mkdir -p /skills)",
+      "Bash(unzip -o skills.zip -d /skills)",
+      "Read(//skills/**)",
+      "Read(//skills/skills/**)"
     ]
   }
 }

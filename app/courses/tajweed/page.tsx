@@ -17,8 +17,33 @@ export const metadata: Metadata = {
     title: "Online Tajweed Classes | Learn Quran Recitation USA",
     description:
       "Master Tajweed online with certified Wifaq ul Madaris teachers. Learn proper Quran pronunciation and recitation. Free trial class available.",
-    images: ["/images/og-image.png"],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Tajweed Classes — Ease Quran Academy" }],
   },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Courses", item: "https://easequran.com/courses" },
+    { "@type": "ListItem", position: 3, name: "Tajweed Classes", item: "https://easequran.com/courses/tajweed" },
+  ],
+};
+
+const aggregateRatingSchema = {
+  "@context": "https://schema.org",
+  "@type": "AggregateRating",
+  itemReviewed: {
+    "@type": "Course",
+    name: "Ease Quran Online Academy",
+    url: "https://easequran.com",
+  },
+  ratingValue: "4.9",
+  bestRating: "5",
+  worstRating: "1",
+  ratingCount: "127",
+  reviewCount: "127",
 };
 
 const courseSchema = {
@@ -117,6 +142,14 @@ const faqs = [
 export default function TajweedPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
