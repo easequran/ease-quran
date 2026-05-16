@@ -44,15 +44,8 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-
-  useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handler);
-    return () => window.removeEventListener("scroll", handler);
-  }, []);
 
   // Close mobile menu on resize to desktop
   useEffect(() => {
@@ -62,11 +55,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-lg" : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
       <div className="container-custom">
         <nav className="flex items-center justify-between h-20">
 
@@ -75,9 +64,9 @@ export default function Navbar() {
             <Image
               src="/images/logo.png"
               alt="Ease Quran Online Academy"
-              width={150}
-              height={48}
-              className="h-11 w-auto object-contain"
+              width={180}
+              height={56}
+              className="h-14 w-auto object-contain"
               priority
             />
           </Link>
@@ -93,9 +82,7 @@ export default function Navbar() {
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
                   <button
-                    className={`flex items-center gap-1 font-medium text-sm transition-colors hover:text-gold py-2 ${
-                      scrolled ? "text-navy" : "text-white"
-                    }`}
+                    className="flex items-center gap-1 font-medium text-sm transition-colors hover:text-gold py-2 text-navy"
                   >
                     {link.label}
                     <ChevronDown
@@ -126,9 +113,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`font-medium text-sm transition-colors hover:text-gold py-2 ${
-                    scrolled ? "text-navy" : "text-white"
-                  }`}
+                  className="font-medium text-sm transition-colors hover:text-gold py-2 text-navy"
                 >
                   {link.label}
                 </Link>
@@ -148,9 +133,7 @@ export default function Navbar() {
 
           {/* Mobile hamburger */}
           <button
-            className={`lg:hidden p-2 rounded-xl transition-colors ${
-              scrolled ? "text-navy bg-offwhite" : "text-white bg-white/10"
-            }`}
+            className="lg:hidden p-2 rounded-xl transition-colors text-navy bg-offwhite"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
