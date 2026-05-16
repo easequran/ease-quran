@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { ChevronDown, Phone } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -131,14 +131,31 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
-          <button
-            className="lg:hidden p-2 rounded-xl transition-colors text-navy bg-offwhite"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          {/* Mobile right-side actions */}
+          <div className="lg:hidden flex items-center gap-2">
+            {/* US Flag */}
+            <span className="text-xl leading-none" aria-label="Serving USA">🇺🇸</span>
+
+            {/* Call button */}
+            <a
+              href="tel:+923195657389"
+              aria-label="Call us"
+              className="w-10 h-10 bg-navy rounded-xl flex items-center justify-center hover:bg-navy/80 transition-colors"
+            >
+              <Phone size={18} className="text-gold" />
+            </a>
+
+            {/* Hamburger */}
+            <button
+              className="w-10 h-10 bg-navy rounded-xl flex flex-col items-center justify-center gap-[5px] hover:bg-navy/80 transition-colors"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className={`block w-5 h-0.5 bg-gold rounded-full transition-all duration-300 origin-center ${mobileOpen ? "rotate-45 translate-y-[6.5px]" : ""}`} />
+              <span className={`block w-5 h-0.5 bg-gold rounded-full transition-all duration-300 ${mobileOpen ? "opacity-0 scale-x-0" : ""}`} />
+              <span className={`block w-5 h-0.5 bg-gold rounded-full transition-all duration-300 origin-center ${mobileOpen ? "-rotate-45 -translate-y-[6.5px]" : ""}`} />
+            </button>
+          </div>
         </nav>
       </div>
 
