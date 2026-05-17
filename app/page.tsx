@@ -463,12 +463,18 @@ export default function HomePage() {
       </section>
 
       {/* MISSION & VISION */}
-      <section className="py-16 bg-navy relative overflow-hidden">
-        {/* Decorative blobs */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-20 -left-20 w-72 h-72 bg-gold/5 rounded-full" />
-          <div className="absolute -bottom-20 -right-20 w-96 h-96 bg-gold/5 rounded-full" />
-        </div>
+      <section className="py-16 relative overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="/images/quran.webp"
+          alt="Holy Quran open — background for Mission and Vision section"
+          fill
+          className="object-cover object-center"
+        />
+        {/* Dark navy overlay for text clarity */}
+        <div className="absolute inset-0 bg-navy/80" />
+        {/* Extra subtle darkening layer */}
+        <div className="absolute inset-0 bg-black/30" />
         <div className="container-custom relative z-10">
           {/* Header */}
           <div className="text-center mb-10">
