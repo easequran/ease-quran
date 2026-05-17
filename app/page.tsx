@@ -476,7 +476,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
 
             {/* MISSION */}
-            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-200 hover:border-gold/50 hover:shadow-md transition-all duration-200">
+            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-400 hover:border-gold hover:shadow-md transition-all duration-200">
               <div className="relative w-20 h-20 mb-4">
                 <div className="absolute inset-0 rounded-full border-[3px] border-gold" />
                 <div className="absolute inset-[5px] rounded-full border-2 border-gold" />
@@ -498,7 +498,7 @@ export default function HomePage() {
             </div>
 
             {/* VISION */}
-            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-200 hover:border-gold/50 hover:shadow-md transition-all duration-200">
+            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-400 hover:border-gold hover:shadow-md transition-all duration-200">
               <div className="relative w-20 h-20 mb-4">
                 <div className="absolute inset-0 rounded-full border-[3px] border-navy" />
                 <div className="absolute inset-[5px] rounded-full border-2 border-navy" />
@@ -520,7 +520,7 @@ export default function HomePage() {
             </div>
 
             {/* VALUES */}
-            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-200 hover:border-gold/50 hover:shadow-md transition-all duration-200">
+            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-400 hover:border-gold hover:shadow-md transition-all duration-200">
               <div className="relative w-20 h-20 mb-4">
                 <div className="absolute inset-0 rounded-full border-[3px] border-gold" />
                 <div className="absolute inset-[5px] rounded-full border-2 border-gold" />
@@ -537,7 +537,7 @@ export default function HomePage() {
                 Trust, Excellence and Genuine Care for Every Student
               </h3>
               <p className="text-grey text-xs leading-relaxed">
-                Certified teachers only, transparent pricing, full respect for Islamic guidelines, and a free-trial guarantee — because your trust means everything to us.
+                Certified teachers only, transparent pricing, full respect for Islamic guidelines, and a free-trial guarantee. Your trust means everything to us.
               </p>
             </div>
 
