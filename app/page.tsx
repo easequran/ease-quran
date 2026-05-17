@@ -462,95 +462,106 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* MISSION & VISION */}
-      <section
-        className="py-16 relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/images/quran.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Navy overlay */}
-        <div className="absolute inset-0 bg-navy/70" />
-        {/* Extra darkening for text contrast */}
-        <div className="absolute inset-0 bg-black/25" />
-        <div className="container-custom relative z-10">
-          {/* Header */}
-          <div className="text-center mb-10">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-2">Our Purpose</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-white">Mission &amp; Vision</h2>
+      {/* MISSION, VISION & VALUES */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+
+          {/* Section header */}
+          <div className="text-center mb-14">
+            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-3">Who We Are</span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">Our Mission, Vision &amp; Values</h2>
           </div>
 
-          {/* Two columns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {/* Mission */}
-            <div className="border border-gold/25 rounded-2xl p-7 bg-white/5 backdrop-blur-sm">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-xl bg-gold/20 flex items-center justify-center shrink-0">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4 text-gold" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                  </svg>
+          {/* 3 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-100 max-w-5xl mx-auto">
+
+            {/* MISSION */}
+            <div className="flex flex-col items-center text-center px-8 py-8">
+              {/* Outer ring + inner circle icon */}
+              <div className="relative w-24 h-24 mb-6">
+                <div className="absolute inset-0 rounded-full border-2 border-gold/30" />
+                <div className="absolute inset-3 rounded-full border border-gold/50" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center">
+                    {/* Mountain / target icon */}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-7 h-7 text-gold" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 3l7.5 13.5L13 12l4 5h4M15 6a2 2 0 100-4 2 2 0 000 4z" />
+                    </svg>
+                  </div>
                 </div>
-                <span className="text-gold text-xs font-bold tracking-widest uppercase">Our Mission</span>
               </div>
-              <h3 className="font-playfair font-bold text-lg text-white mb-3 leading-snug">
-                Make authentic Quran education accessible to every Muslim family in America
+              <span className="text-gold text-xs font-bold tracking-widest uppercase mb-3">Our Mission</span>
+              <h3 className="font-playfair font-bold text-xl text-navy mb-3 leading-snug">
+                Make Authentic Quran Education Accessible to Every Muslim Family
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-5">
-                Every Muslim child and adult in the US deserves a certified, trusted Quran teacher, regardless of location, schedule, or background. We remove every barrier between your family and quality Quran education.
+              <p className="text-grey text-sm leading-relaxed">
+                Every Muslim child and adult in the US deserves a certified, trusted Quran teacher. We remove every barrier — location, schedule, cost — between your family and quality Quran education.
               </p>
-              <ul className="space-y-2.5">
-                {["Wifaq ul Madaris certified teachers", "Flexible evening & weekend slots", "Transparent pricing, no hidden fees", "Dedicated female teachers available"].map((p) => (
-                  <li key={p} className="flex items-center gap-2.5 text-sm text-gray-300">
-                    <CheckCircle className="w-3.5 h-3.5 text-gold shrink-0" />
-                    {p}
-                  </li>
-                ))}
-              </ul>
             </div>
 
-            {/* Vision */}
-            <div className="border border-gold/25 rounded-2xl p-7 bg-white/5 backdrop-blur-sm">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-xl bg-gold/20 flex items-center justify-center shrink-0">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4 text-gold" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+            {/* VISION */}
+            <div className="flex flex-col items-center text-center px-8 py-8">
+              <div className="relative w-24 h-24 mb-6">
+                <div className="absolute inset-0 rounded-full border-2 border-navy/20" />
+                <div className="absolute inset-3 rounded-full border border-navy/30" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-navy/8 flex items-center justify-center" style={{ background: "rgba(11,30,91,0.08)" }}>
+                    {/* Lightbulb icon */}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-7 h-7 text-navy" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.355a7.5 7.5 0 01-3 0M12 3a6 6 0 110 12 6 6 0 010-12z" />
+                    </svg>
+                  </div>
                 </div>
-                <span className="text-gold text-xs font-bold tracking-widest uppercase">Our Vision</span>
               </div>
-              <h3 className="font-playfair font-bold text-lg text-white mb-3 leading-snug">
-                A generation of Western Muslims who recite, understand, and live by the Quran
+              <span className="text-navy text-xs font-bold tracking-widest uppercase mb-3">Our Vision</span>
+              <h3 className="font-playfair font-bold text-xl text-navy mb-3 leading-snug">
+                A Generation of Western Muslims Who Live by the Quran
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-5">
-                We envision American Muslim homes where the Quran is not distant. Children grow up reciting it beautifully, adults understand its meaning, and the Book of Allah is a living presence from coast to coast.
+              <p className="text-grey text-sm leading-relaxed">
+                We envision American Muslim homes where the Quran is not distant — where children recite it beautifully, adults understand its meaning, and the Book of Allah is a living presence coast to coast.
               </p>
-              <ul className="space-y-2.5">
-                {["Lasting connection with the Book of Allah", "Confident Quran readers in every home", "Strong Muslim identity in the West", "Serving all 50 states, every time zone"].map((p) => (
-                  <li key={p} className="flex items-center gap-2.5 text-sm text-gray-300">
-                    <CheckCircle className="w-3.5 h-3.5 text-gold shrink-0" />
-                    {p}
-                  </li>
-                ))}
-              </ul>
             </div>
+
+            {/* VALUES */}
+            <div className="flex flex-col items-center text-center px-8 py-8">
+              <div className="relative w-24 h-24 mb-6">
+                <div className="absolute inset-0 rounded-full border-2 border-gold/30" />
+                <div className="absolute inset-3 rounded-full border border-gold/50" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center">
+                    {/* Award / medal icon */}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-7 h-7 text-gold" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-4.5A3.75 3.75 0 0012 10.5a3.75 3.75 0 00-4.5 3.75v4.5m4.5-13.5V3m0 0L9 5.25M12 3l3 2.25" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <span className="text-gold text-xs font-bold tracking-widest uppercase mb-3">Our Values</span>
+              <h3 className="font-playfair font-bold text-xl text-navy mb-3 leading-snug">
+                Trust, Excellence, and Genuine Care for Every Student
+              </h3>
+              <p className="text-grey text-sm leading-relaxed">
+                We hire only certified teachers, maintain full transparency on pricing, respect Islamic guidelines in all sessions, and stand behind every class with our free-trial guarantee.
+              </p>
+            </div>
+
           </div>
 
-          {/* Bottom values row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-8">
+          {/* Bottom divider line with 4 value pills */}
+          <div className="mt-12 pt-10 border-t border-gray-100 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {[
               { icon: <Shield className="w-4 h-4 text-gold" />, label: "Trust" },
               { icon: <Award className="w-4 h-4 text-gold" />, label: "Excellence" },
               { icon: <Users className="w-4 h-4 text-gold" />, label: "Inclusivity" },
               { icon: <Globe className="w-4 h-4 text-gold" />, label: "50 States" },
             ].map((v) => (
-              <div key={v.label} className="flex items-center justify-center gap-2.5 border border-gold/20 rounded-xl py-3 px-4 bg-white/5">
+              <div key={v.label} className="flex items-center justify-center gap-2 bg-offwhite border border-gold/20 rounded-xl py-3 px-4">
                 {v.icon}
-                <span className="text-white text-sm font-semibold">{v.label}</span>
+                <span className="text-navy text-sm font-semibold">{v.label}</span>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
