@@ -38,6 +38,13 @@ export const metadata: Metadata = {
   authors: [{ name: "Ease Quran Online Academy" }],
   creator: "Ease Quran Online Academy",
   metadataBase: new URL("https://easequran.com"),
+  icons: {
+    icon: [
+      { url: "/images/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
