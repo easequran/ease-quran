@@ -80,10 +80,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: "/images/favicon.png",
-    apple: "/images/favicon.png",
-  },
   alternates: {
     canonical: "https://easequran.com",
   },
