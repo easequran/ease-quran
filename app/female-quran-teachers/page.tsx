@@ -122,7 +122,7 @@ const faqs = [
   {
     question: "Is Sister Almas Fatima certified?",
     answer:
-      "Yes. Sister Almas Fatima holds two recognized Islamic credentials: a certification as a Qaria e Quran from an institution affiliated with Wifaq ul Madaris Al-Arabia, the most respected Islamic education board in the world, and a Bachelor of Arts in Islamic Studies. She has been teaching Quran to sisters and children online since 2022 and brings genuine academic qualification to every lesson.",
+      "Yes. Sister Almas Fatima holds two recognized Islamic credentials: a certification as a Qaria e Quran from an institution affiliated with Wifaq ul Madaris Al-Arabia, the most respected Islamic education board in the world, and a Bachelor in Islamic Studies. She has been teaching Quran to sisters and children online since 2022 and brings genuine academic qualification to every lesson.",
   },
   {
     question: "Can my daughter have a female teacher for all her classes?",
@@ -238,7 +238,7 @@ export default function FemaleQuranTeachersPage() {
                   <div className="space-y-3 mb-8">
                     {[
                       { label: "Certification", value: "Qaria e Quran, Wifaq ul Madaris Al-Arabia" },
-                      { label: "Qualification", value: "B.A. Islamic Studies" },
+                      { label: "Qualification", value: "Bachelor in Islamic Studies" },
                       { label: "Teaching Since", value: "2022" },
                       { label: "Speciality", value: "Quran for Kids, Tajweed, Noorani Qaida, Islamic Studies" },
                       { label: "Available For", value: "Sisters (women) and children of all ages" },
@@ -260,7 +260,7 @@ export default function FemaleQuranTeachersPage() {
                       ✓ Wifaq ul Madaris Certified
                     </span>
                     <span className="bg-white border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">
-                      ✓ B.A. Islamic Studies
+                      ✓ Bachelor in Islamic Studies
                     </span>
                     <span className="bg-white border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">
                       ✓ Female-Only Classes

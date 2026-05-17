@@ -142,7 +142,7 @@ const faqs = [
   {
     question: "Do you have female Quran teachers?",
     answer:
-      "Absolutely. Our teacher Almas Fatima is a Qaria e Quran with a Bachelor's in Islamic Studies, available specifically for sisters and children. We understand and fully respect this requirement.",
+      "Absolutely. Our teacher Almas Fatima is a Qaria e Quran with a Bachelor in Islamic Studies, available specifically for sisters and children. We understand and fully respect this requirement.",
   },
   {
     question: "What is the free trial class?",
@@ -636,7 +636,7 @@ export default function HomePage() {
               name="Almas Fatima"
               image="/images/teacher-2.webp"
               credential="Certified from Wifaq ul Madaris"
-              qualification="Qaria e Quran · B.A. Islamic Studies"
+              qualification="Qaria e Quran · Bachelor in Islamic Studies"
               speciality="Available for sisters and children"
               experience="Teaching since 2022"
               badge="Female Teacher"

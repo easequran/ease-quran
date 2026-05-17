@@ -419,7 +419,7 @@ export default function NooraniQaidaPage() {
               name="Almas Fatima"
               image="/images/teacher-2.webp"
               credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Qaria e Quran, B.A. Islamic Studies, Noorani Qaida"
+              speciality="Qaria e Quran, Bachelor in Islamic Studies, Noorani Qaida"
               experience="Available for sisters and children, teaching since 2022"
               qualification="Female Quran Teacher"
               badge="Female Teacher"

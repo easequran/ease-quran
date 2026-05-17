@@ -410,7 +410,7 @@ export default function AboutPage() {
               name="Almas Fatima"
               image="/images/teacher-2.webp"
               credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Qaria e Quran, B.A. Islamic Studies"
+              speciality="Qaria e Quran, Bachelor in Islamic Studies"
               experience="Teaching since 2022, available for sisters & children"
               qualification="Female Quran Teacher"
               badge="Female Teacher"
