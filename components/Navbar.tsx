@@ -1,47 +1,57 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, BookOpen, Users, Star, Globe } from "lucide-react";
 
 const WHATSAPP_URL =
   "https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20booking%20a%20free%20trial%20Quran%20class";
 
-const navLinks = [
+/* ── Courses mega-menu data ── */
+const courseColumns = [
+  {
+    heading: "Quran Courses",
+    icon: <BookOpen className="w-3.5 h-3.5" />,
+    links: [
+      { label: "Quran for Kids", href: "/courses/quran-for-kids", desc: "Ages 4–14, patient teachers" },
+      { label: "Tajweed", href: "/courses/tajweed", desc: "Perfect your recitation" },
+      { label: "Hifz Program", href: "/courses/hifz", desc: "Full Quran memorization" },
+      { label: "Noorani Qaida", href: "/courses/noorani-qaida", desc: "Start from scratch" },
+      { label: "Quran for Adults", href: "/courses/quran-for-adults", desc: "All levels, no judgment" },
+      { label: "Quran for Reverts", href: "/courses/quran-for-reverts", desc: "New Muslims welcome" },
+    ],
+  },
+  {
+    heading: "Language & Studies",
+    icon: <Star className="w-3.5 h-3.5" />,
+    links: [
+      { label: "Arabic Language", href: "/courses/arabic-language", desc: "Sarf, Nahw & Quranic Arabic" },
+      { label: "Islamic Studies", href: "/courses/islamic-studies", desc: "Aqeedah, Fiqh & Seerah" },
+    ],
+  },
+];
+
+/* ── Locations dropdown data ── */
+const locationLinks = [
+  { label: "New York", href: "/locations/new-york" },
+  { label: "Houston", href: "/locations/houston" },
+  { label: "Chicago", href: "/locations/chicago" },
+  { label: "Los Angeles", href: "/locations/los-angeles" },
+  { label: "New Jersey", href: "/locations/new-jersey" },
+  { label: "Dearborn, MI", href: "/locations/dearborn-michigan" },
+  { label: "Dallas", href: "/locations/dallas" },
+  { label: "Philadelphia", href: "/locations/philadelphia" },
+  { label: "Atlanta", href: "/locations/atlanta" },
+  { label: "Columbus, OH", href: "/locations/columbus-ohio" },
+];
+
+/* ── Simple nav links ── */
+const simpleLinks = [
   { label: "Home", href: "/" },
-  {
-    label: "Courses",
-    href: "/courses",
-    dropdown: [
-      { label: "Quran for Kids", href: "/courses/quran-for-kids" },
-      { label: "Tajweed", href: "/courses/tajweed" },
-      { label: "Hifz Program", href: "/courses/hifz" },
-      { label: "Noorani Qaida", href: "/courses/noorani-qaida" },
-      { label: "Arabic Language", href: "/courses/arabic-language" },
-      { label: "Islamic Studies", href: "/courses/islamic-studies" },
-      { label: "Quran for Adults", href: "/courses/quran-for-adults" },
-      { label: "Quran for Reverts", href: "/courses/quran-for-reverts" },
-    ],
-  },
-  {
-    label: "Locations",
-    href: "/locations",
-    dropdown: [
-      { label: "New York", href: "/locations/new-york" },
-      { label: "Houston", href: "/locations/houston" },
-      { label: "Chicago", href: "/locations/chicago" },
-      { label: "Los Angeles", href: "/locations/los-angeles" },
-      { label: "New Jersey", href: "/locations/new-jersey" },
-      { label: "Dearborn, MI", href: "/locations/dearborn-michigan" },
-      { label: "Dallas", href: "/locations/dallas" },
-      { label: "Philadelphia", href: "/locations/philadelphia" },
-      { label: "Atlanta", href: "/locations/atlanta" },
-      { label: "Columbus, OH", href: "/locations/columbus-ohio" },
-    ],
-  },
   { label: "About", href: "/about" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Female Teachers", href: "/female-quran-teachers" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
@@ -53,7 +63,6 @@ function WhatsAppIcon() {
     </svg>
   );
 }
-
 function FacebookIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
@@ -61,7 +70,6 @@ function FacebookIcon() {
     </svg>
   );
 }
-
 function InstagramIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
@@ -69,7 +77,6 @@ function InstagramIcon() {
     </svg>
   );
 }
-
 function YoutubeIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
@@ -80,7 +87,9 @@ function YoutubeIcon() {
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openMobile, setOpenMobile] = useState<string | null>(null);
+  const [activeDesktop, setActiveDesktop] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handler = () => { if (window.innerWidth >= 1024) setMobileOpen(false); };
@@ -88,97 +97,172 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", handler);
   }, []);
 
+  function openMenu(name: string) {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setActiveDesktop(name);
+  }
+  function closeMenu() {
+    closeTimer.current = setTimeout(() => setActiveDesktop(null), 120);
+  }
+
   return (
     <>
-      {/* ── Top social bar — scrolls away with page ── */}
+      {/* ── Top social bar — scrolls away ── */}
       <div className="bg-navy border-b border-gold/20">
         <div className="container-custom flex items-center justify-between py-2.5">
-
-          {/* Left: Follow Us + social icons */}
           <div className="flex items-center gap-3">
             <span className="text-white/50 text-xs font-medium uppercase tracking-wider hidden sm:inline pr-1 border-r border-white/20 mr-1">
               Follow Us
             </span>
-            <a href="https://www.facebook.com/share/18WdHQVNWT/" target="_blank" rel="noopener noreferrer"
-              aria-label="Facebook"
+            <a href="https://www.facebook.com/share/18WdHQVNWT/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
               className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-200">
               <FacebookIcon />
             </a>
-            <a href="https://www.instagram.com/contacteasequran" target="_blank" rel="noopener noreferrer"
-              aria-label="Instagram"
+            <a href="https://www.instagram.com/contacteasequran" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
               className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-200">
               <InstagramIcon />
             </a>
-            <a href="https://youtube.com/@contacteasequran" target="_blank" rel="noopener noreferrer"
-              aria-label="YouTube"
+            <a href="https://youtube.com/@contacteasequran" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
               className="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-gold hover:bg-gold hover:text-navy transition-all duration-200">
               <YoutubeIcon />
             </a>
           </div>
-
-          {/* Right: US flag + tagline */}
           <div className="flex items-center gap-2">
             <span className="text-base leading-none">🇺🇸</span>
             <span className="text-white/70 text-xs font-medium">
               <span className="hidden sm:inline">Serving All </span>50 States
             </span>
           </div>
-
         </div>
-        {/* Gold accent line at bottom of top bar */}
         <div className="h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
       </div>
 
-      {/* ── White nav — sticky to top on scroll ── */}
+      {/* ── Sticky white nav ── */}
       <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container-custom">
           <nav className="flex items-center justify-between h-20">
 
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0">
-              <Image
-                src="/images/logo.png"
-                alt="Ease Quran Online Academy"
-                width={180}
-                height={56}
-                className="h-14 w-auto object-contain"
-                priority
-              />
+              <Image src="/images/logo.png" alt="Ease Quran Online Academy"
+                width={180} height={56} className="h-14 w-auto object-contain" priority />
             </Link>
 
-            {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-              {navLinks.map((link) =>
-                link.dropdown ? (
-                  <div
-                    key={link.label}
-                    className="relative group"
-                    onMouseEnter={() => setOpenDropdown(link.label)}
-                    onMouseLeave={() => setOpenDropdown(null)}
-                  >
-                    <button className="flex items-center gap-1 font-medium text-sm transition-colors hover:text-gold py-2 text-navy">
-                      {link.label}
-                      <ChevronDown size={13} className={`transition-transform duration-200 ${openDropdown === link.label ? "rotate-180" : ""}`} />
-                    </button>
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                      <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 py-2 min-w-[200px]">
-                        {link.dropdown.map((item) => (
-                          <Link key={item.href} href={item.href}
-                            className="block px-4 py-2.5 text-sm text-navy hover:bg-offwhite hover:text-gold transition-colors font-medium"
-                            onClick={() => setOpenDropdown(null)}>
-                            {item.label}
+            {/* Desktop nav links */}
+            <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+
+              {/* Home */}
+              <Link href="/" className="px-3 py-2 font-medium text-sm text-navy hover:text-gold transition-colors rounded-lg hover:bg-gold/5">
+                Home
+              </Link>
+
+              {/* Courses — mega menu */}
+              <div className="relative" onMouseEnter={() => openMenu("courses")} onMouseLeave={closeMenu}>
+                <button
+                  className={`flex items-center gap-1 px-3 py-2 font-medium text-sm rounded-lg transition-all ${activeDesktop === "courses" ? "text-gold bg-gold/5" : "text-navy hover:text-gold hover:bg-gold/5"}`}
+                  aria-expanded={activeDesktop === "courses"}
+                >
+                  Courses
+                  <ChevronDown size={13} className={`transition-transform duration-200 ${activeDesktop === "courses" ? "rotate-180 text-gold" : ""}`} />
+                </button>
+
+                {/* Mega menu panel */}
+                {activeDesktop === "courses" && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[520px]"
+                    onMouseEnter={() => openMenu("courses")} onMouseLeave={closeMenu}>
+                    <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+                      {/* Top banner */}
+                      <div className="bg-navy px-6 py-3 flex items-center justify-between">
+                        <span className="text-white text-xs font-semibold tracking-wider uppercase">All Courses</span>
+                        <Link href="/courses" onClick={() => setActiveDesktop(null)}
+                          className="text-gold text-xs font-semibold hover:underline">
+                          View All →
+                        </Link>
+                      </div>
+
+                      {/* Columns */}
+                      <div className="grid grid-cols-2 gap-0 divide-x divide-gray-100">
+                        {courseColumns.map((col) => (
+                          <div key={col.heading} className="py-4 px-4">
+                            <div className="flex items-center gap-1.5 text-gold text-[10px] font-bold tracking-widest uppercase mb-3 px-1">
+                              {col.icon}
+                              {col.heading}
+                            </div>
+                            <ul className="space-y-0.5">
+                              {col.links.map((item) => (
+                                <li key={item.href}>
+                                  <Link href={item.href} onClick={() => setActiveDesktop(null)}
+                                    className="flex flex-col px-2 py-2 rounded-xl hover:bg-offwhite group transition-colors">
+                                    <span className="text-navy font-semibold text-sm group-hover:text-gold transition-colors leading-tight">
+                                      {item.label}
+                                    </span>
+                                    <span className="text-grey text-xs mt-0.5">{item.desc}</span>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Footer CTA */}
+                      <div className="border-t border-gray-100 bg-offwhite px-6 py-3 flex items-center justify-between">
+                        <span className="text-grey text-xs">Not sure where to start?</span>
+                        <Link href="/free-trial" onClick={() => setActiveDesktop(null)}
+                          className="text-xs font-bold text-white bg-gold hover:bg-gold-dark px-4 py-1.5 rounded-lg transition-colors">
+                          Book Free Trial
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Locations — grid dropdown */}
+              <div className="relative" onMouseEnter={() => openMenu("locations")} onMouseLeave={closeMenu}>
+                <button
+                  className={`flex items-center gap-1 px-3 py-2 font-medium text-sm rounded-lg transition-all ${activeDesktop === "locations" ? "text-gold bg-gold/5" : "text-navy hover:text-gold hover:bg-gold/5"}`}
+                  aria-expanded={activeDesktop === "locations"}
+                >
+                  Locations
+                  <ChevronDown size={13} className={`transition-transform duration-200 ${activeDesktop === "locations" ? "rotate-180 text-gold" : ""}`} />
+                </button>
+
+                {activeDesktop === "locations" && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[320px]"
+                    onMouseEnter={() => openMenu("locations")} onMouseLeave={closeMenu}>
+                    <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
+                      <div className="bg-navy px-5 py-3 flex items-center justify-between">
+                        <div className="flex items-center gap-1.5">
+                          <Globe className="w-3.5 h-3.5 text-gold" />
+                          <span className="text-white text-xs font-semibold tracking-wider uppercase">USA Cities</span>
+                        </div>
+                        <Link href="/locations" onClick={() => setActiveDesktop(null)}
+                          className="text-gold text-xs font-semibold hover:underline">
+                          View All →
+                        </Link>
+                      </div>
+                      <div className="grid grid-cols-2 gap-0 p-3">
+                        {locationLinks.map((loc) => (
+                          <Link key={loc.href} href={loc.href} onClick={() => setActiveDesktop(null)}
+                            className="flex items-center gap-2 px-3 py-2.5 rounded-xl hover:bg-offwhite group transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-gold/40 group-hover:bg-gold transition-colors shrink-0" />
+                            <span className="text-navy text-sm font-medium group-hover:text-gold transition-colors">{loc.label}</span>
                           </Link>
                         ))}
                       </div>
                     </div>
                   </div>
-                ) : (
-                  <Link key={link.href} href={link.href}
-                    className="font-medium text-sm transition-colors hover:text-gold py-2 text-navy">
-                    {link.label}
-                  </Link>
-                )
-              )}
+                )}
+              </div>
+
+              {/* Simple links */}
+              {simpleLinks.filter(l => l.label !== "Home").map((link) => (
+                <Link key={link.href} href={link.href}
+                  className="px-3 py-2 font-medium text-sm text-navy hover:text-gold transition-colors rounded-lg hover:bg-gold/5">
+                  {link.label}
+                </Link>
+              ))}
             </div>
 
             {/* Desktop CTA */}
@@ -189,26 +273,15 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile right-side actions */}
+            {/* Mobile right */}
             <div className="lg:hidden flex items-center gap-2">
-
-              {/* WhatsApp button — brand colors (gold bg, navy icon) */}
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp us"
-                className="w-10 h-10 bg-gold text-navy rounded-xl flex items-center justify-center hover:bg-gold-dark transition-colors shadow-md"
-              >
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp us"
+                className="w-10 h-10 bg-gold text-navy rounded-xl flex items-center justify-center hover:bg-gold-dark transition-colors shadow-md">
                 <WhatsAppIcon />
               </a>
-
-              {/* Hamburger — navy bg with gold bars */}
               <button
                 className="w-10 h-10 bg-navy rounded-xl flex flex-col items-center justify-center gap-[5px] hover:bg-navy/80 transition-colors"
-                onClick={() => setMobileOpen(!mobileOpen)}
-                aria-label="Toggle menu"
-              >
+                onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
                 <span className={`block w-5 h-0.5 bg-gold rounded-full transition-all duration-300 origin-center ${mobileOpen ? "rotate-45 translate-y-[6.5px]" : ""}`} />
                 <span className={`block w-5 h-0.5 bg-gold rounded-full transition-all duration-300 ${mobileOpen ? "opacity-0 scale-x-0" : ""}`} />
                 <span className={`block w-5 h-0.5 bg-gold rounded-full transition-all duration-300 origin-center ${mobileOpen ? "-rotate-45 -translate-y-[6.5px]" : ""}`} />
@@ -217,66 +290,96 @@ export default function Navbar() {
           </nav>
         </div>
 
-        {/* Mobile Menu — inside sticky header so it stays pinned */}
+        {/* Mobile menu */}
         {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl max-h-[80vh] overflow-y-auto">
-          <div className="container-custom py-5 flex flex-col gap-1">
-            {navLinks.map((link) => (
-              <div key={link.label}>
-                <div className="flex items-center justify-between">
-                  <Link
-                    href={link.href}
-                    className="flex-1 py-3 px-3 text-navy font-semibold text-sm hover:text-gold transition-colors"
-                    onClick={() => { if (!link.dropdown) setMobileOpen(false); }}
-                  >
-                    {link.label}
-                  </Link>
-                  {link.dropdown && (
-                    <button
-                      className="px-3 py-3 text-grey"
-                      onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
-                    >
-                      <ChevronDown size={16} className={`transition-transform ${openDropdown === link.label ? "rotate-180" : ""}`} />
-                    </button>
-                  )}
-                </div>
+          <div className="lg:hidden bg-white border-t border-gray-100 shadow-2xl max-h-[80vh] overflow-y-auto">
+            <div className="container-custom py-5 flex flex-col gap-1">
 
-                {link.dropdown && openDropdown === link.label && (
-                  <div className="mx-3 mb-2 bg-offwhite rounded-xl overflow-hidden">
-                    {link.dropdown.map((item) => (
-                      <Link key={item.href} href={item.href}
-                        className="block py-2.5 px-4 text-sm text-grey hover:text-gold hover:bg-white transition-colors border-b border-white last:border-0"
-                        onClick={() => { setMobileOpen(false); setOpenDropdown(null); }}>
-                        {item.label}
+              {/* Home */}
+              <Link href="/" className="py-3 px-3 text-navy font-semibold text-sm hover:text-gold transition-colors border-b border-gray-100"
+                onClick={() => setMobileOpen(false)}>
+                Home
+              </Link>
+
+              {/* Courses accordion */}
+              <div className="border-b border-gray-100">
+                <div className="flex items-center justify-between">
+                  <Link href="/courses" className="flex-1 py-3 px-3 text-navy font-semibold text-sm hover:text-gold transition-colors"
+                    onClick={() => setMobileOpen(false)}>
+                    Courses
+                  </Link>
+                  <button className="px-3 py-3 text-grey" onClick={() => setOpenMobile(openMobile === "courses" ? null : "courses")}>
+                    <ChevronDown size={16} className={`transition-transform ${openMobile === "courses" ? "rotate-180 text-gold" : ""}`} />
+                  </button>
+                </div>
+                {openMobile === "courses" && (
+                  <div className="mx-3 mb-3 bg-offwhite rounded-2xl overflow-hidden">
+                    {courseColumns.map((col) => (
+                      <div key={col.heading}>
+                        <div className="px-4 pt-3 pb-1 text-[10px] font-bold text-gold tracking-widest uppercase flex items-center gap-1">
+                          {col.icon} {col.heading}
+                        </div>
+                        {col.links.map((item) => (
+                          <Link key={item.href} href={item.href}
+                            className="block py-2.5 px-4 text-sm text-navy font-medium hover:text-gold hover:bg-white transition-colors border-b border-white last:border-0"
+                            onClick={() => { setMobileOpen(false); setOpenMobile(null); }}>
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Locations accordion */}
+              <div className="border-b border-gray-100">
+                <div className="flex items-center justify-between">
+                  <Link href="/locations" className="flex-1 py-3 px-3 text-navy font-semibold text-sm hover:text-gold transition-colors"
+                    onClick={() => setMobileOpen(false)}>
+                    Locations
+                  </Link>
+                  <button className="px-3 py-3 text-grey" onClick={() => setOpenMobile(openMobile === "locations" ? null : "locations")}>
+                    <ChevronDown size={16} className={`transition-transform ${openMobile === "locations" ? "rotate-180 text-gold" : ""}`} />
+                  </button>
+                </div>
+                {openMobile === "locations" && (
+                  <div className="mx-3 mb-3 bg-offwhite rounded-2xl overflow-hidden grid grid-cols-2">
+                    {locationLinks.map((loc) => (
+                      <Link key={loc.href} href={loc.href}
+                        className="py-2.5 px-4 text-sm text-navy font-medium hover:text-gold hover:bg-white transition-colors border-b border-white"
+                        onClick={() => { setMobileOpen(false); setOpenMobile(null); }}>
+                        {loc.label}
                       </Link>
                     ))}
                   </div>
                 )}
-                <div className="h-px bg-gray-100 mx-3" />
               </div>
-            ))}
 
-            <div className="mt-4 flex flex-col gap-3">
-              <Link
-                href="/free-trial"
-                className="bg-gold text-navy font-bold text-center py-3.5 rounded-xl hover:bg-gold-dark transition-all text-sm"
-                onClick={() => setMobileOpen(false)}
-              >
-                Book Free Trial Class
-              </Link>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 bg-navy text-white font-bold py-3.5 rounded-xl text-sm hover:bg-navy/80 transition-all border border-gold/30"
-                onClick={() => setMobileOpen(false)}
-              >
-                <WhatsAppIcon />
-                WhatsApp Us
-              </a>
+              {/* Simple links */}
+              {simpleLinks.filter(l => l.label !== "Home").map((link) => (
+                <Link key={link.href} href={link.href}
+                  className="py-3 px-3 text-navy font-semibold text-sm hover:text-gold transition-colors border-b border-gray-100"
+                  onClick={() => setMobileOpen(false)}>
+                  {link.label}
+                </Link>
+              ))}
+
+              <div className="mt-4 flex flex-col gap-3">
+                <Link href="/free-trial"
+                  className="bg-gold text-navy font-bold text-center py-3.5 rounded-xl hover:bg-gold-dark transition-all text-sm"
+                  onClick={() => setMobileOpen(false)}>
+                  Book Free Trial Class
+                </Link>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2.5 bg-navy text-white font-bold py-3.5 rounded-xl text-sm hover:bg-navy/80 transition-all border border-gold/30"
+                  onClick={() => setMobileOpen(false)}>
+                  <WhatsAppIcon />
+                  WhatsApp Us
+                </a>
+              </div>
             </div>
           </div>
-        </div>
         )}
       </header>
     </>
