@@ -478,8 +478,8 @@ export default function HomePage() {
             {/* MISSION */}
             <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-200 hover:border-gold/50 hover:shadow-md transition-all duration-200">
               <div className="relative w-20 h-20 mb-4">
-                <div className="absolute inset-0 rounded-full border-[3px] border-gold/60" />
-                <div className="absolute inset-[5px] rounded-full border-2 border-gold/35" />
+                <div className="absolute inset-0 rounded-full border-[3px] border-gold" />
+                <div className="absolute inset-[5px] rounded-full border-2 border-gold" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-6 h-6 text-gold" aria-hidden="true">
@@ -500,8 +500,8 @@ export default function HomePage() {
             {/* VISION */}
             <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-200 hover:border-gold/50 hover:shadow-md transition-all duration-200">
               <div className="relative w-20 h-20 mb-4">
-                <div className="absolute inset-0 rounded-full border-[3px] border-navy/40" />
-                <div className="absolute inset-[5px] rounded-full border-2 border-navy/20" />
+                <div className="absolute inset-0 rounded-full border-[3px] border-navy" />
+                <div className="absolute inset-[5px] rounded-full border-2 border-navy" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "rgba(11,30,91,0.08)" }}>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-6 h-6 text-navy" aria-hidden="true">
@@ -522,8 +522,8 @@ export default function HomePage() {
             {/* VALUES */}
             <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-200 hover:border-gold/50 hover:shadow-md transition-all duration-200">
               <div className="relative w-20 h-20 mb-4">
-                <div className="absolute inset-0 rounded-full border-[3px] border-gold/60" />
-                <div className="absolute inset-[5px] rounded-full border-2 border-gold/35" />
+                <div className="absolute inset-0 rounded-full border-[3px] border-gold" />
+                <div className="absolute inset-[5px] rounded-full border-2 border-gold" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-6 h-6 text-gold" aria-hidden="true">
