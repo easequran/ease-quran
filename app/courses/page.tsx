@@ -6,14 +6,14 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Online Quran Courses | Ease Quran Online Academy USA",
   description:
-    "Browse all online Quran courses at Ease Quran Academy — Tajweed, Hifz, Noorani Qaida, Arabic, Islamic Studies, and more. Free first class.",
+    "Browse all online Quran courses at Ease Quran Academy: Tajweed, Hifz, Noorani Qaida, Arabic, Islamic Studies, and more. Free first class.",
   alternates: {
     canonical: "https://easequran.com/courses",
   },
   openGraph: {
     title: "Online Quran Courses | Ease Quran Online Academy USA",
     description:
-      "Browse all online Quran courses at Ease Quran Academy — Tajweed, Hifz, Noorani Qaida, Arabic, Islamic Studies, and more. Free first class.",
+      "Browse all online Quran courses at Ease Quran Academy: Tajweed, Hifz, Noorani Qaida, Arabic, Islamic Studies, and more. Free first class.",
     images: ["/images/og-image.png"],
   },
 };
@@ -88,7 +88,7 @@ const courses = [
     badge: "New Muslims",
     title: "Quran for Reverts",
     description:
-      "Specially designed for new Muslims — from the Shahada and Kalima to Salah words, essential Duas, and short Surahs. Begin your journey with confidence.",
+      "Specially designed for new Muslims, covering everything from the Shahada and Kalima to Salah words, essential Duas, and short Surahs. Begin your journey with confidence.",
     tags: ["New Muslims", "Start from Zero", "Supportive Teacher"],
   },
 ];
@@ -139,7 +139,7 @@ export default function CoursesPage() {
               Online Quran Courses for Every Student
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
-              From your child&apos;s very first Arabic letter to completing the Quran with Tajweed —
+              From your child&apos;s very first Arabic letter to completing the Quran with Tajweed,
               we have a certified teacher and a structured course for every stage of the journey.
               All courses are taught live, one-on-one, over a simple video call.
             </p>
@@ -204,7 +204,7 @@ export default function CoursesPage() {
                 <div className="relative h-48 overflow-hidden bg-offwhite">
                   <Image
                     src={course.image}
-                    alt={`${course.title} — Ease Quran Online Academy`}
+                    alt={`${course.title} at Ease Quran Online Academy`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -300,7 +300,7 @@ export default function CoursesPage() {
 
       <CTASection
         headline="Not Sure Which Course to Choose?"
-        subtext="Book a free trial class and let our teacher assess your child's level. We will recommend the perfect course — no pressure, no commitment."
+        subtext="Book a free trial class and let our teacher assess your child's level. We will recommend the perfect course, no pressure, no commitment."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

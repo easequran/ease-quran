@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Online Hifz Program | Quran Memorization Classes USA",
     description:
       "Structured online Hifz program for kids and adults. Certified teachers, proven memorization methods. Serving Muslim families across the USA.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Hifz Program — Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Hifz Program, Ease Quran Academy" }],
   },
 };
 
@@ -49,7 +49,7 @@ const aggregateRatingSchema = {
 const courseSchema = {
   "@context": "https://schema.org",
   "@type": "Course",
-  name: "Online Hifz Program — Quran Memorization",
+  name: "Online Hifz Program: Quran Memorization",
   description:
     "Structured online Hifz program for kids and adults. Proven sabaq, sabaqi, and manzil methodology with certified Wifaq ul Madaris teachers.",
   provider: {
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "What if my child forgets memorized portions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Forgetting is a normal part of Hifz — even the Sahaba experienced this. Our program uses the traditional sabaqi (recent lesson revision) and manzil (old lesson revision) system to protect memorized portions. The teacher monitors revision systematically and never allows too many days to pass without reviewing earlier Juz.",
+        text: "Forgetting is a normal part of Hifz, even the Sahaba experienced this. Our program uses the traditional sabaqi (recent lesson revision) and manzil (old lesson revision) system to protect memorized portions. The teacher monitors revision systematically and never allows too many days to pass without reviewing earlier Juz.",
       },
     },
     {
@@ -130,7 +130,7 @@ const faqs = [
   {
     question: "What if my child forgets memorized portions?",
     answer:
-      "Forgetting is a normal part of Hifz — even the Sahaba experienced this. Our program uses the traditional sabaqi (recent lesson revision) and manzil (old lesson revision) system to protect memorized portions. The teacher monitors revision systematically and never allows too many days to pass without reviewing earlier Juz.",
+      "Forgetting is a normal part of Hifz, even the Sahaba experienced this. Our program uses the traditional sabaqi (recent lesson revision) and manzil (old lesson revision) system to protect memorized portions. The teacher monitors revision systematically and never allows too many days to pass without reviewing earlier Juz.",
   },
   {
     question: "Can adults complete Hifz online?",
@@ -180,7 +180,7 @@ export default function HifzPage() {
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
               Memorize the entire Quran with a certified Hifz specialist using the proven
-              traditional sabaq, sabaqi, and manzil methodology — adapted for students in the
+              traditional sabaq, sabaqi, and manzil methodology, adapted for students in the
               USA. A structured journey, taken at your pace, guided every step of the way.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -218,7 +218,7 @@ export default function HifzPage() {
               </h2>
               <div className="space-y-4 text-grey text-sm leading-relaxed">
                 <p>
-                  Hifz (حفظ) is the memorization of the entire Quran — all 30 Juz, 114 Surahs,
+                  Hifz (حفظ) is the memorization of the entire Quran, all 30 Juz, 114 Surahs,
                   and 6,236 verses. A person who completes Hifz is called a Hafiz (male) or Hafiza
                   (female) and earns one of the highest honors in Islam. The Prophet Muhammad ﷺ
                   said the Hafiz will be able to intercede for ten members of their family on the
@@ -228,11 +228,11 @@ export default function HifzPage() {
                   Our online Hifz program is taught by Muhammad Umair, a certified Hifz specialist
                   from <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>. The program
                   follows the traditional three-part daily system (sabaq, sabaqi, manzil) that has
-                  produced millions of Huffaz over centuries — adapted for the schedules and
+                  produced millions of Huffaz over centuries, adapted for the schedules and
                   learning styles of students in the USA.
                 </p>
                 <p>
-                  Enrollment requires a minimum reading ability — students must be able to read the
+                  Enrollment requires a minimum reading ability. Students must be able to read the
                   Quran with basic Tajweed before starting. If your child is not yet at this level,
                   we recommend our Noorani Qaida or Tajweed course first.
                 </p>
@@ -247,7 +247,7 @@ export default function HifzPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/course-hifz.webp"
-                alt="Online Hifz program — Quran memorization classes at Ease Quran Academy"
+                alt="Online Hifz program: Quran memorization classes at Ease Quran Academy"
                 fill
                 className="object-cover"
                 priority
@@ -272,12 +272,12 @@ export default function HifzPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 { title: "Systematic Juz-by-Juz Memorization Plan", desc: "The Quran is memorized in a planned sequence starting from Juz Amma, moving to the last few Juz, and working back. This approach provides early wins and builds confidence." },
-                { title: "Sabaq (New Lesson) Methodology", desc: "Each day, a new portion is memorized — typically 3–5 lines for beginners, increasing as the student's capacity grows. The teacher corrects Tajweed during new memorization." },
+                { title: "Sabaq (New Lesson) Methodology", desc: "Each day, a new portion is memorized, typically 3–5 lines for beginners, increasing as the student's capacity grows. The teacher corrects Tajweed during new memorization." },
                 { title: "Sabaqi (Recent Lesson Revision)", desc: "The last 7 days of memorized content are revised every class. This keeps recent lessons fresh while the student continues adding new material." },
                 { title: "Manzil (Old Lesson Revision)", desc: "Previously memorized Juz are regularly reviewed to prevent forgetting. The teacher assigns specific Juz for the student to recite from memory each week." },
-                { title: "Tajweed Integration During Memorization", desc: "Tajweed rules are applied throughout the Hifz process. Students do not memorize incorrect pronunciation — every verse is memorized with proper Tajweed from day one." },
+                { title: "Tajweed Integration During Memorization", desc: "Tajweed rules are applied throughout the Hifz process. Students do not memorize incorrect pronunciation, every verse is memorized with proper Tajweed from day one." },
                 { title: "Memory Techniques for Non-Arabic Speakers", desc: "Special methods for English-speaking students: understanding verse meaning, associating mental imagery, chunking long verses, and voice recording techniques." },
-                { title: "Test and Certification Milestones", desc: "Formal tests at each Juz completion — the student recites the Juz to the teacher from memory. Certificates are issued at 5, 10, 15, 20, 25, and 30 Juz milestones." },
+                { title: "Test and Certification Milestones", desc: "Formal tests at each Juz completion, the student recites the Juz to the teacher from memory. Certificates are issued at 5, 10, 15, 20, 25, and 30 Juz milestones." },
                 { title: "Parent Progress Reports", desc: "Monthly written reports detail which Juz are memorized, which are in active revision, and the student's Tajweed quality. Parents are always informed of their child's progress." },
               ].map((item) => (
                 <div
@@ -312,7 +312,7 @@ export default function HifzPage() {
               {
                 icon: BookOpen,
                 title: "Children With a Strong Reading Foundation",
-                desc: "Children who can read the Quran fluently with basic Tajweed are ready to begin Hifz. The younger the child starts, the faster the memorization — ages 7–12 are the ideal window.",
+                desc: "Children who can read the Quran fluently with basic Tajweed are ready to begin Hifz. The younger the child starts, the faster the memorization. Ages 7–12 are the ideal window.",
                 points: ["Must read Quran fluently", "Age 7 minimum recommended", "Ages 7–12 ideal for Hifz", "Parental support essential"],
               },
               {
@@ -368,10 +368,10 @@ export default function HifzPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { title: "Daily Class Structure", desc: "Every class follows three stages: (1) Manzil — student recites old lessons from memory. (2) Sabaqi — student recites recent lessons. (3) Sabaq — teacher presents the new lesson and the student memorizes with teacher guidance." },
+                { title: "Daily Class Structure", desc: "Every class follows three stages: (1) Manzil, student recites old lessons from memory. (2) Sabaqi, student recites recent lessons. (3) Sabaq, teacher presents the new lesson and the student memorizes with teacher guidance." },
                 { title: "Recommended Frequency", desc: "5 classes per week is strongly recommended for serious Hifz students. 3 classes per week is the minimum. Daily self-practice of 30–60 minutes between classes is essential." },
                 { title: "Class Duration", desc: "Hifz classes run 45–60 minutes per session. Younger children may begin at 30 minutes and increase as their stamina develops. Each session is intensive and focused." },
-                { title: "Tajweed During Memorization", desc: "The teacher corrects Tajweed errors during every recitation. A verse memorized with wrong pronunciation is harder to fix later — we ensure accuracy from the first repetition." },
+                { title: "Tajweed During Memorization", desc: "The teacher corrects Tajweed errors during every recitation. A verse memorized with wrong pronunciation is harder to fix later, we ensure accuracy from the first repetition." },
                 { title: "Self-Practice Guidance", desc: "The teacher provides a precise daily practice schedule. Students are guided on how to repeat new lessons, protect recent lessons, and cycle through old lessons at home." },
                 { title: "Milestone Celebrations", desc: "Completing each Juz is a significant achievement. We conduct formal milestone tests and issue certificates, creating motivation and a sense of accomplishment throughout the multi-year journey." },
               ].map((item) => (
@@ -396,7 +396,7 @@ export default function HifzPage() {
               Hifz Specialist Certified from Wifaq ul Madaris
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Muhammad Umair is our Hifz specialist — trained in the traditional Hifz methodology
+              Muhammad Umair is our Hifz specialist, trained in the traditional Hifz methodology
               and certified from Wifaq ul Madaris Al-Arabia, he has guided students through this
               blessed journey with patience, discipline, and deep knowledge.
             </p>
@@ -405,7 +405,7 @@ export default function HifzPage() {
             <TeacherCard
               name="Muhammad Umair"
               image="/images/teacher-1.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Hifz Specialist, Tajweed & Quran Memorization"
               experience="2+ years teaching Hifz to students in the USA online"
               qualification="Hifz Teacher"
@@ -446,7 +446,7 @@ export default function HifzPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">FAQ</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
-                Hifz Program — Frequently Asked Questions
+                Hifz Program, Frequently Asked Questions
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -463,7 +463,7 @@ export default function HifzPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { href: "/courses/tajweed", title: "Tajweed", desc: "A prerequisite for Hifz — ensure your recitation is correct before beginning memorization." },
+              { href: "/courses/tajweed", title: "Tajweed", desc: "A prerequisite for Hifz, ensure your recitation is correct before beginning memorization." },
               { href: "/courses/quran-for-kids", title: "Quran for Kids", desc: "Build the reading foundation children need before enrolling in the Hifz program." },
               { href: "/courses/noorani-qaida", title: "Noorani Qaida", desc: "The starting point for students who need to develop their Arabic reading before Hifz." },
             ].map((course) => (

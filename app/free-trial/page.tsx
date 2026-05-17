@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Book Your Free Quran Trial Class | Ease Quran Online Academy",
     description:
       "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers, flexible scheduling. Muslim families across the USA trust Ease Quran.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Book Your Free Quran Trial Class — Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Book Your Free Quran Trial Class at Ease Quran Academy" }],
   },
 };
 
@@ -43,7 +43,7 @@ export default function FreeTrialPage() {
       <section className="bg-navy py-14">
         <div className="container-custom text-center">
           <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
-            100% Free — No Credit Card Required
+            100% Free. No Credit Card Required.
           </span>
           <h1 className="font-playfair font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
             Book Your Free Quran Trial Class
@@ -73,7 +73,7 @@ export default function FreeTrialPage() {
                   {[
                     {
                       icon: GraduationCap,
-                      text: "All teachers certified by Wifaq ul Madaris Al-Arabia — the world's largest Islamic education board",
+                      text: "All teachers certified by Wifaq ul Madaris Al-Arabia, the world's largest Islamic education board",
                     },
                     {
                       icon: CheckCircle,
@@ -85,7 +85,7 @@ export default function FreeTrialPage() {
                     },
                     {
                       icon: CheckCircle,
-                      text: "Fully flexible scheduling — morning, evening, and weekends to fit your family's routine",
+                      text: "Fully flexible scheduling, including mornings, evenings, and weekends to fit your family's routine",
                     },
                     {
                       icon: CheckCircle,
@@ -179,7 +179,7 @@ export default function FreeTrialPage() {
                       Wifaq ul Madaris Al-Arabia Certified
                     </p>
                     <p className="text-grey text-xs leading-relaxed">
-                      All Ease Quran teachers hold certification from Wifaq ul Madaris Al-Arabia —
+                      All Ease Quran teachers hold certification from Wifaq ul Madaris Al-Arabia,
                       the largest and most respected Islamic education board in the world. This is
                       the gold standard in Quran teacher credentials.
                     </p>

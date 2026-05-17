@@ -132,12 +132,12 @@ const faqs = [
   {
     question: "How do online Quran classes work?",
     answer:
-      "Our classes are conducted live via Zoom or Skype, one-on-one between your child and the teacher. Each session follows a structured curriculum with real-time feedback, just like an in-person class — but from the comfort of your home.",
+      "Our classes are conducted live via Zoom or Skype, one-on-one between your child and the teacher. Each session follows a structured curriculum with real-time feedback, just like an in-person class, but from the comfort of your home.",
   },
   {
     question: "Are your teachers certified?",
     answer:
-      "Yes. All our teachers hold certification from Wifaq ul Madaris Al-Arabia Pakistan — the largest Islamic education board in Pakistan and globally recognized. Our founder Shah Zaib has 6+ years of experience specifically teaching Western, English-speaking students.",
+      "Yes. All our teachers hold certification from Wifaq ul Madaris Al-Arabia Pakistan, the largest Islamic education board in Pakistan and globally recognized. Our founder Shah Zaib has 6+ years of experience specifically teaching Western, English-speaking students.",
   },
   {
     question: "Do you have female Quran teachers?",
@@ -152,7 +152,7 @@ const faqs = [
   {
     question: "What age groups do you teach?",
     answer:
-      "We teach students of all ages — from children as young as 4 years old to adults and seniors. We also have a specialized program for new Muslims (reverts) who are starting their Quran journey from scratch.",
+      "We teach students of all ages, from children as young as 4 years old to adults and seniors. We also have a specialized program for new Muslims (reverts) who are starting their Quran journey from scratch.",
   },
   {
     question: "Can I choose a specific class schedule?",
@@ -162,7 +162,7 @@ const faqs = [
   {
     question: "How much do classes cost?",
     answer:
-      "Our plans start at $40/month for 4 classes. Our most popular plan is $79/month for 12 classes of 45 minutes each. We also offer custom family plans — WhatsApp us to discuss.",
+      "Our plans start at $40/month for 4 classes. Our most popular plan is $79/month for 12 classes of 45 minutes each. We also offer custom family plans, so WhatsApp us to discuss.",
   },
   {
     question: "What if my child doesn't like the teacher?",
@@ -238,7 +238,7 @@ export default function HomePage() {
           className="object-cover object-center"
           priority
         />
-        {/* Overlay — dark enough for text, light enough to see the image */}
+        {/* Overlay: dark enough for text, light enough to see the image */}
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 bg-navy/60" />
         {/* Gold glow accents */}
@@ -255,7 +255,7 @@ export default function HomePage() {
         <div className="container-custom relative z-10 py-20 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-            {/* Left — text content */}
+            {/* Left: text content */}
             <div>
               <div className="inline-flex items-center gap-2 bg-white/10 text-white text-xs px-4 py-2 rounded-full mb-6 border border-white/20 backdrop-blur-sm">
                 <CheckCircle size={12} className="text-gold" />
@@ -292,7 +292,7 @@ export default function HomePage() {
               <TrustBadges dark />
             </div>
 
-            {/* Right — premium glass stat cards */}
+            {/* Right: premium glass stat cards */}
             <div className="hidden lg:grid grid-cols-2 gap-4">
               {[
                 { number: "500+", label: "Families Served", sub: "Across all 50 states" },
@@ -317,7 +317,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm">Wifaq ul Madaris Al-Arabia Certified</p>
-                  <p className="text-white/60 text-xs mt-0.5">Pakistan's largest Islamic education board — globally recognized</p>
+                  <p className="text-white/60 text-xs mt-0.5">Pakistan's largest Islamic education board, globally recognized</p>
                 </div>
               </div>
             </div>
@@ -357,7 +357,7 @@ export default function HomePage() {
             </h2>
             <p className="text-grey max-w-2xl mx-auto leading-relaxed">
               As a Muslim parent in America, you deserve more than broken promises and
-              amateur teachers. Here&apos;s what too many families are dealing with — and why
+              amateur teachers. Here&apos;s what too many families are dealing with, and why
               Ease Quran was built to solve every one of these problems.
             </p>
           </div>
@@ -492,7 +492,7 @@ export default function HomePage() {
                 Make authentic Quran education accessible to every Muslim family in America
               </h3>
               <p className="text-gray-300 text-sm leading-relaxed mb-5">
-                Every Muslim child and adult in the US deserves a certified, trusted Quran teacher — regardless of location, schedule, or background. We remove every barrier between your family and quality Quran education.
+                Every Muslim child and adult in the US deserves a certified, trusted Quran teacher, regardless of location, schedule, or background. We remove every barrier between your family and quality Quran education.
               </p>
               <ul className="space-y-2.5">
                 {["Wifaq ul Madaris certified teachers", "Flexible evening & weekend slots", "Transparent pricing, no hidden fees", "Dedicated female teachers available"].map((p) => (
@@ -518,7 +518,7 @@ export default function HomePage() {
                 A generation of Western Muslims who recite, understand, and live by the Quran
               </h3>
               <p className="text-gray-300 text-sm leading-relaxed mb-5">
-                We envision American Muslim homes where the Quran is not distant — where children grow up reciting it beautifully, adults understand its meaning, and the Book of Allah is a living presence from coast to coast.
+                We envision American Muslim homes where the Quran is not distant. Children grow up reciting it beautifully, adults understand its meaning, and the Book of Allah is a living presence from coast to coast.
               </p>
               <ul className="space-y-2.5">
                 {["Lasting connection with the Book of Allah", "Confident Quran readers in every home", "Strong Muslim identity in the West", "Serving all 50 states, every time zone"].map((p) => (
@@ -579,8 +579,8 @@ export default function HomePage() {
               <p className="text-grey leading-relaxed mb-6">
                 Shah Zaib founded Ease Quran with a mission that is deeply personal: to
                 give every Muslim family in America access to a Quran teacher they can
-                genuinely trust. Certified from Wifaq ul Madaris Al-Arabia — the largest
-                Islamic education board in Pakistan and globally recognized — Shah Zaib
+                genuinely trust. Certified from Wifaq ul Madaris Al-Arabia, the largest
+                Islamic education board in Pakistan and globally recognized, Shah Zaib
                 brings 6+ years of dedicated experience teaching Western, English-speaking
                 students.
               </p>
@@ -660,7 +660,7 @@ export default function HomePage() {
                 icon: <Shield className="text-gold" size={28} />,
                 title: "Verified, Certified Teachers",
                 description:
-                  "Every teacher holds certification from Wifaq ul Madaris — the gold standard in Islamic education. No random tutors, no unverified teachers.",
+                  "Every teacher holds certification from Wifaq ul Madaris, the gold standard in Islamic education. No random tutors, no unverified teachers.",
               },
               {
                 icon: <Users className="text-gold" size={28} />,

@@ -91,13 +91,13 @@ export default function PrivacyPolicyPage() {
               <li><strong className="text-navy">Contact Form:</strong> Your name, email address, phone/WhatsApp number, and message when you submit our contact form.</li>
               <li><strong className="text-navy">Free Trial Booking:</strong> Your name, email address, WhatsApp number, your child&apos;s age and level, and your preferred schedule when you book a free trial class.</li>
               <li><strong className="text-navy">Communications:</strong> Any information you share when you contact us via email, WhatsApp, or social media.</li>
-              <li><strong className="text-navy">Course Enrollment:</strong> Name, email, payment details (processed by our secure third-party payment processor — we do not store card numbers), and scheduling preferences.</li>
+              <li><strong className="text-navy">Course Enrollment:</strong> Name, email, payment details (processed by our secure third-party payment processor; we do not store card numbers), and scheduling preferences.</li>
             </ul>
             <h3 className="font-playfair font-semibold text-lg text-navy mb-3 mt-6">
               1b. Information Collected Automatically
             </h3>
             <ul className="list-disc list-inside text-grey leading-relaxed space-y-2 mb-4 pl-2">
-              <li><strong className="text-navy">Usage Data:</strong> Pages visited, time spent on pages, links clicked, and referring URLs — collected via standard web server logs.</li>
+              <li><strong className="text-navy">Usage Data:</strong> Pages visited, time spent on pages, links clicked, and referring URLs, collected via standard web server logs.</li>
               <li><strong className="text-navy">Device Information:</strong> Browser type, operating system, screen resolution, and approximate geographic location (city/country level only) from your IP address.</li>
               <li><strong className="text-navy">Cookies:</strong> We use essential cookies required for the website to function. We do not use advertising or tracking cookies. See Section 7 for details.</li>
             </ul>
@@ -130,7 +130,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul className="list-disc list-inside text-grey leading-relaxed space-y-2 mb-4 pl-2">
               <li><strong className="text-navy">Contractual Necessity:</strong> Processing required to provide the Quran education services you have requested or enrolled in.</li>
-              <li><strong className="text-navy">Legitimate Interests:</strong> Responding to inquiries, improving our services, and preventing fraud — where our interests do not override your rights.</li>
+              <li><strong className="text-navy">Legitimate Interests:</strong> Responding to inquiries, improving our services, and preventing fraud, where our interests do not override your rights.</li>
               <li><strong className="text-navy">Consent:</strong> Where we ask for your explicit consent (e.g., optional marketing communications), you may withdraw consent at any time.</li>
               <li><strong className="text-navy">Legal Obligation:</strong> Where we are required to retain certain records by applicable law.</li>
             </ul>
@@ -229,7 +229,7 @@ export default function PrivacyPolicyPage() {
               <li>HTTPS encryption on all pages of our website.</li>
               <li>Secure, encrypted email for all communications containing personal data.</li>
               <li>Access controls limiting who within our organization can view student data.</li>
-              <li>Third-party payment processing with PCI-DSS compliant providers — we never store raw card numbers.</li>
+              <li>Third-party payment processing with PCI-DSS compliant providers. We never store raw card numbers.</li>
             </ul>
             <p className="text-grey leading-relaxed mb-4">
               While we take reasonable steps to protect your information, no method of transmission over the internet is 100% secure. If you believe your information has been compromised, please contact us immediately.
@@ -240,7 +240,7 @@ export default function PrivacyPolicyPage() {
               10. International Data Transfers
             </h2>
             <p className="text-grey leading-relaxed mb-4">
-              Ease Quran Online Academy is operated from Pakistan and serves students primarily in the United States. When you submit information through our website, it may be transferred to and processed in countries outside your own. We ensure that any such transfers are protected by appropriate safeguards — including standard contractual clauses where required by the GDPR.
+              Ease Quran Online Academy is operated from Pakistan and serves students primarily in the United States. When you submit information through our website, it may be transferred to and processed in countries outside your own. We ensure that any such transfers are protected by appropriate safeguards, including standard contractual clauses where required by the GDPR.
             </p>
 
             {/* Section 11 */}

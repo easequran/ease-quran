@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Online Quran Classes in Atlanta, Georgia | Ease Quran Academy",
     description:
-      "Certified online Quran classes for Muslim families across Atlanta — serving one of the South's fastest-growing Muslim communities.",
+      "Certified online Quran classes for Muslim families across Atlanta, serving one of the South's fastest-growing Muslim communities.",
     images: ["/images/og-image.png"],
   },
 };
@@ -60,10 +60,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Atlanta traffic is notorious — how does online learning help?",
+      name: "Atlanta traffic is notorious. How does online learning help?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Atlanta's traffic is among the worst in the South, especially on I-285 and I-85. Online classes eliminate all driving entirely — your child learns Quran from home without a single minute of Atlanta traffic.",
+        text: "Atlanta's traffic is among the worst in the South, especially on I-285 and I-85. Online classes eliminate all driving entirely. Your child learns Quran from home without a single minute of Atlanta traffic.",
       },
     },
     {
@@ -71,7 +71,7 @@ const faqSchema = {
       name: "Are your teachers certified?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications — the most respected Islamic academic credential in the world. Atlanta families can trust our teachers' qualifications completely.",
+        text: "Yes. All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic academic credential in the world. Atlanta families can trust our teachers' qualifications completely.",
       },
     },
     {
@@ -100,14 +100,14 @@ const faqs = [
       "Yes. We serve the entire Atlanta metropolitan area including Duluth, Lawrenceville, Stone Mountain, Smyrna, Marietta, Alpharetta, Decatur, Norcross, and all surrounding communities. Stone Mountain and the Gwinnett County area have a particularly significant Muslim presence, and online classes serve every part of Greater Atlanta with equal quality.",
   },
   {
-    question: "Atlanta traffic is notorious — how does online learning help?",
+    question: "Atlanta traffic is notorious. How does online learning help?",
     answer:
-      "Atlanta's traffic is notorious, particularly on I-285, I-85, and I-20 during evening and weekend rush hours. Getting a child to an Islamic center across Atlanta can easily become a two-hour round trip. Online Quran classes eliminate all driving entirely — your child sits down at home and the lesson begins. No I-285, no parking, no rush.",
+      "Atlanta's traffic is notorious, particularly on I-285, I-85, and I-20 during evening and weekend rush hours. Getting a child to an Islamic center across Atlanta can easily become a two-hour round trip. Online Quran classes eliminate all driving entirely. Your child sits down at home and the lesson begins. No I-285, no parking, no rush.",
   },
   {
     question: "Are your teachers certified?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia — the most respected and internationally recognized Islamic education board in the world. Atlanta's growing Muslim community deserves teachers with real, verifiable credentials — and that is exactly what we provide.",
+      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, the most respected and internationally recognized Islamic education board in the world. Atlanta's growing Muslim community deserves teachers with real, verifiable credentials, and that is exactly what we provide.",
   },
   {
     question: "Is a female teacher available for sisters in Atlanta?",
@@ -117,7 +117,7 @@ const faqs = [
   {
     question: "Do you teach students from Atlanta's diverse Muslim backgrounds?",
     answer:
-      "Absolutely. Atlanta's Muslim community is beautifully diverse — spanning African American, Pakistani, Indian, Bangladeshi, Arab, Somali, West African, and other backgrounds. We welcome every Muslim family in Atlanta, and our instruction in clear English makes our classes fully accessible to families from any cultural and linguistic background. Islam unites us, and we serve all.",
+      "Absolutely. Atlanta's Muslim community is beautifully diverse, spanning African American, Pakistani, Indian, Bangladeshi, Arab, Somali, West African, and other backgrounds. We welcome every Muslim family in Atlanta, and our instruction in clear English makes our classes fully accessible to families from any cultural and linguistic background. Islam unites us, and we serve all.",
   },
 ];
 
@@ -154,7 +154,7 @@ export default function AtlantaPage() {
               Online Quran Classes in Atlanta, Georgia
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
-              Certified, one-on-one Quran education for Muslim families across the Atlanta metro. From Duluth and Lawrenceville to Smyrna, Marietta, and Stone Mountain — quality Quran instruction from qualified teachers, right in your home.
+              Certified, one-on-one Quran education for Muslim families across the Atlanta metro. From Duluth and Lawrenceville to Smyrna, Marietta, and Stone Mountain, quality Quran instruction from qualified teachers, right in your home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
@@ -189,10 +189,10 @@ export default function AtlantaPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Atlanta, Georgia has emerged as one of the fastest-growing Muslim communities in the American South, with an estimated Muslim population exceeding 100,000 across the metropolitan area. The community's growth reflects Atlanta's broader rise as a major American city and economic hub — drawing Muslim families from across the country and internationally as the city's job market, affordability (relative to coastal cities), and quality of life continue to attract a diverse workforce. Atlanta's Muslim community is genuinely diverse, encompassing a significant African American Muslim population with deep roots in the city, a rapidly growing South Asian Muslim community concentrated in the northeast suburbs of Gwinnett County (Duluth, Lawrenceville, Norcross), Arab Muslim families in various parts of the metro, and a growing West African Muslim presence. Several major Islamic centers and masjids serve these communities, with weekend Islamic schools, full-time Islamic education programs, and community events that reflect the vitality of Atlanta's Muslim life.
+                Atlanta, Georgia has emerged as one of the fastest-growing Muslim communities in the American South, with an estimated Muslim population exceeding 100,000 across the metropolitan area. The community's growth reflects Atlanta's broader rise as a major American city and economic hub, drawing Muslim families from across the country and internationally as the city's job market, affordability (relative to coastal cities), and quality of life continue to attract a diverse workforce. Atlanta's Muslim community is genuinely diverse, encompassing a significant African American Muslim population with deep roots in the city, a rapidly growing South Asian Muslim community concentrated in the northeast suburbs of Gwinnett County (Duluth, Lawrenceville, Norcross), Arab Muslim families in various parts of the metro, and a growing West African Muslim presence. Several major Islamic centers and masjids serve these communities, with weekend Islamic schools, full-time Islamic education programs, and community events that reflect the vitality of Atlanta's Muslim life.
               </p>
               <p>
-                Atlanta's unique challenge for Muslim families is the city's traffic — which is consistently ranked among the worst in the United States. The metro area's car-dependent design and extensive suburban sprawl mean that reaching an Islamic center in another part of the metro can be genuinely time-prohibitive. A family in Duluth wanting to attend a program in South Atlanta might face two hours of driving on a Saturday morning. For working parents and busy families, this makes consistent attendance at in-person Islamic education programs difficult to maintain. Online Quran education has become an increasingly popular solution for Atlanta Muslim families precisely because it removes the traffic equation entirely, bringing certified instruction directly to every household in the metro without requiring a single mile of driving on Atlanta's notoriously congested roads.
+                Atlanta's unique challenge for Muslim families is the city's traffic, which is consistently ranked among the worst in the United States. The metro area's car-dependent design and extensive suburban sprawl mean that reaching an Islamic center in another part of the metro can be genuinely time-prohibitive. A family in Duluth wanting to attend a program in South Atlanta might face two hours of driving on a Saturday morning. For working parents and busy families, this makes consistent attendance at in-person Islamic education programs difficult to maintain. Online Quran education has become an increasingly popular solution for Atlanta Muslim families precisely because it removes the traffic equation entirely, bringing certified instruction directly to every household in the metro without requiring a single mile of driving on Atlanta's notoriously congested roads.
               </p>
             </div>
           </div>
@@ -216,7 +216,7 @@ export default function AtlantaPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Zero Atlanta Traffic</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  Atlanta traffic is a defining feature of life in the metro — and it's not getting better. Online Quran classes mean your child learns without a single minute of sitting in traffic. From Gwinnett County to Cobb County, every family gets the same quality instruction without fighting I-285 to get there.
+                  Atlanta traffic is a defining feature of life in the metro, and it's not getting better. Online Quran classes mean your child learns without a single minute of sitting in traffic. From Gwinnett County to Cobb County, every family gets the same quality instruction without fighting I-285 to get there.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -225,7 +225,7 @@ export default function AtlantaPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Serving Atlanta's Growing Muslim Population</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  As Atlanta's Muslim community continues to grow rapidly, demand for quality Islamic education is outpacing supply of local in-person resources. Online classes allow Atlanta's entire Muslim population — across all its diverse backgrounds and all its sprawling suburbs — to access certified Quran education right now.
+                  As Atlanta's Muslim community continues to grow rapidly, demand for quality Islamic education is outpacing supply of local in-person resources. Online classes allow Atlanta's entire Muslim population, across all its diverse backgrounds and all its sprawling suburbs, to access certified Quran education right now.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -251,14 +251,14 @@ export default function AtlantaPage() {
               Courses Available for Atlanta Families
             </h2>
             <p className="text-grey mb-8 leading-relaxed">
-              Certified, structured Quran courses for students of every age and level — taught one-on-one by qualified scholars.
+              Certified, structured Quran courses for students of every age and level, taught one-on-one by qualified scholars.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { name: "Noorani Qaida", desc: "Start from the beginning — Arabic letters, phonics, and Quran reading fundamentals taught with patience and care.", href: "/courses/noorani-qaida" },
+                { name: "Noorani Qaida", desc: "Start from the beginning: Arabic letters, phonics, and Quran reading fundamentals taught with patience and care.", href: "/courses/noorani-qaida" },
                 { name: "Quran Reading with Tajweed", desc: "Systematic Tajweed rules for correct, beautiful Quran recitation at every stage of your learning journey.", href: "/courses/tajweed" },
                 { name: "Quran Memorization (Hifz)", desc: "A disciplined, structured Hifz program with regular revision and milestone tracking.", href: "/courses/hifz" },
-                { name: "Islamic Studies", desc: "Islamic beliefs, prayer, manners, and Seerah — foundational Islamic knowledge for children and young adults.", href: "/courses/islamic-studies" },
+                { name: "Islamic Studies", desc: "Islamic beliefs, prayer, manners, and Seerah: foundational Islamic knowledge for children and young adults.", href: "/courses/islamic-studies" },
               ].map((course) => (
                 <Link
                   key={course.name}
@@ -284,9 +284,9 @@ export default function AtlantaPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { step: "01", title: "Book Your Trial", desc: "Contact us via the website or WhatsApp. Share the student's age, current level, and preferred schedule in Eastern Time — we'll match you with the right certified teacher." },
-                { step: "02", title: "Free One-on-One Class", desc: "Attend a complimentary live Zoom session with your teacher. See the curriculum, experience the method, and assess your child's response — all with no cost or commitment." },
-                { step: "03", title: "Start Your Weekly Schedule", desc: "Ready to begin? We finalize a recurring weekly schedule that works for your Atlanta family — consistent, reliable, and without a single mile of driving." },
+                { step: "01", title: "Book Your Trial", desc: "Contact us via the website or WhatsApp. Share the student's age, current level, and preferred schedule in Eastern Time. We'll match you with the right certified teacher." },
+                { step: "02", title: "Free One-on-One Class", desc: "Attend a complimentary live Zoom session with your teacher. See the curriculum, experience the method, and assess your child's response, all with no cost or commitment." },
+                { step: "03", title: "Start Your Weekly Schedule", desc: "Ready to begin? We finalize a recurring weekly schedule that works for your Atlanta family, consistent, reliable, and without a single mile of driving." },
               ].map((item) => (
                 <div key={item.step} className="text-center">
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
@@ -323,7 +323,7 @@ export default function AtlantaPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
-                Frequently Asked Questions — Atlanta, Georgia
+                Frequently Asked Questions: Atlanta, Georgia
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -333,7 +333,7 @@ export default function AtlantaPage() {
 
       <CTASection
         headline="Certified Quran Education for Every Atlanta Muslim Family"
-        subtext="From Gwinnett County to Cobb County — serving the full diversity of Atlanta's fast-growing Muslim community with one-on-one, certified Quran instruction. Your first class is free."
+        subtext="From Gwinnett County to Cobb County, serving the full diversity of Atlanta's fast-growing Muslim community with one-on-one, certified Quran instruction. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

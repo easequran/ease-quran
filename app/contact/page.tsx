@@ -48,7 +48,7 @@ const contactFaqs = [
   {
     question: "How quickly will you respond to my inquiry?",
     answer:
-      "We guarantee a response within 2 hours during our operating hours (6am–11pm EST, 7 days a week). For the fastest response, WhatsApp is the best way to reach us — we typically reply in under 30 minutes.",
+      "We guarantee a response within 2 hours during our operating hours (6am–11pm EST, 7 days a week). For the fastest response, WhatsApp is the best way to reach us. We typically reply in under 30 minutes.",
   },
   {
     question: "Can I speak with a teacher before committing?",
@@ -130,7 +130,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-white/70 text-lg leading-relaxed">
               Have a question about our courses, teachers, or pricing? We are here to help.
-              Reach out via the form, email, or WhatsApp — we respond within 2 hours.
+              Reach out via the form, email, or WhatsApp. We respond within 2 hours.
             </p>
           </div>
         </div>
@@ -264,7 +264,7 @@ export default function ContactPage() {
                   Ready to start?
                 </p>
                 <p className="text-white/60 text-sm mb-4">
-                  Book a free trial class — no credit card, no commitment.
+                  Book a free trial class. No credit card, no commitment.
                 </p>
                 <Link
                   href="/free-trial"
@@ -297,7 +297,7 @@ export default function ContactPage() {
 
       <CTASection
         headline="Let's Start Your Child's Quran Journey"
-        subtext="Have more questions? We are always happy to help. Reach out on WhatsApp or book a completely free trial class — no credit card, no commitment."
+        subtext="Have more questions? We are always happy to help. Reach out on WhatsApp or book a completely free trial class. No credit card, no commitment."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

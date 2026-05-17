@@ -201,7 +201,7 @@ export default function TermsConditionsPage() {
               We assign teachers based on student age, level, gender preferences, and scheduling. We
               reserve the right to reassign a student to a different teacher if necessary (e.g., teacher
               unavailability, performance concerns). If you are dissatisfied with your assigned teacher, we
-              will work with you to find a better fit — this is part of our commitment to your satisfaction
+              will work with you to find a better fit, as this is part of our commitment to your satisfaction
               and is offered at no additional cost.
             </p>
 
@@ -230,8 +230,8 @@ export default function TermsConditionsPage() {
               8. Intellectual Property
             </h2>
             <p className="text-grey leading-relaxed mb-4">
-              All content on this website — including text, images, logos, course materials, and teaching
-              methodologies — is the intellectual property of Ease Quran Online Academy or its licensed
+              All content on this website, including text, images, logos, course materials, and teaching
+              methodologies, is the intellectual property of Ease Quran Online Academy or its licensed
               contributors. You may not copy, reproduce, distribute, or create derivative works from any
               content without our prior written consent. Course materials provided during classes are for
               personal educational use only and may not be shared or commercially exploited.
@@ -275,7 +275,7 @@ export default function TermsConditionsPage() {
             </p>
             <p className="text-grey leading-relaxed mb-4">
               We encourage you to contact us first to resolve any issues before pursuing formal dispute
-              resolution — most concerns can be addressed quickly through direct communication.
+              resolution. Most concerns can be addressed quickly through direct communication.
             </p>
 
             {/* Section 12 */}

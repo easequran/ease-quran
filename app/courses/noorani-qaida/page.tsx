@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Noorani Qaida Online Classes | Learn to Read Quran USA",
     description:
       "Start your Quran journey with online Noorani Qaida classes. Perfect for complete beginners of all ages. Certified teachers. Free first class.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Noorani Qaida Online Classes — Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Noorani Qaida Online Classes, Ease Quran Academy" }],
   },
 };
 
@@ -51,7 +51,7 @@ const courseSchema = {
   "@type": "Course",
   name: "Noorani Qaida Online Classes",
   description:
-    "Start your Quran journey with online Noorani Qaida classes. Learn all Arabic letters, vowels, and letter joining — perfect for complete beginners of all ages.",
+    "Start your Quran journey with online Noorani Qaida classes. Learn all Arabic letters, vowels, and letter joining, perfect for complete beginners of all ages.",
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
@@ -73,7 +73,7 @@ const faqSchema = {
       name: "What is Noorani Qaida?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Noorani Qaida is a foundational booklet used to teach beginners how to read Arabic and Quranic script. It was authored by Noor Muhammad Haqqani and is used in Islamic schools worldwide. It systematically teaches Arabic letters in isolation, their forms, vowels (Harakaat), Sukoon, Shaddah, Madd, and finally Quranic words — preparing students to read the Quran independently.",
+        text: "Noorani Qaida is a foundational booklet used to teach beginners how to read Arabic and Quranic script. It was authored by Noor Muhammad Haqqani and is used in Islamic schools worldwide. It systematically teaches Arabic letters in isolation, their forms, vowels (Harakaat), Sukoon, Shaddah, Madd, and finally Quranic words, preparing students to read the Quran independently.",
       },
     },
     {
@@ -81,7 +81,7 @@ const faqSchema = {
       name: "How long does Noorani Qaida take to complete?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Completion time varies by age and frequency of classes. Children ages 4–6 with 3 classes per week typically complete Noorani Qaida in 4–8 months. Children 7+ complete it in 2–4 months. Adults who are motivated and practice daily can complete it in 2–3 months. Each student gets a personalized pace — no rushing.",
+        text: "Completion time varies by age and frequency of classes. Children ages 4–6 with 3 classes per week typically complete Noorani Qaida in 4–8 months. Children 7+ complete it in 2–4 months. Adults who are motivated and practice daily can complete it in 2–3 months. Each student gets a personalized pace, no rushing.",
       },
     },
     {
@@ -105,7 +105,7 @@ const faqSchema = {
       name: "What comes after Noorani Qaida?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "After completing Noorani Qaida, students move to reading the Quran directly — typically starting from Juz Amma (the 30th Juz). At this point, our teachers also begin introducing Tajweed rules formally. Students who want to memorize eventually progress to the Hifz program.",
+        text: "After completing Noorani Qaida, students move to reading the Quran directly, typically starting from Juz Amma (the 30th Juz). At this point, our teachers also begin introducing Tajweed rules formally. Students who want to memorize eventually progress to the Hifz program.",
       },
     },
   ],
@@ -115,12 +115,12 @@ const faqs = [
   {
     question: "What is Noorani Qaida?",
     answer:
-      "Noorani Qaida is a foundational booklet used to teach beginners how to read Arabic and Quranic script. It was authored by Noor Muhammad Haqqani and is used in Islamic schools worldwide. It systematically teaches Arabic letters in isolation, their forms, vowels (Harakaat), Sukoon, Shaddah, Madd, and finally Quranic words — preparing students to read the Quran independently.",
+      "Noorani Qaida is a foundational booklet used to teach beginners how to read Arabic and Quranic script. It was authored by Noor Muhammad Haqqani and is used in Islamic schools worldwide. It systematically teaches Arabic letters in isolation, their forms, vowels (Harakaat), Sukoon, Shaddah, Madd, and finally Quranic words, preparing students to read the Quran independently.",
   },
   {
     question: "How long does Noorani Qaida take to complete?",
     answer:
-      "Completion time varies by age and frequency of classes. Children ages 4–6 with 3 classes per week typically complete Noorani Qaida in 4–8 months. Children 7+ complete it in 2–4 months. Adults who are motivated and practice daily can complete it in 2–3 months. Each student gets a personalized pace — no rushing.",
+      "Completion time varies by age and frequency of classes. Children ages 4–6 with 3 classes per week typically complete Noorani Qaida in 4–8 months. Children 7+ complete it in 2–4 months. Adults who are motivated and practice daily can complete it in 2–3 months. Each student gets a personalized pace, no rushing.",
   },
   {
     question: "At what age should a child start Noorani Qaida?",
@@ -135,7 +135,7 @@ const faqs = [
   {
     question: "What comes after Noorani Qaida?",
     answer:
-      "After completing Noorani Qaida, students move to reading the Quran directly — typically starting from Juz Amma (the 30th Juz). At this point, our teachers also begin introducing Tajweed rules formally. Students who want to memorize eventually progress to the Hifz program.",
+      "After completing Noorani Qaida, students move to reading the Quran directly, typically starting from Juz Amma (the 30th Juz). At this point, our teachers also begin introducing Tajweed rules formally. Students who want to memorize eventually progress to the Hifz program.",
   },
 ];
 
@@ -173,14 +173,14 @@ export default function NooraniQaidaPage() {
           </nav>
           <div className="max-w-3xl">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
-              Start Here — Complete Beginners
+              Start Here, Complete Beginners
             </span>
             <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
               Online Noorani Qaida Classes
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
               The best starting point for anyone who wants to learn to read the Quran. Complete
-              beginners — children, adults, and reverts — learn all Arabic letters, vowels, and
+              beginners, children, adults, and reverts, learn all Arabic letters, vowels, and
               word formation before opening the Quran itself. Taught in English by certified teachers.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -219,7 +219,7 @@ export default function NooraniQaidaPage() {
               <div className="space-y-4 text-grey text-sm leading-relaxed">
                 <p>
                   Noorani Qaida is the universally trusted gateway to reading the Quran. It takes
-                  a student with absolutely zero Arabic knowledge and — step by step — teaches them
+                  a student with absolutely zero Arabic knowledge and, step by step, teaches them
                   every skill needed to open the Quran and read it correctly. It is used in thousands
                   of Islamic schools across the world, and for good reason: it works.
                 </p>
@@ -229,7 +229,7 @@ export default function NooraniQaidaPage() {
                   <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>. Whether
                   your student is a 4-year-old being introduced to Arabic for the first time, an
                   adult who has always wanted to read the Quran, or a revert Muslim starting from
-                  scratch — this course meets you exactly where you are.
+                  scratch. This course meets you exactly where you are.
                 </p>
                 <p>
                   Female teachers are available for sisters and children upon request. All classes
@@ -246,7 +246,7 @@ export default function NooraniQaidaPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/course-noorani.webp"
-                alt="Online Noorani Qaida classes — learn Arabic letters and Quran reading at Ease Quran Academy"
+                alt="Online Noorani Qaida classes: learn Arabic letters and Quran reading at Ease Quran Academy"
                 fill
                 className="object-cover"
                 priority
@@ -274,15 +274,15 @@ export default function NooraniQaidaPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { title: "All 28 Arabic Letters and Their Forms", desc: "Learn every Arabic letter in its isolated, initial, medial, and final forms — the foundation of reading any Arabic text, including the Quran." },
+                { title: "All 28 Arabic Letters and Their Forms", desc: "Learn every Arabic letter in its isolated, initial, medial, and final forms, the foundation of reading any Arabic text, including the Quran." },
                 { title: "Letter Joining and Word Formation", desc: "Understand how Arabic letters connect to form words. Practice joining two, three, and four letters together to form Quranic vocabulary." },
-                { title: "Harakaat (Short Vowels: Fatha, Kasra, Damma)", desc: "Master the three short vowel marks that determine how every Arabic letter is pronounced — the most important skill in reading Arabic script." },
+                { title: "Harakaat (Short Vowels: Fatha, Kasra, Damma)", desc: "Master the three short vowel marks that determine how every Arabic letter is pronounced, the most important skill in reading Arabic script." },
                 { title: "Tanween (Nunation)", desc: "Learn the double vowel marks (Fathatayn, Kasratayn, Dammatayn) and how they change pronunciation at the end of words." },
                 { title: "Madd Letters and Basic Rules", desc: "Understand the three elongation letters (Alif, Waw, Ya) and the basic rules of how long to extend each sound in recitation." },
-                { title: "Sukoon (Vowelless Letters)", desc: "Learn how to correctly pronounce letters that carry no vowel — a critical skill for reading Arabic text accurately." },
-                { title: "Shaddah (Doubled Consonants)", desc: "Understand the doubling mark and how it doubles the consonant sound — with practice on real Quranic words that contain Shaddah." },
+                { title: "Sukoon (Vowelless Letters)", desc: "Learn how to correctly pronounce letters that carry no vowel, a critical skill for reading Arabic text accurately." },
+                { title: "Shaddah (Doubled Consonants)", desc: "Understand the doubling mark and how it doubles the consonant sound, with practice on real Quranic words that contain Shaddah." },
                 { title: "Reading Complete Quranic Words", desc: "By the end of Noorani Qaida, students practice reading actual Quranic words and short phrases, building confidence for the Quran itself." },
-                { title: "Moving to Quran Reading Independently", desc: "Graduate from Noorani Qaida ready to open the Quran and read from it with guidance — the moment every family and student works toward." },
+                { title: "Moving to Quran Reading Independently", desc: "Graduate from Noorani Qaida ready to open the Quran and read from it with guidance, the moment every family and student works toward." },
               ].map((item) => (
                 <div
                   key={item.title}
@@ -315,20 +315,20 @@ export default function NooraniQaidaPage() {
             {[
               {
                 icon: null,
-                title: "Complete Beginners — No Arabic Knowledge",
+                title: "Complete Beginners: No Arabic Knowledge",
                 desc: "If you or your child cannot identify a single Arabic letter, this is exactly where to start. No prerequisites, no assumptions. We begin from the very first letter.",
                 points: ["Zero Arabic knowledge needed", "English instructions throughout", "Patient, structured approach", "Any age from 4 upward"],
               },
               {
                 icon: User,
                 title: "Children Starting Their Quran Journey",
-                desc: "For families who want their child to begin learning the Quran at a young age, Noorani Qaida is the universally recommended first step — taught in a child-friendly, encouraging way.",
+                desc: "For families who want their child to begin learning the Quran at a young age, Noorani Qaida is the universally recommended first step, taught in a child-friendly, encouraging way.",
                 points: ["Ages 4–12 ideal", "Short, engaging sessions", "Visual and interactive learning", "Female teacher option available"],
               },
               {
                 icon: BookOpen,
                 title: "Adults and Reverts Learning for the First Time",
-                desc: "Adults who grew up without Quran education, and new Muslims who took their Shahada and are starting their Islamic journey — this course is designed for you with patience and respect.",
+                desc: "Adults who grew up without Quran education, and new Muslims who took their Shahada and are starting their Islamic journey. This course is designed for you with patience and respect.",
                 points: ["No prior Islamic education needed", "Adult-friendly pace", "English-medium instruction", "Flexible scheduling"],
               },
             ].map((card) => {
@@ -374,11 +374,11 @@ export default function NooraniQaidaPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { title: "Step-by-Step Progression", desc: "Each class covers one or two new sections of the Noorani Qaida — never rushing ahead until the current section is fully mastered. We build a rock-solid foundation before moving forward." },
-                { title: "Repetition and Audio Feedback", desc: "Arabic pronunciation is learned through hearing and imitating — not reading theory. Our teachers demonstrate correct sounds and you repeat until the pronunciation is correct. Mistakes are corrected immediately and gently." },
+                { title: "Step-by-Step Progression", desc: "Each class covers one or two new sections of the Noorani Qaida, never rushing ahead until the current section is fully mastered. We build a rock-solid foundation before moving forward." },
+                { title: "Repetition and Audio Feedback", desc: "Arabic pronunciation is learned through hearing and imitating, not reading theory. Our teachers demonstrate correct sounds and you repeat until the pronunciation is correct. Mistakes are corrected immediately and gently." },
                 { title: "Duration Options", desc: "Children 4–7: 20–30 minutes per class. Children 8–12: 30–45 minutes. Adults and teens: 45 minutes. We recommend 3–4 classes per week for steady progress through the Qaida." },
                 { title: "Homework Between Classes", desc: "After each lesson, students receive specific exercises to practice. Even 10–15 minutes of daily self-practice between classes significantly accelerates completion of Noorani Qaida." },
-                { title: "Progress Tracking", desc: "Parents receive updates at each section milestone — how many letters and rules have been completed, what needs more practice, and an estimated timeline to Quran reading readiness." },
+                { title: "Progress Tracking", desc: "Parents receive updates at each section milestone, how many letters and rules have been completed, what needs more practice, and an estimated timeline to Quran reading readiness." },
                 { title: "Smooth Transition to Quran", desc: "When Noorani Qaida is complete, the teacher does not simply hand the student a Quran. There is a guided transition period where the student reads simple Quranic text with teacher support before reading independently." },
               ].map((item) => (
                 <div key={item.title} className="bg-white/5 rounded-xl p-6 border border-white/10">
@@ -399,7 +399,7 @@ export default function NooraniQaidaPage() {
               Your Teachers
             </span>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
-              Certified Quran Teachers — Male and Female Available
+              Certified Quran Teachers, Male and Female Available
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
               Both teachers hold credentials from Wifaq ul Madaris Al-Arabia and are experienced
@@ -410,7 +410,7 @@ export default function NooraniQaidaPage() {
             <TeacherCard
               name="Muhammad Umair"
               image="/images/teacher-1.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Quran Reading, Noorani Qaida, Tajweed"
               experience="2+ years teaching beginners of all ages online"
               qualification="Quran Teacher"
@@ -418,9 +418,9 @@ export default function NooraniQaidaPage() {
             <TeacherCard
               name="Almas Fatima"
               image="/images/teacher-2.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Qaria e Quran, B.A. Islamic Studies, Noorani Qaida"
-              experience="Available for sisters and children — teaching since 2022"
+              experience="Available for sisters and children, teaching since 2022"
               qualification="Female Quran Teacher"
               badge="Female Teacher"
             />
@@ -459,7 +459,7 @@ export default function NooraniQaidaPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">FAQ</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
-                Noorani Qaida — Frequently Asked Questions
+                Noorani Qaida, Frequently Asked Questions
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -478,7 +478,7 @@ export default function NooraniQaidaPage() {
             {[
               { href: "/courses/quran-for-kids", title: "Quran for Kids", desc: "After Noorani Qaida, children continue with structured Quran reading, Surah memorization, and Tajweed basics." },
               { href: "/courses/tajweed", title: "Tajweed", desc: "Once you can read the Quran, Tajweed polishes your recitation and ensures you recite it the way it was revealed." },
-              { href: "/courses/quran-for-reverts", title: "Quran for Reverts", desc: "Specially designed for new Muslims — combines Noorani Qaida with essential Duas, Salah words, and Islamic basics." },
+              { href: "/courses/quran-for-reverts", title: "Quran for Reverts", desc: "Specially designed for new Muslims, combines Noorani Qaida with essential Duas, Salah words, and Islamic basics." },
             ].map((course) => (
               <Link
                 key={course.href}
@@ -496,7 +496,7 @@ export default function NooraniQaidaPage() {
 
       <CTASection
         headline="Take Your First Step Toward the Quran"
-        subtext="Book a free Noorani Qaida trial class today. Your first lesson is completely free — no credit card, no commitment. Just the beginning of something beautiful."
+        subtext="Book a free Noorani Qaida trial class today. Your first lesson is completely free, no credit card, no commitment. Just the beginning of something beautiful."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

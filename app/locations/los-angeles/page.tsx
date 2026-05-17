@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Online Quran Classes in Los Angeles, California | Ease Quran Academy",
     description:
-      "Certified online Quran classes for Muslim families across the LA metro — Culver City, Inglewood, Pomona, and beyond.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in Los Angeles, California — Ease Quran Academy" }],
+      "Certified online Quran classes for Muslim families across the LA metro. Culver City, Inglewood, Pomona, and beyond.",
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in Los Angeles, California, Ease Quran Academy" }],
   },
 };
 
@@ -55,7 +55,7 @@ const faqSchema = {
       name: "Do you serve all parts of the LA metro, including the San Gabriel Valley?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We serve the entire Los Angeles metropolitan area — Culver City, Inglewood, Pomona, the San Gabriel Valley, the South Bay, Orange County, and everywhere in between. Online classes mean your location in the vast LA metro doesn't limit your access.",
+        text: "Yes. We serve the entire Los Angeles metropolitan area. Culver City, Inglewood, Pomona, the San Gabriel Valley, the South Bay, Orange County, and everywhere in between. Online classes mean your location in the vast LA metro doesn't limit your access.",
       },
     },
     {
@@ -68,7 +68,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "How do online classes work — do I need special equipment?",
+      name: "How do online classes work, do I need special equipment?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "You only need a smartphone, tablet, or laptop with Zoom installed and a stable internet connection. Classes are live, interactive, and conducted with video and audio so your child can read and be corrected in real time.",
@@ -97,17 +97,17 @@ const faqs = [
   {
     question: "Do you serve all parts of the LA metro, including the San Gabriel Valley?",
     answer:
-      "Yes. We serve the entire Los Angeles metropolitan area — Culver City, Inglewood, Pomona, the San Gabriel Valley, Torrance, the South Bay, Anaheim, and everywhere in between. Because classes are conducted via Zoom, the vast geographic spread of LA County is not a barrier. Families from as far as Riverside and San Bernardino also join us regularly.",
+      "Yes. We serve the entire Los Angeles metropolitan area. Culver City, Inglewood, Pomona, the San Gabriel Valley, Torrance, the South Bay, Anaheim, and everywhere in between. Because classes are conducted via Zoom, the vast geographic spread of LA County is not a barrier. Families from as far as Riverside and San Bernardino also join us regularly.",
   },
   {
     question: "Do you have experience with reverts (new Muslims) in Los Angeles?",
     answer:
-      "Yes. Los Angeles has a significant and growing revert community, and we warmly welcome adult learners who are new to Islam or learning Quran for the first time. Our teachers create a completely supportive, non-judgmental environment where you can begin from the very basics — Arabic letters, pronunciation, and Noorani Qaida — with full patience and encouragement.",
+      "Yes. Los Angeles has a significant and growing revert community, and we warmly welcome adult learners who are new to Islam or learning Quran for the first time. Our teachers create a completely supportive, non-judgmental environment where you can begin from the very basics. Arabic letters, pronunciation, and Noorani Qaida, with full patience and encouragement.",
   },
   {
-    question: "How do online classes work — do I need special equipment?",
+    question: "How do online classes work, do I need special equipment?",
     answer:
-      "You only need a smartphone, tablet, or laptop with Zoom installed, and a stable internet connection. Classes are fully live and interactive — your child reads aloud, the teacher listens and corrects in real time, just as they would in a physical classroom. No special hardware is required.",
+      "You only need a smartphone, tablet, or laptop with Zoom installed, and a stable internet connection. Classes are fully live and interactive, your child reads aloud, the teacher listens and corrects in real time, just as they would in a physical classroom. No special hardware is required.",
   },
   {
     question: "Is a female teacher available for sisters in Los Angeles?",
@@ -117,7 +117,7 @@ const faqs = [
   {
     question: "What are the available time slots for Pacific Time families?",
     answer:
-      "We offer flexible Pacific Time scheduling including after-school slots (3–6 PM PT), evening sessions, and weekend morning and afternoon options. We know LA families often have non-standard schedules — shift work, entertainment industry hours, long commutes — and we do our best to accommodate your specific situation.",
+      "We offer flexible Pacific Time scheduling including after-school slots (3–6 PM PT), evening sessions, and weekend morning and afternoon options. We know LA families often have non-standard schedules, shift work, entertainment industry hours, long commutes, and we do our best to accommodate your specific situation.",
   },
 ];
 
@@ -154,7 +154,7 @@ export default function LosAngelesPage() {
               Online Quran Classes in Los Angeles, California
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
-              Certified Quran education delivered to your home anywhere in the LA metro — from Culver City and Inglewood to Pomona, the San Gabriel Valley, and beyond. One-on-one, expert instruction without the legendary LA traffic.
+              Certified Quran education delivered to your home anywhere in the LA metro, from Culver City and Inglewood to Pomona, the San Gabriel Valley, and beyond. One-on-one, expert instruction without the legendary LA traffic.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
@@ -192,7 +192,7 @@ export default function LosAngelesPage() {
                 Los Angeles, California is home to one of the most geographically dispersed Muslim communities in the United States, with an estimated population exceeding 500,000 Muslims spread across a metro area that covers thousands of square miles. LA's Muslim community is remarkably diverse and includes well-established South Asian communities in communities like Artesia and Pomona, Iranian-American Muslims across the west side and Valley, Arab communities in various parts of LA County, and a growing African American Muslim presence across South LA. The Inglewood and Culver City areas have long been home to active Islamic centers and masjids, while the San Gabriel Valley hosts a growing Pakistani and Bangladeshi Muslim presence. Notably, Los Angeles also has one of the largest and most active revert (convert) Muslim communities in the nation, reflecting the city's diverse, open culture.
               </p>
               <p>
-                The challenge facing LA's Muslim families is perhaps the most acute of any major American city: the geography is simply enormous and the traffic is world-famous. Getting from, say, Pomona to an Islamic center in Culver City is not a 20-minute errand — it can be a two-hour ordeal during peak hours on the 10 freeway. Weekend Islamic schools in areas like Inglewood or Torrance may serve nearby families well, but they are essentially out of reach for families in the eastern suburbs. This is precisely why so many LA-area Muslim families have embraced online Quran education — not as a compromise, but as a genuinely superior solution that delivers the same certified, expert instruction without the punishing commute.
+                The challenge facing LA's Muslim families is perhaps the most acute of any major American city: the geography is simply enormous and the traffic is world-famous. Getting from, say, Pomona to an Islamic center in Culver City is not a 20-minute errand, it can be a two-hour ordeal during peak hours on the 10 freeway. Weekend Islamic schools in areas like Inglewood or Torrance may serve nearby families well, but they are essentially out of reach for families in the eastern suburbs. This is precisely why so many LA-area Muslim families have embraced online Quran education, not as a compromise, but as a genuinely superior solution that delivers the same certified, expert instruction without the punishing commute.
               </p>
             </div>
           </div>
@@ -216,7 +216,7 @@ export default function LosAngelesPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Escape LA's Famous Traffic</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  Los Angeles has some of the worst traffic congestion in the world. A 15-mile trip to an Islamic center can consume 90 minutes during evening rush hour. Online classes mean your child learns Quran from home — no freeway stress, no fighting for parking, no late arrivals after sitting in gridlock.
+                  Los Angeles has some of the worst traffic congestion in the world. A 15-mile trip to an Islamic center can consume 90 minutes during evening rush hour. Online classes mean your child learns Quran from home, no freeway stress, no fighting for parking, no late arrivals after sitting in gridlock.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -225,7 +225,7 @@ export default function LosAngelesPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Access Regardless of Your Part of LA</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  LA's Islamic centers are unevenly distributed across its vast geography. Families in Pomona, Lancaster, or Palmdale have far fewer local options than those near Culver City or Inglewood. Online classes level the playing field — every Muslim family in every corner of LA County gets the same top-quality certified instruction.
+                  LA's Islamic centers are unevenly distributed across its vast geography. Families in Pomona, Lancaster, or Palmdale have far fewer local options than those near Culver City or Inglewood. Online classes level the playing field, every Muslim family in every corner of LA County gets the same top-quality certified instruction.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -251,14 +251,14 @@ export default function LosAngelesPage() {
               Courses Available for LA Families
             </h2>
             <p className="text-grey mb-8 leading-relaxed">
-              Whether you're a revert learning for the first time, a parent enrolling your child, or an adult wanting to improve your recitation — we have the right course for you.
+              Whether you're a revert learning for the first time, a parent enrolling your child, or an adult wanting to improve your recitation, we have the right course for you.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { name: "Noorani Qaida", desc: "Start from zero — learn Arabic letters, vowel sounds, and basic Quran reading fundamentals with expert guidance.", href: "/courses/noorani-qaida" },
+                { name: "Noorani Qaida", desc: "Start from zero, learn Arabic letters, vowel sounds, and basic Quran reading fundamentals with expert guidance.", href: "/courses/noorani-qaida" },
                 { name: "Quran Reading with Tajweed", desc: "Develop proper Tajweed and fluent Quran recitation through structured, progressive lessons.", href: "/courses/tajweed" },
                 { name: "Quran Memorization (Hifz)", desc: "Structured Hifz program for motivated students ready to commit to memorizing the Quran.", href: "/courses/hifz" },
-                { name: "Islamic Studies", desc: "Islamic beliefs, prayer, manners, and Seerah — presented in an engaging, relatable way for young American Muslims.", href: "/courses/islamic-studies" },
+                { name: "Islamic Studies", desc: "Islamic beliefs, prayer, manners, and Seerah, presented in an engaging, relatable way for young American Muslims.", href: "/courses/islamic-studies" },
               ].map((course) => (
                 <Link
                   key={course.name}
@@ -284,8 +284,8 @@ export default function LosAngelesPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { step: "01", title: "Contact Us — No Commute Required", desc: "Book online or WhatsApp us. Tell us about your child or yourself — level, age, and your preferred schedule in Pacific Time. We'll match you with the right certified teacher." },
-                { step: "02", title: "Free One-on-One Trial Class", desc: "Join a complimentary live Zoom session with your teacher. Experience the curriculum, the teaching style, and the personal attention — completely free, no strings attached." },
+                { step: "01", title: "Contact Us. No Commute Required", desc: "Book online or WhatsApp us. Tell us about your child or yourself, level, age, and your preferred schedule in Pacific Time. We'll match you with the right certified teacher." },
+                { step: "02", title: "Free One-on-One Trial Class", desc: "Join a complimentary live Zoom session with your teacher. Experience the curriculum, the teaching style, and the personal attention, completely free, no strings attached." },
                 { step: "03", title: "Start Your Weekly Schedule", desc: "Love the class? We'll establish a weekly recurring schedule that fits your LA life. Consistent, reliable, and 100% from your own home." },
               ].map((item) => (
                 <div key={item.step} className="text-center">
@@ -307,7 +307,7 @@ export default function LosAngelesPage() {
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-6">Family Testimonial</span>
             <blockquote className="font-playfair text-xl md:text-2xl text-white leading-relaxed italic mb-8">
-              "I'm a revert and I've been wanting to learn Quran properly for years, but between work and traffic in LA I could never make it to in-person classes consistently. Ease Quran let me start exactly where I was — zero knowledge — and my teacher has been incredibly patient. I'm now reading Quran from the mushaf and it feels like a miracle."
+              "I'm a revert and I've been wanting to learn Quran properly for years, but between work and traffic in LA I could never make it to in-person classes consistently. Ease Quran let me start exactly where I was, zero knowledge, and my teacher has been incredibly patient. I'm now reading Quran from the mushaf and it feels like a miracle."
             </blockquote>
             <footer className="text-white/60 font-semibold">
               — Sarah M., Muslim revert in Culver City, Los Angeles
@@ -323,7 +323,7 @@ export default function LosAngelesPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
-                Frequently Asked Questions — Los Angeles, California
+                Frequently Asked Questions. Los Angeles, California
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -333,7 +333,7 @@ export default function LosAngelesPage() {
 
       <CTASection
         headline="Quran Education Without the LA Traffic"
-        subtext="Serving Muslim families across the entire Los Angeles metro — from Inglewood to Pomona, Culver City to the San Gabriel Valley. Your first class is free."
+        subtext="Serving Muslim families across the entire Los Angeles metro, from Inglewood to Pomona, Culver City to the San Gabriel Valley. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Online Islamic Studies Classes | Ease Quran Academy USA",
     description:
       "Comprehensive Islamic studies online for kids and adults. Aqeedah, Fiqh, Seerah, Islamic manners. Certified teachers. Free trial class for US families.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Islamic Studies Classes — Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Islamic Studies Classes, Ease Quran Academy" }],
   },
 };
 
@@ -51,7 +51,7 @@ const courseSchema = {
   "@type": "Course",
   name: "Online Islamic Studies Classes",
   description:
-    "Comprehensive Islamic studies for kids and adults — Aqeedah, Fiqh, Seerah, Islamic manners, Quran stories, and Islamic history. Taught by a certified female Quran teacher.",
+    "Comprehensive Islamic studies for kids and adults, Aqeedah, Fiqh, Seerah, Islamic manners, Quran stories, and Islamic history. Taught by a certified female Quran teacher.",
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
@@ -81,7 +81,7 @@ const faqSchema = {
       name: "Is Islamic Studies suitable for children?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes — Islamic Studies is designed for all ages. For children, the curriculum uses stories, illustrations, and age-appropriate language to teach Aqeedah, Islamic manners, and Prophetic stories. For adults, the content is more detailed and analytical. Almas Fatima, our female teacher, specializes in teaching children and sisters.",
+        text: "Yes, Islamic Studies is designed for all ages. For children, the curriculum uses stories, illustrations, and age-appropriate language to teach Aqeedah, Islamic manners, and Prophetic stories. For adults, the content is more detailed and analytical. Almas Fatima, our female teacher, specializes in teaching children and sisters.",
       },
     },
     {
@@ -89,7 +89,7 @@ const faqSchema = {
       name: "Do you follow a specific madhab in Fiqh?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our introductory Fiqh content covers principles that are agreed upon by all four major madhabs (Hanafi, Maliki, Shafi'i, Hanbali). For advanced Fiqh topics where madhabs differ, we note the differences and teach according to the Hanafi madhab by default — the most widely followed school in South Asia and among American Muslims of South Asian heritage. If you follow a different madhab, please mention this and we will accommodate where possible.",
+        text: "Our introductory Fiqh content covers principles that are agreed upon by all four major madhabs (Hanafi, Maliki, Shafi'i, Hanbali). For advanced Fiqh topics where madhabs differ, we note the differences and teach according to the Hanafi madhab by default, the most widely followed school in South Asia and among American Muslims of South Asian heritage. If you follow a different madhab, please mention this and we will accommodate where possible.",
       },
     },
     {
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "How is Islamic Studies different from a Quran class?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Quran classes focus on reading, recitation, Tajweed, and memorization of the Quran itself. Islamic Studies is the broader body of Islamic knowledge — beliefs, worship practices, history, ethics, and law — that contextualizes and complements what is recited in the Quran. We strongly recommend taking both alongside each other.",
+        text: "Quran classes focus on reading, recitation, Tajweed, and memorization of the Quran itself. Islamic Studies is the broader body of Islamic knowledge, beliefs, worship practices, history, ethics, and law, that contextualizes and complements what is recited in the Quran. We strongly recommend taking both alongside each other.",
       },
     },
     {
@@ -105,7 +105,7 @@ const faqSchema = {
       name: "Can I take Islamic Studies alongside a Tajweed or Hifz course?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely — and we strongly encourage it. Many families book 3 Quran classes per week and 1–2 Islamic Studies classes per week for their children. The two subjects complement each other deeply. Islamic Studies gives context to what is being memorized or recited in Quran class.",
+        text: "Absolutely, and we strongly encourage it. Many families book 3 Quran classes per week and 1–2 Islamic Studies classes per week for their children. The two subjects complement each other deeply. Islamic Studies gives context to what is being memorized or recited in Quran class.",
       },
     },
   ],
@@ -120,22 +120,22 @@ const faqs = [
   {
     question: "Is Islamic Studies suitable for children?",
     answer:
-      "Yes — Islamic Studies is designed for all ages. For children, the curriculum uses stories, illustrations, and age-appropriate language to teach Aqeedah, Islamic manners, and Prophetic stories. For adults, the content is more detailed and analytical. Almas Fatima, our female teacher, specializes in teaching children and sisters.",
+      "Yes, Islamic Studies is designed for all ages. For children, the curriculum uses stories, illustrations, and age-appropriate language to teach Aqeedah, Islamic manners, and Prophetic stories. For adults, the content is more detailed and analytical. Almas Fatima, our female teacher, specializes in teaching children and sisters.",
   },
   {
     question: "Do you follow a specific madhab in Fiqh?",
     answer:
-      "Our introductory Fiqh content covers principles that are agreed upon by all four major madhabs (Hanafi, Maliki, Shafi'i, Hanbali). For advanced Fiqh topics where madhabs differ, we note the differences and teach according to the Hanafi madhab by default — the most widely followed school in South Asia and among American Muslims of South Asian heritage. If you follow a different madhab, please mention this and we will accommodate where possible.",
+      "Our introductory Fiqh content covers principles that are agreed upon by all four major madhabs (Hanafi, Maliki, Shafi'i, Hanbali). For advanced Fiqh topics where madhabs differ, we note the differences and teach according to the Hanafi madhab by default, the most widely followed school in South Asia and among American Muslims of South Asian heritage. If you follow a different madhab, please mention this and we will accommodate where possible.",
   },
   {
     question: "How is Islamic Studies different from a Quran class?",
     answer:
-      "Quran classes focus on reading, recitation, Tajweed, and memorization of the Quran itself. Islamic Studies is the broader body of Islamic knowledge — beliefs, worship practices, history, ethics, and law — that contextualizes and complements what is recited in the Quran. We strongly recommend taking both alongside each other.",
+      "Quran classes focus on reading, recitation, Tajweed, and memorization of the Quran itself. Islamic Studies is the broader body of Islamic knowledge, beliefs, worship practices, history, ethics, and law, that contextualizes and complements what is recited in the Quran. We strongly recommend taking both alongside each other.",
   },
   {
     question: "Can I take Islamic Studies alongside a Tajweed or Hifz course?",
     answer:
-      "Absolutely — and we strongly encourage it. Many families book 3 Quran classes per week and 1–2 Islamic Studies classes per week for their children. The two subjects complement each other deeply. Islamic Studies gives context to what is being memorized or recited in Quran class.",
+      "Absolutely, and we strongly encourage it. Many families book 3 Quran classes per week and 1–2 Islamic Studies classes per week for their children. The two subjects complement each other deeply. Islamic Studies gives context to what is being memorized or recited in Quran class.",
   },
 ];
 
@@ -181,7 +181,7 @@ export default function IslamicStudiesPage() {
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
               Give your family the gift of comprehensive Islamic knowledge. Our Islamic Studies
               course covers Aqeedah, Fiqh, Seerah, Islamic manners, Quran stories, and Islamic
-              history — taught in English by a certified female teacher for sisters and children.
+              history, taught in English by a certified female teacher for sisters and children.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -218,7 +218,7 @@ export default function IslamicStudiesPage() {
               </h2>
               <div className="space-y-4 text-grey text-sm leading-relaxed">
                 <p>
-                  Islam is not only the Quran — it is a complete way of life that encompasses
+                  Islam is not only the Quran, it is a complete way of life that encompasses
                   beliefs, worship, character, history, and daily conduct. Our Islamic Studies
                   course provides the structured Islamic knowledge that every Muslim child and
                   adult needs to live their faith with confidence and understanding.
@@ -227,7 +227,7 @@ export default function IslamicStudiesPage() {
                   The course is taught by Almas Fatima, our certified female Quran teacher who
                   holds a B.A. in Islamic Studies and a certification from{" "}
                   <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>. She specializes
-                  in teaching sisters and children — bringing both scholarly knowledge and a warm,
+                  in teaching sisters and children, bringing both scholarly knowledge and a warm,
                   nurturing teaching style to every class.
                 </p>
                 <p>
@@ -247,7 +247,7 @@ export default function IslamicStudiesPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/course-islamic.webp"
-                alt="Online Islamic Studies classes — Aqeedah, Fiqh, Seerah at Ease Quran Academy"
+                alt="Online Islamic Studies classes, Aqeedah, Fiqh, Seerah at Ease Quran Academy"
                 fill
                 className="object-cover"
                 priority
@@ -271,15 +271,15 @@ export default function IslamicStudiesPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { title: "Core Beliefs of Islam (Aqeedah)", desc: "The six pillars of Iman — belief in Allah, angels, Books, Prophets, the Day of Judgment, and Qadr. Understanding what a Muslim believes and why." },
-                { title: "Five Pillars — Practical Application", desc: "Not just memorizing the five pillars but understanding how each is performed, its wisdom, and its importance in daily Muslim life." },
-                { title: "Fiqh — Islamic Jurisprudence Basics", desc: "Practical Fiqh covering Taharah (purification), Salah, fasting, Zakat, and common daily-life rulings — how to live as a practicing Muslim in the West." },
-                { title: "Seerah — Life of the Prophet ﷺ", desc: "A chronological study of the Prophet Muhammad's ﷺ life — from birth in Makkah, the first revelation, the Hijrah, to the conquest of Makkah and final years in Madinah." },
-                { title: "Islamic Manners and Ethics", desc: "The character of a Muslim — honesty, kindness, respect for parents, treatment of neighbors, and the beautiful ethical framework that Islam provides for daily conduct." },
-                { title: "Quran Stories (Qasas ul Anbiya)", desc: "Stories of the Prophets — Adam, Ibrahim, Musa, Isa, and others ﷺ — as narrated in the Quran. Powerful lessons drawn from each story for modern life." },
-                { title: "History of Islam", desc: "From the early Caliphate through the major Islamic civilizations — understanding the history of the Ummah and the scholars who preserved and spread Islamic knowledge." },
-                { title: "Halal and Haram Basics", desc: "Practical guidance on food, business dealings, relationships, entertainment, and daily decisions — what Islam permits, what it prohibits, and the wisdom behind these guidelines." },
-                { title: "Islamic Etiquette for Daily Life", desc: "The Sunnah etiquette for eating, sleeping, greeting, entering the home, using the bathroom, and other daily activities — small practices that carry immense barakah." },
+                { title: "Core Beliefs of Islam (Aqeedah)", desc: "The six pillars of Iman, belief in Allah, angels, Books, Prophets, the Day of Judgment, and Qadr. Understanding what a Muslim believes and why." },
+                { title: "Five Pillars: Practical Application", desc: "Not just memorizing the five pillars but understanding how each is performed, its wisdom, and its importance in daily Muslim life." },
+                { title: "Fiqh: Islamic Jurisprudence Basics", desc: "Practical Fiqh covering Taharah (purification), Salah, fasting, Zakat, and common daily-life rulings, how to live as a practicing Muslim in the West." },
+                { title: "Seerah, Life of the Prophet ﷺ", desc: "A chronological study of the Prophet Muhammad's ﷺ life, from birth in Makkah, the first revelation, the Hijrah, to the conquest of Makkah and final years in Madinah." },
+                { title: "Islamic Manners and Ethics", desc: "The character of a Muslim, honesty, kindness, respect for parents, treatment of neighbors, and the beautiful ethical framework that Islam provides for daily conduct." },
+                { title: "Quran Stories (Qasas ul Anbiya)", desc: "Stories of the Prophets, Adam, Ibrahim, Musa, Isa, and others ﷺ, as narrated in the Quran. Powerful lessons drawn from each story for modern life." },
+                { title: "History of Islam", desc: "From the early Caliphate through the major Islamic civilizations, understanding the history of the Ummah and the scholars who preserved and spread Islamic knowledge." },
+                { title: "Halal and Haram Basics", desc: "Practical guidance on food, business dealings, relationships, entertainment, and daily decisions, what Islam permits, what it prohibits, and the wisdom behind these guidelines." },
+                { title: "Islamic Etiquette for Daily Life", desc: "The Sunnah etiquette for eating, sleeping, greeting, entering the home, using the bathroom, and other daily activities, small practices that carry immense barakah." },
               ].map((item) => (
                 <div
                   key={item.title}
@@ -313,13 +313,13 @@ export default function IslamicStudiesPage() {
               {
                 icon: BookOpen,
                 title: "Children Wanting Islamic Knowledge Alongside Quran",
-                desc: "Children who are already taking Quran classes can add Islamic Studies to build a complete Islamic identity — knowing what they believe, how to worship, and how to carry themselves as Muslims.",
+                desc: "Children who are already taking Quran classes can add Islamic Studies to build a complete Islamic identity, knowing what they believe, how to worship, and how to carry themselves as Muslims.",
                 points: ["Ages 5 and above", "Story-based learning", "Age-appropriate content", "Taught by female teacher"],
               },
               {
                 icon: Users,
                 title: "Parents Raising Children with Islamic Values",
-                desc: "For families who want their children to grow up with not just Quran reading ability but a full Islamic identity — knowing their Deen, their history, and their purpose as Muslims in America.",
+                desc: "For families who want their children to grow up with not just Quran reading ability but a full Islamic identity, knowing their Deen, their history, and their purpose as Muslims in America.",
                 points: ["Complement Quran education", "Islamic values framework", "Character building", "Family Islam alignment"],
               },
               {
@@ -369,11 +369,11 @@ export default function IslamicStudiesPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { title: "Structured Curriculum with Textbooks", desc: "We follow structured Islamic Studies textbooks aligned with traditional Islamic education. Students progress through levels as they master each topic — no random, disconnected lessons." },
+                { title: "Structured Curriculum with Textbooks", desc: "We follow structured Islamic Studies textbooks aligned with traditional Islamic education. Students progress through levels as they master each topic, no random, disconnected lessons." },
                 { title: "Story-Based Learning for Children", desc: "Children learn most effectively through stories. Almas Fatima uses Quranic stories, Prophetic narrations, and real-life examples to bring Islamic knowledge to life in a way that children remember and love." },
-                { title: "Discussion-Based for Adults", desc: "Adult classes involve deeper discussion, Q&A, and practical application to modern life. Questions are encouraged — this is a space for genuine Islamic learning without judgment." },
+                { title: "Discussion-Based for Adults", desc: "Adult classes involve deeper discussion, Q&A, and practical application to modern life. Questions are encouraged. This is a space for genuine Islamic learning without judgment." },
                 { title: "Class Duration", desc: "Islamic Studies classes run 30–45 minutes for children and 45–60 minutes for adults. Most families schedule 1–2 Islamic Studies classes per week alongside their Quran sessions." },
-                { title: "Primary Source References", desc: "Every ruling and belief taught is referenced back to the Quran and authentic Hadith. Students learn not just what Islam says — but where it says it, building confidence in their knowledge." },
+                { title: "Primary Source References", desc: "Every ruling and belief taught is referenced back to the Quran and authentic Hadith. Students learn not just what Islam says, but where it says it, building confidence in their knowledge." },
                 { title: "Progress Reports", desc: "Regular updates on which topics have been covered, how well the student understands each concept, and what needs reinforcement at home between classes." },
               ].map((item) => (
                 <div key={item.title} className="bg-white/5 rounded-xl p-6 border border-white/10">
@@ -399,14 +399,14 @@ export default function IslamicStudiesPage() {
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
               Almas Fatima holds a B.A. in Islamic Studies and a certification from Wifaq ul
               Madaris Al-Arabia. She brings warmth, patience, and deep scholarly knowledge to every
-              Islamic Studies class — particularly for sisters and children.
+              Islamic Studies class, particularly for sisters and children.
             </p>
           </div>
           <div className="max-w-xs mx-auto">
             <TeacherCard
               name="Almas Fatima"
               image="/images/teacher-2.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Qaria e Quran, B.A. Islamic Studies, Islamic Education Specialist"
               experience="Teaching Islamic Studies and Quran since 2022"
               qualification="Female Quran & Islamic Studies Teacher"
@@ -447,7 +447,7 @@ export default function IslamicStudiesPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">FAQ</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
-                Islamic Studies — Frequently Asked Questions
+                Islamic Studies, Frequently Asked Questions
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -465,7 +465,7 @@ export default function IslamicStudiesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               { href: "/courses/quran-for-kids", title: "Quran for Kids", desc: "Combine Islamic Studies with Quran reading for a complete Islamic education for your child." },
-              { href: "/courses/arabic-language", title: "Arabic Language", desc: "Understanding Arabic deepens Islamic Studies immeasurably — access Islamic texts in their original language." },
+              { href: "/courses/arabic-language", title: "Arabic Language", desc: "Understanding Arabic deepens Islamic Studies immeasurably, access Islamic texts in their original language." },
               { href: "/courses/quran-for-adults", title: "Quran for Adults", desc: "Adults studying Islamic knowledge can complement their learning with structured Quran reading and Tajweed." },
             ].map((course) => (
               <Link
@@ -484,7 +484,7 @@ export default function IslamicStudiesPage() {
 
       <CTASection
         headline="Raise Children Who Know Their Deen"
-        subtext="Book a free Islamic Studies trial class today. Your first class is completely free — experience the quality before you commit to anything."
+        subtext="Book a free Islamic Studies trial class today. Your first class is completely free, experience the quality before you commit to anything."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

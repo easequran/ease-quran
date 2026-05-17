@@ -212,7 +212,7 @@ export default function ContactForm() {
           >
             Message us on WhatsApp
           </a>{" "}
-          — we reply in under 30 minutes.
+          We reply in under 30 minutes.
         </p>
       </form>
     </div>

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Online Quran Classes in Dallas, Texas | Ease Quran Academy",
     description:
-      "Certified online Quran classes for Muslim families in Dallas-Fort Worth — serving Richardson, Plano, Irving, and all DFW suburbs.",
+      "Certified online Quran classes for Muslim families in Dallas-Fort Worth, serving Richardson, Plano, Irving, and all DFW suburbs.",
     images: ["/images/og-image.png"],
   },
 };
@@ -71,7 +71,7 @@ const faqSchema = {
       name: "Are teachers certified from recognized Islamic institutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. All our teachers hold Wifaq ul Madaris Al-Arabia certifications — the most respected Islamic education credential in the world. Dallas families can trust our teachers' qualifications.",
+        text: "Yes. All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic education credential in the world. Dallas families can trust our teachers' qualifications.",
       },
     },
     {
@@ -107,7 +107,7 @@ const faqs = [
   {
     question: "Are teachers certified from recognized Islamic institutions?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia — widely recognized as the most prestigious Islamic education board in the world. This is not a casual credential — it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Dallas-area Muslim families can have full confidence in our teachers' qualifications.",
+      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, widely recognized as the most prestigious Islamic education board in the world. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Dallas-area Muslim families can have full confidence in our teachers' qualifications.",
   },
   {
     question: "Is there a female teacher for sisters in Dallas?",
@@ -154,7 +154,7 @@ export default function DallasPage() {
               Online Quran Classes in Dallas, Texas
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
-              Certified, one-on-one Quran education for Muslim families across the DFW metroplex. From Richardson and Plano to Irving, Garland, and Frisco — quality Quran instruction delivered to your home, on your schedule.
+              Certified, one-on-one Quran education for Muslim families across the DFW metroplex. From Richardson and Plano to Irving, Garland, and Frisco, quality Quran instruction delivered to your home, on your schedule.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
@@ -189,10 +189,10 @@ export default function DallasPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                The Dallas-Fort Worth metropolitan area has become one of the most dynamic and rapidly growing Muslim communities in the United States, with an estimated population of over 150,000 Muslims across the sprawling Metroplex. The DFW Muslim community is notably diverse, reflecting the region's broad appeal to immigrant and first-generation American families. The north Dallas suburbs — particularly Richardson, Plano, and Carrollton — have become home to a substantial South Asian Muslim community, with Pakistani, Indian, and Bangladeshi families establishing active Islamic centers, weekend schools, and growing community networks. Irving, positioned between Dallas and Fort Worth, has a significant Muslim presence with multiple active masjids serving Arab and South Asian communities. The DFW area also has a growing Somali Muslim community, contributing to the Metroplex's increasingly diverse Islamic landscape. The Texas Muslim landscape overall is one of the fastest-growing in the nation, reflecting the broader pattern of Muslim population growth in the Sun Belt.
+                The Dallas-Fort Worth metropolitan area has become one of the most dynamic and rapidly growing Muslim communities in the United States, with an estimated population of over 150,000 Muslims across the sprawling Metroplex. The DFW Muslim community is notably diverse, reflecting the region's broad appeal to immigrant and first-generation American families. The north Dallas suburbs, particularly Richardson, Plano, and Carrollton, have become home to a substantial South Asian Muslim community, with Pakistani, Indian, and Bangladeshi families establishing active Islamic centers, weekend schools, and growing community networks. Irving, positioned between Dallas and Fort Worth, has a significant Muslim presence with multiple active masjids serving Arab and South Asian communities. The DFW area also has a growing Somali Muslim community, contributing to the Metroplex's increasingly diverse Islamic landscape. The Texas Muslim landscape overall is one of the fastest-growing in the nation, reflecting the broader pattern of Muslim population growth in the Sun Belt.
               </p>
               <p>
-                The challenge for DFW Muslim families is the Metroplex's notorious geography. Dallas-Fort Worth is one of the largest metropolitan areas in the United States by land area, and driving across it — even on a good day — can mean significant time on I-35, I-635, or the Dallas North Tollway. A family in Frisco wanting to attend a program at a masjid in Irving might face a 45-minute drive each way. Weekend Islamic schools are concentrated in specific suburbs and may not be convenient for families who live far from those centers. Online Quran education solves this problem completely, bringing certified instruction to every DFW household without a single mile of driving.
+                The challenge for DFW Muslim families is the Metroplex's notorious geography. Dallas-Fort Worth is one of the largest metropolitan areas in the United States by land area, and driving across it, even on a good day, can mean significant time on I-35, I-635, or the Dallas North Tollway. A family in Frisco wanting to attend a program at a masjid in Irving might face a 45-minute drive each way. Weekend Islamic schools are concentrated in specific suburbs and may not be convenient for families who live far from those centers. Online Quran education solves this problem completely, bringing certified instruction to every DFW household without a single mile of driving.
               </p>
             </div>
           </div>
@@ -216,7 +216,7 @@ export default function DallasPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Skip the DFW Highway Maze</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  The DFW Metroplex is enormous and the highways are consistently congested. Driving your child to an Islamic center across town after school or work is a real time cost. Online classes eliminate that entirely — your child opens Zoom at home, and the lesson begins, right on schedule.
+                  The DFW Metroplex is enormous and the highways are consistently congested. Driving your child to an Islamic center across town after school or work is a real time cost. Online classes eliminate that entirely. Your child opens Zoom at home, and the lesson begins, right on schedule.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -251,14 +251,14 @@ export default function DallasPage() {
               Courses Available for DFW Families
             </h2>
             <p className="text-grey mb-8 leading-relaxed">
-              Structured, progressive courses taught by certified scholars — designed for English-speaking Muslim families across the Dallas-Fort Worth Metroplex.
+              Structured, progressive courses taught by certified scholars, designed for English-speaking Muslim families across the Dallas-Fort Worth Metroplex.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { name: "Noorani Qaida", desc: "Learn Arabic letters, vowels, and Quran reading fundamentals from the very beginning — ideal for young children and first-time adult learners.", href: "/courses/noorani-qaida" },
+                { name: "Noorani Qaida", desc: "Learn Arabic letters, vowels, and Quran reading fundamentals from the very beginning, ideal for young children and first-time adult learners.", href: "/courses/noorani-qaida" },
                 { name: "Quran Reading with Tajweed", desc: "Develop accurate, confident Quran recitation through systematic Tajweed instruction from beginner through advanced levels.", href: "/courses/tajweed" },
                 { name: "Quran Memorization (Hifz)", desc: "Structured Hifz program for dedicated students, complete with revision cycles and milestone tracking.", href: "/courses/hifz" },
-                { name: "Islamic Studies", desc: "Core Islamic knowledge including beliefs, prayer, manners, and Seerah — tailored for young American Muslims.", href: "/courses/islamic-studies" },
+                { name: "Islamic Studies", desc: "Core Islamic knowledge including beliefs, prayer, manners, and Seerah, tailored for young American Muslims.", href: "/courses/islamic-studies" },
               ].map((course) => (
                 <Link
                   key={course.name}
@@ -307,7 +307,7 @@ export default function DallasPage() {
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-6">Family Testimonial</span>
             <blockquote className="font-playfair text-xl md:text-2xl text-white leading-relaxed italic mb-8">
-              "We're in Plano and the nearest good Islamic school is in Richardson — not far, but between my husband's work schedule and my kids' extracurriculars, we couldn't make it consistently. Ease Quran has been a blessing. Both my kids now have private classes twice a week and have made more progress in three months than in two years at the weekend school."
+              "We're in Plano and the nearest good Islamic school is in Richardson, not far, but between my husband's work schedule and my kids' extracurriculars, we couldn't make it consistently. Ease Quran has been a blessing. Both my kids now have private classes twice a week and have made more progress in three months than in two years at the weekend school."
             </blockquote>
             <footer className="text-white/60 font-semibold">
               — Aisha M., Muslim mother in Plano, Texas
@@ -323,7 +323,7 @@ export default function DallasPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
-                Frequently Asked Questions — Dallas, Texas
+                Frequently Asked Questions. Dallas, Texas
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -333,7 +333,7 @@ export default function DallasPage() {
 
       <CTASection
         headline="Certified Quran Education Across the DFW Metroplex"
-        subtext="From Richardson and Plano to Irving, Garland, and Frisco — Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
+        subtext="From Richardson and Plano to Irving, Garland, and Frisco. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

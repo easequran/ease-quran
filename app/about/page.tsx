@@ -8,13 +8,13 @@ import { Users, Award, Globe, Heart, BarChart2, BookOpen } from "lucide-react";
 export const metadata: Metadata = {
   title: "About Ease Quran Online Academy | Wifaq ul Madaris Certified Teachers",
   description:
-    "Learn about Ease Quran Online Academy, founded by Shah Zaib — certified from Wifaq ul Madaris. Our mission is to bring trusted Quran education to Muslim families across the USA.",
+    "Learn about Ease Quran Online Academy, founded by Shah Zaib, certified from Wifaq ul Madaris. Our mission is to bring trusted Quran education to Muslim families across the USA.",
   alternates: { canonical: "https://easequran.com/about" },
   openGraph: {
     title: "About Ease Quran Online Academy | Wifaq ul Madaris Certified Teachers",
     description:
-      "Learn about Ease Quran Online Academy, founded by Shah Zaib — certified from Wifaq ul Madaris. Our mission is to bring trusted Quran education to Muslim families across the USA.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "About Ease Quran Online Academy — Wifaq ul Madaris Certified" }],
+      "Learn about Ease Quran Online Academy, founded by Shah Zaib, certified from Wifaq ul Madaris. Our mission is to bring trusted Quran education to Muslim families across the USA.",
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "About Ease Quran Online Academy, Wifaq ul Madaris Certified" }],
   },
 };
 
@@ -74,13 +74,13 @@ const values = [
     icon: Users,
     title: "Trust",
     description:
-      "Every teacher at Ease Quran is personally vetted and holds a recognized Islamic credential. We understand that inviting a teacher into your home—even virtually—requires complete confidence. We earn that trust every single day.",
+      "Every teacher at Ease Quran is personally vetted and holds a recognized Islamic credential. We understand that inviting a teacher into your home, even virtually, requires complete confidence. We earn that trust every single day.",
   },
   {
     icon: Award,
     title: "Excellence",
     description:
-      "We hold our teachers to the highest academic and pedagogical standards. Certification from Wifaq ul Madaris Al-Arabia is the baseline—not the ceiling. Continuous improvement and student progress are what drive us.",
+      "We hold our teachers to the highest academic and pedagogical standards. Certification from Wifaq ul Madaris Al-Arabia is the baseline, not the ceiling. Continuous improvement and student progress are what drive us.",
   },
   {
     icon: Globe,
@@ -95,7 +95,7 @@ const philosophyCards = [
     icon: Heart,
     title: "Patience Above All",
     description:
-      "Every student learns at their own pace. Our teachers are trained to meet students where they are—whether that's a 5-year-old learning their first Arabic letters or an adult reciting the Quran for the very first time. Frustration has no place in our classrooms.",
+      "Every student learns at their own pace. Our teachers are trained to meet students where they are, whether that's a 5-year-old learning their first Arabic letters or an adult reciting the Quran for the very first time. Frustration has no place in our classrooms.",
   },
   {
     icon: BarChart2,
@@ -107,7 +107,7 @@ const philosophyCards = [
     icon: BookOpen,
     title: "Islamic Values First",
     description:
-      "Quran education is not just about reading—it's about building a relationship with the Book of Allah. We embed Islamic values, manners, and love for the Quran into every lesson, nurturing students who don't just read but understand and connect.",
+      "Quran education is not just about reading. It's about building a relationship with the Book of Allah. We embed Islamic values, manners, and love for the Quran into every lesson, nurturing students who don't just read but understand and connect.",
   },
 ];
 
@@ -164,13 +164,13 @@ export default function AboutPage() {
               Why Ease Quran Exists
             </h2>
             <p className="text-grey leading-relaxed text-base">
-              Millions of Muslim families in America want their children to learn the Quran—but
+              Millions of Muslim families in America want their children to learn the Quran, but
               finding a qualified, trustworthy teacher is a real challenge. Local Islamic schools
               have limited hours. Community masjids are often overbooked. And the internet is full
               of unverified "teachers" with no credentials. Ease Quran was founded to solve this
               problem: to give every Muslim family in America access to a{" "}
               <strong className="text-navy">certified, background-checked, experienced</strong>{" "}
-              Quran teacher—on their schedule, from their home.
+              Quran teacher, on their schedule, from their home.
             </p>
           </div>
 
@@ -230,13 +230,13 @@ export default function AboutPage() {
                 <p>
                   Shah Zaib completed his formal Islamic education at a recognized institution
                   affiliated with{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia Pakistan</strong>—the
+                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia Pakistan</strong>, the
                   largest and most respected Islamic education board in Pakistan, whose
                   certifications are recognized globally by Islamic scholars and institutions.
                 </p>
                 <p>
                   After completing his studies, Shah Zaib began teaching Quran to students in the
-                  West—quickly recognizing a massive gap in quality, trusted online Quran
+                  West, quickly recognizing a massive gap in quality, trusted online Quran
                   education for English-speaking Muslim families. Over{" "}
                   <strong className="text-navy">6 years</strong>, he refined a teaching
                   methodology specifically designed for Western students: patient, structured,
@@ -244,7 +244,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   His specialty is working with students who have had little or no prior Arabic
-                  or Quran education—adults, children, and families who are just beginning their
+                  or Quran education: adults, children, and families who are just beginning their
                   journey with the Book of Allah. He built Ease Quran as a platform to scale this
                   mission: reaching every Muslim family across America who deserves a teacher they
                   can truly trust.
@@ -305,7 +305,7 @@ export default function AboutPage() {
                   recognized by Islamic institutions, universities, and governments across the
                   Middle East, Southeast Asia, Europe, and North America. A certification from
                   Wifaq ul Madaris is the Islamic equivalent of a university degree from a
-                  top-tier institution—it means the teacher has completed years of rigorous
+                  top-tier institution. It means the teacher has completed years of rigorous
                   academic study in Quran, Hadith, Fiqh, and Arabic sciences.
                 </p>
               </div>
@@ -317,11 +317,11 @@ export default function AboutPage() {
                 <p className="text-white/70 text-sm leading-relaxed">
                   As a Muslim parent in America, you have no way to walk into a classroom and
                   assess a teacher's qualifications in person. Online Quran teaching is largely
-                  unregulated—anyone can claim to be a "qualified Quran teacher." The Wifaq ul
+                  unregulated. Anyone can claim to be a "qualified Quran teacher." The Wifaq ul
                   Madaris certification is the gold standard that separates genuine scholars from
                   unqualified individuals. When all Ease Quran teachers hold this credential, you
                   have a verifiable, internationally recognized guarantee of academic integrity.
-                  Your children will learn from real scholars—not well-meaning volunteers.
+                  Your children will learn from real scholars, not well-meaning volunteers.
                 </p>
               </div>
             </div>
@@ -348,7 +348,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-grey max-w-2xl mx-auto text-sm leading-relaxed">
               We believe that the right teacher, the right method, and the right environment can
-              make any student—child or adult—fall in love with the Quran.
+              make any student, child or adult, fall in love with the Quran.
             </p>
           </div>
 
@@ -393,7 +393,7 @@ export default function AboutPage() {
             <TeacherCard
               name="Shah Zaib"
               image="/images/founder.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Tajweed, Quran Reading, Hifz, Noorani Qaida"
               experience="6+ years teaching Western students"
               qualification="Founder & Head Teacher"
@@ -401,7 +401,7 @@ export default function AboutPage() {
             <TeacherCard
               name="Muhammad Umair"
               image="/images/teacher-1.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Tajweed & Hifz Specialist"
               experience="2 years teaching online"
               qualification="Quran Teacher"
@@ -409,7 +409,7 @@ export default function AboutPage() {
             <TeacherCard
               name="Almas Fatima"
               image="/images/teacher-2.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Qaria e Quran, B.A. Islamic Studies"
               experience="Teaching since 2022, available for sisters & children"
               qualification="Female Quran Teacher"
@@ -434,14 +434,14 @@ export default function AboutPage() {
                 <div className="space-y-4 text-grey text-sm leading-relaxed">
                   <p>
                     We envision a future where every Muslim child growing up in America has a
-                    genuine, meaningful relationship with the Quran—where Quranic recitation
+                    genuine, meaningful relationship with the Quran, where Quranic recitation
                     is not a distant dream but a daily reality for families in every state.
                   </p>
                   <p>
                     We are building toward a world where the quality of your Quran education
                     is not limited by your zip code, your proximity to a masjid, or your
                     ability to find a local scholar. Ease Quran is our commitment to making
-                    that world real—one student, one family, one lesson at a time.
+                    that world real, one student, one family, one lesson at a time.
                   </p>
                   <p>
                     We are continuously growing our team of certified teachers, improving our
@@ -478,7 +478,7 @@ export default function AboutPage() {
 
       <CTASection
         headline="Ready to Start Your Child's Quran Journey?"
-        subtext="Book a free trial class today and experience the Ease Quran difference. No credit card, no commitment — just your child's first step toward the Quran."
+        subtext="Book a free trial class today and experience the Ease Quran difference. No credit card, no commitment. Just your child's first step toward the Quran."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

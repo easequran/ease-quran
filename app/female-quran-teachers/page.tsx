@@ -9,7 +9,7 @@ import TrustBadges from "@/components/TrustBadges";
 export const metadata: Metadata = {
   title: "Female Quran Teacher Online USA | Sister Quran Teacher | Ease Quran",
   description:
-    "Find a certified female Quran teacher online in the USA. Our qualified sister teachers for women and children. Almas Fatima — Qaria e Quran, available now.",
+    "Find a certified female Quran teacher online in the USA. Our qualified sister teachers for women and children. Almas Fatima, Qaria e Quran, available now.",
   keywords: [
     "female Quran teacher online",
     "sister Quran teacher",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Female Quran Teacher Online USA | Sister Quran Teacher | Ease Quran",
     description:
-      "Certified female Quran teacher online for women and children across the USA. Sister Almas Fatima — Qaria e Quran, available for sisters now.",
+      "Certified female Quran teacher online for women and children across the USA. Sister Almas Fatima, Qaria e Quran, available for sisters now.",
     images: ["/images/og-image.png"],
   },
 };
@@ -67,7 +67,7 @@ const faqSchema = {
       name: "Are female Quran teachers available for online classes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran has Sister Almas Fatima — a certified female Quran teacher — available for online classes with sisters and children across the USA. Classes are conducted via Zoom.",
+        text: "Yes. Ease Quran has Sister Almas Fatima, a certified female Quran teacher, available for online classes with sisters and children across the USA. Classes are conducted via Zoom.",
       },
     },
     {
@@ -117,27 +117,27 @@ const faqs = [
   {
     question: "Are female Quran teachers available for online classes?",
     answer:
-      "Yes. Ease Quran has Sister Almas Fatima — a certified, qualified female Quran teacher — available for online one-on-one classes with sisters and children across the United States. All classes are conducted live via Zoom from the comfort and privacy of your home. There are no male teachers involved in any session requested for sisters.",
+      "Yes. Ease Quran has Sister Almas Fatima, a certified, qualified female Quran teacher, available for online one-on-one classes with sisters and children across the United States. All classes are conducted live via Zoom from the comfort and privacy of your home. There are no male teachers involved in any session requested for sisters.",
   },
   {
     question: "Is Sister Almas Fatima certified?",
     answer:
-      "Yes. Sister Almas Fatima holds two recognized Islamic credentials: a certification as a Qaria e Quran from an institution affiliated with Wifaq ul Madaris Al-Arabia — the most respected Islamic education board in the world — and a Bachelor of Arts in Islamic Studies. She has been teaching Quran to sisters and children online since 2022 and brings genuine academic qualification to every lesson.",
+      "Yes. Sister Almas Fatima holds two recognized Islamic credentials: a certification as a Qaria e Quran from an institution affiliated with Wifaq ul Madaris Al-Arabia, the most respected Islamic education board in the world, and a Bachelor of Arts in Islamic Studies. She has been teaching Quran to sisters and children online since 2022 and brings genuine academic qualification to every lesson.",
   },
   {
     question: "Can my daughter have a female teacher for all her classes?",
     answer:
-      "Yes, absolutely. When you request a female teacher at booking, Sister Almas Fatima will be assigned exclusively to your daughter's classes. Every single class — the trial, all regular sessions, and any makeup classes — will be with Sister Almas. There is no male teacher involvement at any point. Your daughter will always have her female teacher.",
+      "Yes, absolutely. When you request a female teacher at booking, Sister Almas Fatima will be assigned exclusively to your daughter's classes. Every single class, including the trial, all regular sessions, and any makeup classes, will be with Sister Almas. There is no male teacher involvement at any point. Your daughter will always have her female teacher.",
   },
   {
     question: "What courses does your female teacher teach?",
     answer:
-      "Sister Almas is fully qualified to teach all of our core courses: Noorani Qaida (for complete beginners including very young children), Quran Reading with Tajweed (from beginner to advanced), Quran for Kids (designed for ages 4–10), and Islamic Studies (beliefs, prayer, manners, and Seerah). She tailors every lesson to the student's age and learning level.",
+      "Sister Almas is fully qualified to teach all of our core courses: Noorani Qaida for complete beginners including very young children, Quran Reading with Tajweed from beginner to advanced, Quran for Kids designed for ages 4 to 10, and Islamic Studies covering beliefs, prayer, manners, and Seerah. She tailors every lesson to the student's age and learning level.",
   },
   {
     question: "How do I request a female teacher when booking?",
     answer:
-      "It's simple — just indicate on our booking form that you would like a female teacher, or mention it in your WhatsApp message when reaching out to us. We will confirm Sister Almas Fatima as your teacher, agree on a schedule, and send you all the Zoom details before your first class. The process takes just a few minutes.",
+      "It's simple. Just indicate on our booking form that you would like a female teacher, or mention it in your WhatsApp message when reaching out to us. We will confirm Sister Almas Fatima as your teacher, agree on a schedule, and send you all the Zoom details before your first class. The process takes just a few minutes.",
   },
   {
     question: "Are the classes one-on-one with the female teacher?",
@@ -173,10 +173,10 @@ export default function FemaleQuranTeachersPage() {
               For Sisters and Children
             </span>
             <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
-              Female Quran Teacher Online — Qualified, Certified &amp; Available for Sisters
+              Female Quran Teacher Online: Qualified, Certified &amp; Available for Sisters
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
-              For Muslim women and girls, learning Quran from a female teacher is not just a preference — it is a matter of modesty, comfort, and Islamic principle. At Ease Quran, we offer certified female Quran instruction for sisters and children across the United States, taught one-on-one by Sister Almas Fatima — a Qaria e Quran with formal Islamic credentials.
+              For Muslim women and girls, learning Quran from a female teacher is not just a preference. It is a matter of modesty, comfort, and Islamic principle. At Ease Quran, we offer certified female Quran instruction for sisters and children across the United States, taught one-on-one by Sister Almas Fatima, a Qaria e Quran with formal Islamic credentials.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
@@ -208,7 +208,7 @@ export default function FemaleQuranTeachersPage() {
                 Meet Your Teacher
               </span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
-                Sister Almas Fatima — Certified Female Quran Teacher
+                Sister Almas Fatima, Certified Female Quran Teacher
               </h2>
             </div>
 
@@ -218,7 +218,7 @@ export default function FemaleQuranTeachersPage() {
                 <div className="relative h-80 lg:h-auto min-h-[400px]">
                   <Image
                     src="/images/teacher-2.webp"
-                    alt="Sister Almas Fatima — Certified Female Quran Teacher, Qaria e Quran at Ease Quran Online Academy"
+                    alt="Sister Almas Fatima, Certified Female Quran Teacher and Qaria e Quran at Ease Quran Online Academy"
                     fill
                     className="object-cover"
                     priority
@@ -232,12 +232,12 @@ export default function FemaleQuranTeachersPage() {
                 {/* Content */}
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
                   <h3 className="font-playfair font-bold text-3xl text-navy mb-1">Sister Almas Fatima</h3>
-                  <p className="text-gold font-semibold mb-6">Female Quran Teacher — Available for Sisters &amp; Children</p>
+                  <p className="text-gold font-semibold mb-6">Female Quran Teacher, Available for Sisters &amp; Children</p>
 
                   {/* Credentials */}
                   <div className="space-y-3 mb-8">
                     {[
-                      { label: "Certification", value: "Qaria e Quran — Wifaq ul Madaris Al-Arabia" },
+                      { label: "Certification", value: "Qaria e Quran, Wifaq ul Madaris Al-Arabia" },
                       { label: "Qualification", value: "B.A. Islamic Studies" },
                       { label: "Teaching Since", value: "2022" },
                       { label: "Speciality", value: "Quran for Kids, Tajweed, Noorani Qaida, Islamic Studies" },
@@ -252,7 +252,7 @@ export default function FemaleQuranTeachersPage() {
 
                   {/* Teaching style */}
                   <p className="text-grey text-sm leading-relaxed mb-6">
-                    Sister Almas is known for her patience, warmth, and ability to connect with students of all ages — from young children just beginning Arabic letters to adult sisters learning Quran for the first time. She creates a learning environment that is completely comfortable and encouraging, where students never feel rushed, judged, or embarrassed. Her teaching is structured and systematic, ensuring measurable progress with every class while maintaining the calm, nurturing atmosphere that sisters and families trust.
+                    Sister Almas is known for her patience, warmth, and ability to connect with students of all ages, from young children just beginning Arabic letters to adult sisters learning Quran for the first time. She creates a learning environment that is completely comfortable and encouraging, where students never feel rushed, judged, or embarrassed. Her teaching is structured and systematic, ensuring measurable progress with every class while maintaining the calm, nurturing atmosphere that sisters and families trust.
                   </p>
 
                   <div className="flex flex-wrap gap-3">
@@ -290,16 +290,16 @@ export default function FemaleQuranTeachersPage() {
             </div>
             <div className="space-y-6 text-white/70 leading-relaxed">
               <p>
-                Islamic scholarship has long recognized the importance of observing appropriate boundaries in the teacher-student relationship, particularly in settings involving women and girls. When a Muslim girl or woman learns her Quran from a female teacher, she does so in an environment of complete comfort, free from any concern about gender boundaries or Islamic etiquette. This is not a matter of preference alone — for many Muslim families, it is a sincere expression of their Islamic values and a practical application of the principle of modesty that Islam holds dear. A female student who is completely at ease with her teacher learns faster, engages more freely, and develops a richer relationship with the Quran.
+                Islamic scholarship has long recognized the importance of observing appropriate boundaries in the teacher-student relationship, particularly in settings involving women and girls. When a Muslim girl or woman learns her Quran from a female teacher, she does so in an environment of complete comfort, free from any concern about gender boundaries or Islamic etiquette. This is not a matter of preference alone. For many Muslim families, it is a sincere expression of their Islamic values and a practical application of the principle of modesty that Islam holds dear. A female student who is completely at ease with her teacher learns faster, engages more freely, and develops a richer relationship with the Quran.
               </p>
               <p>
-                For Muslim mothers, the question of who is sitting across a screen from their daughter matters deeply. The trust that a parent places in a teacher — particularly for an intimate one-on-one learning relationship — is significant. When that teacher is a qualified, certified sister, the entire arrangement is one that Muslim parents can feel completely at peace about. There is no awkwardness, no discomfort, and no concern. The mother knows her daughter is learning from a knowledgeable, modest, and qualified Muslim woman who shares her values and her commitment to Islamic education done properly.
+                For Muslim mothers, the question of who is sitting across a screen from their daughter matters deeply. The trust that a parent places in a teacher, particularly for an intimate one-on-one learning relationship, is significant. When that teacher is a qualified, certified sister, the entire arrangement is one that Muslim parents can feel completely at peace about. There is no awkwardness, no discomfort, and no concern. The mother knows her daughter is learning from a knowledgeable, modest, and qualified Muslim woman who shares her values and her commitment to Islamic education done properly.
               </p>
               <p>
-                The tradition of female Islamic scholarship is ancient and noble. From the wives of the Prophet (peace be upon him) — particularly A'isha (may Allah be pleased with her) who was a great teacher of Hadith and Islamic knowledge to women and men alike — to the great female scholars of Islamic history, women have always played a vital role in transmitting Islamic knowledge. When Sister Almas Fatima teaches a young girl to recite the Quran, she is participating in a tradition of female Islamic scholarship that goes back to the earliest years of the ummah.
+                The tradition of female Islamic scholarship is ancient and noble. The wives of the Prophet (peace be upon him), particularly A'isha (may Allah be pleased with her), were great teachers of Hadith and Islamic knowledge to women and men alike. The great female scholars of Islamic history have always played a vital role in transmitting Islamic knowledge. When Sister Almas Fatima teaches a young girl to recite the Quran, she is participating in a tradition of female Islamic scholarship that goes back to the earliest years of the ummah.
               </p>
               <p>
-                For adult women — sisters who are learning Quran for the first time, or returning to their Quran education after years away — the presence of a female teacher removes a significant psychological barrier. Many adult women feel embarrassed or vulnerable learning something new in front of a male teacher. With Sister Almas, that barrier disappears entirely. She creates a safe, warm, non-judgmental space where every sister, at any age and any level, can begin her Quran journey with confidence and dignity.
+                For adult women who are learning Quran for the first time, or returning to their Quran education after years away, the presence of a female teacher removes a significant psychological barrier. Many adult women feel embarrassed or vulnerable learning something new in front of a male teacher. With Sister Almas, that barrier disappears entirely. She creates a safe, warm, non-judgmental space where every sister, at any age and any level, can begin her Quran journey with confidence and dignity.
               </p>
             </div>
           </div>
@@ -325,19 +325,19 @@ export default function FemaleQuranTeachersPage() {
               {[
                 {
                   name: "Quran for Kids",
-                  desc: "Designed for young learners aged 4 and up — Sister Almas makes early Quran education fun, gentle, and progressive. Children quickly feel comfortable with her patient, encouraging style.",
+                  desc: "Designed for young learners aged 4 and up. Sister Almas makes early Quran education fun, gentle, and progressive. Children quickly feel comfortable with her patient, encouraging style.",
                   href: "/courses/noorani-qaida",
                   icon: User,
                 },
                 {
-                  name: "Tajweed — Quran Recitation",
-                  desc: "Systematic Tajweed instruction from beginner through advanced levels. Sister Almas herself is a certified Qaria e Quran — meaning she has mastered the rules of recitation and teaches them with expert precision.",
+                  name: "Tajweed and Quran Recitation",
+                  desc: "Systematic Tajweed instruction from beginner through advanced levels. Sister Almas herself is a certified Qaria e Quran, meaning she has mastered the rules of recitation and teaches them with expert precision.",
                   href: "/courses/tajweed",
                   icon: BookOpen,
                 },
                 {
                   name: "Noorani Qaida",
-                  desc: "The ideal starting course for any beginner — children or adults. Learn Arabic letters, vowels, and Quran reading fundamentals under Sister Almas's careful, structured guidance.",
+                  desc: "The ideal starting course for any beginner, children or adults alike. Learn Arabic letters, vowels, and Quran reading fundamentals under Sister Almas's careful, structured guidance.",
                   href: "/courses/noorani-qaida",
                   icon: BookOpen,
                 },
@@ -387,7 +387,7 @@ export default function FemaleQuranTeachersPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Girls of All Ages</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  From young girls aged 4 starting with their first Arabic letters, to teenage girls working on Tajweed or Hifz — Sister Almas teaches girls at every stage with patience, skill, and Islamic wisdom.
+                  From young girls aged 4 starting with their first Arabic letters to teenage girls working on Tajweed or Hifz, Sister Almas teaches girls at every stage with patience, skill, and Islamic wisdom.
                 </p>
               </div>
               <div className="text-center p-8 bg-offwhite rounded-2xl border border-gray-100">
@@ -396,7 +396,7 @@ export default function FemaleQuranTeachersPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Sisters (Adult Women)</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  Adult Muslim women who are learning Quran for the first time, improving their recitation, or returning to Quran education after many years are warmly welcomed. Age is never a barrier — it is never too late to begin.
+                  Adult Muslim women who are learning Quran for the first time, improving their recitation, or returning to Quran education after many years are warmly welcomed. It is never too late to begin.
                 </p>
               </div>
               <div className="text-center p-8 bg-offwhite rounded-2xl border border-gray-100">
@@ -405,7 +405,7 @@ export default function FemaleQuranTeachersPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Children from Age 4</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  Very young children — boys and girls — can begin with Sister Almas from around age 4. She specializes in making early Quran education engaging and gentle for the youngest learners, building strong foundations from the very beginning.
+                  Very young children, boys and girls alike, can begin with Sister Almas from around age 4. She specializes in making early Quran education engaging and gentle for the youngest learners, building strong foundations from the very beginning.
                 </p>
               </div>
             </div>
@@ -430,7 +430,7 @@ export default function FemaleQuranTeachersPage() {
         </div>
       </section>
 
-      {/* How It Works — Female Teacher Specific */}
+      {/* How It Works: Female Teacher Specific */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
@@ -444,7 +444,7 @@ export default function FemaleQuranTeachersPage() {
               {[
                 { step: "01", title: "Request a Female Teacher", desc: "Book your free trial online or via WhatsApp and clearly state you would like a female teacher for your daughter or for yourself. We confirm Sister Almas immediately." },
                 { step: "02", title: "Free Trial Class with Sister Almas", desc: "Your daughter or you joins a complimentary one-on-one Zoom session with Sister Almas. Experience her teaching style and the warm, comfortable environment she creates." },
-                { step: "03", title: "Begin Regular Weekly Classes", desc: "Happy with the trial? We set a consistent weekly schedule with Sister Almas — flexible, reliable, and always one-on-one. Your journey with the Quran begins." },
+                { step: "03", title: "Begin Regular Weekly Classes", desc: "Happy with the trial? We set a consistent weekly schedule with Sister Almas, flexible, reliable, and always one-on-one. Your journey with the Quran begins." },
               ].map((item) => (
                 <div key={item.step} className="text-center">
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
@@ -466,7 +466,7 @@ export default function FemaleQuranTeachersPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
-                Frequently Asked Questions — Female Quran Teacher
+                Frequently Asked Questions: Female Quran Teacher
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -476,7 +476,7 @@ export default function FemaleQuranTeachersPage() {
 
       <CTASection
         headline="Book a Class with Sister Almas Fatima Today"
-        subtext="Certified, qualified, and available now for sisters and children across the USA. One-on-one, private, and completely comfortable. Your first class is free — no credit card, no commitment."
+        subtext="Certified, qualified, and available now for sisters and children across the USA. One-on-one, private, and completely comfortable. Your first class is free. No credit card, no commitment."
         primaryCta="Book Free Trial with Female Teacher"
         primaryHref="/free-trial"
       />

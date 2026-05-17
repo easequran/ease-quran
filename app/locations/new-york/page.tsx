@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in New York City | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in New York City. Serving Queens, Brooklyn, the Bronx, and all NYC boroughs.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in New York City — Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in New York City, Ease Quran Academy" }],
   },
 };
 
@@ -79,10 +79,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Are your teachers certified — not just volunteers from a local masjid?",
+      name: "Are your teachers certified, not just volunteers from a local masjid?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. All Ease Quran teachers hold a Wifaq ul Madaris Al-Arabia certification — the most recognized Islamic education credential in the world. These are trained scholars, not volunteers.",
+        text: "Yes. All Ease Quran teachers hold a Wifaq ul Madaris Al-Arabia certification, the most recognized Islamic education credential in the world. These are trained scholars, not volunteers.",
       },
     },
     {
@@ -98,7 +98,7 @@ const faqSchema = {
       name: "How does Ease Quran compare to Islamic schools in New York City?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Unlike Islamic schools, we offer fully flexible one-on-one online classes — no commuting across boroughs, no fixed in-person schedules. Your child gets personalized attention from a certified teacher at a time that works for your family.",
+        text: "Unlike Islamic schools, we offer fully flexible one-on-one online classes, no commuting across boroughs, no fixed in-person schedules. Your child gets personalized attention from a certified teacher at a time that works for your family.",
       },
     },
   ],
@@ -108,17 +108,17 @@ const faqs = [
   {
     question: "Can my child in Queens take online Quran classes with Ease Quran?",
     answer:
-      "Absolutely. We serve families in all NYC boroughs including Queens, Brooklyn, the Bronx, Manhattan, and Staten Island. Classes are held via Zoom from your home, so location within the city doesn't matter at all — whether you're in Flushing, Jackson Heights, or Bay Ridge.",
+      "Absolutely. We serve families in all NYC boroughs including Queens, Brooklyn, the Bronx, Manhattan, and Staten Island. Classes are held via Zoom from your home, so location within the city doesn't matter at all, whether you're in Flushing, Jackson Heights, or Bay Ridge.",
   },
   {
     question: "What time slots are available for New York families?",
     answer:
-      "We offer flexible scheduling including early morning, after-school (3–6 PM ET), evening, and weekend slots to accommodate the demanding schedules of NYC families. We know city life moves fast — we work around your timetable, not the other way around.",
+      "We offer flexible scheduling including early morning, after-school (3–6 PM ET), evening, and weekend slots to accommodate the demanding schedules of NYC families. We know city life moves fast, we work around your timetable, not the other way around.",
   },
   {
-    question: "Are your teachers certified — not just volunteers from a local masjid?",
+    question: "Are your teachers certified, not just volunteers from a local masjid?",
     answer:
-      "Yes. All Ease Quran teachers hold a Wifaq ul Madaris Al-Arabia certification — the most recognized Islamic education credential in the world. These are trained scholars with years of formal study, not volunteers. This is the credential NYC Muslim parents deserve.",
+      "Yes. All Ease Quran teachers hold a Wifaq ul Madaris Al-Arabia certification, the most recognized Islamic education credential in the world. These are trained scholars with years of formal study, not volunteers. This is the credential NYC Muslim parents deserve.",
   },
   {
     question: "Is there a female teacher available for my daughter?",
@@ -169,7 +169,7 @@ export default function NewYorkPage() {
               Online Quran Classes in New York City
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
-              Certified, one-on-one Quran education for Muslim families across all five boroughs. Whether you are in Queens, Brooklyn, the Bronx, Manhattan, or Staten Island — your child can start learning Quran today from a qualified teacher, without leaving home.
+              Certified, one-on-one Quran education for Muslim families across all five boroughs. Whether you are in Queens, Brooklyn, the Bronx, Manhattan, or Staten Island, your child can start learning Quran today from a qualified teacher, without leaving home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
@@ -204,7 +204,7 @@ export default function NewYorkPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                New York City is home to one of the largest and most diverse Muslim communities in the entire United States, with an estimated population of over 800,000 Muslims spread across the five boroughs. The city's Muslim life is deeply woven into its cultural fabric — from the dense concentration of mosques and Islamic centers in Queens neighborhoods like Jackson Heights, Flushing, and Jamaica, to the vibrant Muslim communities of Bay Ridge and Flatbush in Brooklyn, and the growing African American Muslim presence throughout the Bronx. The greater metropolitan area includes dozens of active masjids, weekend Islamic schools, and community organizations that serve families from South Asian, Arab, West African, and African American backgrounds.
+                New York City is home to one of the largest and most diverse Muslim communities in the entire United States, with an estimated population of over 800,000 Muslims spread across the five boroughs. The city's Muslim life is deeply woven into its cultural fabric, from the dense concentration of mosques and Islamic centers in Queens neighborhoods like Jackson Heights, Flushing, and Jamaica, to the vibrant Muslim communities of Bay Ridge and Flatbush in Brooklyn, and the growing African American Muslim presence throughout the Bronx. The greater metropolitan area includes dozens of active masjids, weekend Islamic schools, and community organizations that serve families from South Asian, Arab, West African, and African American backgrounds.
               </p>
               <p>
                 Despite this rich communal infrastructure, New York City's sheer size and pace of life creates real barriers for Muslim families seeking consistent, quality Quran education for their children. Long commutes across boroughs, packed after-school schedules, and the competitive demands of New York public and private schools often leave little room for attending in-person Islamic education programs. Many New York Muslim families find that weekend madrasah slots fill quickly, qualified local teachers are hard to find and often unavailable, and the commute to a reputable Islamic center can consume an hour each way. These are exactly the challenges that Ease Quran was built to solve.
@@ -231,7 +231,7 @@ export default function NewYorkPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">No More Borough-Crossing Commutes</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  Getting from Queens to a masjid in Brooklyn for a 45-minute class is a two-hour round trip on the subway. Online classes eliminate that entirely. Your child sits down at home after school, opens Zoom, and the lesson begins — no train delays, no parking stress, no rush.
+                  Getting from Queens to a masjid in Brooklyn for a 45-minute class is a two-hour round trip on the subway. Online classes eliminate that entirely. Your child sits down at home after school, opens Zoom, and the lesson begins, no train delays, no parking stress, no rush.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -240,7 +240,7 @@ export default function NewYorkPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Fits the NYC Schedule</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  New York kids are busy — extracurriculars, homework, family commitments, and the competitive pace of NYC schooling leave narrow windows. We schedule Quran classes around your life, not the other way around, offering flexible slots from early morning through evening seven days a week.
+                  New York kids are busy, extracurriculars, homework, family commitments, and the competitive pace of NYC schooling leave narrow windows. We schedule Quran classes around your life, not the other way around, offering flexible slots from early morning through evening seven days a week.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -249,7 +249,7 @@ export default function NewYorkPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Certified Teachers, Not Volunteers</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  In a city as competitive as New York, you expect credentials. Our teachers hold Wifaq ul Madaris Al-Arabia certifications — the gold standard of Islamic education. Every lesson is one-on-one, structured, and measurably progressive. Your child's Quran education should be held to the same standard as any other subject.
+                  In a city as competitive as New York, you expect credentials. Our teachers hold Wifaq ul Madaris Al-Arabia certifications, the gold standard of Islamic education. Every lesson is one-on-one, structured, and measurably progressive. Your child's Quran education should be held to the same standard as any other subject.
                 </p>
               </div>
             </div>
@@ -272,7 +272,7 @@ export default function NewYorkPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { name: "Noorani Qaida", desc: "Foundation course for beginners — learn Arabic letters and pronunciation from scratch.", href: "/courses/noorani-qaida" },
+                { name: "Noorani Qaida", desc: "Foundation course for beginners, learn Arabic letters and pronunciation from scratch.", href: "/courses/noorani-qaida" },
                 { name: "Quran Reading with Tajweed", desc: "Correct recitation rules taught systematically for fluent, beautiful Quran reading.", href: "/courses/tajweed" },
                 { name: "Quran Memorization (Hifz)", desc: "Structured Hifz program for children and adults committed to memorizing the Quran.", href: "/courses/hifz" },
                 { name: "Islamic Studies", desc: "Fundamentals of faith, prayer, Islamic manners, and Seerah for young learners.", href: "/courses/islamic-studies" },
@@ -302,8 +302,8 @@ export default function NewYorkPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { step: "01", title: "Book Your Free Trial", desc: "Fill out our quick form or WhatsApp us. Tell us your child's age, current level, and preferred schedule. We'll match you with the right teacher." },
-                { step: "02", title: "Attend the Free Class", desc: "Your child joins a live one-on-one Zoom session with their teacher. No pressure, no payment required — just an hour to experience the Ease Quran method." },
-                { step: "03", title: "Start Regular Classes", desc: "If you're happy — and our NYC families almost always are — we set up a recurring weekly schedule that fits your routine and your child begins their Quran journey." },
+                { step: "02", title: "Attend the Free Class", desc: "Your child joins a live one-on-one Zoom session with their teacher. No pressure, no payment required, just an hour to experience the Ease Quran method." },
+                { step: "03", title: "Start Regular Classes", desc: "If you're happy, and our NYC families almost always are, we set up a recurring weekly schedule that fits your routine and your child begins their Quran journey." },
               ].map((item) => (
                 <div key={item.step} className="text-center">
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
@@ -324,7 +324,7 @@ export default function NewYorkPage() {
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-6">Family Testimonial</span>
             <blockquote className="font-playfair text-xl md:text-2xl text-white leading-relaxed italic mb-8">
-              "We live in Jackson Heights, Queens — both my husband and I work full time in the city. Getting our son to any kind of Islamic school on a weekday was simply impossible. With Ease Quran, he has class three evenings a week right after his homework. His Tajweed has improved so much in just four months. This is exactly what our family needed."
+              "We live in Jackson Heights, Queens, both my husband and I work full time in the city. Getting our son to any kind of Islamic school on a weekday was simply impossible. With Ease Quran, he has class three evenings a week right after his homework. His Tajweed has improved so much in just four months. This is exactly what our family needed."
             </blockquote>
             <footer className="text-white/60 font-semibold">
               — Nadia R., Muslim mother in Jackson Heights, Queens, New York
@@ -340,7 +340,7 @@ export default function NewYorkPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
-                Frequently Asked Questions — New York City
+                Frequently Asked Questions. New York City
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes in Chicago, Illinois | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in Chicago, IL. Serving Bridgeview, Orland Park, north suburbs, and all Chicagoland.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in Chicago, Illinois — Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in Chicago, Illinois, Ease Quran Academy" }],
   },
 };
 
@@ -55,7 +55,7 @@ const faqSchema = {
       name: "Do you serve families in Bridgeview and the southwest suburbs?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We serve the entire Chicagoland area including Bridgeview, Orland Park, Burbank, Palos Hills, and all southwest suburbs — as well as the north suburbs and city proper. All classes are online so geography is not a barrier.",
+        text: "Yes. We serve the entire Chicagoland area including Bridgeview, Orland Park, Burbank, Palos Hills, and all southwest suburbs, as well as the north suburbs and city proper. All classes are online so geography is not a barrier.",
       },
     },
     {
@@ -71,7 +71,7 @@ const faqSchema = {
       name: "How qualified are your teachers compared to local Chicago Islamic schools?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications — the highest recognized Islamic academic credential. Classes are one-on-one versus the group settings at most Islamic schools.",
+        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the highest recognized Islamic academic credential. Classes are one-on-one versus the group settings at most Islamic schools.",
       },
     },
     {
@@ -97,7 +97,7 @@ const faqs = [
   {
     question: "Do you serve families in Bridgeview and the southwest suburbs?",
     answer:
-      "Yes. We serve the entire Chicagoland area including Bridgeview, Orland Park, Burbank, Palos Hills, Tinley Park, and all southwest suburbs — the heart of Chicago's Arab-American Muslim community. We also serve families in the north suburbs and the city of Chicago itself. Since all classes are online via Zoom, your location anywhere in the metro area is perfectly fine.",
+      "Yes. We serve the entire Chicagoland area including Bridgeview, Orland Park, Burbank, Palos Hills, Tinley Park, and all southwest suburbs, the heart of Chicago's Arab-American Muslim community. We also serve families in the north suburbs and the city of Chicago itself. Since all classes are online via Zoom, your location anywhere in the metro area is perfectly fine.",
   },
   {
     question: "What time zones do you accommodate for Chicago families?",
@@ -107,12 +107,12 @@ const faqs = [
   {
     question: "How qualified are your teachers compared to local Chicago Islamic schools?",
     answer:
-      "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications — the most prestigious Islamic academic credential in the world, recognized by Islamic scholars and institutions globally. Additionally, unlike most Islamic school settings where one teacher manages a classroom of students, every Ease Quran class is one-on-one, ensuring your child's individual needs are always addressed.",
+      "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the most prestigious Islamic academic credential in the world, recognized by Islamic scholars and institutions globally. Additionally, unlike most Islamic school settings where one teacher manages a classroom of students, every Ease Quran class is one-on-one, ensuring your child's individual needs are always addressed.",
   },
   {
     question: "Can my daughter have a female Quran teacher?",
     answer:
-      "Yes. Sister Almas Fatima is our certified female Quran teacher — a Qaria e Quran with a B.A. in Islamic Studies, available exclusively for sisters and children. Many Chicago-area families, especially those from the Arab-American and South Asian communities, specifically request a female teacher for their daughters and we are proud to provide that option.",
+      "Yes. Sister Almas Fatima is our certified female Quran teacher, a Qaria e Quran with a B.A. in Islamic Studies, available exclusively for sisters and children. Many Chicago-area families, especially those from the Arab-American and South Asian communities, specifically request a female teacher for their daughters and we are proud to provide that option.",
   },
   {
     question: "Do you teach adults who want to learn Quran in Chicago?",
@@ -154,7 +154,7 @@ export default function ChicagoPage() {
               Online Quran Classes in Chicago, Illinois
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
-              Professional, certified Quran education for Muslim families across Chicagoland — from Bridgeview and the southwest suburbs to the north shore and the city itself. One-on-one, flexible, and fully online.
+              Professional, certified Quran education for Muslim families across Chicagoland, from Bridgeview and the southwest suburbs to the north shore and the city itself. One-on-one, flexible, and fully online.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
@@ -189,10 +189,10 @@ export default function ChicagoPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Chicago, Illinois stands among the top five cities in America for its Muslim population, with an estimated community of over 400,000 Muslims — making Chicagoland a cornerstone of Muslim life in the Midwest. The city's Muslim community is among the most diverse in the nation. The southwest suburbs, particularly Bridgeview and Orland Park, are home to one of the largest concentrations of Arab Americans in the United States, with strong Palestinian, Lebanese, and Syrian communities that have built significant Islamic infrastructure including large masjids, full-time Islamic schools, and community centers. The north suburbs host a strong South Asian Muslim presence, with Pakistani and Indian families well-established in communities like Skokie, Niles, and Schaumburg. The city of Chicago itself has a historic African American Muslim community, rooted in decades of Islamic identity and community building.
+                Chicago, Illinois stands among the top five cities in America for its Muslim population, with an estimated community of over 400,000 Muslims, making Chicagoland a cornerstone of Muslim life in the Midwest. The city's Muslim community is among the most diverse in the nation. The southwest suburbs, particularly Bridgeview and Orland Park, are home to one of the largest concentrations of Arab Americans in the United States, with strong Palestinian, Lebanese, and Syrian communities that have built significant Islamic infrastructure including large masjids, full-time Islamic schools, and community centers. The north suburbs host a strong South Asian Muslim presence, with Pakistani and Indian families well-established in communities like Skokie, Niles, and Schaumburg. The city of Chicago itself has a historic African American Muslim community, rooted in decades of Islamic identity and community building.
               </p>
               <p>
-                Despite this remarkable communal depth, Chicago Muslim families face the same challenge that their counterparts across America encounter: the difficulty of providing consistent, high-quality Quran education in the midst of American life. The southwest suburbs may have a high density of Islamic infrastructure, but even there, the best teachers are often overbooked, Islamic schools have long waitlists, and families in the north suburbs or city proper can face significant drives to reach them. Chicago winters add another dimension — reliable transportation to in-person Islamic classes becomes genuinely difficult from December through February. Ease Quran's online model eliminates all of these friction points, giving every Chicago-area Muslim family the same access to qualified Quran education regardless of their suburb, neighborhood, or the weather outside.
+                Despite this remarkable communal depth, Chicago Muslim families face the same challenge that their counterparts across America encounter: the difficulty of providing consistent, high-quality Quran education in the midst of American life. The southwest suburbs may have a high density of Islamic infrastructure, but even there, the best teachers are often overbooked, Islamic schools have long waitlists, and families in the north suburbs or city proper can face significant drives to reach them. Chicago winters add another dimension, reliable transportation to in-person Islamic classes becomes genuinely difficult from December through February. Ease Quran's online model eliminates all of these friction points, giving every Chicago-area Muslim family the same access to qualified Quran education regardless of their suburb, neighborhood, or the weather outside.
               </p>
             </div>
           </div>
@@ -216,7 +216,7 @@ export default function ChicagoPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">No Chicago Winter Disruptions</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  Chicago winters are legendary — and they regularly disrupt in-person activities for months at a time. With online Quran classes, a snowstorm, polar vortex, or icy roads will never interrupt your child's lessons. Learning continues year-round, regardless of the forecast.
+                  Chicago winters are legendary, and they regularly disrupt in-person activities for months at a time. With online Quran classes, a snowstorm, polar vortex, or icy roads will never interrupt your child's lessons. Learning continues year-round, regardless of the forecast.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -234,7 +234,7 @@ export default function ChicagoPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">True One-on-One Instruction</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  Chicago's popular Islamic schools often have excellent reputations but limited capacity. Waitlists are common and class sizes can be large. Every Ease Quran session is a private lesson — your child's teacher is focused entirely on them, tracking individual progress and adapting to their specific needs every single class.
+                  Chicago's popular Islamic schools often have excellent reputations but limited capacity. Waitlists are common and class sizes can be large. Every Ease Quran session is a private lesson, your child's teacher is focused entirely on them, tracking individual progress and adapting to their specific needs every single class.
                 </p>
               </div>
             </div>
@@ -255,10 +255,10 @@ export default function ChicagoPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { name: "Noorani Qaida", desc: "Foundational Arabic phonics and letter recognition — the essential first step for any new learner.", href: "/courses/noorani-qaida" },
+                { name: "Noorani Qaida", desc: "Foundational Arabic phonics and letter recognition, the essential first step for any new learner.", href: "/courses/noorani-qaida" },
                 { name: "Quran Reading with Tajweed", desc: "Systematic Tajweed instruction to develop accurate, confident Quran recitation from beginning to advanced levels.", href: "/courses/tajweed" },
                 { name: "Quran Memorization (Hifz)", desc: "Disciplined, structured Hifz program for students who want to memorize the complete Quran.", href: "/courses/hifz" },
-                { name: "Islamic Studies", desc: "Islamic fundamentals — beliefs, prayer, manners, and Seerah — taught in a way that resonates with young American Muslims.", href: "/courses/islamic-studies" },
+                { name: "Islamic Studies", desc: "Islamic fundamentals: beliefs, prayer, manners, and Seerah, taught in a way that resonates with young American Muslims.", href: "/courses/islamic-studies" },
               ].map((course) => (
                 <Link
                   key={course.name}
@@ -285,8 +285,8 @@ export default function ChicagoPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { step: "01", title: "Reach Out to Us", desc: "Book through our website or send us a WhatsApp message. Let us know your child's age, current Quran level, and your schedule preferences in Central Time." },
-                { step: "02", title: "Free Trial Class on Zoom", desc: "Your child attends a complimentary one-on-one session with one of our certified teachers. No payment, no obligation — just a genuine experience of how we teach." },
-                { step: "03", title: "Enroll and Begin", desc: "If the class is a good fit — and Chicago families consistently tell us it is — we finalize a regular weekly schedule that works for your family year-round." },
+                { step: "02", title: "Free Trial Class on Zoom", desc: "Your child attends a complimentary one-on-one session with one of our certified teachers. No payment, no obligation, just a genuine experience of how we teach." },
+                { step: "03", title: "Enroll and Begin", desc: "If the class is a good fit, and Chicago families consistently tell us it is, we finalize a regular weekly schedule that works for your family year-round." },
               ].map((item) => (
                 <div key={item.step} className="text-center">
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
@@ -307,7 +307,7 @@ export default function ChicagoPage() {
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-6">Family Testimonial</span>
             <blockquote className="font-playfair text-xl md:text-2xl text-white leading-relaxed italic mb-8">
-              "We live in Schaumburg — far from the big Islamic centers in Bridgeview. For years I could not find a qualified Quran teacher nearby. With Ease Quran, my son has been learning for six months and has completed Noorani Qaida and started reading the Quran. The teacher is certified and extremely patient. I only wish we had found this sooner."
+              "We live in Schaumburg, far from the big Islamic centers in Bridgeview. For years I could not find a qualified Quran teacher nearby. With Ease Quran, my son has been learning for six months and has completed Noorani Qaida and started reading the Quran. The teacher is certified and extremely patient. I only wish we had found this sooner."
             </blockquote>
             <footer className="text-white/60 font-semibold">
               — Ahmed K., Muslim father in Schaumburg, Illinois
@@ -323,7 +323,7 @@ export default function ChicagoPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
-                Frequently Asked Questions — Chicago, Illinois
+                Frequently Asked Questions. Chicago, Illinois
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -333,7 +333,7 @@ export default function ChicagoPage() {
 
       <CTASection
         headline="Quality Quran Education for Every Chicago Family"
-        subtext="From Bridgeview to the North Shore — Ease Quran brings certified, one-on-one Quran instruction to your home. No commute, no waitlists, no compromise on quality."
+        subtext="From Bridgeview to the North Shore. Ease Quran brings certified, one-on-one Quran instruction to your home. No commute, no waitlists, no compromise on quality."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

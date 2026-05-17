@@ -5,14 +5,14 @@ import { Clock, Calendar, User, ArrowLeft, CheckCircle, XCircle } from "lucide-r
 export const metadata: Metadata = {
   title: "How to Choose the Best Online Quran Academy for Your Child in USA",
   description:
-    "Confused about which online Quran academy to trust? Learn the 6 essential factors — teacher certification, free trials, female teachers & more. A guide for Muslim parents in USA.",
+    "Confused about which online Quran academy to trust? Learn the 6 essential factors, teacher certification, free trials, female teachers & more. A guide for Muslim parents in USA.",
   alternates: {
     canonical: "https://easequran.com/blog/how-to-choose-online-quran-academy",
   },
   openGraph: {
     title: "How to Choose the Best Online Quran Academy for Your Child in America",
     description:
-      "Confused about which online Quran academy to trust? Learn the 6 essential factors — teacher certification, free trials, female teachers & more. A guide for Muslim parents in USA.",
+      "Confused about which online Quran academy to trust? Learn the 6 essential factors, teacher certification, free trials, female teachers & more. A guide for Muslim parents in USA.",
     url: "https://easequran.com/blog/how-to-choose-online-quran-academy",
     type: "article",
     publishedTime: "2025-01-15",
@@ -50,7 +50,7 @@ const articleSchema = {
   image: "https://easequran.com/images/og-image.png",
   url: "https://easequran.com/blog/how-to-choose-online-quran-academy",
   description:
-    "With hundreds of online Quran academies competing for your family's trust, this guide covers the 6 most important factors — teacher certification, free trials, female teacher availability, curriculum quality, scheduling flexibility, and red flags to avoid.",
+    "With hundreds of online Quran academies competing for your family's trust, this guide covers the 6 most important factors, teacher certification, free trials, female teacher availability, curriculum quality, scheduling flexibility, and red flags to avoid.",
 };
 
 const faqSchema = {
@@ -70,7 +70,7 @@ const faqSchema = {
       name: "What is the best age to start Quran classes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most Quran educators agree that age 4 to 6 is an ideal starting point, as children at this stage are highly receptive to language learning and memorization. At this age, classes begin with Noorani Qaida — learning Arabic letters and basic pronunciation — before moving on to Quran recitation. That said, it is never too late to start, and we have adult students who begin their Quran journey in their 30s, 40s, and beyond.",
+        text: "Most Quran educators agree that age 4 to 6 is an ideal starting point, as children at this stage are highly receptive to language learning and memorization. At this age, classes begin with Noorani Qaida, learning Arabic letters and basic pronunciation, before moving on to Quran recitation. That said, it is never too late to start, and we have adult students who begin their Quran journey in their 30s, 40s, and beyond.",
       },
     },
     {
@@ -86,7 +86,7 @@ const faqSchema = {
       name: "How do I know if an online Quran teacher is qualified?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ask specifically about their educational credentials. Look for certifications from recognized Islamic boards such as Wifaq ul Madaris Al-Arabia, Tanzeem ul Madaris, or Rabita-tul-Madaris. A qualified teacher should also hold an Ijazah — a chain of certification tracing back to the Prophet Muhammad (PBUH) — for Quran recitation. At Ease Quran Academy, every teacher's credentials are verified before they are permitted to teach.",
+        text: "Ask specifically about their educational credentials. Look for certifications from recognized Islamic boards such as Wifaq ul Madaris Al-Arabia, Tanzeem ul Madaris, or Rabita-tul-Madaris. A qualified teacher should also hold an Ijazah, a chain of certification tracing back to the Prophet Muhammad (PBUH), for Quran recitation. At Ease Quran Academy, every teacher's credentials are verified before they are permitted to teach.",
       },
     },
     {
@@ -94,7 +94,7 @@ const faqSchema = {
       name: "Is there a free trial before I pay?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran Academy offers a completely free trial class with no credit card required. This gives you and your child the chance to meet the teacher, experience the class format, and ask any questions before making a financial commitment. We strongly encourage all families to take advantage of the free trial — it is the best way to know whether the academy and the teacher are the right fit.",
+        text: "Yes. Ease Quran Academy offers a completely free trial class with no credit card required. This gives you and your child the chance to meet the teacher, experience the class format, and ask any questions before making a financial commitment. We strongly encourage all families to take advantage of the free trial, it is the best way to know whether the academy and the teacher are the right fit.",
       },
     },
   ],
@@ -180,7 +180,7 @@ export default function BlogPostPage() {
           <div className="flex flex-wrap items-center gap-6 text-white/70 text-sm">
             <span className="flex items-center gap-2">
               <User className="w-4 h-4 text-gold" />
-              Ease Quran Team — Certified Quran Teachers, Ease Quran Academy
+              Ease Quran Team, Certified Quran Teachers, Ease Quran Academy
             </span>
             <span className="flex items-center gap-2">
               <Calendar className="w-4 h-4 text-gold" />
@@ -214,7 +214,7 @@ export default function BlogPostPage() {
 
                 {/* Introduction */}
                 <p className="text-grey leading-relaxed mb-4 text-base">
-                  Choosing the right online Quran academy for your child is one of the most important educational decisions a Muslim parent in America can make. The demand for quality Islamic education online has grown enormously over the past decade, and with it, the number of academies — from professionally staffed institutions to informal one-person operations — has exploded. Knowing how to separate the trustworthy from the unreliable requires asking the right questions before your child attends a single class. In this guide, we break down the six factors that matter most when selecting the best online Quran academy for your family.
+                  Choosing the right online Quran academy for your child is one of the most important educational decisions a Muslim parent in America can make. The demand for quality Islamic education online has grown enormously over the past decade, and with it, the number of academies, from professionally staffed institutions to informal one-person operations, has exploded. Knowing how to separate the trustworthy from the unreliable requires asking the right questions before your child attends a single class. In this guide, we break down the six factors that matter most when selecting the best online Quran academy for your family.
                 </p>
 
                 {/* Inline CTA 1 */}
@@ -240,27 +240,27 @@ export default function BlogPostPage() {
                   1. Verify Teacher Certification Before Anything Else
                 </h2>
                 <p className="text-grey leading-relaxed mb-4">
-                  The single most important factor in any child&apos;s Quran education is the quality of the teacher. A genuinely qualified Quran teacher is not simply someone who can recite the Quran fluently — they have spent years in formal Islamic study, passed rigorous examinations, and earned recognized certifications that verify their knowledge of Tajweed rules, Arabic grammar, and Islamic sciences. When evaluating any online Quran academy, your first question should always be: where are your teachers certified, and can you verify it?
+                  The single most important factor in any child&apos;s Quran education is the quality of the teacher. A genuinely qualified Quran teacher is not simply someone who can recite the Quran fluently, they have spent years in formal Islamic study, passed rigorous examinations, and earned recognized certifications that verify their knowledge of Tajweed rules, Arabic grammar, and Islamic sciences. When evaluating any online Quran academy, your first question should always be: where are your teachers certified, and can you verify it?
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
                   Be wary of academies that respond with vague answers like &ldquo;our teachers are highly experienced&rdquo; or &ldquo;all our teachers are hafiz.&rdquo; While memorizing the Quran is an enormous achievement, it does not on its own qualify someone to teach Tajweed or structured recitation. Ask for the name of the certifying board, the teacher&apos;s Ijazah credentials, and whether their qualifications can be independently verified.
                 </p>
 
                 <h3 className="font-playfair font-semibold text-xl text-navy mb-3 mt-6">
-                  What Is Wifaq ul Madaris — and Why It Matters
+                  What Is Wifaq ul Madaris, and Why It Matters
                 </h3>
                 <p className="text-grey leading-relaxed mb-4">
                   Wifaq ul Madaris Al-Arabia Pakistan is the largest and most respected Islamic education board in South Asia. Founded in 1959, it has certified hundreds of thousands of Islamic scholars, and its qualifications are recognized by universities, governments, and Islamic institutions across the Middle East, Europe, Canada, and the United States. A teacher who has graduated from a Wifaq ul Madaris-affiliated institution has completed an intensive eight-year curriculum covering the full Quran, Hadith sciences, Islamic jurisprudence, Arabic grammar, and Tajweed theory.
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
-                  When you see a Wifaq ul Madaris certification on a teacher&apos;s profile, it carries real weight. It means the teacher was evaluated by an external board, not simply certified by their own employer. This distinction matters enormously in an industry where self-proclaimed credentials are common. At Ease Quran Academy, every teacher holds formal certification from accredited Islamic boards — and we are transparent about this because we believe parents deserve to know exactly who is teaching their children.
+                  When you see a Wifaq ul Madaris certification on a teacher&apos;s profile, it carries real weight. It means the teacher was evaluated by an external board, not simply certified by their own employer. This distinction matters enormously in an industry where self-proclaimed credentials are common. At Ease Quran Academy, every teacher holds formal certification from accredited Islamic boards, and we are transparent about this because we believe parents deserve to know exactly who is teaching their children.
                 </p>
 
                 <h3 className="font-playfair font-semibold text-xl text-navy mb-3 mt-6">
                   Other Credentials Worth Checking
                 </h3>
                 <p className="text-grey leading-relaxed mb-4">
-                  Beyond Wifaq ul Madaris, look for teachers who hold an Ijazah in Quran recitation. An Ijazah is a formal license granted by a qualified scholar that certifies the recipient&apos;s recitation has been verified through a chain of transmission stretching back to the Prophet Muhammad (PBUH). This is the gold standard for Quran recitation — it is not a piece of paper from an institution but an unbroken chain of verified oral transmission.
+                  Beyond Wifaq ul Madaris, look for teachers who hold an Ijazah in Quran recitation. An Ijazah is a formal license granted by a qualified scholar that certifies the recipient&apos;s recitation has been verified through a chain of transmission stretching back to the Prophet Muhammad (PBUH). This is the gold standard for Quran recitation, it is not a piece of paper from an institution but an unbroken chain of verified oral transmission.
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
                   Additionally, check whether the academy mentions certifications from boards such as Tanzeem ul Madaris, Rabita-tul-Madaris, or recognized institutions from Egypt such as Al-Azhar University. Any of these signals a teacher whose credentials go beyond informal study and self-teaching.
@@ -271,10 +271,10 @@ export default function BlogPostPage() {
                   2. Always Demand a Free Trial Class
                 </h2>
                 <p className="text-grey leading-relaxed mb-4">
-                  A free trial class is not a marketing gimmick — it is the most honest window into an academy&apos;s actual quality. During a trial class, you can observe how the teacher interacts with your child, how they explain concepts, how patient they are with mistakes, and whether their personality is a good match for your child&apos;s learning style. No amount of reading testimonials or browsing a polished website will tell you as much as thirty minutes of direct observation.
+                  A free trial class is not a marketing gimmick, it is the most honest window into an academy&apos;s actual quality. During a trial class, you can observe how the teacher interacts with your child, how they explain concepts, how patient they are with mistakes, and whether their personality is a good match for your child&apos;s learning style. No amount of reading testimonials or browsing a polished website will tell you as much as thirty minutes of direct observation.
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
-                  When you attend a trial class, pay attention to whether the teacher follows a structured lesson plan or improvises. A professional, certified Quran teacher will arrive with a plan for the session, assess your child&apos;s current level in the first few minutes, and adapt their teaching accordingly. They should also speak clearly, avoid rushing, and make the child feel at ease — especially if the child is young or has never studied Quran before.
+                  When you attend a trial class, pay attention to whether the teacher follows a structured lesson plan or improvises. A professional, certified Quran teacher will arrive with a plan for the session, assess your child&apos;s current level in the first few minutes, and adapt their teaching accordingly. They should also speak clearly, avoid rushing, and make the child feel at ease, especially if the child is young or has never studied Quran before.
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
                   A free trial also reveals what you will not see on the website: the reliability of the technology platform, the professionalism of the academy&apos;s communication, and whether they actually show up on time. If a trial class feels chaotic or the teacher seems unprepared, that is exactly the kind of information you need before committing your family&apos;s schedule and budget for months ahead.
@@ -288,7 +288,7 @@ export default function BlogPostPage() {
                   3. Ask Specifically About Female Quran Teachers
                 </h2>
                 <p className="text-grey leading-relaxed mb-4">
-                  For many Muslim families in America, the availability of a female Quran teacher is not optional — it is a religious and cultural requirement. Whether you are enrolling your daughter, a sister, or an adult woman in the family, Islamic values and practical comfort both point toward the importance of having a female teacher where appropriate. The challenge is that many online Quran academies are staffed overwhelmingly by male teachers, and female teachers — especially certified ones — can be harder to find.
+                  For many Muslim families in America, the availability of a female Quran teacher is not optional, it is a religious and cultural requirement. Whether you are enrolling your daughter, a sister, or an adult woman in the family, Islamic values and practical comfort both point toward the importance of having a female teacher where appropriate. The challenge is that many online Quran academies are staffed overwhelmingly by male teachers, and female teachers, especially certified ones, can be harder to find.
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
                   When you contact an academy, ask directly: &ldquo;Do you have certified female Quran teachers available? Can I specifically request a female teacher for my daughter?&rdquo; Pay attention to how they respond. An academy with a genuine team of{" "}
@@ -298,7 +298,7 @@ export default function BlogPostPage() {
                   will answer confidently and immediately. An academy that hems and haws, offers to &ldquo;check availability,&rdquo; or says they can &ldquo;sometimes&rdquo; arrange it is telling you that female teachers are an afterthought in their operation.
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
-                  Beyond religious propriety, female teachers often bring particular patience and communication skills that make them especially effective with young girls. Many daughters are more comfortable asking questions, making mistakes, and practicing their recitation with a female teacher who understands them — and that comfort translates directly into faster progress and a more positive relationship with Quran education.
+                  Beyond religious propriety, female teachers often bring particular patience and communication skills that make them especially effective with young girls. Many daughters are more comfortable asking questions, making mistakes, and practicing their recitation with a female teacher who understands them, and that comfort translates directly into faster progress and a more positive relationship with Quran education.
                 </p>
 
                 {/* H2 4 */}
@@ -306,14 +306,14 @@ export default function BlogPostPage() {
                   4. Evaluate the Curriculum for Your Child&apos;s Level
                 </h2>
                 <p className="text-grey leading-relaxed mb-4">
-                  Not every child needs the same curriculum, and a good online Quran academy should offer clearly differentiated programs based on age, prior knowledge, and goals. An academy that funnels every new student into the same &ldquo;beginner course&rdquo; regardless of their level is not practicing quality education — it is running a factory. Ask the academy how they assess new students, how they place them into the right program, and what the progression looks like as skills develop.
+                  Not every child needs the same curriculum, and a good online Quran academy should offer clearly differentiated programs based on age, prior knowledge, and goals. An academy that funnels every new student into the same &ldquo;beginner course&rdquo; regardless of their level is not practicing quality education, it is running a factory. Ask the academy how they assess new students, how they place them into the right program, and what the progression looks like as skills develop.
                 </p>
 
                 <h3 className="font-playfair font-semibold text-xl text-navy mb-3 mt-6">
                   For Complete Beginners (Ages 4–8)
                 </h3>
                 <p className="text-grey leading-relaxed mb-4">
-                  Young children who have never encountered Arabic letters need to start from the absolute beginning — learning letter shapes, pronunciation points (makhaarij), and the rules of joining letters before they attempt a single verse of Quran. The best tool for this foundational stage is the{" "}
+                  Young children who have never encountered Arabic letters need to start from the absolute beginning, learning letter shapes, pronunciation points (makhaarij), and the rules of joining letters before they attempt a single verse of Quran. The best tool for this foundational stage is the{" "}
                   <Link href="/courses/noorani-qaida" className="text-gold font-semibold hover:underline">
                     Noorani Qaida
                   </Link>
@@ -324,7 +324,7 @@ export default function BlogPostPage() {
                   For Kids Who Can Read Arabic
                 </h3>
                 <p className="text-grey leading-relaxed mb-4">
-                  Children who have already mastered Arabic letters and basic reading are ready to move into structured Quran recitation with proper Tajweed. This is where the quality of teaching makes the biggest difference — because Tajweed rules are numerous and precise, and embedding bad habits at this stage is far easier than correcting them later. Look for an academy that offers a structured{" "}
+                  Children who have already mastered Arabic letters and basic reading are ready to move into structured Quran recitation with proper Tajweed. This is where the quality of teaching makes the biggest difference, because Tajweed rules are numerous and precise, and embedding bad habits at this stage is far easier than correcting them later. Look for an academy that offers a structured{" "}
                   <Link href="/courses/tajweed" className="text-gold font-semibold hover:underline">
                     Tajweed course
                   </Link>{" "}
@@ -343,14 +343,14 @@ export default function BlogPostPage() {
                   <Link href="/courses/hifz" className="text-gold font-semibold hover:underline">
                     Hifz program
                   </Link>{" "}
-                  — not just a general class where memorization is a side activity. Hifz requires a specific daily revision structure, a clear memorization-to-revision ratio, consistent accountability, and a teacher who has personally guided students to completion before. Ask the academy how many students they have helped complete full memorization of the Quran. The answer will tell you a great deal.
+                 , not just a general class where memorization is a side activity. Hifz requires a specific daily revision structure, a clear memorization-to-revision ratio, consistent accountability, and a teacher who has personally guided students to completion before. Ask the academy how many students they have helped complete full memorization of the Quran. The answer will tell you a great deal.
                 </p>
 
                 <h3 className="font-playfair font-semibold text-xl text-navy mb-3 mt-6">
                   For Adults and New Muslims
                 </h3>
                 <p className="text-grey leading-relaxed mb-4">
-                  Adults who are coming to the Quran for the first time — whether they grew up Muslim and never had formal instruction, or whether they are new Muslims beginning their journey — have different needs than children. They require a teacher who explains the why behind rules, who is comfortable teaching in English, and who can accommodate the pace of someone balancing work, family, and education simultaneously. A dedicated{" "}
+                  Adults who are coming to the Quran for the first time, whether they grew up Muslim and never had formal instruction, or whether they are new Muslims beginning their journey, have different needs than children. They require a teacher who explains the why behind rules, who is comfortable teaching in English, and who can accommodate the pace of someone balancing work, family, and education simultaneously. A dedicated{" "}
                   <Link href="/courses/quran-for-adults" className="text-gold font-semibold hover:underline">
                     Quran for Adults
                   </Link>{" "}
@@ -358,7 +358,7 @@ export default function BlogPostPage() {
                   <Link href="/courses/quran-for-reverts" className="text-gold font-semibold hover:underline">
                     Quran for Reverts
                   </Link>{" "}
-                  program that starts with the spiritual and practical context of Quran recitation — not just letters and rules — can make the difference between a student who thrives and one who gives up after a few months.
+                  program that starts with the spiritual and practical context of Quran recitation, not just letters and rules, can make the difference between a student who thrives and one who gives up after a few months.
                 </p>
 
                 {/* Inline CTA 2 */}
@@ -384,24 +384,24 @@ export default function BlogPostPage() {
                   5. Look for Flexible USA-Friendly Scheduling
                 </h2>
                 <p className="text-grey leading-relaxed mb-4">
-                  One of the most underestimated challenges of online Quran education for families in America is the scheduling problem. Many academies are based in Pakistan, Egypt, or the UK, and while they offer online classes, their available time slots are built around time zones that work for their staff — not for a child in New York, Chicago, Houston, or Los Angeles who has school, homework, sports practice, and a bedtime.
+                  One of the most underestimated challenges of online Quran education for families in America is the scheduling problem. Many academies are based in Pakistan, Egypt, or the UK, and while they offer online classes, their available time slots are built around time zones that work for their staff, not for a child in New York, Chicago, Houston, or Los Angeles who has school, homework, sports practice, and a bedtime.
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
-                  Before enrolling, ask the academy explicitly: what time zones do your teachers operate in, and what is the latest evening slot available in Eastern Standard Time? Can we have classes on weekends? What happens if we need to reschedule due to a school event or a holiday? The answers will reveal whether the academy genuinely serves the American Muslim community or simply offers &ldquo;online&rdquo; classes that happen to be accessible from America — but not practically workable for American family schedules.
+                  Before enrolling, ask the academy explicitly: what time zones do your teachers operate in, and what is the latest evening slot available in Eastern Standard Time? Can we have classes on weekends? What happens if we need to reschedule due to a school event or a holiday? The answers will reveal whether the academy genuinely serves the American Muslim community or simply offers &ldquo;online&rdquo; classes that happen to be accessible from America, but not practically workable for American family schedules.
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
                   Weekend classes are particularly important for families with school-age children. A Monday-through-Friday schedule may work for some families, but many American Muslim children can only commit to Quran education consistently if weekend mornings or Saturday/Sunday afternoons are available. An academy that offers only weekday slots is not truly designed to serve the American Muslim family lifestyle.
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
-                  Also ask what happens when life gets in the way — illness, school exams, family travel. A quality academy will have a clear, fair rescheduling policy that acknowledges the reality of raising children in America. A rigid policy with no make-up classes is a sign that the academy prioritizes billing cycles over student success.
+                  Also ask what happens when life gets in the way, illness, school exams, family travel. A quality academy will have a clear, fair rescheduling policy that acknowledges the reality of raising children in America. A rigid policy with no make-up classes is a sign that the academy prioritizes billing cycles over student success.
                 </p>
 
-                {/* H2 6 — Red Flags */}
+                {/* H2 6, Red Flags */}
                 <h2 className="font-playfair font-bold text-2xl text-navy border-l-4 border-gold pl-4 mb-4 mt-10">
                   6. Red Flags That Should Make You Walk Away
                 </h2>
                 <p className="text-grey leading-relaxed mb-4">
-                  Even with careful research, some academies will look better on the surface than they are in practice. Here are five warning signs that should give any parent serious pause — and in most cases, should prompt you to look elsewhere entirely.
+                  Even with careful research, some academies will look better on the surface than they are in practice. Here are five warning signs that should give any parent serious pause, and in most cases, should prompt you to look elsewhere entirely.
                 </p>
                 <ul className="space-y-4 mb-6">
                   {[
@@ -413,7 +413,7 @@ export default function BlogPostPage() {
                     {
                       flag: "No visible teacher certifications or credentials",
                       detail:
-                        "If the academy's website or team page contains no information about teacher qualifications — no certifying boards mentioned, no Ijazah credentials, no educational backgrounds — that information is absent for a reason. Certified teachers are proud of their credentials and legitimate academies display them prominently.",
+                        "If the academy's website or team page contains no information about teacher qualifications, no certifying boards mentioned, no Ijazah credentials, no educational backgrounds, that information is absent for a reason. Certified teachers are proud of their credentials and legitimate academies display them prominently.",
                     },
                     {
                       flag: "Pressure to pay a large sum upfront before classes begin",
@@ -423,7 +423,7 @@ export default function BlogPostPage() {
                     {
                       flag: "No female teacher option available",
                       detail:
-                        "For a Quran academy serving Muslim families, having no female teachers is a significant operational failure. It suggests a lack of genuine investment in serving the full community — and for families with daughters or adult women seeking instruction, it is an immediate dealbreaker.",
+                        "For a Quran academy serving Muslim families, having no female teachers is a significant operational failure. It suggests a lack of genuine investment in serving the full community, and for families with daughters or adult women seeking instruction, it is an immediate dealbreaker.",
                     },
                     {
                       flag: "One-size-fits-all curriculum with no assessment process",
@@ -441,7 +441,7 @@ export default function BlogPostPage() {
                   ))}
                 </ul>
 
-                {/* H2 7 — Ease Quran Meets Every Standard */}
+                {/* H2 7, Ease Quran Meets Every Standard */}
                 <h2 className="font-playfair font-bold text-2xl text-navy border-l-4 border-gold pl-4 mb-4 mt-10">
                   How Ease Quran Academy Meets Every Standard
                 </h2>
@@ -452,11 +452,11 @@ export default function BlogPostPage() {
                 <ul className="space-y-4 mb-6">
                   {[
                     "Every teacher holds formal certification from recognized Islamic boards, including Wifaq ul Madaris. Credentials are verified before any teacher is permitted to take students.",
-                    "A free trial class is available to every new family — no credit card required, no pressure to continue if it is not the right fit.",
+                    "A free trial class is available to every new family, no credit card required, no pressure to continue if it is not the right fit.",
                     "We maintain a dedicated team of certified female Quran teachers available for daughters, sisters, and adult women in your family.",
                     "Our curriculum covers every level, from Noorani Qaida for 4-year-olds to Hifz programs for advanced students to specialized classes for adult beginners and new Muslims.",
                     "Scheduling is built around American family life, with evening and weekend slots available across all major US time zones.",
-                    "Our pricing is transparent, fair, and publicly listed — no hidden fees, no pressure to pay months in advance.",
+                    "Our pricing is transparent, fair, and publicly listed, no hidden fees, no pressure to pay months in advance.",
                   ].map((point) => (
                     <li key={point} className="flex gap-4 bg-green-50 border border-green-100 rounded-xl p-4">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
@@ -490,7 +490,7 @@ export default function BlogPostPage() {
                     },
                     {
                       q: "What is the best age to start Quran classes?",
-                      a: "Most Quran educators agree that age 4 to 6 is an ideal starting point, as children at this stage are highly receptive to language learning and memorization. At this age, classes begin with Noorani Qaida — learning Arabic letters and basic pronunciation — before moving on to Quran recitation. That said, it is never too late to start. We have adult students who begin their Quran journey in their 30s, 40s, and beyond, and our programs are designed to meet every learner where they are.",
+                      a: "Most Quran educators agree that age 4 to 6 is an ideal starting point, as children at this stage are highly receptive to language learning and memorization. At this age, classes begin with Noorani Qaida, learning Arabic letters and basic pronunciation, before moving on to Quran recitation. That said, it is never too late to start. We have adult students who begin their Quran journey in their 30s, 40s, and beyond, and our programs are designed to meet every learner where they are.",
                     },
                     {
                       q: "Can I get a female Quran teacher for my daughter?",
@@ -498,11 +498,11 @@ export default function BlogPostPage() {
                     },
                     {
                       q: "How do I know if an online Quran teacher is qualified?",
-                      a: "Ask specifically about their educational credentials. Look for certifications from recognized Islamic boards such as Wifaq ul Madaris Al-Arabia, Tanzeem ul Madaris, or Rabita-tul-Madaris. A qualified teacher should also hold an Ijazah — a chain of certification tracing back to the Prophet Muhammad (PBUH) — for Quran recitation. At Ease Quran Academy, every teacher's credentials are verified before they are permitted to teach, and we are happy to share this information with any family that asks.",
+                      a: "Ask specifically about their educational credentials. Look for certifications from recognized Islamic boards such as Wifaq ul Madaris Al-Arabia, Tanzeem ul Madaris, or Rabita-tul-Madaris. A qualified teacher should also hold an Ijazah, a chain of certification tracing back to the Prophet Muhammad (PBUH), for Quran recitation. At Ease Quran Academy, every teacher's credentials are verified before they are permitted to teach, and we are happy to share this information with any family that asks.",
                     },
                     {
                       q: "Is there a free trial before I pay?",
-                      a: "Yes. Ease Quran Academy offers a completely free trial class with no credit card required. This gives you and your child the chance to meet the teacher, experience the class format, and ask any questions before making a financial commitment. We strongly encourage all families to take advantage of the free trial — it is the best way to know whether the academy and the teacher are the right fit for your family.",
+                      a: "Yes. Ease Quran Academy offers a completely free trial class with no credit card required. This gives you and your child the chance to meet the teacher, experience the class format, and ask any questions before making a financial commitment. We strongly encourage all families to take advantage of the free trial, it is the best way to know whether the academy and the teacher are the right fit for your family.",
                     },
                   ].map(({ q, a }) => (
                     <div
@@ -525,20 +525,20 @@ export default function BlogPostPage() {
                     Ready to Make the Right Choice?
                   </h2>
                   <p className="text-grey leading-relaxed mb-4">
-                    Choosing an online Quran academy is ultimately about trust — trust that the teacher is qualified, that the curriculum is right for your child, that the scheduling will work for your family, and that the academy you choose genuinely cares about your child&apos;s progress and not just your monthly payment. The six factors in this guide are your roadmap to making that decision with confidence.
+                    Choosing an online Quran academy is ultimately about trust, trust that the teacher is qualified, that the curriculum is right for your child, that the scheduling will work for your family, and that the academy you choose genuinely cares about your child&apos;s progress and not just your monthly payment. The six factors in this guide are your roadmap to making that decision with confidence.
                   </p>
                   <p className="text-grey leading-relaxed mb-6">
                     If you would like to experience Ease Quran Academy for yourself, the best next step is simple:{" "}
                     <Link href="/free-trial" className="text-gold font-semibold hover:underline">
                       book your free trial class
                     </Link>{" "}
-                    today. Meet your teacher, watch the class in action, and decide with complete information and no financial pressure. We are confident you will see the difference — and we look forward to welcoming your family to Ease Quran Academy.
+                    today. Meet your teacher, watch the class in action, and decide with complete information and no financial pressure. We are confident you will see the difference, and we look forward to welcoming your family to Ease Quran Academy.
                   </p>
                   <Link
                     href="/free-trial"
                     className="inline-block bg-navy text-white font-bold px-8 py-4 rounded-xl hover:bg-navy/90 transition-colors text-sm"
                   >
-                    Book Your Free Trial Class — No Credit Card Required
+                    Book Your Free Trial Class, no Credit Card Required
                   </Link>
                 </div>
 
@@ -658,7 +658,7 @@ export default function BlogPostPage() {
               Explore the Right Course for Your Family
             </h2>
             <p className="text-grey text-sm mt-3 max-w-xl mx-auto">
-              Every learner is at a different stage. Find the program that matches your child&apos;s level — or your own — and start with a free trial class.
+              Every learner is at a different stage. Find the program that matches your child&apos;s level, or your own, and start with a free trial class.
             </p>
           </div>
 

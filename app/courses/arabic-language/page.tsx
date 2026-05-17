@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Learn Arabic Online | Arabic Language Classes USA",
     description:
       "Online Arabic language classes for English speakers. Classical and conversational Arabic. Understand the Quran in its original language. Free trial class.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Arabic Language Classes — Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Arabic Language Classes, Ease Quran Academy" }],
   },
 };
 
@@ -51,7 +51,7 @@ const courseSchema = {
   "@type": "Course",
   name: "Online Arabic Language Classes",
   description:
-    "Online Arabic language classes for English speakers — Classical Quranic Arabic and Modern Standard Arabic. Understand the Quran in its original language.",
+    "Online Arabic language classes for English speakers, Classical Quranic Arabic and Modern Standard Arabic. Understand the Quran in its original language.",
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
@@ -73,7 +73,7 @@ const faqSchema = {
       name: "What is the difference between Classical Arabic and Modern Standard Arabic?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Classical Arabic (Fusha) is the language of the Quran and classical Islamic texts — it has been unchanged for over 1,400 years. Modern Standard Arabic (MSA) is a contemporary form used in media, news, and formal writing across the Arab world. Our course teaches both, with an emphasis on Classical/Quranic Arabic so students can understand the Quran directly.",
+        text: "Classical Arabic (Fusha) is the language of the Quran and classical Islamic texts, which has been unchanged for over 1,400 years. Modern Standard Arabic (MSA) is a contemporary form used in media, news, and formal writing across the Arab world. Our course teaches both, with an emphasis on Classical/Quranic Arabic so students can understand the Quran directly.",
       },
     },
     {
@@ -81,7 +81,7 @@ const faqSchema = {
       name: "How long does it take to understand the Quran in Arabic?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "With 3 classes per week and consistent self-study, most students begin to recognize and understand common Quranic words and phrases within 3–6 months. Understanding full verses with confidence typically takes 1–2 years. The Quran uses a relatively limited core vocabulary — the top 500 most frequent Quranic words cover approximately 75% of the text.",
+        text: "With 3 classes per week and consistent self-study, most students begin to recognize and understand common Quranic words and phrases within 3–6 months. Understanding full verses with confidence typically takes 1–2 years. The Quran uses a relatively limited core vocabulary, the top 500 most frequent Quranic words cover approximately 75% of the text.",
       },
     },
     {
@@ -89,7 +89,7 @@ const faqSchema = {
       name: "Do I need to know how to read Quran first before taking Arabic language classes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "It is strongly recommended that you can read Arabic script before starting the Arabic language course. If you cannot read Arabic yet, we recommend starting with Noorani Qaida. Once you can read, the Arabic language course is open to you — regardless of how well you currently read.",
+        text: "It is strongly recommended that you can read Arabic script before starting the Arabic language course. If you cannot read Arabic yet, we recommend starting with Noorani Qaida. Once you can read, the Arabic language course is open to you, regardless of how well you currently read.",
       },
     },
     {
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "Is Arabic grammar hard for English speakers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Arabic grammar (Sarf and Nahw) is structured differently from English but is internally very logical and consistent. Our certified teacher specializes in teaching Arabic grammar to English-speaking students. All concepts are explained in plain English with English examples before transitioning to Arabic — making it accessible for native English speakers.",
+        text: "Arabic grammar (Sarf and Nahw) is structured differently from English but is internally very logical and consistent. Our certified teacher specializes in teaching Arabic grammar to English-speaking students. All concepts are explained in plain English with English examples before transitioning to Arabic, making it accessible for native English speakers.",
       },
     },
     {
@@ -105,7 +105,7 @@ const faqSchema = {
       name: "Can children learn Arabic language alongside Quran classes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Children who are already reading the Quran fluently can begin learning Arabic vocabulary and simple grammar. For younger children, we recommend focusing on Quran reading and Tajweed first, then adding Arabic language study once they are reading confidently — typically from age 10–12 onwards.",
+        text: "Yes. Children who are already reading the Quran fluently can begin learning Arabic vocabulary and simple grammar. For younger children, we recommend focusing on Quran reading and Tajweed first, then adding Arabic language study once they are reading confidently, typically from age 10–12 onwards.",
       },
     },
   ],
@@ -115,27 +115,27 @@ const faqs = [
   {
     question: "What is the difference between Classical Arabic and Modern Standard Arabic?",
     answer:
-      "Classical Arabic (Fusha) is the language of the Quran and classical Islamic texts — it has been unchanged for over 1,400 years. Modern Standard Arabic (MSA) is a contemporary form used in media, news, and formal writing across the Arab world. Our course teaches both, with an emphasis on Classical/Quranic Arabic so students can understand the Quran directly.",
+      "Classical Arabic (Fusha) is the language of the Quran and classical Islamic texts, which has been unchanged for over 1,400 years. Modern Standard Arabic (MSA) is a contemporary form used in media, news, and formal writing across the Arab world. Our course teaches both, with an emphasis on Classical/Quranic Arabic so students can understand the Quran directly.",
   },
   {
     question: "How long does it take to understand the Quran in Arabic?",
     answer:
-      "With 3 classes per week and consistent self-study, most students begin to recognize and understand common Quranic words and phrases within 3–6 months. Understanding full verses with confidence typically takes 1–2 years. The Quran uses a relatively limited core vocabulary — the top 500 most frequent Quranic words cover approximately 75% of the text.",
+      "With 3 classes per week and consistent self-study, most students begin to recognize and understand common Quranic words and phrases within 3–6 months. Understanding full verses with confidence typically takes 1–2 years. The Quran uses a relatively limited core vocabulary, the top 500 most frequent Quranic words cover approximately 75% of the text.",
   },
   {
     question: "Do I need to know how to read Quran first before taking Arabic language classes?",
     answer:
-      "It is strongly recommended that you can read Arabic script before starting the Arabic language course. If you cannot read Arabic yet, we recommend starting with Noorani Qaida. Once you can read, the Arabic language course is open to you — regardless of how well you currently read.",
+      "It is strongly recommended that you can read Arabic script before starting the Arabic language course. If you cannot read Arabic yet, we recommend starting with Noorani Qaida. Once you can read, the Arabic language course is open to you, regardless of how well you currently read.",
   },
   {
     question: "Is Arabic grammar hard for English speakers?",
     answer:
-      "Arabic grammar (Sarf and Nahw) is structured differently from English but is internally very logical and consistent. Our certified teacher specializes in teaching Arabic grammar to English-speaking students. All concepts are explained in plain English with English examples before transitioning to Arabic — making it accessible for native English speakers.",
+      "Arabic grammar (Sarf and Nahw) is structured differently from English but is internally very logical and consistent. Our certified teacher specializes in teaching Arabic grammar to English-speaking students. All concepts are explained in plain English with English examples before transitioning to Arabic, making it accessible for native English speakers.",
   },
   {
     question: "Can children learn Arabic language alongside Quran classes?",
     answer:
-      "Yes. Children who are already reading the Quran fluently can begin learning Arabic vocabulary and simple grammar. For younger children, we recommend focusing on Quran reading and Tajweed first, then adding Arabic language study once they are reading confidently — typically from age 10–12 onwards.",
+      "Yes. Children who are already reading the Quran fluently can begin learning Arabic vocabulary and simple grammar. For younger children, we recommend focusing on Quran reading and Tajweed first, then adding Arabic language study once they are reading confidently, typically from age 10–12 onwards.",
   },
 ];
 
@@ -181,7 +181,7 @@ export default function ArabicLanguagePage() {
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
               Understand the words of Allah directly, in the language they were revealed. Our
               Arabic language course teaches Classical Quranic Arabic and Modern Standard Arabic
-              — from grammar fundamentals to reading and understanding Quranic verses with confidence.
+             , from grammar fundamentals to reading and understanding Quranic verses with confidence.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -219,14 +219,14 @@ export default function ArabicLanguagePage() {
               <div className="space-y-4 text-grey text-sm leading-relaxed">
                 <p>
                   The Arabic Language course is for Muslims who want to go beyond reciting the
-                  Quran — they want to understand it. The Quran was revealed in Arabic, and while
+                  Quran, they want to understand it. The Quran was revealed in Arabic, and while
                   translations are valuable, they can never fully capture the depth, nuance, and
                   beauty of the original Arabic. Our course gives you direct access to that depth.
                 </p>
                 <p>
                   Taught by our certified head teacher from{" "}
                   <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, the course
-                  covers Arabic grammar (Sarf — word morphology, and Nahw — sentence structure),
+                  covers Arabic grammar (Sarf, word morphology, and Nahw, sentence structure),
                   Quranic vocabulary building, reading comprehension of Quranic verses, and
                   conversational Modern Standard Arabic.
                 </p>
@@ -246,7 +246,7 @@ export default function ArabicLanguagePage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/course-arabic.webp"
-                alt="Online Arabic language classes — learn Classical and Quranic Arabic at Ease Quran Academy"
+                alt="Online Arabic language classes: learn Classical and Quranic Arabic at Ease Quran Academy"
                 fill
                 className="object-cover"
                 priority
@@ -270,14 +270,14 @@ export default function ArabicLanguagePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { title: "Arabic Alphabet and Phonetics", desc: "A thorough review of Arabic letters, their pronunciation variations, and phonetic rules that go beyond basic reading — essential for language comprehension." },
-                { title: "Basic Arabic Grammar — Sarf (Morphology)", desc: "Learn how Arabic words are constructed from root letters. Understanding roots unlocks thousands of related words — a superpower for Quranic vocabulary." },
-                { title: "Basic Arabic Grammar — Nahw (Syntax)", desc: "Learn how Arabic sentences are structured — subject, predicate, verb placement, and agreement rules. Essential for understanding Quranic sentences fully." },
-                { title: "Common Quranic Vocabulary", desc: "Systematic vocabulary study of the 500 most frequently occurring words in the Quran — covering approximately 75% of the entire Quranic text." },
+                { title: "Arabic Alphabet and Phonetics", desc: "A thorough review of Arabic letters, their pronunciation variations, and phonetic rules that go beyond basic reading, essential for language comprehension." },
+                { title: "Basic Arabic Grammar, Sarf (Morphology)", desc: "Learn how Arabic words are constructed from root letters. Understanding roots unlocks thousands of related words, a superpower for Quranic vocabulary." },
+                { title: "Basic Arabic Grammar, Nahw (Syntax)", desc: "Learn how Arabic sentences are structured, subject, predicate, verb placement, and agreement rules. Essential for understanding Quranic sentences fully." },
+                { title: "Common Quranic Vocabulary", desc: "Systematic vocabulary study of the 500 most frequently occurring words in the Quran, covering approximately 75% of the entire Quranic text." },
                 { title: "Sentence Structure in Arabic", desc: "Build simple and compound Arabic sentences. Learn the difference between nominal and verbal sentences, and how the Quran uses both types." },
-                { title: "Reading and Understanding Quranic Verses", desc: "Apply your vocabulary and grammar knowledge to actual Quranic verses — reading, translating, and understanding them word by word." },
-                { title: "Conversational Modern Standard Arabic", desc: "Basic conversational phrases, greetings, and everyday expressions in Modern Standard Arabic — useful for connecting with Arabic-speaking Muslims." },
-                { title: "Reading Comprehension of Islamic Texts", desc: "Progress to reading short Islamic texts — Hadith, Du'a books, simple Islamic books — with understanding. Building toward independent reading of classical Islamic literature." },
+                { title: "Reading and Understanding Quranic Verses", desc: "Apply your vocabulary and grammar knowledge to actual Quranic verses, reading, translating, and understanding them word by word." },
+                { title: "Conversational Modern Standard Arabic", desc: "Basic conversational phrases, greetings, and everyday expressions in Modern Standard Arabic, useful for connecting with Arabic-speaking Muslims." },
+                { title: "Reading Comprehension of Islamic Texts", desc: "Progress to reading short Islamic texts, Hadith, Du'a books, simple Islamic books, with understanding. Building toward independent reading of classical Islamic literature." },
               ].map((item) => (
                 <div
                   key={item.title}
@@ -311,13 +311,13 @@ export default function ArabicLanguagePage() {
               {
                 icon: BookOpen,
                 title: "Muslims Who Want to Understand the Quran Directly",
-                desc: "You recite the Quran in Salah but do not understand what you are saying. This course changes that — building a direct connection between the words you recite and their meaning.",
+                desc: "You recite the Quran in Salah but do not understand what you are saying. This course changes that, building a direct connection between the words you recite and their meaning.",
                 points: ["Can already read Arabic script", "Wants deeper Quranic connection", "Understand Salah prayers", "All ages from 12+"],
               },
               {
                 icon: BookOpen,
                 title: "Students With Basic Quran Reading Skills",
-                desc: "Students who have completed Noorani Qaida or can read the Quran are ideally positioned to start Arabic language study. Reading skill is the prerequisite — vocabulary and grammar come next.",
+                desc: "Students who have completed Noorani Qaida or can read the Quran are ideally positioned to start Arabic language study. Reading skill is the prerequisite, vocabulary and grammar come next.",
                 points: ["Completed Noorani Qaida", "Can read Arabic text", "Ready for deeper learning", "Teens and adults"],
               },
               {
@@ -367,9 +367,9 @@ export default function ArabicLanguagePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { title: "Grammar-First, Then Application", desc: "Each section introduces a grammar concept in plain English, provides Arabic examples, then applies it immediately to Quranic verses — connecting theory to the Quran from the very first lesson." },
+                { title: "Grammar-First, Then Application", desc: "Each section introduces a grammar concept in plain English, provides Arabic examples, then applies it immediately to Quranic verses, connecting theory to the Quran from the very first lesson." },
                 { title: "Vocabulary Building System", desc: "Students learn Quranic vocabulary in order of frequency. Each week introduces 10–15 new words, reviewed with flashcard methods until they become second nature." },
-                { title: "Quranic Text Analysis", desc: "Once sufficient grammar and vocabulary are acquired, classes shift to analyzing actual Quranic verses — identifying grammatical roles of each word and understanding the verse's full meaning." },
+                { title: "Quranic Text Analysis", desc: "Once sufficient grammar and vocabulary are acquired, classes shift to analyzing actual Quranic verses, identifying grammatical roles of each word and understanding the verse's full meaning." },
                 { title: "Class Duration", desc: "Arabic language classes run 45–60 minutes. We recommend 3 classes per week for optimal progress. Self-study of 20–30 minutes per day between classes significantly accelerates learning." },
                 { title: "English-Medium Instruction", desc: "All grammar concepts are explained in English first. Our teacher has years of experience translating complex Arabic grammatical concepts into clear, logical English explanations for Western students." },
                 { title: "Progress Milestones", desc: "Students track their progress through vocabulary counts, grammar concepts mastered, and Quranic verses understood independently. Monthly progress reviews keep motivation high and learning on track." },
@@ -392,11 +392,11 @@ export default function ArabicLanguagePage() {
               Your Teacher
             </span>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
-              Taught by Our Founder — Wifaq ul Madaris Certified
+              Taught by Our Founder, Wifaq ul Madaris Certified
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
               Our head teacher holds formal certification from Wifaq ul Madaris Al-Arabia, with specialized training in
-              Sarf and Nahw and 6+ years of teaching Western students — uniquely qualified
+              Sarf and Nahw and 6+ years of teaching Western students, uniquely qualified
               to make Arabic grammar accessible to English speakers.
             </p>
           </div>
@@ -404,7 +404,7 @@ export default function ArabicLanguagePage() {
             <TeacherCard
               name="Head Teacher"
               image="/images/teacher-1.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Arabic Language (Sarf & Nahw), Quranic Arabic Specialist"
               experience="6+ years teaching Arabic to Western English-speaking students"
               qualification="Arabic Language Teacher"
@@ -444,7 +444,7 @@ export default function ArabicLanguagePage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">FAQ</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
-                Arabic Language Course — Frequently Asked Questions
+                Arabic Language Course, Frequently Asked Questions
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -462,7 +462,7 @@ export default function ArabicLanguagePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               { href: "/courses/quran-for-adults", title: "Quran for Adults", desc: "Improve your Quran reading and recitation alongside your Arabic language studies." },
-              { href: "/courses/tajweed", title: "Tajweed", desc: "Master proper recitation rules — the perfect complement to understanding Arabic." },
+              { href: "/courses/tajweed", title: "Tajweed", desc: "Master proper recitation rules, the perfect complement to understanding Arabic." },
               { href: "/courses/islamic-studies", title: "Islamic Studies", desc: "Combine Arabic language with structured Islamic knowledge covering Aqeedah, Fiqh, and Seerah." },
             ].map((course) => (
               <Link

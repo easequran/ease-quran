@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "Online Quran Class Pricing Plans | Ease Quran Academy",
     description:
       "Affordable online Quran class pricing. Plans from $40/month. Free first trial class. Wifaq ul Madaris certified teachers. Serving Muslim families in USA.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Class Pricing Plans — Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Class Pricing Plans at Ease Quran Academy" }],
   },
 };
 
@@ -143,9 +143,9 @@ const plans = [
 ];
 
 const includedFeatures = [
-  "Free first trial class — no credit card required",
+  "Free first trial class, no credit card required",
   "Wifaq ul Madaris certified teacher for every session",
-  "Fully flexible scheduling — morning, evening, weekend",
+  "Fully flexible scheduling: morning, evening, weekend",
   "Cancel anytime, no long-term contracts",
   "WhatsApp support directly with your teacher",
   "Lessons conducted via Zoom, Skype, or Google Meet",
@@ -155,7 +155,7 @@ const pricingFaqs = [
   {
     question: "Is there really a free trial class?",
     answer:
-      "Yes, absolutely. Your first class is completely free — no credit card required, no commitment whatsoever. We want you to experience the quality of our teaching before you invest anything. Simply book your trial, attend the class, and decide from there. There is no pressure to continue.",
+      "Yes, absolutely. Your first class is completely free, no credit card required, no commitment whatsoever. We want you to experience the quality of our teaching before you invest anything. Simply book your trial, attend the class, and decide from there. There is no pressure to continue.",
   },
   {
     question: "Can I change my plan later?",
@@ -170,12 +170,12 @@ const pricingFaqs = [
   {
     question: "What payment methods do you accept?",
     answer:
-      "We accept all major credit cards, debit cards, and PayPal. Billing is monthly — you are charged at the start of each month for that month's classes. Your billing information is secure and never shared. For the custom Family Plan, payment arrangements can be discussed directly.",
+      "We accept all major credit cards, debit cards, and PayPal. Billing is monthly. You are charged at the start of each month for that month's classes. Your billing information is secure and never shared. For the custom Family Plan, payment arrangements can be discussed directly.",
   },
   {
     question: "Can I cancel anytime?",
     answer:
-      "Yes. There are absolutely no long-term contracts at Ease Quran. You can cancel your subscription at any time with just 7 days' notice before your next billing date. We believe in earning your business every single month — not locking you in.",
+      "Yes. There are absolutely no long-term contracts at Ease Quran. You can cancel your subscription at any time with just 7 days' notice before your next billing date. We believe in earning your business every single month, not locking you in.",
   },
 ];
 
@@ -196,7 +196,7 @@ export default function PricingPage() {
             Simple, Affordable Quran Class Pricing
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            No hidden fees. No long-term contracts. Start with a completely free trial class —
+            No hidden fees. No long-term contracts. Start with a completely free trial class,
             then choose the plan that fits your child's learning goals and your family's budget.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -308,7 +308,7 @@ export default function PricingPage() {
       </section>
 
       <CTASection
-        headline="Start With a Free Class — Zero Risk"
+        headline="Start With a Free Class. Zero Risk."
         subtext="Your first Quran class is completely free. No credit card, no commitment. See why hundreds of Muslim families across America trust Ease Quran for their children's Islamic education."
         primaryCta="Book Your Free Trial Class"
         primaryHref="/free-trial"

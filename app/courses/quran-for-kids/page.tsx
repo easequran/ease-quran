@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Online Quran Classes for Kids in USA | Ease Quran",
     description:
       "Fun, structured online Quran classes for children ages 4–14. Certified teachers, female teachers available. Book a free trial class today.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for Kids in USA — Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for Kids in USA, Ease Quran Academy" }],
   },
 };
 
@@ -106,7 +106,7 @@ const faqSchema = {
       name: "What if my child loses interest in Quran class?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our teachers are trained in child-friendly teaching methods — using storytelling, visual aids, reward systems, and patience. If a child is struggling to engage, we adjust the approach. We also offer a free replacement class if a session does not meet your expectations.",
+        text: "Our teachers are trained in child-friendly teaching methods, using storytelling, visual aids, reward systems, and patience. If a child is struggling to engage, we adjust the approach. We also offer a free replacement class if a session does not meet your expectations.",
       },
     },
   ],
@@ -136,7 +136,7 @@ const faqs = [
   {
     question: "What if my child loses interest in Quran class?",
     answer:
-      "Our teachers are trained in child-friendly teaching methods — using storytelling, visual aids, reward systems, and patience. If a child is struggling to engage, we adjust the approach. We also offer a free replacement class if a session does not meet your expectations.",
+      "Our teachers are trained in child-friendly teaching methods, using storytelling, visual aids, reward systems, and patience. If a child is struggling to engage, we adjust the approach. We also offer a free replacement class if a session does not meet your expectations.",
   },
 ];
 
@@ -186,7 +186,7 @@ export default function QuranForKidsPage() {
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
               Certified, patient teachers bring structured Quran education directly to your home.
               Children ages 4–14 learn Arabic letters, Noorani Qaida, Quran reading, short Surahs,
-              and Islamic manners — all in a safe, engaging online environment.
+              and Islamic manners, all in a safe, engaging online environment.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -224,8 +224,8 @@ export default function QuranForKidsPage() {
               <div className="space-y-4 text-grey text-sm leading-relaxed">
                 <p>
                   Our Quran for Kids program is a structured, age-appropriate Quran education
-                  course designed for children ages 4 to 14. It begins with the fundamentals —
-                  recognizing Arabic letters through Noorani Qaida — and progresses to reading
+                  course designed for children ages 4 to 14. It begins with the fundamentals:
+                  recognizing Arabic letters through Noorani Qaida, and progresses to reading
                   the Quran fluently with correct Tajweed.
                 </p>
                 <p>
@@ -251,7 +251,7 @@ export default function QuranForKidsPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/course-kids.webp"
-                alt="Online Quran classes for kids — Ease Quran Online Academy"
+                alt="Online Quran classes for kids, Ease Quran Online Academy"
                 fill
                 className="object-cover"
                 priority
@@ -273,7 +273,7 @@ export default function QuranForKidsPage() {
                 What Your Child Will Learn
               </h2>
               <p className="text-grey text-sm leading-relaxed max-w-xl mx-auto">
-                Our curriculum is structured to build skills progressively — from the very first
+                Our curriculum is structured to build skills progressively, from the very first
                 Arabic letter all the way to confident Quran recitation.
               </p>
             </div>
@@ -292,7 +292,7 @@ export default function QuranForKidsPage() {
                 {
                   icon: "🔤",
                   title: "Noorani Qaida Foundation",
-                  desc: "Complete the Noorani Qaida systematically — the most trusted foundation for Quran reading worldwide.",
+                  desc: "Complete the Noorani Qaida systematically, the most trusted foundation for Quran reading worldwide.",
                 },
                 {
                   icon: "🗣️",
@@ -420,11 +420,11 @@ export default function QuranForKidsPage() {
               {[
                 {
                   title: "Live One-on-One Sessions",
-                  desc: "Every class is private — your child gets 100% of the teacher's attention. No group dynamics, no waiting, no distraction. The teacher moves at your child's pace.",
+                  desc: "Every class is private, your child gets 100% of the teacher's attention. No group dynamics, no waiting, no distraction. The teacher moves at your child's pace.",
                 },
                 {
                   title: "Flexible Scheduling",
-                  desc: "Classes are available 6 days a week, morning through evening. Choose times that fit your family's routine — evenings, weekends, or after school. You can reschedule with 24 hours notice.",
+                  desc: "Classes are available 6 days a week, morning through evening. Choose times that fit your family's routine, evenings, weekends, or after school. You can reschedule with 24 hours notice.",
                 },
                 {
                   title: "Progress Tracking & Reports",
@@ -440,7 +440,7 @@ export default function QuranForKidsPage() {
                 },
                 {
                   title: "Parents Welcome",
-                  desc: "Parents are encouraged to sit with younger children during class. We provide simple homework so the family can revise together between sessions — making Quran a family habit, not just a class.",
+                  desc: "Parents are encouraged to sit with younger children during class. We provide simple homework so the family can revise together between sessions, making Quran a family habit, not just a class.",
                 },
               ].map((item) => (
                 <div key={item.title} className="bg-white/5 rounded-xl p-6 border border-white/10">
@@ -465,7 +465,7 @@ export default function QuranForKidsPage() {
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
               Both teachers hold credentials from{" "}
-              <strong>Wifaq ul Madaris Al-Arabia</strong> — the most respected Islamic
+              <strong>Wifaq ul Madaris Al-Arabia</strong>, the most respected Islamic
               education board in the world. A female teacher is available on request.
             </p>
           </div>
@@ -473,7 +473,7 @@ export default function QuranForKidsPage() {
             <TeacherCard
               name="Muhammad Umair"
               image="/images/teacher-1.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Tajweed, Quran Reading, Kids Education Specialist"
               experience="2+ years teaching children online"
               qualification="Quran Teacher"
@@ -482,9 +482,9 @@ export default function QuranForKidsPage() {
             <TeacherCard
               name="Almas Fatima"
               image="/images/teacher-2.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Qaria e Quran, B.A. Islamic Studies"
-              experience="Available for sisters and children — teaching since 2022"
+              experience="Available for sisters and children, teaching since 2022"
               qualification="Female Quran Teacher"
               badge="Female Teacher"
             />
@@ -504,7 +504,7 @@ export default function QuranForKidsPage() {
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Flexible monthly plans with no long-term contracts. Your child&apos;s first class is
-              completely free — no credit card required. Cancel anytime.
+              completely free, no credit card required. Cancel anytime.
             </p>
             <Link
               href="/pricing"
@@ -546,7 +546,7 @@ export default function QuranForKidsPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { href: "/courses/noorani-qaida", title: "Noorani Qaida", desc: "The best starting point for any child — learn Arabic letters from scratch before opening the Quran." },
+              { href: "/courses/noorani-qaida", title: "Noorani Qaida", desc: "The best starting point for any child, learn Arabic letters from scratch before opening the Quran." },
               { href: "/courses/tajweed", title: "Tajweed", desc: "Once your child can read the Quran, Tajweed teaches them to recite it beautifully and correctly." },
               { href: "/courses/islamic-studies", title: "Islamic Studies", desc: "Pair Quran reading with Aqeedah, Seerah, and Islamic manners for a complete Islamic education." },
             ].map((course) => (
@@ -568,7 +568,7 @@ export default function QuranForKidsPage() {
 
       <CTASection
         headline="Give Your Child the Gift of Quran Today"
-        subtext="Join hundreds of Muslim families across America who trust Ease Quran for their children's Islamic education. Book your free trial class — no credit card, no commitment."
+        subtext="Join hundreds of Muslim families across America who trust Ease Quran for their children's Islamic education. Book your free trial class, no credit card, no commitment."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

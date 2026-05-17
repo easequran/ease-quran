@@ -19,7 +19,9 @@
       "Bash(mkdir -p /skills)",
       "Bash(unzip -o skills.zip -d /skills)",
       "Read(//skills/**)",
-      "Read(//skills/skills/**)"
+      "Read(//skills/skills/**)",
+      "Bash(xargs grep -l \"fetch.*api\\\\|/api/\")",
+      "Bash(node -e ' *)"
     ]
   }
 }

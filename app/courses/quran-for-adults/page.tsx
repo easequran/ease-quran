@@ -9,15 +9,15 @@ import TeacherCard from "@/components/TeacherCard";
 export const metadata: Metadata = {
   title: "Online Quran Classes for Adults | Learn Quran USA",
   description:
-    "Online Quran classes for adults — beginners to advanced. Learn to read, recite and understand the Quran with certified teachers. Free first class.",
+    "Online Quran classes for adults, beginners to advanced. Learn to read, recite and understand the Quran with certified teachers. Free first class.",
   alternates: {
     canonical: "https://easequran.com/courses/quran-for-adults",
   },
   openGraph: {
     title: "Online Quran Classes for Adults | Learn Quran USA",
     description:
-      "Online Quran classes for adults — beginners to advanced. Learn to read, recite and understand the Quran with certified teachers. Free first class.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for Adults — Ease Quran Academy" }],
+      "Online Quran classes for adults, beginners to advanced. Learn to read, recite and understand the Quran with certified teachers. Free first class.",
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for Adults, Ease Quran Academy" }],
   },
 };
 
@@ -51,7 +51,7 @@ const courseSchema = {
   "@type": "Course",
   name: "Online Quran Classes for Adults",
   description:
-    "Online Quran classes for adults — beginners to advanced. Learn to read, recite and understand the Quran with certified teachers in the USA.",
+    "Online Quran classes for adults, beginners to advanced. Learn to read, recite and understand the Quran with certified teachers in the USA.",
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
@@ -73,7 +73,7 @@ const faqSchema = {
       name: "Am I too old to learn the Quran?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely not. The Prophet Muhammad ﷺ said: 'The one who recites the Quran skillfully will be with the noble, righteous scribes; and the one who reads it with difficulty will have two rewards.' There is no age limit to learning the Quran. We have taught students in their 50s, 60s, and beyond. The desire to learn is what matters — not the age at which you begin.",
+        text: "Absolutely not. The Prophet Muhammad ﷺ said: 'The one who recites the Quran skillfully will be with the noble, righteous scribes; and the one who reads it with difficulty will have two rewards.' There is no age limit to learning the Quran. We have taught students in their 50s, 60s, and beyond. The desire to learn is what matters, not the age at which you begin.",
       },
     },
     {
@@ -81,7 +81,7 @@ const faqSchema = {
       name: "How are adult classes different from kids' classes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Adult classes are paced differently — we move at the student's natural learning speed without the gamification used for children. Instruction is entirely conversational, in plain English. Adults often have more questions and want to understand the 'why' behind rules — we welcome this. Classes are also scheduled for adult life: evenings, weekends, and early mornings.",
+        text: "Adult classes are paced differently, we move at the student's natural learning speed without the gamification used for children. Instruction is entirely conversational, in plain English. Adults often have more questions and want to understand the 'why' behind rules, we welcome this. Classes are also scheduled for adult life: evenings, weekends, and early mornings.",
       },
     },
     {
@@ -89,7 +89,7 @@ const faqSchema = {
       name: "Can I learn the Quran if I don't know any Arabic?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Most of our adult students start with zero Arabic knowledge. We begin with Noorani Qaida — learning Arabic letters and sounds — before moving to Quran reading. For adults, this foundation is typically built faster than with children. Many adult students are reading from the Quran within 2–4 months of starting from scratch.",
+        text: "Yes. Most of our adult students start with zero Arabic knowledge. We begin with Noorani Qaida, learning Arabic letters and sounds, before moving to Quran reading. For adults, this foundation is typically built faster than with children. Many adult students are reading from the Quran within 2–4 months of starting from scratch.",
       },
     },
     {
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "How long will it take me to read the Quran?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "If starting from zero: 2–4 months to complete Noorani Qaida, then 6–12 months to reach fluent Quran reading with basic Tajweed. If you can already read but with errors and weak Tajweed: 3–6 months of structured Tajweed work typically produces significant improvement. Every student's journey is different — we track your progress and give you honest timelines.",
+        text: "If starting from zero: 2–4 months to complete Noorani Qaida, then 6–12 months to reach fluent Quran reading with basic Tajweed. If you can already read but with errors and weak Tajweed: 3–6 months of structured Tajweed work typically produces significant improvement. Every student's journey is different, we track your progress and give you honest timelines.",
       },
     },
     {
@@ -105,7 +105,7 @@ const faqSchema = {
       name: "Do you have Quran classes for seniors?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), scheduled at any time of day, and paced entirely around the student's comfort. Our teachers are trained in patience and encouragement — senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
+        text: "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), scheduled at any time of day, and paced entirely around the student's comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
       },
     },
   ],
@@ -115,27 +115,27 @@ const faqs = [
   {
     question: "Am I too old to learn the Quran?",
     answer:
-      "Absolutely not. The Prophet Muhammad ﷺ said: 'The one who recites the Quran skillfully will be with the noble, righteous scribes; and the one who reads it with difficulty will have two rewards.' There is no age limit to learning the Quran. We have taught students in their 50s, 60s, and beyond. The desire to learn is what matters — not the age at which you begin.",
+      "Absolutely not. The Prophet Muhammad ﷺ said: 'The one who recites the Quran skillfully will be with the noble, righteous scribes; and the one who reads it with difficulty will have two rewards.' There is no age limit to learning the Quran. We have taught students in their 50s, 60s, and beyond. The desire to learn is what matters, not the age at which you begin.",
   },
   {
     question: "How are adult classes different from kids' classes?",
     answer:
-      "Adult classes are paced differently — we move at the student's natural learning speed without the gamification used for children. Instruction is entirely conversational, in plain English. Adults often have more questions and want to understand the 'why' behind rules — we welcome this. Classes are also scheduled for adult life: evenings, weekends, and early mornings.",
+      "Adult classes are paced differently, we move at the student's natural learning speed without the gamification used for children. Instruction is entirely conversational, in plain English. Adults often have more questions and want to understand the 'why' behind rules, we welcome this. Classes are also scheduled for adult life: evenings, weekends, and early mornings.",
   },
   {
     question: "Can I learn the Quran if I don't know any Arabic?",
     answer:
-      "Yes. Most of our adult students start with zero Arabic knowledge. We begin with Noorani Qaida — learning Arabic letters and sounds — before moving to Quran reading. For adults, this foundation is typically built faster than with children. Many adult students are reading from the Quran within 2–4 months of starting from scratch.",
+      "Yes. Most of our adult students start with zero Arabic knowledge. We begin with Noorani Qaida, learning Arabic letters and sounds, before moving to Quran reading. For adults, this foundation is typically built faster than with children. Many adult students are reading from the Quran within 2–4 months of starting from scratch.",
   },
   {
     question: "How long will it take me to read the Quran?",
     answer:
-      "If starting from zero: 2–4 months to complete Noorani Qaida, then 6–12 months to reach fluent Quran reading with basic Tajweed. If you can already read but with errors and weak Tajweed: 3–6 months of structured Tajweed work typically produces significant improvement. Every student's journey is different — we track your progress and give you honest timelines.",
+      "If starting from zero: 2–4 months to complete Noorani Qaida, then 6–12 months to reach fluent Quran reading with basic Tajweed. If you can already read but with errors and weak Tajweed: 3–6 months of structured Tajweed work typically produces significant improvement. Every student's journey is different, we track your progress and give you honest timelines.",
   },
   {
     question: "Do you have Quran classes for seniors?",
     answer:
-      "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), scheduled at any time of day, and paced entirely around the student's comfort. Our teachers are trained in patience and encouragement — senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
+      "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), scheduled at any time of day, and paced entirely around the student's comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
   },
 ];
 
@@ -173,14 +173,14 @@ export default function QuranForAdultsPage() {
           </nav>
           <div className="max-w-3xl">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
-              Adults Welcome — Any Level
+              Adults Welcome, any Level
             </span>
             <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
               Online Quran Classes for Adults
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
               It is never too late to learn the Quran. Whether you are starting from scratch or
-              improving a recitation you have always known was weak — our certified teachers meet
+              improving a recitation you have always known was weak, our certified teachers meet
               you exactly where you are, with patience, respect, and a plan that works for adult life.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -230,11 +230,11 @@ export default function QuranForAdultsPage() {
                   <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>,
                   with 6+ years of experience teaching Western adults. Our teacher understands the
                   sensitivities, the time constraints, and the particular challenges that adult
-                  learners face — and has built a methodology that works.
+                  learners face, and has built a methodology that works.
                 </p>
                 <p>
                   Classes are completely private, one-on-one, in English, and scheduled around
-                  your busy life. No judgment, no embarrassment — just a certified teacher and
+                  your busy life. No judgment, no embarrassment, just a certified teacher and
                   a structured plan to help you recite the Quran with confidence.
                 </p>
               </div>
@@ -248,7 +248,7 @@ export default function QuranForAdultsPage() {
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/course-tajweed.webp"
-                alt="Online Quran classes for adults — learn to read and recite Quran at Ease Quran Academy"
+                alt="Online Quran classes for adults: learn to read and recite Quran at Ease Quran Academy"
                 fill
                 className="object-cover"
                 priority
@@ -272,14 +272,14 @@ export default function QuranForAdultsPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { title: "Reading Quran from Scratch or Improving Existing Skills", desc: "Whether you have never read a single Arabic letter or you read poorly with many errors — we assess your current level and build a custom plan from there." },
-                { title: "Tajweed Rules and Correct Pronunciation", desc: "Learn the rules that govern correct Quranic recitation — from Makharij (articulation points) to Madd, Idgham, and Ikhfa. Applied to real Quranic text from day one." },
-                { title: "Understanding Common Duas and Their Meaning", desc: "Learn the Duas you recite daily — morning and evening Adhkar, before eating, sleeping, entering the home — with their meanings so they become heartfelt, not just memorized phrases." },
-                { title: "Reading Salah Prayers Correctly", desc: "Recite Surah Al-Fatiha and the tashahhud with proper pronunciation. Understand what you say in every Rakah of Salah — transforming prayer from a ritual into a conversation with Allah." },
-                { title: "Selected Surahs with Translation", desc: "Learn commonly recited Surahs — Al-Baqarah opening, Ayat ul Kursi, Al-Mulk, Ar-Rahman, Ya-Sin — with word-by-word translation so you understand what you are reciting." },
+                { title: "Reading Quran from Scratch or Improving Existing Skills", desc: "Whether you have never read a single Arabic letter or you read poorly with many errors, we assess your current level and build a custom plan from there." },
+                { title: "Tajweed Rules and Correct Pronunciation", desc: "Learn the rules that govern correct Quranic recitation, from Makharij (articulation points) to Madd, Idgham, and Ikhfa. Applied to real Quranic text from day one." },
+                { title: "Understanding Common Duas and Their Meaning", desc: "Learn the Duas you recite daily, morning and evening Adhkar, before eating, sleeping, entering the home, with their meanings so they become heartfelt, not just memorized phrases." },
+                { title: "Reading Salah Prayers Correctly", desc: "Recite Surah Al-Fatiha and the tashahhud with proper pronunciation. Understand what you say in every Rakah of Salah, transforming prayer from a ritual into a conversation with Allah." },
+                { title: "Selected Surahs with Translation", desc: "Learn commonly recited Surahs, Al-Baqarah opening, Ayat ul Kursi, Al-Mulk, Ar-Rahman, Ya-Sin, with word-by-word translation so you understand what you are reciting." },
                 { title: "Basic Arabic Vocabulary from the Quran", desc: "Build a working vocabulary of the most common Quranic words so that as you recite, you begin to recognize and understand the meaning of familiar words and phrases." },
-                { title: "Quran Recitation with Confidence", desc: "Develop the confidence to recite the Quran in Salah, at family gatherings, during Ramadan, and in any Islamic setting — without anxiety or embarrassment about your pronunciation." },
-                { title: "Personal Connection and Reflection on Quranic Verses", desc: "Learn to approach the Quran not just as a book to recite, but as a message addressed to you personally — building a living, reflective relationship with the words of Allah." },
+                { title: "Quran Recitation with Confidence", desc: "Develop the confidence to recite the Quran in Salah, at family gatherings, during Ramadan, and in any Islamic setting, without anxiety or embarrassment about your pronunciation." },
+                { title: "Personal Connection and Reflection on Quranic Verses", desc: "Learn to approach the Quran not just as a book to recite, but as a message addressed to you personally, building a living, reflective relationship with the words of Allah." },
               ].map((item) => (
                 <div
                   key={item.title}
@@ -313,7 +313,7 @@ export default function QuranForAdultsPage() {
               {
                 icon: User,
                 title: "Adults Who Never Learned Quran as Children",
-                desc: "You grew up in America and your Quran education was minimal or non-existent. This course begins at the very beginning — with Arabic letters — and takes you all the way to reading the Quran.",
+                desc: "You grew up in America and your Quran education was minimal or non-existent. This course begins at the very beginning, with Arabic letters, and takes you all the way to reading the Quran.",
                 points: ["Start from zero letters", "No prior knowledge assumed", "Adult learning pace", "Private classes only"],
               },
               {
@@ -369,9 +369,9 @@ export default function QuranForAdultsPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { title: "Initial Level Assessment", desc: "Every new adult student begins with a free assessment class where the teacher evaluates their current reading level. From this, a personalized learning plan is created — no wasted time on things you already know." },
-                { title: "No Judgment Environment", desc: "Our teachers are trained to create a completely safe, shame-free learning environment. Many adult students tell us they were nervous or embarrassed before the first class — and completely at ease within minutes." },
-                { title: "Flexible Adult Scheduling", desc: "Classes available early mornings, evenings, nights, and weekends — tailored to working adults and parents. Book sessions when they genuinely fit into your life. Cancel or reschedule with 24 hours notice." },
+                { title: "Initial Level Assessment", desc: "Every new adult student begins with a free assessment class where the teacher evaluates their current reading level. From this, a personalized learning plan is created, no wasted time on things you already know." },
+                { title: "No Judgment Environment", desc: "Our teachers are trained to create a completely safe, shame-free learning environment. Many adult students tell us they were nervous or embarrassed before the first class, and completely at ease within minutes." },
+                { title: "Flexible Adult Scheduling", desc: "Classes available early mornings, evenings, nights, and weekends, tailored to working adults and parents. Book sessions when they genuinely fit into your life. Cancel or reschedule with 24 hours notice." },
                 { title: "Class Duration", desc: "45–60 minutes per class. We recommend 2–3 classes per week for good progress. Even 2 classes per week with daily self-practice of 15 minutes produces meaningful improvement within months." },
                 { title: "Progress Tracking", desc: "You receive a monthly progress summary: what has been covered, what milestones were reached, and an honest assessment of where more work is needed. Adults appreciate transparency about their own progress." },
                 { title: "Supplementary Resources", desc: "Worksheets, pronunciation guides, and Quranic word lists are provided between classes. These are optional but highly recommended for adults who want to self-study between sessions." },
@@ -394,12 +394,12 @@ export default function QuranForAdultsPage() {
               Your Teacher
             </span>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
-              Specialist in Teaching Western Adults — Wifaq ul Madaris Certified
+              Specialist in Teaching Western Adults, Wifaq ul Madaris Certified
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
               Our certified teacher has spent 6+ years perfecting a methodology for teaching Quran to
-              Western, English-speaking adults — understanding the unique challenges of busy
-              schedules, knowledge gaps, and the need for clear English explanation — addressing
+              Western, English-speaking adults, understanding the unique challenges of busy
+              schedules, knowledge gaps, and the need for clear English explanation, addressing
               all of them in every class.
             </p>
           </div>
@@ -407,7 +407,7 @@ export default function QuranForAdultsPage() {
             <TeacherCard
               name="Head Teacher"
               image="/images/teacher-1.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
+              credential="Certified, Wifaq ul Madaris Al-Arabia"
               speciality="Western Adult Quran Education Specialist"
               experience="6+ years teaching adults in the USA, UK, and Canada"
               qualification="Certified Quran Teacher"
@@ -447,7 +447,7 @@ export default function QuranForAdultsPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">FAQ</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
-                Adult Quran Classes — Frequently Asked Questions
+                Adult Quran Classes, Frequently Asked Questions
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -465,7 +465,7 @@ export default function QuranForAdultsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               { href: "/courses/tajweed", title: "Tajweed", desc: "Once you can read the Quran, take your recitation to the next level with a dedicated Tajweed specialist." },
-              { href: "/courses/arabic-language", title: "Arabic Language", desc: "Understand what you recite — learn Classical Arabic grammar and Quranic vocabulary." },
+              { href: "/courses/arabic-language", title: "Arabic Language", desc: "Understand what you recite, learn Classical Arabic grammar and Quranic vocabulary." },
               { href: "/courses/quran-for-reverts", title: "Quran for Reverts", desc: "A specially adapted course for new Muslims that starts from absolute zero with essential Islamic foundations." },
             ].map((course) => (
               <Link
@@ -483,7 +483,7 @@ export default function QuranForAdultsPage() {
       </section>
 
       <CTASection
-        headline="Begin Your Quran Journey Today — At Any Age"
+        headline="Begin Your Quran Journey Today: At Any Age"
         subtext="Book a free adult Quran class and take the first step you have been putting off. No embarrassment, no rush, no commitment. Just a certified teacher and your sincere intention."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"

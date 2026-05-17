@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Online Quran Classes in New Jersey | Ease Quran Academy",
     description:
-      "Certified online Quran classes for Muslim families in New Jersey — Paterson, Jersey City, Newark, Edison and statewide.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in New Jersey — Ease Quran Academy" }],
+      "Certified online Quran classes for Muslim families in New Jersey. Paterson, Jersey City, Newark, Edison and statewide.",
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in New Jersey, Ease Quran Academy" }],
   },
 };
 
@@ -54,7 +54,7 @@ const faqSchema = {
       name: "Do you serve families in Paterson, Jersey City, and Newark?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We serve Muslim families across all of New Jersey — Paterson, Jersey City, Newark, Edison, Clifton, Elizabeth, and every city and town across the state. Online classes mean location within NJ is no barrier.",
+        text: "Yes. We serve Muslim families across all of New Jersey. Paterson, Jersey City, Newark, Edison, Clifton, Elizabeth, and every city and town across the state. Online classes mean location within NJ is no barrier.",
       },
     },
     {
@@ -70,7 +70,7 @@ const faqSchema = {
       name: "How qualified are Ease Quran teachers compared to local Islamic schools?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications — the most respected Islamic education credential in the world. Every class is one-on-one, unlike the group-based instruction at most NJ Islamic schools.",
+        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic education credential in the world. Every class is one-on-one, unlike the group-based instruction at most NJ Islamic schools.",
       },
     },
     {
@@ -78,7 +78,7 @@ const faqSchema = {
       name: "Is there a female teacher available for my daughter in New Jersey?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Sister Almas Fatima, our certified female Quran teacher, is available for sisters and children. Many New Jersey families — particularly in Paterson and Edison — specifically request this option.",
+        text: "Yes. Sister Almas Fatima, our certified female Quran teacher, is available for sisters and children. Many New Jersey families, particularly in Paterson and Edison, specifically request this option.",
       },
     },
     {
@@ -86,7 +86,7 @@ const faqSchema = {
       name: "What age groups do you teach?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We teach students of all ages — from children as young as 4 years old starting with Noorani Qaida, to adults learning Quran for the first time. Every student gets instruction tailored to their age and level.",
+        text: "We teach students of all ages, from children as young as 4 years old starting with Noorani Qaida, to adults learning Quran for the first time. Every student gets instruction tailored to their age and level.",
       },
     },
   ],
@@ -96,27 +96,27 @@ const faqs = [
   {
     question: "Do you serve families in Paterson, Jersey City, and Newark?",
     answer:
-      "Yes. We serve Muslim families across all of New Jersey — Paterson, Jersey City, Newark, Edison, Clifton, Elizabeth, Passaic, Bayonne, and every city and town statewide. Since all classes are conducted online via Zoom, your location anywhere in New Jersey is perfectly fine. Families from South Jersey and the shore also join us regularly.",
+      "Yes. We serve Muslim families across all of New Jersey. Paterson, Jersey City, Newark, Edison, Clifton, Elizabeth, Passaic, Bayonne, and every city and town statewide. Since all classes are conducted online via Zoom, your location anywhere in New Jersey is perfectly fine. Families from South Jersey and the shore also join us regularly.",
   },
   {
     question: "Are classes available for NJ commuter families with irregular schedules?",
     answer:
-      "Absolutely. New Jersey is famous for its commuter culture — many Muslim families in Paterson, Jersey City, and Edison spend hours commuting to and from New York City each day, arriving home late and exhausted. We offer evening slots (7–9 PM ET), weekend sessions, and even early morning options before the morning commute begins, specifically designed to accommodate the NJ commuter lifestyle.",
+      "Absolutely. New Jersey is famous for its commuter culture, many Muslim families in Paterson, Jersey City, and Edison spend hours commuting to and from New York City each day, arriving home late and exhausted. We offer evening slots (7–9 PM ET), weekend sessions, and even early morning options before the morning commute begins, specifically designed to accommodate the NJ commuter lifestyle.",
   },
   {
     question: "How qualified are Ease Quran teachers compared to local Islamic schools?",
     answer:
-      "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications — the most prestigious Islamic education credential in the world. Beyond credentials, every Ease Quran class is one-on-one and private, unlike the group instruction at most NJ weekend Islamic schools. Your child receives full, individual attention from a certified scholar every single session.",
+      "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the most prestigious Islamic education credential in the world. Beyond credentials, every Ease Quran class is one-on-one and private, unlike the group instruction at most NJ weekend Islamic schools. Your child receives full, individual attention from a certified scholar every single session.",
   },
   {
     question: "Is there a female teacher available for my daughter in New Jersey?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many New Jersey families — particularly within the large Arab community in Paterson and the South Asian community in Edison — specifically request a female teacher for their daughters. Simply mention it when booking your free trial.",
+      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many New Jersey families, particularly within the large Arab community in Paterson and the South Asian community in Edison, specifically request a female teacher for their daughters. Simply mention it when booking your free trial.",
   },
   {
     question: "What age groups do you teach?",
     answer:
-      "We teach students of all ages — from children as young as 4 years old starting with Noorani Qaida, to teenagers working on Tajweed, to adults learning to read Quran for the very first time. Every student receives instruction tailored to their specific age, level, and learning pace. No student is too young or too old to begin their Quran journey.",
+      "We teach students of all ages, from children as young as 4 years old starting with Noorani Qaida, to teenagers working on Tajweed, to adults learning to read Quran for the very first time. Every student receives instruction tailored to their specific age, level, and learning pace. No student is too young or too old to begin their Quran journey.",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function NewJerseyPage() {
               Online Quran Classes in New Jersey
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
-              Certified, one-on-one Quran education for Muslim families across the Garden State — from Paterson and Jersey City to Edison, Newark, and everywhere in between. Flexible scheduling built for NJ commuter families.
+              Certified, one-on-one Quran education for Muslim families across the Garden State, from Paterson and Jersey City to Edison, Newark, and everywhere in between. Flexible scheduling built for NJ commuter families.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
@@ -187,10 +187,10 @@ export default function NewJerseyPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                New Jersey is home to one of the most densely concentrated Muslim communities in the United States, with an estimated population of over 200,000 Muslims. The Garden State's Muslim demographic is remarkably rich in its diversity and historical depth. Paterson — sometimes called "Little Beirut" — is one of the most significant Arab American cities in the country, home to a large Lebanese, Syrian, Palestinian, Egyptian, and Yemeni Muslim community that has established a dense network of mosques, halal restaurants, and Islamic businesses that give the city a distinctly vibrant Muslim character. Jersey City and Newark have strong Muslim communities including African American Muslims with deep historical roots in these cities. The suburban town of Edison has become a hub for South Asian Muslims, particularly Pakistani and Indian families, with active Islamic centers, community events, and growing infrastructure. Clifton, Passaic, and Elizabeth also host significant Muslim populations.
+                New Jersey is home to one of the most densely concentrated Muslim communities in the United States, with an estimated population of over 200,000 Muslims. The Garden State's Muslim demographic is remarkably rich in its diversity and historical depth. Paterson, sometimes called "Little Beirut", is one of the most significant Arab American cities in the country, home to a large Lebanese, Syrian, Palestinian, Egyptian, and Yemeni Muslim community that has established a dense network of mosques, halal restaurants, and Islamic businesses that give the city a distinctly vibrant Muslim character. Jersey City and Newark have strong Muslim communities including African American Muslims with deep historical roots in these cities. The suburban town of Edison has become a hub for South Asian Muslims, particularly Pakistani and Indian families, with active Islamic centers, community events, and growing infrastructure. Clifton, Passaic, and Elizabeth also host significant Muslim populations.
               </p>
               <p>
-                New Jersey presents a particular lifestyle challenge for Muslim families: the commuter culture. A significant proportion of NJ's Muslim population — especially in Bergen, Hudson, and Passaic counties — commutes daily into New York City via the PATH train, NJ Transit, or the George Washington Bridge. These parents often leave home before their children wake up and return after 7 PM. Traditional in-person Islamic school models, which typically require parent drop-off and pickup, simply don't fit this lifestyle. For NJ commuter families, online Quran education isn't just convenient — it's often the only realistic option for providing their children with consistent Islamic education.
+                New Jersey presents a particular lifestyle challenge for Muslim families: the commuter culture. A significant proportion of NJ's Muslim population, especially in Bergen, Hudson, and Passaic counties, commutes daily into New York City via the PATH train, NJ Transit, or the George Washington Bridge. These parents often leave home before their children wake up and return after 7 PM. Traditional in-person Islamic school models, which typically require parent drop-off and pickup, simply don't fit this lifestyle. For NJ commuter families, online Quran education isn't just convenient, it's often the only realistic option for providing their children with consistent Islamic education.
               </p>
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function NewJerseyPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">Access Beyond Your Local Masjid</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  While communities like Paterson have a strong local Islamic presence, many NJ Muslims in suburban or less-served areas have limited local options. Ease Quran brings the same quality of certified instruction to families in every part of the state — no matter how small or suburban their location.
+                  While communities like Paterson have a strong local Islamic presence, many NJ Muslims in suburban or less-served areas have limited local options. Ease Quran brings the same quality of certified instruction to families in every part of the state, no matter how small or suburban their location.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -232,7 +232,7 @@ export default function NewJerseyPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-xl text-navy mb-3">The Whole Family Can Enroll</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  Many New Jersey families enroll multiple children — or parents alongside their kids — because our flexible scheduling makes it easy to coordinate. Siblings can take classes back-to-back, and adults can book their own separate slots. One family, multiple students, one trusted teacher.
+                  Many New Jersey families enroll multiple children, or parents alongside their kids, because our flexible scheduling makes it easy to coordinate. Siblings can take classes back-to-back, and adults can book their own separate slots. One family, multiple students, one trusted teacher.
                 </p>
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function NewJerseyPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { name: "Noorani Qaida", desc: "The perfect starting point for young children and adult beginners — learn to read Arabic from the ground up.", href: "/courses/noorani-qaida" },
+                { name: "Noorani Qaida", desc: "The perfect starting point for young children and adult beginners, learn to read Arabic from the ground up.", href: "/courses/noorani-qaida" },
                 { name: "Quran Reading with Tajweed", desc: "Master the rules of Tajweed and develop beautiful, accurate Quran recitation from beginner through advanced levels.", href: "/courses/tajweed" },
                 { name: "Quran Memorization (Hifz)", desc: "A structured, supportive Hifz program with consistent revision cycles for committed students.", href: "/courses/hifz" },
                 { name: "Islamic Studies", desc: "Islamic beliefs, prayer, manners, and Seerah for children growing up as Muslims in America.", href: "/courses/islamic-studies" },
@@ -282,9 +282,9 @@ export default function NewJerseyPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { step: "01", title: "Book in Minutes", desc: "Use our online booking form or send us a WhatsApp message. Share your child's age, level, and preferred schedule in Eastern Time — we'll do the rest." },
-                { step: "02", title: "Free Trial on Zoom", desc: "Your child has a live one-on-one lesson with their teacher — completely free. See the curriculum, experience the teaching style, and gauge how your child responds." },
-                { step: "03", title: "Set Your Weekly Schedule", desc: "If you're satisfied — and NJ families almost always are — we create a recurring weekly schedule that fits seamlessly around your commuter lifestyle." },
+                { step: "01", title: "Book in Minutes", desc: "Use our online booking form or send us a WhatsApp message. Share your child's age, level, and preferred schedule in Eastern Time, we'll do the rest." },
+                { step: "02", title: "Free Trial on Zoom", desc: "Your child has a live one-on-one lesson with their teacher, completely free. See the curriculum, experience the teaching style, and gauge how your child responds." },
+                { step: "03", title: "Set Your Weekly Schedule", desc: "If you're satisfied, and NJ families almost always are, we create a recurring weekly schedule that fits seamlessly around your commuter lifestyle." },
               ].map((item) => (
                 <div key={item.step} className="text-center">
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
@@ -305,7 +305,7 @@ export default function NewJerseyPage() {
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-6">Family Testimonial</span>
             <blockquote className="font-playfair text-xl md:text-2xl text-white leading-relaxed italic mb-8">
-              "My husband takes the PATH to Manhattan every day and gets home around 7:30 PM. I work shifts at the hospital. We could not realistically get our three children to any Islamic school. With Ease Quran, our kids have lessons right after school, and I check in with the teacher on weekends. All three are progressing beautifully — SubhanAllah."
+              "My husband takes the PATH to Manhattan every day and gets home around 7:30 PM. I work shifts at the hospital. We could not realistically get our three children to any Islamic school. With Ease Quran, our kids have lessons right after school, and I check in with the teacher on weekends. All three are progressing beautifully. SubhanAllah."
             </blockquote>
             <footer className="text-white/60 font-semibold">
               — Mariam H., Muslim mother in Jersey City, New Jersey
@@ -321,7 +321,7 @@ export default function NewJerseyPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
-                Frequently Asked Questions — New Jersey
+                Frequently Asked Questions. New Jersey
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -331,7 +331,7 @@ export default function NewJerseyPage() {
 
       <CTASection
         headline="Quran Education That Works for the NJ Commuter Family"
-        subtext="Paterson, Jersey City, Edison, Newark — wherever you are in New Jersey, certified Quran education comes to your home. Your first class is free."
+        subtext="Paterson, Jersey City, Edison, Newark, wherever you are in New Jersey, certified Quran education comes to your home. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
       />

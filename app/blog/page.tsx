@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Quran & Islamic Education Blog | Ease Quran Academy",
     description:
       "Read articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and how to choose the best online Quran academy for your family.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Quran & Islamic Education Blog — Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Quran & Islamic Education Blog, Ease Quran Academy" }],
   },
 };
 
@@ -28,7 +28,7 @@ const posts: BlogPost[] = [
     title: "How to Choose the Best Online Quran Academy for Your Child in America",
     slug: "how-to-choose-online-quran-academy",
     excerpt:
-      "With hundreds of online Quran academies claiming to be the best, how does a Muslim parent in America know who to trust? Learn the 6 most important factors — teacher certification, free trial availability, female teacher options, curriculum quality, flexible scheduling, and red flags to avoid.",
+      "With hundreds of online Quran academies claiming to be the best, how does a Muslim parent in America know who to trust? Learn the 6 most important factors: teacher certification, free trial availability, female teacher options, curriculum quality, flexible scheduling, and red flags to avoid.",
     date: "January 15, 2025",
     category: "Parenting & Education",
     readTime: "8 min",
@@ -95,7 +95,7 @@ export default function BlogPage() {
               The Ease Quran Blog
             </h1>
             <p className="text-white/70 text-lg leading-relaxed">
-              Practical guidance for Muslim parents in America — covering Tajweed tips, Hifz
+              Practical guidance for Muslim parents in America, covering Tajweed tips, Hifz
               strategies, how to find trusted Quran teachers online, and everything in between.
               Written by our certified teachers to help your family succeed.
             </p>
@@ -133,7 +133,7 @@ export default function BlogPage() {
             </h3>
             <p className="text-white/70 text-sm max-w-lg mx-auto mb-6">
               Join Muslim parents across America who receive our latest Quran education tips,
-              teaching resources, and exclusive guides — delivered straight to your inbox.
+              teaching resources, and exclusive guides, delivered straight to your inbox.
             </p>
             <Link
               href="/free-trial"
@@ -178,7 +178,7 @@ export default function BlogPage() {
             </h3>
             <p className="text-grey text-sm leading-relaxed mb-6">
               Reading about Quran education is a great start. But the best step you can take today
-              is booking a free trial class with one of our certified teachers — completely free,
+              is booking a free trial class with one of our certified teachers, completely free,
               no credit card required.
             </p>
             <Link
