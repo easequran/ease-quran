@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: "https://easequran.com/blog/how-to-choose-online-quran-academy",
     type: "article",
     publishedTime: "2025-01-15",
-    authors: ["Shah Zaib"],
+    authors: ["Ease Quran Team"],
     images: [
       {
         url: "https://easequran.com/images/og-image.png",
@@ -39,7 +39,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "How to Choose the Best Online Quran Academy for Your Child in America",
-  author: { "@type": "Person", "name": "Shah Zaib" },
+  author: { "@type": "Organization", "name": "Ease Quran Team" },
   publisher: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
@@ -180,7 +180,7 @@ export default function BlogPostPage() {
           <div className="flex flex-wrap items-center gap-6 text-white/70 text-sm">
             <span className="flex items-center gap-2">
               <User className="w-4 h-4 text-gold" />
-              Shah Zaib — Certified Quran Teacher &amp; Founder, Ease Quran Academy
+              Ease Quran Team — Certified Quran Teachers, Ease Quran Academy
             </span>
             <span className="flex items-center gap-2">
               <Calendar className="w-4 h-4 text-gold" />
@@ -446,7 +446,7 @@ export default function BlogPostPage() {
                   How Ease Quran Academy Meets Every Standard
                 </h2>
                 <p className="text-grey leading-relaxed mb-4">
-                  Ease Quran Academy was founded by Shah Zaib, a Wifaq ul Madaris-certified Quran teacher who saw firsthand the frustration Muslim families in America faced when trying to find genuinely qualified, trustworthy online Quran instruction. Every policy, every hiring standard, and every curriculum decision at Ease Quran has been made with one question in mind: what would a Muslim parent in America actually need to feel confident about their child&apos;s Quran education?
+                  Ease Quran Academy was built by Wifaq ul Madaris-certified Quran teachers who saw firsthand the frustration Muslim families in America faced when trying to find genuinely qualified, trustworthy online Quran instruction. Every policy, every hiring standard, and every curriculum decision at Ease Quran has been made with one question in mind: what would a Muslim parent in America actually need to feel confident about their child&apos;s Quran education?
                 </p>
 
                 <ul className="space-y-4 mb-6">
@@ -546,15 +546,15 @@ export default function BlogPostPage() {
                 <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
                   <div className="flex flex-col sm:flex-row items-start gap-6">
                     <div className="w-16 h-16 rounded-full bg-navy flex items-center justify-center shrink-0">
-                      <span className="font-playfair font-bold text-gold text-xl">SZ</span>
+                      <span className="font-playfair font-bold text-gold text-xl">EQ</span>
                     </div>
                     <div>
-                      <p className="font-playfair font-bold text-navy text-lg mb-1">Shah Zaib</p>
+                      <p className="font-playfair font-bold text-navy text-lg mb-1">Ease Quran Team</p>
                       <p className="text-gold text-sm font-semibold mb-3">
-                        Certified Quran Teacher &amp; Founder, Ease Quran Academy
+                        Certified Quran Teachers &amp; Islamic Education Specialists
                       </p>
                       <p className="text-grey text-sm leading-relaxed">
-                        Shah Zaib is a Wifaq ul Madaris-certified Quran teacher with over a decade of experience teaching students across the United States, Canada, the United Kingdom, and Australia. As the founder of Ease Quran Online Academy, he has built a team of rigorously vetted certified teachers dedicated to providing accessible, high-quality Quran education for Muslim families living in the West. His mission is simple: to ensure that no Muslim child in America goes without the opportunity to learn the Quran from a truly qualified teacher.
+                        The Ease Quran Team consists of Wifaq ul Madaris-certified Quran teachers with extensive experience teaching students across the United States, Canada, the United Kingdom, and Australia. Together, they are dedicated to providing accessible, high-quality Quran education for Muslim families living in the West. Their mission: to ensure that no Muslim child in America goes without the opportunity to learn the Quran from a truly qualified teacher.
                       </p>
                     </div>
                   </div>

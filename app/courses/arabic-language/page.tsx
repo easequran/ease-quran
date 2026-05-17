@@ -97,7 +97,7 @@ const faqSchema = {
       name: "Is Arabic grammar hard for English speakers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Arabic grammar (Sarf and Nahw) is structured differently from English but is internally very logical and consistent. Our teacher, Shah Zaib, specializes in teaching Arabic grammar to English-speaking students. He explains all concepts in plain English with English examples before transitioning to Arabic — making it accessible for native English speakers.",
+        text: "Arabic grammar (Sarf and Nahw) is structured differently from English but is internally very logical and consistent. Our certified teacher specializes in teaching Arabic grammar to English-speaking students. All concepts are explained in plain English with English examples before transitioning to Arabic — making it accessible for native English speakers.",
       },
     },
     {
@@ -130,7 +130,7 @@ const faqs = [
   {
     question: "Is Arabic grammar hard for English speakers?",
     answer:
-      "Arabic grammar (Sarf and Nahw) is structured differently from English but is internally very logical and consistent. Our teacher, Shah Zaib, specializes in teaching Arabic grammar to English-speaking students. He explains all concepts in plain English with English examples before transitioning to Arabic — making it accessible for native English speakers.",
+      "Arabic grammar (Sarf and Nahw) is structured differently from English but is internally very logical and consistent. Our certified teacher specializes in teaching Arabic grammar to English-speaking students. All concepts are explained in plain English with English examples before transitioning to Arabic — making it accessible for native English speakers.",
   },
   {
     question: "Can children learn Arabic language alongside Quran classes?",
@@ -224,7 +224,7 @@ export default function ArabicLanguagePage() {
                   beauty of the original Arabic. Our course gives you direct access to that depth.
                 </p>
                 <p>
-                  Taught by Shah Zaib, our founder and head teacher certified from{" "}
+                  Taught by our certified head teacher from{" "}
                   <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, the course
                   covers Arabic grammar (Sarf — word morphology, and Nahw — sentence structure),
                   Quranic vocabulary building, reading comprehension of Quranic verses, and
@@ -240,7 +240,7 @@ export default function ArabicLanguagePage() {
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ Quranic Arabic Focus</span>
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ Sarf & Nahw</span>
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ English Medium</span>
-                <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ Founder Teaching</span>
+                <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ Expert Teaching</span>
               </div>
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
@@ -371,7 +371,7 @@ export default function ArabicLanguagePage() {
                 { title: "Vocabulary Building System", desc: "Students learn Quranic vocabulary in order of frequency. Each week introduces 10–15 new words, reviewed with flashcard methods until they become second nature." },
                 { title: "Quranic Text Analysis", desc: "Once sufficient grammar and vocabulary are acquired, classes shift to analyzing actual Quranic verses — identifying grammatical roles of each word and understanding the verse's full meaning." },
                 { title: "Class Duration", desc: "Arabic language classes run 45–60 minutes. We recommend 3 classes per week for optimal progress. Self-study of 20–30 minutes per day between classes significantly accelerates learning." },
-                { title: "English-Medium Instruction", desc: "All grammar concepts are explained in English first. Shah Zaib has years of experience translating complex Arabic grammatical concepts into clear, logical English explanations for Western students." },
+                { title: "English-Medium Instruction", desc: "All grammar concepts are explained in English first. Our teacher has years of experience translating complex Arabic grammatical concepts into clear, logical English explanations for Western students." },
                 { title: "Progress Milestones", desc: "Students track their progress through vocabulary counts, grammar concepts mastered, and Quranic verses understood independently. Monthly progress reviews keep motivation high and learning on track." },
               ].map((item) => (
                 <div key={item.title} className="bg-white/5 rounded-xl p-6 border border-white/10">
@@ -395,19 +395,19 @@ export default function ArabicLanguagePage() {
               Taught by Our Founder — Wifaq ul Madaris Certified
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Shah Zaib teaches the Arabic language course personally. With formal training in
-              Sarf and Nahw and 6+ years of teaching Western students, he is uniquely qualified
+              Our head teacher holds formal certification from Wifaq ul Madaris Al-Arabia, with specialized training in
+              Sarf and Nahw and 6+ years of teaching Western students — uniquely qualified
               to make Arabic grammar accessible to English speakers.
             </p>
           </div>
           <div className="max-w-xs mx-auto">
             <TeacherCard
-              name="Shah Zaib"
-              image="/images/founder.webp"
+              name="Head Teacher"
+              image="/images/teacher-1.webp"
               credential="Certified — Wifaq ul Madaris Al-Arabia"
               speciality="Arabic Language (Sarf & Nahw), Quranic Arabic Specialist"
               experience="6+ years teaching Arabic to Western English-speaking students"
-              qualification="Founder & Arabic Language Teacher"
+              qualification="Arabic Language Teacher"
             />
           </div>
         </div>

@@ -97,7 +97,7 @@ const faqSchema = {
       name: "Are the teachers sensitive to the unique challenges reverts face?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. Shah Zaib has extensive experience teaching reverts and understands the unique emotional, social, and practical challenges of being a new Muslim in America. Classes are completely free of cultural assumptions — you will not be made to feel less Muslim for not knowing something. Every question is welcomed. The learning environment is warm, non-judgmental, and encouraging.",
+        text: "Absolutely. Our certified teacher has extensive experience teaching reverts and understands the unique emotional, social, and practical challenges of being a new Muslim in America. Classes are completely free of cultural assumptions — you will not be made to feel less Muslim for not knowing something. Every question is welcomed. The learning environment is warm, non-judgmental, and encouraging.",
       },
     },
     {
@@ -130,7 +130,7 @@ const faqs = [
   {
     question: "Are the teachers sensitive to the unique challenges reverts face?",
     answer:
-      "Absolutely. Shah Zaib has extensive experience teaching reverts and understands the unique emotional, social, and practical challenges of being a new Muslim in America. Classes are completely free of cultural assumptions — you will not be made to feel less Muslim for not knowing something. Every question is welcomed. The learning environment is warm, non-judgmental, and encouraging.",
+      "Absolutely. Our certified teacher has extensive experience teaching reverts and understands the unique emotional, social, and practical challenges of being a new Muslim in America. Classes are completely free of cultural assumptions — you will not be made to feel less Muslim for not knowing something. Every question is welcomed. The learning environment is warm, non-judgmental, and encouraging.",
   },
   {
     question: "How quickly can a revert learn to pray in Arabic?",
@@ -214,7 +214,7 @@ export default function QuranForRevertsPage() {
               &ldquo;Whoever Allah guides, no one can misguide. You have found Islam — now let us help
               you build the Islamic foundation you deserve, one step at a time.&rdquo;
             </p>
-            <p className="text-gold font-semibold text-sm mt-3">— Shah Zaib, Founder</p>
+            <p className="text-gold font-semibold text-sm mt-3">— Ease Quran Academy</p>
           </div>
         </div>
       </section>
@@ -239,9 +239,9 @@ export default function QuranForRevertsPage() {
                   reading and Arabic skills.
                 </p>
                 <p>
-                  Taught by Shah Zaib, certified from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, who has
-                  years of experience working with reverts in the USA. He understands the unique
+                  Taught by our certified teacher from{" "}
+                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, with
+                  years of experience working with reverts in the USA. Our teacher understands the unique
                   challenges: the emotional journey of conversion, the absence of a Muslim family
                   network, the practical questions no one seems to answer, and the overwhelming
                   feeling of not knowing where to start.
@@ -417,20 +417,20 @@ export default function QuranForRevertsPage() {
               A Teacher Who Truly Understands Your Journey
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Shah Zaib built Ease Quran specifically to serve Western Muslims — including reverts.
-              His 6+ years teaching Western students has given him deep empathy for the unique
-              challenges new Muslims face. He is certified from Wifaq ul Madaris Al-Arabia and
-              brings both scholarly credentials and genuine warmth to every class.
+              Ease Quran was built specifically to serve Western Muslims — including reverts.
+              Our teacher&apos;s 6+ years teaching Western students has given them deep empathy for the unique
+              challenges new Muslims face. Certified from Wifaq ul Madaris Al-Arabia, they bring
+              both scholarly credentials and genuine warmth to every class.
             </p>
           </div>
           <div className="max-w-xs mx-auto">
             <TeacherCard
-              name="Shah Zaib"
-              image="/images/founder.webp"
+              name="Head Teacher"
+              image="/images/teacher-1.webp"
               credential="Certified — Wifaq ul Madaris Al-Arabia"
               speciality="Reverts & Western Students Specialist"
               experience="6+ years teaching reverts and Western Muslims"
-              qualification="Founder & Head Teacher"
+              qualification="Certified Quran Teacher"
             />
           </div>
         </div>

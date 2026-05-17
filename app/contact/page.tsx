@@ -177,13 +177,6 @@ export default function ContactPage() {
                       >
                         info@easequran.com
                       </a>
-                      <br />
-                      <a
-                        href="mailto:contacteasequran@gmail.com"
-                        className="text-grey hover:text-gold text-xs transition-colors"
-                      >
-                        contacteasequran@gmail.com
-                      </a>
                     </div>
                   </div>
 

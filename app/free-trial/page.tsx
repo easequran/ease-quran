@@ -110,17 +110,12 @@ export default function FreeTrialPage() {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden bg-offwhite shrink-0 relative">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src="/images/founder.webp"
-                        alt="Shah Zaib - Founder & Head Teacher"
-                        className="w-full h-full object-cover"
-                      />
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gold/10 shrink-0 flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 text-gold" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-navy text-sm">Shah Zaib</p>
-                      <p className="text-grey text-xs">Founder & Head Teacher · 6+ yrs experience</p>
+                      <p className="font-semibold text-navy text-sm">Head Teacher</p>
+                      <p className="text-grey text-xs">Certified · Wifaq ul Madaris · 6+ yrs experience</p>
                     </div>
                     <span className="ml-auto text-xs bg-gold/10 text-gold font-semibold px-2 py-1 rounded-full">
                       Certified

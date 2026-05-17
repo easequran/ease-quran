@@ -416,14 +416,6 @@ export default function TajweedPage() {
               qualification="Tajweed Teacher"
               badge="Tajweed Specialist"
             />
-            <TeacherCard
-              name="Shah Zaib"
-              image="/images/founder.webp"
-              credential="Certified — Wifaq ul Madaris Al-Arabia"
-              speciality="Tajweed, Quran Reading, Hifz — Western Students Specialist"
-              experience="6+ years teaching Western students"
-              qualification="Founder & Head Teacher"
-            />
           </div>
         </div>
       </section>

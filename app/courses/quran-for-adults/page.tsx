@@ -226,11 +226,11 @@ export default function QuranForAdultsPage() {
                   Book of Allah.
                 </p>
                 <p>
-                  This course was designed specifically for you. Taught by Shah Zaib, our founder
-                  certified from <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>,
-                  who has 6+ years of experience teaching Western adults. He understands the
+                  This course was designed specifically for you. Taught by our certified teacher from{" "}
+                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>,
+                  with 6+ years of experience teaching Western adults. Our teacher understands the
                   sensitivities, the time constraints, and the particular challenges that adult
-                  learners face — and he has built a methodology that works.
+                  learners face — and has built a methodology that works.
                 </p>
                 <p>
                   Classes are completely private, one-on-one, in English, and scheduled around
@@ -397,20 +397,20 @@ export default function QuranForAdultsPage() {
               Specialist in Teaching Western Adults — Wifaq ul Madaris Certified
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Shah Zaib has spent 6+ years perfecting a methodology for teaching Quran to
-              Western, English-speaking adults. He understands the unique challenges — busy
-              schedules, sensitive about gaps in knowledge, need for English explanation — and
-              addresses all of them in every class.
+              Our certified teacher has spent 6+ years perfecting a methodology for teaching Quran to
+              Western, English-speaking adults — understanding the unique challenges of busy
+              schedules, knowledge gaps, and the need for clear English explanation — addressing
+              all of them in every class.
             </p>
           </div>
           <div className="max-w-xs mx-auto">
             <TeacherCard
-              name="Shah Zaib"
-              image="/images/founder.webp"
+              name="Head Teacher"
+              image="/images/teacher-1.webp"
               credential="Certified — Wifaq ul Madaris Al-Arabia"
               speciality="Western Adult Quran Education Specialist"
               experience="6+ years teaching adults in the USA, UK, and Canada"
-              qualification="Founder & Head Teacher"
+              qualification="Certified Quran Teacher"
             />
           </div>
         </div>
