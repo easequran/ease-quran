@@ -476,13 +476,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
 
             {/* MISSION */}
-            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border border-gray-200 hover:border-gold/40 hover:shadow-md transition-all duration-200">
+            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-200 hover:border-gold/50 hover:shadow-md transition-all duration-200">
               <div className="relative w-20 h-20 mb-4">
-                <div className="absolute inset-0 rounded-full border-2 border-gold/40" />
-                <div className="absolute inset-[5px] rounded-full border border-gold/25" />
+                <div className="absolute inset-0 rounded-full border-[3px] border-gold/60" />
+                <div className="absolute inset-[5px] rounded-full border-2 border-gold/35" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 text-gold" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-6 h-6 text-gold" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 3l7.5 13.5L13 12l4 5h4M15 6a2 2 0 100-4 2 2 0 000 4z" />
                     </svg>
                   </div>
@@ -498,13 +498,13 @@ export default function HomePage() {
             </div>
 
             {/* VISION */}
-            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border border-gray-200 hover:border-gold/40 hover:shadow-md transition-all duration-200">
+            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-200 hover:border-gold/50 hover:shadow-md transition-all duration-200">
               <div className="relative w-20 h-20 mb-4">
-                <div className="absolute inset-0 rounded-full border-2 border-navy/25" />
-                <div className="absolute inset-[5px] rounded-full border border-navy/15" />
+                <div className="absolute inset-0 rounded-full border-[3px] border-navy/40" />
+                <div className="absolute inset-[5px] rounded-full border-2 border-navy/20" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "rgba(11,30,91,0.08)" }}>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 text-navy" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-6 h-6 text-navy" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.355a7.5 7.5 0 01-3 0M12 3a6 6 0 110 12 6 6 0 010-12z" />
                     </svg>
                   </div>
@@ -520,13 +520,13 @@ export default function HomePage() {
             </div>
 
             {/* VALUES */}
-            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border border-gray-200 hover:border-gold/40 hover:shadow-md transition-all duration-200">
+            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border-2 border-gray-200 hover:border-gold/50 hover:shadow-md transition-all duration-200">
               <div className="relative w-20 h-20 mb-4">
-                <div className="absolute inset-0 rounded-full border-2 border-gold/40" />
-                <div className="absolute inset-[5px] rounded-full border border-gold/25" />
+                <div className="absolute inset-0 rounded-full border-[3px] border-gold/60" />
+                <div className="absolute inset-[5px] rounded-full border-2 border-gold/35" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 text-gold" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-6 h-6 text-gold" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
                     </svg>
                   </div>
