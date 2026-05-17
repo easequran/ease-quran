@@ -463,101 +463,97 @@ export default function HomePage() {
       </section>
 
       {/* MISSION, VISION & VALUES */}
-      <section className="section-padding bg-white">
+      <section className="py-12 bg-white">
         <div className="container-custom">
 
           {/* Section header */}
-          <div className="text-center mb-14">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-3">Who We Are</span>
+          <div className="text-center mb-8">
+            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-2">Who We Are</span>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">Our Mission, Vision &amp; Values</h2>
           </div>
 
-          {/* 3 columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-100 max-w-5xl mx-auto">
+          {/* 3 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
 
             {/* MISSION */}
-            <div className="flex flex-col items-center text-center px-8 py-8">
-              {/* Outer ring + inner circle icon */}
-              <div className="relative w-24 h-24 mb-6">
-                <div className="absolute inset-0 rounded-full border-2 border-gold/30" />
-                <div className="absolute inset-3 rounded-full border border-gold/50" />
+            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border border-gray-200 hover:border-gold/40 hover:shadow-md transition-all duration-200">
+              <div className="relative w-20 h-20 mb-4">
+                <div className="absolute inset-0 rounded-full border-2 border-gold/40" />
+                <div className="absolute inset-[5px] rounded-full border border-gold/25" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center">
-                    {/* Mountain / target icon */}
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-7 h-7 text-gold" aria-hidden="true">
+                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 text-gold" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 3l7.5 13.5L13 12l4 5h4M15 6a2 2 0 100-4 2 2 0 000 4z" />
                     </svg>
                   </div>
                 </div>
               </div>
-              <span className="text-gold text-xs font-bold tracking-widest uppercase mb-3">Our Mission</span>
-              <h3 className="font-playfair font-bold text-xl text-navy mb-3 leading-snug">
-                Make Authentic Quran Education Accessible to Every Muslim Family
+              <span className="text-gold text-[10px] font-bold tracking-widest uppercase mb-2">Our Mission</span>
+              <h3 className="font-playfair font-bold text-lg text-navy mb-2 leading-snug">
+                Authentic Quran Education for Every Muslim Family in America
               </h3>
-              <p className="text-grey text-sm leading-relaxed">
-                Every Muslim child and adult in the US deserves a certified, trusted Quran teacher. We remove every barrier — location, schedule, cost — between your family and quality Quran education.
+              <p className="text-grey text-xs leading-relaxed">
+                We remove every barrier between your family and a certified, trusted Quran teacher, no matter where you live or how busy your schedule is.
               </p>
             </div>
 
             {/* VISION */}
-            <div className="flex flex-col items-center text-center px-8 py-8">
-              <div className="relative w-24 h-24 mb-6">
-                <div className="absolute inset-0 rounded-full border-2 border-navy/20" />
-                <div className="absolute inset-3 rounded-full border border-navy/30" />
+            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border border-gray-200 hover:border-gold/40 hover:shadow-md transition-all duration-200">
+              <div className="relative w-20 h-20 mb-4">
+                <div className="absolute inset-0 rounded-full border-2 border-navy/25" />
+                <div className="absolute inset-[5px] rounded-full border border-navy/15" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-14 h-14 rounded-full bg-navy/8 flex items-center justify-center" style={{ background: "rgba(11,30,91,0.08)" }}>
-                    {/* Lightbulb icon */}
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-7 h-7 text-navy" aria-hidden="true">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "rgba(11,30,91,0.08)" }}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 text-navy" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.355a7.5 7.5 0 01-3 0M12 3a6 6 0 110 12 6 6 0 010-12z" />
                     </svg>
                   </div>
                 </div>
               </div>
-              <span className="text-navy text-xs font-bold tracking-widest uppercase mb-3">Our Vision</span>
-              <h3 className="font-playfair font-bold text-xl text-navy mb-3 leading-snug">
+              <span className="text-navy text-[10px] font-bold tracking-widest uppercase mb-2">Our Vision</span>
+              <h3 className="font-playfair font-bold text-lg text-navy mb-2 leading-snug">
                 A Generation of Western Muslims Who Live by the Quran
               </h3>
-              <p className="text-grey text-sm leading-relaxed">
-                We envision American Muslim homes where the Quran is not distant — where children recite it beautifully, adults understand its meaning, and the Book of Allah is a living presence coast to coast.
+              <p className="text-grey text-xs leading-relaxed">
+                American Muslim homes where children recite beautifully, adults understand the meaning, and the Book of Allah is a living presence from coast to coast.
               </p>
             </div>
 
             {/* VALUES */}
-            <div className="flex flex-col items-center text-center px-8 py-8">
-              <div className="relative w-24 h-24 mb-6">
-                <div className="absolute inset-0 rounded-full border-2 border-gold/30" />
-                <div className="absolute inset-3 rounded-full border border-gold/50" />
+            <div className="flex flex-col items-center text-center px-6 py-7 rounded-2xl border border-gray-200 hover:border-gold/40 hover:shadow-md transition-all duration-200">
+              <div className="relative w-20 h-20 mb-4">
+                <div className="absolute inset-0 rounded-full border-2 border-gold/40" />
+                <div className="absolute inset-[5px] rounded-full border border-gold/25" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center">
-                    {/* Award / medal icon */}
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-7 h-7 text-gold" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-4.5A3.75 3.75 0 0012 10.5a3.75 3.75 0 00-4.5 3.75v4.5m4.5-13.5V3m0 0L9 5.25M12 3l3 2.25" />
+                  <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 text-gold" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
                     </svg>
                   </div>
                 </div>
               </div>
-              <span className="text-gold text-xs font-bold tracking-widest uppercase mb-3">Our Values</span>
-              <h3 className="font-playfair font-bold text-xl text-navy mb-3 leading-snug">
-                Trust, Excellence, and Genuine Care for Every Student
+              <span className="text-gold text-[10px] font-bold tracking-widest uppercase mb-2">Our Values</span>
+              <h3 className="font-playfair font-bold text-lg text-navy mb-2 leading-snug">
+                Trust, Excellence and Genuine Care for Every Student
               </h3>
-              <p className="text-grey text-sm leading-relaxed">
-                We hire only certified teachers, maintain full transparency on pricing, respect Islamic guidelines in all sessions, and stand behind every class with our free-trial guarantee.
+              <p className="text-grey text-xs leading-relaxed">
+                Certified teachers only, transparent pricing, full respect for Islamic guidelines, and a free-trial guarantee — because your trust means everything to us.
               </p>
             </div>
 
           </div>
 
-          {/* Bottom divider line with 4 value pills */}
-          <div className="mt-12 pt-10 border-t border-gray-100 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          {/* Value pills */}
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             {[
-              { icon: <Shield className="w-4 h-4 text-gold" />, label: "Trust" },
-              { icon: <Award className="w-4 h-4 text-gold" />, label: "Excellence" },
-              { icon: <Users className="w-4 h-4 text-gold" />, label: "Inclusivity" },
-              { icon: <Globe className="w-4 h-4 text-gold" />, label: "50 States" },
+              { icon: <Shield className="w-3.5 h-3.5 text-gold" />, label: "Trust" },
+              { icon: <Award className="w-3.5 h-3.5 text-gold" />, label: "Excellence" },
+              { icon: <Users className="w-3.5 h-3.5 text-gold" />, label: "Inclusivity" },
+              { icon: <Globe className="w-3.5 h-3.5 text-gold" />, label: "50 States" },
             ].map((v) => (
-              <div key={v.label} className="flex items-center justify-center gap-2 bg-offwhite border border-gold/20 rounded-xl py-3 px-4">
+              <div key={v.label} className="flex items-center gap-2 bg-offwhite border border-gold/20 rounded-full py-2 px-5">
                 {v.icon}
-                <span className="text-navy text-sm font-semibold">{v.label}</span>
+                <span className="text-navy text-xs font-semibold">{v.label}</span>
               </div>
             ))}
           </div>
