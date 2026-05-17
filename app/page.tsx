@@ -463,19 +463,18 @@ export default function HomePage() {
       </section>
 
       {/* MISSION & VISION */}
-      <section className="py-16 relative overflow-hidden">
-        {/* Background image */}
-        <Image
-          src="/images/quran.webp"
-          alt="Holy Quran open, background for Mission and Vision section"
-          fill
-          className="object-cover object-center"
-          style={{ zIndex: 0 }}
-        />
-        {/* Navy overlay — keeps brand colour while letting image show through */}
-        <div className="absolute inset-0 bg-navy/65" style={{ zIndex: 1 }} />
-        {/* Subtle extra darkening for text contrast */}
-        <div className="absolute inset-0 bg-black/20" style={{ zIndex: 2 }} />
+      <section
+        className="py-16 relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/images/quran.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Navy overlay */}
+        <div className="absolute inset-0 bg-navy/70" />
+        {/* Extra darkening for text contrast */}
+        <div className="absolute inset-0 bg-black/25" />
         <div className="container-custom relative z-10">
           {/* Header */}
           <div className="text-center mb-10">
