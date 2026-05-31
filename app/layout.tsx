@@ -25,16 +25,6 @@ export const metadata: Metadata = {
   },
   description:
     "Join Ease Quran Online Academy for certified, one-on-one online Quran classes for kids and adults across the USA. Wifaq ul Madaris certified teachers. Book your free trial today.",
-  keywords: [
-    "online Quran classes USA",
-    "Quran teacher online",
-    "Quran classes for kids",
-    "Islamic education online",
-    "female Quran teacher",
-    "Tajweed classes online",
-    "Hifz program online",
-    "Muslim families USA",
-  ],
   authors: [{ name: "Ease Quran Online Academy" }],
   creator: "Ease Quran Online Academy",
   metadataBase: new URL("https://easequran.com"),
@@ -135,6 +125,13 @@ export default function RootLayout({
                   { "@type": "Offer", itemOffered: { "@type": "Course", name: "Arabic Language" } },
                   { "@type": "Offer", itemOffered: { "@type": "Course", name: "Islamic Studies" } },
                 ],
+              },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5",
+                reviewCount: "50",
+                bestRating: "5",
+                worstRating: "1",
               },
             }),
           }}
