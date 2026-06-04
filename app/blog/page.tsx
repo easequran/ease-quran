@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Quran & Islamic Education Blog",
   description:
     "Read articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and how to choose the best online Quran academy for your family.",
-  alternates: { canonical: "https://easequran.com/blog" },
+  alternates: { canonical: "https://www.easequran.com/blog" },
   openGraph: {
     title: "Quran & Islamic Education Blog | Ease Quran Online Academy",
     description:
       "Read articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and how to choose the best online Quran academy for your family.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Quran & Islamic Education Blog, Ease Quran Academy" }],
+    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Quran & Islamic Education Blog, Ease Quran Academy" }],
   },
 };
 

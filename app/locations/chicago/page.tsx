@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     "Certified online Quran classes for Muslim families in Chicago, IL. Serving Bridgeview, Orland Park, north suburbs, and all Chicagoland. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
-    canonical: "https://easequran.com/locations/chicago",
+    canonical: "https://www.easequran.com/locations/chicago",
   },
   openGraph: {
     title: "Online Quran Classes in Chicago, Illinois | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in Chicago, IL. Serving Bridgeview, Orland Park, north suburbs, and all Chicagoland.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in Chicago, Illinois, Ease Quran Academy" }],
+    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in Chicago, Illinois, Ease Quran Academy" }],
   },
 };
 
@@ -24,9 +24,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
-    { "@type": "ListItem", position: 3, name: "Chicago", item: "https://easequran.com/locations/chicago" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "Chicago", item: "https://www.easequran.com/locations/chicago" },
   ],
 };
 
@@ -34,7 +34,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
+  url: "https://www.easequran.com",
   description:
     "Certified online Quran classes for Muslim families in the Chicago metropolitan area.",
   areaServed: {

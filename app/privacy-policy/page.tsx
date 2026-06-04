@@ -1,17 +1,17 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Ease Quran Online Academy",
   description:
     "Read the Privacy Policy of Ease Quran Online Academy. Learn how we collect, use, and protect your personal information when you use our online Quran classes service.",
-  alternates: { canonical: "https://easequran.com/privacy-policy" },
+  alternates: { canonical: "https://www.easequran.com/privacy-policy" },
   openGraph: {
     title: "Privacy Policy | Ease Quran Online Academy",
     description:
       "Learn how Ease Quran Online Academy collects, uses, and protects your personal information.",
-    url: "https://easequran.com/privacy-policy",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Ease Quran Online Academy Privacy Policy" }],
+    url: "https://www.easequran.com/privacy-policy",
+    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Ease Quran Online Academy Privacy Policy" }],
   },
   robots: { index: true, follow: true },
 };
@@ -20,12 +20,12 @@ const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "Privacy Policy — Ease Quran Online Academy",
-  url: "https://easequran.com/privacy-policy",
+  url: "https://www.easequran.com/privacy-policy",
   description: "Privacy Policy for Ease Quran Online Academy detailing data collection, usage, and user rights.",
   publisher: {
     "@type": "EducationalOrganization",
     name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
+    url: "https://www.easequran.com",
   },
   dateModified: "2025-05-16",
   inLanguage: "en-US",
@@ -33,7 +33,7 @@ const pageSchema = {
 
 const EFFECTIVE_DATE = "May 16, 2025";
 const CONTACT_EMAIL = "info@easequran.com";
-const SITE_URL = "https://easequran.com";
+const SITE_URL = "https://www.easequran.com";
 
 export default function PrivacyPolicyPage() {
   return (

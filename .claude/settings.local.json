@@ -21,7 +21,9 @@
       "Read(//skills/**)",
       "Read(//skills/skills/**)",
       "Bash(xargs grep -l \"fetch.*api\\\\|/api/\")",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(git commit -m 'Make circle ring borders full opacity on Mission Vision Values cards *)",
+      "Bash(git commit -m 'Stronger card borders and remove dash in Values text *)"
     ]
   }
 }

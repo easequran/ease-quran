@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Certified online Quran classes for Muslim families in Dallas-Fort Worth. Serving Richardson, Plano, Irving, Garland, and all DFW suburbs. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
-    canonical: "https://easequran.com/locations/dallas",
+    canonical: "https://www.easequran.com/locations/dallas",
   },
   openGraph: {
     title: "Online Quran Classes in Dallas, Texas | Ease Quran Academy",
@@ -24,9 +24,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
-    { "@type": "ListItem", position: 3, name: "Dallas", item: "https://easequran.com/locations/dallas" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "Dallas", item: "https://www.easequran.com/locations/dallas" },
   ],
 };
 
@@ -34,7 +34,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
+  url: "https://www.easequran.com",
   description:
     "Certified online Quran classes for Muslim families in the Dallas-Fort Worth metropolitan area.",
   areaServed: {

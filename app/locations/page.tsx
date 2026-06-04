@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Online Quran Classes by City | USA Locations | Ease Quran",
   description:
     "Ease Quran Online Academy serves Muslim families across the USA. Find online Quran classes in your city: New York, Houston, Chicago, Los Angeles, and more.",
-  alternates: { canonical: "https://easequran.com/locations" },
+  alternates: { canonical: "https://www.easequran.com/locations" },
 };
 
 const cities = [

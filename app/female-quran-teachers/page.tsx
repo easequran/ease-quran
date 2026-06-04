@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { User, Users, CheckCircle, BookOpen } from "lucide-react";
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "online Quran classes for women",
   ],
   alternates: {
-    canonical: "https://easequran.com/female-quran-teachers",
+    canonical: "https://www.easequran.com/female-quran-teachers",
   },
   openGraph: {
     title: "Female Quran Teacher Online USA | Sister Quran Teacher | Ease Quran",
@@ -39,7 +39,7 @@ const personSchema = {
   worksFor: {
     "@type": "EducationalOrganization",
     name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
+    url: "https://www.easequran.com",
   },
   alumniOf: [
     {

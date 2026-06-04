@@ -1,8 +1,29 @@
 import { MetadataRoute } from "next";
+import fs from "fs";
+import path from "path";
+
+function getBlogSlugs(): string[] {
+  const blogDir = path.join(process.cwd(), "app", "blog");
+  try {
+    return fs
+      .readdirSync(blogDir, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name);
+  } catch {
+    return [];
+  }
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://easequran.com";
+  const base = "https://www.easequran.com";
   const now = new Date().toISOString();
+
+  const blogEntries: MetadataRoute.Sitemap = getBlogSlugs().map((slug) => ({
+    url: `${base}/blog/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
 
   return [
     // Homepage — highest priority
@@ -17,8 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/terms-conditions`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
-    // Blog articles
-    { url: `${base}/blog/how-to-choose-online-quran-academy`, lastModified: "2025-01-15T00:00:00.000Z", changeFrequency: "monthly", priority: 0.7 },
     // Course pages
     { url: `${base}/courses/quran-for-kids`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/courses/tajweed`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
@@ -40,5 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/locations/philadelphia`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/locations/atlanta`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/locations/columbus-ohio`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    // Blog articles — auto-populated from filesystem
+    ...blogEntries,
   ];
 }

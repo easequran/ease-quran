@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Certified online Quran classes for Muslim families in Dearborn, Michigan. Serving the Arab-American community, Dearborn Heights, Detroit metro, and all of SE Michigan. Free trial available.",
   alternates: {
-    canonical: "https://easequran.com/locations/dearborn-michigan",
+    canonical: "https://www.easequran.com/locations/dearborn-michigan",
   },
   openGraph: {
     title: "Online Quran Classes in Dearborn, Michigan | Ease Quran Academy",
@@ -24,9 +24,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
-    { "@type": "ListItem", position: 3, name: "Dearborn, Michigan", item: "https://easequran.com/locations/dearborn-michigan" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "Dearborn, Michigan", item: "https://www.easequran.com/locations/dearborn-michigan" },
   ],
 };
 
@@ -34,7 +34,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
+  url: "https://www.easequran.com",
   description:
     "Certified online Quran classes for Muslim families in Dearborn, Michigan and the greater Detroit metro area.",
   areaServed: {

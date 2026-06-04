@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "Structured online Hifz program for kids and adults. Certified teachers, proven memorization methods. Serving Muslim families across the USA.",
   alternates: {
-    canonical: "https://easequran.com/courses/hifz",
+    canonical: "https://www.easequran.com/courses/hifz",
   },
   openGraph: {
     title: "Online Hifz Program | Quran Memorization Classes USA",
     description:
       "Structured online Hifz program for kids and adults. Certified teachers, proven memorization methods. Serving Muslim families across the USA.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Hifz Program, Ease Quran Academy" }],
+    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Hifz Program, Ease Quran Academy" }],
   },
 };
 
@@ -25,9 +25,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Courses", item: "https://easequran.com/courses" },
-    { "@type": "ListItem", position: 3, name: "Hifz Program", item: "https://easequran.com/courses/hifz" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Courses", item: "https://www.easequran.com/courses" },
+    { "@type": "ListItem", position: 3, name: "Hifz Program", item: "https://www.easequran.com/courses/hifz" },
   ],
 };
 
@@ -37,7 +37,7 @@ const aggregateRatingSchema = {
   itemReviewed: {
     "@type": "Course",
     name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
+    url: "https://www.easequran.com",
   },
   ratingValue: "4.9",
   bestRating: "5",
@@ -55,9 +55,9 @@ const courseSchema = {
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
+    url: "https://www.easequran.com",
   },
-  url: "https://easequran.com/courses/hifz",
+  url: "https://www.easequran.com/courses/hifz",
   courseMode: "online",
   educationalLevel: "Intermediate to Advanced",
   teaches: ["Quran Memorization", "Hifz Methodology", "Tajweed Integration", "Revision System"],

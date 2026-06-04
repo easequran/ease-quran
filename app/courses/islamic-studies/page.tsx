@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Users, BookOpen, Star } from "lucide-react";
@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "Comprehensive Islamic studies online for kids and adults. Aqeedah, Fiqh, Seerah, Islamic manners. Certified teachers. Free trial class for US families.",
   alternates: {
-    canonical: "https://easequran.com/courses/islamic-studies",
+    canonical: "https://www.easequran.com/courses/islamic-studies",
   },
   openGraph: {
     title: "Online Islamic Studies Classes | Ease Quran Academy USA",
     description:
       "Comprehensive Islamic studies online for kids and adults. Aqeedah, Fiqh, Seerah, Islamic manners. Certified teachers. Free trial class for US families.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Islamic Studies Classes, Ease Quran Academy" }],
+    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Islamic Studies Classes, Ease Quran Academy" }],
   },
 };
 
@@ -25,9 +25,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Courses", item: "https://easequran.com/courses" },
-    { "@type": "ListItem", position: 3, name: "Islamic Studies", item: "https://easequran.com/courses/islamic-studies" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Courses", item: "https://www.easequran.com/courses" },
+    { "@type": "ListItem", position: 3, name: "Islamic Studies", item: "https://www.easequran.com/courses/islamic-studies" },
   ],
 };
 
@@ -37,7 +37,7 @@ const aggregateRatingSchema = {
   itemReviewed: {
     "@type": "Course",
     name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
+    url: "https://www.easequran.com",
   },
   ratingValue: "4.9",
   bestRating: "5",
@@ -55,9 +55,9 @@ const courseSchema = {
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
+    url: "https://www.easequran.com",
   },
-  url: "https://easequran.com/courses/islamic-studies",
+  url: "https://www.easequran.com/courses/islamic-studies",
   courseMode: "online",
   educationalLevel: "Beginner to Intermediate",
   teaches: ["Aqeedah", "Fiqh", "Seerah", "Islamic Manners", "Islamic History"],

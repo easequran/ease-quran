@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CourseCard from "@/components/CourseCard";
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Online Quran Classes for Kids & Adults in USA | Ease Quran Academy",
   description:
     "Book certified online Quran classes for your family. Wifaq ul Madaris certified teachers, female teachers available, free first class. Serving Muslim families across all 50 states.",
-  alternates: { canonical: "https://easequran.com" },
+  alternates: { canonical: "https://www.easequran.com" },
 };
 
 const courses = [
@@ -193,8 +193,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  logo: "https://easequran.com/images/logo.png",
+  url: "https://www.easequran.com",
+  logo: "https://www.easequran.com/images/logo.png",
   email: "info@easequran.com",
   description:
     "Certified online Quran academy serving Muslim families across the United States.",

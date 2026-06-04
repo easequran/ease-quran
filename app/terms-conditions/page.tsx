@@ -1,17 +1,17 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | Ease Quran Online Academy",
   description:
     "Read the Terms and Conditions of Ease Quran Online Academy. Understand your rights and responsibilities when using our online Quran classes service.",
-  alternates: { canonical: "https://easequran.com/terms-conditions" },
+  alternates: { canonical: "https://www.easequran.com/terms-conditions" },
   openGraph: {
     title: "Terms & Conditions | Ease Quran Online Academy",
     description:
       "Terms and Conditions for using Ease Quran Online Academy's online Quran education services.",
-    url: "https://easequran.com/terms-conditions",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Ease Quran Online Academy Terms & Conditions" }],
+    url: "https://www.easequran.com/terms-conditions",
+    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Ease Quran Online Academy Terms & Conditions" }],
   },
   robots: { index: true, follow: true },
 };
@@ -20,12 +20,12 @@ const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   name: "Terms & Conditions — Ease Quran Online Academy",
-  url: "https://easequran.com/terms-conditions",
+  url: "https://www.easequran.com/terms-conditions",
   description: "Terms and Conditions governing the use of Ease Quran Online Academy's website and online Quran education services.",
   publisher: {
     "@type": "EducationalOrganization",
     name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
+    url: "https://www.easequran.com",
   },
   dateModified: "2025-05-16",
   inLanguage: "en-US",
@@ -33,7 +33,7 @@ const pageSchema = {
 
 const EFFECTIVE_DATE = "May 16, 2025";
 const CONTACT_EMAIL = "info@easequran.com";
-const SITE_URL = "https://easequran.com";
+const SITE_URL = "https://www.easequran.com";
 
 export default function TermsConditionsPage() {
   return (
