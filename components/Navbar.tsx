@@ -123,21 +123,26 @@ export default function Navbar() {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-navy" />
             </span>
 
-            {/* Text */}
-            <p className="banner-text-pulse text-xs sm:text-sm font-extrabold tracking-wide leading-tight">
+            {/* Text — full banner is a link on mobile */}
+            <Link
+              href="/summer-quran-classes"
+              className="banner-text-pulse text-xs sm:text-sm font-extrabold tracking-wide leading-tight hover:underline"
+            >
               <span className="uppercase">🎉 Summer 2026 Enrollment Now Open</span>
               <span className="hidden sm:inline font-medium normal-case">
                 {" "}— One-on-one Quran classes for kids ages 4–14 · All 50 states · Free first class
               </span>
-            </p>
+            </Link>
 
-            {/* Bouncing CTA */}
+            {/* Bouncing CTA — visible on all screen sizes */}
             <Link
               href="/summer-quran-classes"
-              className="hidden sm:inline-flex shrink-0 items-center gap-1.5 bg-navy text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-navy/80 transition-colors whitespace-nowrap animate-bounce shadow-md"
+              className="inline-flex shrink-0 items-center gap-1 bg-navy text-white text-xs font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-navy/80 transition-colors whitespace-nowrap animate-bounce shadow-md"
               style={{ animationDuration: "1.2s" }}
             >
-              Enroll Free →
+              <span className="hidden sm:inline">Enroll Free</span>
+              <span className="sm:hidden">Join</span>
+              {" "}→
             </Link>
 
             {/* Dismiss */}
