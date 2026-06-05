@@ -20,7 +20,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 // ─── Metadata ───────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Summer Quran Classes for Kids 2026 | Ease Quran Academy",
+  title: { absolute: "Summer Quran Classes for Kids 2026 | Ease Quran Academy" },
   description:
     "Give your child a meaningful summer. Certified online Quran classes for kids ages 4 to 14 across the USA. Free first class. Female teachers available. Enroll today.",
   alternates: {
