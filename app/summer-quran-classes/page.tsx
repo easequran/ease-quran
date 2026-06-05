@@ -405,7 +405,7 @@ export default function SummerQuranClassesPage() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy to-transparent" />
 
         <div className="relative z-10 container-custom py-20 lg:py-28">
-          <div className="max-w-3xl">
+          <div className="max-w-5xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 text-gold text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
               <Sun size={13} />
@@ -413,7 +413,7 @@ export default function SummerQuranClassesPage() {
             </div>
 
             <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
-              Give Your Child a Summer That Actually Means Something
+              Summer Quran Classes That Give Your Child a Summer That Actually Means Something
             </h1>
 
             <div className="space-y-4 text-white/80 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">
