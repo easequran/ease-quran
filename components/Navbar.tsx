@@ -110,28 +110,32 @@ export default function Navbar() {
     <>
       {/* ── Summer Announcement Banner ── */}
       {bannerVisible && (
-        <div className="relative z-50 bg-gradient-to-r from-amber-500 via-gold to-amber-400 text-navy">
-          <div className="container-custom flex items-center justify-center gap-3 py-2.5 px-10 text-center">
+        <div className="relative z-50 banner-bg banner-shimmer overflow-hidden text-navy">
+          <div className="relative flex items-center justify-center gap-2 sm:gap-4 py-3 px-10 text-center">
 
-            {/* Blinking pulse dot */}
-            <span className="relative flex h-2.5 w-2.5 shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-navy opacity-60" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-navy" />
+            {/* Spinning star left */}
+            <span className="banner-star text-base hidden sm:inline shrink-0" aria-hidden="true">☀️</span>
+
+            {/* Double ping dot */}
+            <span className="relative flex h-3 w-3 shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-navy/70" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-navy/40 delay-150" style={{ animationDelay: "0.4s" }} />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-navy" />
             </span>
 
             {/* Text */}
-            <p className="text-xs sm:text-sm font-bold tracking-wide">
-              <span className="hidden sm:inline">☀️ </span>
-              Summer 2026 Enrollment is Open
-              <span className="hidden sm:inline"> — </span>
-              <span className="sm:hidden"> · </span>
-              <span className="font-medium">One-on-one Quran classes for kids ages 4–14 across the USA.</span>
+            <p className="banner-text-pulse text-xs sm:text-sm font-extrabold tracking-wide leading-tight">
+              <span className="uppercase">🎉 Summer 2026 Enrollment Now Open</span>
+              <span className="hidden sm:inline font-medium normal-case">
+                {" "}— One-on-one Quran classes for kids ages 4–14 · All 50 states · Free first class
+              </span>
             </p>
 
-            {/* CTA */}
+            {/* Bouncing CTA */}
             <Link
               href="/summer-quran-classes"
-              className="hidden sm:inline-flex shrink-0 items-center gap-1 bg-navy text-white text-xs font-bold px-3 py-1.5 rounded-full hover:bg-navy/80 transition-colors whitespace-nowrap"
+              className="hidden sm:inline-flex shrink-0 items-center gap-1.5 bg-navy text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-navy/80 transition-colors whitespace-nowrap animate-bounce shadow-md"
+              style={{ animationDuration: "1.2s" }}
             >
               Enroll Free →
             </Link>
@@ -140,9 +144,9 @@ export default function Navbar() {
             <button
               onClick={() => setBannerVisible(false)}
               aria-label="Dismiss announcement"
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded-full hover:bg-navy/10 transition-colors text-navy/70 hover:text-navy"
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded-full bg-navy/10 hover:bg-navy/20 transition-colors text-navy"
             >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="w-3.5 h-3.5">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="w-3 h-3">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
