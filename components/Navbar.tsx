@@ -89,6 +89,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMobile, setOpenMobile] = useState<string | null>(null);
   const [activeDesktop, setActiveDesktop] = useState<string | null>(null);
+  const [bannerVisible, setBannerVisible] = useState(true);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -107,6 +108,48 @@ export default function Navbar() {
 
   return (
     <>
+      {/* ── Summer Announcement Banner ── */}
+      {bannerVisible && (
+        <div className="relative z-50 bg-gradient-to-r from-amber-500 via-gold to-amber-400 text-navy">
+          <div className="container-custom flex items-center justify-center gap-3 py-2.5 px-10 text-center">
+
+            {/* Blinking pulse dot */}
+            <span className="relative flex h-2.5 w-2.5 shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-navy opacity-60" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-navy" />
+            </span>
+
+            {/* Text */}
+            <p className="text-xs sm:text-sm font-bold tracking-wide">
+              <span className="hidden sm:inline">☀️ </span>
+              Summer 2026 Enrollment is Open
+              <span className="hidden sm:inline"> — </span>
+              <span className="sm:hidden"> · </span>
+              <span className="font-medium">One-on-one Quran classes for kids ages 4–14 across the USA.</span>
+            </p>
+
+            {/* CTA */}
+            <Link
+              href="/summer-quran-classes"
+              className="hidden sm:inline-flex shrink-0 items-center gap-1 bg-navy text-white text-xs font-bold px-3 py-1.5 rounded-full hover:bg-navy/80 transition-colors whitespace-nowrap"
+            >
+              Enroll Free →
+            </Link>
+
+            {/* Dismiss */}
+            <button
+              onClick={() => setBannerVisible(false)}
+              aria-label="Dismiss announcement"
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded-full hover:bg-navy/10 transition-colors text-navy/70 hover:text-navy"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="w-3.5 h-3.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* ── Top social bar — scrolls away ── */}
       <div className="bg-navy border-b border-gold/20">
         <div className="container-custom flex items-center justify-between py-2.5">
