@@ -12,6 +12,9 @@ import {
   Shield,
   ChevronRight,
   Sun,
+  Monitor,
+  MapPin,
+  AlertTriangle,
 } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 
@@ -197,17 +200,17 @@ const trustBadges = [
 
 const problemCards = [
   {
-    icon: "📱",
+    icon: Monitor,
     title: "Screens Are Winning the Summer",
     text: "It starts with one YouTube video and somehow the whole day disappears. You know your child deserves better than that but finding the right alternative takes time and trust you do not have to waste.",
   },
   {
-    icon: "🕌",
+    icon: MapPin,
     title: "Local Options Are Limited or Gone",
     text: "The masjid summer program filled up weeks ago. The local Islamic school is closed until September. You are left scrambling in June trying to find something that actually works.",
   },
   {
-    icon: "😞",
+    icon: AlertTriangle,
     title: "You Have Been Let Down Before",
     text: "Maybe you tried another online academy. The teacher cancelled three times. Progress was slow. Your child lost interest. That experience makes you careful and that is completely fair.",
   },
@@ -286,8 +289,7 @@ const testimonials = [
       "We signed up last June not really knowing what to expect. By August our daughter was reading Surah Al-Fatiha on her own and actually asking to have her class every day. The teacher is incredibly patient and my daughter genuinely looks forward to it. That was not something I expected from an online program honestly.",
     name: "Sarah M.",
     location: "Houston TX",
-    avatar: "/images/teacher-1.webp",
-    useImage: true,
+    initials: "SM",
   },
   {
     stars: 5,
@@ -296,7 +298,6 @@ const testimonials = [
     name: "Ahmed K.",
     location: "New Jersey",
     initials: "AK",
-    useImage: false,
   },
   {
     stars: 5,
@@ -305,7 +306,6 @@ const testimonials = [
     name: "Fatima R.",
     location: "Chicago IL",
     initials: "FR",
-    useImage: false,
   },
 ];
 
@@ -365,6 +365,16 @@ const faqs = [
   },
 ];
 
+// ─── WhatsApp SVG ────────────────────────────────────────────────────────────
+
+function WhatsAppIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  );
+}
+
 // ─── Page ────────────────────────────────────────────────────────────────────
 
 export default function SummerQuranClassesPage() {
@@ -384,105 +394,80 @@ export default function SummerQuranClassesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
       />
 
-      {/* ── SECTION 1: HERO ─────────────────────────────────────────── */}
-      <section className="bg-navy overflow-hidden">
-        <div className="container-custom py-16 lg:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      {/* ── SECTION 1: HERO — full background image with overlay ─── */}
+      <section
+        className="relative min-h-[90vh] flex items-center overflow-hidden"
+        style={{ backgroundImage: "url('/images/summer/summer-hero.webp')", backgroundSize: "cover", backgroundPosition: "center top" }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-navy/80" />
 
-            {/* Left — Copy */}
-            <div>
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 text-gold text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
-                <Sun size={14} />
-                Summer 2026 Enrollment Now Open
-              </div>
+        {/* Subtle gradient fade at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy to-transparent" />
 
-              <h1 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-6">
-                Give Your Child a Summer That Actually Means Something
-              </h1>
-
-              <div className="space-y-4 text-white/75 leading-relaxed text-base mb-8">
-                <p>
-                  School is out and the days are long. Most kids will spend those hours on screens
-                  without anyone really thinking twice about it. But you are here because you want
-                  something different for your child.
-                </p>
-                <p>
-                  At Ease Quran Academy, we have spent the last six years helping Muslim families
-                  across America do exactly that. This summer, your child can build a real connection
-                  with the Quran, one lesson at a time, from the comfort of your own home.
-                </p>
-                <p>
-                  Certified teachers. Flexible timing. A{" "}
-                  <Link href="/free-trial" className="text-gold font-semibold hover:underline">
-                    free trial class
-                  </Link>{" "}
-                  with no strings attached. Serving Muslim families in all 50 states.
-                </p>
-              </div>
-
-              {/* Buttons */}
-              <div className="flex flex-wrap gap-4 mb-8">
-                <Link
-                  href="/free-trial"
-                  className="bg-gold text-navy font-bold px-7 py-3.5 rounded-xl hover:bg-yellow-400 transition-colors text-sm shadow-lg shadow-gold/30"
-                >
-                  Book Your Free Trial Class
-                </Link>
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 border-2 border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl hover:border-white/60 hover:bg-white/5 transition-all text-sm"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-green-400">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                  </svg>
-                  WhatsApp Us
-                </a>
-              </div>
-
-              {/* Trust badges */}
-              <div className="flex flex-wrap gap-2">
-                {trustBadges.map(({ icon: Icon, label }) => (
-                  <span
-                    key={label}
-                    className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 text-white/80 text-xs font-medium px-3 py-1.5 rounded-full"
-                  >
-                    <Icon size={12} className="text-gold" />
-                    {label}
-                  </span>
-                ))}
-              </div>
+        <div className="relative z-10 container-custom py-20 lg:py-28">
+          <div className="max-w-3xl">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 text-gold text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
+              <Sun size={13} />
+              Summer 2026 Enrollment Now Open
             </div>
 
-            {/* Right — Hero Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/summer/summer-hero.webp"
-                  alt="Muslim child learning Quran online during summer vacation with a certified teacher at Ease Quran Academy"
-                  width={1200}
-                  height={900}
-                  priority={true}
-                  quality={85}
-                  className="w-full h-auto object-cover"
-                />
-                {/* Decorative overlay badge */}
-                <div className="absolute bottom-4 left-4 right-4 bg-navy/90 backdrop-blur-sm rounded-xl px-4 py-3 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gold flex items-center justify-center shrink-0">
-                    <Star size={14} fill="white" className="text-white" />
-                  </div>
-                  <div>
-                    <p className="text-white text-xs font-bold">500+ families enrolled</p>
-                    <p className="text-white/60 text-xs">Across all 50 US states</p>
-                  </div>
-                </div>
-              </div>
-              {/* Glow effect */}
-              <div className="absolute -inset-4 bg-gold/10 rounded-3xl blur-2xl -z-10" />
+            <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+              Give Your Child a Summer That Actually Means Something
+            </h1>
+
+            <div className="space-y-4 text-white/80 leading-relaxed text-base md:text-lg mb-8 max-w-2xl">
+              <p>
+                School is out and the days are long. Most kids will spend those hours on screens
+                without anyone really thinking twice about it. But you are here because you want
+                something different for your child.
+              </p>
+              <p>
+                At Ease Quran Academy, we have spent the last six years helping Muslim families
+                across America do exactly that. This summer, your child can build a real connection
+                with the Quran, one lesson at a time, from the comfort of your own home.
+              </p>
+              <p>
+                Certified teachers. Flexible timing. A{" "}
+                <Link href="/free-trial" className="text-gold font-semibold hover:underline">
+                  free trial class
+                </Link>{" "}
+                with no strings attached. Serving Muslim families in all 50 states.
+              </p>
             </div>
 
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 mb-10">
+              <Link
+                href="/free-trial"
+                className="bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-sm shadow-xl shadow-gold/30"
+              >
+                Book Your Free Trial Class
+              </Link>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 border-2 border-white/40 text-white font-semibold px-7 py-4 rounded-xl hover:border-white/70 hover:bg-white/5 transition-all text-sm"
+              >
+                <WhatsAppIcon className="w-4 h-4 text-green-400" />
+                WhatsApp Us
+              </a>
+            </div>
+
+            {/* Trust badges */}
+            <div className="flex flex-wrap gap-2">
+              {trustBadges.map(({ icon: Icon, label }) => (
+                <span
+                  key={label}
+                  className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white/85 text-xs font-medium px-3 py-1.5 rounded-full backdrop-blur-sm"
+                >
+                  <Icon size={12} className="text-gold" />
+                  {label}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -502,14 +487,16 @@ export default function SummerQuranClassesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            {problemCards.map((card) => (
+            {problemCards.map(({ icon: Icon, title, text }) => (
               <div
-                key={card.title}
+                key={title}
                 className="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300"
               >
-                <span className="text-3xl mb-4 block">{card.icon}</span>
-                <h3 className="font-playfair font-bold text-navy text-lg mb-3">{card.title}</h3>
-                <p className="text-grey text-sm leading-relaxed">{card.text}</p>
+                <div className="w-12 h-12 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center mb-5">
+                  <Icon size={22} className="text-red-400" />
+                </div>
+                <h3 className="font-playfair font-bold text-navy text-lg mb-3">{title}</h3>
+                <p className="text-grey text-sm leading-relaxed">{text}</p>
               </div>
             ))}
           </div>
@@ -546,8 +533,8 @@ export default function SummerQuranClassesPage() {
             <p className="text-grey leading-relaxed">
               This is not a group class where your child sits in the back and hopes the teacher
               notices them. Every single session at Ease Quran is one on one, fully personalized,
-              and led by a teacher who genuinely cares about your child&apos;s progress. Here is what
-              every family gets when they enroll this summer.
+              and led by a teacher who genuinely cares about your child&apos;s progress. Here is
+              what every family gets when they enroll this summer.
             </p>
           </div>
 
@@ -576,7 +563,7 @@ export default function SummerQuranClassesPage() {
               quality={85}
               className="w-full h-auto object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
               <p className="text-white font-playfair font-bold text-lg md:text-xl">
                 One-on-one. Certified. Flexible. From your home.
@@ -611,9 +598,7 @@ export default function SummerQuranClassesPage() {
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-3xl">{course.emoji}</span>
                   {course.badge && (
-                    <span
-                      className={`text-xs font-bold px-3 py-1 rounded-full ${course.badgeColor}`}
-                    >
+                    <span className={`text-xs font-bold px-3 py-1 rounded-full ${course.badgeColor}`}>
                       {course.badge}
                     </span>
                   )}
@@ -625,16 +610,12 @@ export default function SummerQuranClassesPage() {
                   className="inline-flex items-center gap-2 text-gold font-semibold text-sm hover:text-navy transition-colors group"
                 >
                   See Course Details
-                  <ChevronRight
-                    size={16}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
+                  <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             ))}
           </div>
 
-          {/* Supporting internal links */}
           <p className="text-center text-grey text-sm mt-8">
             Also available:{" "}
             <Link href="/courses/quran-for-kids" className="text-gold font-semibold hover:underline">
@@ -675,35 +656,18 @@ export default function SummerQuranClassesPage() {
                 key={t.name}
                 className="bg-offwhite border border-gray-100 rounded-2xl p-7 flex flex-col shadow-sm"
               >
-                {/* Stars */}
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: t.stars }).map((_, i) => (
                     <Star key={i} size={16} fill="#F5A623" className="text-gold" />
                   ))}
                 </div>
-
-                {/* Quote */}
                 <blockquote className="text-grey text-sm leading-relaxed flex-1 mb-6">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-
-                {/* Author */}
                 <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
-                  {t.useImage ? (
-                    <div className="w-10 h-10 rounded-full overflow-hidden shrink-0">
-                      <Image
-                        src="/images/teacher-1.webp"
-                        alt={`${t.name} testimonial`}
-                        width={40}
-                        height={40}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center shrink-0">
-                      <span className="text-gold font-bold text-xs">{t.initials}</span>
-                    </div>
-                  )}
+                  <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center shrink-0">
+                    <span className="text-gold font-bold text-xs">{t.initials}</span>
+                  </div>
                   <div>
                     <p className="font-semibold text-navy text-sm">{t.name}</p>
                     <p className="text-grey text-xs">{t.location}</p>
@@ -727,9 +691,15 @@ export default function SummerQuranClassesPage() {
         </div>
       </section>
 
-      {/* ── SECTION 6: HOW IT WORKS ─────────────────────────────────── */}
-      <section className="section-padding bg-navy">
-        <div className="container-custom">
+      {/* ── SECTION 6: HOW IT WORKS — background image with overlay ── */}
+      <section
+        className="relative section-padding overflow-hidden"
+        style={{ backgroundImage: "url('/images/hero-child.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
+      >
+        {/* Dark navy overlay */}
+        <div className="absolute inset-0 bg-navy/88" />
+
+        <div className="relative z-10 container-custom">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="inline-block text-gold text-xs font-bold tracking-widest uppercase mb-3">
               Getting Started
@@ -741,13 +711,13 @@ export default function SummerQuranClassesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
             {steps.map((step, i) => (
-              <div key={step.number} className="relative text-center md:text-left">
+              <div key={step.number} className="relative text-center">
                 {/* Connector line on desktop */}
                 {i < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-[calc(100%-1rem)] w-8 h-0.5 bg-gold/30" />
+                  <div className="hidden md:block absolute top-8 left-[calc(100%-0.5rem)] w-full h-0.5 bg-gold/25" />
                 )}
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/15 border border-gold/30 mb-5">
-                  <span className="font-playfair font-bold text-gold text-xl">{step.number}</span>
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gold/15 border border-gold/40 mb-5">
+                  <span className="font-playfair font-bold text-gold text-2xl">{step.number}</span>
                 </div>
                 <h3 className="font-playfair font-bold text-white text-lg mb-3">{step.title}</h3>
                 <p className="text-white/65 text-sm leading-relaxed">{step.text}</p>
@@ -758,7 +728,7 @@ export default function SummerQuranClassesPage() {
           <div className="text-center">
             <Link
               href="/free-trial"
-              className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-sm shadow-lg shadow-gold/20"
+              className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-sm shadow-lg shadow-black/20"
             >
               Book a Free Trial Class
             </Link>
@@ -782,7 +752,6 @@ export default function SummerQuranClassesPage() {
 
             <FAQAccordion faqs={faqs} />
 
-            {/* Inline links within FAQ context */}
             <p className="text-center text-grey text-sm mt-8">
               Ready to start?{" "}
               <Link href="/free-trial" className="text-gold font-semibold hover:underline">
@@ -835,16 +804,13 @@ export default function SummerQuranClassesPage() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 border-2 border-white/40 text-white font-bold px-8 py-4 rounded-xl hover:border-white hover:bg-white/5 transition-all text-sm"
               >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-green-400">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                </svg>
+                <WhatsAppIcon className="w-4 h-4 text-green-400" />
                 WhatsApp Us
               </a>
             </div>
 
             <p className="text-white/40 text-xs">
-              Serving Muslim families across all 50 states. Female teachers available. First class
-              is free.
+              Serving Muslim families across all 50 states. Female teachers available. First class is free.
             </p>
           </div>
         </div>
