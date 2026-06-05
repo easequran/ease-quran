@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import {
   CheckCircle,
@@ -553,22 +552,17 @@ export default function SummerQuranClassesPage() {
             ))}
           </div>
 
-          {/* Teacher-Student Image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto">
-            <Image
-              src="/images/summer/teacher-student.webp"
-              alt="Young Muslim girl attending online Quran class with a certified female teacher via video call"
-              width={1600}
-              height={900}
-              quality={85}
-              className="w-full h-auto object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <p className="text-white font-playfair font-bold text-lg md:text-xl">
+          {/* Teacher-Student Image — CSS background avoids Next.js optimisation issues */}
+          <div
+            className="relative rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto min-h-[420px] md:min-h-[500px] flex items-end"
+            style={{ backgroundImage: "url('/images/summer/teacher-student.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent rounded-2xl" />
+            <div className="relative z-10 p-7">
+              <p className="text-white font-playfair font-bold text-lg md:text-2xl mb-1">
                 One-on-one. Certified. Flexible. From your home.
               </p>
-              <p className="text-white/70 text-sm mt-1">
+              <p className="text-white/70 text-sm">
                 Every class is built around your child, not the other way around.
               </p>
             </div>
@@ -677,17 +671,13 @@ export default function SummerQuranClassesPage() {
             ))}
           </div>
 
-          {/* Testimonial Family Image */}
-          <div className="relative rounded-2xl overflow-hidden max-w-3xl mx-auto shadow-lg">
-            <Image
-              src="/images/summer/testimonial-family.webp"
-              alt="Happy Muslim family in America whose daughter completed Quran classes with Ease Quran Academy"
-              width={800}
-              height={800}
-              quality={85}
-              className="w-full h-auto object-cover"
-            />
-          </div>
+          {/* Testimonial Family Image — CSS background */}
+          <div
+            className="relative rounded-2xl overflow-hidden max-w-3xl mx-auto shadow-lg min-h-[360px] md:min-h-[440px]"
+            style={{ backgroundImage: "url('/images/summer/testimonial-family.webp')", backgroundSize: "cover", backgroundPosition: "center top" }}
+            role="img"
+            aria-label="Happy Muslim family in America whose daughter completed Quran classes with Ease Quran Academy"
+          />
         </div>
       </section>
 
@@ -696,8 +686,9 @@ export default function SummerQuranClassesPage() {
         className="relative section-padding overflow-hidden"
         style={{ backgroundImage: "url('/images/hero-child.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
-        {/* Dark navy overlay */}
-        <div className="absolute inset-0 bg-navy/88" />
+        {/* Dark navy overlay — strong enough to keep text crisp */}
+        <div className="absolute inset-0 bg-navy/80" />
+        <div className="absolute inset-0 bg-black/30" />
 
         <div className="relative z-10 container-custom">
           <div className="text-center max-w-2xl mx-auto mb-12">
