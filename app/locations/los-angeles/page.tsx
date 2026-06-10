@@ -370,6 +370,7 @@ export default function LosAngelesPage() {
         subtext="Serving Muslim families across the entire Los Angeles metro, from Inglewood to Pomona, Culver City to the San Gabriel Valley. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in Los Angeles"
       />
     </>
   );

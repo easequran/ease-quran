@@ -194,7 +194,7 @@ const trustBadges = [
   { icon: BookOpen, label: "Ages 4 to 14" },
   { icon: CheckCircle, label: "All 50 States" },
   { icon: Gift, label: "Free First Class" },
-  { icon: Star, label: "500+ Families Served" },
+  { icon: Star, label: "100% Certified Teachers" },
 ];
 
 const problemCards = [
@@ -229,7 +229,7 @@ const features = [
   {
     icon: Award,
     title: "Certified From Wifaq ul Madaris",
-    text: "Every teacher at Ease Quran holds certification from Wifaq ul Madaris Al-Arabia, one of the most respected Islamic education boards in the world. When your child learns here, they are learning from someone who earned the right to teach.",
+    text: "Every teacher at Ease Quran holds certification from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. When your child learns here, they are learning from someone who earned the right to teach.",
   },
   {
     icon: Shield,

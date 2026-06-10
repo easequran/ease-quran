@@ -79,7 +79,7 @@ const faqSchema = {
       name: "How qualified are your teachers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic education credential in the world. Every class is one-on-one and conducted by a formally trained scholar.",
+        text: "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Every class is one-on-one and conducted by a formally trained scholar.",
       },
     },
     {
@@ -120,7 +120,7 @@ const faqs = [
   {
     question: "How qualified are your teachers?",
     answer:
-      "All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, the most prestigious Islamic education board in the world, whose credentials are recognized by Islamic scholars and institutions globally. Every class is a private, one-on-one session conducted by a formally trained Islamic scholar. This is the standard Philadelphia's Muslim families deserve.",
+      "All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized, whose credentials are recognized by Islamic scholars and institutions globally. Every class is a private, one-on-one session conducted by a formally trained Islamic scholar. This is the standard Philadelphia's Muslim families deserve.",
   },
   {
     question: "Is there a female Quran teacher available?",
@@ -370,6 +370,7 @@ export default function PhiladelphiaPage() {
         subtext="One-on-one, certified Quran instruction for every Philadelphia family, from West Philly and Northeast to the suburbs of Delaware and Montgomery counties. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in Philadelphia Pennsylvania"
       />
     </>
   );

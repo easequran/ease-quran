@@ -79,7 +79,7 @@ const faqSchema = {
       name: "Are your teachers certified from recognized Islamic institutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic education credential in the world. Columbus Muslim families can trust our teachers' qualifications completely.",
+        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Columbus Muslim families can trust our teachers' qualifications completely.",
       },
     },
     {
@@ -120,7 +120,7 @@ const faqs = [
   {
     question: "Are your teachers certified from recognized Islamic institutions?",
     answer:
-      "All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, widely regarded as the most prestigious Islamic education board in the world. This credential represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Columbus Muslim families, from any background, can have complete confidence in the qualifications of our teachers.",
+      "All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. This credential represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Columbus Muslim families, from any background, can have complete confidence in the qualifications of our teachers.",
   },
   {
     question: "Is a female teacher available for sisters in Columbus?",
@@ -370,6 +370,7 @@ export default function ColumbusOhioPage() {
         subtext="Serving Somali, South Asian, Arab, and all Muslim families across Columbus and central Ohio with one-on-one, expert Quran instruction. Your first class is completely free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in Columbus Ohio"
       />
     </>
   );

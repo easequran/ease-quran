@@ -1,15 +1,13 @@
 import Link from "next/link";
 
 const WHATSAPP_NUMBER = "923195657389";
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi I am interested in booking a free trial Quran class"
-);
 
 interface CTASectionProps {
   headline?: string;
   subtext?: string;
   primaryCta?: string;
   primaryHref?: string;
+  whatsappText?: string;
 }
 
 export default function CTASection({
@@ -17,7 +15,9 @@ export default function CTASection({
   subtext = "Join hundreds of Muslim families across America who trust Ease Quran for their children's Islamic education. Book your free trial class — no credit card, no commitment.",
   primaryCta = "Book Your Free Trial Class",
   primaryHref = "/free-trial",
+  whatsappText = "Hi I am interested in booking a free trial Quran class",
 }: CTASectionProps) {
+  const WHATSAPP_MESSAGE = encodeURIComponent(whatsappText);
   return (
     <section className="bg-navy section-padding">
       <div className="container-custom text-center">

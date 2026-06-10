@@ -79,7 +79,7 @@ const faqSchema = {
       name: "Are your Quran teachers formally certified?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All our teachers hold certifications from Wifaq ul Madaris Al-Arabia, the most prestigious Islamic education board in the world. Your child learns from real scholars.",
+        text: "All our teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. Your child learns from real scholars.",
       },
     },
     {
@@ -120,7 +120,7 @@ const faqs = [
   {
     question: "Are your Quran teachers formally certified?",
     answer:
-      "Absolutely. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, the most prestigious Islamic education board in the world, whose graduates are recognized by Islamic scholars and institutions globally. Houston Muslim families deserve that standard of credential.",
+      "Absolutely. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized, whose graduates are recognized by Islamic scholars and institutions globally. Houston Muslim families deserve that standard of credential.",
   },
   {
     question: "Is there a female teacher for my daughter?",
@@ -370,6 +370,7 @@ export default function HoustonPage() {
         subtext="No commute, no traffic, no compromises. Certified Quran education delivered to your home in Sugar Land, Katy, Pearland, the Woodlands, or anywhere in Greater Houston."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in Houston Texas"
       />
     </>
   );

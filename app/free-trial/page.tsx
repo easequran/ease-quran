@@ -89,7 +89,7 @@ export default function FreeTrialPage() {
                     },
                     {
                       icon: CheckCircle,
-                      text: "Trusted by Muslim families across all 50 states in America",
+                      text: "Available to Muslim families across all 50 states in America",
                     },
                   ].map((item, i) => {
                     const Icon = item.icon;
@@ -161,7 +161,7 @@ export default function FreeTrialPage() {
               {/* Geo + Response */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-navy rounded-2xl p-6 text-center">
-                  <p className="text-white font-semibold text-sm">Trusted by families</p>
+                  <p className="text-white font-semibold text-sm">Available</p>
                   <p className="text-gold font-bold">in all 50 states</p>
                 </div>
                 <div className="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
@@ -180,7 +180,7 @@ export default function FreeTrialPage() {
                     </p>
                     <p className="text-grey text-xs leading-relaxed">
                       All Ease Quran teachers hold certification from Wifaq ul Madaris Al-Arabia,
-                      the largest and most respected Islamic education board in the world. This is
+                      Pakistan's largest Islamic education board, globally recognized. This is
                       the gold standard in Quran teacher credentials.
                     </p>
                   </div>

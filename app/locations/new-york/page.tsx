@@ -387,6 +387,7 @@ export default function NewYorkPage() {
         subtext="Join Muslim families across Queens, Brooklyn, the Bronx, and beyond who trust Ease Quran for authentic, certified Quran education. Your first class is completely free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in New York"
       />
     </>
   );

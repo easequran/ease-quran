@@ -403,7 +403,7 @@ export default function TajweedPage() {
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
               Both teachers have studied Tajweed formally and are certified from Wifaq ul Madaris
-              Al-Arabia, the most respected Islamic education board in Pakistan, recognized worldwide.
+              Al-Arabia, Pakistan's largest Islamic education board, globally recognized.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Clock, Calendar, User, ArrowLeft, CheckCircle, XCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How to Choose an Online Quran Academy for Your Child",
+  title: { absolute: "How to Choose an Online Quran Academy for Your Child" },
   description:
     "Confused about which online Quran academy to trust? Learn the 6 essential factors, teacher certification, free trials, female teachers & more. A guide for Muslim parents in USA.",
   alternates: {

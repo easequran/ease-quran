@@ -79,7 +79,7 @@ const faqSchema = {
       name: "Are your teachers certified from recognized Islamic institutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, one of the most respected Islamic education boards in the world. Dearborn's Muslim community understands Islamic credentials, and we take them seriously.",
+        text: "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. Dearborn's Muslim community understands Islamic credentials, and we take them seriously.",
       },
     },
     {
@@ -370,6 +370,7 @@ export default function DearbornMichiganPage() {
         subtext="One-on-one, certified, and fully flexible. Ease Quran brings personal Quran instruction to every home in Dearborn and across the Detroit metro. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in Dearborn Michigan"
       />
     </>
   );

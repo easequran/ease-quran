@@ -465,8 +465,8 @@ export default function QuranForKidsPage() {
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
               Both teachers hold credentials from{" "}
-              <strong>Wifaq ul Madaris Al-Arabia</strong>, the most respected Islamic
-              education board in the world. A female teacher is available on request.
+              <strong>Wifaq ul Madaris Al-Arabia</strong>, Pakistan&apos;s largest Islamic
+              education board, globally recognized. A female teacher is available on request.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">

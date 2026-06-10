@@ -120,7 +120,7 @@ const faqs = [
   {
     question: "How qualified are your teachers compared to local Chicago Islamic schools?",
     answer:
-      "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the most prestigious Islamic academic credential in the world, recognized by Islamic scholars and institutions globally. Additionally, unlike most Islamic school settings where one teacher manages a classroom of students, every Ease Quran class is one-on-one, ensuring your child's individual needs are always addressed.",
+      "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Additionally, unlike most Islamic school settings where one teacher manages a classroom of students, every Ease Quran class is one-on-one, ensuring your child's individual needs are always addressed.",
   },
   {
     question: "Can my daughter have a female Quran teacher?",
@@ -370,6 +370,7 @@ export default function ChicagoPage() {
         subtext="From Bridgeview to the North Shore. Ease Quran brings certified, one-on-one Quran instruction to your home. No commute, no waitlists, no compromise on quality."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in Chicago Illinois"
       />
     </>
   );

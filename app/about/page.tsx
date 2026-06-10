@@ -230,9 +230,9 @@ export default function AboutPage() {
                 <p>
                   Shah Zaib completed his formal Islamic education at a recognized institution
                   affiliated with{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia Pakistan</strong>, the
-                  largest and most respected Islamic education board in Pakistan, whose
-                  certifications are recognized globally by Islamic scholars and institutions.
+                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, Pakistan&apos;s
+                  largest Islamic education board, globally recognized, whose
+                  certifications are honored by Islamic scholars and institutions worldwide.
                 </p>
                 <p>
                   After completing his studies, Shah Zaib began teaching Quran to students in the
@@ -454,7 +454,7 @@ export default function AboutPage() {
 
               <div className="space-y-4">
                 {[
-                  { num: "500+", label: "Students taught across America" },
+                  { num: "Free", label: "First class, no card required" },
                   { num: "50", label: "States we serve" },
                   { num: "3", label: "Wifaq ul Madaris certified teachers" },
                   { num: "6+", label: "Years of trusted teaching experience" },

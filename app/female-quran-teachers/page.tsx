@@ -122,7 +122,7 @@ const faqs = [
   {
     question: "Is Sister Almas Fatima certified?",
     answer:
-      "Yes. Sister Almas Fatima holds two recognized Islamic credentials: a certification as a Qaria e Quran from an institution affiliated with Wifaq ul Madaris Al-Arabia, the most respected Islamic education board in the world, and a Bachelor in Islamic Studies. She has been teaching Quran to sisters and children online since 2022 and brings genuine academic qualification to every lesson.",
+      "Yes. Sister Almas Fatima holds two recognized Islamic credentials: a certification as a Qaria e Quran from an institution affiliated with Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized, and a Bachelor in Islamic Studies. She has been teaching Quran to sisters and children online since 2022 and brings genuine academic qualification to every lesson.",
   },
   {
     question: "Can my daughter have a female teacher for all her classes?",

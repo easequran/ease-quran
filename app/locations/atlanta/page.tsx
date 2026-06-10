@@ -79,7 +79,7 @@ const faqSchema = {
       name: "Are your teachers certified?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic academic credential in the world. Atlanta families can trust our teachers' qualifications completely.",
+        text: "Yes. All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Atlanta families can trust our teachers' qualifications completely.",
       },
     },
     {
@@ -120,7 +120,7 @@ const faqs = [
   {
     question: "Are your teachers certified?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, the most respected and internationally recognized Islamic education board in the world. Atlanta's growing Muslim community deserves teachers with real, verifiable credentials, and that is exactly what we provide.",
+      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. Atlanta's growing Muslim community deserves teachers with real, verifiable credentials, and that is exactly what we provide.",
   },
   {
     question: "Is a female teacher available for sisters in Atlanta?",
@@ -370,6 +370,7 @@ export default function AtlantaPage() {
         subtext="From Gwinnett County to Cobb County, serving the full diversity of Atlanta's fast-growing Muslim community with one-on-one, certified Quran instruction. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in Atlanta Georgia"
       />
     </>
   );

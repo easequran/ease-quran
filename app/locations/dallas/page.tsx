@@ -79,7 +79,7 @@ const faqSchema = {
       name: "Are teachers certified from recognized Islamic institutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic education credential in the world. Dallas families can trust our teachers' qualifications.",
+        text: "Yes. All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Dallas families can trust our teachers' qualifications.",
       },
     },
     {
@@ -120,7 +120,7 @@ const faqs = [
   {
     question: "Are teachers certified from recognized Islamic institutions?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, widely recognized as the most prestigious Islamic education board in the world. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Dallas-area Muslim families can have full confidence in our teachers' qualifications.",
+      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Dallas-area Muslim families can have full confidence in our teachers' qualifications.",
   },
   {
     question: "Is there a female teacher for sisters in Dallas?",
@@ -370,6 +370,7 @@ export default function DallasPage() {
         subtext="From Richardson and Plano to Irving, Garland, and Frisco. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in Dallas Texas"
       />
     </>
   );

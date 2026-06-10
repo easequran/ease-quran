@@ -78,7 +78,7 @@ const faqSchema = {
       name: "How qualified are Ease Quran teachers compared to local Islamic schools?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic education credential in the world. Every class is one-on-one, unlike the group-based instruction at most NJ Islamic schools.",
+        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Every class is one-on-one, unlike the group-based instruction at most NJ Islamic schools.",
       },
     },
     {
@@ -119,7 +119,7 @@ const faqs = [
   {
     question: "How qualified are Ease Quran teachers compared to local Islamic schools?",
     answer:
-      "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the most prestigious Islamic education credential in the world. Beyond credentials, every Ease Quran class is one-on-one and private, unlike the group instruction at most NJ weekend Islamic schools. Your child receives full, individual attention from a certified scholar every single session.",
+      "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Beyond credentials, every Ease Quran class is one-on-one and private, unlike the group instruction at most NJ weekend Islamic schools. Your child receives full, individual attention from a certified scholar every single session.",
   },
   {
     question: "Is there a female teacher available for my daughter in New Jersey?",
@@ -368,6 +368,7 @@ export default function NewJerseyPage() {
         subtext="Paterson, Jersey City, Edison, Newark, wherever you are in New Jersey, certified Quran education comes to your home. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in New Jersey"
       />
     </>
   );

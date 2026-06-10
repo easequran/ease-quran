@@ -137,7 +137,7 @@ const faqs = [
   {
     question: "Are your teachers certified?",
     answer:
-      "Yes. All our teachers hold certification from Wifaq ul Madaris Al-Arabia Pakistan, the largest Islamic education board in Pakistan and globally recognized. Our founder Shah Zaib has 6+ years of experience specifically teaching Western, English-speaking students.",
+      "Yes. All our teachers hold certification from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. Our founder Shah Zaib has 6+ years of experience specifically teaching Western, English-speaking students.",
   },
   {
     question: "Do you have female Quran teachers?",
@@ -259,7 +259,7 @@ export default function HomePage() {
             <div>
               <div className="inline-flex items-center gap-2 bg-white/10 text-white text-xs px-4 py-2 rounded-full mb-6 border border-white/20 backdrop-blur-sm">
                 <CheckCircle size={12} className="text-gold" />
-                <span>Trusted by Muslim Families in 50 States</span>
+                <span>Available in All 50 States</span>
               </div>
               <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
                 Online Quran Classes{" "}
@@ -295,7 +295,7 @@ export default function HomePage() {
             {/* Right: premium glass stat cards */}
             <div className="hidden lg:grid grid-cols-2 gap-4">
               {[
-                { number: "500+", label: "Families Served", sub: "Across all 50 states" },
+                { number: "Female", label: "Teachers Available", sub: "For sisters & daughters" },
                 { number: "6+",   label: "Years Experience", sub: "With Western students" },
                 { number: "100%", label: "Certified Teachers", sub: "Wifaq ul Madaris" },
                 { number: "Free", label: "First Trial Class", sub: "No credit card needed" },
@@ -331,7 +331,7 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { number: "500+", label: "Families Served" },
+              { number: "Free", label: "First Class" },
               { number: "50", label: "States Covered" },
               { number: "6+", label: "Years Experience" },
               { number: "100%", label: "Certified Teachers" },
@@ -757,7 +757,7 @@ export default function HomePage() {
             </h2>
             <p className="text-grey max-w-xl mx-auto">
               Wherever you are in America, we bring certified Quran education to your home.
-              Trusted by Muslim families in all 50 states.
+              Available to Muslim families in all 50 states.
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-8">

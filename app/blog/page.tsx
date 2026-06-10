@@ -106,41 +106,10 @@ export default function BlogPage() {
       {/* Blog Grid */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
-          <div className="flex items-center justify-between mb-10">
-            <div>
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-2">
-                Latest Articles
-              </span>
-              <h2 className="font-playfair font-bold text-2xl text-navy">
-                1 Article Published
-              </h2>
-            </div>
-          </div>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
               <BlogCard key={post.slug} post={post} />
             ))}
-          </div>
-
-          {/* Newsletter CTA */}
-          <div className="mt-16 bg-navy rounded-2xl p-10 text-center">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
-              Stay Updated
-            </span>
-            <h3 className="font-playfair font-bold text-2xl md:text-3xl text-white mb-4">
-              Get New Articles in Your Inbox
-            </h3>
-            <p className="text-white/70 text-sm max-w-lg mx-auto mb-6">
-              Join Muslim parents across America who receive our latest Quran education tips,
-              teaching resources, and exclusive guides, delivered straight to your inbox.
-            </p>
-            <Link
-              href="/free-trial"
-              className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-colors text-sm"
-            >
-              Book a Free Trial Class Instead →
-            </Link>
           </div>
         </div>
       </section>

@@ -84,7 +84,7 @@ export default function Footer() {
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed mb-5">
               Certified online Quran education for Muslim families across
-              America. Wifaq ul Madaris certified teachers. Trusted by families
+              America. Wifaq ul Madaris certified teachers. Available
               in all 50 states.
             </p>
             <div className="flex items-center gap-3 mb-5">
@@ -197,7 +197,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-gray-400">
           <p>
-            © 2025 Ease Quran Online Academy. All rights reserved.
+            © {new Date().getFullYear()} Ease Quran Online Academy. All rights reserved.
           </p>
           <div className="flex items-center gap-4 flex-wrap justify-center">
             <Link href="/privacy-policy" className="hover:text-gold transition-colors text-xs">
