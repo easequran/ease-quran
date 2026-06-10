@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in Dearborn, Michigan | Ease Quran Academy",
+  title: "Online Quran Classes in Dearborn, Michigan",
   description:
     "Certified online Quran classes for Muslim families in Dearborn, Michigan. Serving the Arab-American community, Dearborn Heights, Detroit metro, and all of SE Michigan. Free trial available.",
   alternates: {

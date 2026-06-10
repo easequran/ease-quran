@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in Chicago, Illinois | Ease Quran Academy",
+  title: "Online Quran Classes in Chicago, Illinois",
   description:
     "Certified online Quran classes for Muslim families in Chicago, IL. Serving Bridgeview, Orland Park, north suburbs, and all Chicagoland. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {

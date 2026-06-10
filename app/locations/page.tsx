@@ -3,7 +3,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes by City | USA Locations | Ease Quran",
+  title: "Online Quran Classes by City | USA Locations",
   description:
     "Ease Quran Online Academy serves Muslim families across the USA. Find online Quran classes in your city: New York, Houston, Chicago, Los Angeles, and more.",
   alternates: { canonical: "https://easequran.com/locations" },

@@ -5,7 +5,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Online Quran Class Pricing Plans | Ease Quran Academy",
+  title: "Online Quran Class Pricing Plans",
   description:
     "Affordable online Quran class pricing. Plans from $40/month. Free first trial class. Wifaq ul Madaris certified teachers. Serving Muslim families in USA.",
   alternates: { canonical: "https://easequran.com/pricing" },

@@ -24,7 +24,9 @@
       "Bash(node -e ' *)",
       "Bash(git commit -m 'Make circle ring borders full opacity on Mission Vision Values cards *)",
       "Bash(git commit -m 'Stronger card borders and remove dash in Values text *)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(xxd)",
+      "Bash(npx next *)"
     ]
   }
 }

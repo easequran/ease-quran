@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 
 export const metadata: Metadata = {
-  title: "Quran Classes for New Muslims (Reverts) in USA | Ease Quran",
+  title: "Quran Classes for New Muslims (Reverts) in USA",
   description:
     "Specially designed online Quran classes for new Muslims (reverts) in the USA. Start from zero with a patient, certified teacher. Free trial class.",
   alternates: {

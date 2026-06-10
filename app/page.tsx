@@ -10,7 +10,7 @@ import TrustBadges from "@/components/TrustBadges";
 import { Shield, Users, BookOpen, Star, AlertCircle, Globe, UserCheck, CheckCircle, Award } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes for Kids & Adults in USA | Ease Quran Academy",
+  title: { absolute: "Online Quran Classes for Kids & Adults in USA | Ease Quran Academy" },
   description:
     "Book certified online Quran classes for your family. Wifaq ul Madaris certified teachers, female teachers available, free first class. Serving Muslim families across all 50 states.",
   alternates: { canonical: "https://easequran.com" },

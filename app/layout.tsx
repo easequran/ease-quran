@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default: "Ease Quran Online Academy | Online Quran Classes for Muslim Families in USA",
-    template: "%s | Ease Quran Online Academy",
+    template: "%s | Ease Quran Academy",
   },
   description:
     "Join Ease Quran Online Academy for certified, one-on-one online Quran classes for kids and adults across the USA. Wifaq ul Madaris certified teachers. Book your free trial today.",

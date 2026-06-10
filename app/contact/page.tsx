@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Ease Quran Online Academy | Get in Touch",
+  title: "Contact Us | Get in Touch",
   description:
     "Contact Ease Quran Online Academy. Email us at info@easequran.com or WhatsApp us. We respond within 2 hours. Online Quran classes for families across the USA.",
   alternates: { canonical: "https://easequran.com/contact" },

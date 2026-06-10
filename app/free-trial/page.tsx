@@ -3,7 +3,7 @@ import { GraduationCap, CheckCircle, Award } from "lucide-react";
 import FreeTrialForm from "./FreeTrialForm";
 
 export const metadata: Metadata = {
-  title: "Book Your Free Quran Trial Class | Ease Quran Online Academy",
+  title: "Book Your Free Quran Trial Class",
   description:
     "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers, flexible scheduling. Muslim families across the USA trust Ease Quran.",
   alternates: { canonical: "https://easequran.com/free-trial" },

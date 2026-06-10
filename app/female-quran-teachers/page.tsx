@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Female Quran Teacher Online USA | Sister Quran Teacher | Ease Quran",
+  title: "Female Quran Teacher Online USA | Sister Quran Teacher",
   description:
     "Find a certified female Quran teacher online in the USA. Our qualified sister teachers for women and children. Almas Fatima, Qaria e Quran, available now.",
   keywords: [

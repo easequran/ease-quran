@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import { Users, Award, Globe, Heart, BarChart2, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Ease Quran Online Academy | Wifaq ul Madaris Certified Teachers",
+  title: "About Our Academy | Wifaq ul Madaris Certified Teachers",
   description:
     "Learn about Ease Quran Online Academy, founded by Shah Zaib, certified from Wifaq ul Madaris. Our mission is to bring trusted Quran education to Muslim families across the USA.",
   alternates: { canonical: "https://easequran.com/about" },

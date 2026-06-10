@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Ease Quran Online Academy",
+  title: "Terms & Conditions",
   description:
     "Read the Terms and Conditions of Ease Quran Online Academy. Understand your rights and responsibilities when using our online Quran classes service.",
   alternates: { canonical: "https://easequran.com/terms-conditions" },

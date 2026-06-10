@@ -4,7 +4,7 @@ import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "Online Quran Courses | Ease Quran Online Academy USA",
+  title: "Online Quran Courses in USA",
   description:
     "Browse all online Quran courses at Ease Quran Academy: Tajweed, Hifz, Noorani Qaida, Arabic, Islamic Studies, and more. Free first class.",
   alternates: {

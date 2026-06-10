@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in New Jersey | Ease Quran Academy",
+  title: "Online Quran Classes in New Jersey",
   description:
     "Certified online Quran classes for Muslim families in New Jersey. Serving Paterson, Jersey City, Newark, Edison, and all of NJ. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {

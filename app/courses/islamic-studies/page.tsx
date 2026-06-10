@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 
 export const metadata: Metadata = {
-  title: "Online Islamic Studies Classes | Ease Quran Academy USA",
+  title: "Online Islamic Studies Classes in USA",
   description:
     "Comprehensive Islamic studies online for kids and adults. Aqeedah, Fiqh, Seerah, Islamic manners. Certified teachers. Free trial class for US families.",
   alternates: {

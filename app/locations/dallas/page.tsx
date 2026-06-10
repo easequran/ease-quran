@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in Dallas, Texas | Ease Quran Academy",
+  title: "Online Quran Classes in Dallas, Texas",
   description:
     "Certified online Quran classes for Muslim families in Dallas-Fort Worth. Serving Richardson, Plano, Irving, Garland, and all DFW suburbs. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
