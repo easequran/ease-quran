@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "Join Ease Quran Online Academy for certified, one-on-one online Quran classes for kids and adults across the USA. Wifaq ul Madaris certified teachers. Book your free trial today.",
   authors: [{ name: "Ease Quran Online Academy" }],
   creator: "Ease Quran Online Academy",
-  metadataBase: new URL("https://www.easequran.com"),
+  metadataBase: new URL("https://easequran.com"),
   icons: {
     icon: [
       { url: "/images/favicon.png", type: "image/png" },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
     siteName: "Ease Quran Online Academy",
     title: "Ease Quran Online Academy | Online Quran Classes for Muslim Families in USA",
     description:
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.easequran.com",
+    canonical: "https://easequran.com",
   },
   category: "Education",
 };
@@ -92,9 +92,9 @@ export default function RootLayout({
               "@type": "EducationalOrganization",
               name: "Ease Quran Online Academy",
               alternateName: "Ease Quran",
-              url: "https://www.easequran.com",
-              logo: "https://www.easequran.com/images/logo.png",
-              image: "https://www.easequran.com/images/og-image.png",
+              url: "https://easequran.com",
+              logo: "https://easequran.com/images/logo.png",
+              image: "https://easequran.com/images/og-image.png",
               description: "Certified online Quran academy serving Muslim families across all 50 US states. Wifaq ul Madaris certified teachers, female teachers available, free first class.",
               email: "info@easequran.com",
               telephone: "+923195657389",

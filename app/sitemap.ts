@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+﻿import { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
 
@@ -15,7 +15,7 @@ function getBlogSlugs(): string[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://www.easequran.com";
+  const base = "https://easequran.com";
   const now = new Date().toISOString();
 
   const blogEntries: MetadataRoute.Sitemap = getBlogSlugs().map((slug) => ({

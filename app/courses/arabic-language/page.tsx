@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   description:
     "Online Arabic language classes for English speakers. Classical and conversational Arabic. Understand the Quran in its original language. Free trial class.",
   alternates: {
-    canonical: "https://www.easequran.com/courses/arabic-language",
+    canonical: "https://easequran.com/courses/arabic-language",
   },
   openGraph: {
     title: "Learn Arabic Online | Arabic Language Classes USA",
     description:
       "Online Arabic language classes for English speakers. Classical and conversational Arabic. Understand the Quran in its original language. Free trial class.",
-    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Arabic Language Classes, Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Arabic Language Classes, Ease Quran Academy" }],
   },
 };
 
@@ -25,9 +25,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Courses", item: "https://www.easequran.com/courses" },
-    { "@type": "ListItem", position: 3, name: "Arabic Language", item: "https://www.easequran.com/courses/arabic-language" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Courses", item: "https://easequran.com/courses" },
+    { "@type": "ListItem", position: 3, name: "Arabic Language", item: "https://easequran.com/courses/arabic-language" },
   ],
 };
 
@@ -37,7 +37,7 @@ const aggregateRatingSchema = {
   itemReviewed: {
     "@type": "Course",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
   ratingValue: "4.9",
   bestRating: "5",
@@ -55,9 +55,9 @@ const courseSchema = {
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
-  url: "https://www.easequran.com/courses/arabic-language",
+  url: "https://easequran.com/courses/arabic-language",
   courseMode: "online",
   educationalLevel: "Beginner to Intermediate",
   teaches: ["Arabic Grammar", "Quranic Vocabulary", "Sarf and Nahw", "Reading Comprehension"],

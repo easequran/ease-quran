@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Browse all online Quran courses at Ease Quran Academy: Tajweed, Hifz, Noorani Qaida, Arabic, Islamic Studies, and more. Free first class.",
   alternates: {
-    canonical: "https://www.easequran.com/courses",
+    canonical: "https://easequran.com/courses",
   },
   openGraph: {
     title: "Online Quran Courses | Ease Quran Online Academy USA",
@@ -99,7 +99,7 @@ const courseSchema = {
   name: "Online Quran Courses at Ease Quran Academy",
   description:
     "All online Quran courses offered by Ease Quran Online Academy for Muslim families in the USA",
-  url: "https://www.easequran.com/courses",
+  url: "https://easequran.com/courses",
   numberOfItems: 8,
   itemListElement: courses.map((c, i) => ({
     "@type": "ListItem",

@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "Contact Ease Quran Online Academy | Get in Touch",
   description:
     "Contact Ease Quran Online Academy. Email us at info@easequran.com or WhatsApp us. We respond within 2 hours. Online Quran classes for families across the USA.",
-  alternates: { canonical: "https://www.easequran.com/contact" },
+  alternates: { canonical: "https://easequran.com/contact" },
   openGraph: {
     title: "Contact Ease Quran Online Academy | Get in Touch",
     description:
       "Contact Ease Quran Online Academy. Email us at info@easequran.com or WhatsApp us. We respond within 2 hours. Online Quran classes for families across the USA.",
-    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Contact Ease Quran Online Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Contact Ease Quran Online Academy" }],
   },
 };
 
@@ -21,12 +21,12 @@ const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   name: "Contact Ease Quran Online Academy",
-  url: "https://www.easequran.com/contact",
+  url: "https://easequran.com/contact",
   description: "Contact Ease Quran Online Academy via email, WhatsApp, or our contact form. We respond within 2 hours.",
   mainEntity: {
     "@type": "EducationalOrganization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
     email: "info@easequran.com",
     telephone: "+923195657389",
     contactPoint: {

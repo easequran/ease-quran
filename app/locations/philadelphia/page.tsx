@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Certified online Quran classes for Muslim families in Philadelphia, PA. Serving the African American Muslim community, South Asian families, and all Philadelphia suburbs. Free trial available.",
   alternates: {
-    canonical: "https://www.easequran.com/locations/philadelphia",
+    canonical: "https://easequran.com/locations/philadelphia",
   },
   openGraph: {
     title: "Online Quran Classes in Philadelphia, Pennsylvania | Ease Quran Academy",
@@ -24,9 +24,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.easequran.com/locations" },
-    { "@type": "ListItem", position: 3, name: "Philadelphia", item: "https://www.easequran.com/locations/philadelphia" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "Philadelphia", item: "https://easequran.com/locations/philadelphia" },
   ],
 };
 
@@ -34,7 +34,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Ease Quran Online Academy",
-  url: "https://www.easequran.com",
+  url: "https://easequran.com",
   description:
     "Certified online Quran classes for Muslim families in Philadelphia, Pennsylvania and surrounding suburbs.",
   areaServed: {

@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   description:
     "Certified online Quran classes for Muslim families in Los Angeles, CA. Serving Culver City, Inglewood, Pomona, San Gabriel Valley, and all LA metro. Free trial class available.",
   alternates: {
-    canonical: "https://www.easequran.com/locations/los-angeles",
+    canonical: "https://easequran.com/locations/los-angeles",
   },
   openGraph: {
     title: "Online Quran Classes in Los Angeles, California | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families across the LA metro. Culver City, Inglewood, Pomona, and beyond.",
-    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in Los Angeles, California, Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in Los Angeles, California, Ease Quran Academy" }],
   },
 };
 
@@ -24,9 +24,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.easequran.com/locations" },
-    { "@type": "ListItem", position: 3, name: "Los Angeles", item: "https://www.easequran.com/locations/los-angeles" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "Los Angeles", item: "https://easequran.com/locations/los-angeles" },
   ],
 };
 
@@ -34,7 +34,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Ease Quran Online Academy",
-  url: "https://www.easequran.com",
+  url: "https://easequran.com",
   description:
     "Certified online Quran classes for Muslim families in Los Angeles and the greater LA metro area.",
   areaServed: {

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Certified online Quran classes for Muslim families in Atlanta, GA. Serving the African American, South Asian, and Arab Muslim communities across the Atlanta metro. Free trial available.",
   alternates: {
-    canonical: "https://www.easequran.com/locations/atlanta",
+    canonical: "https://easequran.com/locations/atlanta",
   },
   openGraph: {
     title: "Online Quran Classes in Atlanta, Georgia | Ease Quran Academy",
@@ -24,9 +24,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.easequran.com/locations" },
-    { "@type": "ListItem", position: 3, name: "Atlanta", item: "https://www.easequran.com/locations/atlanta" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "Atlanta", item: "https://easequran.com/locations/atlanta" },
   ],
 };
 
@@ -34,7 +34,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Ease Quran Online Academy",
-  url: "https://www.easequran.com",
+  url: "https://easequran.com",
   description:
     "Certified online Quran classes for Muslim families in Atlanta, Georgia and the greater Atlanta metro area.",
   areaServed: {

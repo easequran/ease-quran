@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "online Quran classes for women",
   ],
   alternates: {
-    canonical: "https://www.easequran.com/female-quran-teachers",
+    canonical: "https://easequran.com/female-quran-teachers",
   },
   openGraph: {
     title: "Female Quran Teacher Online USA | Sister Quran Teacher | Ease Quran",
@@ -39,7 +39,7 @@ const personSchema = {
   worksFor: {
     "@type": "EducationalOrganization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
   alumniOf: [
     {
