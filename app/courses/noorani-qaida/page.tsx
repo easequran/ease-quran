@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 
 export const metadata: Metadata = {
-  title: "Noorani Qaida Online Classes | Learn to Read Quran USA",
+  title: "Noorani Qaida Online Classes USA",
   description:
     "Start your Quran journey with online Noorani Qaida classes. Perfect for complete beginners of all ages. Certified teachers. Free first class.",
   alternates: {

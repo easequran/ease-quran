@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 
 export const metadata: Metadata = {
-  title: "Online Tajweed Classes | Learn Quran Recitation USA",
+  title: "Online Tajweed Classes USA",
   description:
     "Master Tajweed online with certified Wifaq ul Madaris teachers. Learn proper Quran pronunciation and recitation. Free trial class available.",
   alternates: {

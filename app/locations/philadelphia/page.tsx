@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in Philadelphia, Pennsylvania",
+  title: "Online Quran Classes in Philadelphia, PA",
   description:
     "Certified online Quran classes for Muslim families in Philadelphia, PA. Serving the African American Muslim community, South Asian families, and all Philadelphia suburbs. Free trial available.",
   alternates: {
@@ -52,6 +52,14 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "Can I find Quran classes near me in Philadelphia?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Though we are not a physical school in Philadelphia, our online classes serve any family in the Philadelphia area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "Do you serve Philadelphia's historic African American Muslim community?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -94,6 +102,11 @@ const faqSchema = {
 };
 
 const faqs = [
+  {
+    question: "Can I find Quran classes near me in Philadelphia?",
+    answer:
+      "Yes. While we are not a physical school in Philadelphia, our online classes work for any family in the Philadelphia area searching for Quran classes, a Quran teacher, or a Hifz program near them. You connect one-on-one with a certified teacher over Zoom from home, so you get all the benefits of a class near you without any travel.",
+  },
   {
     question: "Do you serve Philadelphia's historic African American Muslim community?",
     answer:
@@ -312,6 +325,27 @@ export default function PhiladelphiaPage() {
             <footer className="text-white/60 font-semibold">
               — Darnell W., Muslim convert in West Philadelphia, Pennsylvania
             </footer>
+          </div>
+        </div>
+      </section>
+
+      {/* Near Me */}
+      <section className="section-padding bg-offwhite">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              Quran Classes Near You
+            </span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+              Looking for Quran Classes Near You in Philadelphia?
+            </h2>
+            <p className="text-grey leading-relaxed">
+              If you have been searching for &ldquo;Quran classes near me&rdquo; in Philadelphia, the best
+              teacher for your child may not be the closest one on the map. Because every Ease Quran
+              class is live and online, Philadelphia families connect one-on-one with certified teachers
+              without driving anywhere. You get the convenience of a teacher right in your home, with
+              none of the commute, parking, or fixed group schedule of a local center.
+            </p>
           </div>
         </div>
       </section>

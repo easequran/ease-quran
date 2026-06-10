@@ -720,6 +720,33 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* NEAR ME */}
+      <section className="section-padding bg-offwhite">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Quran Classes Near You</span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-5">
+              Searching for &ldquo;Online Quran Classes Near Me&rdquo;?
+            </h2>
+            <p className="text-grey leading-relaxed mb-4">
+              If you have been typing &ldquo;Quran classes near me&rdquo; or &ldquo;Quran teacher near
+              me&rdquo; into Google, here is the good news: the best teacher for your family does not
+              have to be the closest one. Every Ease Quran class is live, one-on-one, and online, so a
+              certified teacher is always right in your home, wherever you live in the USA.
+            </p>
+            <p className="text-grey leading-relaxed">
+              No commute, no fixed group schedule, and no settling for whoever happens to be nearby.
+              You get a Wifaq ul Madaris certified teacher matched to your child, with a free first
+              class to start.{" "}
+              <Link href="/free-trial" className="text-gold font-semibold hover:underline">
+                Book your free trial class
+              </Link>{" "}
+              from anywhere.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* USA CITIES */}
       <section className="section-padding bg-white">
         <div className="container-custom">

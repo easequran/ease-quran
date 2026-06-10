@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in Los Angeles, California",
+  title: "Online Quran Classes in Los Angeles, CA",
   description:
     "Certified online Quran classes for Muslim families in Los Angeles, CA. Serving Culver City, Inglewood, Pomona, San Gabriel Valley, and all LA metro. Free trial class available.",
   alternates: {
@@ -52,6 +52,14 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "Can I find Quran classes near me in Los Angeles?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Though we are not a physical school in Los Angeles, our online classes serve any family in the Los Angeles area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "Do you serve all parts of the LA metro, including the San Gabriel Valley?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -94,6 +102,11 @@ const faqSchema = {
 };
 
 const faqs = [
+  {
+    question: "Can I find Quran classes near me in Los Angeles?",
+    answer:
+      "Yes. While we are not a physical school in Los Angeles, our online classes work for any family in the Los Angeles area searching for Quran classes, a Quran teacher, or a Hifz program near them. You connect one-on-one with a certified teacher over Zoom from home, so you get all the benefits of a class near you without any travel.",
+  },
   {
     question: "Do you serve all parts of the LA metro, including the San Gabriel Valley?",
     answer:
@@ -312,6 +325,27 @@ export default function LosAngelesPage() {
             <footer className="text-white/60 font-semibold">
               — Sarah M., Muslim revert in Culver City, Los Angeles
             </footer>
+          </div>
+        </div>
+      </section>
+
+      {/* Near Me */}
+      <section className="section-padding bg-offwhite">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              Quran Classes Near You
+            </span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+              Looking for Quran Classes Near You in Los Angeles?
+            </h2>
+            <p className="text-grey leading-relaxed">
+              If you have been searching for &ldquo;Quran classes near me&rdquo; in Los Angeles, the best
+              teacher for your child may not be the closest one on the map. Because every Ease Quran
+              class is live and online, Los Angeles families connect one-on-one with certified teachers
+              without driving anywhere. You get the convenience of a teacher right in your home, with
+              none of the commute, parking, or fixed group schedule of a local center.
+            </p>
           </div>
         </div>
       </section>

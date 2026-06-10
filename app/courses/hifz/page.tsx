@@ -7,7 +7,7 @@ import TeacherCard from "@/components/TeacherCard";
 import { BookOpen, Heart, GraduationCap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Online Hifz Program | Quran Memorization Classes USA",
+  title: "Online Hifz Program USA",
   description:
     "Structured online Hifz program for kids and adults. Certified teachers, proven memorization methods. Serving Muslim families across the USA.",
   alternates: {
