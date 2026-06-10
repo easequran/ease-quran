@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import CourseCard from "@/components/CourseCard";
 import TeacherCard from "@/components/TeacherCard";
-import TestimonialCard from "@/components/TestimonialCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
+import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
+import LiteYouTube from "@/components/LiteYouTube";
+import { videos } from "@/components/proof";
 import { Shield, Users, BookOpen, Star, AlertCircle, Globe, UserCheck, CheckCircle, Award } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -104,30 +106,6 @@ const painPoints = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "Fatima Al-Hassan",
-    location: "Houston, Texas",
-    course: "Quran for Kids",
-    text: "We tried three different online academies before finding Ease Quran. The difference is night and day. My daughter actually looks forward to her classes now. Teacher Almas is so patient and encouraging. In just 3 months, she can read Surah Al-Fatiha beautifully with proper Tajweed.",
-    rating: 5 as const,
-  },
-  {
-    name: "Ahmad Siddiqui",
-    location: "New Jersey",
-    course: "Tajweed Course",
-    text: "I've been trying to improve my Quran recitation for years. Shah Zaib's teaching method is unlike anything I've experienced. He explains the rules in a way that actually makes sense for someone who grew up speaking English. My recitation has improved dramatically in just 2 months.",
-    rating: 5 as const,
-  },
-  {
-    name: "Maryam Ibrahim",
-    location: "Chicago, Illinois",
-    course: "Hifz Program",
-    text: "As a Muslim mother in America, finding the right Quran teacher for my son was my biggest worry. With Ease Quran, I feel completely at peace. The teachers are credentialed, professional, and genuinely care about our children's connection to Allah's Book. My son has memorized 5 juz in 8 months.",
-    rating: 5 as const,
-  },
-];
-
 const faqs = [
   {
     question: "How do online Quran classes work?",
@@ -216,6 +194,53 @@ const faqSchema = {
   })),
 };
 
+const teachersSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Shah Zaib",
+    jobTitle: "Founder & Head Teacher",
+    description:
+      "Founder and head teacher at Ease Quran Online Academy, certified from Wifaq ul Madaris Al-Arabia, with 6+ years teaching Western, English-speaking students.",
+    worksFor: { "@type": "EducationalOrganization", name: "Ease Quran Online Academy", url: "https://easequran.com" },
+    alumniOf: { "@type": "EducationalOrganization", name: "Wifaq ul Madaris Al-Arabia" },
+    knowsAbout: ["Quran", "Tajweed", "Hifz", "Islamic Studies"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Muhammad Umair",
+    jobTitle: "Tajweed & Hifz Specialist",
+    description:
+      "Certified Quran teacher at Ease Quran Online Academy specialising in Tajweed and Hifz, credentialed by Wifaq ul Madaris Al-Arabia.",
+    worksFor: { "@type": "EducationalOrganization", name: "Ease Quran Online Academy", url: "https://easequran.com" },
+    alumniOf: { "@type": "EducationalOrganization", name: "Wifaq ul Madaris Al-Arabia" },
+    knowsAbout: ["Tajweed", "Hifz", "Quran recitation"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Almas Fatima",
+    jobTitle: "Female Quran Teacher — Qaria e Quran",
+    description:
+      "Certified female Quran teacher at Ease Quran Online Academy for sisters and children, holding a Wifaq ul Madaris Al-Arabia certification and a Bachelor in Islamic Studies.",
+    worksFor: { "@type": "EducationalOrganization", name: "Ease Quran Online Academy", url: "https://easequran.com" },
+    alumniOf: { "@type": "EducationalOrganization", name: "Wifaq ul Madaris Al-Arabia" },
+    knowsAbout: ["Quran for Kids", "Tajweed", "Noorani Qaida", "Islamic Studies"],
+  },
+];
+
+const videoSchema = videos.map((v) => ({
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: v.name,
+  description: v.description,
+  thumbnailUrl: [`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`],
+  uploadDate: v.uploadDate,
+  embedUrl: `https://www.youtube.com/embed/${v.id}`,
+  contentUrl: `https://youtu.be/${v.id}`,
+}));
+
 export default function HomePage() {
   return (
     <>
@@ -227,6 +252,20 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      {teachersSchema.map((t, i) => (
+        <script
+          key={`teacher-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(t) }}
+        />
+      ))}
+      {videoSchema.map((v, i) => (
+        <script
+          key={`video-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(v) }}
+        />
+      ))}
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -703,18 +742,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* REAL PROOF */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
-          <div className="text-center mb-14">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">What Families Say</span>
+          <div className="text-center mb-12 max-w-2xl mx-auto">
+            <span className="text-gold text-sm font-semibold tracking-widest uppercase">
+              What Our Students &amp; Families Say
+            </span>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
-              Trusted by Muslim Families Across America
+              Real Students, Real Results
             </h2>
+            <p className="text-grey leading-relaxed">
+              We&apos;ve taught Western, English-speaking students across the UK and USA.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <TestimonialCard key={t.name} {...t} />
+
+          {/* WhatsApp review screenshots */}
+          <div className="mb-14">
+            <WhatsAppReviewsRow />
+          </div>
+
+          {/* Video testimonials */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {videos.map((v) => (
+              <LiteYouTube key={v.id} id={v.id} caption={v.caption} title={v.name} />
             ))}
           </div>
         </div>

@@ -207,6 +207,10 @@ export default function Footer() {
             <Link href="/terms-conditions" className="hover:text-gold transition-colors text-xs">
               Terms &amp; Conditions
             </Link>
+            <span className="text-white/20">|</span>
+            <Link href="/safety" className="hover:text-gold transition-colors text-xs">
+              Child Safety &amp; Parent Rights
+            </Link>
           </div>
           <p className="text-center">
             🇺🇸 Proudly serving Muslim families across the United States

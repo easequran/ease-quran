@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 import PopupForm from "@/components/PopupForm";
 
 const playfair = Playfair_Display({
@@ -126,13 +127,6 @@ export default function RootLayout({
                   { "@type": "Offer", itemOffered: { "@type": "Course", name: "Islamic Studies" } },
                 ],
               },
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "5",
-                reviewCount: "50",
-                bestRating: "5",
-                worstRating: "1",
-              },
             }),
           }}
         />
@@ -140,6 +134,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
+        <StickyMobileCTA />
         <PopupForm />
       </body>
     </html>

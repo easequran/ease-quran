@@ -31,21 +31,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const aggregateRatingSchema = {
-  "@context": "https://schema.org",
-  "@type": "AggregateRating",
-  itemReviewed: {
-    "@type": "Course",
-    name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
-  },
-  ratingValue: "4.9",
-  bestRating: "5",
-  worstRating: "1",
-  ratingCount: "127",
-  reviewCount: "127",
-};
-
 const courseSchema = {
   "@context": "https://schema.org",
   "@type": "Course",
@@ -146,10 +131,6 @@ export default function QuranForKidsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
       />
       <script
         type="application/ld+json"

@@ -4,6 +4,8 @@ import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
+import TeacherStrip from "@/components/TeacherStrip";
+import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in New Jersey",
@@ -49,6 +51,14 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is online Quran learning safe for my child?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
+      },
+    },
     {
       "@type": "Question",
       name: "Can I find Quran classes near me in New Jersey?",
@@ -101,6 +111,11 @@ const faqSchema = {
 };
 
 const faqs = [
+  {
+    question: "Is online Quran learning safe for my child?",
+    answer:
+      "Yes. Parents are welcome to sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified. See our Child Safety & Parent Rights Policy for full details.",
+  },
   {
     question: "Can I find Quran classes near me in New Jersey?",
     answer:
@@ -188,6 +203,8 @@ export default function NewJerseyPage() {
         </div>
       </section>
 
+      <TeacherStrip />
+
       {/* Muslim Community Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -253,6 +270,28 @@ export default function NewJerseyPage() {
         </div>
       </section>
 
+      {/* Proof, Pricing & CTA */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
+            <span className="font-semibold">Plans from $40/month</span>
+            <span className="text-white/70"> &middot; most families choose $79/month for 12 classes &middot; </span>
+            <span className="text-gold font-semibold">first class free &rarr;</span>
+          </Link>
+
+          <WhatsAppReviewsRow heading="Real Students, Real Results" subline="We've taught Western, English-speaking students across the UK and USA." />
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-colors text-sm text-center">
+              Book Free Trial Class
+            </Link>
+            <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20New%20Jersey" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-xl hover:bg-offwhite transition-colors text-sm text-center">
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Courses */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -312,21 +351,6 @@ export default function NewJerseyPage() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="section-padding bg-navy">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-6">Family Testimonial</span>
-            <blockquote className="font-playfair text-xl md:text-2xl text-white leading-relaxed italic mb-8">
-              "My husband takes the PATH to Manhattan every day and gets home around 7:30 PM. I work shifts at the hospital. We could not realistically get our three children to any Islamic school. With Ease Quran, our kids have lessons right after school, and I check in with the teacher on weekends. All three are progressing beautifully. SubhanAllah."
-            </blockquote>
-            <footer className="text-white/60 font-semibold">
-              — Mariam H., Muslim mother in Jersey City, New Jersey
-            </footer>
-          </div>
-        </div>
-      </section>
-
       {/* Near Me */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
@@ -359,6 +383,12 @@ export default function NewJerseyPage() {
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
+            <p className="text-center text-grey text-sm mt-6">
+              Worried about safety?{" "}
+              <Link href="/safety" className="text-gold font-semibold hover:underline">
+                Read our Child Safety &amp; Parent Rights Policy
+              </Link>
+            </p>
           </div>
         </div>
       </section>
