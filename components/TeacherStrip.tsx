@@ -8,7 +8,7 @@ const teachers = [
   {
     name: "Shah Zaib",
     role: "Founder & Head Teacher · Wifaq ul Madaris · 6+ yrs experience",
-    icon: true,
+    image: "/images/founder.webp",
   },
   {
     name: "Muhammad Umair",
@@ -38,15 +38,9 @@ export default function TeacherStrip({ title = "Meet Your Certified Teachers" }:
               key={t.name}
               className="flex items-center gap-4 bg-offwhite border border-gray-100 rounded-2xl p-4"
             >
-              <div className="w-14 h-14 rounded-full overflow-hidden bg-gold/10 shrink-0 flex items-center justify-center">
-                {t.icon ? (
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-7 h-7 text-gold" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                  </svg>
-                ) : (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={t.image} alt={`${t.name}, Quran teacher`} className="w-full h-full object-cover" />
-                )}
+              <div className="w-14 h-14 rounded-full overflow-hidden bg-gold/10 shrink-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={t.image} alt={`${t.name}, Quran teacher`} className="w-full h-full object-cover object-top" />
               </div>
               <div className="min-w-0">
                 <p className="font-semibold text-navy text-sm flex items-center gap-1.5">
