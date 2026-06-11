@@ -7,17 +7,17 @@ import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 
 export const metadata: Metadata = {
-  title: "Noorani Qaida Online Classes | Learn to Read Quran USA",
+  title: "Noorani Qaida Online Classes USA",
   description:
     "Start your Quran journey with online Noorani Qaida classes. Perfect for complete beginners of all ages. Certified teachers. Free first class.",
   alternates: {
-    canonical: "https://www.easequran.com/courses/noorani-qaida",
+    canonical: "https://easequran.com/courses/noorani-qaida",
   },
   openGraph: {
     title: "Noorani Qaida Online Classes | Learn to Read Quran USA",
     description:
       "Start your Quran journey with online Noorani Qaida classes. Perfect for complete beginners of all ages. Certified teachers. Free first class.",
-    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Noorani Qaida Online Classes, Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Noorani Qaida Online Classes, Ease Quran Academy" }],
   },
 };
 
@@ -25,25 +25,10 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Courses", item: "https://www.easequran.com/courses" },
-    { "@type": "ListItem", position: 3, name: "Noorani Qaida", item: "https://www.easequran.com/courses/noorani-qaida" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Courses", item: "https://easequran.com/courses" },
+    { "@type": "ListItem", position: 3, name: "Noorani Qaida", item: "https://easequran.com/courses/noorani-qaida" },
   ],
-};
-
-const aggregateRatingSchema = {
-  "@context": "https://schema.org",
-  "@type": "AggregateRating",
-  itemReviewed: {
-    "@type": "Course",
-    name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
-  },
-  ratingValue: "4.9",
-  bestRating: "5",
-  worstRating: "1",
-  ratingCount: "127",
-  reviewCount: "127",
 };
 
 const courseSchema = {
@@ -55,9 +40,9 @@ const courseSchema = {
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
-  url: "https://www.easequran.com/courses/noorani-qaida",
+  url: "https://easequran.com/courses/noorani-qaida",
   courseMode: "online",
   educationalLevel: "Beginner",
   teaches: ["Arabic Alphabet", "Letter Joining", "Short Vowels", "Quran Reading Foundation"],
@@ -145,10 +130,6 @@ export default function NooraniQaidaPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
       />
       <script
         type="application/ld+json"

@@ -4,13 +4,15 @@ import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
+import TeacherStrip from "@/components/TeacherStrip";
+import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in Columbus, Ohio | Ease Quran Academy",
+  title: "Online Quran Classes in Columbus, Ohio",
   description:
     "Certified online Quran classes for Muslim families in Columbus, Ohio. Serving the Somali, South Asian, and Arab Muslim communities across Columbus and central Ohio. Free trial available.",
   alternates: {
-    canonical: "https://www.easequran.com/locations/columbus-ohio",
+    canonical: "https://easequran.com/locations/columbus-ohio",
   },
   openGraph: {
     title: "Online Quran Classes in Columbus, Ohio | Ease Quran Academy",
@@ -24,9 +26,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.easequran.com/locations" },
-    { "@type": "ListItem", position: 3, name: "Columbus, Ohio", item: "https://www.easequran.com/locations/columbus-ohio" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "Columbus, Ohio", item: "https://easequran.com/locations/columbus-ohio" },
   ],
 };
 
@@ -34,7 +36,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Ease Quran Online Academy",
-  url: "https://www.easequran.com",
+  url: "https://easequran.com",
   description:
     "Certified online Quran classes for Muslim families in Columbus, Ohio and central Ohio.",
   areaServed: {
@@ -50,6 +52,22 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is online Quran learning safe for my child?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I find Quran classes near me in Columbus?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Though we are not a physical school in Columbus, our online classes serve any family in the Columbus area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
+      },
+    },
     {
       "@type": "Question",
       name: "Do you serve Columbus's large Somali Muslim community?",
@@ -71,7 +89,7 @@ const faqSchema = {
       name: "Are your teachers certified from recognized Islamic institutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic education credential in the world. Columbus Muslim families can trust our teachers' qualifications completely.",
+        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Columbus Muslim families can trust our teachers' qualifications completely.",
       },
     },
     {
@@ -95,6 +113,16 @@ const faqSchema = {
 
 const faqs = [
   {
+    question: "Is online Quran learning safe for my child?",
+    answer:
+      "Yes. Parents are welcome to sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified. See our Child Safety & Parent Rights Policy for full details.",
+  },
+  {
+    question: "Can I find Quran classes near me in Columbus?",
+    answer:
+      "Yes. While we are not a physical school in Columbus, our online classes work for any family in the Columbus area searching for Quran classes, a Quran teacher, or a Hifz program near them. You connect one-on-one with a certified teacher over Zoom from home, so you get all the benefits of a class near you without any travel.",
+  },
+  {
     question: "Do you serve Columbus's large Somali Muslim community?",
     answer:
       "Yes. We warmly and proudly welcome families from Columbus's Somali community, one of the largest Somali communities in the entire United States. All our classes are conducted in English, making them fully accessible for Somali-American families whose children are growing up as English speakers. Our teachers are experienced with students from all Muslim backgrounds and cultural traditions, including Somali families.",
@@ -107,7 +135,7 @@ const faqs = [
   {
     question: "Are your teachers certified from recognized Islamic institutions?",
     answer:
-      "All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, widely regarded as the most prestigious Islamic education board in the world. This credential represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Columbus Muslim families, from any background, can have complete confidence in the qualifications of our teachers.",
+      "All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. This credential represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Columbus Muslim families, from any background, can have complete confidence in the qualifications of our teachers.",
   },
   {
     question: "Is a female teacher available for sisters in Columbus?",
@@ -177,6 +205,8 @@ export default function ColumbusOhioPage() {
         </div>
       </section>
 
+      <TeacherStrip />
+
       {/* Muslim Community Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -242,6 +272,28 @@ export default function ColumbusOhioPage() {
         </div>
       </section>
 
+      {/* Proof, Pricing & CTA */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
+            <span className="font-semibold">Plans from $40/month</span>
+            <span className="text-white/70"> &middot; most families choose $79/month for 12 classes &middot; </span>
+            <span className="text-gold font-semibold">first class free &rarr;</span>
+          </Link>
+
+          <WhatsAppReviewsRow heading="Real Students, Real Results" subline="We've taught Western, English-speaking students across the UK and USA." />
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-colors text-sm text-center">
+              Book Free Trial Class
+            </Link>
+            <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Columbus%20Ohio" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-xl hover:bg-offwhite transition-colors text-sm text-center">
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Courses */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -301,17 +353,23 @@ export default function ColumbusOhioPage() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="section-padding bg-navy">
+      {/* Near Me */}
+      <section className="section-padding bg-offwhite">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-6">Family Testimonial</span>
-            <blockquote className="font-playfair text-xl md:text-2xl text-white leading-relaxed italic mb-8">
-              "We are Somali and we came to Columbus over ten years ago. Quran education has always been important to our family. We tried a community class at the masjid but my son needed more individual attention. With Ease Quran he has been learning one-on-one for seven months and is now reading fluently. The teacher is excellent and my son actually asks to have his lessons. We are so grateful."
-            </blockquote>
-            <footer className="text-white/60 font-semibold">
-              — Fadumo A., Somali Muslim mother in Columbus, Ohio
-            </footer>
+          <div className="max-w-4xl mx-auto">
+            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              Quran Classes Near You
+            </span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+              Looking for Quran Classes Near You in Columbus?
+            </h2>
+            <p className="text-grey leading-relaxed">
+              If you have been searching for &ldquo;Quran classes near me&rdquo; in Columbus, the best
+              teacher for your child may not be the closest one on the map. Because every Ease Quran
+              class is live and online, Columbus families connect one-on-one with certified teachers
+              without driving anywhere. You get the convenience of a teacher right in your home, with
+              none of the commute, parking, or fixed group schedule of a local center.
+            </p>
           </div>
         </div>
       </section>
@@ -327,6 +385,12 @@ export default function ColumbusOhioPage() {
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
+            <p className="text-center text-grey text-sm mt-6">
+              Worried about safety?{" "}
+              <Link href="/safety" className="text-gold font-semibold hover:underline">
+                Read our Child Safety &amp; Parent Rights Policy
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -336,6 +400,7 @@ export default function ColumbusOhioPage() {
         subtext="Serving Somali, South Asian, Arab, and all Muslim families across Columbus and central Ohio with one-on-one, expert Quran instruction. Your first class is completely free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in Columbus Ohio"
       />
     </>
   );

@@ -6,15 +6,15 @@ import CTASection from "@/components/CTASection";
 import { Users, Award, Globe, Heart, BarChart2, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Ease Quran Online Academy | Wifaq ul Madaris Certified Teachers",
+  title: "About Ease Quran | Certified Teachers",
   description:
     "Learn about Ease Quran Online Academy, founded by Shah Zaib, certified from Wifaq ul Madaris. Our mission is to bring trusted Quran education to Muslim families across the USA.",
-  alternates: { canonical: "https://www.easequran.com/about" },
+  alternates: { canonical: "https://easequran.com/about" },
   openGraph: {
     title: "About Ease Quran Online Academy | Wifaq ul Madaris Certified Teachers",
     description:
       "Learn about Ease Quran Online Academy, founded by Shah Zaib, certified from Wifaq ul Madaris. Our mission is to bring trusted Quran education to Muslim families across the USA.",
-    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "About Ease Quran Online Academy, Wifaq ul Madaris Certified" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "About Ease Quran Online Academy, Wifaq ul Madaris Certified" }],
   },
 };
 
@@ -23,12 +23,12 @@ const founderSchema = {
   "@type": "Person",
   name: "Shah Zaib",
   jobTitle: "Founder & Head Teacher",
-  url: "https://www.easequran.com/about",
-  image: "https://www.easequran.com/images/founder.webp",
+  url: "https://easequran.com/about",
+  image: "https://easequran.com/images/founder.webp",
   worksFor: {
     "@type": "EducationalOrganization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
   description: "Shah Zaib is the founder of Ease Quran Online Academy, certified from Wifaq ul Madaris Al-Arabia. With 6+ years of experience teaching Quran to Western, English-speaking students in the USA, he specializes in making Quranic education accessible to Muslim families across America.",
   alumniOf: {
@@ -57,8 +57,8 @@ const educationalOrganizationSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Ease Quran Online Academy",
-  url: "https://www.easequran.com",
-  logo: "https://www.easequran.com/images/logo.png",
+  url: "https://easequran.com",
+  logo: "https://easequran.com/images/logo.png",
   foundingDate: "2019",
   description: "Certified online Quran academy serving Muslim families across all 50 US states. Wifaq ul Madaris certified teachers.",
   employee: {
@@ -230,9 +230,9 @@ export default function AboutPage() {
                 <p>
                   Shah Zaib completed his formal Islamic education at a recognized institution
                   affiliated with{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia Pakistan</strong>, the
-                  largest and most respected Islamic education board in Pakistan, whose
-                  certifications are recognized globally by Islamic scholars and institutions.
+                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, Pakistan&apos;s
+                  largest Islamic education board, globally recognized, whose
+                  certifications are honored by Islamic scholars and institutions worldwide.
                 </p>
                 <p>
                   After completing his studies, Shah Zaib began teaching Quran to students in the
@@ -454,7 +454,7 @@ export default function AboutPage() {
 
               <div className="space-y-4">
                 {[
-                  { num: "500+", label: "Students taught across America" },
+                  { num: "Free", label: "First class, no card required" },
                   { num: "50", label: "States we serve" },
                   { num: "3", label: "Wifaq ul Madaris certified teachers" },
                   { num: "6+", label: "Years of trusted teaching experience" },

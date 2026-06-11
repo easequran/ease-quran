@@ -7,17 +7,17 @@ import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 
 export const metadata: Metadata = {
-  title: "Quran Classes for New Muslims (Reverts) in USA | Ease Quran",
+  title: "Quran Classes for New Muslims (Reverts) in USA",
   description:
     "Specially designed online Quran classes for new Muslims (reverts) in the USA. Start from zero with a patient, certified teacher. Free trial class.",
   alternates: {
-    canonical: "https://www.easequran.com/courses/quran-for-reverts",
+    canonical: "https://easequran.com/courses/quran-for-reverts",
   },
   openGraph: {
     title: "Quran Classes for New Muslims (Reverts) in USA | Ease Quran",
     description:
       "Specially designed online Quran classes for new Muslims (reverts) in the USA. Start from zero with a patient, certified teacher. Free trial class.",
-    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for New Muslims, Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for New Muslims, Ease Quran Academy" }],
   },
 };
 
@@ -25,25 +25,10 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Courses", item: "https://www.easequran.com/courses" },
-    { "@type": "ListItem", position: 3, name: "Quran for Reverts", item: "https://www.easequran.com/courses/quran-for-reverts" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Courses", item: "https://easequran.com/courses" },
+    { "@type": "ListItem", position: 3, name: "Quran for Reverts", item: "https://easequran.com/courses/quran-for-reverts" },
   ],
-};
-
-const aggregateRatingSchema = {
-  "@context": "https://schema.org",
-  "@type": "AggregateRating",
-  itemReviewed: {
-    "@type": "Course",
-    name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
-  },
-  ratingValue: "4.9",
-  bestRating: "5",
-  worstRating: "1",
-  ratingCount: "127",
-  reviewCount: "127",
 };
 
 const courseSchema = {
@@ -55,9 +40,9 @@ const courseSchema = {
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
-  url: "https://www.easequran.com/courses/quran-for-reverts",
+  url: "https://easequran.com/courses/quran-for-reverts",
   courseMode: "online",
   educationalLevel: "Absolute Beginner",
   teaches: ["Arabic Letters", "Kalima", "Salah Words", "Essential Duas", "Short Surahs", "Wudu"],
@@ -145,10 +130,6 @@ export default function QuranForRevertsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
       />
       <script
         type="application/ld+json"

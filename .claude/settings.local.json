@@ -23,7 +23,12 @@
       "Bash(xargs grep -l \"fetch.*api\\\\|/api/\")",
       "Bash(node -e ' *)",
       "Bash(git commit -m 'Make circle ring borders full opacity on Mission Vision Values cards *)",
-      "Bash(git commit -m 'Stronger card borders and remove dash in Values text *)"
+      "Bash(git commit -m 'Stronger card borders and remove dash in Values text *)",
+      "Bash(git checkout *)",
+      "Bash(xxd)",
+      "Bash(npx next *)",
+      "Bash(rm -f /tmp/p3.mjs /tmp/d5.mjs; npx next build 2>&1 | grep -E \"\\(Compiled successfully|Failed|Error:|error TS|Type error|Module not found|/safety\\)\" | head -15)",
+      "Bash(grep -o '<script type=\"application/ld+json\">[^<]*</script>' .next/server/app/__TRACKED_VAR__.html)"
     ]
   }
 }

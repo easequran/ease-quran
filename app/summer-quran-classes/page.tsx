@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import {
   CheckCircle,
@@ -24,17 +24,17 @@ export const metadata: Metadata = {
   description:
     "Give your child a meaningful summer. Certified online Quran classes for kids ages 4 to 14 across the USA. Free first class. Female teachers available. Enroll today.",
   alternates: {
-    canonical: "https://www.easequran.com/summer-quran-classes",
+    canonical: "https://easequran.com/summer-quran-classes",
   },
   openGraph: {
     title: "Summer Quran Classes for Kids 2026 | Ease Quran Academy",
     description:
       "Give your child a meaningful summer. Certified online Quran classes for kids ages 4 to 14 across the USA. Free first class. Female teachers available. Enroll today.",
-    url: "https://www.easequran.com/summer-quran-classes",
+    url: "https://easequran.com/summer-quran-classes",
     type: "website",
     images: [
       {
-        url: "https://www.easequran.com/images/og-image.png",
+        url: "https://easequran.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Summer Quran Classes for Kids 2026 — Ease Quran Academy",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Summer Quran Classes for Kids 2026 | Ease Quran Academy",
     description:
       "Certified online Quran classes for kids ages 4 to 14 across the USA. Free first class. Female teachers available.",
-    images: ["https://www.easequran.com/images/og-image.png"],
+    images: ["https://easequran.com/images/og-image.png"],
   },
 };
 
@@ -121,11 +121,11 @@ const courseSchema = {
   name: "Summer Quran Classes for Kids 2026",
   description:
     "Certified one-on-one online Quran classes for Muslim children ages 4 to 14 across the USA. Running June through August 2026. Free first class.",
-  url: "https://www.easequran.com/summer-quran-classes",
+  url: "https://easequran.com/summer-quran-classes",
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
-    sameAs: "https://www.easequran.com",
+    sameAs: "https://easequran.com",
   },
   hasCourseInstance: {
     "@type": "CourseInstance",
@@ -149,7 +149,7 @@ const courseSchema = {
     price: "0",
     priceCurrency: "USD",
     name: "Free Trial Class",
-    url: "https://www.easequran.com/free-trial",
+    url: "https://easequran.com/free-trial",
   },
 };
 
@@ -165,19 +165,19 @@ const eventSchema = {
   eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
   location: {
     "@type": "VirtualLocation",
-    url: "https://www.easequran.com/summer-quran-classes",
+    url: "https://easequran.com/summer-quran-classes",
   },
   organizer: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
   offers: {
     "@type": "Offer",
     price: "0",
     priceCurrency: "USD",
     name: "Free Trial Class",
-    url: "https://www.easequran.com/free-trial",
+    url: "https://easequran.com/free-trial",
     availability: "https://schema.org/InStock",
     validFrom: "2026-06-01",
   },
@@ -194,7 +194,7 @@ const trustBadges = [
   { icon: BookOpen, label: "Ages 4 to 14" },
   { icon: CheckCircle, label: "All 50 States" },
   { icon: Gift, label: "Free First Class" },
-  { icon: Star, label: "500+ Families Served" },
+  { icon: Star, label: "100% Certified Teachers" },
 ];
 
 const problemCards = [
@@ -229,7 +229,7 @@ const features = [
   {
     icon: Award,
     title: "Certified From Wifaq ul Madaris",
-    text: "Every teacher at Ease Quran holds certification from Wifaq ul Madaris Al-Arabia, one of the most respected Islamic education boards in the world. When your child learns here, they are learning from someone who earned the right to teach.",
+    text: "Every teacher at Ease Quran holds certification from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. When your child learns here, they are learning from someone who earned the right to teach.",
   },
   {
     icon: Shield,

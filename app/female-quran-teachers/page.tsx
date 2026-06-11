@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 
 export const metadata: Metadata = {
-  title: "Female Quran Teacher Online USA | Sister Quran Teacher | Ease Quran",
+  title: "Female Quran Teachers Online USA",
   description:
     "Find a certified female Quran teacher online in the USA. Our qualified sister teachers for women and children. Almas Fatima, Qaria e Quran, available now.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "online Quran classes for women",
   ],
   alternates: {
-    canonical: "https://www.easequran.com/female-quran-teachers",
+    canonical: "https://easequran.com/female-quran-teachers",
   },
   openGraph: {
     title: "Female Quran Teacher Online USA | Sister Quran Teacher | Ease Quran",
@@ -39,7 +39,7 @@ const personSchema = {
   worksFor: {
     "@type": "EducationalOrganization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
   alumniOf: [
     {
@@ -122,7 +122,7 @@ const faqs = [
   {
     question: "Is Sister Almas Fatima certified?",
     answer:
-      "Yes. Sister Almas Fatima holds two recognized Islamic credentials: a certification as a Qaria e Quran from an institution affiliated with Wifaq ul Madaris Al-Arabia, the most respected Islamic education board in the world, and a Bachelor in Islamic Studies. She has been teaching Quran to sisters and children online since 2022 and brings genuine academic qualification to every lesson.",
+      "Yes. Sister Almas Fatima holds two recognized Islamic credentials: a certification as a Qaria e Quran from an institution affiliated with Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized, and a Bachelor in Islamic Studies. She has been teaching Quran to sisters and children online since 2022 and brings genuine academic qualification to every lesson.",
   },
   {
     question: "Can my daughter have a female teacher for all her classes?",

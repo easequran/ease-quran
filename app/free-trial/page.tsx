@@ -3,15 +3,15 @@ import { GraduationCap, CheckCircle, Award } from "lucide-react";
 import FreeTrialForm from "./FreeTrialForm";
 
 export const metadata: Metadata = {
-  title: "Book Your Free Quran Trial Class | Ease Quran Online Academy",
+  title: "Book Your Free Quran Trial Class",
   description:
     "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers, flexible scheduling. Muslim families across the USA trust Ease Quran.",
-  alternates: { canonical: "https://www.easequran.com/free-trial" },
+  alternates: { canonical: "https://easequran.com/free-trial" },
   openGraph: {
     title: "Book Your Free Quran Trial Class | Ease Quran Online Academy",
     description:
       "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers, flexible scheduling. Muslim families across the USA trust Ease Quran.",
-    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Book Your Free Quran Trial Class at Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Book Your Free Quran Trial Class at Ease Quran Academy" }],
   },
 };
 
@@ -23,11 +23,11 @@ const freeTrialSchema = {
   price: "0",
   priceCurrency: "USD",
   availability: "https://schema.org/InStock",
-  url: "https://www.easequran.com/free-trial",
+  url: "https://easequran.com/free-trial",
   seller: {
     "@type": "EducationalOrganization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
   validFrom: "2025-01-01",
 };
@@ -89,7 +89,7 @@ export default function FreeTrialPage() {
                     },
                     {
                       icon: CheckCircle,
-                      text: "Trusted by Muslim families across all 50 states in America",
+                      text: "Available to Muslim families across all 50 states in America",
                     },
                   ].map((item, i) => {
                     const Icon = item.icon;
@@ -161,7 +161,7 @@ export default function FreeTrialPage() {
               {/* Geo + Response */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-navy rounded-2xl p-6 text-center">
-                  <p className="text-white font-semibold text-sm">Trusted by families</p>
+                  <p className="text-white font-semibold text-sm">Available</p>
                   <p className="text-gold font-bold">in all 50 states</p>
                 </div>
                 <div className="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
@@ -180,7 +180,7 @@ export default function FreeTrialPage() {
                     </p>
                     <p className="text-grey text-xs leading-relaxed">
                       All Ease Quran teachers hold certification from Wifaq ul Madaris Al-Arabia,
-                      the largest and most respected Islamic education board in the world. This is
+                      Pakistan's largest Islamic education board, globally recognized. This is
                       the gold standard in Quran teacher credentials.
                     </p>
                   </div>

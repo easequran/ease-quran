@@ -4,13 +4,15 @@ import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
+import TeacherStrip from "@/components/TeacherStrip";
+import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in Atlanta, Georgia | Ease Quran Academy",
+  title: "Online Quran Classes in Atlanta, Georgia",
   description:
     "Certified online Quran classes for Muslim families in Atlanta, GA. Serving the African American, South Asian, and Arab Muslim communities across the Atlanta metro. Free trial available.",
   alternates: {
-    canonical: "https://www.easequran.com/locations/atlanta",
+    canonical: "https://easequran.com/locations/atlanta",
   },
   openGraph: {
     title: "Online Quran Classes in Atlanta, Georgia | Ease Quran Academy",
@@ -24,9 +26,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.easequran.com/locations" },
-    { "@type": "ListItem", position: 3, name: "Atlanta", item: "https://www.easequran.com/locations/atlanta" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "Atlanta", item: "https://easequran.com/locations/atlanta" },
   ],
 };
 
@@ -34,7 +36,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Ease Quran Online Academy",
-  url: "https://www.easequran.com",
+  url: "https://easequran.com",
   description:
     "Certified online Quran classes for Muslim families in Atlanta, Georgia and the greater Atlanta metro area.",
   areaServed: {
@@ -50,6 +52,22 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is online Quran learning safe for my child?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I find Quran classes near me in Atlanta?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Though we are not a physical school in Atlanta, our online classes serve any family in the Atlanta area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
+      },
+    },
     {
       "@type": "Question",
       name: "Do you serve families in Atlanta's suburbs like Duluth, Lawrenceville, and Stone Mountain?",
@@ -71,7 +89,7 @@ const faqSchema = {
       name: "Are your teachers certified?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic academic credential in the world. Atlanta families can trust our teachers' qualifications completely.",
+        text: "Yes. All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Atlanta families can trust our teachers' qualifications completely.",
       },
     },
     {
@@ -95,6 +113,16 @@ const faqSchema = {
 
 const faqs = [
   {
+    question: "Is online Quran learning safe for my child?",
+    answer:
+      "Yes. Parents are welcome to sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified. See our Child Safety & Parent Rights Policy for full details.",
+  },
+  {
+    question: "Can I find Quran classes near me in Atlanta?",
+    answer:
+      "Yes. While we are not a physical school in Atlanta, our online classes work for any family in the Atlanta area searching for Quran classes, a Quran teacher, or a Hifz program near them. You connect one-on-one with a certified teacher over Zoom from home, so you get all the benefits of a class near you without any travel.",
+  },
+  {
     question: "Do you serve families in Atlanta's suburbs like Duluth, Lawrenceville, and Stone Mountain?",
     answer:
       "Yes. We serve the entire Atlanta metropolitan area including Duluth, Lawrenceville, Stone Mountain, Smyrna, Marietta, Alpharetta, Decatur, Norcross, and all surrounding communities. Stone Mountain and the Gwinnett County area have a particularly significant Muslim presence, and online classes serve every part of Greater Atlanta with equal quality.",
@@ -107,7 +135,7 @@ const faqs = [
   {
     question: "Are your teachers certified?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, the most respected and internationally recognized Islamic education board in the world. Atlanta's growing Muslim community deserves teachers with real, verifiable credentials, and that is exactly what we provide.",
+      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. Atlanta's growing Muslim community deserves teachers with real, verifiable credentials, and that is exactly what we provide.",
   },
   {
     question: "Is a female teacher available for sisters in Atlanta?",
@@ -177,6 +205,8 @@ export default function AtlantaPage() {
         </div>
       </section>
 
+      <TeacherStrip />
+
       {/* Muslim Community Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -242,6 +272,28 @@ export default function AtlantaPage() {
         </div>
       </section>
 
+      {/* Proof, Pricing & CTA */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
+            <span className="font-semibold">Plans from $40/month</span>
+            <span className="text-white/70"> &middot; most families choose $79/month for 12 classes &middot; </span>
+            <span className="text-gold font-semibold">first class free &rarr;</span>
+          </Link>
+
+          <WhatsAppReviewsRow heading="Real Students, Real Results" subline="We've taught Western, English-speaking students across the UK and USA." />
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-colors text-sm text-center">
+              Book Free Trial Class
+            </Link>
+            <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Atlanta%20Georgia" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-xl hover:bg-offwhite transition-colors text-sm text-center">
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Courses */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -301,17 +353,23 @@ export default function AtlantaPage() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="section-padding bg-navy">
+      {/* Near Me */}
+      <section className="section-padding bg-offwhite">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-6">Family Testimonial</span>
-            <blockquote className="font-playfair text-xl md:text-2xl text-white leading-relaxed italic mb-8">
-              "We moved to Atlanta from New Jersey two years ago and finding an Islamic school near us in Duluth that could take our kids was a struggle. Ease Quran solved everything. My two kids have been studying with their teacher for five months and the progress is incredible. We especially love that the schedule is completely flexible around our work and school life."
-            </blockquote>
-            <footer className="text-white/60 font-semibold">
-              — Tariq and Zainab B., Muslim family in Duluth, Georgia
-            </footer>
+          <div className="max-w-4xl mx-auto">
+            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              Quran Classes Near You
+            </span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+              Looking for Quran Classes Near You in Atlanta?
+            </h2>
+            <p className="text-grey leading-relaxed">
+              If you have been searching for &ldquo;Quran classes near me&rdquo; in Atlanta, the best
+              teacher for your child may not be the closest one on the map. Because every Ease Quran
+              class is live and online, Atlanta families connect one-on-one with certified teachers
+              without driving anywhere. You get the convenience of a teacher right in your home, with
+              none of the commute, parking, or fixed group schedule of a local center.
+            </p>
           </div>
         </div>
       </section>
@@ -327,6 +385,12 @@ export default function AtlantaPage() {
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
+            <p className="text-center text-grey text-sm mt-6">
+              Worried about safety?{" "}
+              <Link href="/safety" className="text-gold font-semibold hover:underline">
+                Read our Child Safety &amp; Parent Rights Policy
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -336,6 +400,7 @@ export default function AtlantaPage() {
         subtext="From Gwinnett County to Cobb County, serving the full diversity of Atlanta's fast-growing Muslim community with one-on-one, certified Quran instruction. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in Atlanta Georgia"
       />
     </>
   );

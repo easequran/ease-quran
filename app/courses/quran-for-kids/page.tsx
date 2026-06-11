@@ -7,17 +7,17 @@ import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes for Kids in USA | Ease Quran",
+  title: "Online Quran Classes for Kids in USA",
   description:
     "Fun, structured online Quran classes for children ages 4–14. Certified teachers, female teachers available. Book a free trial class today.",
   alternates: {
-    canonical: "https://www.easequran.com/courses/quran-for-kids",
+    canonical: "https://easequran.com/courses/quran-for-kids",
   },
   openGraph: {
     title: "Online Quran Classes for Kids in USA | Ease Quran",
     description:
       "Fun, structured online Quran classes for children ages 4–14. Certified teachers, female teachers available. Book a free trial class today.",
-    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for Kids in USA, Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for Kids in USA, Ease Quran Academy" }],
   },
 };
 
@@ -25,25 +25,10 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Courses", item: "https://www.easequran.com/courses" },
-    { "@type": "ListItem", position: 3, name: "Quran for Kids", item: "https://www.easequran.com/courses/quran-for-kids" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Courses", item: "https://easequran.com/courses" },
+    { "@type": "ListItem", position: 3, name: "Quran for Kids", item: "https://easequran.com/courses/quran-for-kids" },
   ],
-};
-
-const aggregateRatingSchema = {
-  "@context": "https://schema.org",
-  "@type": "AggregateRating",
-  itemReviewed: {
-    "@type": "Course",
-    name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
-  },
-  ratingValue: "4.9",
-  bestRating: "5",
-  worstRating: "1",
-  ratingCount: "127",
-  reviewCount: "127",
 };
 
 const courseSchema = {
@@ -55,9 +40,9 @@ const courseSchema = {
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
-  url: "https://www.easequran.com/courses/quran-for-kids",
+  url: "https://easequran.com/courses/quran-for-kids",
   courseMode: "online",
   educationalLevel: "Beginner",
   teaches: ["Arabic Letters", "Quran Reading", "Noorani Qaida", "Basic Tajweed", "Short Surahs"],
@@ -146,10 +131,6 @@ export default function QuranForKidsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
       />
       <script
         type="application/ld+json"
@@ -465,8 +446,8 @@ export default function QuranForKidsPage() {
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
               Both teachers hold credentials from{" "}
-              <strong>Wifaq ul Madaris Al-Arabia</strong>, the most respected Islamic
-              education board in the world. A female teacher is available on request.
+              <strong>Wifaq ul Madaris Al-Arabia</strong>, Pakistan&apos;s largest Islamic
+              education board, globally recognized. A female teacher is available on request.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">

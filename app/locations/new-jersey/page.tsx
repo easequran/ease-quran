@@ -4,19 +4,21 @@ import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
+import TeacherStrip from "@/components/TeacherStrip";
+import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in New Jersey | Ease Quran Academy",
+  title: "Online Quran Classes in New Jersey",
   description:
     "Certified online Quran classes for Muslim families in New Jersey. Serving Paterson, Jersey City, Newark, Edison, and all of NJ. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
-    canonical: "https://www.easequran.com/locations/new-jersey",
+    canonical: "https://easequran.com/locations/new-jersey",
   },
   openGraph: {
     title: "Online Quran Classes in New Jersey | Ease Quran Academy",
     description:
       "Certified online Quran classes for Muslim families in New Jersey. Paterson, Jersey City, Newark, Edison and statewide.",
-    images: [{ url: "https://www.easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in New Jersey, Ease Quran Academy" }],
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes in New Jersey, Ease Quran Academy" }],
   },
 };
 
@@ -24,9 +26,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.easequran.com" },
-    { "@type": "ListItem", position: 2, name: "Locations", item: "https://www.easequran.com/locations" },
-    { "@type": "ListItem", position: 3, name: "New Jersey", item: "https://www.easequran.com/locations/new-jersey" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+    { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
+    { "@type": "ListItem", position: 3, name: "New Jersey", item: "https://easequran.com/locations/new-jersey" },
   ],
 };
 
@@ -34,7 +36,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Ease Quran Online Academy",
-  url: "https://www.easequran.com",
+  url: "https://easequran.com",
   description:
     "Certified online Quran classes for Muslim families throughout New Jersey.",
   areaServed: {
@@ -49,6 +51,22 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
+    {
+      "@type": "Question",
+      name: "Is online Quran learning safe for my child?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I find Quran classes near me in New Jersey?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Though we are not a physical school in New Jersey, our online classes serve any family in the New Jersey area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
+      },
+    },
     {
       "@type": "Question",
       name: "Do you serve families in Paterson, Jersey City, and Newark?",
@@ -70,7 +88,7 @@ const faqSchema = {
       name: "How qualified are Ease Quran teachers compared to local Islamic schools?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the most respected Islamic education credential in the world. Every class is one-on-one, unlike the group-based instruction at most NJ Islamic schools.",
+        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Every class is one-on-one, unlike the group-based instruction at most NJ Islamic schools.",
       },
     },
     {
@@ -94,6 +112,16 @@ const faqSchema = {
 
 const faqs = [
   {
+    question: "Is online Quran learning safe for my child?",
+    answer:
+      "Yes. Parents are welcome to sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified. See our Child Safety & Parent Rights Policy for full details.",
+  },
+  {
+    question: "Can I find Quran classes near me in New Jersey?",
+    answer:
+      "Yes. While we are not a physical school in New Jersey, our online classes work for any family in the New Jersey area searching for Quran classes, a Quran teacher, or a Hifz program near them. You connect one-on-one with a certified teacher over Zoom from home, so you get all the benefits of a class near you without any travel.",
+  },
+  {
     question: "Do you serve families in Paterson, Jersey City, and Newark?",
     answer:
       "Yes. We serve Muslim families across all of New Jersey. Paterson, Jersey City, Newark, Edison, Clifton, Elizabeth, Passaic, Bayonne, and every city and town statewide. Since all classes are conducted online via Zoom, your location anywhere in New Jersey is perfectly fine. Families from South Jersey and the shore also join us regularly.",
@@ -106,7 +134,7 @@ const faqs = [
   {
     question: "How qualified are Ease Quran teachers compared to local Islamic schools?",
     answer:
-      "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the most prestigious Islamic education credential in the world. Beyond credentials, every Ease Quran class is one-on-one and private, unlike the group instruction at most NJ weekend Islamic schools. Your child receives full, individual attention from a certified scholar every single session.",
+      "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Beyond credentials, every Ease Quran class is one-on-one and private, unlike the group instruction at most NJ weekend Islamic schools. Your child receives full, individual attention from a certified scholar every single session.",
   },
   {
     question: "Is there a female teacher available for my daughter in New Jersey?",
@@ -175,6 +203,8 @@ export default function NewJerseyPage() {
         </div>
       </section>
 
+      <TeacherStrip />
+
       {/* Muslim Community Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -240,6 +270,28 @@ export default function NewJerseyPage() {
         </div>
       </section>
 
+      {/* Proof, Pricing & CTA */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
+            <span className="font-semibold">Plans from $40/month</span>
+            <span className="text-white/70"> &middot; most families choose $79/month for 12 classes &middot; </span>
+            <span className="text-gold font-semibold">first class free &rarr;</span>
+          </Link>
+
+          <WhatsAppReviewsRow heading="Real Students, Real Results" subline="We've taught Western, English-speaking students across the UK and USA." />
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-colors text-sm text-center">
+              Book Free Trial Class
+            </Link>
+            <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20New%20Jersey" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-xl hover:bg-offwhite transition-colors text-sm text-center">
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Courses */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -299,17 +351,23 @@ export default function NewJerseyPage() {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="section-padding bg-navy">
+      {/* Near Me */}
+      <section className="section-padding bg-offwhite">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-6">Family Testimonial</span>
-            <blockquote className="font-playfair text-xl md:text-2xl text-white leading-relaxed italic mb-8">
-              "My husband takes the PATH to Manhattan every day and gets home around 7:30 PM. I work shifts at the hospital. We could not realistically get our three children to any Islamic school. With Ease Quran, our kids have lessons right after school, and I check in with the teacher on weekends. All three are progressing beautifully. SubhanAllah."
-            </blockquote>
-            <footer className="text-white/60 font-semibold">
-              — Mariam H., Muslim mother in Jersey City, New Jersey
-            </footer>
+          <div className="max-w-4xl mx-auto">
+            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              Quran Classes Near You
+            </span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+              Looking for Quran Classes Near You in New Jersey?
+            </h2>
+            <p className="text-grey leading-relaxed">
+              If you have been searching for &ldquo;Quran classes near me&rdquo; in New Jersey, the best
+              teacher for your child may not be the closest one on the map. Because every Ease Quran
+              class is live and online, New Jersey families connect one-on-one with certified teachers
+              without driving anywhere. You get the convenience of a teacher right in your home, with
+              none of the commute, parking, or fixed group schedule of a local center.
+            </p>
           </div>
         </div>
       </section>
@@ -325,6 +383,12 @@ export default function NewJerseyPage() {
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
+            <p className="text-center text-grey text-sm mt-6">
+              Worried about safety?{" "}
+              <Link href="/safety" className="text-gold font-semibold hover:underline">
+                Read our Child Safety &amp; Parent Rights Policy
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -334,6 +398,7 @@ export default function NewJerseyPage() {
         subtext="Paterson, Jersey City, Edison, Newark, wherever you are in New Jersey, certified Quran education comes to your home. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
+        whatsappText="Hi I am interested in online Quran classes in New Jersey"
       />
     </>
   );

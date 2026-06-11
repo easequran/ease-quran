@@ -3,23 +3,23 @@ import Link from "next/link";
 import { Clock, Calendar, User, ArrowLeft, CheckCircle, XCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How to Choose the Best Online Quran Academy for Your Child in USA",
+  title: { absolute: "How to Choose an Online Quran Academy for Your Child" },
   description:
     "Confused about which online Quran academy to trust? Learn the 6 essential factors, teacher certification, free trials, female teachers & more. A guide for Muslim parents in USA.",
   alternates: {
-    canonical: "https://www.easequran.com/blog/how-to-choose-online-quran-academy",
+    canonical: "https://easequran.com/blog/how-to-choose-online-quran-academy",
   },
   openGraph: {
     title: "How to Choose the Best Online Quran Academy for Your Child in America",
     description:
       "Confused about which online Quran academy to trust? Learn the 6 essential factors, teacher certification, free trials, female teachers & more. A guide for Muslim parents in USA.",
-    url: "https://www.easequran.com/blog/how-to-choose-online-quran-academy",
+    url: "https://easequran.com/blog/how-to-choose-online-quran-academy",
     type: "article",
     publishedTime: "2025-01-15",
     authors: ["Ease Quran Team"],
     images: [
       {
-        url: "https://www.easequran.com/images/og-image.png",
+        url: "https://easequran.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "How to Choose the Best Online Quran Academy",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "How to Choose the Best Online Quran Academy for Your Child in USA",
     description:
       "6 essential factors every Muslim parent in America must check before enrolling their child in an online Quran academy.",
-    images: ["https://www.easequran.com/images/og-image.png"],
+    images: ["https://easequran.com/images/og-image.png"],
   },
 };
 
@@ -43,12 +43,12 @@ const articleSchema = {
   publisher: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
-    url: "https://www.easequran.com",
+    url: "https://easequran.com",
   },
   datePublished: "2025-01-15",
   dateModified: "2025-01-15",
-  image: "https://www.easequran.com/images/og-image.png",
-  url: "https://www.easequran.com/blog/how-to-choose-online-quran-academy",
+  image: "https://easequran.com/images/og-image.png",
+  url: "https://easequran.com/blog/how-to-choose-online-quran-academy",
   description:
     "With hundreds of online Quran academies competing for your family's trust, this guide covers the 6 most important factors, teacher certification, free trials, female teacher availability, curriculum quality, scheduling flexibility, and red flags to avoid.",
 };
@@ -108,19 +108,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://www.easequran.com",
+      item: "https://easequran.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Blog",
-      item: "https://www.easequran.com/blog",
+      item: "https://easequran.com/blog",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "How to Choose the Best Online Quran Academy",
-      item: "https://www.easequran.com/blog/how-to-choose-online-quran-academy",
+      item: "https://easequran.com/blog/how-to-choose-online-quran-academy",
     },
   ],
 };

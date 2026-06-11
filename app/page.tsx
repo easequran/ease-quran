@@ -3,17 +3,19 @@ import Image from "next/image";
 import Link from "next/link";
 import CourseCard from "@/components/CourseCard";
 import TeacherCard from "@/components/TeacherCard";
-import TestimonialCard from "@/components/TestimonialCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
+import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
+import LiteYouTube from "@/components/LiteYouTube";
+import { videos } from "@/components/proof";
 import { Shield, Users, BookOpen, Star, AlertCircle, Globe, UserCheck, CheckCircle, Award } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes for Kids & Adults in USA | Ease Quran Academy",
+  title: { absolute: "Online Quran Classes for Kids & Adults in USA | Ease Quran Academy" },
   description:
     "Book certified online Quran classes for your family. Wifaq ul Madaris certified teachers, female teachers available, free first class. Serving Muslim families across all 50 states.",
-  alternates: { canonical: "https://www.easequran.com" },
+  alternates: { canonical: "https://easequran.com" },
 };
 
 const courses = [
@@ -104,30 +106,6 @@ const painPoints = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "Fatima Al-Hassan",
-    location: "Houston, Texas",
-    course: "Quran for Kids",
-    text: "We tried three different online academies before finding Ease Quran. The difference is night and day. My daughter actually looks forward to her classes now. Teacher Almas is so patient and encouraging. In just 3 months, she can read Surah Al-Fatiha beautifully with proper Tajweed.",
-    rating: 5 as const,
-  },
-  {
-    name: "Ahmad Siddiqui",
-    location: "New Jersey",
-    course: "Tajweed Course",
-    text: "I've been trying to improve my Quran recitation for years. Shah Zaib's teaching method is unlike anything I've experienced. He explains the rules in a way that actually makes sense for someone who grew up speaking English. My recitation has improved dramatically in just 2 months.",
-    rating: 5 as const,
-  },
-  {
-    name: "Maryam Ibrahim",
-    location: "Chicago, Illinois",
-    course: "Hifz Program",
-    text: "As a Muslim mother in America, finding the right Quran teacher for my son was my biggest worry. With Ease Quran, I feel completely at peace. The teachers are credentialed, professional, and genuinely care about our children's connection to Allah's Book. My son has memorized 5 juz in 8 months.",
-    rating: 5 as const,
-  },
-];
-
 const faqs = [
   {
     question: "How do online Quran classes work?",
@@ -137,7 +115,7 @@ const faqs = [
   {
     question: "Are your teachers certified?",
     answer:
-      "Yes. All our teachers hold certification from Wifaq ul Madaris Al-Arabia Pakistan, the largest Islamic education board in Pakistan and globally recognized. Our founder Shah Zaib has 6+ years of experience specifically teaching Western, English-speaking students.",
+      "Yes. All our teachers hold certification from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. Our founder Shah Zaib has 6+ years of experience specifically teaching Western, English-speaking students.",
   },
   {
     question: "Do you have female Quran teachers?",
@@ -193,8 +171,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Ease Quran Online Academy",
-  url: "https://www.easequran.com",
-  logo: "https://www.easequran.com/images/logo.png",
+  url: "https://easequran.com",
+  logo: "https://easequran.com/images/logo.png",
   email: "info@easequran.com",
   description:
     "Certified online Quran academy serving Muslim families across the United States.",
@@ -216,6 +194,53 @@ const faqSchema = {
   })),
 };
 
+const teachersSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Shah Zaib",
+    jobTitle: "Founder & Head Teacher",
+    description:
+      "Founder and head teacher at Ease Quran Online Academy, certified from Wifaq ul Madaris Al-Arabia, with 6+ years teaching Western, English-speaking students.",
+    worksFor: { "@type": "EducationalOrganization", name: "Ease Quran Online Academy", url: "https://easequran.com" },
+    alumniOf: { "@type": "EducationalOrganization", name: "Wifaq ul Madaris Al-Arabia" },
+    knowsAbout: ["Quran", "Tajweed", "Hifz", "Islamic Studies"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Muhammad Umair",
+    jobTitle: "Tajweed & Hifz Specialist",
+    description:
+      "Certified Quran teacher at Ease Quran Online Academy specialising in Tajweed and Hifz, credentialed by Wifaq ul Madaris Al-Arabia.",
+    worksFor: { "@type": "EducationalOrganization", name: "Ease Quran Online Academy", url: "https://easequran.com" },
+    alumniOf: { "@type": "EducationalOrganization", name: "Wifaq ul Madaris Al-Arabia" },
+    knowsAbout: ["Tajweed", "Hifz", "Quran recitation"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Almas Fatima",
+    jobTitle: "Female Quran Teacher — Qaria e Quran",
+    description:
+      "Certified female Quran teacher at Ease Quran Online Academy for sisters and children, holding a Wifaq ul Madaris Al-Arabia certification and a Bachelor in Islamic Studies.",
+    worksFor: { "@type": "EducationalOrganization", name: "Ease Quran Online Academy", url: "https://easequran.com" },
+    alumniOf: { "@type": "EducationalOrganization", name: "Wifaq ul Madaris Al-Arabia" },
+    knowsAbout: ["Quran for Kids", "Tajweed", "Noorani Qaida", "Islamic Studies"],
+  },
+];
+
+const videoSchema = videos.map((v) => ({
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: v.name,
+  description: v.description,
+  thumbnailUrl: [`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`],
+  uploadDate: v.uploadDate,
+  embedUrl: `https://www.youtube.com/embed/${v.id}`,
+  contentUrl: `https://youtu.be/${v.id}`,
+}));
+
 export default function HomePage() {
   return (
     <>
@@ -227,6 +252,20 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      {teachersSchema.map((t, i) => (
+        <script
+          key={`teacher-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(t) }}
+        />
+      ))}
+      {videoSchema.map((v, i) => (
+        <script
+          key={`video-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(v) }}
+        />
+      ))}
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -259,7 +298,7 @@ export default function HomePage() {
             <div>
               <div className="inline-flex items-center gap-2 bg-white/10 text-white text-xs px-4 py-2 rounded-full mb-6 border border-white/20 backdrop-blur-sm">
                 <CheckCircle size={12} className="text-gold" />
-                <span>Trusted by Muslim Families in 50 States</span>
+                <span>Available in All 50 States</span>
               </div>
               <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
                 Online Quran Classes{" "}
@@ -295,7 +334,7 @@ export default function HomePage() {
             {/* Right: premium glass stat cards */}
             <div className="hidden lg:grid grid-cols-2 gap-4">
               {[
-                { number: "500+", label: "Families Served", sub: "Across all 50 states" },
+                { number: "Female", label: "Teachers Available", sub: "For sisters & daughters" },
                 { number: "6+",   label: "Years Experience", sub: "With Western students" },
                 { number: "100%", label: "Certified Teachers", sub: "Wifaq ul Madaris" },
                 { number: "Free", label: "First Trial Class", sub: "No credit card needed" },
@@ -331,7 +370,7 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { number: "500+", label: "Families Served" },
+              { number: "Free", label: "First Class" },
               { number: "50", label: "States Covered" },
               { number: "6+", label: "Years Experience" },
               { number: "100%", label: "Certified Teachers" },
@@ -703,19 +742,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* REAL PROOF */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
-          <div className="text-center mb-14">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">What Families Say</span>
+          <div className="text-center mb-12 max-w-2xl mx-auto">
+            <span className="text-gold text-sm font-semibold tracking-widest uppercase">
+              What Our Students &amp; Families Say
+            </span>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
-              Trusted by Muslim Families Across America
+              Real Students, Real Results
             </h2>
+            <p className="text-grey leading-relaxed">
+              We&apos;ve taught Western, English-speaking students across the UK and USA.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <TestimonialCard key={t.name} {...t} />
+
+          {/* WhatsApp review screenshots */}
+          <div className="mb-14">
+            <WhatsAppReviewsRow />
+          </div>
+
+          {/* Video testimonials */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {videos.map((v) => (
+              <LiteYouTube key={v.id} id={v.id} caption={v.caption} title={v.name} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEAR ME */}
+      <section className="section-padding bg-offwhite">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Quran Classes Near You</span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-5">
+              Searching for &ldquo;Online Quran Classes Near Me&rdquo;?
+            </h2>
+            <p className="text-grey leading-relaxed mb-4">
+              If you have been typing &ldquo;Quran classes near me&rdquo; or &ldquo;Quran teacher near
+              me&rdquo; into Google, here is the good news: the best teacher for your family does not
+              have to be the closest one. Every Ease Quran class is live, one-on-one, and online, so a
+              certified teacher is always right in your home, wherever you live in the USA.
+            </p>
+            <p className="text-grey leading-relaxed">
+              No commute, no fixed group schedule, and no settling for whoever happens to be nearby.
+              You get a Wifaq ul Madaris certified teacher matched to your child, with a free first
+              class to start.{" "}
+              <Link href="/free-trial" className="text-gold font-semibold hover:underline">
+                Book your free trial class
+              </Link>{" "}
+              from anywhere.
+            </p>
           </div>
         </div>
       </section>
@@ -730,7 +808,7 @@ export default function HomePage() {
             </h2>
             <p className="text-grey max-w-xl mx-auto">
               Wherever you are in America, we bring certified Quran education to your home.
-              Trusted by Muslim families in all 50 states.
+              Available to Muslim families in all 50 states.
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-8">
