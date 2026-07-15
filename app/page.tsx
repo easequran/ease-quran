@@ -160,6 +160,9 @@ const cities = [
   { name: "Philadelphia", href: "/locations/philadelphia" },
   { name: "Atlanta", href: "/locations/atlanta" },
   { name: "Columbus, OH", href: "/locations/columbus-ohio" },
+  { name: "Washington, D.C.", href: "/locations/washington-dc" },
+  { name: "Minneapolis-St. Paul", href: "/locations/minneapolis" },
+  { name: "Boston", href: "/locations/boston" },
 ];
 
 const WHATSAPP_NUMBER = "923195657389";

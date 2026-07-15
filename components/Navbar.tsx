@@ -44,6 +44,9 @@ const locationLinks = [
   { label: "Philadelphia", href: "/locations/philadelphia" },
   { label: "Atlanta", href: "/locations/atlanta" },
   { label: "Columbus, OH", href: "/locations/columbus-ohio" },
+  { label: "Washington, D.C.", href: "/locations/washington-dc" },
+  { label: "Minneapolis-St. Paul", href: "/locations/minneapolis" },
+  { label: "Boston", href: "/locations/boston" },
 ];
 
 /* ── Simple nav links ── */

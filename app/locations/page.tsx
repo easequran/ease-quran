@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Online Quran Classes by City | USA Locations",
   description:
-    "Ease Quran Online Academy serves Muslim families across the USA. Find online Quran classes in your city: New York, Houston, Chicago, Los Angeles, and more.",
+    "Ease Quran Online Academy serves Muslim families across the USA. Find online Quran classes in your city: New York, Houston, Chicago, Los Angeles, Washington D.C., Boston, and more.",
   alternates: { canonical: "https://easequran.com/locations" },
 };
 
@@ -69,6 +69,24 @@ const cities = [
     href: "/locations/columbus-ohio",
     state: "OH",
     desc: "Home to one of the largest Somali communities in the USA",
+  },
+  {
+    name: "Washington, D.C.",
+    href: "/locations/washington-dc",
+    state: "DC",
+    desc: "Serving the diverse Muslim community across the DMV area",
+  },
+  {
+    name: "Minneapolis-St. Paul",
+    href: "/locations/minneapolis",
+    state: "MN",
+    desc: "Home to one of the largest Somali Muslim communities in the USA",
+  },
+  {
+    name: "Boston",
+    href: "/locations/boston",
+    state: "MA",
+    desc: "Serving a diverse, academic Muslim community in Greater Boston",
   },
 ];
 

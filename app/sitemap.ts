@@ -61,6 +61,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/locations/philadelphia`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/locations/atlanta`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/locations/columbus-ohio`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/locations/washington-dc`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/locations/minneapolis`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/locations/boston`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     // Blog articles — auto-populated from filesystem
     ...blogEntries,
   ];
