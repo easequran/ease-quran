@@ -52,7 +52,12 @@ export default function PopupForm() {
   useEffect(() => {
     if (visible) {
       document.body.style.overflow = "hidden";
-      setTimeout(() => firstInputRef.current?.focus(), 100);
+      // Skip autofocus on small screens — it pops the keyboard open the
+      // instant the popup appears, which pushes the header off-screen.
+      const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
+      if (!isSmallScreen) {
+        setTimeout(() => firstInputRef.current?.focus(), 100);
+      }
     } else {
       document.body.style.overflow = "";
     }
@@ -118,9 +123,9 @@ export default function PopupForm() {
       aria-modal="true"
       aria-labelledby="popup-title"
     >
-      <div className="popup-card bg-white rounded-2xl w-full max-w-md overflow-hidden shadow-2xl md:max-h-[90vh] md:overflow-y-auto">
+      <div className="popup-card bg-white rounded-2xl w-full max-w-md overflow-hidden shadow-2xl max-h-[90dvh] overflow-y-auto">
         {/* Header */}
-        <div className="bg-navy px-6 pt-6 pb-5 relative">
+        <div className="bg-navy px-5 sm:px-6 pt-5 sm:pt-6 pb-4 sm:pb-5 relative">
           <button
             onClick={close}
             className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-white/20 hover:text-white transition-colors"
@@ -128,12 +133,12 @@ export default function PopupForm() {
           >
             <X size={22} />
           </button>
-          <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-2">
+          <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-2 pr-10">
             Limited Offer
           </p>
           <h2
             id="popup-title"
-            className="font-playfair text-2xl font-bold text-white leading-tight mb-2"
+            className="font-playfair text-xl sm:text-2xl font-bold text-white leading-tight mb-2 pr-8"
           >
             Book Your FREE Trial Quran Class Today
           </h2>
@@ -144,7 +149,7 @@ export default function PopupForm() {
         </div>
 
         {/* Body */}
-        <div className="px-6 py-5">
+        <div className="px-5 sm:px-6 py-5">
           {submitted ? (
             <div className="text-center py-6">
               <CheckCircle className="mx-auto mb-4 text-gold" size={56} />
@@ -233,14 +238,14 @@ export default function PopupForm() {
                 <label className="block text-sm font-medium text-navy mb-1">
                   Age Group *
                 </label>
-                <div className="grid grid-cols-4 gap-1.5" role="group" aria-label="Age Group">
+                <div className="grid grid-cols-4 gap-1 sm:gap-1.5" role="group" aria-label="Age Group">
                   {ageGroupOptions.map((age) => (
                     <button
                       key={age}
                       type="button"
                       onClick={() => setForm({ ...form, ageGroup: age })}
                       aria-pressed={form.ageGroup === age}
-                      className={`py-2 px-1 rounded-lg border text-xs font-semibold text-center transition-colors ${
+                      className={`py-2 px-0.5 rounded-lg border text-[11px] sm:text-xs font-semibold text-center leading-tight transition-colors ${
                         form.ageGroup === age
                           ? "bg-gold border-gold text-navy"
                           : "bg-white border-gray-200 text-navy hover:border-gold/50"
