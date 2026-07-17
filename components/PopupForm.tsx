@@ -20,6 +20,8 @@ const courseOptions = [
   "Quran for Reverts",
 ];
 
+const ageGroupOptions = ["Under 7", "7–12", "13–17", "Adult"];
+
 export default function PopupForm() {
   const [visible, setVisible] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -32,6 +34,7 @@ export default function PopupForm() {
     email: "",
     whatsapp: "",
     course: "",
+    ageGroup: "",
   });
 
   useEffect(() => {
@@ -75,6 +78,10 @@ export default function PopupForm() {
     e.preventDefault();
     if (!form.whatsapp || !isValidPhoneNumber(form.whatsapp)) {
       setError("Please enter a valid WhatsApp number.");
+      return;
+    }
+    if (!form.ageGroup) {
+      setError("Please select an age group.");
       return;
     }
     setLoading(true);
@@ -220,6 +227,29 @@ export default function PopupForm() {
                     </option>
                   ))}
                 </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-navy mb-1">
+                  Age Group *
+                </label>
+                <div className="grid grid-cols-4 gap-1.5" role="group" aria-label="Age Group">
+                  {ageGroupOptions.map((age) => (
+                    <button
+                      key={age}
+                      type="button"
+                      onClick={() => setForm({ ...form, ageGroup: age })}
+                      aria-pressed={form.ageGroup === age}
+                      className={`py-2 px-1 rounded-lg border text-xs font-semibold text-center transition-colors ${
+                        form.ageGroup === age
+                          ? "bg-gold border-gold text-navy"
+                          : "bg-white border-gray-200 text-navy hover:border-gold/50"
+                      }`}
+                    >
+                      {age}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {error && (

@@ -4,9 +4,9 @@ import nodemailer from "nodemailer";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { fullName, email, whatsapp, course } = body;
+    const { fullName, email, whatsapp, course, ageGroup } = body;
 
-    if (!fullName || !email || !whatsapp || !course) {
+    if (!fullName || !email || !whatsapp || !course || !ageGroup) {
       return NextResponse.json(
         { error: "All fields are required" },
         { status: 400 }
@@ -46,8 +46,12 @@ export async function POST(req: NextRequest) {
                 <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb; color: #374151;">${whatsapp}</td>
               </tr>
               <tr>
-                <td style="padding: 10px 0; font-weight: bold; color: #0B1E5B;">Course Interest</td>
-                <td style="padding: 10px 0; color: #374151;">${course}</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb; font-weight: bold; color: #0B1E5B;">Course Interest</td>
+                <td style="padding: 10px 0; border-bottom: 1px solid #e5e7eb; color: #374151;">${course}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 0; font-weight: bold; color: #0B1E5B;">Age Group</td>
+                <td style="padding: 10px 0; color: #374151;">${ageGroup}</td>
               </tr>
             </table>
             <div style="margin-top: 20px; padding: 12px; background: #F5A623; border-radius: 6px; text-align: center;">
