@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import PhoneInput, { isValidPhoneNumber } from "@/components/PhoneInput";
 
 const courses = [
   "Noorani Qaida (Beginners)",
@@ -17,6 +18,7 @@ type FormStatus = "idle" | "loading" | "success" | "error";
 
 export default function FreeTrialForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
+  const [phoneError, setPhoneError] = useState("");
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -35,6 +37,11 @@ export default function FreeTrialForm() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (!formData.whatsapp || !isValidPhoneNumber(formData.whatsapp)) {
+      setPhoneError("Please enter a valid WhatsApp number.");
+      return;
+    }
+    setPhoneError("");
     setStatus("loading");
 
     try {
@@ -137,19 +144,20 @@ export default function FreeTrialForm() {
           <label htmlFor="whatsapp" className={labelClass}>
             WhatsApp Number <span className="text-gold">*</span>
           </label>
-          <input
+          <PhoneInput
             id="whatsapp"
             name="whatsapp"
-            type="tel"
-            required
-            placeholder="+1 (555) 000-0000"
             value={formData.whatsapp}
-            onChange={handleChange}
-            className={inputClass}
+            onChange={(val) => setFormData((prev) => ({ ...prev, whatsapp: val }))}
+            required
           />
-          <p className="text-grey text-xs mt-1.5">
-            We will contact you on this number within 2 hours
-          </p>
+          {phoneError ? (
+            <p className="text-red-500 text-xs mt-1.5">{phoneError}</p>
+          ) : (
+            <p className="text-grey text-xs mt-1.5">
+              We will contact you on this number within 2 hours
+            </p>
+          )}
         </div>
 
         {/* Child Age */}

@@ -2,11 +2,13 @@
 
 import { useState, FormEvent } from "react";
 import { CheckCircle } from "lucide-react";
+import PhoneInput, { isValidPhoneNumber } from "@/components/PhoneInput";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<FormStatus>("idle");
+  const [phoneError, setPhoneError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,6 +25,11 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (formData.phone && !isValidPhoneNumber(formData.phone)) {
+      setPhoneError("Please enter a valid phone number, or leave this field blank.");
+      return;
+    }
+    setPhoneError("");
     setStatus("loading");
 
     try {
@@ -105,15 +112,15 @@ export default function ContactForm() {
             <label htmlFor="phone" className={labelClass}>
               Phone / WhatsApp
             </label>
-            <input
+            <PhoneInput
               id="phone"
               name="phone"
-              type="tel"
-              placeholder="+1 (555) 000-0000"
               value={formData.phone}
-              onChange={handleChange}
-              className={inputClass}
+              onChange={(val) => setFormData((prev) => ({ ...prev, phone: val }))}
             />
+            {phoneError && (
+              <p className="text-red-500 text-xs mt-1.5">{phoneError}</p>
+            )}
           </div>
         </div>
 

@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { X, CheckCircle } from "lucide-react";
+import { X, CheckCircle, ShieldCheck, MessageCircle } from "lucide-react";
+import PhoneInput, { isValidPhoneNumber } from "./PhoneInput";
 
 const WHATSAPP_NUMBER = "923195657389";
 const WHATSAPP_MESSAGE = encodeURIComponent(
@@ -72,6 +73,10 @@ export default function PopupForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    if (!form.whatsapp || !isValidPhoneNumber(form.whatsapp)) {
+      setError("Please enter a valid WhatsApp number.");
+      return;
+    }
     setLoading(true);
     setError("");
     try {
@@ -111,10 +116,10 @@ export default function PopupForm() {
         <div className="bg-navy px-6 pt-6 pb-5 relative">
           <button
             onClick={close}
-            className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
+            className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-white/20 hover:text-white transition-colors"
             aria-label="Close popup"
           >
-            <X size={20} />
+            <X size={22} />
           </button>
           <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-2">
             Limited Offer
@@ -188,14 +193,12 @@ export default function PopupForm() {
                 <label className="block text-sm font-medium text-navy mb-1" htmlFor="popup-wa">
                   WhatsApp Number *
                 </label>
-                <input
+                <PhoneInput
                   id="popup-wa"
-                  type="tel"
-                  placeholder="Your WhatsApp number"
-                  required
                   value={form.whatsapp}
-                  onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-                  className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-navy focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition"
+                  onChange={(val) => setForm({ ...form, whatsapp: val })}
+                  required
+                  compact
                 />
               </div>
 
@@ -223,6 +226,22 @@ export default function PopupForm() {
                 <p className="text-red-500 text-sm">{error}</p>
               )}
 
+              {/* Trust lines — what you're signing up for, before you submit */}
+              <ul className="space-y-1.5">
+                <li className="flex items-center gap-2 text-xs text-grey">
+                  <CheckCircle size={14} className="text-gold shrink-0" />
+                  100% free first trial class, no card needed
+                </li>
+                <li className="flex items-center gap-2 text-xs text-grey">
+                  <ShieldCheck size={14} className="text-gold shrink-0" />
+                  Wifaq ul Madaris certified teachers
+                </li>
+                <li className="flex items-center gap-2 text-xs text-grey">
+                  <MessageCircle size={14} className="text-gold shrink-0" />
+                  We&apos;ll follow up on WhatsApp within 2 hours
+                </li>
+              </ul>
+
               <button
                 type="submit"
                 disabled={loading}
@@ -230,15 +249,6 @@ export default function PopupForm() {
               >
                 {loading ? "Submitting..." : "Book My Free Trial Class"}
               </button>
-
-              <div className="text-center space-y-1">
-                <p className="text-grey text-xs">
-                  Free class, no credit card, cancel anytime
-                </p>
-                <p className="text-grey text-xs">
-                  We respond within 2 hours via WhatsApp
-                </p>
-              </div>
 
               <div className="border-t border-gray-100 pt-3 text-center">
                 <p className="text-xs text-grey mb-2">Or connect directly:</p>
