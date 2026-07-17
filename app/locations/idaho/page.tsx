@@ -47,26 +47,26 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in Idaho?",
+      name: "Idaho spans two time zones. How do you handle that?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Idaho, taught by Wifaq ul Madaris certified teachers.",
+        text: "Carefully. Idaho is genuinely split down the middle: the northern panhandle around Coeur d'Alene runs on Pacific Time, while Boise and the rest of the state run on Mountain Time, a full hour apart within one state. We confirm your child's exact class time against whichever zone your town actually uses at booking, so there's never any confusion.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you have students in Boise already?",
+      name: "Is Boise's Muslim community big enough to have real options?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We're actively welcoming Idaho families right now. Rather than claim a number we can't verify, we'd invite you to be one of our first Boise-area students with a free trial class.",
+        text: "It's genuinely small, concentrated mostly around Boise, with families scattered much further out across the rest of the state. Rather than claim a specific number of students we can't verify, we'd invite you to be one of our first Boise-area families and judge the quality for yourself with a free trial.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you accommodate Idaho time zones and schedules?",
+      name: "I'm not near Boise. Would Salt Lake City actually be closer for me?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We confirm your child's exact class time in Mountain Time at booking and work around your family's schedule, whether that includes farming, tech, or another local industry.",
+        text: "Possibly, depending where in Idaho you are. Our Salt Lake City location page covers the nearest Metro Tier community for southern Idaho families, though northern Idaho, in the Pacific Time panhandle, sits closer to Seattle than to Salt Lake City. Either way, our online classes reach your Idaho home directly, so the comparison is really just for context.",
       },
     },
     {
@@ -82,19 +82,19 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in Idaho?",
+    question: "Idaho spans two time zones. How do you handle that?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Idaho, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "Carefully, and it's a genuinely fair question. Idaho is one of the few states actually split by a time zone line: the northern panhandle around Coeur d'Alene runs on Pacific Time, while Boise and the rest of the state run on Mountain Time, a full hour apart within one state's borders. We confirm your child's exact class time against whichever zone your town actually uses, both at booking and again before each session, so there's never any confusion about when class starts.",
   },
   {
-    question: "Do you have students in Boise already?",
+    question: "Is Boise's Muslim community big enough to have real options?",
     answer:
-      "We're actively welcoming Idaho families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Boise-area students and see the quality for yourself with a free trial class.",
+      "It's genuinely small, concentrated mostly around Boise, with families scattered much further out across the rest of the state and fewer local teachers or programs to choose from than a bigger city offers. Rather than claim a specific number of students we can't verify, we'd simply invite you to be one of our first Boise-area families and see the quality for yourself with a free trial class.",
   },
   {
-    question: "Do you accommodate Idaho time zones and schedules?",
+    question: "I'm not near Boise. Would Salt Lake City actually be closer for me?",
     answer:
-      "Yes. We confirm your child's exact class time in Mountain Time at booking and again before each session, and work around your family's schedule, whether that means agricultural work, Boise's growing tech sector, or another local industry.",
+      "Possibly, depending on where in Idaho you live. Our Salt Lake City location page covers the nearest Metro Tier community for most of southern Idaho, but if you're in the northern panhandle on Pacific Time, you're honestly sitting closer to Seattle than to Salt Lake City. Either way, our online classes reach your Idaho home directly over Zoom, so the comparison is mostly just useful context, not a decision you need to make.",
   },
   {
     question: "How much do classes cost?",
@@ -159,12 +159,12 @@ export default function IdahoPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Idaho's Muslim community is genuinely small, concentrated mostly around Boise with families scattered further out across the state. We don't have a physical school in Idaho, and we won't pretend otherwise, but online Quran education is built exactly for this kind of gap. A certified teacher meets your child over Zoom regardless of how far your town is from Boise.
+                Idaho has a genuine geographic quirk that shapes daily life here more than people expect: the state is split across two time zones. The northern panhandle, around Coeur d'Alene and Sandpoint, runs on Pacific Time, while Boise and the rest of the state run on Mountain Time, a full hour apart within one state's borders. Idaho's Muslim community is genuinely small and concentrated mostly around Boise, with families in the panhandle and other outlying areas often further from a mosque than the map distance alone suggests, once that time-zone split is factored into any shared community event or class schedule.
               </p>
               <p>
-                If you're weighing options across the region, our{" "}
+                Depending where you are in Idaho, our{" "}
                 <Link href="/locations/salt-lake-city-utah" className="text-gold font-semibold hover:underline">Salt Lake City location page</Link>{" "}
-                covers the nearest Metro Tier community we serve, though our online classes naturally reach you directly in Idaho too.
+                covers the nearest Metro Tier community for most of southern Idaho, though families in the Pacific Time panhandle are honestly sitting closer to Seattle. Either way, our online classes reach your Idaho home directly, on whichever time zone your town actually uses.
               </p>
             </div>
           </div>

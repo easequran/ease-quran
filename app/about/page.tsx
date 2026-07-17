@@ -6,14 +6,14 @@ import CTASection from "@/components/CTASection";
 import { Users, Award, Globe, Heart, BarChart2, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Ease Quran | Certified Teachers",
+  title: "About Ease Quran: Certified Teachers",
   description:
-    "Learn about Ease Quran Online Academy, founded by Shah Zaib, certified from Wifaq ul Madaris. Our mission is to bring trusted Quran education to Muslim families across the USA.",
+    "Learn about Ease Quran Online Academy, founded by Shah Zaib and certified from Wifaq ul Madaris, bringing trusted Quran education to Muslim families.",
   alternates: { canonical: "https://easequran.com/about" },
   openGraph: {
     title: "About Ease Quran Online Academy | Wifaq ul Madaris Certified Teachers",
     description:
-      "Learn about Ease Quran Online Academy, founded by Shah Zaib, certified from Wifaq ul Madaris. Our mission is to bring trusted Quran education to Muslim families across the USA.",
+      "Learn about Ease Quran Online Academy, founded by Shah Zaib and certified from Wifaq ul Madaris, bringing trusted Quran education to Muslim families.",
     images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "About Ease Quran Online Academy, Wifaq ul Madaris Certified" }],
   },
 };

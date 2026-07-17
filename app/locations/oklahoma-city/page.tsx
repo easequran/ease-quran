@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Oklahoma City, Oklahoma",
   description:
-    "Certified online Quran classes for Muslim families in Oklahoma City, built around tornado season and a sprawling metro. Wifaq ul Madaris certified teachers.",
+    "Certified online Quran classes for Muslim families in Oklahoma City, Oklahoma. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/oklahoma-city",
   },

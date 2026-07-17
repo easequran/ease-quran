@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Louisville, Kentucky",
   description:
-    "Certified online Quran classes for Muslim families in Louisville, the hometown of Muhammad Ali. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Louisville, Kentucky. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/louisville-kentucky",
   },

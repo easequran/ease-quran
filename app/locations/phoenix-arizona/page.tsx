@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Phoenix, Arizona",
   description:
-    "Certified online Quran classes for Muslim families in Phoenix. Serving Mesa, Scottsdale, Chandler, Tempe, and the Valley. Wifaq ul Madaris certified teachers, free trial available.",
+    "Certified online Quran classes for Muslim families in Phoenix, Arizona. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/phoenix-arizona",
   },

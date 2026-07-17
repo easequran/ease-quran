@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Providence, Rhode Island",
   description:
-    "Certified online Quran classes for Muslim families in Providence and the smallest state in the country. Wifaq ul Madaris certified teachers, free trial available.",
+    "Certified online Quran classes for Muslim families in Providence, Rhode Island. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/providence-rhode-island",
   },

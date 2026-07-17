@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Milwaukee, Wisconsin",
   description:
-    "Certified online Quran classes for Muslim families in Milwaukee. Serving a compact, close-knit community across the metro. Wifaq ul Madaris certified teachers, free trial.",
+    "Certified online Quran classes for Muslim families in Milwaukee, Wisconsin. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/milwaukee-wisconsin",
   },

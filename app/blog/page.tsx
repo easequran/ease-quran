@@ -4,14 +4,29 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Quran & Islamic Education Blog",
   description:
-    "Read articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and how to choose the best online Quran academy for your family.",
+    "Read articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and choosing the right online Quran academy.",
   alternates: { canonical: "https://easequran.com/blog" },
   openGraph: {
     title: "Quran & Islamic Education Blog | Ease Quran Online Academy",
     description:
-      "Read articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and how to choose the best online Quran academy for your family.",
+      "Read articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and choosing the right online Quran academy.",
     images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Quran & Islamic Education Blog, Ease Quran Academy" }],
   },
+};
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "The Ease Quran Blog",
+  url: "https://easequran.com/blog",
+  description:
+    "Articles on Quran teaching methods, Islamic education for kids in America, Tajweed tips, and choosing the right online Quran academy.",
+  publisher: {
+    "@type": "EducationalOrganization",
+    name: "Ease Quran Online Academy",
+    url: "https://easequran.com",
+  },
+  inLanguage: "en-US",
 };
 
 interface BlogPost {
@@ -25,7 +40,7 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
-    title: "How to Choose the Best Online Quran Academy for Your Child in America",
+    title: "How to Choose an Online Quran Academy for Your Child",
     slug: "how-to-choose-online-quran-academy",
     excerpt:
       "With hundreds of online Quran academies claiming to be the best, how does a Muslim parent in America know who to trust? Learn the 6 most important factors: teacher certification, free trial availability, female teacher options, curriculum quality, flexible scheduling, and red flags to avoid.",
@@ -84,6 +99,11 @@ function BlogCard({ post }: { post: BlogPost }) {
 export default function BlogPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+
       {/* Hero */}
       <section className="bg-navy section-padding">
         <div className="container-custom">

@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Northern Virginia",
   description:
-    "Certified online Quran classes for Muslim families in Northern Virginia. Serving Tysons, Reston, Alexandria, and Fairfax County. Wifaq ul Madaris certified teachers.",
+    "Certified online Quran classes for Muslim families in Northern Virginia. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/northern-virginia",
   },

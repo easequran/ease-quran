@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Las Vegas, Nevada",
   description:
-    "Certified online Quran classes for Muslim families in Las Vegas, built around 24-hour shift work. Wifaq ul Madaris certified teachers, free trial available.",
+    "Certified online Quran classes for Muslim families in Las Vegas, Nevada. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/las-vegas",
   },

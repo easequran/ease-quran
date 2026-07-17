@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Omaha, Nebraska",
   description:
-    "Certified online Quran classes for Muslim families in Omaha, home to a significant Sudanese and East African community. Wifaq ul Madaris certified teachers.",
+    "Certified online Quran classes for Muslim families in Omaha, Nebraska. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/omaha-nebraska",
   },

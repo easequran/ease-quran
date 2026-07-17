@@ -3,6 +3,15 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        // Matched first, before the general www rule, so www + old slug
+        // resolves in a single hop instead of chaining through the
+        // apex-domain redirect below.
+        source: "/locations/new-jersey",
+        has: [{ type: "host", value: "www.easequran.com" }],
+        destination: "https://easequran.com/locations/paterson-new-jersey",
+        permanent: true, // 301
+      },
+      {
         source: "/:path*",
         has: [{ type: "host", value: "www.easequran.com" }],
         destination: "https://easequran.com/:path*",

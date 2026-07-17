@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Indianapolis, Indiana",
   description:
-    "Certified online Quran classes for Muslim families in Indianapolis, the Crossroads of America. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Indianapolis, Indiana. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/indianapolis-indiana",
   },

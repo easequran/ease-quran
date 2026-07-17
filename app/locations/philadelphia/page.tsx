@@ -8,9 +8,9 @@ import TeacherStrip from "@/components/TeacherStrip";
 import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in Philadelphia, PA",
+  title: "Online Quran Classes in Philadelphia, Pennsylvania",
   description:
-    "Certified online Quran classes for Muslim families in Philadelphia, PA. Serving the African American Muslim community, South Asian families, and all Philadelphia suburbs. Free trial available.",
+    "Certified online Quran classes for Muslim families in Philadelphia, Pennsylvania. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/philadelphia",
   },

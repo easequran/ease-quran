@@ -47,10 +47,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in North Dakota?",
+      name: "I heard western North Dakota got much more diverse during the oil boom. Is that still relevant?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in North Dakota, taught by Wifaq ul Madaris certified teachers.",
+        text: "It's part of the state's real economic history. The Bakken oil boom brought a wave of workers from across the country and beyond to towns like Williston in western North Dakota, a well-documented shift that changed the region's makeup. That diversity is part of why online Quran classes make sense here, families relocated for work don't always land near an established Islamic community.",
       },
     },
     {
@@ -63,10 +63,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do you accommodate North Dakota's winters?",
+      name: "Is Minneapolis really the closest bigger city for North Dakota families?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. North Dakota winters bring genuine cold and long driving distances between communities. Since classes are online, none of that affects whether your child's lesson happens on schedule.",
+        text: "For eastern North Dakota, yes. Fargo sits on the I-94 corridor roughly 240 miles from Minneapolis-St. Paul, a genuine and well-traveled connection for this part of the state. Families further west, near the oil patch, are considerably further from any Metro Tier city we serve, which is exactly where online classes matter most.",
       },
     },
     {
@@ -82,9 +82,9 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in North Dakota?",
+    question: "I heard western North Dakota got much more diverse during the oil boom. Is that still relevant?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in North Dakota, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "It's part of the state's real, well-documented economic history. The Bakken oil boom of the 2000s and 2010s brought a wave of workers from across the country and internationally to towns like Williston in western North Dakota, a genuine shift that changed the region's makeup in ways that predate most people's mental picture of the state. That history is part of why online Quran classes make practical sense here: families who relocated for oil-industry work don't always land anywhere near an established Islamic community, no matter how the town's overall population has grown.",
   },
   {
     question: "Do you have students in Fargo already?",
@@ -92,9 +92,9 @@ const faqs = [
       "We're actively welcoming North Dakota families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Fargo-area students and see the quality for yourself with a free trial class.",
   },
   {
-    question: "Do you accommodate North Dakota's winters?",
+    question: "Is Minneapolis really the closest bigger city for North Dakota families?",
     answer:
-      "Yes. North Dakota winters bring genuine cold, snow, and long driving distances between the state's spread-out communities. Since all classes are conducted online via Zoom, none of that affects whether your child's lesson happens safely and on schedule.",
+      "For eastern North Dakota, genuinely yes. Fargo sits on the I-94 corridor roughly 240 miles from Minneapolis-St. Paul, a real and commonly traveled connection for this part of the state, closer than any other Metro Tier city we serve. Families further west, near the Bakken oil patch, are considerably more remote from any of our city pages, which is exactly the gap online classes are built to close.",
   },
   {
     question: "How much do classes cost?",
@@ -159,11 +159,11 @@ export default function NorthDakotaPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                North Dakota's Muslim community is small, centered mostly around Fargo, with families spread across a large, sparsely populated state. North Dakota winters bring genuine cold and long, isolating driving distances between towns. We don't have a physical school in North Dakota, and we won't pretend otherwise, but online Quran education closes exactly this kind of gap, all year round.
+                North Dakota's Muslim community centers mostly around Fargo, but the state's more distinctive story is out west. The Bakken oil boom of the 2000s and 2010s brought a genuine, well-documented wave of workers to towns like Williston, reshaping the region's population in ways that predate most people's picture of North Dakota. Families who relocated for that work, along with those in Fargo and everywhere in between, are spread across a large, sparsely populated state where a real North Dakota winter can make any local drive genuinely difficult.
               </p>
               <p>
-                Many North Dakota families, particularly along the I-29 corridor, are also within reach of our{" "}
-                <Link href="/locations/minneapolis" className="text-gold font-semibold hover:underline">Minneapolis-St. Paul location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in North Dakota too.
+                Eastern North Dakota, along the I-94 corridor, sits closest to our{" "}
+                <Link href="/locations/minneapolis" className="text-gold font-semibold hover:underline">Minneapolis-St. Paul location page</Link>, our nearest Metro Tier community, roughly 240 miles from Fargo. Families further west, near the oil patch, are considerably more remote from any city we serve, which is exactly where online classes matter most.
               </p>
             </div>
           </div>

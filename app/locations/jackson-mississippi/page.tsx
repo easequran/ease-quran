@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Jackson, Mississippi",
   description:
-    "Certified online Quran classes for Muslim families in Jackson, a small community without a large local Islamic school nearby. Wifaq ul Madaris certified teachers.",
+    "Certified online Quran classes for Muslim families in Jackson, Mississippi. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/jackson-mississippi",
   },

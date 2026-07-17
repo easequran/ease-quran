@@ -47,10 +47,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in Vermont?",
+      name: "Is Burlington really closer to Boston or to Montreal?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Vermont, taught by Wifaq ul Madaris certified teachers.",
+        text: "Montreal, genuinely. Burlington sits roughly 90 miles from Montreal, Canada, compared to about 220 miles from Boston. We still link Boston as the nearest Ease Quran Metro Tier page since it's the closest US city we serve, but Vermont's actual orientation is more northward than most people assume.",
       },
     },
     {
@@ -63,10 +63,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do you accommodate Vermont's rural distances and winters?",
+      name: "Vermont is the least populated state in New England. Does that affect what's available locally?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Since every class is online, Vermont's real winter weather and the distance between rural towns never affect whether your child's lesson happens on schedule.",
+        text: "It does. Vermont's Muslim community is small even by New England standards, and real winters across a rural state can make any local drive difficult for months at a stretch. Since every class is online, neither Vermont's small population nor its weather ever affects whether your child's lesson happens on schedule.",
       },
     },
     {
@@ -82,9 +82,9 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in Vermont?",
+    question: "Is Burlington really closer to Boston or to Montreal?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Vermont, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "Montreal, genuinely, and it's not close. Burlington sits roughly 90 miles from Montreal, Canada, compared to about 220 miles from Boston, more than double the distance. We still list Boston as the nearest Ease Quran Metro Tier page since it's the closest US city we serve, but Vermont's actual day-to-day orientation, for shopping, weekend trips, even some regional culture, leans north toward Canada more than most people assume.",
   },
   {
     question: "Do you have students in Burlington already?",
@@ -92,9 +92,9 @@ const faqs = [
       "We're actively welcoming Vermont families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Burlington-area students and see the quality for yourself with a free trial class.",
   },
   {
-    question: "Do you accommodate Vermont's rural distances and winters?",
+    question: "Vermont is the least populated state in New England. Does that affect what's available locally?",
     answer:
-      "Yes. Vermont's Muslim families are spread across a small, largely rural state, and real New England winters can make any drive difficult for months at a time. Since every class is online, none of that affects whether your child's lesson happens on schedule.",
+      "It does. Vermont's Muslim community is small even by New England standards, concentrated mostly around Burlington, and real Vermont winters across a rural state can make any local drive difficult for months at a stretch. Since every class is conducted online via Zoom, neither Vermont's small population nor its weather ever affects whether your child's lesson happens safely and on schedule.",
   },
   {
     question: "How much do classes cost?",
@@ -159,11 +159,12 @@ export default function VermontPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Vermont's Muslim community is small, centered mostly around Burlington, with families spread across a rural state where the nearest mosque can be a genuine drive away. We don't have a physical school in Vermont, and we won't pretend otherwise, but online Quran education closes exactly this kind of gap. A certified teacher meets your child over Zoom no matter how far your Vermont town is from Burlington.
+                Vermont has a geographic quirk worth knowing: Burlington, its largest city, sits roughly 90 miles from Montreal, Canada, compared to about 220 miles from Boston. Vermont's day-to-day orientation genuinely leans north in a way most of New England doesn't. Vermont's Muslim community is small even by regional standards, centered mostly around Burlington, and families in the state's many rural towns can be a genuine drive from the nearest mosque, especially once a real Vermont winter sets in.
               </p>
               <p>
-                Many Vermont families are also within reach of our{" "}
-                <Link href="/locations/boston" className="text-gold font-semibold hover:underline">Boston location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in Vermont too.
+                Even with that northward pull, our{" "}
+                <Link href="/locations/boston" className="text-gold font-semibold hover:underline">Boston location page</Link>{" "}
+                remains the nearest Ease Quran Metro Tier community, since it's the closest US city we serve. Our online classes reach you directly in Vermont either way, no drive toward Boston or Montreal required.
               </p>
             </div>
           </div>

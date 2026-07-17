@@ -8,7 +8,7 @@ import TeacherStrip from "@/components/TeacherStrip";
 export const metadata: Metadata = {
   title: "Online Quran Classes in New Hampshire",
   description:
-    "Certified online Quran classes for Muslim families across New Hampshire, including Manchester. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families across New Hampshire, including Manchester. Wifaq ul Madaris certified teachers.",
   alternates: {
     canonical: "https://easequran.com/locations/new-hampshire",
   },
@@ -47,10 +47,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in New Hampshire?",
+      name: "Why do so many New Hampshire families commute to Boston in the first place?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in New Hampshire, taught by Wifaq ul Madaris certified teachers.",
+        text: "It's a well-known regional pattern: New Hampshire has no state income tax, so a real number of families live in southern New Hampshire and work in Massachusetts, commuting daily into greater Boston. That lifestyle, leaving early and getting home late, is exactly what makes a fixed weekly class at a set time hard to guarantee.",
       },
     },
     {
@@ -63,10 +63,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Can classes work around a Boston-commuter schedule?",
+      name: "Can classes reschedule around an unpredictable commuter schedule?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Many southern New Hampshire families commute into Boston for work. Classes reschedule easily around a long commute and are booked in Eastern Time.",
+        text: "Yes. Classes reschedule easily around a long Boston commute and are booked in Eastern Time, so a delayed train or a late night in the office doesn't have to mean your child misses their lesson.",
       },
     },
     {
@@ -82,9 +82,9 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in New Hampshire?",
+    question: "Why do so many New Hampshire families commute to Boston in the first place?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in New Hampshire, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "It's a well-known regional pattern, not a coincidence: New Hampshire has no state income tax, so a genuine number of families choose to live in southern New Hampshire, around Manchester and Nashua, while working in Massachusetts and commuting daily into greater Boston. That lifestyle, leaving before sunrise and getting home after dark, is exactly what makes a fixed weekly class at a set physical location hard for a lot of these families to guarantee.",
   },
   {
     question: "Do you have students in Manchester already?",
@@ -92,9 +92,9 @@ const faqs = [
       "We're actively welcoming New Hampshire families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Manchester-area students and see the quality for yourself with a free trial class.",
   },
   {
-    question: "Can classes work around a Boston-commuter schedule?",
+    question: "Can classes reschedule around an unpredictable commuter schedule?",
     answer:
-      "Yes. A significant number of southern New Hampshire families commute into Boston for work, often leaving early and returning home late. Classes reschedule easily around a long commute, all booked in Eastern Time.",
+      "Yes. Classes reschedule easily around a long Boston commute and are booked in Eastern Time, so a delayed train, a late meeting, or an unpredictable traffic day on I-93 doesn't have to mean your child misses their lesson entirely.",
   },
   {
     question: "How much do classes cost?",
@@ -159,11 +159,11 @@ export default function NewHampshirePage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                New Hampshire's Muslim community is small, centered mostly around Manchester and Nashua, with a notable number of families who commute into Boston for work. That commuter lifestyle, leaving early and getting home late, makes a fixed weekly class at a set time genuinely hard to guarantee. Online Quran education fits directly into that reality, wherever in New Hampshire your family calls home.
+                New Hampshire's relationship with Massachusetts is more than geographic, it's economic. New Hampshire has no state income tax, and that single fact drives a real and well-known pattern: families live in southern New Hampshire, around Manchester and Nashua, while commuting daily into greater Boston for work. New Hampshire's Muslim community is small and centered mostly in that same southern corridor, and the commuter lifestyle that comes with it, leaving before sunrise and returning after dark, makes a fixed weekly class at a set physical location genuinely hard to guarantee for a lot of these families.
               </p>
               <p>
-                Given the close relationship with Massachusetts, many New Hampshire families are also within reach of our{" "}
-                <Link href="/locations/boston" className="text-gold font-semibold hover:underline">Boston location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in New Hampshire too.
+                Given that close relationship with Massachusetts, many New Hampshire families are also within reach of our{" "}
+                <Link href="/locations/boston" className="text-gold font-semibold hover:underline">Boston location page</Link>, our nearest Metro Tier community. Our online classes reach you directly in New Hampshire either way, built around a commuter's schedule rather than a fixed classroom time.
               </p>
             </div>
           </div>

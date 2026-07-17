@@ -5,12 +5,12 @@ import FreeTrialForm from "./FreeTrialForm";
 export const metadata: Metadata = {
   title: "Book Your Free Quran Trial Class",
   description:
-    "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers, flexible scheduling. Muslim families across the USA trust Ease Quran.",
+    "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers and flexible scheduling for families across the USA.",
   alternates: { canonical: "https://easequran.com/free-trial" },
   openGraph: {
     title: "Book Your Free Quran Trial Class | Ease Quran Online Academy",
     description:
-      "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers, flexible scheduling. Muslim families across the USA trust Ease Quran.",
+      "Book your free online Quran trial class today. No credit card, no commitment. Certified teachers and flexible scheduling for families across the USA.",
     images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Book Your Free Quran Trial Class at Ease Quran Academy" }],
   },
 };

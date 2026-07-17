@@ -8,7 +8,7 @@ import TeacherStrip from "@/components/TeacherStrip";
 export const metadata: Metadata = {
   title: "Online Quran Classes in South Dakota",
   description:
-    "Certified online Quran classes for Muslim families across South Dakota, including Sioux Falls. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families across South Dakota, including Sioux Falls. Wifaq ul Madaris certified teachers.",
   alternates: {
     canonical: "https://easequran.com/locations/south-dakota",
   },
@@ -47,10 +47,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in South Dakota?",
+      name: "I've read Sioux Falls resettles a lot of refugees. Is that true, and does it include Muslim families?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in South Dakota, taught by Wifaq ul Madaris certified teachers.",
+        text: "It's true, and well documented. South Dakota, and Sioux Falls specifically, has one of the highest per-capita refugee resettlement rates in the country, supported by established resettlement agencies, and that has included Muslim families from a range of backgrounds over the years. We're glad to serve that community alongside every other Muslim family in the state.",
       },
     },
     {
@@ -63,10 +63,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do you accommodate South Dakota's rural distances?",
+      name: "What if I live far from Sioux Falls, out in a smaller South Dakota town?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. South Dakota's Muslim families are spread across a large, sparsely populated state. Since classes are online, distance from Sioux Falls is never a barrier.",
+        text: "That's most of the state, and it's exactly who online classes are built for. South Dakota is large and sparsely populated outside Sioux Falls, and a family's nearest mosque can genuinely be a couple hours away by car. Since classes are online, that distance is never a barrier.",
       },
     },
     {
@@ -82,9 +82,9 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in South Dakota?",
+    question: "I've read Sioux Falls resettles a lot of refugees. Is that true, and does it include Muslim families?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in South Dakota, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "It's true, and genuinely well documented. South Dakota, and Sioux Falls in particular, has one of the highest per-capita refugee resettlement rates in the country, supported by established local resettlement agencies, and that history has included Muslim families from a range of backgrounds arriving over the years. We're glad to serve that community with the same certified, one-on-one instruction as every other Muslim family across the state.",
   },
   {
     question: "Do you have students in Sioux Falls already?",
@@ -92,9 +92,9 @@ const faqs = [
       "We're actively welcoming South Dakota families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Sioux Falls-area students and see the quality for yourself with a free trial class.",
   },
   {
-    question: "Do you accommodate South Dakota's rural distances?",
+    question: "What if I live far from Sioux Falls, out in a smaller South Dakota town?",
     answer:
-      "Yes. South Dakota's Muslim families are spread across a large, sparsely populated state, and a family's nearest mosque can genuinely be a couple hours away by car. Since all classes are conducted online via Zoom, distance from Sioux Falls or any other South Dakota city is never a barrier.",
+      "That describes most of the state, and it's exactly who online classes are built for. South Dakota is large and sparsely populated outside Sioux Falls, and a family's nearest mosque can genuinely be a couple hours away by car. Since all classes are conducted online via Zoom, that distance from Sioux Falls, or from anywhere, is never a barrier to consistent Quran instruction.",
   },
   {
     question: "How much do classes cost?",
@@ -159,11 +159,11 @@ export default function SouthDakotaPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                South Dakota's Muslim community is small, centered mostly around Sioux Falls, with families scattered across a large, rural state. We don't have a physical school in South Dakota, and we won't pretend otherwise, but online Quran education closes exactly this kind of gap, bringing a certified teacher directly into any South Dakota home over Zoom.
+                South Dakota's Muslim community has a genuine, well-documented story behind it: the state, and Sioux Falls specifically, has one of the highest per-capita refugee resettlement rates in the country, supported by established local resettlement agencies, and that history has brought Muslim families from a range of backgrounds to the city over the years. Outside Sioux Falls, South Dakota is large and sparsely populated, and a family in a smaller town can be a genuine couple hours' drive from the nearest mosque.
               </p>
               <p>
                 Many South Dakota families, particularly along the I-29 corridor, are also within reach of our{" "}
-                <Link href="/locations/minneapolis" className="text-gold font-semibold hover:underline">Minneapolis-St. Paul location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in South Dakota too.
+                <Link href="/locations/minneapolis" className="text-gold font-semibold hover:underline">Minneapolis-St. Paul location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in South Dakota, whether you're in Sioux Falls or hours west of it.
               </p>
             </div>
           </div>

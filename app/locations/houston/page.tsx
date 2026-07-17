@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Houston, Texas",
   description:
-    "Certified online Quran classes for Muslim families in Houston, TX. Serving Sugar Land, Katy, Memorial, and all Houston suburbs. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Houston, Texas. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/houston",
   },

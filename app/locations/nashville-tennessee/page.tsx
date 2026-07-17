@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Nashville, Tennessee",
   description:
-    "Certified online Quran classes for Muslim families in Nashville, home to a well-known Kurdish American community. Wifaq ul Madaris certified teachers, free trial available.",
+    "Certified online Quran classes for Muslim families in Nashville, Tennessee. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/nashville-tennessee",
   },

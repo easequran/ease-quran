@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Atlanta, Georgia",
   description:
-    "Certified online Quran classes for Muslim families in Atlanta, GA. Serving the African American, South Asian, and Arab Muslim communities across the Atlanta metro. Free trial available.",
+    "Certified online Quran classes for Muslim families in Atlanta, Georgia. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/atlanta",
   },

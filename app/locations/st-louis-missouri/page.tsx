@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in St. Louis, Missouri",
   description:
-    "Certified online Quran classes for Muslim families in St. Louis, home to the largest Bosnian community outside Bosnia. Wifaq ul Madaris certified teachers, free trial.",
+    "Certified online Quran classes for Muslim families in St. Louis, Missouri. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/st-louis-missouri",
   },

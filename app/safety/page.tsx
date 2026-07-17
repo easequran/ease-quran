@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 export const metadata: Metadata = {
   title: "Child Safety & Parent Rights Policy",
   description:
-    "Our child safety and parent rights policy: parents may sit in on any class, classes may be recorded, no private teacher-student contact, female teachers for girls on request, and all teachers credential-verified.",
+    "Our Child Safety & Parent Rights Policy: parents may sit in on any class, classes may be recorded, and every teacher is credential-verified.",
   alternates: {
     canonical: "https://easequran.com/safety",
   },
@@ -16,6 +16,20 @@ export const metadata: Metadata = {
       "How Ease Quran keeps your child safe: parent oversight, recorded classes, no private contact, female teachers on request, and credential-verified teachers.",
     images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Ease Quran Child Safety Policy" }],
   },
+};
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Child Safety & Parent Rights Policy — Ease Quran Online Academy",
+  url: "https://easequran.com/safety",
+  description: "Ease Quran's Child Safety & Parent Rights Policy: parent oversight, recorded classes, no private teacher-student contact, and credential-verified teachers.",
+  publisher: {
+    "@type": "EducationalOrganization",
+    name: "Ease Quran Online Academy",
+    url: "https://easequran.com",
+  },
+  inLanguage: "en-US",
 };
 
 const policies = [
@@ -49,6 +63,11 @@ const policies = [
 export default function SafetyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+
       {/* Hero */}
       <section className="bg-navy section-padding">
         <div className="container-custom">

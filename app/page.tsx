@@ -14,7 +14,7 @@ import { Shield, Users, BookOpen, Star, AlertCircle, Globe, UserCheck, CheckCirc
 export const metadata: Metadata = {
   title: { absolute: "Online Quran Classes for Kids & Adults in USA | Ease Quran Academy" },
   description:
-    "Book certified online Quran classes for your family. Wifaq ul Madaris certified teachers, female teachers available, free first class. Serving Muslim families across all 50 states.",
+    "Book certified online Quran classes for your family. Wifaq ul Madaris certified teachers, free first class. Serving families across the USA.",
   alternates: { canonical: "https://easequran.com" },
 };
 

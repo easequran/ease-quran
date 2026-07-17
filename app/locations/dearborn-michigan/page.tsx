@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Dearborn, Michigan",
   description:
-    "Certified online Quran classes for Muslim families in Dearborn, Michigan. Serving the Arab-American community, Dearborn Heights, Detroit metro, and all of SE Michigan. Free trial available.",
+    "Certified online Quran classes for Muslim families in Dearborn, Michigan. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/dearborn-michigan",
   },

@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Denver, Colorado",
   description:
-    "Certified online Quran classes for Muslim families in Denver. Serving Aurora, Westminster, Boulder, and the Front Range. Wifaq ul Madaris certified teachers, free trial available.",
+    "Certified online Quran classes for Muslim families in Denver, Colorado. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/denver-colorado",
   },

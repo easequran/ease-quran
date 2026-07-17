@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Honolulu, Hawaii",
   description:
-    "Certified online Quran classes for Muslim families in Honolulu, built around Hawaii time and island distance from the mainland. Wifaq ul Madaris certified teachers.",
+    "Certified online Quran classes for Muslim families in Honolulu, Hawaii. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/honolulu-hawaii",
   },

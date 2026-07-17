@@ -8,9 +8,9 @@ import TeacherStrip from "@/components/TeacherStrip";
 import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in Los Angeles, CA",
+  title: "Online Quran Classes in Los Angeles, California",
   description:
-    "Certified online Quran classes for Muslim families in Los Angeles, CA. Serving Culver City, Inglewood, Pomona, San Gabriel Valley, and all LA metro. Free trial class available.",
+    "Certified online Quran classes for Muslim families in Los Angeles, California. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/los-angeles",
   },

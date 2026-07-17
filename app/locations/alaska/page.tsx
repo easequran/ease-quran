@@ -47,26 +47,26 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in Alaska?",
+      name: "Alaska isn't connected to the other states by road. Does that complicate scheduling?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Alaska, taught by Wifaq ul Madaris certified teachers.",
+        text: "It doesn't, but it's a fair question given Alaska's geography. There's no driving here from the Lower 48 without first crossing into Canada, and Alaska runs on its own time zone, an hour behind the Pacific coast. We confirm your child's exact class time in Alaska Time at booking, so none of that geography ever touches your actual schedule.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you have students in Anchorage already?",
+      name: "Is there a Muslim community in Anchorage I should know about?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We're actively welcoming Alaska families right now. Rather than claim a number we can't verify, we'd simply invite you to be one of our first Anchorage-area students and see the quality for yourself with a free trial.",
+        text: "Anchorage has Alaska's main mosque and the state's largest concentration of Muslim families, though it remains a small community by Lower 48 standards. Families further out, from Fairbanks to towns with no mosque for hundreds of miles, have even less nearby, which is exactly the gap online classes are built to close.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you accommodate Alaska time zones and daylight hours?",
+      name: "Why do you list Seattle as our nearest Ease Quran city if it's over a thousand miles away?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We confirm your child's exact class time in Alaska Time at booking, and work around Alaska's extreme seasonal daylight swings without any issue.",
+        text: "Because it genuinely is the closest Metro Tier page we have, even at roughly 1,500 miles, more realistically a flight than a drive. That distance is precisely the point: no other state we serve is this far from the next nearest one, which is why an online teacher, not a physical school, is the realistic option for most Alaska families.",
       },
     },
     {
@@ -82,19 +82,19 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in Alaska?",
+    question: "Alaska isn't connected to the other states by road. Does that complicate scheduling?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Alaska, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "It doesn't, but it's a fair question given Alaska's geography. There's no driving here from the Lower 48 without first crossing into Canada, and Alaska runs on its own time zone, an hour behind the Pacific coast and up to four hours behind the East Coast. We confirm your child's exact class time in Alaska Time at booking and again before each session, so none of that geography ever touches your actual schedule.",
   },
   {
-    question: "Do you have students in Anchorage already?",
+    question: "Is there a Muslim community in Anchorage I should know about?",
     answer:
-      "We're actively welcoming Alaska families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Anchorage-area students and see the quality for yourself with a free trial class.",
+      "Anchorage is home to Alaska's main mosque and the state's largest concentration of Muslim families, though it remains a small community by Lower 48 standards. Families further out, from Fairbanks to towns with no mosque within hundreds of miles, have even less nearby. Rather than claim a specific number of students we can't verify, we'd simply invite you to be one of our first Anchorage-area families and judge the quality yourself with a free trial.",
   },
   {
-    question: "Do you accommodate Alaska time zones and daylight hours?",
+    question: "Why do you list Seattle as our nearest Ease Quran city if it's over a thousand miles away?",
     answer:
-      "Yes. We confirm your child's exact class time in Alaska Time at booking and again before each session, and work around Alaska's extreme seasonal daylight swings, whether it's near-endless summer daylight or short winter days, without any scheduling issue.",
+      "Because it genuinely is the closest Metro Tier page we have, even at roughly 1,500 miles, more realistically a flight away than a drive. No other state we serve sits this far from its nearest neighbor. That distance is exactly why an online teacher, not a physical school anywhere in the Lower 48, is the realistic option for most Alaska families.",
   },
   {
     question: "How much do classes cost?",
@@ -159,12 +159,12 @@ export default function AlaskaPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Alaska's Muslim families are spread across a genuinely vast state, with Anchorage home to the largest concentration and smaller communities scattered from Fairbanks to towns with no mosque within hundreds of miles. We don't have a physical presence here, and we won't pretend otherwise, but that's exactly the gap online Quran education is built to close. A certified teacher meets your child over Zoom regardless of how remote your part of Alaska is.
+                Alaska is unlike every other state we serve in one specific way: there is no driving here from the rest of the country without first crossing into Canada. That's not a figure of speech, it's the literal geography every Alaska family lives with, and it shapes everything from grocery prices to how far away the nearest mosque actually is. Anchorage holds the largest concentration of Alaska's Muslim community and the state's main mosque, but families in Fairbanks or smaller towns can be hundreds of miles from any Islamic institution at all. Add Alaska's own time zone, a full hour behind the Pacific coast and up to four hours behind the East Coast, and coordinating anything in real time with the Lower 48 takes real effort.
               </p>
               <p>
-                If you're near Seattle-area family or considering a move south, our{" "}
+                Our{" "}
                 <Link href="/locations/seattle" className="text-gold font-semibold hover:underline">Seattle location page</Link>{" "}
-                covers the nearest Metro Tier community we serve, though of course our online classes reach you directly in Alaska too, no relocation required.
+                is genuinely the nearest Metro Tier community we serve, but "nearest" is relative here: Anchorage to Seattle is still roughly 1,500 miles, a flight rather than a drive. That distance is exactly why online classes make more sense for Alaska than almost anywhere else on this site. A certified teacher reaches your child in one video call, no border crossing and no flight required.
               </p>
             </div>
           </div>

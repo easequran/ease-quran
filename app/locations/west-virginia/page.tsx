@@ -8,7 +8,7 @@ import TeacherStrip from "@/components/TeacherStrip";
 export const metadata: Metadata = {
   title: "Online Quran Classes in West Virginia",
   description:
-    "Certified online Quran classes for Muslim families across West Virginia, including Charleston. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families across West Virginia, including Charleston. Wifaq ul Madaris certified teachers.",
   alternates: {
     canonical: "https://easequran.com/locations/west-virginia",
   },
@@ -47,10 +47,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in West Virginia?",
+      name: "Why does this page link to Washington DC instead of a closer West Virginia city?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in West Virginia, taught by Wifaq ul Madaris certified teachers.",
+        text: "Because for a real share of West Virginia families, DC genuinely is closer. The state's Eastern Panhandle, around Martinsburg and Charles Town, is close enough to DC to be part of its commuter belt, actually nearer to Washington than to the state's own capital, Charleston. For families in the rest of West Virginia, DC is still the nearest Metro Tier page we have.",
       },
     },
     {
@@ -63,10 +63,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do you accommodate West Virginia's mountain geography?",
+      name: "West Virginia is the only state entirely inside Appalachia. Does the terrain actually matter for classes?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. West Virginia's mountainous terrain makes many local drives genuinely long. Since classes are online, exactly which West Virginia community you live in is never a barrier.",
+        text: "It matters for everything except online classes. West Virginia's mountains and winding roads make towns that look close on a map genuinely far apart by road, sometimes an hour or more between communities barely 20 miles apart as the crow flies. Since classes are online, none of that terrain is relevant to your child's schedule.",
       },
     },
     {
@@ -82,9 +82,9 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in West Virginia?",
+    question: "Why does this page link to Washington DC instead of a closer West Virginia city?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in West Virginia, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "Because for a genuine share of West Virginia families, DC actually is closer. The state's Eastern Panhandle, around Martinsburg, Charles Town, and Harpers Ferry, sits close enough to Washington to be a real part of its commuter belt, closer to the capital than to Charleston, West Virginia's own state capital on the opposite side of the state. For families anywhere else in West Virginia, DC remains the nearest Metro Tier page we have, even if the drive is a longer one from those regions.",
   },
   {
     question: "Do you have students in Charleston, WV already?",
@@ -92,9 +92,9 @@ const faqs = [
       "We're actively welcoming West Virginia families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Charleston-area students and see the quality for yourself with a free trial class.",
   },
   {
-    question: "Do you accommodate West Virginia's mountain geography?",
+    question: "West Virginia is the only state entirely inside Appalachia. Does the terrain actually matter for classes?",
     answer:
-      "Yes. West Virginia's mountainous terrain and winding roads make many local drives genuinely long, even between towns that look close on a map. Since all classes are conducted online via Zoom, exactly which West Virginia community you live in is never a barrier.",
+      "It matters for almost everything except online classes. West Virginia is the only state that sits entirely within the Appalachian mountain range, and the winding roads that come with that terrain mean two towns that look 20 miles apart on a map can be an hour or more apart by car. Since all classes are conducted online via Zoom, none of that mountain geography has any bearing on whether your child's lesson happens on time.",
   },
   {
     question: "How much do classes cost?",
@@ -159,11 +159,12 @@ export default function WestVirginiaPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                West Virginia's Muslim community is small and spread thin across genuinely mountainous terrain, centered mostly around Charleston, the state capital. Winding mountain roads make many local drives longer than they look on a map, and a family an hour away by road might be considerably closer as the crow flies. Online Quran education removes the drive entirely, bringing a certified teacher directly into any West Virginia home over Zoom.
+                West Virginia is the only state that sits entirely inside the Appalachian mountain range, and that geography splits the state in a way most people don't expect. The Eastern Panhandle, around Martinsburg, Charles Town, and Harpers Ferry, is close enough to Washington DC to be a genuine part of its commuter belt, actually nearer to the capital than to Charleston, West Virginia's own state capital on the far side of the state. The rest of West Virginia is more remote, with winding mountain roads that make towns 20 miles apart on a map an hour or more apart by car.
               </p>
               <p>
-                Many West Virginia families are also within reach of our{" "}
-                <Link href="/locations/washington-dc" className="text-gold font-semibold hover:underline">Washington, D.C. location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in West Virginia too.
+                That's why our{" "}
+                <Link href="/locations/washington-dc" className="text-gold font-semibold hover:underline">Washington, D.C. location page</Link>{" "}
+                is the nearest Metro Tier community we link here, genuinely close for the Eastern Panhandle and still the closest option for the rest of the state. Wherever in West Virginia you are, our online classes reach your home directly, no mountain roads involved.
               </p>
             </div>
           </div>

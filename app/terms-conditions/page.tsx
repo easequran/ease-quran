@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     url: "https://easequran.com/terms-conditions",
     images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Ease Quran Online Academy Terms & Conditions" }],
   },
-  robots: { index: true, follow: true },
 };
 
 const pageSchema = {

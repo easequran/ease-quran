@@ -22,14 +22,14 @@ import FAQAccordion from "@/components/FAQAccordion";
 export const metadata: Metadata = {
   title: { absolute: "Summer Quran Classes for Kids 2026 | Ease Quran Academy" },
   description:
-    "Give your child a meaningful summer. Certified online Quran classes for kids ages 4 to 14 across the USA. Free first class. Female teachers available. Enroll today.",
+    "Certified online Quran classes for kids ages 4 to 14, all summer. Free first class, female teachers available. Enroll your child today.",
   alternates: {
     canonical: "https://easequran.com/summer-quran-classes",
   },
   openGraph: {
     title: "Summer Quran Classes for Kids 2026 | Ease Quran Academy",
     description:
-      "Give your child a meaningful summer. Certified online Quran classes for kids ages 4 to 14 across the USA. Free first class. Female teachers available. Enroll today.",
+      "Certified online Quran classes for kids ages 4 to 14, all summer. Free first class, female teachers available. Enroll your child today.",
     url: "https://easequran.com/summer-quran-classes",
     type: "website",
     images: [
@@ -394,10 +394,15 @@ export default function SummerQuranClassesPage() {
       />
 
       {/* ── SECTION 1: HERO — full background image with overlay ─── */}
-      <section
-        className="relative min-h-[90vh] flex items-center overflow-hidden"
-        style={{ backgroundImage: "url('/images/summer/summer-hero.webp')", backgroundSize: "cover", backgroundPosition: "center top" }}
-      >
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Background image — separate decorative element so its role="img"
+            doesn't swallow the real heading/text content below */}
+        <div
+          className="absolute inset-0"
+          style={{ backgroundImage: "url('/images/summer/summer-hero.webp')", backgroundSize: "cover", backgroundPosition: "center top" }}
+          role="img"
+          aria-label="Muslim child engaged in an online Quran class at home during summer break"
+        />
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-navy/80" />
 
@@ -553,10 +558,15 @@ export default function SummerQuranClassesPage() {
           </div>
 
           {/* Teacher-Student Image — CSS background avoids Next.js optimisation issues */}
-          <div
-            className="relative rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto min-h-[420px] md:min-h-[500px] flex items-end"
-            style={{ backgroundImage: "url('/images/summer/teacher-student.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
-          >
+          <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto min-h-[420px] md:min-h-[500px] flex items-end">
+            {/* Background image — separate decorative element so its role="img"
+                doesn't swallow the real caption text below */}
+            <div
+              className="absolute inset-0"
+              style={{ backgroundImage: "url('/images/summer/teacher-student.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
+              role="img"
+              aria-label="Certified Quran teacher and student during a one-on-one online lesson"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent rounded-2xl" />
             <div className="relative z-10 p-7">
               <p className="text-white font-playfair font-bold text-lg md:text-2xl mb-1">

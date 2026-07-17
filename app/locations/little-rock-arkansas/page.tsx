@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Little Rock, Arkansas",
   description:
-    "Certified online Quran classes for Muslim families in Little Rock, without the long drive to Memphis or Dallas. Wifaq ul Madaris certified teachers, free trial.",
+    "Certified online Quran classes for Muslim families in Little Rock, Arkansas. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/little-rock-arkansas",
   },

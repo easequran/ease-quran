@@ -56,6 +56,20 @@ const serviceSchema = {
         description: "12 classes per month, 45 minutes each. Our most popular plan.",
         url: "https://easequran.com/pricing",
       },
+      {
+        "@type": "Offer",
+        name: "Intensive Plan",
+        price: "99",
+        priceCurrency: "USD",
+        description: "16 classes per month, 60 minutes each. For fast progress seekers.",
+        url: "https://easequran.com/pricing",
+      },
+      {
+        "@type": "Offer",
+        name: "Family Plan",
+        description: "Custom pricing for families with multiple children learning together. Contact us for a quote.",
+        url: "https://easequran.com/pricing",
+      },
     ],
   },
 };
@@ -216,6 +230,18 @@ export default function PricingPage() {
       {/* Pricing Grid */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
+          <div className="text-center mb-10">
+            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              Choose Your Plan
+            </span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-3">
+              Pick the Plan That Fits Your Family
+            </h2>
+            <p className="text-grey text-sm max-w-xl mx-auto">
+              Every plan includes certified, one-on-one instruction and starts with a free trial
+              class. Upgrade or downgrade anytime.
+            </p>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 items-stretch">
             {plans.map((plan) => (
               <PricingCard

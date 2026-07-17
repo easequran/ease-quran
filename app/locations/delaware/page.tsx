@@ -47,10 +47,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in Delaware?",
+      name: "Isn't Wilmington basically part of Philadelphia? Why is Delaware its own page?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Delaware, taught by Wifaq ul Madaris certified teachers.",
+        text: "Fair question. Wilmington sits right on the Amtrak Northeast Corridor between Philadelphia and Baltimore, and a lot of Delaware families genuinely live inside the Philadelphia media and commuter market. We keep Delaware separate because the state itself, all the way down through Dover and Sussex County, deserves its own honest page rather than being folded into a city it only partly overlaps with.",
       },
     },
     {
@@ -63,10 +63,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do you serve families across all of Delaware, not just Wilmington?",
+      name: "I'm in Dover or Sussex County, much further south than Wilmington. Does that matter?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Since classes are online, families anywhere in Delaware, from Wilmington down through Dover and Sussex County, get the exact same access to a certified teacher.",
+        text: "Not for us. Delaware is the second-smallest state in the country, but Dover and Sussex County are still a real drive from Wilmington's Islamic community. Since classes are online, that internal distance disappears completely, families anywhere in Delaware get the exact same certified teacher.",
       },
     },
     {
@@ -82,9 +82,9 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in Delaware?",
+    question: "Isn't Wilmington basically part of Philadelphia? Why is Delaware its own page?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Delaware, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "Fair question. Wilmington sits right on the Amtrak Northeast Corridor between Philadelphia and Baltimore, and a genuine share of Delaware families live inside the greater Philadelphia media and commuter market, close enough that the line between the two barely matters day to day. We still give Delaware its own honest page because the rest of the state, all the way down through Dover and Sussex County, is genuinely distinct from Philadelphia and deserves to be treated that way rather than folded into a bigger city's page.",
   },
   {
     question: "Do you have students in Wilmington already?",
@@ -92,9 +92,9 @@ const faqs = [
       "We're actively welcoming Delaware families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Wilmington-area students and see the quality for yourself with a free trial class.",
   },
   {
-    question: "Do you serve families across all of Delaware, not just Wilmington?",
+    question: "I'm in Dover or Sussex County, much further south than Wilmington. Does that matter?",
     answer:
-      "Yes. Since all classes are conducted online via Zoom, families anywhere in Delaware, from Wilmington in the north down through Dover and Sussex County in the south, get exactly the same access to a certified teacher.",
+      "Not for us, though it matters for almost everything else. Delaware is the second-smallest state in the country, but Dover and especially Sussex County are still a real drive from Wilmington's Islamic community, more rural and considerably further from the Philadelphia corridor than the state's small size suggests on a map. Since all classes are conducted online via Zoom, that internal distance disappears completely, families anywhere in Delaware get exactly the same certified teacher.",
   },
   {
     question: "How much do classes cost?",
@@ -159,11 +159,11 @@ export default function DelawarePage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Delaware's Muslim community is concentrated mostly around Wilmington, with smaller pockets of families further south toward Dover and Sussex County. Delaware's small size means most of the state is within a short drive of Wilmington, but online Quran education removes even that drive, bringing a certified teacher directly into any Delaware home over Zoom.
+                Delaware's Muslim community is concentrated mostly around Wilmington, which sits directly on the Amtrak Northeast Corridor between Philadelphia and Baltimore and functions, for a lot of practical purposes, as part of greater Philadelphia. That overlap is real, but it's not the whole state. Dover and Sussex County, further south, are more rural and genuinely distant from that corridor, and families there have far less nearby than the state's small size on a map would suggest.
               </p>
               <p>
-                Given Delaware's location, many families here are also close to our{" "}
-                <Link href="/locations/philadelphia" className="text-gold font-semibold hover:underline">Philadelphia location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in Delaware too.
+                Given Wilmington's location, many Delaware families are also close to our{" "}
+                <Link href="/locations/philadelphia" className="text-gold font-semibold hover:underline">Philadelphia location page</Link>, our nearest Metro Tier community, though our online classes reach you directly anywhere in Delaware, from Wilmington to Sussex County.
               </p>
             </div>
           </div>

@@ -179,7 +179,7 @@ export default function MinneapolisPage() {
               Serving the Twin Cities
             </span>
             <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
-              Online Quran Classes in Minneapolis-St. Paul
+              Online Quran Classes in Minneapolis-St. Paul, Minnesota
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
               Certified, one-on-one Quran education for Muslim families across the Twin Cities, home to one of America's largest Somali Muslim communities. Quality Quran instruction delivered to your home, on your schedule, no matter the weather.

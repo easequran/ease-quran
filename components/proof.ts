@@ -18,12 +18,12 @@ export const reviews: ReviewItem[] = [
   {
     src: "/images/review-1.webp",
     caption: "Parent feedback — shared via WhatsApp",
-    alt: "Screenshot of WhatsApp message from a parent praising Ease Quran classes",
+    alt: "Screenshot of a WhatsApp conversation where a parent describes how patiently the teacher helped their child pronounce Quran letters correctly during a trial class",
   },
   {
     src: "/images/review-2.webp",
     caption: "Parent feedback — shared via WhatsApp",
-    alt: "Screenshot of WhatsApp message from a parent praising Ease Quran classes",
+    alt: "Screenshot of a WhatsApp message where a parent replies \"Very good\" with a thumbs-up emoji after their child's first Quran trial class",
   },
 ];
 

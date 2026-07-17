@@ -5,14 +5,14 @@ import { Clock, Calendar, User, ArrowLeft, CheckCircle, XCircle } from "lucide-r
 export const metadata: Metadata = {
   title: { absolute: "How to Choose an Online Quran Academy for Your Child" },
   description:
-    "Confused about which online Quran academy to trust? Learn the 6 essential factors, teacher certification, free trials, female teachers & more. A guide for Muslim parents in USA.",
+    "Confused about which online Quran academy to trust? Learn 6 essential factors: teacher certification, free trials, female teachers, and more.",
   alternates: {
     canonical: "https://easequran.com/blog/how-to-choose-online-quran-academy",
   },
   openGraph: {
-    title: "How to Choose the Best Online Quran Academy for Your Child in America",
+    title: "How to Choose an Online Quran Academy for Your Child",
     description:
-      "Confused about which online Quran academy to trust? Learn the 6 essential factors, teacher certification, free trials, female teachers & more. A guide for Muslim parents in USA.",
+      "Confused about which online Quran academy to trust? Learn 6 essential factors: teacher certification, free trials, female teachers, and more.",
     url: "https://easequran.com/blog/how-to-choose-online-quran-academy",
     type: "article",
     publishedTime: "2025-01-15",
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
         url: "https://easequran.com/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "How to Choose the Best Online Quran Academy",
+        alt: "How to Choose an Online Quran Academy for Your Child",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "How to Choose the Best Online Quran Academy for Your Child in USA",
+    title: "How to Choose an Online Quran Academy for Your Child",
     description:
       "6 essential factors every Muslim parent in America must check before enrolling their child in an online Quran academy.",
     images: ["https://easequran.com/images/og-image.png"],
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "How to Choose the Best Online Quran Academy for Your Child in America",
+  headline: "How to Choose an Online Quran Academy for Your Child",
   author: { "@type": "Organization", "name": "Ease Quran Team" },
   publisher: {
     "@type": "Organization",
@@ -119,7 +119,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "How to Choose the Best Online Quran Academy",
+      name: "How to Choose an Online Quran Academy for Your Child",
       item: "https://easequran.com/blog/how-to-choose-online-quran-academy",
     },
   ],
@@ -161,7 +161,7 @@ export default function BlogPostPage() {
               </li>
               <li className="text-white/30">/</li>
               <li className="text-white/80 truncate max-w-xs">
-                How to Choose the Best Online Quran Academy
+                How to Choose an Online Quran Academy for Your Child
               </li>
             </ol>
           </nav>
@@ -173,7 +173,7 @@ export default function BlogPostPage() {
 
           {/* Title */}
           <h1 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-8 max-w-4xl">
-            How to Choose the Best Online Quran Academy for Your Child in America
+            How to Choose an Online Quran Academy for Your Child
           </h1>
 
           {/* Meta row */}

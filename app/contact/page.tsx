@@ -5,14 +5,14 @@ import CTASection from "@/components/CTASection";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Get in Touch",
+  title: "Contact Us: Get in Touch",
   description:
-    "Contact Ease Quran Online Academy. Email us at info@easequran.com or WhatsApp us. We respond within 2 hours. Online Quran classes for families across the USA.",
+    "Contact Ease Quran Online Academy by email or WhatsApp. We respond within 2 hours about online Quran classes for families across the USA.",
   alternates: { canonical: "https://easequran.com/contact" },
   openGraph: {
     title: "Contact Ease Quran Online Academy | Get in Touch",
     description:
-      "Contact Ease Quran Online Academy. Email us at info@easequran.com or WhatsApp us. We respond within 2 hours. Online Quran classes for families across the USA.",
+      "Contact Ease Quran Online Academy by email or WhatsApp. We respond within 2 hours about online Quran classes for families across the USA.",
     images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Contact Ease Quran Online Academy" }],
   },
 };

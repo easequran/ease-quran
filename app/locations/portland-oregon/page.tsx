@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Portland, Oregon",
   description:
-    "Certified online Quran classes for Muslim families in Portland. Serving a growing East African and convert community. Wifaq ul Madaris certified teachers, free trial.",
+    "Certified online Quran classes for Muslim families in Portland, Oregon. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/portland-oregon",
   },

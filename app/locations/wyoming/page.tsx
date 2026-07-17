@@ -47,10 +47,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in Wyoming?",
+      name: "Wyoming is the least populous state. Does that mean there's basically no Muslim community here?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Wyoming, taught by Wifaq ul Madaris certified teachers.",
+        text: "Wyoming genuinely is the least populous state in the country by Census figures, and a good number of Wyoming families have no local mosque within a reasonable drive at all. That's precisely why we built this page, not to claim a community that doesn't exist, but to make sure Wyoming families aren't left without a real option.",
       },
     },
     {
@@ -63,10 +63,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do you accommodate Wyoming's low population density?",
+      name: "Cheyenne is right on the Colorado border. Is Denver actually a realistic option for us?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Wyoming is the least populous state in the country, and many families have no local Muslim community at all. Since classes are online, that's never a barrier.",
+        text: "For an occasional trip, maybe. Cheyenne sits roughly 100 miles from Denver on I-25, making it the shortest distance between any state we serve this way and its nearest Metro Tier city. Even so, a regular weekly drive isn't realistic for most families, which is exactly what online classes solve.",
       },
     },
     {
@@ -82,9 +82,9 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in Wyoming?",
+    question: "Wyoming is the least populous state. Does that mean there's basically no Muslim community here?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Wyoming, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "Wyoming genuinely is the least populous state in the country according to Census figures, and a good number of Wyoming families have no local mosque or Islamic community within a reasonable drive at all. We say that plainly rather than invent a local scene that doesn't exist. It's exactly why this page exists in the first place, to make sure Wyoming families have a real, certified option even where a local one doesn't.",
   },
   {
     question: "Do you have students in Cheyenne already?",
@@ -92,9 +92,9 @@ const faqs = [
       "We're actively welcoming Wyoming families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Cheyenne-area students and see the quality for yourself with a free trial class.",
   },
   {
-    question: "Do you accommodate Wyoming's low population density?",
+    question: "Cheyenne is right on the Colorado border. Is Denver actually a realistic option for us?",
     answer:
-      "Yes. Wyoming is the least populous state in the country, and a good number of Muslim families here have no local mosque or Islamic community within a reasonable drive at all. Since all classes are conducted online via Zoom, that gap is never a barrier to consistent, certified Quran instruction.",
+      "For an occasional trip, maybe. Cheyenne sits roughly 100 miles from Denver on I-25, which makes it the shortest distance between any state we serve this way and its nearest Metro Tier city, genuinely closer than any other state-to-metro pairing on this site. Even at that distance, a regular weekly drive for Quran classes isn't realistic for most working families, which is exactly the gap online classes close.",
   },
   {
     question: "How much do classes cost?",
@@ -159,11 +159,12 @@ export default function WyomingPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Wyoming's Muslim community is genuinely small, reflecting the state's status as the least populous in the country. A good number of Wyoming families have no local Muslim community at all, let alone a mosque within a reasonable drive. We don't have a physical school in Wyoming, and we won't pretend otherwise, but online Quran education is built exactly for a state like this.
+                Wyoming genuinely is the least populous state in the country by Census figures, and its Muslim community reflects that: a good number of Wyoming families have no local mosque or Islamic community within a reasonable drive at all. We're not going to invent a local scene that doesn't exist. What Wyoming does have going for it, more than any other state we serve this way, is proximity: Cheyenne sits roughly 100 miles from Denver on I-25, the shortest distance between any state-hub page on this site and its nearest Metro Tier city.
               </p>
               <p>
-                Cheyenne and southeastern Wyoming are within reach of our{" "}
-                <Link href="/locations/denver-colorado" className="text-gold font-semibold hover:underline">Denver location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in Wyoming too.
+                Our{" "}
+                <Link href="/locations/denver-colorado" className="text-gold font-semibold hover:underline">Denver location page</Link>{" "}
+                is that nearest Metro Tier community, genuinely close for southeastern Wyoming families even if a weekly drive still isn't realistic. Our online classes reach you directly in Wyoming, no trip down I-25 required.
               </p>
             </div>
           </div>

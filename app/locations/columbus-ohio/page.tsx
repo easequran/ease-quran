@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Columbus, Ohio",
   description:
-    "Certified online Quran classes for Muslim families in Columbus, Ohio. Serving the Somali, South Asian, and Arab Muslim communities across Columbus and central Ohio. Free trial available.",
+    "Certified online Quran classes for Muslim families in Columbus, Ohio. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/columbus-ohio",
   },

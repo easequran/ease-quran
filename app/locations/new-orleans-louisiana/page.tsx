@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in New Orleans, Louisiana",
   description:
-    "Certified online Quran classes for Muslim families in New Orleans, built around hospitality-industry hours and hurricane season. Wifaq ul Madaris certified teachers.",
+    "Certified online Quran classes for Muslim families in New Orleans, Louisiana. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/new-orleans-louisiana",
   },

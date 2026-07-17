@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Baltimore, Maryland",
   description:
-    "Certified online Quran classes for Muslim families in Baltimore, home to a historic African American Muslim community. Wifaq ul Madaris certified teachers, free trial.",
+    "Certified online Quran classes for Muslim families in Baltimore, Maryland. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/baltimore-maryland",
   },

@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Charleston, South Carolina",
   description:
-    "Certified online Quran classes for Muslim families in Charleston, a historic port city with a small, growing Muslim community. Wifaq ul Madaris certified teachers.",
+    "Certified online Quran classes for Muslim families in Charleston, South Carolina. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/charleston-south-carolina",
   },

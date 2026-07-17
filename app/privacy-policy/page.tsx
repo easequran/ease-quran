@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Read the Privacy Policy of Ease Quran Online Academy. Learn how we collect, use, and protect your personal information when you use our online Quran classes service.",
+    "Read the Privacy Policy of Ease Quran Online Academy: how we collect, use, and protect your personal information when you use our service.",
   alternates: { canonical: "https://easequran.com/privacy-policy" },
   openGraph: {
     title: "Privacy Policy | Ease Quran Online Academy",
@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     url: "https://easequran.com/privacy-policy",
     images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Ease Quran Online Academy Privacy Policy" }],
   },
-  robots: { index: true, follow: true },
 };
 
 const pageSchema = {

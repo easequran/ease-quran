@@ -47,26 +47,26 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in Maine?",
+      name: "I heard Lewiston has a large Somali community. Do you serve those families?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Maine, taught by Wifaq ul Madaris certified teachers.",
+        text: "Yes. Lewiston is nationally known for its Somali immigrant community, well documented since families began settling there in the early 2000s, and it's one of the more established Muslim communities in Maine. We're glad to serve Lewiston families alongside every other Muslim household across the state.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you have students in Portland, Maine already?",
+      name: "Portland, Maine is small. Are there really enough local options there?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We're actively welcoming Maine families right now. Rather than claim a number we can't verify, we'd invite you to be one of our first Portland-area students with a free trial class.",
+        text: "Options are genuinely limited. Portland has Maine's largest city and a modest Muslim community, but nothing like the depth of resources a family in a major metro takes for granted. Rather than claim a specific number of students we can't verify, we'd invite you to be one of our first Portland-area families and judge the quality for yourself with a free trial.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you accommodate Maine's rural distances and winters?",
+      name: "Can classes handle Maine's rural distances and real winters?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Since every class is online, Maine's real winter weather and the distance between rural towns never affect whether your child's lesson happens on schedule.",
+        text: "Yes. Maine is the most rural state in New England, and a family outside Portland or Lewiston can be a genuine drive from the nearest mosque even before winter weather is a factor. Since every class is online, distance and snow never affect whether your child's lesson happens on schedule.",
       },
     },
     {
@@ -82,19 +82,19 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in Maine?",
+    question: "I heard Lewiston has a large Somali community. Do you serve those families?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Maine, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "Yes. Lewiston is nationally known for its Somali immigrant community, well documented in national media since families began settling there in the early 2000s, and it has become one of the more established Muslim communities anywhere in Maine. We're glad to serve Lewiston families with the same certified, one-on-one instruction as every other Muslim household across the state, in clear English.",
   },
   {
-    question: "Do you have students in Portland, Maine already?",
+    question: "Portland, Maine is small. Are there really enough local options there?",
     answer:
-      "We're actively welcoming Maine families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Portland-area students and see the quality for yourself with a free trial class.",
+      "Honestly, options are limited. Portland has Maine's largest city and a modest, real Muslim community, but nothing close to the depth of teachers and programs a family in a major metro takes for granted. Rather than claim a specific number of students we can't verify, we'd simply invite you to be one of our first Portland-area families and see the quality for yourself with a free trial class.",
   },
   {
-    question: "Do you accommodate Maine's rural distances and winters?",
+    question: "Can classes handle Maine's rural distances and real winters?",
     answer:
-      "Yes. Maine's Muslim families are spread across a large, largely rural state, and real New England winters can make any drive difficult for months at a time. Since every class is online, none of that affects whether your child's lesson happens on schedule.",
+      "Yes. Maine is the most rural state in New England, and a family well outside Portland or Lewiston can be a genuine drive from the nearest mosque even before a New England winter is part of the equation. Since every class is conducted online via Zoom, neither distance nor snow ever affects whether your child's lesson happens safely and on schedule.",
   },
   {
     question: "How much do classes cost?",
@@ -159,11 +159,11 @@ export default function MainePage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Maine's Muslim community is small, centered mostly around Portland, with families spread across a large, rural state where the nearest mosque can be a genuine drive away. We don't have a physical school in Maine, and we won't pretend otherwise, but online Quran education closes exactly this kind of gap. A certified teacher meets your child over Zoom no matter how far your Maine town is from Portland.
+                Maine's Muslim community centers around two very different stories. Portland is the state's largest city and home to its main mosque, but the more nationally notable community is in Lewiston, well documented in national media for the Somali families who began settling there in the early 2000s and built a real, lasting community from it. Beyond these two cities, Maine is the most rural state in New England, and a family in a smaller town can be a genuine drive from either community, especially once a real Maine winter is part of the equation.
               </p>
               <p>
                 Many Maine families are also within reach of our{" "}
-                <Link href="/locations/boston" className="text-gold font-semibold hover:underline">Boston location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in Maine too.
+                <Link href="/locations/boston" className="text-gold font-semibold hover:underline">Boston location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in Maine, whether you're in Portland, Lewiston, or a smaller town in between.
               </p>
             </div>
           </div>

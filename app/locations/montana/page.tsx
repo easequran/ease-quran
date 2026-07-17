@@ -47,10 +47,10 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Do you offer online Quran classes in Montana?",
+      name: "Montana and Wyoming are neighbors. Is the situation the same in both?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Montana, taught by Wifaq ul Madaris certified teachers.",
+        text: "Not quite. Montana is the 4th-largest state by land area and borders Canada, and Billings sits over 550 miles from Denver, our nearest Metro Tier city, considerably further than Wyoming's Cheyenne is from that same city. Montana families are, on average, dealing with more remoteness than their Wyoming neighbors, not less.",
       },
     },
     {
@@ -63,10 +63,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do you accommodate Montana's vast rural distances?",
+      name: "How do you handle Montana's size and low population density?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Montana is one of the largest and least densely populated states in the country. Since classes are online, exactly how far your town is from Billings is never a barrier.",
+        text: "Simply by not letting it matter. Montana is one of the largest states in the country by land area and one of the least densely populated, with a family's nearest mosque sometimes genuinely hours away by car. Since all classes are online, exactly how far your town is from Billings or the Canadian border is never a barrier.",
       },
     },
     {
@@ -82,9 +82,9 @@ const faqSchema = {
 
 const faqs = [
   {
-    question: "Do you offer online Quran classes in Montana?",
+    question: "Montana and Wyoming are neighbors. Is the situation the same in both?",
     answer:
-      "Yes. Ease Quran offers live, one-on-one online Quran classes for families in Montana, taught by Wifaq ul Madaris certified teachers. There's no physical school required, everything happens over Zoom.",
+      "Not quite, even though the two states get lumped together often. Montana is the 4th-largest state in the country by land area and shares a long border with Canada, and Billings sits more than 550 miles from Denver, our nearest Metro Tier city, considerably further than Wyoming's Cheyenne is from that same Denver page. On average, Montana families are dealing with more genuine remoteness than their Wyoming neighbors, not less.",
   },
   {
     question: "Do you have students in Billings already?",
@@ -92,9 +92,9 @@ const faqs = [
       "We're actively welcoming Montana families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Billings-area students and see the quality for yourself with a free trial class.",
   },
   {
-    question: "Do you accommodate Montana's vast rural distances?",
+    question: "How do you handle Montana's size and low population density?",
     answer:
-      "Yes. Montana is one of the largest and least densely populated states in the country, and a family's nearest mosque can genuinely be hours away by car. Since all classes are conducted online via Zoom, exactly how far your town is from Billings or any other Montana city is never a barrier.",
+      "Simply by not letting it matter. Montana is one of the largest states in the country by land area and one of the least densely populated, and a family's nearest mosque can genuinely be hours away by car, sometimes with the Canadian border closer than the next Muslim family. Since all classes are conducted online via Zoom, exactly how far your town is from Billings, or from anything, is never a barrier to consistent Quran instruction.",
   },
   {
     question: "How much do classes cost?",
@@ -159,11 +159,12 @@ export default function MontanaPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Montana's Muslim community is genuinely small, and the state's sheer size, one of the largest in the country by land area, means families can be scattered hundreds of miles apart. We don't have a physical school in Montana, and we won't pretend otherwise, but online Quran education is built exactly for a state like this. A certified teacher meets your child over Zoom no matter how remote your Montana town is.
+                Montana is the 4th-largest state in the country by land area and shares a long northern border with Canada, and its Muslim community is genuinely small and scattered across that vastness, with families sometimes hundreds of miles apart. It's easy to lump Montana in with neighboring Wyoming, but the two aren't quite the same: Billings sits more than 550 miles from Denver, our nearest Metro Tier city, a considerably longer distance than Wyoming's Cheyenne has to cover to reach that same page.
               </p>
               <p>
-                Many Montana families are also within reach of our{" "}
-                <Link href="/locations/denver-colorado" className="text-gold font-semibold hover:underline">Denver location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in Montana too.
+                Even at that distance, our{" "}
+                <Link href="/locations/denver-colorado" className="text-gold font-semibold hover:underline">Denver location page</Link>{" "}
+                remains the nearest Metro Tier community we serve. Our online classes reach you directly in Montana regardless, no drive to Denver, or anywhere else, required.
               </p>
             </div>
           </div>

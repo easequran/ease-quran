@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Washington, D.C.",
   description:
-    "Certified online Quran classes for Muslim families in the Washington D.C. metro area. Serving Alexandria, Falls Church, Fairfax, Silver Spring, and Sterling. Wifaq ul Madaris certified teachers, free trial available.",
+    "Certified online Quran classes for Muslim families in Washington, D.C. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/washington-dc",
   },

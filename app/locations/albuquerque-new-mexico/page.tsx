@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Albuquerque, New Mexico",
   description:
-    "Certified online Quran classes for Muslim families in Albuquerque, a small community spread across the high desert. Wifaq ul Madaris certified teachers, free trial.",
+    "Certified online Quran classes for Muslim families in Albuquerque, New Mexico. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/albuquerque-new-mexico",
   },

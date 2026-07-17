@@ -7,14 +7,14 @@ import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 
 export const metadata: Metadata = {
-  title: "Learn Arabic Online | Arabic Language Classes USA",
+  title: "Arabic Language Classes Online",
   description:
     "Online Arabic language classes for English speakers. Classical and conversational Arabic. Understand the Quran in its original language. Free trial class.",
   alternates: {
     canonical: "https://easequran.com/courses/arabic-language",
   },
   openGraph: {
-    title: "Learn Arabic Online | Arabic Language Classes USA",
+    title: "Arabic Language Classes Online | Ease Quran Academy",
     description:
       "Online Arabic language classes for English speakers. Classical and conversational Arabic. Understand the Quran in its original language. Free trial class.",
     images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Arabic Language Classes, Ease Quran Academy" }],

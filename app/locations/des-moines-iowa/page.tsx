@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Des Moines, Iowa",
   description:
-    "Certified online Quran classes for Muslim families in Des Moines, home to a diverse resettled refugee community. Wifaq ul Madaris certified teachers, free trial.",
+    "Certified online Quran classes for Muslim families in Des Moines, Iowa. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/des-moines-iowa",
   },

@@ -525,11 +525,12 @@ export default function QuranForKidsPage() {
               Explore More Courses
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
               { href: "/courses/noorani-qaida", title: "Noorani Qaida", desc: "The best starting point for any child, learn Arabic letters from scratch before opening the Quran." },
               { href: "/courses/tajweed", title: "Tajweed", desc: "Once your child can read the Quran, Tajweed teaches them to recite it beautifully and correctly." },
               { href: "/courses/islamic-studies", title: "Islamic Studies", desc: "Pair Quran reading with Aqeedah, Seerah, and Islamic manners for a complete Islamic education." },
+              { href: "/summer-quran-classes", title: "Summer Quran Classes", desc: "Give your child a meaningful summer with certified, one-on-one Quran classes built around school break." },
             ].map((course) => (
               <Link
                 key={course.href}

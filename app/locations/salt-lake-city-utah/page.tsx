@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Salt Lake City, Utah",
   description:
-    "Certified online Quran classes for Muslim families in Salt Lake City, a small but growing Muslim community. Wifaq ul Madaris certified teachers, free trial available.",
+    "Certified online Quran classes for Muslim families in Salt Lake City, Utah. Wifaq ul Madaris certified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/salt-lake-city-utah",
   },
