@@ -324,6 +324,29 @@ const cities = [
   },
 ];
 
+/* States without a dedicated Metro page get a lightweight statewide hub instead. */
+const STATE_HUB_HREFS = new Set([
+  "/locations/alaska",
+  "/locations/idaho",
+  "/locations/maine",
+  "/locations/delaware",
+  "/locations/west-virginia",
+  "/locations/vermont",
+  "/locations/montana",
+  "/locations/north-dakota",
+  "/locations/south-dakota",
+  "/locations/wyoming",
+  "/locations/new-hampshire",
+]);
+
+const metroCities = cities
+  .filter((city) => !STATE_HUB_HREFS.has(city.href))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const stateHubCities = cities
+  .filter((city) => STATE_HUB_HREFS.has(city.href))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
 export default function LocationsPage() {
   return (
     <>
@@ -344,7 +367,7 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      {/* Cities Grid */}
+      {/* Metro Cities Grid */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -352,12 +375,12 @@ export default function LocationsPage() {
               Cities We Serve
             </h2>
             <p className="text-grey max-w-xl mx-auto">
-              Click your city to learn about the Muslim community there and how Ease Quran
-              can help your family.
+              {cities.length} locations and counting. Click your city to learn about the
+              Muslim community there and how Ease Quran can help your family.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {cities.map((city) => (
+            {metroCities.map((city) => (
               <Link
                 key={city.href}
                 href={city.href}
@@ -378,8 +401,42 @@ export default function LocationsPage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="text-center mt-12 p-8 bg-white rounded-2xl border border-gray-100">
+      {/* Statewide Coverage Grid */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="font-playfair font-bold text-3xl text-navy mb-3">
+              Statewide Coverage
+            </h2>
+            <p className="text-grey max-w-xl mx-auto">
+              No dedicated city page yet for your state? These pages serve your entire
+              state directly, with the same certified, one-on-one teaching.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {stateHubCities.map((city) => (
+              <Link
+                key={city.href}
+                href={city.href}
+                className="group bg-offwhite rounded-xl p-5 border border-gray-100 hover:border-gold hover:shadow-md transition-all duration-300"
+              >
+                <div className="flex items-center gap-2 mb-1.5">
+                  <h3 className="font-playfair font-bold text-base text-navy group-hover:text-gold transition-colors">
+                    {city.name}
+                  </h3>
+                  <span className="text-xs font-semibold text-grey bg-white px-2 py-0.5 rounded-full">
+                    {city.state}
+                  </span>
+                </div>
+                <p className="text-grey text-xs leading-relaxed">{city.desc}</p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-12 p-8 bg-offwhite rounded-2xl border border-gray-100">
             <p className="font-playfair font-bold text-xl text-navy mb-2">
               Don&apos;t see your city?
             </p>

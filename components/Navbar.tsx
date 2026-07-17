@@ -32,60 +32,18 @@ const courseColumns = [
   },
 ];
 
-/* ── Locations dropdown data ── */
-const locationLinks = [
+/* ── Locations dropdown data — curated shortlist only. Full directory lives at /locations ── */
+const locationShortlist = [
   { label: "New York", href: "/locations/new-york" },
-  { label: "Houston", href: "/locations/houston" },
-  { label: "Chicago", href: "/locations/chicago" },
   { label: "Los Angeles", href: "/locations/los-angeles" },
-  { label: "Paterson, NJ", href: "/locations/paterson-new-jersey" },
-  { label: "Dearborn, MI", href: "/locations/dearborn-michigan" },
+  { label: "Chicago", href: "/locations/chicago" },
+  { label: "Houston", href: "/locations/houston" },
   { label: "Dallas", href: "/locations/dallas" },
-  { label: "Philadelphia", href: "/locations/philadelphia" },
-  { label: "Atlanta", href: "/locations/atlanta" },
-  { label: "Columbus, OH", href: "/locations/columbus-ohio" },
-  { label: "Washington, D.C.", href: "/locations/washington-dc" },
-  { label: "Minneapolis-St. Paul", href: "/locations/minneapolis" },
-  { label: "Boston", href: "/locations/boston" },
   { label: "Miami", href: "/locations/miami-florida" },
+  { label: "Washington, D.C.", href: "/locations/washington-dc" },
+  { label: "Boston", href: "/locations/boston" },
+  { label: "Atlanta", href: "/locations/atlanta" },
   { label: "Seattle", href: "/locations/seattle" },
-  { label: "Phoenix", href: "/locations/phoenix-arizona" },
-  { label: "Denver", href: "/locations/denver-colorado" },
-  { label: "Charlotte", href: "/locations/charlotte-north-carolina" },
-  { label: "Nashville", href: "/locations/nashville-tennessee" },
-  { label: "Las Vegas", href: "/locations/las-vegas" },
-  { label: "Baltimore", href: "/locations/baltimore-maryland" },
-  { label: "St. Louis", href: "/locations/st-louis-missouri" },
-  { label: "Northern Virginia", href: "/locations/northern-virginia" },
-  { label: "Milwaukee", href: "/locations/milwaukee-wisconsin" },
-  { label: "Indianapolis", href: "/locations/indianapolis-indiana" },
-  { label: "Portland", href: "/locations/portland-oregon" },
-  { label: "Salt Lake City", href: "/locations/salt-lake-city-utah" },
-  { label: "New Orleans", href: "/locations/new-orleans-louisiana" },
-  { label: "Oklahoma City", href: "/locations/oklahoma-city" },
-  { label: "Hartford", href: "/locations/hartford-connecticut" },
-  { label: "Providence", href: "/locations/providence-rhode-island" },
-  { label: "Louisville", href: "/locations/louisville-kentucky" },
-  { label: "Des Moines", href: "/locations/des-moines-iowa" },
-  { label: "Wichita", href: "/locations/wichita-kansas" },
-  { label: "Omaha", href: "/locations/omaha-nebraska" },
-  { label: "Albuquerque", href: "/locations/albuquerque-new-mexico" },
-  { label: "Charleston", href: "/locations/charleston-south-carolina" },
-  { label: "Birmingham", href: "/locations/birmingham-alabama" },
-  { label: "Jackson", href: "/locations/jackson-mississippi" },
-  { label: "Little Rock", href: "/locations/little-rock-arkansas" },
-  { label: "Honolulu", href: "/locations/honolulu-hawaii" },
-  { label: "Alaska", href: "/locations/alaska" },
-  { label: "Idaho", href: "/locations/idaho" },
-  { label: "Maine", href: "/locations/maine" },
-  { label: "Delaware", href: "/locations/delaware" },
-  { label: "West Virginia", href: "/locations/west-virginia" },
-  { label: "Vermont", href: "/locations/vermont" },
-  { label: "Montana", href: "/locations/montana" },
-  { label: "North Dakota", href: "/locations/north-dakota" },
-  { label: "South Dakota", href: "/locations/south-dakota" },
-  { label: "Wyoming", href: "/locations/wyoming" },
-  { label: "New Hampshire", href: "/locations/new-hampshire" },
 ];
 
 /* ── Simple nav links ── */
@@ -326,18 +284,12 @@ export default function Navbar() {
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[320px]"
                     onMouseEnter={() => openMenu("locations")} onMouseLeave={closeMenu}>
                     <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-                      <div className="bg-navy px-5 py-3 flex items-center justify-between">
-                        <div className="flex items-center gap-1.5">
-                          <Globe className="w-3.5 h-3.5 text-gold" />
-                          <span className="text-white text-xs font-semibold tracking-wider uppercase">USA Cities</span>
-                        </div>
-                        <Link href="/locations" onClick={() => setActiveDesktop(null)}
-                          className="text-gold text-xs font-semibold hover:underline">
-                          View All →
-                        </Link>
+                      <div className="bg-navy px-5 py-3 flex items-center gap-1.5">
+                        <Globe className="w-3.5 h-3.5 text-gold" />
+                        <span className="text-white text-xs font-semibold tracking-wider uppercase">USA Cities</span>
                       </div>
-                      <div className="grid grid-cols-2 gap-0 p-3 max-h-[420px] overflow-y-auto">
-                        {locationLinks.map((loc) => (
+                      <div className="grid grid-cols-2 gap-0 p-3">
+                        {locationShortlist.map((loc) => (
                           <Link key={loc.href} href={loc.href} onClick={() => setActiveDesktop(null)}
                             className="flex items-center gap-2 px-3 py-2.5 rounded-xl hover:bg-offwhite group transition-colors">
                             <span className="w-1.5 h-1.5 rounded-full bg-gold/40 group-hover:bg-gold transition-colors shrink-0" />
@@ -345,6 +297,11 @@ export default function Navbar() {
                           </Link>
                         ))}
                       </div>
+                      <Link href="/locations" onClick={() => setActiveDesktop(null)}
+                        className="flex items-center justify-center gap-1.5 border-t border-gray-100 bg-offwhite px-5 py-3 text-sm font-bold text-gold hover:bg-gold hover:text-navy transition-colors">
+                        See All Locations
+                        <span aria-hidden="true">→</span>
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -438,14 +395,22 @@ export default function Navbar() {
                   </button>
                 </div>
                 {openMobile === "locations" && (
-                  <div className="mx-3 mb-3 bg-offwhite rounded-2xl overflow-hidden grid grid-cols-2">
-                    {locationLinks.map((loc) => (
-                      <Link key={loc.href} href={loc.href}
-                        className="py-2.5 px-4 text-sm text-navy font-medium hover:text-gold hover:bg-white transition-colors border-b border-white"
-                        onClick={() => { setMobileOpen(false); setOpenMobile(null); }}>
-                        {loc.label}
-                      </Link>
-                    ))}
+                  <div className="mx-3 mb-3 bg-offwhite rounded-2xl overflow-hidden">
+                    <div className="grid grid-cols-2">
+                      {locationShortlist.map((loc) => (
+                        <Link key={loc.href} href={loc.href}
+                          className="py-2.5 px-4 text-sm text-navy font-medium hover:text-gold hover:bg-white transition-colors border-b border-white"
+                          onClick={() => { setMobileOpen(false); setOpenMobile(null); }}>
+                          {loc.label}
+                        </Link>
+                      ))}
+                    </div>
+                    <Link href="/locations"
+                      className="flex items-center justify-center gap-1.5 py-3 px-4 text-sm font-bold text-gold hover:bg-white transition-colors"
+                      onClick={() => { setMobileOpen(false); setOpenMobile(null); }}>
+                      See All Locations
+                      <span aria-hidden="true">→</span>
+                    </Link>
                   </div>
                 )}
               </div>
