@@ -8,16 +8,16 @@ import TeacherStrip from "@/components/TeacherStrip";
 import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes in Minneapolis-St. Paul, Minnesota",
+  title: "Online Quran Classes in Paterson, New Jersey",
   description:
-    "Certified online Quran classes for Muslim families in Minneapolis-St. Paul. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Paterson, NJ. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
-    canonical: "https://easequran.com/locations/minneapolis",
+    canonical: "https://easequran.com/locations/paterson-new-jersey",
   },
   openGraph: {
-    title: "Online Quran Classes in Minneapolis-St. Paul | Ease Quran Academy",
+    title: "Online Quran Classes in Paterson, New Jersey | Ease Quran Academy",
     description:
-      "Certified online Quran classes for Muslim families across the Twin Cities, serving Minneapolis, St. Paul, and every Somali and South Asian Muslim community in Minnesota.",
+      "Certified online Quran classes for Muslim families across Paterson, home to one of the largest Arab American communities in the United States.",
     images: ["/images/og-image.png"],
   },
 };
@@ -28,7 +28,7 @@ const breadcrumbSchema = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
-    { "@type": "ListItem", position: 3, name: "Minneapolis-St. Paul", item: "https://easequran.com/locations/minneapolis" },
+    { "@type": "ListItem", position: 3, name: "Paterson, New Jersey", item: "https://easequran.com/locations/paterson-new-jersey" },
   ],
 };
 
@@ -38,11 +38,11 @@ const localBusinessSchema = {
   name: "Ease Quran Online Academy",
   url: "https://easequran.com",
   description:
-    "Certified online Quran classes for Muslim families in the Minneapolis-St. Paul metropolitan area.",
+    "Certified online Quran classes for Muslim families across the Paterson, New Jersey area.",
   areaServed: {
     "@type": "City",
-    name: "Minneapolis",
-    containedInPlace: { "@type": "State", name: "Minnesota" },
+    name: "Paterson",
+    containedInPlace: { "@type": "State", name: "New Jersey" },
   },
   serviceType: "Online Quran Education",
   telephone: "+923195657389",
@@ -62,26 +62,26 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Can I find Quran classes near me in Minneapolis?",
+      name: "Can I find a Quran teacher near me in Paterson?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Minneapolis, our online classes serve any family in the Twin Cities searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
+        text: "Yes. Though we are not a physical school in Paterson, our online Quran academy serves any family in South Paterson and across the city searching for a Quran teacher near them. You connect with a certified teacher over Zoom from home.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you serve the Somali Muslim community in the Twin Cities?",
+      name: "Do you serve Paterson's Arab American and Palestinian community?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Minneapolis-St. Paul is home to one of the largest Somali Muslim communities in the United States, and we are proud to serve Somali families alongside every other Muslim community in the Twin Cities.",
+        text: "Yes. Paterson is home to one of the largest Arab American communities in the country, including a significant Palestinian population centered around South Paterson. We are proud to serve this community alongside every other Muslim family in the city.",
       },
     },
     {
       "@type": "Question",
-      name: "What about Minnesota's harsh winters?",
+      name: "Can classes work around family business hours?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Online classes remove winter weather as a barrier entirely. No family needs to drive on icy roads or through snowstorms to reach a Quran class, every lesson happens safely from home.",
+        text: "Yes. Many Paterson families run halal restaurants, markets, or shops with evening and weekend hours. Classes are booked around your actual schedule in Eastern Time, not a fixed slot that assumes a typical 9-to-5.",
       },
     },
     {
@@ -89,23 +89,23 @@ const faqSchema = {
       name: "Are teachers certified from recognized Islamic institutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Twin Cities families can trust our teachers' qualifications.",
+        text: "Yes. All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Paterson families can trust our teachers' qualifications.",
       },
     },
     {
       "@type": "Question",
-      name: "Is there a female teacher for sisters in Minneapolis?",
+      name: "Is there a female Quran teacher for sisters in Paterson?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Sister Almas Fatima is our certified female Quran teacher available exclusively for sisters and children. Many Twin Cities families specifically request her for their daughters.",
+        text: "Yes. Sister Almas Fatima is our certified female Quran teacher available exclusively for sisters and children. Many Paterson families specifically request her for their daughters.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you serve families in both Minneapolis and St. Paul suburbs?",
+      name: "Do you serve families across Passaic County, not just Paterson itself?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We serve the entire Twin Cities metro including St. Paul, Bloomington, Eden Prairie, Brooklyn Park, Burnsville, and every suburb with a Muslim family. Online classes serve the whole metro area equally.",
+        text: "Yes. We serve families throughout Paterson and the surrounding Passaic County communities, including Clifton and Passaic. Since classes are online, exactly which street or neighborhood you live on is never a barrier.",
       },
     },
   ],
@@ -118,38 +118,38 @@ const faqs = [
       "Yes. Parents are welcome to sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified. See our Child Safety & Parent Rights Policy for full details.",
   },
   {
-    question: "Can I find Quran classes near me in Minneapolis?",
+    question: "Can I find a Quran teacher near me in Paterson?",
     answer:
-      "Yes. While we are not a physical school in Minneapolis, our online classes work for any family in the Twin Cities searching for Quran classes, a Quran teacher, or a Hifz program near them. You connect one-on-one with a certified teacher over Zoom from home, so you get all the benefits of a class near you without any travel.",
+      "Yes. While we are not a physical school in Paterson, our online Quran academy works for any family in South Paterson or anywhere else in the city searching for a Quran teacher, Quran classes, or a Hifz program near them. You connect one-on-one with a certified teacher over Zoom from home, no hunting for street parking near a masjid required.",
   },
   {
-    question: "Do you serve the Somali Muslim community in the Twin Cities?",
+    question: "Do you serve Paterson's Arab American and Palestinian community?",
     answer:
-      "Yes. Minneapolis-St. Paul is home to one of the largest and most established Somali Muslim communities in the United States, concentrated around neighborhoods like Cedar-Riverside and spread throughout the metro. We are proud to serve Somali families alongside South Asian, Arab, and every other Muslim community in the Twin Cities, with teachers experienced in working with students from diverse cultural backgrounds.",
+      "Yes. Paterson is home to one of the largest and most historic Arab American communities in the United States. South Paterson, the stretch along Main Street and Union Avenue sometimes called Little Ramallah, has a large Palestinian population alongside Lebanese, Syrian, Egyptian, Yemeni, and Turkish families who have built mosques, halal markets, and businesses here across generations. We are proud to serve this community, and every other Muslim family in Paterson, with instruction in clear English.",
   },
   {
-    question: "What about Minnesota's harsh winters?",
+    question: "Can classes work around family business hours?",
     answer:
-      "Minnesota winters bring icy roads, heavy snow, and dangerously cold temperatures that can make any drive across town risky, especially for evening classes after Maghrib. Online classes remove winter weather as a barrier entirely. No family needs to scrape a windshield or drive on black ice to reach a Quran class, every lesson happens safely and reliably from home, all year round.",
+      "Yes. A meaningful number of Paterson's Muslim families run their own halal restaurants, grocery stores, or retail shops, businesses that stay open through the evening and on weekends, exactly when a typical in-person class would be scheduled. A fixed weekly slot at a set time rarely works for a family minding the register at 7 PM. We book classes around your actual schedule, run in Eastern Time, whatever shape that takes.",
   },
   {
     question: "Are teachers certified from recognized Islamic institutions?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Twin Cities Muslim families can have full confidence in our teachers' qualifications.",
+      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Paterson families can have full confidence in our teachers' qualifications.",
   },
   {
-    question: "Is there a female teacher for sisters in Minneapolis?",
+    question: "Is there a female Quran teacher for sisters in Paterson?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Twin Cities families from the Somali and South Asian communities specifically request her for their daughters and wives, and we are proud to provide this important option. Simply indicate your preference when booking.",
+      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Paterson families, particularly within the city's large Arab community, specifically request her for their daughters. Simply mention your preference when booking your free trial.",
   },
   {
-    question: "Do you serve families in both Minneapolis and St. Paul suburbs?",
+    question: "Do you serve families across Passaic County, not just Paterson itself?",
     answer:
-      "Yes. We serve the entire Twin Cities metro area including St. Paul, Bloomington, Eden Prairie, Brooklyn Park, Burnsville, Woodbury, Maple Grove, and every suburb across Minnesota with a Muslim family. Since all classes are online via Zoom, your location anywhere in the metro is no barrier whatsoever.",
+      "Yes. We serve families throughout Paterson and the surrounding Passaic County communities, including Clifton, Passaic, and Prospect Park. Since all classes are conducted online via Zoom, exactly which street or neighborhood you call home makes no difference at all.",
   },
 ];
 
-export default function MinneapolisPage() {
+export default function PatersonNewJerseyPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -171,18 +171,18 @@ export default function MinneapolisPage() {
               <li className="text-white/30">/</li>
               <li><Link href="/locations" className="hover:text-gold transition-colors">Locations</Link></li>
               <li className="text-white/30">/</li>
-              <li className="text-white/80">Minneapolis-St. Paul, Minnesota</li>
+              <li className="text-white/80">Paterson, New Jersey</li>
             </ol>
           </nav>
           <div className="max-w-3xl">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
-              Serving the Twin Cities
+              Serving Paterson &amp; Passaic County
             </span>
             <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
-              Online Quran Classes in Minneapolis-St. Paul
+              Online Quran Classes in Paterson, New Jersey
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
-              Certified, one-on-one Quran education for Muslim families across the Twin Cities, home to one of America's largest Somali Muslim communities. Quality Quran instruction delivered to your home, on your schedule, no matter the weather.
+              Certified, one-on-one Quran education for Muslim families across Paterson, home to one of the largest Arab American communities in the United States. Quality Quran instruction delivered to your home, on your schedule.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
@@ -192,7 +192,7 @@ export default function MinneapolisPage() {
                 Book Free Trial Class
               </Link>
               <a
-                href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Minneapolis%20Minnesota"
+                href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Paterson%20New%20Jersey"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition-all duration-200 text-sm text-center"
@@ -212,17 +212,17 @@ export default function MinneapolisPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
-              The Twin Cities' Muslim Community
+              Paterson's Muslim Community
             </span>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
-              Home to One of America's Largest Somali Muslim Communities
+              Home to One of America's Largest Arab American Communities
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                The Minneapolis-St. Paul metropolitan area, commonly known as the Twin Cities, is home to the largest Somali population in the United States, and by extension one of the largest and most vibrant Somali Muslim communities in the country. Since the 1990s, tens of thousands of Somali families have settled across Minneapolis, particularly in the Cedar-Riverside neighborhood, building mosques, businesses, and community institutions that have made the Twin Cities a genuine hub of Somali-American Muslim life. Alongside this community, the Twin Cities are home to significant South Asian, Arab, and East African Muslim populations, with active masjids and Islamic centers spread across Minneapolis, St. Paul, and the surrounding suburbs. The region's overall Muslim population is estimated at over 150,000, making it one of the most religiously significant Muslim communities in the Midwest.
+                Paterson, once known nationwide as "Silk City" for the textile mills that built the city in the 19th century, is today home to one of the largest and most historic Arab American communities in the United States. South Paterson, the stretch along Main Street and Union Avenue sometimes called Little Ramallah, has a large and deeply rooted Palestinian population, alongside significant Lebanese, Syrian, Egyptian, Yemeni, and Turkish families who began arriving generations ago and have built a dense network of mosques, halal markets, bakeries, and businesses that give the neighborhood a genuinely distinct character. It's one of the most concentrated and long-standing Arab Muslim communities anywhere in the country.
               </p>
               <p>
-                The challenge for Twin Cities Muslim families is Minnesota's notoriously harsh winters. From late November through March, sub-zero temperatures, snow, and icy roads make evening drives to a masjid or Islamic center genuinely difficult and sometimes unsafe, especially after Maghrib when many weekday classes would otherwise be held. Weekend Islamic schools are concentrated in specific neighborhoods and can require a significant commute for families in outer suburbs like Eden Prairie, Woodbury, or Maple Grove. Online Quran education solves this problem completely, bringing certified instruction to every Twin Cities household safely, warmly, and reliably, regardless of what the Minnesota weather is doing outside.
+                The everyday challenge for Paterson's Muslim families is less about distance and more about how the city actually runs. Street parking near South Paterson's mosques and shops is genuinely scarce, especially in the evening, and a significant number of families here run their own restaurants, grocery stores, or retail businesses that stay open through the evening and on weekends, exactly the hours a typical in-person class would ask for. A parent minding the register at 7 PM can't easily also get a child to a fixed class across town. Online Quran education removes both problems, no parking spot to find and no business to close early.
               </p>
             </div>
           </div>
@@ -234,37 +234,37 @@ export default function MinneapolisPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
-              Why Online Works for Twin Cities Families
+              Why Online Works for Paterson Families
             </span>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-10">
-              Why Minneapolis-St. Paul Families Choose Online Quran Classes
+              Why Paterson Families Choose Online Quran Classes
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <Navigation size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">No Winter Driving, Ever</h3>
+                <h3 className="font-playfair font-bold text-xl text-navy mb-3">No Hunting for Street Parking</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  Minnesota winters bring snow, ice, and bitter cold that make evening drives across the Twin Cities genuinely risky. Online classes eliminate that entirely. Your child opens Zoom at home, and the lesson begins, no scraping a windshield required.
+                  Evening parking near South Paterson's mosques and shops is genuinely hard to find. Online classes remove that entirely. Your child opens Zoom at home, and the lesson begins right on time.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <Calendar size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Faster Progress with Private Classes</h3>
+                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Built for Family Business Hours</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  In a one-on-one class, the teacher corrects every single mistake immediately and moves at your child's optimal pace. There is no waiting for slower students or being left behind by faster ones. Twin Cities families consistently report that their children advance faster in private online lessons than they ever did in group settings.
+                  If your family runs a shop, restaurant, or market with evening and weekend hours, a fixed class time rarely fits. We book around your actual schedule instead.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <GraduationCap size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Welcoming All Muslim Communities</h3>
+                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Proud to Serve a Historic Community</h3>
                 <p className="text-grey text-sm leading-relaxed">
-                  The Twin Cities' Muslim community spans Somali, South Asian, Arab, and East African backgrounds. Ease Quran is a welcoming space for every Muslim family, regardless of cultural background or linguistic heritage. All instruction is in clear English, making it accessible for families across Minneapolis and St. Paul's diverse Muslim community.
+                  Paterson's Arab American community is one of the most established in the country. Ease Quran is honored to serve these families, and every Muslim family in the city, in clear English.
                 </p>
               </div>
             </div>
@@ -287,7 +287,7 @@ export default function MinneapolisPage() {
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-colors text-sm text-center">
               Book Free Trial Class
             </Link>
-            <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Minneapolis%20Minnesota" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-xl hover:bg-offwhite transition-colors text-sm text-center">
+            <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Paterson%20New%20Jersey" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-xl hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
             </a>
           </div>
@@ -300,10 +300,10 @@ export default function MinneapolisPage() {
           <div className="max-w-4xl mx-auto">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Our Curriculum</span>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
-              Courses Available for Twin Cities Families
+              Quran Classes for Kids and Adults in Paterson
             </h2>
             <p className="text-grey mb-8 leading-relaxed">
-              Structured, progressive courses taught by certified scholars, designed for English-speaking Muslim families across Minneapolis and St. Paul.
+              Structured, progressive courses taught by certified scholars, designed for English-speaking Muslim families across Paterson and Passaic County.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
@@ -332,13 +332,13 @@ export default function MinneapolisPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Simple Process</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">How to Get Started from Minneapolis-St. Paul</h2>
+              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">How to Get Started from Paterson</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { step: "01", title: "Tell Us About Your Child", desc: "Book online or WhatsApp us. Share your child's age, current Quran level, and preferred schedule in Central Time. We'll match you with the right certified teacher immediately." },
+                { step: "01", title: "Tell Us About Your Child", desc: "Book online or WhatsApp us. Share your child's age, current Quran level, and preferred schedule in Eastern Time. We'll match you with the right certified teacher immediately." },
                 { step: "02", title: "Free Trial Lesson", desc: "Your child attends a live, one-on-one Zoom class with their teacher at no cost. Experience Ease Quran's teaching style firsthand before making any commitment." },
-                { step: "03", title: "Start Your Regular Classes", desc: "Love the trial? We create a consistent weekly schedule that works for your Twin Cities family. Reliable, flexible, and always from the comfort of your home." },
+                { step: "03", title: "Start Your Regular Classes", desc: "Love the trial? We create a consistent weekly schedule that works for your Paterson family, business hours and all. Reliable, flexible, and always from the comfort of your home." },
               ].map((item) => (
                 <div key={item.step} className="text-center">
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
@@ -361,14 +361,15 @@ export default function MinneapolisPage() {
               Quran Classes Near You
             </span>
             <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
-              Looking for Quran Classes Near You in Minneapolis?
+              Looking for a Quran Teacher Near You in Paterson?
             </h2>
             <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in the Twin Cities, the best
-              teacher for your child may not be the closest one on the map. Because every Ease Quran
-              class is live and online, Minneapolis and St. Paul families connect one-on-one with certified teachers
-              without driving anywhere, even in the depths of winter. You get the convenience of a teacher right in your home, with
-              none of the commute, icy parking lot, or fixed group schedule of a local center.
+              If you have been searching for &ldquo;Quran classes near me&rdquo; in Paterson, the best
+              teacher for your child may not be the closest one on the map, especially with parking
+              this tight around South Paterson. Because every Ease Quran class is live and online,
+              Paterson families connect one-on-one with certified teachers without driving or parking
+              anywhere. You get the convenience of a teacher right in your home, with none of the
+              commute or fixed group schedule of a local center.
             </p>
           </div>
         </div>
@@ -381,7 +382,7 @@ export default function MinneapolisPage() {
             <div className="text-center mb-10">
               <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
               <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
-                Frequently Asked Questions. Minneapolis-St. Paul
+                Frequently Asked Questions. Paterson, New Jersey
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
@@ -396,11 +397,11 @@ export default function MinneapolisPage() {
       </section>
 
       <CTASection
-        headline="Certified Quran Education Across the Twin Cities"
-        subtext="From Minneapolis and St. Paul to every Twin Cities suburb. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
+        headline="Certified Quran Education Across Paterson and Passaic County"
+        subtext="From South Paterson to Clifton and Passaic. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
         primaryCta="Book Free Trial Class"
         primaryHref="/free-trial"
-        whatsappText="Hi I am interested in online Quran classes in Minneapolis Minnesota"
+        whatsappText="Hi I am interested in online Quran classes in Paterson New Jersey"
       />
     </>
   );

@@ -38,7 +38,7 @@ const locationLinks = [
   { label: "Houston", href: "/locations/houston" },
   { label: "Chicago", href: "/locations/chicago" },
   { label: "Los Angeles", href: "/locations/los-angeles" },
-  { label: "New Jersey", href: "/locations/new-jersey" },
+  { label: "Paterson, NJ", href: "/locations/paterson-new-jersey" },
   { label: "Dearborn, MI", href: "/locations/dearborn-michigan" },
   { label: "Dallas", href: "/locations/dallas" },
   { label: "Philadelphia", href: "/locations/philadelphia" },

@@ -8,6 +8,11 @@ const nextConfig = {
         destination: "https://easequran.com/:path*",
         permanent: true, // 301
       },
+      {
+        source: "/locations/new-jersey",
+        destination: "/locations/paterson-new-jersey",
+        permanent: true, // 301 — NJ hub page renamed to a proper Paterson metro page
+      },
     ];
   },
   images: {

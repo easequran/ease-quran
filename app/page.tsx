@@ -154,7 +154,7 @@ const cities = [
   { name: "Houston", href: "/locations/houston" },
   { name: "Chicago", href: "/locations/chicago" },
   { name: "Los Angeles", href: "/locations/los-angeles" },
-  { name: "New Jersey", href: "/locations/new-jersey" },
+  { name: "Paterson, NJ", href: "/locations/paterson-new-jersey" },
   { name: "Dearborn, MI", href: "/locations/dearborn-michigan" },
   { name: "Dallas", href: "/locations/dallas" },
   { name: "Philadelphia", href: "/locations/philadelphia" },

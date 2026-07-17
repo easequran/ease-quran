@@ -10,7 +10,7 @@ import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Boston, Massachusetts",
   description:
-    "Certified online Quran classes for Muslim families in Boston. Serving Cambridge, Quincy, Malden, Everett, and all Greater Boston suburbs. Wifaq ul Madaris certified teachers, free trial available.",
+    "Certified online Quran classes for Muslim families in Boston and Greater Boston. Wifaq ul Madaris certified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/boston",
   },

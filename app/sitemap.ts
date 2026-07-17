@@ -55,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/locations/houston`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/locations/chicago`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/locations/los-angeles`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/locations/new-jersey`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/locations/paterson-new-jersey`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/locations/dearborn-michigan`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/locations/dallas`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/locations/philadelphia`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

@@ -35,10 +35,10 @@ const cities = [
     desc: "Serving a diverse Muslim community of 500,000+",
   },
   {
-    name: "New Jersey",
-    href: "/locations/new-jersey",
+    name: "Paterson",
+    href: "/locations/paterson-new-jersey",
     state: "NJ",
-    desc: "Paterson, Jersey City, Edison and beyond",
+    desc: "One of America's largest Arab American communities",
   },
   {
     name: "Dearborn, Michigan",
