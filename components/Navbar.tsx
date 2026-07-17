@@ -47,6 +47,45 @@ const locationLinks = [
   { label: "Washington, D.C.", href: "/locations/washington-dc" },
   { label: "Minneapolis-St. Paul", href: "/locations/minneapolis" },
   { label: "Boston", href: "/locations/boston" },
+  { label: "Miami", href: "/locations/miami-florida" },
+  { label: "Seattle", href: "/locations/seattle" },
+  { label: "Phoenix", href: "/locations/phoenix-arizona" },
+  { label: "Denver", href: "/locations/denver-colorado" },
+  { label: "Charlotte", href: "/locations/charlotte-north-carolina" },
+  { label: "Nashville", href: "/locations/nashville-tennessee" },
+  { label: "Las Vegas", href: "/locations/las-vegas" },
+  { label: "Baltimore", href: "/locations/baltimore-maryland" },
+  { label: "St. Louis", href: "/locations/st-louis-missouri" },
+  { label: "Northern Virginia", href: "/locations/northern-virginia" },
+  { label: "Milwaukee", href: "/locations/milwaukee-wisconsin" },
+  { label: "Indianapolis", href: "/locations/indianapolis-indiana" },
+  { label: "Portland", href: "/locations/portland-oregon" },
+  { label: "Salt Lake City", href: "/locations/salt-lake-city-utah" },
+  { label: "New Orleans", href: "/locations/new-orleans-louisiana" },
+  { label: "Oklahoma City", href: "/locations/oklahoma-city" },
+  { label: "Hartford", href: "/locations/hartford-connecticut" },
+  { label: "Providence", href: "/locations/providence-rhode-island" },
+  { label: "Louisville", href: "/locations/louisville-kentucky" },
+  { label: "Des Moines", href: "/locations/des-moines-iowa" },
+  { label: "Wichita", href: "/locations/wichita-kansas" },
+  { label: "Omaha", href: "/locations/omaha-nebraska" },
+  { label: "Albuquerque", href: "/locations/albuquerque-new-mexico" },
+  { label: "Charleston", href: "/locations/charleston-south-carolina" },
+  { label: "Birmingham", href: "/locations/birmingham-alabama" },
+  { label: "Jackson", href: "/locations/jackson-mississippi" },
+  { label: "Little Rock", href: "/locations/little-rock-arkansas" },
+  { label: "Honolulu", href: "/locations/honolulu-hawaii" },
+  { label: "Alaska", href: "/locations/alaska" },
+  { label: "Idaho", href: "/locations/idaho" },
+  { label: "Maine", href: "/locations/maine" },
+  { label: "Delaware", href: "/locations/delaware" },
+  { label: "West Virginia", href: "/locations/west-virginia" },
+  { label: "Vermont", href: "/locations/vermont" },
+  { label: "Montana", href: "/locations/montana" },
+  { label: "North Dakota", href: "/locations/north-dakota" },
+  { label: "South Dakota", href: "/locations/south-dakota" },
+  { label: "Wyoming", href: "/locations/wyoming" },
+  { label: "New Hampshire", href: "/locations/new-hampshire" },
 ];
 
 /* ── Simple nav links ── */
@@ -297,7 +336,7 @@ export default function Navbar() {
                           View All →
                         </Link>
                       </div>
-                      <div className="grid grid-cols-2 gap-0 p-3">
+                      <div className="grid grid-cols-2 gap-0 p-3 max-h-[420px] overflow-y-auto">
                         {locationLinks.map((loc) => (
                           <Link key={loc.href} href={loc.href} onClick={() => setActiveDesktop(null)}
                             className="flex items-center gap-2 px-3 py-2.5 rounded-xl hover:bg-offwhite group transition-colors">
