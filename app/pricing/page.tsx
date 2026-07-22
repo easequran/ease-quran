@@ -156,6 +156,106 @@ const plans = [
   },
 ];
 
+const thirtyMinPlans = [
+  {
+    name: "2 Days/Week",
+    price: 35,
+    classes: "~8 classes/month",
+    duration: "30 min/class",
+    forWho: "Ideal for beginners building a light, consistent routine",
+    features: [
+      "One-on-one live sessions",
+      "Certified teacher",
+      "Flexible scheduling",
+      "Progress tracking",
+      "Free trial class included",
+    ],
+  },
+  {
+    name: "3 Days/Week",
+    price: 50,
+    classes: "~12 classes/month",
+    duration: "30 min/class",
+    forWho: "Perfect balance of learning and flexibility for young students",
+    features: [
+      "One-on-one live sessions",
+      "Certified teacher",
+      "Flexible scheduling",
+      "Progress tracking",
+      "Monthly progress report",
+      "Free trial class included",
+    ],
+    popular: true,
+  },
+  {
+    name: "5 Days/Week",
+    price: 80,
+    classes: "~20 classes/month",
+    duration: "30 min/class",
+    forWho: "For dedicated learners who want fast, steady progress",
+    features: [
+      "One-on-one live sessions",
+      "Certified teacher",
+      "Flexible scheduling",
+      "Priority teacher matching",
+      "Monthly progress report",
+      "Parent updates",
+      "Free trial class included",
+    ],
+  },
+];
+
+const oneHourPlans = [
+  {
+    name: "2 Days/Week",
+    price: 65,
+    classes: "~8 classes/month",
+    duration: "60 min/class",
+    forWho: "Deep, focused sessions twice a week for serious learners",
+    features: [
+      "One-on-one live sessions",
+      "Certified teacher",
+      "Flexible scheduling",
+      "Progress tracking",
+      "Free trial class included",
+    ],
+  },
+  {
+    name: "3 Days/Week",
+    price: 90,
+    classes: "~12 classes/month",
+    duration: "60 min/class",
+    forWho: "Comprehensive coverage three times a week for steady growth",
+    features: [
+      "One-on-one live sessions",
+      "Certified teacher",
+      "Flexible scheduling",
+      "Progress tracking",
+      "Monthly progress report",
+      "Parent updates",
+      "Free trial class included",
+    ],
+    popular: true,
+  },
+  {
+    name: "5 Days/Week",
+    price: 140,
+    classes: "~20 classes/month",
+    duration: "60 min/class",
+    forWho: "Maximum immersion for rapid Quran memorisation or tajweed mastery",
+    features: [
+      "One-on-one live sessions",
+      "Premium certified teacher",
+      "Flexible scheduling",
+      "Priority support",
+      "Weekly progress reports",
+      "Parent updates",
+      "Homework & revision",
+      "Free trial class included",
+    ],
+  },
+];
+
 const includedFeatures = [
   "Free first trial class, no credit card required",
   "Wifaq ul Madaris certified teacher for every session",
@@ -258,6 +358,82 @@ export default function PricingPage() {
             ))}
           </div>
 
+          <p className="text-center text-grey text-sm mt-8">
+            All prices in USD. Billed monthly.{" "}
+            <Link href="/free-trial" className="text-gold hover:underline font-semibold">
+              Start with a free trial →
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* 30-Minute Class Plans */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-10">
+            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              30-Minute Class Plan
+            </span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-3">
+              Short, Focused Sessions — 30 Minutes
+            </h2>
+            <p className="text-grey text-sm max-w-xl mx-auto">
+              Great for younger children or anyone who learns best in shorter, high-concentration bursts.
+              Choose how many days per week fits your schedule.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto items-stretch">
+            {thirtyMinPlans.map((plan) => (
+              <PricingCard
+                key={`30min-${plan.name}`}
+                name={plan.name}
+                price={plan.price}
+                classes={plan.classes}
+                duration={plan.duration}
+                forWho={plan.forWho}
+                features={plan.features}
+                popular={plan.popular}
+              />
+            ))}
+          </div>
+          <p className="text-center text-grey text-sm mt-8">
+            All prices in USD. Billed monthly.{" "}
+            <Link href="/free-trial" className="text-gold hover:underline font-semibold">
+              Start with a free trial →
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* 1-Hour Class Plans */}
+      <section className="section-padding bg-offwhite">
+        <div className="container-custom">
+          <div className="text-center mb-10">
+            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              1-Hour Class Plan
+            </span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-3">
+              Deep, Immersive Sessions — 1 Hour
+            </h2>
+            <p className="text-grey text-sm max-w-xl mx-auto">
+              Ideal for older students, Hifz learners, or anyone aiming for rapid progress.
+              Full hour gives time for recitation, correction, and new lesson.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto items-stretch">
+            {oneHourPlans.map((plan) => (
+              <PricingCard
+                key={`1hr-${plan.name}`}
+                name={plan.name}
+                price={plan.price}
+                classes={plan.classes}
+                duration={plan.duration}
+                forWho={plan.forWho}
+                features={plan.features}
+                popular={plan.popular}
+              />
+            ))}
+          </div>
           <p className="text-center text-grey text-sm mt-8">
             All prices in USD. Billed monthly.{" "}
             <Link href="/free-trial" className="text-gold hover:underline font-semibold">
