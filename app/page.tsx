@@ -140,7 +140,7 @@ const faqs = [
   {
     question: "How much do classes cost?",
     answer:
-      "Our plans start at $40/month for 4 classes. Our most popular plan is $79/month for 12 classes of 45 minutes each. We also offer custom family plans, so WhatsApp us to discuss.",
+      "Our plans start at $40/month for 2 classes/week (8/month), 30 minutes each. Our most popular plan is Steady at $55/month for 3 classes/week (12/month). We also offer custom family and sibling discounts, see our pricing page for details.",
   },
   {
     question: "What if my child doesn't like the teacher?",

@@ -277,7 +277,7 @@ export default function PhiladelphiaPage() {
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
             <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose $79/month for 12 classes &middot; </span>
+            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 

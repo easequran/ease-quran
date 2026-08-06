@@ -10,6 +10,7 @@ interface PricingCardProps {
   features: string[];
   popular?: boolean;
   customCta?: boolean;
+  subLine?: string;
 }
 
 const WHATSAPP_NUMBER = "923195657389";
@@ -24,6 +25,7 @@ export default function PricingCard({
   features,
   popular,
   customCta,
+  subLine,
 }: PricingCardProps) {
   return (
     <div
@@ -80,6 +82,13 @@ export default function PricingCard({
           <p>{classes}</p>
           <p>{duration}</p>
         </div>
+        {subLine && (
+          <p
+            className={`mt-3 text-xs font-medium ${popular ? "text-white/80" : "text-navy/70"}`}
+          >
+            {subLine}
+          </p>
+        )}
       </div>
 
       <ul className="space-y-2.5 flex-1 mb-7">
