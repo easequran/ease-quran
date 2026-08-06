@@ -517,6 +517,18 @@ export default function PricingPage() {
               </span>
               .
             </p>
+            <div className="mt-8">
+              <a
+                href={`https://wa.me/923195657389?text=${encodeURIComponent(
+                  "Hi, I would like to refer a family to Ease Quran and use the referral discount."
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gold text-navy font-bold px-7 py-3.5 rounded-xl hover:bg-gold-dark transition-all duration-200 text-sm"
+              >
+                Refer a Family on WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </section>
