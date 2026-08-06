@@ -242,7 +242,7 @@ export default function PricingPage() {
               price is listed below.
             </p>
           </div>
-          <div className="max-w-3xl mx-auto overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="max-w-3xl mx-auto overflow-x-auto -mx-4 px-4 sm:mx-auto sm:px-0">
             <table className="w-full min-w-[480px] border-collapse text-sm">
               <thead>
                 <tr className="bg-navy text-white">
