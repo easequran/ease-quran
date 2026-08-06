@@ -202,7 +202,7 @@ export default function PricingPage() {
               price too.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto items-stretch">
             {plans.map((plan) => (
               <PricingCard
                 key={plan.id}
@@ -470,7 +470,7 @@ export default function PricingPage() {
               For students with more specific needs.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl mx-auto">
             {additionalPlans.map((plan) => (
               <div
                 key={plan.id}
@@ -501,9 +501,12 @@ export default function PricingPage() {
         <div className="container-custom">
           <div className="max-w-2xl mx-auto text-center">
             <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
-              Refer a Family
+              Referral Program
             </span>
-            <p className="text-white text-lg">
+            <h2 className="font-playfair font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-4">
+              Refer a Family
+            </h2>
+            <p className="text-white/90 text-base sm:text-lg">
               Refer a family to Ease Quran: you get{" "}
               <span className="text-gold font-semibold">
                 {referral.referrerDiscount * 100}% off one month
@@ -546,7 +549,7 @@ export default function PricingPage() {
               </ul>
             </div>
 
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                 <div className="text-3xl font-playfair font-bold text-gold mb-1">100%</div>
                 <p className="text-navy text-sm font-semibold">One-on-One Sessions</p>
