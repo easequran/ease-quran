@@ -144,27 +144,42 @@ export default function PricingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       {/* Hero */}
-      <section className="bg-navy section-padding">
-        <div className="container-custom text-center">
+      <section className="relative overflow-hidden">
+        {/* Background image — separate decorative element so its role="img"
+            doesn't swallow the real heading/text content below */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/images/pricing-hero.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          role="img"
+          aria-label="Muslim child in an online Quran class, representing Ease Quran Academy pricing plans"
+        />
+        {/* Dark overlay for text contrast */}
+        <div className="absolute inset-0 bg-navy/85" />
+
+        <div className="relative z-10 container-custom section-padding text-center px-4 sm:px-6">
           <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
             Transparent Pricing
           </span>
-          <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+          <h1 className="font-playfair font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
             Simple, Affordable Quran Class Pricing
           </h1>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-white/70 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
             No hidden fees. No long-term contracts. $0 registration fee. Start with a completely
             free trial class, then choose the plan that fits your child's learning goals and your
             family's budget.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm">
+            <span className="bg-white/10 text-white px-3 sm:px-4 py-2 rounded-full">
               ✓ Free first class
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full">
+            <span className="bg-white/10 text-white px-3 sm:px-4 py-2 rounded-full">
               ✓ $0 registration fee
             </span>
-            <span className="bg-white/10 text-white px-4 py-2 rounded-full">
+            <span className="bg-white/10 text-white px-3 sm:px-4 py-2 rounded-full">
               ✓ Cancel anytime
             </span>
           </div>
@@ -227,14 +242,14 @@ export default function PricingPage() {
               price is listed below.
             </p>
           </div>
-          <div className="max-w-3xl mx-auto overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
+          <div className="max-w-3xl mx-auto overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+            <table className="w-full min-w-[480px] border-collapse text-sm">
               <thead>
                 <tr className="bg-navy text-white">
-                  <th className="text-left font-semibold px-4 py-3 rounded-tl-xl">Plan</th>
-                  <th className="text-left font-semibold px-4 py-3">Classes/week</th>
-                  <th className="text-left font-semibold px-4 py-3">30 min</th>
-                  <th className="text-left font-semibold px-4 py-3 rounded-tr-xl">60 min</th>
+                  <th className="text-left font-semibold px-4 py-3 rounded-tl-xl whitespace-nowrap">Plan</th>
+                  <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">Classes/week</th>
+                  <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">30 min</th>
+                  <th className="text-left font-semibold px-4 py-3 rounded-tr-xl whitespace-nowrap">60 min</th>
                 </tr>
               </thead>
               <tbody>
@@ -243,16 +258,16 @@ export default function PricingPage() {
                     key={plan.id}
                     className={i % 2 === 0 ? "bg-offwhite" : "bg-white"}
                   >
-                    <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100">
+                    <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100 whitespace-nowrap">
                       {plan.name}
                     </td>
-                    <td className="px-4 py-3 text-grey border-b border-gray-100">
+                    <td className="px-4 py-3 text-grey border-b border-gray-100 whitespace-nowrap">
                       {plan.classesPerWeek}
                     </td>
-                    <td className="px-4 py-3 text-navy font-medium border-b border-gray-100">
+                    <td className="px-4 py-3 text-navy font-medium border-b border-gray-100 whitespace-nowrap">
                       ${plan.price30}/month
                     </td>
-                    <td className="px-4 py-3 text-navy font-medium border-b border-gray-100">
+                    <td className="px-4 py-3 text-navy font-medium border-b border-gray-100 whitespace-nowrap">
                       ${plan.price60}/month
                     </td>
                   </tr>
@@ -280,12 +295,12 @@ export default function PricingPage() {
                 with one or two weekend classes, there is no extra charge at all.
               </p>
             </div>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse text-sm bg-white rounded-2xl overflow-hidden border border-gray-100">
+            <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+              <table className="w-full min-w-[560px] border-collapse text-sm bg-white rounded-2xl overflow-hidden border border-gray-100">
                 <thead>
                   <tr className="bg-navy text-white">
-                    <th className="text-left font-semibold px-4 py-3">Plan</th>
-                    <th className="text-left font-semibold px-4 py-3">Standard price (30 min)</th>
+                    <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">Plan</th>
+                    <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">Standard price (30 min)</th>
                     <th className="text-left font-semibold px-4 py-3">
                       Weekend Priority (all classes Sat/Sun)
                     </th>
@@ -294,13 +309,13 @@ export default function PricingPage() {
                 <tbody>
                   {plans.map((plan, i) => (
                     <tr key={plan.id} className={i % 2 === 0 ? "bg-offwhite" : "bg-white"}>
-                      <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100">
+                      <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100 whitespace-nowrap">
                         {plan.name}
                       </td>
-                      <td className="px-4 py-3 text-grey border-b border-gray-100">
+                      <td className="px-4 py-3 text-grey border-b border-gray-100 whitespace-nowrap">
                         ${plan.price30}/month
                       </td>
-                      <td className="px-4 py-3 text-navy font-medium border-b border-gray-100">
+                      <td className="px-4 py-3 text-navy font-medium border-b border-gray-100 whitespace-nowrap">
                         +${plan.weekendPriority}/month (${plan.price30 + plan.weekendPriority}/month total)
                       </td>
                     </tr>
@@ -332,8 +347,8 @@ export default function PricingPage() {
                 automatically, no code needed.
               </p>
             </div>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse text-sm bg-offwhite rounded-2xl overflow-hidden border border-gray-100">
+            <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+              <table className="w-full min-w-[320px] border-collapse text-sm bg-offwhite rounded-2xl overflow-hidden border border-gray-100">
                 <thead>
                   <tr className="bg-navy text-white">
                     <th className="text-left font-semibold px-4 py-3">Child</th>
@@ -391,13 +406,13 @@ export default function PricingPage() {
                 real dollars, not just percentages.
               </p>
             </div>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse text-sm bg-white rounded-2xl overflow-hidden border border-gray-100">
+            <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+              <table className="w-full min-w-[760px] border-collapse text-sm bg-white rounded-2xl overflow-hidden border border-gray-100">
                 <thead>
                   <tr className="bg-navy text-white">
-                    <th className="text-left font-semibold px-4 py-3">Plan</th>
+                    <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">Plan</th>
                     {prepayTerms.map((term) => (
-                      <th key={term.id} className="text-left font-semibold px-4 py-3">
+                      <th key={term.id} className="text-left font-semibold px-4 py-3 whitespace-nowrap">
                         {term.label}
                         <div className="text-white/60 font-normal text-xs">{term.description}</div>
                       </th>
@@ -407,13 +422,13 @@ export default function PricingPage() {
                 <tbody>
                   {plans.map((plan, i) => (
                     <tr key={plan.id} className={i % 2 === 0 ? "bg-offwhite" : "bg-white"}>
-                      <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100">
+                      <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100 whitespace-nowrap">
                         {plan.name}
                       </td>
                       {prepayTerms.map((term) => {
                         if (term.id === "monthly") {
                           return (
-                            <td key={term.id} className="px-4 py-3 text-grey border-b border-gray-100">
+                            <td key={term.id} className="px-4 py-3 text-grey border-b border-gray-100 whitespace-nowrap">
                               ${plan.price30}/month
                             </td>
                           );
@@ -423,7 +438,7 @@ export default function PricingPage() {
                           prepayMonthlyEquivalent(plan.price30, term.id)
                         );
                         return (
-                          <td key={term.id} className="px-4 py-3 text-navy font-medium border-b border-gray-100">
+                          <td key={term.id} className="px-4 py-3 text-navy font-medium border-b border-gray-100 whitespace-nowrap">
                             ${monthlyEquivalent}/month
                             <div className="text-gold text-xs font-semibold">
                               save ${savings}
