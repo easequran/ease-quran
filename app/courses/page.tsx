@@ -75,7 +75,7 @@ const courses = [
   },
   {
     href: "/courses/quran-for-adults",
-    image: "/images/Courses/course-tajweed.webp",
+    image: "/images/Courses/course-quran-for-adults.webp",
     badge: null,
     title: "Quran for Adults",
     description:
@@ -84,7 +84,7 @@ const courses = [
   },
   {
     href: "/courses/quran-for-reverts",
-    image: "/images/Courses/course-noorani.webp",
+    image: "/images/Courses/course-quran-for-reverts.webp",
     badge: "New Muslims",
     title: "Quran for Reverts",
     description:

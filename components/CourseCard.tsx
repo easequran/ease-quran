@@ -23,7 +23,6 @@ export default function CourseCard({ title, description, image, href, badge }: C
           fill
           className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent" />
         {badge && (
           <span className="absolute top-3 left-3 bg-gold text-navy text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
             {badge}
