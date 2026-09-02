@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { BookOpen, CheckCircle } from "lucide-react";
@@ -153,10 +153,10 @@ export default function QuranForRevertsPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               For New Muslims, start from Zero
             </span>
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               Quran Classes for New Muslims
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
@@ -205,10 +205,10 @@ export default function QuranForRevertsPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Course Overview
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+              <h2 className="heading-2 text-navy mb-6">
                 What Is the Quran for Reverts Course?
               </h2>
               <div className="space-y-4 text-grey text-sm leading-relaxed">
@@ -258,10 +258,10 @@ export default function QuranForRevertsPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Curriculum
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <h2 className="heading-2 text-navy mb-4">
                 What You Will Learn
               </h2>
               <p className="text-grey text-sm max-w-xl mx-auto leading-relaxed">
@@ -300,10 +300,10 @@ export default function QuranForRevertsPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Is This Course Right for You?
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+            <h2 className="heading-2 text-navy mb-4">
               Who This Course Is For
             </h2>
           </div>
@@ -339,7 +339,7 @@ export default function QuranForRevertsPage() {
                     <Icon size={22} className="text-gold" />
                   </div>
                 )}
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">{card.title}</h3>
+                <h3 className="card-title mb-3">{card.title}</h3>
                 <p className="text-grey text-sm leading-relaxed mb-4">{card.desc}</p>
                 <ul className="space-y-1.5">
                   {card.points.map((p) => (
@@ -361,10 +361,10 @@ export default function QuranForRevertsPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 How Classes Work
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-white mb-4">
+              <h2 className="heading-2 text-white mb-4">
                 Class Structure & Methodology
               </h2>
             </div>
@@ -391,10 +391,10 @@ export default function QuranForRevertsPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Your Teacher
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+            <h2 className="heading-2 text-navy mb-4">
               A Teacher Who Truly Understands Your Journey
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
@@ -421,7 +421,7 @@ export default function QuranForRevertsPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto bg-navy rounded-2xl p-8 md:p-12 text-center">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
@@ -446,8 +446,8 @@ export default function QuranForRevertsPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">FAQ</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <span className="eyebrow mb-4">FAQ</span>
+              <h2 className="heading-2 text-navy mb-4">
                 Quran for Reverts, Frequently Asked Questions
               </h2>
             </div>
@@ -460,7 +460,7 @@ export default function QuranForRevertsPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-10">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Related Courses</span>
+            <span className="eyebrow mb-4">Related Courses</span>
             <h2 className="font-playfair font-bold text-2xl md:text-3xl text-navy mb-2">Continue Your Learning</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">

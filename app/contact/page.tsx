@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -122,10 +122,10 @@ export default function ContactPage() {
       <section className="bg-navy section-padding">
         <div className="container-custom">
           <div className="max-w-2xl">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Get in Touch
             </span>
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               Contact Ease Quran Online Academy
             </h1>
             <p className="text-white/70 text-lg leading-relaxed">
@@ -147,7 +147,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               {/* Contact Details */}
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <h2 className="font-playfair font-bold text-xl text-navy mb-6">
+                <h2 className="card-title mb-6">
                   Contact Information
                 </h2>
                 <div className="space-y-5">
@@ -237,7 +237,7 @@ export default function ContactPage() {
 
               {/* Social Links */}
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <h3 className="font-playfair font-bold text-lg text-navy mb-5">
+                <h3 className="card-title mb-5">
                   Follow Us
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
@@ -283,10 +283,10 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Common Questions
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <h2 className="heading-2 text-navy mb-4">
                 Frequently Asked Questions
               </h2>
             </div>

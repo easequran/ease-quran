@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
             <span>/</span>
             <span className="text-gold">Privacy Policy</span>
           </div>
-          <h1 className="font-playfair font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
+          <h1 className="heading-1 text-white mb-4">
             Privacy Policy
           </h1>
           <p className="text-white/60 text-sm">

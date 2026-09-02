@@ -30,11 +30,11 @@ export default function CourseCard({ title, description, image, href, badge }: C
         )}
       </div>
       <div className="p-5">
-        <h3 className="font-playfair font-bold text-lg text-navy mb-2 group-hover:text-gold transition-colors leading-snug">
+        <h3 className="card-title mb-2 group-hover:text-gold transition-colors">
           {title}
         </h3>
-        <p className="text-grey text-sm leading-relaxed mb-4">{description}</p>
-        <span className="flex items-center gap-1.5 text-gold text-sm font-semibold group-hover:gap-2.5 transition-all">
+        <p className="body-sm mb-4">{description}</p>
+        <span className="flex items-center gap-1.5 text-gold text-[15px] font-semibold group-hover:gap-2.5 transition-all">
           Learn More <ArrowRight size={14} />
         </span>
       </div>

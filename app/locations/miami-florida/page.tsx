@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -175,10 +175,10 @@ export default function MiamiFloridaPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Serving Miami &amp; South Florida
             </span>
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               Online Quran Classes in Miami, Florida
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
@@ -211,10 +211,10 @@ export default function MiamiFloridaPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Miami's Muslim Community
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <h2 className="heading-2 text-navy mb-6">
               A Global, Multilingual Muslim Community at the Gateway to the Americas
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
@@ -233,10 +233,10 @@ export default function MiamiFloridaPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Why Online Works for Miami Families
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-10">
+            <h2 className="heading-2 text-navy mb-10">
               Why Miami Families Choose Online Quran Classes
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -244,7 +244,7 @@ export default function MiamiFloridaPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <Navigation size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Built Around Hurricane Season</h3>
+                <h3 className="card-title mb-3">Built Around Hurricane Season</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Storm warnings and closed schools during hurricane season don't have to interrupt your child's Quran education. Online classes reschedule easily around a storm, and once the power and internet are back, class picks right back up, no lost semester.
                 </p>
@@ -253,7 +253,7 @@ export default function MiamiFloridaPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <Calendar size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Travels With Snowbird Families</h3>
+                <h3 className="card-title mb-3">Travels With Snowbird Families</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Plenty of Miami families split the year between South Florida and a home elsewhere. Since every class happens over Zoom, your child keeps the same teacher and the same weekly rhythm no matter which home you're calling in from.
                 </p>
@@ -262,7 +262,7 @@ export default function MiamiFloridaPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <GraduationCap size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Welcoming Every Background</h3>
+                <h3 className="card-title mb-3">Welcoming Every Background</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Miami's Muslim community includes South Asian, Arab, Haitian, and a growing number of Latino and Hispanic families who came to Islam later in life. Ease Quran teaches every student in clear, simple English, whatever language is spoken at home.
                 </p>
@@ -298,8 +298,8 @@ export default function MiamiFloridaPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Our Curriculum</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <span className="eyebrow mb-4">Our Curriculum</span>
+            <h2 className="heading-2 text-navy mb-6">
               Quran Classes for Kids and Adults in Miami
             </h2>
             <p className="text-grey mb-8 leading-relaxed">
@@ -317,7 +317,7 @@ export default function MiamiFloridaPage() {
                   href={course.href}
                   className="group bg-offwhite hover:bg-navy rounded-xl p-6 border border-gray-100 hover:border-navy transition-all duration-200"
                 >
-                  <h3 className="font-playfair font-bold text-lg text-navy group-hover:text-gold mb-2 transition-colors">{course.name}</h3>
+                  <h3 className="card-title group-hover:text-gold mb-2 transition-colors">{course.name}</h3>
                   <p className="text-grey group-hover:text-white/70 text-sm leading-relaxed transition-colors">{course.desc}</p>
                 </Link>
               ))}
@@ -331,8 +331,8 @@ export default function MiamiFloridaPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Simple Process</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">How to Get Started from Miami</h2>
+              <span className="eyebrow mb-4">Simple Process</span>
+              <h2 className="heading-2 text-navy mb-4">How to Get Started from Miami</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -344,7 +344,7 @@ export default function MiamiFloridaPage() {
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
                     <span className="font-playfair font-bold text-navy text-lg">{item.step}</span>
                   </div>
-                  <h3 className="font-playfair font-bold text-xl text-navy mb-3">{item.title}</h3>
+                  <h3 className="card-title mb-3">{item.title}</h3>
                   <p className="text-grey text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -357,10 +357,10 @@ export default function MiamiFloridaPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Quran Classes Near You
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <h2 className="heading-2 text-navy mb-6">
               Looking for a Quran Academy Near You in Miami?
             </h2>
             <p className="text-grey leading-relaxed">
@@ -379,8 +379,8 @@ export default function MiamiFloridaPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
+              <span className="eyebrow mb-4">Questions</span>
+              <h2 className="heading-2 text-navy">
                 Frequently Asked Questions. Miami, Florida
               </h2>
             </div>

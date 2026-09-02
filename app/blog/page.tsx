@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -75,7 +75,7 @@ function BlogCard({ post }: { post: BlogPost }) {
           <span className="text-grey text-xs">{post.readTime} read</span>
         </div>
 
-        <h2 className="font-playfair font-bold text-lg text-navy leading-snug mb-3 flex-1">
+        <h2 className="card-title leading-snug mb-3 flex-1">
           {post.title}
         </h2>
 
@@ -108,10 +108,10 @@ export default function BlogPage() {
       <section className="bg-navy section-padding">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Quran & Islamic Education
             </span>
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               The Ease Quran Blog
             </h1>
             <p className="text-white/70 text-lg leading-relaxed">
@@ -138,7 +138,7 @@ export default function BlogPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-10">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Browse by Topic
             </span>
             <h2 className="font-playfair font-bold text-2xl md:text-3xl text-navy">

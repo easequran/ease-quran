@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   CheckCircle,
@@ -417,7 +417,7 @@ export default function SummerQuranClassesPage() {
               Summer 2026 Enrollment Now Open
             </div>
 
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               Summer Quran Classes That Give Your Child a Summer That Actually Means Something
             </h1>
 
@@ -810,7 +810,7 @@ export default function SummerQuranClassesPage() {
               </a>
             </div>
 
-            <p className="text-white/40 text-xs">
+            <p className="text-white/70 text-sm">
               Serving Muslim families across all 50 states. Female teachers available. First class is free.
             </p>
           </div>

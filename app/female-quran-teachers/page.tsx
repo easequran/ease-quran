@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { User, Users, CheckCircle, BookOpen } from "lucide-react";
@@ -169,10 +169,10 @@ export default function FemaleQuranTeachersPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               For Sisters and Children
             </span>
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               Female Quran Teacher Online: Qualified, Certified &amp; Available for Sisters
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
@@ -204,10 +204,10 @@ export default function FemaleQuranTeachersPage() {
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Meet Your Teacher
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
+              <h2 className="heading-2 text-navy">
                 Sister Almas Fatima, Certified Female Quran Teacher
               </h2>
             </div>
@@ -281,10 +281,10 @@ export default function FemaleQuranTeachersPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Islamic Perspective
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-white mb-4">
+              <h2 className="heading-2 text-white mb-4">
                 Why a Female Quran Teacher Matters in Islam
               </h2>
             </div>
@@ -311,10 +311,10 @@ export default function FemaleQuranTeachersPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Curriculum
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <h2 className="heading-2 text-navy mb-4">
                 What Sister Almas Teaches
               </h2>
               <p className="text-grey max-w-2xl mx-auto text-sm leading-relaxed">
@@ -358,7 +358,7 @@ export default function FemaleQuranTeachersPage() {
                   <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                     <Icon size={22} className="text-gold" />
                   </div>
-                  <h3 className="font-playfair font-bold text-xl text-navy group-hover:text-gold mb-3 transition-colors">{course.name}</h3>
+                  <h3 className="card-title group-hover:text-gold mb-3 transition-colors">{course.name}</h3>
                   <p className="text-grey group-hover:text-white/70 text-sm leading-relaxed transition-colors">{course.desc}</p>
                 </Link>
                 );
@@ -373,10 +373,10 @@ export default function FemaleQuranTeachersPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Who It's For
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <h2 className="heading-2 text-navy mb-4">
                 Who Can Take Classes with Sister Almas
               </h2>
             </div>
@@ -385,7 +385,7 @@ export default function FemaleQuranTeachersPage() {
                 <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-5 mx-auto">
                   <User size={28} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Girls of All Ages</h3>
+                <h3 className="card-title mb-3">Girls of All Ages</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   From young girls aged 4 starting with their first Arabic letters to teenage girls working on Tajweed or Hifz, Sister Almas teaches girls at every stage with patience, skill, and Islamic wisdom.
                 </p>
@@ -394,7 +394,7 @@ export default function FemaleQuranTeachersPage() {
                 <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-5 mx-auto">
                   <Users size={28} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Sisters (Adult Women)</h3>
+                <h3 className="card-title mb-3">Sisters (Adult Women)</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Adult Muslim women who are learning Quran for the first time, improving their recitation, or returning to Quran education after many years are warmly welcomed. It is never too late to begin.
                 </p>
@@ -403,7 +403,7 @@ export default function FemaleQuranTeachersPage() {
                 <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-5 mx-auto">
                   <User size={28} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Children from Age 4</h3>
+                <h3 className="card-title mb-3">Children from Age 4</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Very young children, boys and girls alike, can begin with Sister Almas from around age 4. She specializes in making early Quran education engaging and gentle for the youngest learners, building strong foundations from the very beginning.
                 </p>
@@ -417,7 +417,7 @@ export default function FemaleQuranTeachersPage() {
       <section className="section-padding bg-navy">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-6">
+            <span className="eyebrow mb-6">
               Mother's Testimonial
             </span>
             <blockquote className="font-playfair text-xl md:text-2xl text-white leading-relaxed italic mb-8">
@@ -435,8 +435,8 @@ export default function FemaleQuranTeachersPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Simple Process</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <span className="eyebrow mb-4">Simple Process</span>
+              <h2 className="heading-2 text-navy mb-4">
                 How to Book a Female Quran Teacher
               </h2>
             </div>
@@ -450,7 +450,7 @@ export default function FemaleQuranTeachersPage() {
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
                     <span className="font-playfair font-bold text-navy text-lg">{item.step}</span>
                   </div>
-                  <h3 className="font-playfair font-bold text-xl text-navy mb-3">{item.title}</h3>
+                  <h3 className="card-title mb-3">{item.title}</h3>
                   <p className="text-grey text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -464,8 +464,8 @@ export default function FemaleQuranTeachersPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
+              <span className="eyebrow mb-4">Questions</span>
+              <h2 className="heading-2 text-navy">
                 Frequently Asked Questions: Female Quran Teacher
               </h2>
             </div>

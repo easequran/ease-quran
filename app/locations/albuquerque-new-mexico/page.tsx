@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -175,10 +175,10 @@ export default function AlbuquerqueNewMexicoPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Serving the High Desert Southwest
             </span>
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               Online Quran Classes in Albuquerque, New Mexico
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
@@ -211,10 +211,10 @@ export default function AlbuquerqueNewMexicoPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Albuquerque's Muslim Community
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <h2 className="heading-2 text-navy mb-6">
               A Small, Genuine Community Spread Across the High Desert
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
@@ -233,10 +233,10 @@ export default function AlbuquerqueNewMexicoPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Why Online Works for Albuquerque Families
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-10">
+            <h2 className="heading-2 text-navy mb-10">
               Why Albuquerque Families Choose Online Quran Classes
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -244,7 +244,7 @@ export default function AlbuquerqueNewMexicoPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <Navigation size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">No Drive Across the Mesa</h3>
+                <h3 className="card-title mb-3">No Drive Across the Mesa</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Albuquerque's sprawl along Route 66 makes a cross-town evening drive a real ask. Online classes remove that entirely. Your child opens Zoom at home, wherever in the city that is.
                 </p>
@@ -253,7 +253,7 @@ export default function AlbuquerqueNewMexicoPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <Calendar size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">More Options Than Locally Available</h3>
+                <h3 className="card-title mb-3">More Options Than Locally Available</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   A smaller local Muslim community means fewer nearby teachers. Online classes open up the same certified teaching pool available to families anywhere in the country.
                 </p>
@@ -262,7 +262,7 @@ export default function AlbuquerqueNewMexicoPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <GraduationCap size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Reaches the Whole High Desert</h3>
+                <h3 className="card-title mb-3">Reaches the Whole High Desert</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Whether you're in Albuquerque, Santa Fe, or a smaller New Mexico town, the same certified teacher meets your child every week without a single mile of driving.
                 </p>
@@ -298,8 +298,8 @@ export default function AlbuquerqueNewMexicoPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Our Curriculum</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <span className="eyebrow mb-4">Our Curriculum</span>
+            <h2 className="heading-2 text-navy mb-6">
               Quran Classes for Kids and Adults in Albuquerque
             </h2>
             <p className="text-grey mb-8 leading-relaxed">
@@ -317,7 +317,7 @@ export default function AlbuquerqueNewMexicoPage() {
                   href={course.href}
                   className="group bg-offwhite hover:bg-navy rounded-xl p-6 border border-gray-100 hover:border-navy transition-all duration-200"
                 >
-                  <h3 className="font-playfair font-bold text-lg text-navy group-hover:text-gold mb-2 transition-colors">{course.name}</h3>
+                  <h3 className="card-title group-hover:text-gold mb-2 transition-colors">{course.name}</h3>
                   <p className="text-grey group-hover:text-white/70 text-sm leading-relaxed transition-colors">{course.desc}</p>
                 </Link>
               ))}
@@ -331,8 +331,8 @@ export default function AlbuquerqueNewMexicoPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Simple Process</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">How to Get Started from Albuquerque</h2>
+              <span className="eyebrow mb-4">Simple Process</span>
+              <h2 className="heading-2 text-navy mb-4">How to Get Started from Albuquerque</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -344,7 +344,7 @@ export default function AlbuquerqueNewMexicoPage() {
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
                     <span className="font-playfair font-bold text-navy text-lg">{item.step}</span>
                   </div>
-                  <h3 className="font-playfair font-bold text-xl text-navy mb-3">{item.title}</h3>
+                  <h3 className="card-title mb-3">{item.title}</h3>
                   <p className="text-grey text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -357,10 +357,10 @@ export default function AlbuquerqueNewMexicoPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Quran Classes Near You
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <h2 className="heading-2 text-navy mb-6">
               Looking for a Quran Teacher Near You in Albuquerque?
             </h2>
             <p className="text-grey leading-relaxed">
@@ -380,8 +380,8 @@ export default function AlbuquerqueNewMexicoPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
+              <span className="eyebrow mb-4">Questions</span>
+              <h2 className="heading-2 text-navy">
                 Frequently Asked Questions. Albuquerque, New Mexico
               </h2>
             </div>

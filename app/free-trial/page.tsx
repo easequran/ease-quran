@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { GraduationCap, CheckCircle, Award } from "lucide-react";
 import FreeTrialForm from "./FreeTrialForm";
 
@@ -42,10 +42,10 @@ export default function FreeTrialPage() {
       {/* Hero */}
       <section className="bg-navy py-14">
         <div className="container-custom text-center">
-          <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+          <span className="eyebrow mb-4">
             100% Free. No Credit Card Required.
           </span>
-          <h1 className="font-playfair font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
+          <h1 className="heading-1 text-white mb-4">
             Book Your Free Quran Trial Class
           </h1>
           <p className="text-white/70 max-w-xl mx-auto text-base leading-relaxed">
@@ -66,7 +66,7 @@ export default function FreeTrialPage() {
             <div className="space-y-8">
               {/* Why Choose */}
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <h2 className="font-playfair font-bold text-xl text-navy mb-6">
+                <h2 className="card-title mb-6">
                   Why Families Choose Ease Quran
                 </h2>
                 <ul className="space-y-4">
@@ -105,7 +105,7 @@ export default function FreeTrialPage() {
 
               {/* Teachers */}
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <h3 className="font-playfair font-bold text-lg text-navy mb-4">
+                <h3 className="card-title mb-4">
                   Your Teachers
                 </h3>
                 <div className="space-y-4">

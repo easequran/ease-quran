@@ -76,7 +76,7 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    "w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-navy placeholder:text-grey/60 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all bg-white";
+    "w-full border border-gray-200 rounded-xl px-4 py-3 text-base text-navy placeholder:text-grey/60 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all bg-white";
   const labelClass = "block text-sm font-semibold text-navy mb-1.5";
 
   return (
@@ -204,7 +204,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full bg-navy text-white font-bold py-4 rounded-xl hover:bg-navy/90 transition-all duration-200 text-sm disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full bg-navy text-white font-bold py-4 rounded-xl hover:bg-navy/90 transition-all duration-200 text-base disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {status === "loading" ? "Sending..." : "Send Message →"}
         </button>

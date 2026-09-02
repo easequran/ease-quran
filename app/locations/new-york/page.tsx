@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -190,10 +190,10 @@ export default function NewYorkPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Serving New York City
             </span>
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               Online Quran Classes in New York City
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
@@ -226,10 +226,10 @@ export default function NewYorkPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               New York's Muslim Community
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <h2 className="heading-2 text-navy mb-6">
               One of the Largest Muslim Communities in America
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
@@ -248,10 +248,10 @@ export default function NewYorkPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Why Online Works for NYC Families
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-10">
+            <h2 className="heading-2 text-navy mb-10">
               Why New York City Families Choose Online Quran Classes
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -259,7 +259,7 @@ export default function NewYorkPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <Navigation size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">No More Borough-Crossing Commutes</h3>
+                <h3 className="card-title mb-3">No More Borough-Crossing Commutes</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Getting from Queens to a masjid in Brooklyn for a 45-minute class is a two-hour round trip on the subway. Online classes eliminate that entirely. Your child sits down at home after school, opens Zoom, and the lesson begins, no train delays, no parking stress, no rush.
                 </p>
@@ -268,7 +268,7 @@ export default function NewYorkPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <Calendar size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Fits the NYC Schedule</h3>
+                <h3 className="card-title mb-3">Fits the NYC Schedule</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   New York kids are busy, extracurriculars, homework, family commitments, and the competitive pace of NYC schooling leave narrow windows. We schedule Quran classes around your life, not the other way around, offering flexible slots from early morning through evening seven days a week.
                 </p>
@@ -277,7 +277,7 @@ export default function NewYorkPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <GraduationCap size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Certified Teachers, Not Volunteers</h3>
+                <h3 className="card-title mb-3">Certified Teachers, Not Volunteers</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   In a city as competitive as New York, you expect credentials. Our teachers hold Wifaq ul Madaris Al-Arabia certifications, the gold standard of Islamic education. Every lesson is one-on-one, structured, and measurably progressive. Your child's Quran education should be held to the same standard as any other subject.
                 </p>
@@ -313,10 +313,10 @@ export default function NewYorkPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Our Curriculum
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <h2 className="heading-2 text-navy mb-6">
               Courses Available for NYC Families
             </h2>
             <p className="text-grey mb-8 leading-relaxed">
@@ -334,7 +334,7 @@ export default function NewYorkPage() {
                   href={course.href}
                   className="group bg-offwhite hover:bg-navy rounded-xl p-6 border border-gray-100 hover:border-navy transition-all duration-200"
                 >
-                  <h3 className="font-playfair font-bold text-lg text-navy group-hover:text-gold mb-2 transition-colors">{course.name}</h3>
+                  <h3 className="card-title group-hover:text-gold mb-2 transition-colors">{course.name}</h3>
                   <p className="text-grey group-hover:text-white/70 text-sm leading-relaxed transition-colors">{course.desc}</p>
                 </Link>
               ))}
@@ -348,8 +348,8 @@ export default function NewYorkPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Simple Process</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">How to Get Started from New York City</h2>
+              <span className="eyebrow mb-4">Simple Process</span>
+              <h2 className="heading-2 text-navy mb-4">How to Get Started from New York City</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -361,7 +361,7 @@ export default function NewYorkPage() {
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
                     <span className="font-playfair font-bold text-navy text-lg">{item.step}</span>
                   </div>
-                  <h3 className="font-playfair font-bold text-xl text-navy mb-3">{item.title}</h3>
+                  <h3 className="card-title mb-3">{item.title}</h3>
                   <p className="text-grey text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -374,10 +374,10 @@ export default function NewYorkPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Quran Classes Near You
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <h2 className="heading-2 text-navy mb-6">
               Looking for Quran Classes Near You in New York City?
             </h2>
             <p className="text-grey leading-relaxed">
@@ -396,8 +396,8 @@ export default function NewYorkPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
+              <span className="eyebrow mb-4">Questions</span>
+              <h2 className="heading-2 text-navy">
                 Frequently Asked Questions. New York City
               </h2>
             </div>

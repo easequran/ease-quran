@@ -28,7 +28,7 @@ export default function FAQAccordion({ faqs, className = "" }: FAQAccordionProps
             onClick={() => setOpenIndex(openIndex === i ? null : i)}
             aria-expanded={openIndex === i}
           >
-            <span className="font-semibold text-navy text-sm leading-snug">{faq.question}</span>
+            <span className="font-semibold text-navy text-base leading-snug">{faq.question}</span>
             <ChevronDown
               size={18}
               className={`text-gold shrink-0 transition-transform duration-300 ${
@@ -41,7 +41,7 @@ export default function FAQAccordion({ faqs, className = "" }: FAQAccordionProps
               openIndex === i ? "max-h-96" : "max-h-0"
             }`}
           >
-            <div className="px-6 pb-5 text-grey text-sm leading-relaxed border-t border-gray-100 pt-3">
+            <div className="px-6 pb-5 body-text border-t border-gray-100 pt-3">
               {faq.answer}
             </div>
           </div>

@@ -79,10 +79,10 @@ export default function SafetyPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Your Child, Your Peace of Mind
             </span>
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               Our Child Safety &amp; Parent Rights Policy
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl">

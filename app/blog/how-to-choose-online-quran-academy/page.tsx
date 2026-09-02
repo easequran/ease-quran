@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, Calendar, User, ArrowLeft, CheckCircle, XCircle } from "lucide-react";
 
@@ -167,12 +167,12 @@ export default function BlogPostPage() {
           </nav>
 
           {/* Category */}
-          <span className="inline-block bg-gold/20 text-gold text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-6">
+          <span className="inline-block bg-gold/20 eyebrow px-3 py-1 rounded-full mb-6">
             Parenting &amp; Education
           </span>
 
           {/* Title */}
-          <h1 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-8 max-w-4xl">
+          <h1 className="heading-2 text-white leading-tight mb-8 max-w-4xl">
             How to Choose an Online Quran Academy for Your Child
           </h1>
 
@@ -521,7 +521,7 @@ export default function BlogPostPage() {
 
                 {/* Conclusion */}
                 <div className="bg-gold/10 border border-gold/30 rounded-2xl p-8 mb-10">
-                  <h2 className="font-playfair font-bold text-xl text-navy mb-4">
+                  <h2 className="card-title mb-4">
                     Ready to Make the Right Choice?
                   </h2>
                   <p className="text-grey leading-relaxed mb-4">
@@ -651,7 +651,7 @@ export default function BlogPostPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-10">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Next Steps
             </span>
             <h2 className="font-playfair font-bold text-2xl md:text-3xl text-navy">

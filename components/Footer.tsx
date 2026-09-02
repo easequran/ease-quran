@@ -86,7 +86,7 @@ export default function Footer() {
                 className="h-20 w-auto object-contain"
               />
             </Link>
-            <p className="text-gray-300 text-sm leading-relaxed mb-5">
+            <p className="text-gray-300 text-[15px] leading-relaxed mb-5">
               Certified online Quran education for Muslim families across
               America. Wifaq ul Madaris certified teachers. Available
               in all 50 states.
@@ -131,7 +131,7 @@ export default function Footer() {
             </div>
             <a
               href="mailto:info@easequran.com"
-              className="flex items-center gap-2 text-gray-300 hover:text-gold text-sm transition-colors"
+              className="flex items-center gap-2 text-gray-300 hover:text-gold text-[15px] transition-colors"
             >
               <Mail size={16} />
               info@easequran.com
@@ -140,7 +140,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-playfair font-semibold text-lg mb-5 text-gold">
+            <h3 className="card-title text-gold mb-5">
               Quick Links
             </h3>
             <ul className="space-y-2.5">
@@ -148,7 +148,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-gold text-sm transition-colors"
+                    className="text-gray-300 hover:text-gold text-[15px] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -159,7 +159,7 @@ export default function Footer() {
 
           {/* Courses */}
           <div>
-            <h3 className="font-playfair font-semibold text-lg mb-5 text-gold">
+            <h3 className="card-title text-gold mb-5">
               Our Courses
             </h3>
             <ul className="space-y-2.5">
@@ -167,7 +167,7 @@ export default function Footer() {
                 <li key={c.href}>
                   <Link
                     href={c.href}
-                    className="text-gray-300 hover:text-gold text-sm transition-colors"
+                    className="text-gray-300 hover:text-gold text-[15px] transition-colors"
                   >
                     {c.label}
                   </Link>
@@ -178,7 +178,7 @@ export default function Footer() {
 
           {/* Cities */}
           <div>
-            <h3 className="font-playfair font-semibold text-lg mb-5 text-gold">
+            <h3 className="card-title text-gold mb-5">
               Serving USA Cities
             </h3>
             <ul className="space-y-2.5">
@@ -186,7 +186,7 @@ export default function Footer() {
                 <li key={c.href}>
                   <Link
                     href={c.href}
-                    className="text-gray-300 hover:text-gold text-sm transition-colors"
+                    className="text-gray-300 hover:text-gold text-[15px] transition-colors"
                   >
                     {c.label}
                   </Link>

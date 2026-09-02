@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -175,10 +175,10 @@ export default function CharlotteNorthCarolinaPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Serving Greater Charlotte
             </span>
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               Online Quran Classes in Charlotte, North Carolina
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
@@ -211,10 +211,10 @@ export default function CharlotteNorthCarolinaPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Charlotte's Muslim Community
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <h2 className="heading-2 text-navy mb-6">
               A Young, Fast-Growing Community in One of America's Fastest-Growing Cities
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
@@ -233,10 +233,10 @@ export default function CharlotteNorthCarolinaPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Why Online Works for Charlotte Families
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-10">
+            <h2 className="heading-2 text-navy mb-10">
               Why Charlotte Families Choose Online Quran Classes
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -244,7 +244,7 @@ export default function CharlotteNorthCarolinaPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <Navigation size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Skip Charlotte's Growing Traffic</h3>
+                <h3 className="card-title mb-3">Skip Charlotte's Growing Traffic</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   As Charlotte's population booms, so does congestion on I-77 and I-485. Online classes remove the drive entirely. Your child opens Zoom at home, and the lesson begins right on schedule.
                 </p>
@@ -253,7 +253,7 @@ export default function CharlotteNorthCarolinaPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <Calendar size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">Built for Banking Hours</h3>
+                <h3 className="card-title mb-3">Built for Banking Hours</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   Charlotte's banking and finance professionals often work early starts and long days. Our classes flex around demanding careers, so Quran learning doesn't lose out to a hard week at the office.
                 </p>
@@ -262,7 +262,7 @@ export default function CharlotteNorthCarolinaPage() {
                 <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
                   <GraduationCap size={22} className="text-gold" />
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">No Local Network Required</h3>
+                <h3 className="card-title mb-3">No Local Network Required</h3>
                 <p className="text-grey text-sm leading-relaxed">
                   If you just moved to Charlotte for work and haven't found your local masjid yet, that's fine. Online classes start the same day regardless of how new you are to the city.
                 </p>
@@ -298,8 +298,8 @@ export default function CharlotteNorthCarolinaPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Our Curriculum</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <span className="eyebrow mb-4">Our Curriculum</span>
+            <h2 className="heading-2 text-navy mb-6">
               Quran Classes for Kids and Adults in Charlotte
             </h2>
             <p className="text-grey mb-8 leading-relaxed">
@@ -317,7 +317,7 @@ export default function CharlotteNorthCarolinaPage() {
                   href={course.href}
                   className="group bg-offwhite hover:bg-navy rounded-xl p-6 border border-gray-100 hover:border-navy transition-all duration-200"
                 >
-                  <h3 className="font-playfair font-bold text-lg text-navy group-hover:text-gold mb-2 transition-colors">{course.name}</h3>
+                  <h3 className="card-title group-hover:text-gold mb-2 transition-colors">{course.name}</h3>
                   <p className="text-grey group-hover:text-white/70 text-sm leading-relaxed transition-colors">{course.desc}</p>
                 </Link>
               ))}
@@ -331,8 +331,8 @@ export default function CharlotteNorthCarolinaPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Simple Process</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">How to Get Started from Charlotte</h2>
+              <span className="eyebrow mb-4">Simple Process</span>
+              <h2 className="heading-2 text-navy mb-4">How to Get Started from Charlotte</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -344,7 +344,7 @@ export default function CharlotteNorthCarolinaPage() {
                   <div className="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-5">
                     <span className="font-playfair font-bold text-navy text-lg">{item.step}</span>
                   </div>
-                  <h3 className="font-playfair font-bold text-xl text-navy mb-3">{item.title}</h3>
+                  <h3 className="card-title mb-3">{item.title}</h3>
                   <p className="text-grey text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -357,10 +357,10 @@ export default function CharlotteNorthCarolinaPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Quran Classes Near You
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <h2 className="heading-2 text-navy mb-6">
               Looking for a Quran Teacher Near You in Charlotte?
             </h2>
             <p className="text-grey leading-relaxed">
@@ -380,8 +380,8 @@ export default function CharlotteNorthCarolinaPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">
+              <span className="eyebrow mb-4">Questions</span>
+              <h2 className="heading-2 text-navy">
                 Frequently Asked Questions. Charlotte, North Carolina
               </h2>
             </div>

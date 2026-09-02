@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Script from "next/script";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Inter, Noto_Naskh_Arabic } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,13 +10,23 @@ import PopupForm from "@/components/PopupForm";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
   variable: "--font-playfair",
   display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const notoNaskhArabic = Noto_Naskh_Arabic({
+  subsets: ["arabic"],
+  weight: ["400", "500", "700"],
+  variable: "--font-arabic",
   display: "swap",
 });
 
@@ -84,7 +94,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable} ${notoNaskhArabic.variable}`}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-P4FJDN2SDX"
@@ -99,7 +109,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="antialiased bg-white text-navy font-inter">
+      <body className="antialiased bg-white text-navy font-inter text-base">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

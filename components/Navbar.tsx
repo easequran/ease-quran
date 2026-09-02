@@ -163,7 +163,7 @@ export default function Navbar() {
       <div className="bg-navy border-b border-gold/20">
         <div className="container-custom flex items-center justify-between py-2.5">
           <div className="flex items-center gap-3">
-            <span className="text-white/50 text-xs font-medium uppercase tracking-wider hidden sm:inline pr-1 border-r border-white/20 mr-1">
+            <span className="text-white/70 text-xs font-medium uppercase tracking-wider hidden sm:inline pr-1 border-r border-white/20 mr-1">
               Follow Us
             </span>
             <a href="https://www.facebook.com/share/18WdHQVNWT/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
@@ -204,14 +204,14 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-1 xl:gap-2">
 
               {/* Home */}
-              <Link href="/" className="px-3 py-2 font-medium text-sm text-navy hover:text-gold transition-colors rounded-lg hover:bg-gold/5">
+              <Link href="/" className="px-3 py-2 font-medium text-[15px] text-navy hover:text-gold transition-colors rounded-lg hover:bg-gold/5">
                 Home
               </Link>
 
               {/* Courses — mega menu */}
               <div className="relative" onMouseEnter={() => openMenu("courses")} onMouseLeave={closeMenu}>
                 <button
-                  className={`flex items-center gap-1 px-3 py-2 font-medium text-sm rounded-lg transition-all ${activeDesktop === "courses" ? "text-gold bg-gold/5" : "text-navy hover:text-gold hover:bg-gold/5"}`}
+                  className={`flex items-center gap-1 px-3 py-2 font-medium text-[15px] rounded-lg transition-all ${activeDesktop === "courses" ? "text-gold bg-gold/5" : "text-navy hover:text-gold hover:bg-gold/5"}`}
                   aria-expanded={activeDesktop === "courses"}
                 >
                   Courses
@@ -236,7 +236,7 @@ export default function Navbar() {
                       <div className="grid grid-cols-2 gap-0 divide-x divide-gray-100">
                         {courseColumns.map((col) => (
                           <div key={col.heading} className="py-4 px-4">
-                            <div className="flex items-center gap-1.5 text-gold text-[10px] font-bold tracking-widest uppercase mb-3 px-1">
+                            <div className="flex items-center gap-1.5 text-gold text-[11px] font-bold tracking-[0.13em] uppercase mb-3 px-1">
                               {col.icon}
                               {col.heading}
                             </div>
@@ -245,10 +245,10 @@ export default function Navbar() {
                                 <li key={item.href}>
                                   <Link href={item.href} onClick={() => setActiveDesktop(null)}
                                     className="flex flex-col px-2 py-2 rounded-xl hover:bg-offwhite group transition-colors">
-                                    <span className="text-navy font-semibold text-sm group-hover:text-gold transition-colors leading-tight">
+                                    <span className="text-navy font-semibold text-[15px] group-hover:text-gold transition-colors leading-tight">
                                       {item.label}
                                     </span>
-                                    <span className="text-grey text-xs mt-0.5">{item.desc}</span>
+                                    <span className="text-grey text-[13px] mt-0.5">{item.desc}</span>
                                   </Link>
                                 </li>
                               ))}
@@ -259,7 +259,7 @@ export default function Navbar() {
 
                       {/* Footer CTA */}
                       <div className="border-t border-gray-100 bg-offwhite px-6 py-3 flex items-center justify-between">
-                        <span className="text-grey text-xs">Not sure where to start?</span>
+                        <span className="text-grey text-[13px]">Not sure where to start?</span>
                         <Link href="/free-trial" onClick={() => setActiveDesktop(null)}
                           className="text-xs font-bold text-white bg-gold hover:bg-gold-dark px-4 py-1.5 rounded-lg transition-colors">
                           Book Free Trial
@@ -273,7 +273,7 @@ export default function Navbar() {
               {/* Locations — grid dropdown */}
               <div className="relative" onMouseEnter={() => openMenu("locations")} onMouseLeave={closeMenu}>
                 <button
-                  className={`flex items-center gap-1 px-3 py-2 font-medium text-sm rounded-lg transition-all ${activeDesktop === "locations" ? "text-gold bg-gold/5" : "text-navy hover:text-gold hover:bg-gold/5"}`}
+                  className={`flex items-center gap-1 px-3 py-2 font-medium text-[15px] rounded-lg transition-all ${activeDesktop === "locations" ? "text-gold bg-gold/5" : "text-navy hover:text-gold hover:bg-gold/5"}`}
                   aria-expanded={activeDesktop === "locations"}
                 >
                   Locations
@@ -293,7 +293,7 @@ export default function Navbar() {
                           <Link key={loc.href} href={loc.href} onClick={() => setActiveDesktop(null)}
                             className="flex items-center gap-2 px-3 py-2.5 rounded-xl hover:bg-offwhite group transition-colors">
                             <span className="w-1.5 h-1.5 rounded-full bg-gold/40 group-hover:bg-gold transition-colors shrink-0" />
-                            <span className="text-navy text-sm font-medium group-hover:text-gold transition-colors">{loc.label}</span>
+                            <span className="text-navy text-[15px] font-medium group-hover:text-gold transition-colors">{loc.label}</span>
                           </Link>
                         ))}
                       </div>
@@ -310,7 +310,7 @@ export default function Navbar() {
               {/* Simple links */}
               {simpleLinks.filter(l => l.label !== "Home").map((link) => (
                 <Link key={link.href} href={link.href}
-                  className="px-3 py-2 font-medium text-sm text-navy hover:text-gold transition-colors rounded-lg hover:bg-gold/5">
+                  className="px-3 py-2 font-medium text-[15px] text-navy hover:text-gold transition-colors rounded-lg hover:bg-gold/5">
                   {link.label}
                 </Link>
               ))}
@@ -319,7 +319,7 @@ export default function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center">
               <Link href="/free-trial"
-                className="bg-gold text-navy font-bold text-sm px-6 py-2.5 rounded-xl hover:bg-gold-dark transition-all duration-200 shadow-md hover:shadow-lg">
+                className="bg-gold text-navy font-bold text-[15px] px-6 py-2.5 rounded-xl hover:bg-gold-dark transition-all duration-200 shadow-md hover:shadow-lg">
                 Book Free Trial
               </Link>
             </div>
@@ -347,7 +347,7 @@ export default function Navbar() {
             <div className="container-custom py-5 flex flex-col gap-1">
 
               {/* Home */}
-              <Link href="/" className="py-3 px-3 text-navy font-semibold text-sm hover:text-gold transition-colors border-b border-gray-100"
+              <Link href="/" className="py-3 px-3 text-navy font-semibold text-[15px] hover:text-gold transition-colors border-b border-gray-100"
                 onClick={() => setMobileOpen(false)}>
                 Home
               </Link>
@@ -355,7 +355,7 @@ export default function Navbar() {
               {/* Courses accordion */}
               <div className="border-b border-gray-100">
                 <div className="flex items-center justify-between">
-                  <Link href="/courses" className="flex-1 py-3 px-3 text-navy font-semibold text-sm hover:text-gold transition-colors"
+                  <Link href="/courses" className="flex-1 py-3 px-3 text-navy font-semibold text-[15px] hover:text-gold transition-colors"
                     onClick={() => setMobileOpen(false)}>
                     Courses
                   </Link>
@@ -367,12 +367,12 @@ export default function Navbar() {
                   <div className="mx-3 mb-3 bg-offwhite rounded-2xl overflow-hidden">
                     {courseColumns.map((col) => (
                       <div key={col.heading}>
-                        <div className="px-4 pt-3 pb-1 text-[10px] font-bold text-gold tracking-widest uppercase flex items-center gap-1">
+                        <div className="px-4 pt-3 pb-1 text-[11px] font-bold text-gold tracking-[0.13em] uppercase flex items-center gap-1">
                           {col.icon} {col.heading}
                         </div>
                         {col.links.map((item) => (
                           <Link key={item.href} href={item.href}
-                            className="block py-2.5 px-4 text-sm text-navy font-medium hover:text-gold hover:bg-white transition-colors border-b border-white last:border-0"
+                            className="block py-2.5 px-4 text-[15px] text-navy font-medium hover:text-gold hover:bg-white transition-colors border-b border-white last:border-0"
                             onClick={() => { setMobileOpen(false); setOpenMobile(null); }}>
                             {item.label}
                           </Link>
@@ -386,7 +386,7 @@ export default function Navbar() {
               {/* Locations accordion */}
               <div className="border-b border-gray-100">
                 <div className="flex items-center justify-between">
-                  <Link href="/locations" className="flex-1 py-3 px-3 text-navy font-semibold text-sm hover:text-gold transition-colors"
+                  <Link href="/locations" className="flex-1 py-3 px-3 text-navy font-semibold text-[15px] hover:text-gold transition-colors"
                     onClick={() => setMobileOpen(false)}>
                     Locations
                   </Link>
@@ -399,7 +399,7 @@ export default function Navbar() {
                     <div className="grid grid-cols-2">
                       {locationShortlist.map((loc) => (
                         <Link key={loc.href} href={loc.href}
-                          className="py-2.5 px-4 text-sm text-navy font-medium hover:text-gold hover:bg-white transition-colors border-b border-white"
+                          className="py-2.5 px-4 text-[15px] text-navy font-medium hover:text-gold hover:bg-white transition-colors border-b border-white"
                           onClick={() => { setMobileOpen(false); setOpenMobile(null); }}>
                           {loc.label}
                         </Link>
@@ -418,7 +418,7 @@ export default function Navbar() {
               {/* Simple links */}
               {simpleLinks.filter(l => l.label !== "Home").map((link) => (
                 <Link key={link.href} href={link.href}
-                  className="py-3 px-3 text-navy font-semibold text-sm hover:text-gold transition-colors border-b border-gray-100"
+                  className="py-3 px-3 text-navy font-semibold text-[15px] hover:text-gold transition-colors border-b border-gray-100"
                   onClick={() => setMobileOpen(false)}>
                   {link.label}
                 </Link>
@@ -426,12 +426,12 @@ export default function Navbar() {
 
               <div className="mt-4 flex flex-col gap-3">
                 <Link href="/free-trial"
-                  className="bg-gold text-navy font-bold text-center py-3.5 rounded-xl hover:bg-gold-dark transition-all text-sm"
+                  className="bg-gold text-navy font-bold text-center py-3.5 rounded-xl hover:bg-gold-dark transition-all text-[15px]"
                   onClick={() => setMobileOpen(false)}>
                   Book Free Trial Class
                 </Link>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5 bg-navy text-white font-bold py-3.5 rounded-xl text-sm hover:bg-navy/80 transition-all border border-gold/30"
+                  className="flex items-center justify-center gap-2.5 bg-navy text-white font-bold py-3.5 rounded-xl text-[15px] hover:bg-navy/80 transition-all border border-gold/30"
                   onClick={() => setMobileOpen(false)}>
                   <WhatsAppIcon />
                   WhatsApp Us

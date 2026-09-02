@@ -123,10 +123,10 @@ export default function MontanaPage() {
             </ol>
           </nav>
           <div className="max-w-3xl">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Serving All of Montana
             </span>
-            <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+            <h1 className="heading-1 text-white mb-6">
               Online Quran Classes in Montana
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
@@ -151,10 +151,10 @@ export default function MontanaPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Serving Billings &amp; Every Montana Community
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">
+            <h2 className="heading-2 text-navy mb-6">
               Certified Quran Teaching, Wherever You Are in Montana
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
@@ -175,8 +175,8 @@ export default function MontanaPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Our Curriculum</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-6">Courses for Montana Families</h2>
+            <span className="eyebrow mb-4">Our Curriculum</span>
+            <h2 className="heading-2 text-navy mb-6">Courses for Montana Families</h2>
             <p className="text-grey leading-relaxed mb-6">
               From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a Wifaq ul Madaris certified scholar. Visit our{" "}
               <Link href="/courses" className="text-gold font-semibold hover:underline">full courses page</Link>{" "}
@@ -191,8 +191,8 @@ export default function MontanaPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">Questions</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">Frequently Asked Questions. Montana</h2>
+              <span className="eyebrow mb-4">Questions</span>
+              <h2 className="heading-2 text-navy">Frequently Asked Questions. Montana</h2>
             </div>
             <FAQAccordion faqs={faqs} />
             <p className="text-center text-grey text-sm mt-6">

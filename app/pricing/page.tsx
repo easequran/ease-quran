@@ -161,7 +161,7 @@ export default function PricingPage() {
         <div className="absolute inset-0 bg-navy/85" />
 
         <div className="relative z-10 container-custom section-padding text-center px-4 sm:px-6">
-          <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+          <span className="eyebrow mb-4">
             Transparent Pricing
           </span>
           <h1 className="font-playfair font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
@@ -190,10 +190,10 @@ export default function PricingPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-10">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Choose Your Plan
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-3">
+            <h2 className="heading-2 text-navy mb-3">
               One-to-One 30-Minute Classes
             </h2>
             <p className="text-grey text-sm max-w-xl mx-auto">
@@ -231,10 +231,10 @@ export default function PricingPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-10">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Compare Durations
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-3">
+            <h2 className="heading-2 text-navy mb-3">
               30-Minute vs 60-Minute Pricing
             </h2>
             <p className="text-grey text-sm max-w-xl mx-auto">
@@ -283,10 +283,10 @@ export default function PricingPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Weekend Priority
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <h2 className="heading-2 text-navy mb-4">
                 Weekend Priority — Guaranteed Sat/Sun Slot
               </h2>
               <p className="text-grey text-sm leading-relaxed">
@@ -336,10 +336,10 @@ export default function PricingPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Sibling Discount
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <h2 className="heading-2 text-navy mb-4">
                 Automatic Discounts for Siblings
               </h2>
               <p className="text-grey text-sm leading-relaxed">
@@ -395,10 +395,10 @@ export default function PricingPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Prepay & Save
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <h2 className="heading-2 text-navy mb-4">
                 Pay in Advance and Save
               </h2>
               <p className="text-grey text-sm leading-relaxed">
@@ -460,7 +460,7 @@ export default function PricingPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-10">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               More Options
             </span>
             <h2 className="font-playfair font-bold text-2xl md:text-3xl text-navy mb-3">
@@ -500,7 +500,7 @@ export default function PricingPage() {
       <section className="section-padding bg-navy">
         <div className="container-custom">
           <div className="max-w-2xl mx-auto text-center">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+            <span className="eyebrow mb-4">
               Referral Program
             </span>
             <h2 className="font-playfair font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-4">
@@ -538,10 +538,10 @@ export default function PricingPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Every Plan Includes
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <h2 className="heading-2 text-navy mb-4">
                 What's Included in Every Plan
               </h2>
               <p className="text-grey text-sm leading-relaxed">
@@ -587,10 +587,10 @@ export default function PricingPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-4">
+              <span className="eyebrow mb-4">
                 Pricing FAQ
               </span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mb-4">
+              <h2 className="heading-2 text-navy mb-4">
                 Frequently Asked Questions About Pricing
               </h2>
             </div>

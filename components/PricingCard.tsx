@@ -43,13 +43,11 @@ export default function PricingCard({
 
       <div className="mb-6">
         <h3
-          className={`font-playfair font-bold text-xl mb-1 ${
-            popular ? "text-gold" : "text-navy"
-          }`}
+          className={`card-title mb-1 ${popular ? "text-gold" : ""}`}
         >
           {name}
         </h3>
-        <p className={`text-sm mb-4 ${popular ? "text-white/70" : "text-grey"}`}>
+        <p className={`text-sm mb-4 ${popular ? "text-white/80" : "text-grey"}`}>
           {forWho}
         </p>
         <div className="flex items-baseline gap-1">
@@ -77,14 +75,14 @@ export default function PricingCard({
           )}
         </div>
         <div
-          className={`mt-2 text-xs space-y-0.5 ${popular ? "text-white/70" : "text-grey"}`}
+          className={`mt-2 text-sm space-y-0.5 ${popular ? "text-white/80" : "text-grey"}`}
         >
           <p>{classes}</p>
           <p>{duration}</p>
         </div>
         {subLine && (
           <p
-            className={`mt-3 text-xs font-medium ${popular ? "text-white/80" : "text-navy/70"}`}
+            className={`mt-3 text-sm font-medium ${popular ? "text-white/90" : "text-navy"}`}
           >
             {subLine}
           </p>
@@ -93,10 +91,10 @@ export default function PricingCard({
 
       <ul className="space-y-2.5 flex-1 mb-7">
         {features.map((f) => (
-          <li key={f} className="flex items-start gap-2 text-sm">
+          <li key={f} className="flex items-start gap-2 text-[15px] leading-snug">
             <Check
-              size={15}
-              className={`mt-0.5 shrink-0 ${popular ? "text-gold" : "text-gold"}`}
+              size={16}
+              className="mt-0.5 shrink-0 text-gold"
             />
             <span className={popular ? "text-white/90" : "text-grey"}>{f}</span>
           </li>
@@ -108,14 +106,14 @@ export default function PricingCard({
           href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-center font-semibold py-3 rounded-xl transition-all duration-200 border-2 border-navy text-navy hover:bg-navy hover:text-white text-sm"
+          className="block text-center font-semibold py-3 rounded-xl transition-all duration-200 border-2 border-navy text-navy hover:bg-navy hover:text-white text-[15px]"
         >
           WhatsApp for Custom Quote
         </a>
       ) : (
         <Link
           href="/free-trial"
-          className={`block text-center font-semibold py-3 rounded-xl transition-all duration-200 text-sm ${
+          className={`block text-center font-semibold py-3 rounded-xl transition-all duration-200 text-[15px] ${
             popular
               ? "bg-gold text-navy hover:bg-gold-dark"
               : "bg-navy text-white hover:bg-navy/90"

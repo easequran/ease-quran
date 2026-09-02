@@ -13,11 +13,22 @@ const config: Config = {
         gold: "#F5A623",
         "gold-dark": "#D4891A",
         offwhite: "#F8F7F4",
-        grey: "#8B8070",
+        // Darkened from #8B8070 (~3.9:1 on white) to meet WCAG AA for body text.
+        grey: "#575047",
+        // Original warm grey — decorative / large-text (>=18px) use only.
+        "grey-light": "#8B8070",
       },
       fontFamily: {
-        playfair: ["var(--font-playfair)", "Georgia", "serif"],
-        inter: ["var(--font-inter)", "system-ui", "sans-serif"],
+        playfair: ["var(--font-playfair)", "Georgia", "Cambria", "serif"],
+        inter: [
+          "var(--font-inter)",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        arabic: ["var(--font-arabic)", "Amiri", "Noto Naskh Arabic", "serif"],
       },
       animation: {
         "fade-in": "fadeIn 0.4s ease-out forwards",

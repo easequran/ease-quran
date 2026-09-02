@@ -18,8 +18,11 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 @layer utilities {
@@ -58,6 +61,67 @@ body {
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Typography system (Playfair Display + Inter)
+   Apply these instead of re-deriving type inline.
+   ────────────────────────────────────────────────────────────── */
+@layer components {
+  /* Section kicker label — one spec everywhere */
+  .eyebrow {
+    @apply inline-block font-inter text-xs sm:text-[13px] font-bold uppercase tracking-[0.13em] text-gold;
+  }
+
+  /* Hero headline only */
+  .heading-1 {
+    @apply font-playfair font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.08] tracking-[-0.02em];
+    text-wrap: balance;
+  }
+
+  /* Section titles */
+  .heading-2 {
+    @apply font-playfair font-bold text-[28px] sm:text-4xl lg:text-[44px] leading-[1.15] tracking-[-0.015em];
+    text-wrap: balance;
+  }
+
+  /* Sub-section headings (Playfair stays legible at >= 24px) */
+  .heading-3 {
+    @apply font-playfair font-bold text-2xl sm:text-[26px] leading-[1.25] tracking-[-0.01em];
+  }
+
+  /* Card / pricing / small headings — Inter, not Playfair, below 24px */
+  .card-title {
+    @apply font-inter font-semibold text-lg sm:text-xl leading-[1.3] text-navy;
+  }
+
+  /* Section intro paragraph */
+  .lead {
+    @apply text-lg sm:text-xl leading-[1.6] text-grey;
+  }
+
+  /* Default running text */
+  .body-text {
+    @apply text-base leading-[1.7] text-grey;
+  }
+
+  /* Secondary UI text — captions, meta, menu descriptions */
+  .body-sm {
+    @apply text-sm leading-[1.55] text-grey;
+  }
+
+  /* CTA / button label */
+  .btn-label {
+    @apply text-[15px] sm:text-base font-semibold tracking-[0.01em];
+  }
+}
+
+/* Arabic script fallback (English UI today, but wired for ayah / labels) */
+[lang="ar"],
+.font-arabic {
+  font-family: var(--font-arabic), "Amiri", "Noto Naskh Arabic", serif;
+  line-height: 1.9;
+  letter-spacing: 0;
 }
 
 /* Accordion animation */
@@ -195,10 +259,23 @@ body {
   border: none;
   outline: none;
   background: transparent;
-  font-size: 0.875rem;
+  /* 16px keeps iOS Safari from auto-zooming the viewport on focus */
+  font-size: 1rem;
   color: #0B1E5B;
 }
 
 .eq-phone-input .PhoneInputInput::placeholder {
   color: rgba(139, 128, 112, 0.6);
+}
+
+/* ── Respect reduced-motion preference ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

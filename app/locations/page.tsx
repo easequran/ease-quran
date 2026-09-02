@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 
@@ -387,7 +387,7 @@ export default function LocationsPage() {
                 className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-playfair font-bold text-lg text-navy group-hover:text-gold transition-colors">
+                  <h3 className="card-title group-hover:text-gold transition-colors">
                     {city.name}
                   </h3>
                   <span className="text-xs font-semibold text-grey bg-offwhite px-2 py-0.5 rounded-full">
@@ -437,7 +437,7 @@ export default function LocationsPage() {
           </div>
 
           <div className="text-center mt-12 p-8 bg-offwhite rounded-2xl border border-gray-100">
-            <p className="font-playfair font-bold text-xl text-navy mb-2">
+            <p className="card-title mb-2">
               Don&apos;t see your city?
             </p>
             <p className="text-grey text-sm mb-5">

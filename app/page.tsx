@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CourseCard from "@/components/CourseCard";
@@ -303,7 +303,7 @@ export default function HomePage() {
                 <CheckCircle size={12} className="text-gold" />
                 <span>Available in All 50 States</span>
               </div>
-              <h1 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+              <h1 className="heading-1 text-white mb-6">
                 Online Quran Classes{" "}
                 <span className="text-gold">Your Family</span> Can Trust
               </h1>
@@ -395,10 +395,10 @@ export default function HomePage() {
               <AlertCircle size={16} className="shrink-0" />
               We Understand Your Struggle
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl text-navy mt-1 mb-4">
+            <h2 className="heading-2 text-navy mt-1 mb-4">
               Tired of Unreliable Online Quran Academies?
             </h2>
-            <p className="text-grey max-w-2xl mx-auto leading-relaxed">
+            <p className="lead max-w-2xl mx-auto leading-relaxed">
               As a Muslim parent in America, you deserve more than broken promises and
               amateur teachers. Here&apos;s what too many families are dealing with, and why
               Ease Quran was built to solve every one of these problems.
@@ -412,8 +412,8 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4">
                   <Icon size={22} className="text-red-400" />
                 </div>
-                <h3 className="font-playfair font-bold text-lg text-navy mb-2">{p.title}</h3>
-                <p className="text-grey text-sm leading-relaxed">{p.description}</p>
+                <h3 className="card-title mb-2">{p.title}</h3>
+                <p className="text-grey text-[15px] leading-relaxed">{p.description}</p>
               </div>
               );
             })}
@@ -442,11 +442,11 @@ export default function HomePage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-14">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Our Programs</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
+            <span className="eyebrow">Our Programs</span>
+            <h2 className="heading-2 text-navy mt-3 mb-4">
               Online Quran Courses for Every Student
             </h2>
-            <p className="text-grey max-w-xl mx-auto">
+            <p className="lead max-w-xl mx-auto">
               Whether your child is just beginning or an adult looking to deepen their
               connection with the Quran, we have the right course for you.
             </p>
@@ -471,11 +471,11 @@ export default function HomePage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-14">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Simple Process</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
+            <span className="eyebrow">Simple Process</span>
+            <h2 className="heading-2 text-navy mt-3 mb-4">
               How It Works
             </h2>
-            <p className="text-grey max-w-xl mx-auto">
+            <p className="lead max-w-xl mx-auto">
               Getting started with Ease Quran is simple. Three steps and your child is
               learning with a certified Quran teacher.
             </p>
@@ -486,8 +486,8 @@ export default function HomePage() {
                 <div className="w-16 h-16 rounded-2xl bg-gold text-navy font-playfair font-bold text-xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
                   {step.number}
                 </div>
-                <h3 className="font-playfair font-bold text-lg text-navy mb-3">{step.title}</h3>
-                <p className="text-grey text-sm leading-relaxed">{step.description}</p>
+                <h3 className="card-title mb-3">{step.title}</h3>
+                <p className="text-grey text-[15px] leading-relaxed">{step.description}</p>
                 {i < steps.length - 1 && (
                   <div className="hidden md:block absolute top-8 left-[calc(50%+2.5rem)] w-[calc(100%-5rem)] border-t-2 border-dashed border-gold/30" />
                 )}
@@ -511,8 +511,8 @@ export default function HomePage() {
 
           {/* Section header */}
           <div className="text-center mb-8">
-            <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-2">Who We Are</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy">Our Mission, Vision &amp; Values</h2>
+            <span className="eyebrow mb-2">Who We Are</span>
+            <h2 className="heading-2 text-navy">Our Mission, Vision &amp; Values</h2>
           </div>
 
           {/* 3 cards */}
@@ -531,11 +531,11 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <span className="text-gold text-[10px] font-bold tracking-widest uppercase mb-2">Our Mission</span>
-              <h3 className="font-playfair font-bold text-lg text-navy mb-2 leading-snug">
+              <span className="text-gold text-[11px] font-bold tracking-[0.13em] uppercase mb-2">Our Mission</span>
+              <h3 className="card-title mb-2">
                 Authentic Quran Education for Every Muslim Family in America
               </h3>
-              <p className="text-grey text-xs leading-relaxed">
+              <p className="text-grey text-[15px] leading-relaxed">
                 We remove every barrier between your family and a certified, trusted Quran teacher, no matter where you live or how busy your schedule is.
               </p>
             </div>
@@ -553,11 +553,11 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <span className="text-navy text-[10px] font-bold tracking-widest uppercase mb-2">Our Vision</span>
-              <h3 className="font-playfair font-bold text-lg text-navy mb-2 leading-snug">
+              <span className="text-navy text-[11px] font-bold tracking-[0.13em] uppercase mb-2">Our Vision</span>
+              <h3 className="card-title mb-2">
                 A Generation of Western Muslims Who Live by the Quran
               </h3>
-              <p className="text-grey text-xs leading-relaxed">
+              <p className="text-grey text-[15px] leading-relaxed">
                 American Muslim homes where children recite beautifully, adults understand the meaning, and the Book of Allah is a living presence from coast to coast.
               </p>
             </div>
@@ -575,11 +575,11 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <span className="text-gold text-[10px] font-bold tracking-widest uppercase mb-2">Our Values</span>
-              <h3 className="font-playfair font-bold text-lg text-navy mb-2 leading-snug">
+              <span className="text-gold text-[11px] font-bold tracking-[0.13em] uppercase mb-2">Our Values</span>
+              <h3 className="card-title mb-2">
                 Trust, Excellence and Genuine Care for Every Student
               </h3>
-              <p className="text-grey text-xs leading-relaxed">
+              <p className="text-grey text-[15px] leading-relaxed">
                 Certified teachers only, transparent pricing, full respect for Islamic guidelines, and a free-trial guarantee. Your trust means everything to us.
               </p>
             </div>
@@ -627,8 +627,8 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <span className="text-gold text-sm font-semibold tracking-widest uppercase">Meet the Founder</span>
-              <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-2">Shah Zaib</h2>
+              <span className="eyebrow">Meet the Founder</span>
+              <h2 className="heading-2 text-navy mt-3 mb-2">Shah Zaib</h2>
               <p className="text-gold font-semibold mb-4">
                 Founder & Head Teacher · Certified from Wifaq ul Madaris
               </p>
@@ -671,11 +671,11 @@ export default function HomePage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-14">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Our Teachers</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
+            <span className="eyebrow">Our Teachers</span>
+            <h2 className="heading-2 text-navy mt-3 mb-4">
               Expert, Certified Quran Teachers
             </h2>
-            <p className="text-grey max-w-xl mx-auto">
+            <p className="lead max-w-xl mx-auto">
               All teachers are certified from Wifaq ul Madaris and trained to deliver an
               engaging, results-driven learning experience.
             </p>
@@ -705,8 +705,8 @@ export default function HomePage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-14">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Why Ease Quran</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
+            <span className="eyebrow">Why Ease Quran</span>
+            <h2 className="heading-2 text-navy mt-3 mb-4">
               The Academy Built for Muslim Families in America
             </h2>
           </div>
@@ -738,8 +738,8 @@ export default function HomePage() {
                 <div className="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
                   {pillar.icon}
                 </div>
-                <h3 className="font-playfair font-bold text-xl text-navy mb-3">{pillar.title}</h3>
-                <p className="text-grey text-sm leading-relaxed">{pillar.description}</p>
+                <h3 className="card-title mb-3">{pillar.title}</h3>
+                <p className="text-grey text-[15px] leading-relaxed">{pillar.description}</p>
               </div>
             ))}
           </div>
@@ -750,10 +750,10 @@ export default function HomePage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-12 max-w-2xl mx-auto">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">
+            <span className="eyebrow">
               What Our Students &amp; Families Say
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
+            <h2 className="heading-2 text-navy mt-3 mb-4">
               Real Students, Real Results
             </h2>
             <p className="text-grey leading-relaxed">
@@ -779,8 +779,8 @@ export default function HomePage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Quran Classes Near You</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-5">
+            <span className="eyebrow">Quran Classes Near You</span>
+            <h2 className="heading-2 text-navy mt-3 mb-5">
               Searching for &ldquo;Online Quran Classes Near Me&rdquo;?
             </h2>
             <p className="text-grey leading-relaxed mb-4">
@@ -806,11 +806,11 @@ export default function HomePage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Available in All 50 States</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-3">
+            <span className="eyebrow">Available in All 50 States</span>
+            <h2 className="heading-2 text-navy mt-3 mb-3">
               Online Quran Classes Available Nationwide
             </h2>
-            <p className="text-grey max-w-xl mx-auto">
+            <p className="lead max-w-xl mx-auto">
               Wherever you are in America, we bring certified Quran education to your home.
               Available to Muslim families in all 50 states.
             </p>
@@ -826,7 +826,7 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-          <p className="text-center text-grey text-sm">
+          <p className="text-center text-grey text-[15px]">
             Online classes available in all 50 states •{" "}
             <Link href="/free-trial" className="text-gold hover:underline font-medium">
               Book a free trial from anywhere
@@ -839,11 +839,11 @@ export default function HomePage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-14">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Common Questions</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
+            <span className="eyebrow">Common Questions</span>
+            <h2 className="heading-2 text-navy mt-3 mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-grey max-w-xl mx-auto">
+            <p className="lead max-w-xl mx-auto">
               Everything Muslim parents in America want to know about our online Quran classes.
             </p>
           </div>
@@ -851,7 +851,7 @@ export default function HomePage() {
             <FAQAccordion faqs={faqs} />
           </div>
           <div className="text-center mt-10">
-            <p className="text-grey text-sm mb-4">Still have questions? We&apos;re here to help.</p>
+            <p className="text-grey text-[15px] mb-4">Still have questions? We&apos;re here to help.</p>
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
               target="_blank"

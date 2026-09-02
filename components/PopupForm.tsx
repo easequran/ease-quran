@@ -133,7 +133,7 @@ export default function PopupForm() {
           >
             <X size={22} />
           </button>
-          <p className="text-gold text-xs font-semibold tracking-widest uppercase mb-2 pr-10">
+          <p className="eyebrow mb-2 pr-10">
             Limited Offer
           </p>
           <h2
@@ -182,7 +182,7 @@ export default function PopupForm() {
                   required
                   value={form.fullName}
                   onChange={(e) => setForm({ ...form, fullName: e.target.value })}
-                  className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-navy focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-base text-navy focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition"
                 />
               </div>
 
@@ -197,7 +197,7 @@ export default function PopupForm() {
                   required
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-navy focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-base text-navy focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition"
                 />
               </div>
 
@@ -223,7 +223,7 @@ export default function PopupForm() {
                   required
                   value={form.course}
                   onChange={(e) => setForm({ ...form, course: e.target.value })}
-                  className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-navy focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition bg-white"
+                  className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-base text-navy focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition bg-white"
                 >
                   <option value="">Select a course</option>
                   {courseOptions.map((c) => (
@@ -245,7 +245,7 @@ export default function PopupForm() {
                       type="button"
                       onClick={() => setForm({ ...form, ageGroup: age })}
                       aria-pressed={form.ageGroup === age}
-                      className={`py-2 px-0.5 rounded-lg border text-[11px] sm:text-xs font-semibold text-center leading-tight transition-colors ${
+                      className={`py-2 px-0.5 rounded-lg border text-xs sm:text-[13px] font-semibold text-center leading-tight transition-colors ${
                         form.ageGroup === age
                           ? "bg-gold border-gold text-navy"
                           : "bg-white border-gray-200 text-navy hover:border-gold/50"
@@ -280,7 +280,7 @@ export default function PopupForm() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gold text-navy font-semibold py-3 rounded-lg hover:bg-gold-dark transition-all duration-200 disabled:opacity-60 text-sm"
+                className="w-full bg-gold text-navy font-semibold py-3 rounded-lg hover:bg-gold-dark transition-all duration-200 disabled:opacity-60 text-[15px]"
               >
                 {loading ? "Submitting..." : "Book My Free Trial Class"}
               </button>
