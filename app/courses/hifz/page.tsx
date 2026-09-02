@@ -227,7 +227,7 @@ export default function HifzPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/course-hifz.webp"
+                src="/images/Courses/course-hifz.webp"
                 alt="Online Hifz program: Quran memorization classes at Ease Quran Academy"
                 fill
                 className="object-cover"

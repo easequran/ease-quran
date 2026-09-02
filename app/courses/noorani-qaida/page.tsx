@@ -226,7 +226,7 @@ export default function NooraniQaidaPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/course-noorani.webp"
+                src="/images/Courses/course-noorani.webp"
                 alt="Online Noorani Qaida classes: learn Arabic letters and Quran reading at Ease Quran Academy"
                 fill
                 className="object-cover"

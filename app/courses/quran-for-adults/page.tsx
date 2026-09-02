@@ -228,7 +228,7 @@ export default function QuranForAdultsPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/course-tajweed.webp"
+                src="/images/Courses/course-tajweed.webp"
                 alt="Online Quran classes for adults: learn to read and recite Quran at Ease Quran Academy"
                 fill
                 className="object-cover"

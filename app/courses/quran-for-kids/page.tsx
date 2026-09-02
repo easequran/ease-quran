@@ -231,7 +231,7 @@ export default function QuranForKidsPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/course-kids.webp"
+                src="/images/Courses/course-kids.webp"
                 alt="Online Quran classes for kids, Ease Quran Online Academy"
                 fill
                 className="object-cover"

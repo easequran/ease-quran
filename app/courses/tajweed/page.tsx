@@ -226,7 +226,7 @@ export default function TajweedPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/course-tajweed.webp"
+                src="/images/Courses/course-tajweed.webp"
                 alt="Online Tajweed classes: learn proper Quran recitation at Ease Quran Academy"
                 fill
                 className="object-cover"
