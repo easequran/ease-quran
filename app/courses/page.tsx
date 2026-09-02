@@ -199,7 +199,7 @@ export default function CoursesPage() {
               <Link
                 key={course.href}
                 href={course.href}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm border-2 border-gold/40 hover:border-gold hover:shadow-xl hover:shadow-gold/10 hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-offwhite">
                   <Image
