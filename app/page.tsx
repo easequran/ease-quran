@@ -271,7 +271,7 @@ export default function HomePage() {
       ))}
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-[600px] lg:h-[700px] flex items-center overflow-hidden">
         {/* Background image */}
         <Image
           src="/images/hero-child.webp"
@@ -294,7 +294,7 @@ export default function HomePage() {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy/60 to-transparent" />
 
-        <div className="container-custom relative z-10 py-20 lg:py-28">
+        <div className="container-custom relative z-10 py-12 lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             {/* Left: text content */}
@@ -391,10 +391,11 @@ export default function HomePage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-14">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">
+            <span className="inline-flex items-center gap-2 bg-gold text-navy text-xs md:text-sm font-bold tracking-widest uppercase px-5 py-2.5 rounded-full shadow-md shadow-gold/30 mb-5">
+              <AlertCircle size={16} className="shrink-0" />
               We Understand Your Struggle
             </span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl lg:text-5xl text-navy mt-1 mb-4">
               Tired of Unreliable Online Quran Academies?
             </h2>
             <p className="text-grey max-w-2xl mx-auto leading-relaxed">
@@ -437,8 +438,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
+      {/* COURSES */}
       <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-14">
+            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Our Programs</span>
+            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
+              Online Quran Courses for Every Student
+            </h2>
+            <p className="text-grey max-w-xl mx-auto">
+              Whether your child is just beginning or an adult looking to deepen their
+              connection with the Quran, we have the right course for you.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {courses.map((course) => (
+              <CourseCard key={course.href} {...course} />
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/courses"
+              className="inline-block border-2 border-navy text-navy font-semibold px-8 py-3 rounded-xl hover:bg-navy hover:text-white transition-all duration-200 text-sm"
+            >
+              View All Courses
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-14">
             <span className="text-gold text-sm font-semibold tracking-widest uppercase">Simple Process</span>
@@ -470,35 +500,6 @@ export default function HomePage() {
               className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-all duration-200 text-sm"
             >
               Book Your Free Trial Now
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* COURSES */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="text-center mb-14">
-            <span className="text-gold text-sm font-semibold tracking-widest uppercase">Our Programs</span>
-            <h2 className="font-playfair font-bold text-3xl md:text-4xl text-navy mt-3 mb-4">
-              Online Quran Courses for Every Student
-            </h2>
-            <p className="text-grey max-w-xl mx-auto">
-              Whether your child is just beginning or an adult looking to deepen their
-              connection with the Quran, we have the right course for you.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {courses.map((course) => (
-              <CourseCard key={course.href} {...course} />
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link
-              href="/courses"
-              className="inline-block border-2 border-navy text-navy font-semibold px-8 py-3 rounded-xl hover:bg-navy hover:text-white transition-all duration-200 text-sm"
-            >
-              View All Courses
             </Link>
           </div>
         </div>
