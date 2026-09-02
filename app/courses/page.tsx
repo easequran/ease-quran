@@ -201,7 +201,7 @@ export default function CoursesPage() {
                 href={course.href}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
-                <div className="relative h-48 overflow-hidden bg-offwhite">
+                <div className="relative aspect-[4/3] overflow-hidden bg-offwhite">
                   <Image
                     src={course.image}
                     alt={`${course.title} at Ease Quran Online Academy`}

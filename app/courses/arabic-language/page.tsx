@@ -224,7 +224,7 @@ export default function ArabicLanguagePage() {
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ Expert Teaching</span>
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/Courses/course-arabic.webp"
                 alt="Online Arabic language classes: learn Classical and Quranic Arabic at Ease Quran Academy"

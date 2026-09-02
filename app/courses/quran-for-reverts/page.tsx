@@ -240,7 +240,7 @@ export default function QuranForRevertsPage() {
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ No Cultural Assumptions</span>
               </div>
             </div>
-            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/Courses/course-noorani.webp"
                 alt="Quran classes for new Muslims and reverts, Ease Quran Online Academy"

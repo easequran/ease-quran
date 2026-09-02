@@ -16,7 +16,7 @@ export default function CourseCard({ title, description, image, href, badge }: C
       href={href}
       className="group block bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
     >
-      <div className="relative overflow-hidden" style={{ height: "200px" }}>
+      <div className="relative overflow-hidden aspect-[4/3]">
         <Image
           src={image}
           alt={`${title} - Online Quran Course`}
