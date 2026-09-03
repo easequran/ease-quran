@@ -22,8 +22,8 @@ export const reviews: ReviewItem[] = [
   },
   {
     src: "/images/review-2.webp",
-    caption: "Parent feedback — shared via WhatsApp",
-    alt: "Screenshot of a WhatsApp message where a parent replies \"Very good\" with a thumbs-up emoji after their child's first Quran trial class",
+    caption: "Student feedback — shared via WhatsApp",
+    alt: "Screenshot of a WhatsApp message where a student replies \"Very good\" with a thumbs-up emoji after their first Quran trial class",
   },
 ];
 
