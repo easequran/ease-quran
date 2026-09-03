@@ -163,6 +163,6 @@ export function prepaySavings(monthlyPrice: number, term: PrepayTerm): number {
 
 // Referral program
 export const referral = {
-  referrerDiscount: 0.5, // 50% off one month
-  refereeDiscount: 0.2, // 20% off first month
+  referrerDiscount: 0.2, // 20% off one month
+  refereeDiscount: 0.15, // 15% off first month
 };

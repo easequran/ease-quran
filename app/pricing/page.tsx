@@ -90,7 +90,7 @@ const includedFeatures = [
   "Fully flexible scheduling: morning, evening, weekend",
   "Cancel anytime, no long-term contracts",
   "WhatsApp support directly with your teacher",
-  "Lessons conducted via Zoom, Skype, or Google Meet",
+  "Lessons conducted via Zoom or Google Meet",
 ];
 
 const pricingFaqs = [
@@ -112,7 +112,7 @@ const pricingFaqs = [
   {
     question: "How does the Weekend Priority pricing work?",
     answer:
-      "Weekend Priority guarantees a Saturday/Sunday slot and applies a small 15% add-on, but only when every single class in your plan falls on Saturday or Sunday. If your schedule mixes weekdays with one or two weekend classes, there is no extra charge at all.",
+      "Weekend Priority guarantees a Saturday/Sunday slot and applies a small 15% add-on, but only when every single class in your plan falls on Saturday or Sunday.",
   },
   {
     question: "Do you offer discounts for multiple children?",
@@ -291,8 +291,7 @@ export default function PricingPage() {
               </h2>
               <p className="text-grey text-sm leading-relaxed">
                 If every class in your plan is scheduled on a Saturday or Sunday, a small add-on
-                guarantees your family's preferred weekend slot. If your schedule mixes weekdays
-                with one or two weekend classes, there is no extra charge at all.
+                guarantees your family's preferred weekend slot.
               </p>
             </div>
             <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
