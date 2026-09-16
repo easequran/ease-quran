@@ -497,10 +497,16 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <Link
               href="/free-trial"
-              className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-all duration-200 text-sm"
+              className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-all duration-200 text-sm mb-4"
             >
               Book Your Free Trial Now
             </Link>
+            <p className="text-grey text-sm">
+              New to this?{" "}
+              <Link href="/learn-quran-online" className="text-gold font-semibold hover:underline">
+                Read our full guide to learning Quran online
+              </Link>
+            </p>
           </div>
         </div>
       </section>

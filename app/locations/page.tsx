@@ -1,12 +1,41 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
+import FAQAccordion from "@/components/FAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes by City | USA Locations",
+  title: "Quran Classes Near Me: Find Your City | Ease Quran USA",
   description:
-    "Ease Quran Online Academy serves Muslim families across the USA. Find online Quran classes in your city, from New York to Los Angeles.",
+    "Searching for Quran classes near me? See how Ease Quran serves Muslim families in your specific city or state, from New York to Los Angeles, with certified online teachers.",
   alternates: { canonical: "https://easequran.com/locations" },
+};
+
+const nearMeFaqs = [
+  {
+    question: "I searched \"Quran classes near me\" — why did I land on an online academy?",
+    answer:
+      "Because for most Muslim families in America, the honest \"near me\" answer isn't a local school at all — it's a shortage of qualified teachers within a reasonable drive. Ease Quran connects you with a certified teacher over live video, so the nearest available teacher is effectively in your own living room, regardless of which city or state you're in.",
+  },
+  {
+    question: "Do you serve my specific city, or just big metro areas?",
+    answer:
+      "We have dedicated pages for over 20 major metro areas below, and statewide coverage for every other state, including smaller and less-populated ones. If you don't see your exact town listed, your state's page still applies to you directly — find it in the Statewide Coverage section below.",
+  },
+  {
+    question: "Is \"near me\" even a meaningful search when classes are online?",
+    answer:
+      "It's a completely fair thing to search, since it's how most people look for any kind of teacher. The difference with an online academy is that \"near\" isn't measured in miles: it's measured in how quickly you can be matched with a certified teacher and start your first class, which for Ease Quran is a live trial class booked in minutes, not a drive across town.",
+  },
+];
+
+const nearMeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: nearMeFaqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
 };
 
 const cities = [
@@ -350,6 +379,11 @@ const stateHubCities = cities
 export default function LocationsPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(nearMeFaqSchema) }}
+      />
+
       {/* Hero */}
       <section className="bg-navy pt-36 pb-20">
         <div className="container-custom text-center">
@@ -357,12 +391,12 @@ export default function LocationsPage() {
             <span>Available in All 50 States</span>
           </div>
           <h1 className="font-playfair font-bold text-4xl md:text-5xl text-white mb-5 leading-tight">
-            Online Quran Classes Across the USA
+            Quran Classes Near Me: Find Your City
           </h1>
           <p className="text-white/75 text-lg max-w-2xl mx-auto leading-relaxed">
-            Wherever you live in America, Ease Quran brings certified, one-on-one Quran
-            education to your home. Browse your city below to learn more about our
-            services in your area.
+            Searching for a Quran teacher or class near you? Wherever you live in America,
+            Ease Quran brings a certified, one-on-one teacher to your home over live video.
+            Browse your city or state below to see exactly how we serve your area.
           </p>
         </div>
       </section>
@@ -450,6 +484,21 @@ export default function LocationsPage() {
             >
               Book a Free Trial Anywhere in the USA
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Near Me FAQ */}
+      <section className="section-padding bg-offwhite">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <span className="eyebrow mb-4">Questions</span>
+              <h2 className="heading-2 text-navy">
+                &ldquo;Quran Classes Near Me&rdquo; — Common Questions
+              </h2>
+            </div>
+            <FAQAccordion faqs={nearMeFaqs} />
           </div>
         </div>
       </section>

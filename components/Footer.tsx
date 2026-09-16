@@ -46,6 +46,7 @@ const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "All Courses", href: "/courses" },
+  { label: "Learn Quran Online", href: "/learn-quran-online" },
   { label: "Pricing", href: "/pricing" },
   { label: "Free Trial", href: "/free-trial" },
   { label: "Summer Classes", href: "/summer-quran-classes" },
