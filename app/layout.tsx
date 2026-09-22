@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Script from "next/script";
-import { Playfair_Display, Inter, Noto_Naskh_Arabic } from "next/font/google";
+import { Poppins, Cairo, Amiri } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,25 +8,33 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import PopupForm from "@/components/PopupForm";
 
-const playfair = Playfair_Display({
+// Design-system font: Poppins covers both headings (--font-playfair) and body (--font-inter).
+const playfair = Poppins({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["600", "700", "800"],
   variable: "--font-playfair",
   display: "swap",
 });
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
   display: "swap",
 });
 
-const notoNaskhArabic = Noto_Naskh_Arabic({
+// Cairo for Arabic UI/body; Amiri (design system's display font) is loaded separately for Quranic callouts.
+const notoNaskhArabic = Cairo({
   subsets: ["arabic"],
   weight: ["400", "500", "700"],
   variable: "--font-arabic",
+  display: "swap",
+});
+
+const amiri = Amiri({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-arabic-display",
   display: "swap",
 });
 
@@ -94,7 +102,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} ${notoNaskhArabic.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable} ${notoNaskhArabic.variable} ${amiri.variable}`}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-P4FJDN2SDX"

@@ -21,7 +21,7 @@ export default function TeacherCard({
   qualification,
 }: TeacherCardProps) {
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+    <div className="bg-white rounded-2xl overflow-hidden shadow-eq-sm border border-gray-100 hover:shadow-eq-lg hover:-translate-y-1 transition-all duration-300 group">
       <div className="relative overflow-hidden bg-offwhite" style={{ height: "300px" }}>
         <Image
           src={image}

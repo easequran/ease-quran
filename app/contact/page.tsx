@@ -268,7 +268,7 @@ export default function ContactPage() {
                 </p>
                 <Link
                   href="/free-trial"
-                  className="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-xl hover:bg-gold-dark transition-colors text-sm"
+                  className="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-full hover:bg-gold-dark transition-colors text-sm"
                 >
                   Book Free Trial →
                 </Link>

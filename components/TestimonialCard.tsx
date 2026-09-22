@@ -16,7 +16,7 @@ export default function TestimonialCard({
   course,
 }: TestimonialCardProps) {
   return (
-    <div className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div className="bg-white rounded-2xl p-7 shadow-eq-sm border border-gray-100 hover:shadow-eq-lg hover:-translate-y-1 transition-all duration-300">
       <div className="flex items-center gap-1 mb-4">
         {Array.from({ length: rating }).map((_, i) => (
           <Star key={i} size={15} className="fill-gold text-gold" />

@@ -319,7 +319,7 @@ export default function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center">
               <Link href="/free-trial"
-                className="bg-gold text-navy font-bold text-[15px] px-6 py-2.5 rounded-xl hover:bg-gold-dark transition-all duration-200 shadow-md hover:shadow-lg">
+                className="bg-gold text-navy font-bold text-[15px] px-6 py-2.5 rounded-full hover:bg-gold-dark transition-all duration-200 shadow-md hover:shadow-lg">
                 Book Free Trial
               </Link>
             </div>
@@ -426,12 +426,12 @@ export default function Navbar() {
 
               <div className="mt-4 flex flex-col gap-3">
                 <Link href="/free-trial"
-                  className="bg-gold text-navy font-bold text-center py-3.5 rounded-xl hover:bg-gold-dark transition-all text-[15px]"
+                  className="bg-gold text-navy font-bold text-center py-3.5 rounded-full hover:bg-gold-dark transition-all text-[15px]"
                   onClick={() => setMobileOpen(false)}>
                   Book Free Trial Class
                 </Link>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2.5 bg-navy text-white font-bold py-3.5 rounded-xl text-[15px] hover:bg-navy/80 transition-all border border-gold/30"
+                  className="flex items-center justify-center gap-2.5 bg-navy text-white font-bold py-3.5 rounded-full text-[15px] hover:bg-navy/80 transition-all border border-gold/30"
                   onClick={() => setMobileOpen(false)}>
                   <WhatsAppIcon />
                   WhatsApp Us

@@ -266,7 +266,7 @@ export default function FreeTrialForm() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="w-full bg-gold text-navy font-bold py-4 rounded-xl hover:bg-gold-dark transition-all duration-200 text-base disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full bg-gold text-navy font-bold py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-base disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {status === "loading" ? "Submitting..." : "Book My Free Trial Class →"}
         </button>

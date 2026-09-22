@@ -23,7 +23,7 @@ export default function TrustBadges({ dark = false }: TrustBadgesProps) {
             className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border ${
               dark
                 ? "border-white/20 bg-white/10 text-white"
-                : "border-gray-200 bg-white text-navy shadow-sm"
+                : "border-gray-200 bg-white text-navy shadow-eq-sm"
             }`}
           >
             <Icon size={14} className={dark ? "text-gold" : "text-gold"} />

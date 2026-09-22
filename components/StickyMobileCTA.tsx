@@ -31,7 +31,7 @@ export default function StickyMobileCTA() {
       <div className="flex items-stretch gap-2 bg-white border-t border-gray-200 shadow-[0_-4px_20px_rgba(0,0,0,0.08)] px-3 py-2.5">
         <Link
           href="/free-trial"
-          className="flex-1 flex items-center justify-center bg-gold text-navy font-bold text-sm rounded-xl py-3 hover:bg-gold-dark transition-colors"
+          className="flex-1 flex items-center justify-center bg-gold text-navy font-bold text-sm rounded-full py-3 hover:bg-gold-dark transition-colors"
         >
           Book Free Trial
         </Link>

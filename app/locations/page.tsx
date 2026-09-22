@@ -480,7 +480,7 @@ export default function LocationsPage() {
             </p>
             <Link
               href="/free-trial"
-              className="inline-block bg-gold text-navy font-bold px-8 py-3 rounded-xl hover:bg-gold-dark transition-all text-sm"
+              className="inline-block bg-gold text-navy font-bold px-8 py-3 rounded-full hover:bg-gold-dark transition-all text-sm"
             >
               Book a Free Trial Anywhere in the USA
             </Link>

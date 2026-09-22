@@ -133,10 +133,10 @@ export default function NewHampshirePage() {
               Certified, one-on-one Quran education for Muslim families anywhere in New Hampshire, from Manchester to the state's smaller towns. Free first trial class, certified teachers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-all duration-200 text-sm text-center">
+              <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center">
                 Book Free Trial Class
               </Link>
-              <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20New%20Hampshire" target="_blank" rel="noopener noreferrer" className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition-all duration-200 text-sm text-center">
+              <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20New%20Hampshire" target="_blank" rel="noopener noreferrer" className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-sm text-center">
                 Chat on WhatsApp
               </a>
             </div>

@@ -523,7 +523,7 @@ export default function PricingPage() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-gold text-navy font-bold px-7 py-3.5 rounded-xl hover:bg-gold-dark transition-all duration-200 text-sm"
+                className="inline-block bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
                 Refer a Family on WhatsApp
               </a>

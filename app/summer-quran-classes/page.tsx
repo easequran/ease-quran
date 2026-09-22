@@ -445,7 +445,7 @@ export default function SummerQuranClassesPage() {
             <div className="flex flex-wrap gap-4 mb-10">
               <Link
                 href="/free-trial"
-                className="bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-sm shadow-xl shadow-gold/30"
+                className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-yellow-400 transition-colors text-sm shadow-xl shadow-gold/30"
               >
                 Book Your Free Trial Class
               </Link>
@@ -453,7 +453,7 @@ export default function SummerQuranClassesPage() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border-2 border-white/40 text-white font-semibold px-7 py-4 rounded-xl hover:border-white/70 hover:bg-white/5 transition-all text-sm"
+                className="flex items-center gap-2 border-2 border-white/40 text-white font-semibold px-7 py-4 rounded-full hover:border-white/70 hover:bg-white/5 transition-all text-sm"
               >
                 <WhatsAppIcon className="w-4 h-4 text-green-400" />
                 WhatsApp Us
@@ -516,7 +516,7 @@ export default function SummerQuranClassesPage() {
             </p>
             <Link
               href="/free-trial"
-              className="inline-block bg-navy text-white font-bold px-8 py-3.5 rounded-xl hover:bg-navy/90 transition-colors text-sm"
+              className="inline-block bg-navy text-white font-bold px-8 py-3.5 rounded-full hover:bg-navy/90 transition-colors text-sm"
             >
               Try a Free Class Today
             </Link>
@@ -729,7 +729,7 @@ export default function SummerQuranClassesPage() {
           <div className="text-center">
             <Link
               href="/free-trial"
-              className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-sm shadow-lg shadow-black/20"
+              className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-yellow-400 transition-colors text-sm shadow-lg shadow-black/20"
             >
               Book a Free Trial Class
             </Link>
@@ -795,7 +795,7 @@ export default function SummerQuranClassesPage() {
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               <Link
                 href="/free-trial"
-                className="bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-sm shadow-lg shadow-gold/20"
+                className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-yellow-400 transition-colors text-sm shadow-lg shadow-gold/20"
               >
                 Book Your Free Trial Class
               </Link>
@@ -803,7 +803,7 @@ export default function SummerQuranClassesPage() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border-2 border-white/40 text-white font-bold px-8 py-4 rounded-xl hover:border-white hover:bg-white/5 transition-all text-sm"
+                className="flex items-center gap-2 border-2 border-white/40 text-white font-bold px-8 py-4 rounded-full hover:border-white hover:bg-white/5 transition-all text-sm"
               >
                 <WhatsAppIcon className="w-4 h-4 text-green-400" />
                 WhatsApp Us

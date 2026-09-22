@@ -10,7 +10,7 @@ export default function WhatsAppReviewCard({ src, alt, caption }: WhatsAppReview
   return (
     <figure className="flex flex-col items-center">
       {/* Phone-style frame */}
-      <div className="relative w-full max-w-[300px] rounded-[2rem] border-[6px] border-navy bg-navy shadow-xl overflow-hidden">
+      <div className="relative w-full max-w-[300px] rounded-[2rem] border-[6px] border-navy bg-navy shadow-eq-lg overflow-hidden">
         {/* Notch */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-navy rounded-b-2xl z-10" />
         <div className="relative bg-[#E5DDD5]">

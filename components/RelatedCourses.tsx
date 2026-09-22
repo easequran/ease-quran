@@ -32,7 +32,7 @@ export default function RelatedCourses({
             <Link
               key={course.href}
               href={course.href}
-              className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-lg transition-all duration-300"
+              className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-gold hover:shadow-eq-md transition-all duration-300"
             >
               <h3 className="font-playfair font-bold text-lg text-navy mb-2 group-hover:text-gold transition-colors">
                 {course.title}
@@ -47,7 +47,7 @@ export default function RelatedCourses({
         <div className="text-center mt-8">
           <Link
             href="/courses"
-            className="inline-block border-2 border-navy text-navy font-semibold px-8 py-3 rounded-xl hover:bg-navy hover:text-white transition-all duration-200 text-sm"
+            className="inline-block border-2 border-navy text-navy font-semibold px-8 py-3 rounded-full hover:bg-navy hover:text-white transition-all duration-200 text-sm"
           >
             View All Courses
           </Link>

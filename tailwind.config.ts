@@ -17,18 +17,48 @@ const config: Config = {
         grey: "#575047",
         // Original warm grey — decorative / large-text (>=18px) use only.
         "grey-light": "#8B8070",
+        // Ease Quran Design System tokens (kept alongside legacy names above).
+        "eq-gray": {
+          50: "#F8F9FB",
+          100: "#F2F3F6",
+          200: "#E7E8ED",
+          300: "#D3D5DC",
+          400: "#AFB2BC",
+          500: "#8B8E99",
+          600: "#6B6F7B",
+          700: "#4A4E5A",
+          800: "#2B2E38",
+          900: "#171A21",
+        },
+        "eq-success": { 100: "#E3F3EA", 600: "#1E7B4F" },
+        "eq-warning": { 100: "#FDECD1", 600: "#B5750B" },
+        "eq-danger": { 100: "#FBE7E5", 600: "#C1352B" },
+        "eq-info": { 100: "#E6EEFB", 600: "#1B5AA8" },
       },
       fontFamily: {
-        playfair: ["var(--font-playfair)", "Georgia", "Cambria", "serif"],
+        // Both headings and body now render Poppins per the Ease Quran Design System.
+        playfair: ["var(--font-playfair)", "Poppins", "system-ui", "sans-serif"],
         inter: [
           "var(--font-inter)",
+          "Poppins",
           "system-ui",
           "-apple-system",
           "Segoe UI",
           "Roboto",
           "sans-serif",
         ],
-        arabic: ["var(--font-arabic)", "Amiri", "Noto Naskh Arabic", "serif"],
+        arabic: ["var(--font-arabic)", "Cairo", "Poppins", "system-ui", "sans-serif"],
+        "arabic-display": ["var(--font-arabic-display)", "Amiri", "Cairo", "serif"],
+      },
+      borderRadius: {
+        "eq-card": "16px",
+        "eq-input": "10px",
+      },
+      boxShadow: {
+        "eq-sm": "0 1px 2px rgba(11,30,91,0.06)",
+        "eq-md": "0 4px 12px rgba(11,30,91,0.08)",
+        "eq-lg": "0 12px 32px rgba(11,30,91,0.12)",
+        "eq-focus": "0 0 0 3px rgba(245,166,35,0.35)",
       },
       animation: {
         "fade-in": "fadeIn 0.4s ease-out forwards",

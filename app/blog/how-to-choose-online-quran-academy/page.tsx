@@ -229,7 +229,7 @@ export default function BlogPostPage() {
                   </div>
                   <Link
                     href="/free-trial"
-                    className="whitespace-nowrap bg-navy text-white font-bold px-6 py-3 rounded-xl hover:bg-navy/90 transition-colors text-sm"
+                    className="whitespace-nowrap bg-navy text-white font-bold px-6 py-3 rounded-full hover:bg-navy/90 transition-colors text-sm"
                   >
                     Book Your Free Trial Class →
                   </Link>
@@ -373,7 +373,7 @@ export default function BlogPostPage() {
                   </div>
                   <Link
                     href="/free-trial"
-                    className="whitespace-nowrap bg-gold text-navy font-bold px-6 py-3 rounded-xl hover:bg-gold/90 transition-colors text-sm"
+                    className="whitespace-nowrap bg-gold text-navy font-bold px-6 py-3 rounded-full hover:bg-gold/90 transition-colors text-sm"
                   >
                     Book Your Free Trial Class →
                   </Link>
@@ -536,7 +536,7 @@ export default function BlogPostPage() {
                   </p>
                   <Link
                     href="/free-trial"
-                    className="inline-block bg-navy text-white font-bold px-8 py-4 rounded-xl hover:bg-navy/90 transition-colors text-sm"
+                    className="inline-block bg-navy text-white font-bold px-8 py-4 rounded-full hover:bg-navy/90 transition-colors text-sm"
                   >
                     Book Your Free Trial Class, no Credit Card Required
                   </Link>
@@ -605,7 +605,7 @@ export default function BlogPostPage() {
                     </p>
                     <Link
                       href="/free-trial"
-                      className="block bg-navy text-white font-bold px-4 py-3 rounded-xl hover:bg-navy/90 transition-colors text-sm"
+                      className="block bg-navy text-white font-bold px-4 py-3 rounded-full hover:bg-navy/90 transition-colors text-sm"
                     >
                       Book Free Trial →
                     </Link>

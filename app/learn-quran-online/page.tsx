@@ -139,7 +139,7 @@ export default function LearnQuranOnlinePage() {
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
                 href="/free-trial"
-                className="bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-all duration-200 text-sm text-center"
+                className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
                 Book Your Free Trial Class
               </Link>
@@ -147,7 +147,7 @@ export default function LearnQuranOnlinePage() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/10 transition-all duration-200 text-sm text-center flex items-center justify-center gap-2"
+                className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-sm text-center flex items-center justify-center gap-2"
               >
                 <MessageCircle size={18} />
                 Ask a Question on WhatsApp

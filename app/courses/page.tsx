@@ -146,7 +146,7 @@ export default function CoursesPage() {
             <div className="flex flex-wrap gap-3 mt-8">
               <Link
                 href="/free-trial"
-                className="bg-gold text-navy font-bold px-7 py-3.5 rounded-xl hover:bg-gold-dark transition-all duration-200 text-sm"
+                className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
                 Book Free Trial Class
               </Link>
@@ -290,7 +290,7 @@ export default function CoursesPage() {
             </p>
             <Link
               href="/pricing"
-              className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-xl hover:bg-gold-dark transition-all duration-200 text-sm"
+              className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
             >
               View Pricing Plans
             </Link>

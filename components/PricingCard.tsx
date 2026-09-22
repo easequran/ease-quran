@@ -29,10 +29,10 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`relative rounded-2xl p-7 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+      className={`relative rounded-2xl p-7 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-eq-lg ${
         popular
-          ? "border-2 border-gold shadow-lg bg-navy text-white"
-          : "border border-gray-200 bg-white"
+          ? "border-2 border-gold shadow-eq-md bg-navy text-white"
+          : "border border-gray-200 bg-white shadow-eq-sm"
       }`}
     >
       {popular && (
@@ -106,14 +106,14 @@ export default function PricingCard({
           href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-center font-semibold py-3 rounded-xl transition-all duration-200 border-2 border-navy text-navy hover:bg-navy hover:text-white text-[15px]"
+          className="block text-center font-semibold py-3 rounded-full transition-all duration-200 border-2 border-navy text-navy hover:bg-navy hover:text-white text-[15px]"
         >
           WhatsApp for Custom Quote
         </a>
       ) : (
         <Link
           href="/free-trial"
-          className={`block text-center font-semibold py-3 rounded-xl transition-all duration-200 text-[15px] ${
+          className={`block text-center font-semibold py-3 rounded-full transition-all duration-200 text-[15px] ${
             popular
               ? "bg-gold text-navy hover:bg-gold-dark"
               : "bg-navy text-white hover:bg-navy/90"
