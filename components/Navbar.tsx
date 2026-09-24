@@ -89,7 +89,6 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMobile, setOpenMobile] = useState<string | null>(null);
   const [activeDesktop, setActiveDesktop] = useState<string | null>(null);
-  const [bannerVisible, setBannerVisible] = useState(true);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -108,57 +107,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Summer Announcement Banner ── */}
-      {bannerVisible && (
-        <div className="relative z-50 banner-bg banner-shimmer overflow-hidden text-navy">
-          <div className="relative flex items-center justify-center gap-2 sm:gap-4 py-3 px-10 text-center">
-
-            {/* Spinning star left */}
-            <span className="banner-star text-base hidden sm:inline shrink-0" aria-hidden="true">☀️</span>
-
-            {/* Double ping dot */}
-            <span className="relative flex h-3 w-3 shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-navy/70" />
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-navy/40 delay-150" style={{ animationDelay: "0.4s" }} />
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-navy" />
-            </span>
-
-            {/* Text — full banner is a link on mobile */}
-            <Link
-              href="/summer-quran-classes"
-              className="banner-text-pulse text-xs sm:text-sm font-extrabold tracking-wide leading-tight hover:underline"
-            >
-              <span className="uppercase">🎉 Summer 2026 Enrollment Now Open</span>
-              <span className="hidden sm:inline font-medium normal-case">
-                {" "}— One-on-one Quran classes for kids ages 4–14 · All 50 states · Free first class
-              </span>
-            </Link>
-
-            {/* Bouncing CTA — visible on all screen sizes */}
-            <Link
-              href="/summer-quran-classes"
-              className="inline-flex shrink-0 items-center gap-1 bg-navy text-white text-xs font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-full hover:bg-navy/80 transition-colors whitespace-nowrap animate-bounce shadow-md"
-              style={{ animationDuration: "1.2s" }}
-            >
-              <span className="hidden sm:inline">Enroll Free</span>
-              <span className="sm:hidden">Join</span>
-              {" "}→
-            </Link>
-
-            {/* Dismiss */}
-            <button
-              onClick={() => setBannerVisible(false)}
-              aria-label="Dismiss announcement"
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center rounded-full bg-navy/10 hover:bg-navy/20 transition-colors text-navy"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="w-3 h-3">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
-
       {/* ── Top social bar — scrolls away ── */}
       <div className="bg-navy border-b border-gold/20">
         <div className="container-custom flex items-center justify-between py-2.5">
