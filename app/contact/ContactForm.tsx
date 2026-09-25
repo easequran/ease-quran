@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { CheckCircle } from "lucide-react";
 import PhoneInput, { isValidPhoneNumber } from "@/components/PhoneInput";
+import { trackLead } from "@/lib/analytics";
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
@@ -41,6 +42,7 @@ export default function ContactForm() {
 
       if (res.ok) {
         setStatus("success");
+        trackLead("contact");
       } else {
         setStatus("error");
       }

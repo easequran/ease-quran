@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { X, CheckCircle, ShieldCheck, MessageCircle } from "lucide-react";
 import PhoneInput, { isValidPhoneNumber } from "./PhoneInput";
+import { trackLead } from "@/lib/analytics";
 
 const WHATSAPP_NUMBER = "923195657389";
 const WHATSAPP_MESSAGE = encodeURIComponent(
@@ -100,6 +101,7 @@ export default function PopupForm() {
       if (res.ok) {
         setSubmitted(true);
         sessionStorage.setItem("popup_submitted", "true");
+        trackLead("popup");
       } else {
         setError("Something went wrong. Please try again.");
       }

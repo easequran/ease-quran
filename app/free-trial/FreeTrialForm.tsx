@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import PhoneInput, { isValidPhoneNumber } from "@/components/PhoneInput";
+import { trackLead } from "@/lib/analytics";
 
 const courses = [
   "Noorani Qaida (Beginners)",
@@ -53,6 +54,7 @@ export default function FreeTrialForm() {
 
       if (res.ok) {
         setStatus("success");
+        trackLead("free_trial");
       } else {
         setStatus("error");
       }
