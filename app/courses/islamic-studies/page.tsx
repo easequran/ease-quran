@@ -228,7 +228,7 @@ export default function IslamicStudiesPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/Courses/course-islamic.webp"
+                src="/images/Courses/online-islamic-studies-classes.webp"
                 alt="Online Islamic Studies classes, Aqeedah, Fiqh, Seerah at Ease Quran Academy"
                 fill
                 className="object-cover"

@@ -243,7 +243,7 @@ export default function QuranForRevertsPage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/Courses/course-quran-for-reverts.webp"
+                src="/images/Courses/quran-classes-for-new-muslims.webp"
                 alt="Quran classes for new Muslims and reverts, Ease Quran Online Academy"
                 fill
                 className="object-cover"

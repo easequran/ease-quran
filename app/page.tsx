@@ -22,7 +22,7 @@ const courses = [
     title: "Quran for Kids",
     description:
       "Fun, structured Quran learning designed for children ages 4–14. Patient teachers who understand how children learn.",
-    image: "/images/Courses/course-kids.webp",
+    image: "/images/Courses/online-quran-classes-for-kids.webp",
     href: "/courses/quran-for-kids",
     badge: "Most Popular",
   },
@@ -30,35 +30,35 @@ const courses = [
     title: "Tajweed (Quran Recitation)",
     description:
       "Master the rules of Tajweed with an expert certified teacher. Perfect your pronunciation and recite the Quran beautifully.",
-    image: "/images/Courses/course-tajweed.webp",
+    image: "/images/Courses/online-tajweed-classes.webp",
     href: "/courses/tajweed",
   },
   {
     title: "Hifz Program",
     description:
       "A structured memorization program with proven techniques to help students memorize the complete Quran.",
-    image: "/images/Courses/course-hifz.webp",
+    image: "/images/Courses/online-hifz-quran-memorization.webp",
     href: "/courses/hifz",
   },
   {
     title: "Noorani Qaida",
     description:
       "The perfect starting point for absolute beginners. Learn Arabic letters and basic reading rules from scratch.",
-    image: "/images/Courses/course-noorani.webp",
+    image: "/images/Courses/noorani-qaida-online-classes.webp",
     href: "/courses/noorani-qaida",
   },
   {
     title: "Arabic Language",
     description:
       "Learn to understand the language of the Quran. Conversational and Classical Arabic courses for all levels.",
-    image: "/images/Courses/course-arabic.webp",
+    image: "/images/Courses/learn-arabic-online.webp",
     href: "/courses/arabic-language",
   },
   {
     title: "Islamic Studies",
     description:
       "Comprehensive Islamic education covering Fiqh, Seerah, Aqeedah, and Islamic manners for all ages.",
-    image: "/images/Courses/course-islamic.webp",
+    image: "/images/Courses/online-islamic-studies-classes.webp",
     href: "/courses/islamic-studies",
   },
 ];

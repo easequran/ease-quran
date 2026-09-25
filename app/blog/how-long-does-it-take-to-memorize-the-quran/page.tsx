@@ -76,7 +76,7 @@ const articleSchema = {
   },
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
-  image: "https://easequran.com/images/Courses/course-hifz.webp",
+  image: "https://easequran.com/images/Courses/online-hifz-quran-memorization.webp",
   mainEntityOfPage: PAGE_URL,
   url: PAGE_URL,
   inLanguage: "en-US",
@@ -238,8 +238,8 @@ export default function HowLongToMemorizeQuranPage() {
 
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden my-10 shadow-md">
               <Image
-                src="/images/Courses/course-hifz.webp"
-                alt="Student memorizing the Quran during an online Hifz class with a certified teacher"
+                src="/images/Courses/online-hifz-quran-memorization.webp"
+                alt="Adult student reading from the Quran while working on memorizing it"
                 fill
                 sizes="(max-width: 768px) 100vw, 768px"
                 className="object-cover"

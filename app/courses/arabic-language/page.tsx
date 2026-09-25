@@ -227,7 +227,7 @@ export default function ArabicLanguagePage() {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/images/Courses/course-arabic.webp"
+                src="/images/Courses/learn-arabic-online.webp"
                 alt="Online Arabic language classes: learn Classical and Quranic Arabic at Ease Quran Academy"
                 fill
                 className="object-cover"

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const courses = [
   {
     href: "/courses/quran-for-kids",
-    image: "/images/Courses/course-kids.webp",
+    image: "/images/Courses/online-quran-classes-for-kids.webp",
     badge: "Most Popular",
     title: "Quran for Kids",
     description:
@@ -30,7 +30,7 @@ const courses = [
   },
   {
     href: "/courses/tajweed",
-    image: "/images/Courses/course-tajweed.webp",
+    image: "/images/Courses/online-tajweed-classes.webp",
     badge: null,
     title: "Tajweed (Quran Recitation)",
     description:
@@ -39,7 +39,7 @@ const courses = [
   },
   {
     href: "/courses/hifz",
-    image: "/images/Courses/course-hifz.webp",
+    image: "/images/Courses/online-hifz-quran-memorization.webp",
     badge: null,
     title: "Hifz (Quran Memorization)",
     description:
@@ -48,7 +48,7 @@ const courses = [
   },
   {
     href: "/courses/noorani-qaida",
-    image: "/images/Courses/course-noorani.webp",
+    image: "/images/Courses/noorani-qaida-online-classes.webp",
     badge: "Start Here",
     title: "Noorani Qaida",
     description:
@@ -57,7 +57,7 @@ const courses = [
   },
   {
     href: "/courses/arabic-language",
-    image: "/images/Courses/course-arabic.webp",
+    image: "/images/Courses/learn-arabic-online.webp",
     badge: null,
     title: "Arabic Language",
     description:
@@ -66,7 +66,7 @@ const courses = [
   },
   {
     href: "/courses/islamic-studies",
-    image: "/images/Courses/course-islamic.webp",
+    image: "/images/Courses/online-islamic-studies-classes.webp",
     badge: null,
     title: "Islamic Studies",
     description:
@@ -75,7 +75,7 @@ const courses = [
   },
   {
     href: "/courses/quran-for-adults",
-    image: "/images/Courses/course-quran-for-adults.webp",
+    image: "/images/Courses/online-quran-classes-for-adults.webp",
     badge: null,
     title: "Quran for Adults",
     description:
@@ -84,7 +84,7 @@ const courses = [
   },
   {
     href: "/courses/quran-for-reverts",
-    image: "/images/Courses/course-quran-for-reverts.webp",
+    image: "/images/Courses/quran-classes-for-new-muslims.webp",
     badge: "New Muslims",
     title: "Quran for Reverts",
     description:
