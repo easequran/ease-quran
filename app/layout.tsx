@@ -8,14 +8,8 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import PopupForm from "@/components/PopupForm";
 
-// Design-system font: Poppins covers both headings (--font-playfair) and body (--font-inter).
-const playfair = Poppins({
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
+// Design-system font: one Poppins instance covers both headings and body.
+// Tailwind's font-playfair and font-inter both resolve to --font-inter.
 const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -23,12 +17,16 @@ const inter = Poppins({
   display: "swap",
 });
 
-// Cairo for Arabic UI/body; Amiri (design system's display font) is loaded separately for Quranic callouts.
+// Cairo for Arabic UI/body; Amiri (design system's display font) for Quranic callouts.
+// Not preloaded: no page renders Arabic text in these fonts yet, and preloading
+// them pulled ~240 KB into every page load. They still download on demand
+// (via unicode-range) the moment an element uses font-arabic / font-arabic-display.
 const notoNaskhArabic = Cairo({
   subsets: ["arabic"],
   weight: ["400", "500", "700"],
   variable: "--font-arabic",
   display: "swap",
+  preload: false,
 });
 
 const amiri = Amiri({
@@ -36,6 +34,7 @@ const amiri = Amiri({
   weight: ["400", "700"],
   variable: "--font-arabic-display",
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -102,7 +101,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} ${notoNaskhArabic.variable} ${amiri.variable}`}>
+    <html lang="en" className={`${inter.variable} ${notoNaskhArabic.variable} ${amiri.variable}`}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-P4FJDN2SDX"

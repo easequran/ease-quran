@@ -36,8 +36,8 @@ const config: Config = {
         "eq-info": { 100: "#E6EEFB", 600: "#1B5AA8" },
       },
       fontFamily: {
-        // Both headings and body now render Poppins per the Ease Quran Design System.
-        playfair: ["var(--font-playfair)", "Poppins", "system-ui", "sans-serif"],
+        // Both headings and body render Poppins (single --font-inter instance) per the Ease Quran Design System.
+        playfair: ["var(--font-inter)", "Poppins", "system-ui", "sans-serif"],
         inter: [
           "var(--font-inter)",
           "Poppins",
