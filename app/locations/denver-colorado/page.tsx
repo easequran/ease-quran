@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
 import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
+import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Denver, Colorado",
@@ -374,6 +375,8 @@ export default function DenverColoradoPage() {
           </div>
         </div>
       </section>
+
+      <NearbyLocations slug="denver-colorado" />
 
       {/* FAQ */}
       <section className="section-padding bg-white">

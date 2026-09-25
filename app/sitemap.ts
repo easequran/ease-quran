@@ -63,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/safety`, file: "app/safety/page.tsx", changeFrequency: "yearly", priority: 0.4 },
     { url: `${base}/blog`, file: "app/blog/page.tsx", changeFrequency: "weekly", priority: 0.7 },
     { url: `${base}/summer-quran-classes`, file: "app/summer-quran-classes/page.tsx", changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/ramadan-quran-classes`, file: "app/ramadan-quran-classes/page.tsx", changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/learn-quran-online`, file: "app/learn-quran-online/page.tsx", changeFrequency: "monthly", priority: 0.9 },
     // Course pages
     { url: `${base}/courses/quran-for-kids`, file: "app/courses/quran-for-kids/page.tsx", changeFrequency: "monthly", priority: 0.8 },

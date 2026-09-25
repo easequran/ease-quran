@@ -5,19 +5,22 @@ import { BookOpen, Star, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
+import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
 
 export const metadata: Metadata = {
-  title: "Online Quran Classes for Kids in USA",
+  title: { absolute: "Online Quran Classes for Kids: After School & Weekends | Ease Quran" },
   description:
-    "Fun, structured online Quran classes for children ages 4–14. Certified teachers, female teachers available. Book a free trial class today.",
+    "One-on-one online Quran classes for kids ages 4 to 14, after school or on weekends. Certified teachers, female teachers available. First class free.",
   alternates: {
     canonical: "https://easequran.com/courses/quran-for-kids",
   },
   openGraph: {
-    title: "Online Quran Classes for Kids in USA | Ease Quran",
+    title: "Online Quran Classes for Kids: After School & Weekends | Ease Quran",
     description:
-      "Fun, structured online Quran classes for children ages 4–14. Certified teachers, female teachers available. Book a free trial class today.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for Kids in USA, Ease Quran Academy" }],
+      "One-on-one online Quran classes for kids ages 4 to 14, booked after school, in the evening or on weekends. Certified teachers and a free first class.",
+    url: "https://easequran.com/courses/quran-for-kids",
+    type: "website",
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Classes for Kids, Ease Quran Academy" }],
   },
 };
 
@@ -36,7 +39,7 @@ const courseSchema = {
   "@type": "Course",
   name: "Online Quran Classes for Kids",
   description:
-    "Fun, structured online Quran classes for children ages 4–14. Certified teachers with female teachers available for sisters and children.",
+    "One-on-one online Quran classes for children ages 4 to 14, scheduled after school, in the evening or on weekends. Certified teachers, with female teachers available for sisters and children.",
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
@@ -50,53 +53,6 @@ const courseSchema = {
   inLanguage: "en",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is it safe for kids to learn Quran online?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All Ease Quran classes take place over a video call with a parent present. Our teachers are fully vetted and certified from Wifaq ul Madaris. We encourage parents to sit nearby during early classes. Female teachers are available for sisters and younger children.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What age can my child start Quran classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We accept children from age 4 onwards. For ages 4–6, classes are shorter (20–25 minutes) and highly interactive with games and visuals. From age 7+, we follow a more structured Noorani Qaida and Quran reading curriculum.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have female teachers for my daughter?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Almas Fatima is our certified female Quran teacher, available for sisters and children. She holds a Wifaq ul Madaris certification and a B.A. in Islamic Studies. Simply mention your preference when booking your free trial.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long are kids' Quran classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Class duration depends on age and attention span. Ages 4–7: 20–30 minutes. Ages 8–12: 30–45 minutes. Ages 13+: 45–60 minutes. We always start shorter and increase as the child builds focus and habit.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What if my child loses interest in Quran class?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our teachers are trained in child-friendly teaching methods, using storytelling, visual aids, reward systems, and patience. If a child is struggling to engage, we adjust the approach. We also offer a free replacement class if a session does not meet your expectations.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "Is it safe for kids to learn Quran online?",
@@ -106,7 +62,7 @@ const faqs = [
   {
     question: "What age can my child start Quran classes?",
     answer:
-      "We accept children from age 4 onwards. For ages 4–6, classes are shorter (20–25 minutes) and highly interactive with games and visuals. From age 7+, we follow a more structured Noorani Qaida and Quran reading curriculum.",
+      "We accept children from age 4 onwards. For ages 4 to 6, classes are shorter (20 to 25 minutes) and highly interactive with games and visuals. From age 7+, we follow a more structured Noorani Qaida and Quran reading curriculum.",
   },
   {
     question: "Do you have female teachers for my daughter?",
@@ -116,7 +72,22 @@ const faqs = [
   {
     question: "How long are kids' Quran classes?",
     answer:
-      "Class duration depends on age and attention span. Ages 4–7: 20–30 minutes. Ages 8–12: 30–45 minutes. Ages 13+: 45–60 minutes. We always start shorter and increase as the child builds focus and habit.",
+      "Class duration depends on age and attention span. Ages 4 to 7: 20 to 30 minutes. Ages 8 to 12: 30 to 45 minutes. Ages 13+: 45 to 60 minutes. We always start shorter and increase as the child builds focus and habit.",
+  },
+  {
+    question: "Can my child take Quran classes after school?",
+    answer:
+      "Yes. Most of the children we teach come to class after school. Lessons run morning through evening, six days a week, so you can pick a slot that suits your child's energy, for example after a snack and before homework. Classes are booked in your own local time zone.",
+  },
+  {
+    question: "Do you offer weekend Quran classes for kids?",
+    answer:
+      "Yes. Classes can be booked on Saturday and Sunday, or you can mix one weekday lesson with one weekend lesson. If every class in your plan falls on the weekend, our optional Weekend Priority add-on guarantees your preferred Saturday or Sunday slot.",
+  },
+  {
+    question: "How many Quran classes a week should my child take during the school year?",
+    answer:
+      "Two classes a week is a good starting point while a child settles into the school routine. For steady progress we recommend three to five shorter classes a week, because frequent practice helps young children remember more than one long weekly session.",
   },
   {
     question: "What if my child loses interest in Quran class?",
@@ -124,6 +95,16 @@ const faqs = [
       "Our teachers are trained in child-friendly teaching methods, using storytelling, visual aids, reward systems, and patience. If a child is struggling to engage, we adjust the approach. We also offer a free replacement class if a session does not meet your expectations.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function QuranForKidsPage() {
   return (
@@ -165,9 +146,10 @@ export default function QuranForKidsPage() {
               Online Quran Classes for Kids
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mb-8">
-              Certified, patient teachers bring structured Quran education directly to your home.
-              Children ages 4–14 learn Arabic letters, Noorani Qaida, Quran reading, short Surahs,
-              and Islamic manners, all in a safe, engaging online environment.
+              Certified, patient teachers work with your child one-on-one at home, in after school,
+              evening or weekend slots that fit your family&apos;s week. Children ages 4 to 14 learn
+              Arabic letters, Noorani Qaida, Quran reading, short Surahs and Islamic manners in a
+              safe, engaging online class.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -223,7 +205,7 @@ export default function QuranForKidsPage() {
                 </p>
               </div>
               <div className="mt-6 flex flex-wrap gap-3">
-                <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ Ages 4–14</span>
+                <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ Ages 4 to 14</span>
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ Female Teachers Available</span>
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ English Medium</span>
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">✓ Free First Class</span>
@@ -333,14 +315,14 @@ export default function QuranForKidsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                age: "Ages 4–7",
+                age: "Ages 4 to 7",
                 label: "Early Beginners",
                 icon: Star,
-                desc: "Children at this age begin with letter recognition, sounds, and basic Arabic through interactive games and visual aids. Classes are 20–25 minutes and highly engaging.",
+                desc: "Children at this age begin with letter recognition, sounds, and basic Arabic through interactive games and visual aids. Classes are 20 to 25 minutes and highly engaging.",
                 points: ["Arabic letter sounds", "Coloring and tracing activities", "Islamic songs and rhymes", "Noorani Qaida Part 1"],
               },
               {
-                age: "Ages 8–12",
+                age: "Ages 8 to 12",
                 label: "Intermediate Learners",
                 icon: BookOpen,
                 desc: "Children who can concentrate for longer sessions. This group works through Noorani Qaida, Quran reading, and begins Surah memorization with proper Tajweed.",
@@ -381,6 +363,96 @@ export default function QuranForKidsPage() {
         </div>
       </section>
 
+      {/* School-year scheduling */}
+      <section className="section-padding bg-offwhite">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto">
+            <span className="eyebrow mb-4">Busy School Weeks</span>
+            <h2 className="heading-2 text-navy mb-6">
+              Quran Classes That Fit Around School
+            </h2>
+            <p className="text-grey leading-relaxed mb-4">
+              Most parents who contact us are not asking whether their child should learn the
+              Quran. They are asking when. Between school, homework, sports and family time, a
+              weekly drive to an evening class is often the first thing to fall off the calendar.
+              Because every lesson is online and one-on-one, you choose the slot and your child
+              logs in from home.
+            </p>
+
+            <h3 className="heading-3 text-navy mt-10 mb-3">Starting with the new school year</h3>
+            <p className="text-grey leading-relaxed mb-4">
+              The start of the school year is when family routines get set, so it is the easiest
+              time to give Quran a fixed place in the week. Many families begin with two classes a
+              week while their child adjusts to a new grade, then add a third once homework and
+              activities have settled. There is no term start date to wait for. After the{" "}
+              <Link href="/free-trial" className="text-gold font-semibold hover:underline">
+                free trial class
+              </Link>
+              , regular lessons can begin as soon as you have picked your times.
+            </p>
+
+            <h3 className="heading-3 text-navy mt-10 mb-3">After school Quran classes</h3>
+            <p className="text-grey leading-relaxed mb-4">
+              Lessons run from morning through evening, six days a week, so an after school slot
+              is easy to find. Younger children usually do best with a short class of 20 to 30
+              minutes after a snack and a break, before homework takes over. Older children often
+              prefer a slightly later evening lesson. Whichever you choose, keeping the same time
+              each week helps the class become part of the day rather than one more thing to
+              negotiate.
+            </p>
+
+            <h3 className="heading-3 text-navy mt-10 mb-3">Weekend Quran classes</h3>
+            <p className="text-grey leading-relaxed mb-4">
+              If weeknights are already full, classes can move to Saturday or Sunday, or you can
+              pair one weekday lesson with one weekend lesson. Unlike a large weekend school class,
+              your child still has the teacher to themselves for the whole session. Families who
+              want every class on the weekend can add{" "}
+              <Link href="/pricing" className="text-gold font-semibold hover:underline">
+                Weekend Priority
+              </Link>{" "}
+              to guarantee their preferred slot.
+            </p>
+
+            <h3 className="heading-3 text-navy mt-10 mb-3">When the week changes</h3>
+            <p className="text-grey leading-relaxed mb-4">
+              Exam weeks, school trips and holidays happen. Lessons can be rescheduled with 24
+              hours notice, so a busy week does not mean falling behind. If you have more than one
+              child, ask for their lessons to be booked one after another, and the sibling discount
+              is applied automatically.
+            </p>
+
+            <h3 className="heading-3 text-navy mt-10 mb-3">Why one-on-one suits children</h3>
+            <p className="text-grey leading-relaxed mb-4">
+              In a group, a child who is struggling with a letter waits, and a child who is ahead
+              gets bored. With one teacher and one student, every correction is made on the spot
+              and the pace follows your child. For shy children it also means reciting out loud
+              without an audience, which is often what builds their confidence first.
+            </p>
+
+            <h3 className="heading-3 text-navy mt-10 mb-3">Booked in your local time</h3>
+            <p className="text-grey leading-relaxed">
+              Class times are always confirmed in your own time zone, whether you are{" "}
+              <Link href="/locations/new-york" className="text-gold font-semibold hover:underline">
+                in New York City
+              </Link>
+              ,{" "}
+              <Link href="/locations/seattle" className="text-gold font-semibold hover:underline">
+                in Seattle
+              </Link>{" "}
+              or{" "}
+              <Link href="/locations" className="text-gold font-semibold hover:underline">
+                anywhere else in the US
+              </Link>
+              . During Ramadan, lessons can move around school, iftar and family time. See our{" "}
+              <Link href="/ramadan-quran-classes" className="text-gold font-semibold hover:underline">
+                Ramadan Quran classes
+              </Link>{" "}
+              for how families plan that month.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Class Structure */}
       <section className="section-padding bg-navy">
         <div className="container-custom">
@@ -417,7 +489,7 @@ export default function QuranForKidsPage() {
                 },
                 {
                   title: "Duration Options",
-                  desc: "Ages 4–7: 20–30 minutes per class. Ages 8–12: 30–45 minutes. Ages 13+: 45–60 minutes. We recommend 3–5 classes per week for best results, though 2 classes per week is a good starting point.",
+                  desc: "Ages 4 to 7: 20 to 30 minutes per class. Ages 8 to 12: 30 to 45 minutes. Ages 13+: 45 to 60 minutes. We recommend 3 to 5 classes per week for best results, though 2 classes per week is a good starting point.",
                 },
                 {
                   title: "Parents Welcome",
@@ -473,6 +545,16 @@ export default function QuranForKidsPage() {
         </div>
       </section>
 
+      {/* Parent feedback (real WhatsApp screenshots from components/proof.ts) */}
+      <section className="pb-16 md:pb-24 bg-white">
+        <div className="container-custom">
+          <WhatsAppReviewsRow
+            heading="What Families Tell Us"
+            subline="Unedited messages sent to us on WhatsApp after trial classes."
+          />
+        </div>
+      </section>
+
       {/* Pricing CTA */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
@@ -510,6 +592,13 @@ export default function QuranForKidsPage() {
               </h2>
             </div>
             <FAQAccordion faqs={faqs} />
+            <p className="text-center text-grey text-sm mt-6">
+              Thinking about memorizing the whole Quran one day?{" "}
+              <Link href="/blog/how-long-does-it-take-to-memorize-the-quran" className="text-gold font-semibold hover:underline">
+                Read how long Hifz usually takes
+              </Link>
+              {" "}before you plan.
+            </p>
           </div>
         </div>
       </section>

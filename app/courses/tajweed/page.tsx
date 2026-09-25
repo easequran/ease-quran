@@ -5,6 +5,7 @@ import { CheckCircle } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
+import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Online Tajweed Classes USA",
@@ -439,6 +440,16 @@ export default function TajweedPage() {
           </div>
         </div>
       </section>
+
+      <CourseLocations
+        heading="Tajweed Practice That Fits a Commuter's Week"
+        intro="Tajweed improves through short, regular sessions with a teacher correcting you as you recite. In metros where the drive to a class can take longer than the lesson itself, learning from home is what makes that regular practice realistic."
+        links={[
+          { slug: "new-york", reason: "long commutes between boroughs leave little time for in-person classes." },
+          { slug: "northern-virginia", reason: "Beltway traffic never stands between you and your lesson." },
+          { slug: "charlotte-north-carolina", reason: "early starts in banking and finance and heavier traffic every year make evening classes across town hard to keep." },
+        ]}
+      />
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">

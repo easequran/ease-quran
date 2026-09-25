@@ -5,6 +5,7 @@ import { Users, BookOpen, Star } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
+import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Online Islamic Studies Classes in USA",
@@ -435,6 +436,16 @@ export default function IslamicStudiesPage() {
           </div>
         </div>
       </section>
+
+      <CourseLocations
+        heading="Islamic Studies in English for Heritage Communities"
+        intro="Children growing up between a family's heritage culture and American school life often understand lessons best in English. Our Islamic Studies classes are taught in clear English, for every community."
+        links={[
+          { slug: "minneapolis", reason: "home to one of America's largest Somali Muslim communities." },
+          { slug: "northern-virginia", reason: "home to one of America's largest Afghan American communities." },
+          { slug: "st-louis-missouri", reason: "home to the largest Bosnian community outside Bosnia." },
+        ]}
+      />
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">

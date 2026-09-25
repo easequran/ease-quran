@@ -5,6 +5,7 @@ import { User, BookOpen } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
+import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Noorani Qaida Online Classes USA",
@@ -447,6 +448,16 @@ export default function NooraniQaidaPage() {
           </div>
         </div>
       </section>
+
+      <CourseLocations
+        heading="A First Step for Families in Growing Communities"
+        intro="Noorani Qaida is where most children and new learners begin. In fast-growing communities, families who have just moved often do not know yet where to find a teacher, and online lessons mean a child can start straight away."
+        links={[
+          { slug: "charlotte-north-carolina", reason: "a young, fast-growing community where you do not need a local network in place before your child starts." },
+          { slug: "atlanta", reason: "one of the fastest-growing Muslim communities in the South." },
+          { slug: "denver-colorado", reason: "a community shaped by resettlement and new arrivals." },
+        ]}
+      />
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">

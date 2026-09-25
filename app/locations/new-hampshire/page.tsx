@@ -4,6 +4,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
+import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in New Hampshire",
@@ -184,6 +185,8 @@ export default function NewHampshirePage() {
           </div>
         </div>
       </section>
+
+      <NearbyLocations slug="new-hampshire" />
 
       {/* FAQ */}
       <section className="section-padding bg-white">

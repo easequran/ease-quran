@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
 import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
+import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Jackson, Mississippi",
@@ -361,6 +362,8 @@ export default function JacksonMississippiPage() {
           </div>
         </div>
       </section>
+
+      <NearbyLocations slug="jackson-mississippi" />
 
       {/* FAQ */}
       <section className="section-padding bg-white">

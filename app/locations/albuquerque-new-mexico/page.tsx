@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
 import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
+import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Albuquerque, New Mexico",
@@ -374,6 +375,8 @@ export default function AlbuquerqueNewMexicoPage() {
           </div>
         </div>
       </section>
+
+      <NearbyLocations slug="albuquerque-new-mexico" />
 
       {/* FAQ */}
       <section className="section-padding bg-white">

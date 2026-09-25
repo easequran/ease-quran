@@ -5,6 +5,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 import { BookOpen, Heart, GraduationCap } from "lucide-react";
+import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Online Hifz Program USA",
@@ -435,12 +436,25 @@ export default function HifzPage() {
         </div>
       </section>
 
+      <CourseLocations
+        heading="Hifz Without the Long Drive"
+        intro="Hifz depends on showing up nearly every day, and distance is often what quietly breaks that rhythm. For families who live far from a structured Hifz program, a daily online class removes the drive and keeps the sabaq and revision on track."
+        links={[
+          { slug: "jackson-mississippi", reason: "many families here would otherwise face a multi-hour drive to a larger city for structured Islamic education." },
+          { slug: "little-rock-arkansas", reason: "local options are limited, and some families have looked as far as Memphis or Dallas." },
+          { slug: "alaska", reason: "outside Anchorage, some towns have no mosque for hundreds of miles, so daily memorization practice has to happen at home." },
+        ]}
+      />
+
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-10">
             <span className="eyebrow mb-4">Related Courses</span>
             <h2 className="font-playfair font-bold text-2xl md:text-3xl text-navy mb-2">Explore More Courses</h2>
+            <p className="text-grey text-sm mt-3 max-w-xl mx-auto">
+              Planning your timeline? Read <Link href="/blog/how-long-does-it-take-to-memorize-the-quran" className="text-gold font-semibold hover:underline">how long it takes to memorize the Quran</Link>, or see how students use <Link href="/ramadan-quran-classes" className="text-gold font-semibold hover:underline">Ramadan Quran classes</Link> for focused revision.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[

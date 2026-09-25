@@ -5,6 +5,7 @@ import { BookOpen, Heart } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
+import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Arabic Language Classes Online",
@@ -432,6 +433,15 @@ export default function ArabicLanguagePage() {
           </div>
         </div>
       </section>
+
+      <CourseLocations
+        heading="Quranic Arabic for Arab American Families"
+        intro="Plenty of children in Arabic-speaking homes still find the Quran hard to follow, because the Arabic of the Quran differs from the dialect spoken at home. Our lessons are taught in English by teachers trained in classical Quranic Arabic."
+        links={[
+          { slug: "dearborn-michigan", reason: "often called the Arab American Muslim capital of the United States." },
+          { slug: "paterson-new-jersey", reason: "home to one of the country's largest Arab American communities." },
+        ]}
+      />
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">

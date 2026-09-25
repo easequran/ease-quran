@@ -5,6 +5,7 @@ import { BookOpen, CheckCircle } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
+import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Quran Classes for New Muslims (Reverts) in USA",
@@ -456,12 +457,27 @@ export default function QuranForRevertsPage() {
         </div>
       </section>
 
+      <CourseLocations
+        heading="Support for New Muslims, Wherever You Live"
+        intro="Many reverts live in places where the local community is small, or where they do not yet know anyone at the masjid. A patient teacher online gives you a private place to start, at your own pace."
+        links={[
+          { slug: "portland-oregon", reason: "a growing East African community alongside a notable number of reverts." },
+          { slug: "los-angeles", reason: "a significant and growing revert community across the metro." },
+          { slug: "salt-lake-city-utah", reason: "a small, close-knit Muslim minority community." },
+        ]}
+      />
+
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-10">
             <span className="eyebrow mb-4">Related Courses</span>
             <h2 className="font-playfair font-bold text-2xl md:text-3xl text-navy mb-2">Continue Your Learning</h2>
+            <p className="text-grey text-sm mt-3 max-w-xl mx-auto">
+              Preparing for your first Ramadan? Our{" "}
+              <Link href="/ramadan-quran-classes" className="text-gold font-semibold hover:underline">Ramadan Quran classes</Link>{" "}
+              page explains how new Muslims fit lessons around the fast.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[

@@ -40,6 +40,15 @@ interface BlogPost {
 
 const posts: BlogPost[] = [
   {
+    title: "How Long Does It Take to Memorize the Quran?",
+    slug: "how-long-does-it-take-to-memorize-the-quran",
+    excerpt:
+      "There is no fixed answer, but there are realistic ranges. See how age, reading level, daily study time, revision and teacher support shape a Hifz timeline for children, teens and adults, with worked examples.",
+    date: "September 25, 2026",
+    category: "Hifz Program",
+    readTime: "10 min",
+  },
+  {
     title: "How to Choose an Online Quran Academy for Your Child",
     slug: "how-to-choose-online-quran-academy",
     excerpt:

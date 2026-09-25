@@ -5,6 +5,7 @@ import { CheckCircle, User, BarChart2 } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
+import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes for Adults USA",
@@ -436,12 +437,25 @@ export default function QuranForAdultsPage() {
         </div>
       </section>
 
+      <CourseLocations
+        heading="Quran Classes Around Irregular Work Hours"
+        intro="Adults rarely fail at Quran study for lack of interest. More often, a fixed weekly class simply clashes with work. Online one-on-one lessons can be booked around shifts, on-call weeks and changing rotas."
+        links={[
+          { slug: "las-vegas", reason: "a city that runs around the clock, where many parents work swing or graveyard shifts." },
+          { slug: "birmingham-alabama", reason: "doctors, residents and nurses at the city's large medical center fit lessons around rotating schedules." },
+          { slug: "seattle", reason: "easy rescheduling for demanding or shifting work weeks in Pacific Time." },
+        ]}
+      />
+
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-10">
             <span className="eyebrow mb-4">Related Courses</span>
             <h2 className="font-playfair font-bold text-2xl md:text-3xl text-navy mb-2">Explore More Courses</h2>
+            <p className="text-grey text-sm mt-3 max-w-xl mx-auto">
+              Setting yourself a goal for the month of fasting? See our{" "}<Link href="/ramadan-quran-classes" className="text-gold font-semibold hover:underline">Ramadan Quran classes for adults</Link>.
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
