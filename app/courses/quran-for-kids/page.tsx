@@ -5,7 +5,8 @@ import { BookOpen, Star, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
-import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
+import FamilyReviews from "@/components/FamilyReviews";
+import { reviewsForCourse } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title: { absolute: "Online Quran Classes for Kids: After School & Weekends | Ease Quran" },
@@ -545,13 +546,10 @@ export default function QuranForKidsPage() {
         </div>
       </section>
 
-      {/* Parent feedback (real WhatsApp screenshots from components/proof.ts) */}
+      {/* Family reviews (lib/reviews.ts) */}
       <section className="pb-16 md:pb-24 bg-white">
         <div className="container-custom">
-          <WhatsAppReviewsRow
-            heading="What Families Tell Us"
-            subline="Unedited messages sent to us on WhatsApp after trial classes."
-          />
+          <FamilyReviews reviews={reviewsForCourse("quran-for-kids")} />
         </div>
       </section>
 

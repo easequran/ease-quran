@@ -6,6 +6,8 @@ import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 import CourseLocations from "@/components/CourseLocations";
+import FamilyReviews from "@/components/FamilyReviews";
+import { reviewsById } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes for Adults USA",
@@ -395,6 +397,13 @@ export default function QuranForAdultsPage() {
               qualification="Certified Quran Teacher"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Family reviews (lib/reviews.ts) */}
+      <section className="pb-16 md:pb-24 bg-white">
+        <div className="container-custom">
+          <FamilyReviews reviews={reviewsById(["r004"])} />
         </div>
       </section>
 
