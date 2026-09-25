@@ -48,7 +48,7 @@ const courses = [
   },
   {
     href: "/courses/noorani-qaida",
-    image: "/images/Courses/noorani-qaida-online-classes.webp",
+    image: "/images/Courses/noorani-qaida-classes-online.webp",
     badge: "Start Here",
     title: "Noorani Qaida",
     description:

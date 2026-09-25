@@ -44,7 +44,7 @@ const courses = [
     title: "Noorani Qaida",
     description:
       "The perfect starting point for absolute beginners. Learn Arabic letters and basic reading rules from scratch.",
-    image: "/images/Courses/noorani-qaida-online-classes.webp",
+    image: "/images/Courses/noorani-qaida-classes-online.webp",
     href: "/courses/noorani-qaida",
   },
   {
