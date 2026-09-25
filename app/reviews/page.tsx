@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ReviewCard from "@/components/ReviewCard";
-import LiteYouTube from "@/components/LiteYouTube";
 import CTASection from "@/components/CTASection";
 import { familyReviews } from "@/lib/reviews";
-import { videos } from "@/components/proof";
 
 const PAGE_URL = "https://easequran.com/reviews";
 
@@ -80,26 +78,8 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      {/* Video testimonials */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-10 max-w-2xl mx-auto">
-            <h2 className="heading-3 text-navy mb-3">Video Messages From Our Students</h2>
-            <p className="text-grey text-sm leading-relaxed">
-              We also teach English-speaking students outside the US. These two students, both in
-              the UK, recorded short videos about their classes.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {videos.map((v) => (
-              <LiteYouTube key={v.id} id={v.id} caption={v.caption} title={v.name} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Next steps */}
-      <section className="section-padding bg-offwhite">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="heading-3 text-navy mb-4">See It for Yourself</h2>
