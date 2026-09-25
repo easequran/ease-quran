@@ -20,14 +20,14 @@ import FAQAccordion from "@/components/FAQAccordion";
 // ─── Metadata ───────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: { absolute: "Summer Quran Classes for Kids 2026 | Ease Quran Academy" },
+  title: { absolute: "Summer Quran Classes for Kids (Online, 1-on-1) | Ease Quran Academy" },
   description:
     "Certified online Quran classes for kids ages 4 to 14, all summer. Free first class, female teachers available. Enroll your child today.",
   alternates: {
     canonical: "https://easequran.com/summer-quran-classes",
   },
   openGraph: {
-    title: "Summer Quran Classes for Kids 2026 | Ease Quran Academy",
+    title: "Summer Quran Classes for Kids (Online, 1-on-1) | Ease Quran Academy",
     description:
       "Certified online Quran classes for kids ages 4 to 14, all summer. Free first class, female teachers available. Enroll your child today.",
     url: "https://easequran.com/summer-quran-classes",
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
         url: "https://easequran.com/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Summer Quran Classes for Kids 2026 — Ease Quran Academy",
+        alt: "Summer Quran Classes for Kids — Ease Quran Academy",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Summer Quran Classes for Kids 2026 | Ease Quran Academy",
+    title: "Summer Quran Classes for Kids (Online, 1-on-1) | Ease Quran Academy",
     description:
       "Certified online Quran classes for kids ages 4 to 14 across the USA. Free first class. Female teachers available.",
     images: ["https://easequran.com/images/og-image.png"],
@@ -98,10 +98,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Summer is already halfway through. Is it too late to join?",
+      name: "Can my child join partway through the summer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Not at all. We take new students throughout the entire summer with no fixed start date. Once you book your free trial we can start your child within 24 to 48 hours.",
+        text: "Yes. There is no fixed start date, and we take new students all year round, including mid-summer. Once you book your free trial we can start your child within 24 to 48 hours.",
       },
     },
     {
@@ -118,9 +118,9 @@ const faqSchema = {
 const courseSchema = {
   "@context": "https://schema.org",
   "@type": "Course",
-  name: "Summer Quran Classes for Kids 2026",
+  name: "Summer Quran Classes for Kids",
   description:
-    "Certified one-on-one online Quran classes for Muslim children ages 4 to 14 across the USA. Running June through August 2026. Free first class.",
+    "Certified one-on-one online Quran classes for Muslim children ages 4 to 14 across the USA. Flexible summer schedules, and classes continue year-round. Free first class.",
   url: "https://easequran.com/summer-quran-classes",
   provider: {
     "@type": "Organization",
@@ -130,8 +130,6 @@ const courseSchema = {
   hasCourseInstance: {
     "@type": "CourseInstance",
     courseMode: "online",
-    startDate: "2026-06-01",
-    endDate: "2026-08-31",
     instructor: {
       "@type": "Person",
       name: "Shah Zaib",
@@ -153,40 +151,10 @@ const courseSchema = {
   },
 };
 
-const eventSchema = {
-  "@context": "https://schema.org",
-  "@type": "Event",
-  name: "Summer Quran Program 2026 — Ease Quran Academy",
-  description:
-    "Online summer Quran classes for Muslim kids ages 4 to 14 across the USA. Certified teachers, flexible schedule, free first class.",
-  startDate: "2026-06-01",
-  endDate: "2026-08-31",
-  eventStatus: "https://schema.org/EventScheduled",
-  eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
-  location: {
-    "@type": "VirtualLocation",
-    url: "https://easequran.com/summer-quran-classes",
-  },
-  organizer: {
-    "@type": "Organization",
-    name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
-  },
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-    name: "Free Trial Class",
-    url: "https://easequran.com/free-trial",
-    availability: "https://schema.org/InStock",
-    validFrom: "2026-06-01",
-  },
-};
-
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const WHATSAPP_URL =
-  "https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20the%20Summer%202026%20Quran%20program%20for%20my%20child";
+  "https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20the%20summer%20Quran%20program%20for%20my%20child";
 
 const trustBadges = [
   { icon: Award, label: "Wifaq ul Madaris Certified" },
@@ -353,9 +321,9 @@ const faqs = [
       "Our full pricing is on the pricing page with no hidden fees and no surprises. The first class is always free with no card required. We also offer a family discount if you are enrolling more than one child at the same time which a lot of our families take advantage of during summer.",
   },
   {
-    question: "Summer is already halfway through. Is it too late to join?",
+    question: "Can my child join partway through the summer?",
     answer:
-      "Not at all. We take new students throughout the entire summer with no fixed start date. Once you book your free trial we can usually get your child into their first proper class within 24 to 48 hours. The sooner you start though the more your child gets out of the remaining weeks.",
+      "Yes. There is no fixed start date, and we take new students all year round, including mid-summer. Once you book your free trial we can usually get your child into their first proper class within 24 to 48 hours. The sooner you start though the more your child gets out of the remaining weeks.",
   },
   {
     question: "What does my child need for the online classes?",
@@ -388,10 +356,6 @@ export default function SummerQuranClassesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
-      />
 
       {/* ── SECTION 1: HERO — full background image with overlay ─── */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
@@ -414,7 +378,7 @@ export default function SummerQuranClassesPage() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 text-gold text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
               <Sun size={13} />
-              Summer 2026 Enrollment Now Open
+              Summer Program · Classes Run Year-Round
             </div>
 
             <h1 className="heading-1 text-white mb-6">
@@ -778,7 +742,7 @@ export default function SummerQuranClassesPage() {
           <div className="max-w-2xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 bg-gold/20 border border-gold/30 text-gold text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
               <Sun size={13} />
-              Summer 2026
+              Summer Quran Program
             </span>
             <h2 className="font-playfair font-bold text-2xl md:text-3xl lg:text-4xl text-white mb-6">
               This Summer Belongs to Your Child. Make It Count.
