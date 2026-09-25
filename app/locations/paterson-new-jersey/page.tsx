@@ -5,7 +5,8 @@ import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
+import FamilyReviews from "@/components/FamilyReviews";
+import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
@@ -282,7 +283,7 @@ export default function PatersonNewJerseyPage() {
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <WhatsAppReviewsRow heading="Real Students, Real Results" subline="We've taught Western, English-speaking students across the UK and USA." />
+          <FamilyReviews reviews={reviewsForSeed("paterson-new-jersey")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
 
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">

@@ -6,6 +6,8 @@ import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 import CourseLocations from "@/components/CourseLocations";
+import FamilyReviews from "@/components/FamilyReviews";
+import { reviewsForCourse } from "@/lib/reviews";
 
 export const metadata: Metadata = {
   title: "Noorani Qaida Online Classes USA",
@@ -407,6 +409,13 @@ export default function NooraniQaidaPage() {
               badge="Female Teacher"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Family reviews (lib/reviews.ts) */}
+      <section className="pb-16 md:pb-24 bg-white">
+        <div className="container-custom">
+          <FamilyReviews reviews={reviewsForCourse("noorani-qaida")} />
         </div>
       </section>
 

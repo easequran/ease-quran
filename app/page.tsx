@@ -6,7 +6,8 @@ import TeacherCard from "@/components/TeacherCard";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
-import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
+import FamilyReviews from "@/components/FamilyReviews";
+import { reviewsById } from "@/lib/reviews";
 import LiteYouTube from "@/components/LiteYouTube";
 import { videos } from "@/components/proof";
 import { Shield, Users, BookOpen, Star, AlertCircle, Globe, UserCheck, CheckCircle, Award } from "lucide-react";
@@ -767,9 +768,12 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* WhatsApp review screenshots */}
+          {/* Family reviews (lib/reviews.ts) */}
           <div className="mb-14">
-            <WhatsAppReviewsRow />
+            <FamilyReviews
+              reviews={reviewsById(["r002", "r005", "r004"])}
+              heading="Messages From US Families"
+            />
           </div>
 
           {/* Video testimonials */}

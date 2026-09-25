@@ -5,7 +5,8 @@ import TeacherStrip from "@/components/TeacherStrip";
 import TrustBadges from "@/components/TrustBadges";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import WhatsAppReviewsRow from "@/components/WhatsAppReviewsRow";
+import FamilyReviews from "@/components/FamilyReviews";
+import { reviewsById } from "@/lib/reviews";
 import {
   Laptop,
   Wifi,
@@ -404,9 +405,9 @@ export default function LearnQuranOnlinePage() {
       {/* Proof */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
-          <WhatsAppReviewsRow
+          <FamilyReviews
+            reviews={reviewsById(["r001", "r004"])}
             heading="Real Students, Real Results"
-            subline="We've taught Western, English-speaking students across the UK and USA."
           />
         </div>
       </section>
