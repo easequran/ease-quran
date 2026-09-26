@@ -4,69 +4,20 @@ import Link from "next/link";
 import TeacherCard from "@/components/TeacherCard";
 import CTASection from "@/components/CTASection";
 import { Users, Award, Globe, Heart, BarChart2, BookOpen } from "lucide-react";
+import { business, PRIMARY_CTA } from "@/lib/business";
+import { teachers } from "@/lib/teachers";
 
 export const metadata: Metadata = {
-  title: "About Ease Quran: Certified Teachers",
+  title: "About Ease Quran",
   description:
-    "Learn about Ease Quran Online Academy, founded by Shah Zaib and certified from Wifaq ul Madaris, bringing trusted Quran education to Muslim families.",
+    "Who we are, where our teachers teach from, and how we check every teacher before they teach a single class at Ease Quran Online Academy.",
   alternates: { canonical: "https://easequran.com/about" },
   openGraph: {
-    title: "About Ease Quran Online Academy | Wifaq ul Madaris Certified Teachers",
+    title: "About Ease Quran Online Academy",
     description:
-      "Learn about Ease Quran Online Academy, founded by Shah Zaib and certified from Wifaq ul Madaris, bringing trusted Quran education to Muslim families.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "About Ease Quran Online Academy, Wifaq ul Madaris Certified" }],
+      "Who we are, where our teachers teach from, and how we check every teacher before they teach at Ease Quran.",
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "About Ease Quran Online Academy" }],
   },
-};
-
-const founderSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Shah Zaib",
-  jobTitle: "Founder & Head Teacher",
-  url: "https://easequran.com/about",
-  image: "https://easequran.com/images/founder.webp",
-  worksFor: {
-    "@type": "EducationalOrganization",
-    name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
-  },
-  description: "Shah Zaib is the founder of Ease Quran Online Academy, certified from Wifaq ul Madaris Al-Arabia. With 6+ years of experience teaching Quran to Western, English-speaking students in the USA, he specializes in making Quranic education accessible to Muslim families across America.",
-  alumniOf: {
-    "@type": "EducationalOrganization",
-    name: "Wifaq ul Madaris Al-Arabia",
-    description: "Pakistan's largest Islamic education board, globally recognized",
-  },
-  hasCredential: {
-    "@type": "EducationalOccupationalCredential",
-    name: "Wifaq ul Madaris Al-Arabia Certification",
-    credentialCategory: "Islamic Education",
-    recognizedBy: {
-      "@type": "Organization",
-      name: "Wifaq ul Madaris Al-Arabia",
-    },
-  },
-  knowsAbout: ["Quran Recitation", "Tajweed", "Hifz Memorization", "Noorani Qaida", "Islamic Education", "Arabic Language"],
-  sameAs: [
-    "https://www.facebook.com/share/18WdHQVNWT/",
-    "https://www.instagram.com/contacteasequran",
-    "https://www.linkedin.com/company/ease-quran/",
-  ],
-};
-
-const educationalOrganizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  logo: "https://easequran.com/images/logo.png",
-  foundingDate: "2019",
-  description: "Certified online Quran academy serving Muslim families across all 50 US states. Wifaq ul Madaris certified teachers.",
-  employee: {
-    "@type": "Person",
-    name: "Shah Zaib",
-    jobTitle: "Founder & Head Teacher",
-  },
-  accreditation: "Wifaq ul Madaris Al-Arabia",
 };
 
 const values = [
@@ -74,19 +25,19 @@ const values = [
     icon: Users,
     title: "Trust",
     description:
-      "Every teacher at Ease Quran is personally vetted and holds a recognized Islamic credential. We understand that inviting a teacher into your home, even virtually, requires complete confidence. We earn that trust every single day.",
+      "Every teacher holds a recognized Quran qualification and is checked before joining. We know that letting a teacher into your home, even on a screen, takes real confidence, so we don't take that lightly.",
   },
   {
     icon: Award,
     title: "Excellence",
     description:
-      "We hold our teachers to the highest academic and pedagogical standards. Certification from Wifaq ul Madaris Al-Arabia is the baseline, not the ceiling. Continuous improvement and student progress are what drive us.",
+      "A teacher only joins after we have seen their certificates, heard them recite and watched them teach a demo class. After that, the student's progress is what we pay attention to.",
   },
   {
     icon: Globe,
     title: "Accessibility",
     description:
-      "Geography should never be a barrier to learning the Quran. Whether you're in New York, California, Texas, or a small town with no Islamic center nearby, we bring qualified Quran education directly to your home via a simple video call.",
+      "A family in a small town with no Islamic center nearby should be able to find a good Quran teacher as easily as a family in New York. Classes are online, so where you live doesn't decide who teaches you.",
   },
 ];
 
@@ -99,9 +50,9 @@ const philosophyCards = [
   },
   {
     icon: BarChart2,
-    title: "Measurable Results",
+    title: "Clear Progress",
     description:
-      "We track every student's progress and provide regular updates to parents. From pronouncing individual letters correctly to completing full Surahs with proper Tajweed, every milestone is celebrated and documented.",
+      "Teachers keep track of what each student has covered, from single letters to full surahs with Tajweed, and you can ask for an update on your child's progress at any time.",
   },
   {
     icon: BookOpen,
@@ -114,14 +65,6 @@ const philosophyCards = [
 export default function AboutPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalOrganizationSchema) }}
-      />
 
       {/* Hero */}
       <section className="bg-navy section-padding">
@@ -145,9 +88,9 @@ export default function AboutPage() {
               About Ease Quran Online Academy
             </h1>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl">
-              We are a certified online Quran academy dedicated to bringing authentic, trustworthy
-              Islamic education to Muslim families across the United States. Founded on faith,
-              built on credentials, and driven by a passion for every student's success.
+              We teach the Quran one-on-one, online, to children and adults in the United States.
+              Our teachers teach from {business.teachersBasedIn}, and we have been teaching for
+              more than seven years.
             </p>
           </div>
         </div>
@@ -169,8 +112,8 @@ export default function AboutPage() {
               have limited hours. Community masjids are often overbooked. And the internet is full
               of unverified "teachers" with no credentials. Ease Quran was founded to solve this
               problem: to give every Muslim family in America access to a{" "}
-              <strong className="text-navy">certified, background-checked, experienced</strong>{" "}
-              Quran teacher, on their schedule, from their home.
+              <strong className="text-navy">qualified, carefully checked</strong>{" "}
+              Quran teacher, at times that suit them, from their home.
             </p>
           </div>
 
@@ -203,7 +146,7 @@ export default function AboutPage() {
               <div className="relative h-[480px] rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/images/founder.webp"
-                  alt="Shah Zaib - Founder of Ease Quran Online Academy, certified from Wifaq ul Madaris"
+                  alt="Shah Zaib, founder of Ease Quran Online Academy"
                   fill
                   className="object-cover"
                   priority
@@ -224,15 +167,14 @@ export default function AboutPage() {
               <h2 className="heading-2 text-navy mb-2">
                 Shah Zaib
               </h2>
-              <p className="text-gold font-semibold mb-6">Founder & Head Teacher</p>
+              <p className="text-gold font-semibold mb-6">Founder & CEO</p>
 
               <div className="space-y-4 text-grey text-sm leading-relaxed">
                 <p>
                   Shah Zaib completed his formal Islamic education at a recognized institution
                   affiliated with{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, Pakistan&apos;s
-                  largest Islamic education board, globally recognized, whose
-                  certifications are honored by Islamic scholars and institutions worldwide.
+                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, the largest
+                  board of madrasas in Pakistan.
                 </p>
                 <p>
                   After completing his studies, Shah Zaib began teaching Quran to students in the
@@ -257,19 +199,19 @@ export default function AboutPage() {
                   "I built Ease Quran because every Muslim family in America deserves a Quran
                   teacher they can truly trust."
                 </p>
-                <footer className="mt-2 text-sm text-grey font-semibold">— Shah Zaib, Founder</footer>
+                <footer className="mt-2 text-sm text-grey font-semibold">Shah Zaib, Founder</footer>
               </blockquote>
 
               {/* Credential badges */}
               <div className="mt-8 flex flex-wrap gap-3">
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">
-                  ✓ Wifaq ul Madaris Certified
+                  ✓ Wifaq ul Madaris Certificate
                 </span>
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">
                   ✓ 6+ Years Experience
                 </span>
                 <span className="bg-offwhite border border-gold/30 text-navy text-xs font-semibold px-4 py-2 rounded-full">
-                  ✓ Western Students Specialist
+                  ✓ Teaches English-Speaking Students
                 </span>
               </div>
             </div>
@@ -277,60 +219,32 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Wifaq ul Madaris Credential Section */}
+      {/* How We Choose Teachers */}
       <section className="section-padding bg-navy">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <span className="eyebrow mb-4">
-                Our Credential
-              </span>
-              <h2 className="heading-2 text-white mb-4">
-                What Is Wifaq ul Madaris Al-Arabia?
-              </h2>
-              <p className="text-white/60 text-sm">
-                And why does it matter for your family in America?
+              <span className="eyebrow mb-4">Our Teachers</span>
+              <h2 className="heading-2 text-white mb-4">How We Choose Our Teachers</h2>
+              <p className="text-white/60 text-sm max-w-2xl mx-auto">
+                Our teachers teach from {business.teachersBasedIn} and work around the schedules of
+                families in the US. They come from different madrasas and colleges, and every one
+                of them holds a recognized Quran qualification.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
-                <h3 className="font-playfair font-bold text-xl text-gold mb-4">
-                  The Largest Islamic Education Board in Pakistan
-                </h3>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  Wifaq ul Madaris Al-Arabia Pakistan is the largest Islamic education
-                  organization in the world, overseeing the academic standards and certifications
-                  of thousands of Islamic seminaries (Madaris) across Pakistan. Its graduates are
-                  recognized by Islamic institutions, universities, and governments across the
-                  Middle East, Southeast Asia, Europe, and North America. A certification from
-                  Wifaq ul Madaris is the Islamic equivalent of a university degree from a
-                  top-tier institution. It means the teacher has completed years of rigorous
-                  academic study in Quran, Hadith, Fiqh, and Arabic sciences.
-                </p>
-              </div>
-
-              <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
-                <h3 className="font-playfair font-bold text-xl text-gold mb-4">
-                  Why This Matters for Muslim Families in the USA
-                </h3>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  As a Muslim parent in America, you have no way to walk into a classroom and
-                  assess a teacher's qualifications in person. Online Quran teaching is largely
-                  unregulated. Anyone can claim to be a "qualified Quran teacher." The Wifaq ul
-                  Madaris certification is the gold standard that separates genuine scholars from
-                  unqualified individuals. When all Ease Quran teachers hold this credential, you
-                  have a verifiable, internationally recognized guarantee of academic integrity.
-                  Your children will learn from real scholars, not well-meaning volunteers.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8 bg-gold/10 border border-gold/30 rounded-2xl p-6 text-center">
-              <p className="text-white font-semibold">
-                ✓ Every Ease Quran teacher holds a{" "}
-                <span className="text-gold">Wifaq ul Madaris Al-Arabia</span> certification
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                { title: "Certificates", text: "We see each teacher's original certificates. Some studied at madrasas affiliated with Wifaq ul Madaris Al-Arabia; others hold qualifications from other recognized institutions." },
+                { title: "Recitation test", text: "Every teacher recites for us before joining, so we hear their Tajweed and fluency for ourselves rather than relying on paper alone." },
+                { title: "Demo class", text: "They teach a demo lesson while we watch. We look at how patiently they explain, how they correct mistakes and how they keep a student engaged." },
+                { title: "ID and references", text: "We confirm each teacher's identity and speak to people who know their teaching before they are matched with any student." },
+              ].map((step) => (
+                <div key={step.title} className="bg-white/5 rounded-2xl p-8 border border-white/10">
+                  <h3 className="font-playfair font-bold text-xl text-gold mb-3">{step.title}</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">{step.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -380,42 +294,36 @@ export default function AboutPage() {
               Our Educators
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              Meet Our Certified Teachers
+              Meet Some of Our Teachers
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Every teacher at Ease Quran is personally selected by Shah Zaib, holds a Wifaq ul
-              Madaris certification, and has been trained in teaching Western, English-speaking
-              students.
+              Our teachers have different schedules, so we match each student based on their
+              course, learning needs, and preferred days and times.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <TeacherCard
-              name="Shah Zaib"
-              image="/images/founder.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Tajweed, Quran Reading, Hifz, Noorani Qaida"
-              experience="6+ years teaching Western students"
-              qualification="Founder & Head Teacher"
-            />
-            <TeacherCard
-              name="Muhammad Umair"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Tajweed & Hifz Specialist"
-              experience="2 years teaching online"
-              qualification="Quran Teacher"
-            />
-            <TeacherCard
-              name="Almas Fatima"
-              image="/images/teacher-2.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Qaria e Quran, Bachelor in Islamic Studies"
-              experience="Teaching since 2022, available for sisters & children"
-              qualification="Female Quran Teacher"
-              badge="Female Teacher"
-            />
+            {[
+              teachers.find((t) => t.slug === "ustadh-abdullah-ahmed")!,
+              teachers.find((t) => t.slug === "almas-fatima")!,
+              teachers.find((t) => t.slug === "ustadha-hafsa-noor")!,
+            ].map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-8">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -444,7 +352,7 @@ export default function AboutPage() {
                     that world real, one student, one family, one lesson at a time.
                   </p>
                   <p>
-                    We are continuously growing our team of certified teachers, improving our
+                    We are continuously growing our team of qualified teachers, improving our
                     curriculum, and expanding our capacity to serve more families. Our goal is
                     to become the most trusted name in online Quran education for the American
                     Muslim community.
@@ -455,10 +363,9 @@ export default function AboutPage() {
               <div className="space-y-4">
                 {[
                   { num: "Free", label: "First class, no card required" },
-                  { num: "50", label: "States we serve" },
-                  { num: "3", label: "Wifaq ul Madaris certified teachers" },
-                  { num: "6+", label: "Years of trusted teaching experience" },
-                  { num: "4.9★", label: "Average student satisfaction rating" },
+                  { num: business.experience.replace(" years", ""), label: "Years of teaching" },
+                  { num: "7", label: "Days a week, at times you choose" },
+                  { num: "1:1", label: "Every class, one teacher and one student" },
                 ].map((stat) => (
                   <div
                     key={stat.label}
@@ -479,7 +386,7 @@ export default function AboutPage() {
       <CTASection
         headline="Ready to Start Your Child's Quran Journey?"
         subtext="Book a free trial class today and experience the Ease Quran difference. No credit card, no commitment. Just your child's first step toward the Quran."
-        primaryCta="Book Free Trial Class"
+        primaryCta={PRIMARY_CTA}
         primaryHref="/free-trial"
       />
     </>

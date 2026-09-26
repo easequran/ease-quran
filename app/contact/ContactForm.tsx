@@ -61,8 +61,8 @@ export default function ContactForm() {
           Message Received!
         </h2>
         <p className="text-grey leading-relaxed text-sm mb-6">
-          JazakAllah Khair for reaching out. We will get back to you within{" "}
-          <strong className="text-navy">2 hours</strong> via email or WhatsApp.
+          JazakAllah Khair for reaching out. We will get back to you{" "}
+          <strong className="text-navy">within a few hours</strong> by email or WhatsApp.
           For urgent matters, message us directly on WhatsApp.
         </p>
         <a
@@ -88,7 +88,7 @@ export default function ContactForm() {
           Send Us a Message
         </h2>
         <p className="text-grey text-sm">
-          Fill in the form below and we will get back to you within 2 hours.
+          Fill in the form below and we will get back to you within a few hours.
         </p>
       </div>
 
@@ -221,7 +221,7 @@ export default function ContactForm() {
           >
             Message us on WhatsApp
           </a>{" "}
-          We reply in under 30 minutes.
+          It is usually the quickest way to reach us.
         </p>
       </form>
     </div>

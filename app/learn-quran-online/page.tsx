@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText, plans } from "@/lib/pricing";
 import Breadcrumb from "@/components/Breadcrumb";
 import TeacherStrip from "@/components/TeacherStrip";
 import TrustBadges from "@/components/TrustBadges";
@@ -45,7 +46,7 @@ const faqs = [
   {
     question: "How much does it cost to learn Quran online?",
     answer:
-      "At Ease Quran, plans start from $40/month for two 30-minute classes a week, with our most-booked plan at $55/month for three classes a week. Every new student gets one completely free trial class first, with no credit card required, so you can judge the teaching quality before paying anything. See our full pricing page for sibling and prepay discounts.",
+      `At Ease Quran, ${startingPriceText.toLowerCase()} (two 30-minute classes a week, about a month). With three classes a week it is $${plans[1].price30} for ${plans[1].classesPerPackage} classes. Every student gets a free trial class first, with no card needed, so you can judge the teaching before paying anything. See our pricing page for weekend, sibling and prepay details.`,
   },
   {
     question: "How long does it take to learn to read the Quran fluently?",
@@ -70,7 +71,7 @@ const faqs = [
   {
     question: "How do I know a teacher's certification is real, not just a claim on a website?",
     answer:
-      "Ask which institution certified them and look the institution up independently. Our teachers are certified by Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, and we name each teacher and their specific credential rather than making a blanket claim. Any academy unwilling to tell you which body certified a specific teacher is worth a second thought.",
+      "Ask which institution certified them and look the institution up independently. Every one of our teachers holds a recognized Quran qualification, and before anyone teaches with us we see their original certificates, hear them recite and watch them teach. Any academy unwilling to tell you which body certified a specific teacher is worth a second thought.",
   },
   {
     question: "Is there a female teacher available for girls or sisters?",
@@ -142,7 +143,7 @@ export default function LearnQuranOnlinePage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Your Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
@@ -387,12 +388,12 @@ export default function LearnQuranOnlinePage() {
               })}
             </div>
             <p className="text-grey text-sm mt-8 leading-relaxed">
-              At Ease Quran, every teacher is certified by Wifaq ul Madaris Al-Arabia, parents
+              At Ease Quran, every teacher holds a recognized Quran qualification, parents
               are welcome to sit in on any class, and we publish our full approach on our{" "}
               <Link href="/safety" className="text-gold font-semibold hover:underline">
                 Child Safety &amp; Parent Rights Policy
               </Link>{" "}
-              page. A female teacher is also available for sisters and children — see our{" "}
+              page. A female teacher can also be arranged for sisters and girls. See our{" "}
               <Link href="/female-quran-teachers" className="text-gold font-semibold hover:underline">
                 Female Quran Teachers
               </Link>{" "}
@@ -419,11 +420,8 @@ export default function LearnQuranOnlinePage() {
             href="/pricing"
             className="block max-w-3xl mx-auto bg-navy rounded-2xl px-6 py-5 text-center text-sm text-white hover:bg-navy/90 transition-colors"
           >
-            <span className="font-semibold">Plans start at $40/month</span>
-            <span className="text-white/70">
-              {" "}
-              &middot; most families choose Steady at $55/month for 3 classes/week &middot;{" "}
-            </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
         </div>
@@ -468,7 +466,7 @@ export default function LearnQuranOnlinePage() {
       <CTASection
         headline="Ready to See How a Real Class Feels?"
         subtext="One live, one-on-one trial class with a certified teacher. No credit card, no obligation to continue."
-        primaryCta="Book Your Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi, I read your guide to learning Quran online and I'd like to book a free trial class"
       />

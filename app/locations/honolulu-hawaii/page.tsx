@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import FamilyReviews from "@/components/FamilyReviews";
-import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Honolulu, Hawaii",
   description:
-    "Certified online Quran classes for Muslim families in Honolulu, Hawaii. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Honolulu, Hawaii. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/honolulu-hawaii",
   },
@@ -31,77 +30,6 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
     { "@type": "ListItem", position: 3, name: "Honolulu, Hawaii", item: "https://easequran.com/locations/honolulu-hawaii" },
-  ],
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description:
-    "Certified online Quran classes for Muslim families across the Honolulu metropolitan area.",
-  areaServed: {
-    "@type": "City",
-    name: "Honolulu",
-    containedInPlace: { "@type": "State", name: "Hawaii" },
-  },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is online Quran learning safe for my child?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I find a Quran teacher near me in Honolulu?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Honolulu, our online Quran academy serves any family across Oahu and the Hawaiian Islands searching for a Quran teacher near them. You connect with a certified teacher over Zoom from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can classes work with Hawaii's time zone difference from the mainland?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Hawaii-Aleutian Time is several hours behind the mainland and does not observe daylight saving. We confirm your child's exact class time in Hawaii time at booking, so the gap never causes confusion.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve military families stationed in Hawaii?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Hawaii is home to a significant military presence, and we are glad to serve Muslim service members and their families with a schedule that can move with a posting.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are teachers certified from recognized Islamic institutions?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Hawaii families can trust our teachers' qualifications.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a female Quran teacher for sisters in Honolulu?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Sister Almas Fatima is our certified female Quran teacher available exclusively for sisters and children. Many Hawaii families specifically request her for their daughters.",
-      },
-    },
   ],
 };
 
@@ -129,23 +57,29 @@ const faqs = [
   {
     question: "Are teachers certified from recognized Islamic institutions?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Hawaii families can have full confidence in our teachers' qualifications.",
+      "Yes. Every Ease Quran teacher holds a recognized Quran qualification. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Hawaii families can have full confidence in our teachers' qualifications.",
   },
   {
     question: "Is there a female Quran teacher for sisters in Honolulu?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Hawaii families specifically request her for their daughters, and we are proud to offer this option. Simply mention your preference when booking your free trial.",
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function HonoluluHawaiiPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -178,7 +112,7 @@ export default function HonoluluHawaiiPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Honolulu%20Hawaii"
@@ -265,16 +199,14 @@ export default function HonoluluHawaiiPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
-            <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <FamilyReviews reviews={reviewsForSeed("honolulu-hawaii")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
-
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">
-              Book Free Trial Class
+              Book Your Free Trial
             </Link>
             <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Honolulu%20Hawaii" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
@@ -342,27 +274,6 @@ export default function HonoluluHawaiiPage() {
         </div>
       </section>
 
-      {/* Near Me */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow mb-4">
-              Quran Classes Near You
-            </span>
-            <h2 className="heading-2 text-navy mb-6">
-              Looking for a Quran Teacher Near You in Honolulu?
-            </h2>
-            <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in Honolulu, the best
-              teacher for your child doesn't have to be on the same island, or even the same coast.
-              Because every Ease Quran class is live and online, Hawaii families connect one-on-one with
-              certified teachers without any travel at all. You get the convenience of a teacher right
-              in your home, wherever in the islands that home happens to be.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <NearbyLocations slug="honolulu-hawaii" />
 
       {/* FAQ */}
@@ -389,7 +300,7 @@ export default function HonoluluHawaiiPage() {
       <CTASection
         headline="Certified Quran Education Across Honolulu and the Hawaiian Islands"
         subtext="Built around Hawaii-Aleutian Time, wherever your family calls home in the islands. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Honolulu Hawaii"
       />

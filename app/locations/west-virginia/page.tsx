@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -9,7 +10,7 @@ import NearbyLocations from "@/components/NearbyLocations";
 export const metadata: Metadata = {
   title: "Online Quran Classes in West Virginia",
   description:
-    "Certified online Quran classes for Muslim families across West Virginia, including Charleston. Wifaq ul Madaris certified teachers.",
+    "Certified online Quran classes for Muslim families across West Virginia, including Charleston. Qualified teachers.",
   alternates: {
     canonical: "https://easequran.com/locations/west-virginia",
   },
@@ -31,84 +32,40 @@ const breadcrumbSchema = {
   ],
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description: "Certified online Quran classes for Muslim families throughout West Virginia.",
-  areaServed: { "@type": "State", name: "West Virginia" },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
+const faqs = [
+  {
+    question: "Which time zone are classes booked in?",
+    answer: "West Virginia is on Eastern Time. Share the days and times that suit you, and every class time we confirm will be in your own time zone. When the clocks change in March and November, your class stays at the same local time.",
+  },
+  {
+    question: "Can my daughter have a female teacher?",
+    answer: "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
+  },
+  {
+    question: "What happens in the free trial class?",
+    answer:
+      "The trial is a 30-minute one-on-one class on Zoom. The teacher checks the student's current level, teaches a short lesson at that level, recommends a course and how many classes a week, and answers your questions. Parents are welcome to sit in. There is no obligation to continue.",
+  },
+  {
+    question: "How much do classes cost?",
+    answer: `${startingPriceText}, and every student's first class is free. Sibling and prepay discounts are on our pricing page.`,
+  },
+];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Why does this page link to Washington DC instead of a closer West Virginia city?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Because for a real share of West Virginia families, DC genuinely is closer. The state's Eastern Panhandle, around Martinsburg and Charles Town, is close enough to DC to be part of its commuter belt, actually nearer to Washington than to the state's own capital, Charleston. For families in the rest of West Virginia, DC is still the nearest Metro Tier page we have.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have students in Charleston, WV already?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We're actively welcoming West Virginia families right now. Rather than claim a number we can't verify, we'd invite you to be one of our first Charleston-area students with a free trial class.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "West Virginia is the only state entirely inside Appalachia. Does the terrain actually matter for classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "It matters for everything except online classes. West Virginia's mountains and winding roads make towns that look close on a map genuinely far apart by road, sometimes an hour or more between communities barely 20 miles apart as the crow flies. Since classes are online, none of that terrain is relevant to your child's schedule.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much do classes cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required.",
-      },
-    },
-  ],
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
 };
-
-const faqs = [
-  {
-    question: "Why does this page link to Washington DC instead of a closer West Virginia city?",
-    answer:
-      "Because for a genuine share of West Virginia families, DC actually is closer. The state's Eastern Panhandle, around Martinsburg, Charles Town, and Harpers Ferry, sits close enough to Washington to be a real part of its commuter belt, closer to the capital than to Charleston, West Virginia's own state capital on the opposite side of the state. For families anywhere else in West Virginia, DC remains the nearest Metro Tier page we have, even if the drive is a longer one from those regions.",
-  },
-  {
-    question: "Do you have students in Charleston, WV already?",
-    answer:
-      "We're actively welcoming West Virginia families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Charleston-area students and see the quality for yourself with a free trial class.",
-  },
-  {
-    question: "West Virginia is the only state entirely inside Appalachia. Does the terrain actually matter for classes?",
-    answer:
-      "It matters for almost everything except online classes. West Virginia is the only state that sits entirely within the Appalachian mountain range, and the winding roads that come with that terrain mean two towns that look 20 miles apart on a map can be an hour or more apart by car. Since all classes are conducted online via Zoom, none of that mountain geography has any bearing on whether your child's lesson happens on time.",
-  },
-  {
-    question: "How much do classes cost?",
-    answer:
-      "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required, so you can experience a lesson before committing to anything.",
-  },
-];
 
 export default function WestVirginiaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
@@ -135,7 +92,7 @@ export default function WestVirginiaPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center">
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20West%20Virginia" target="_blank" rel="noopener noreferrer" className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-sm text-center">
                 Chat on WhatsApp
@@ -165,7 +122,7 @@ export default function WestVirginiaPage() {
               <p>
                 That's why our{" "}
                 <Link href="/locations/washington-dc" className="text-gold font-semibold hover:underline">Washington, D.C. location page</Link>{" "}
-                is the nearest Metro Tier community we link here, genuinely close for the Eastern Panhandle and still the closest option for the rest of the state. Wherever in West Virginia you are, our online classes reach your home directly, no mountain roads involved.
+                is the nearest city page we link to here, genuinely close for the Eastern Panhandle and still the closest option for the rest of the state. Wherever in West Virginia you are, our online classes reach your home directly, no mountain roads involved.
               </p>
             </div>
           </div>
@@ -179,7 +136,7 @@ export default function WestVirginiaPage() {
             <span className="eyebrow mb-4">Our Curriculum</span>
             <h2 className="heading-2 text-navy mb-6">Courses for West Virginia Families</h2>
             <p className="text-grey leading-relaxed mb-6">
-              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a Wifaq ul Madaris certified scholar. Visit our{" "}
+              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a qualified teacher. Visit our{" "}
               <Link href="/courses" className="text-gold font-semibold hover:underline">full courses page</Link>{" "}
               to see everything available, including options for kids, adults, and reverts.
             </p>
@@ -211,7 +168,7 @@ export default function WestVirginiaPage() {
       <CTASection
         headline="Certified Quran Education for West Virginia Families"
         subtext="From Charleston to the smallest mountain community. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in West Virginia"
       />

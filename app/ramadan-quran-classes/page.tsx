@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { business } from "@/lib/business";
 import { BookOpen, Mic, RotateCcw, Sparkles, HeartHandshake, BookMarked } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -186,7 +187,7 @@ export default function RamadanQuranClassesPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book a Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(WHATSAPP_TEXT)}`}
@@ -290,8 +291,8 @@ export default function RamadanQuranClassesPage() {
             <h3 className="heading-3 text-navy mt-8 mb-3">Already a student?</h3>
             <p className="text-grey leading-relaxed">
               If your usual lesson time will not work once the fast begins, talk to us before
-              Ramadan about moving it for the month. Lessons can be rescheduled with 24 hours
-              notice.
+              Ramadan about moving it for the month. A lesson moved at least {business.classNoticeHours} hours before it starts is
+              rescheduled, not lost.
             </p>
           </div>
         </div>
@@ -385,7 +386,7 @@ export default function RamadanQuranClassesPage() {
       <CTASection
         headline="Make This Ramadan Your Month With the Quran"
         subtext="Book a free trial class, meet your teacher, and choose a goal for the month. No credit card and no commitment."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText={WHATSAPP_TEXT}
       />

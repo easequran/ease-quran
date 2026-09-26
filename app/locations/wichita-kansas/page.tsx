@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import FamilyReviews from "@/components/FamilyReviews";
-import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Wichita, Kansas",
   description:
-    "Certified online Quran classes for Muslim families in Wichita, Kansas. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Wichita, Kansas. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/wichita-kansas",
   },
@@ -31,85 +30,6 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
     { "@type": "ListItem", position: 3, name: "Wichita, Kansas", item: "https://easequran.com/locations/wichita-kansas" },
-  ],
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description:
-    "Certified online Quran classes for Muslim families across the Wichita metropolitan area.",
-  areaServed: {
-    "@type": "City",
-    name: "Wichita",
-    containedInPlace: { "@type": "State", name: "Kansas" },
-  },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is online Quran learning safe for my child?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I find a Quran teacher near me in Wichita?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Wichita, our online Quran academy serves any family across Kansas searching for a Quran teacher near them. You connect with a certified teacher over Zoom from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can classes work around Wichita's aviation industry shift schedules?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Wichita is known as the Air Capital of the World, home to major aircraft manufacturers, and many parents work manufacturing shifts. Classes are booked around your actual schedule in Central Time.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve families from smaller Kansas towns outside Wichita?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Many Kansas Muslim families live well outside Wichita on the plains. Since classes are online, distance across the state is never a barrier.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are teachers certified from recognized Islamic institutions?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Wichita families can trust our teachers' qualifications.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a female Quran teacher for sisters in Wichita?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Sister Almas Fatima is our certified female Quran teacher available exclusively for sisters and children. Many Wichita-area families specifically request her for their daughters.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What about severe weather and tornado season in Kansas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Kansas sits in Tornado Alley, and spring severe weather can disrupt evening plans with little warning. Since classes are online, we simply reschedule around a watch or warning.",
-      },
-    },
   ],
 };
 
@@ -137,12 +57,12 @@ const faqs = [
   {
     question: "Are teachers certified from recognized Islamic institutions?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Wichita-area Muslim families can have full confidence in our teachers' qualifications.",
+      "Yes. Every Ease Quran teacher holds a recognized Quran qualification. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Wichita-area Muslim families can have full confidence in our teachers' qualifications.",
   },
   {
     question: "Is there a female Quran teacher for sisters in Wichita?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Wichita-area families specifically request her for their daughters, and we are proud to offer this option. Simply mention your preference when booking your free trial.",
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
   },
   {
     question: "What about severe weather and tornado season in Kansas?",
@@ -151,14 +71,20 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function WichitaKansasPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -191,7 +117,7 @@ export default function WichitaKansasPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Wichita%20Kansas"
@@ -278,16 +204,14 @@ export default function WichitaKansasPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
-            <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <FamilyReviews reviews={reviewsForSeed("wichita-kansas")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
-
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">
-              Book Free Trial Class
+              Book Your Free Trial
             </Link>
             <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Wichita%20Kansas" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
@@ -355,27 +279,6 @@ export default function WichitaKansasPage() {
         </div>
       </section>
 
-      {/* Near Me */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow mb-4">
-              Quran Classes Near You
-            </span>
-            <h2 className="heading-2 text-navy mb-6">
-              Looking for a Quran Teacher Near You in Wichita?
-            </h2>
-            <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in Wichita or anywhere
-              in Kansas, the best teacher for your child might genuinely be hours away by car. Because
-              every Ease Quran class is live and online, Kansas families connect one-on-one with
-              certified teachers without driving anywhere. You get the convenience of a teacher right
-              in your home, with none of the commute, parking, or fixed group schedule of a local center.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <NearbyLocations slug="wichita-kansas" />
 
       {/* FAQ */}
@@ -402,7 +305,7 @@ export default function WichitaKansasPage() {
       <CTASection
         headline="Certified Quran Education Across Wichita and All of Kansas"
         subtext="From the Air Capital of the World to the smallest Kansas towns. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Wichita Kansas"
       />

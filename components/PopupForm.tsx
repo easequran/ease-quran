@@ -1,14 +1,13 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { X, CheckCircle, ShieldCheck, MessageCircle } from "lucide-react";
 import PhoneInput, { isValidPhoneNumber } from "./PhoneInput";
 import { trackLead } from "@/lib/analytics";
+import { PRIMARY_CTA, whatsappLink } from "@/lib/business";
 
-const WHATSAPP_NUMBER = "923195657389";
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi I am interested in booking a free trial Quran class"
-);
+const WHATSAPP_HREF = whatsappLink("Hi I am interested in booking a free trial Quran class");
 
 const courseOptions = [
   "Quran for Kids",
@@ -24,6 +23,7 @@ const courseOptions = [
 const ageGroupOptions = ["Under 7", "7–12", "13–17", "Adult"];
 
 export default function PopupForm() {
+  const pathname = usePathname();
   const [visible, setVisible] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -38,33 +38,37 @@ export default function PopupForm() {
     ageGroup: "",
   });
 
+  // Never show on the free trial page itself, and only once per visit,
+  // after the visitor has actually read most of the page (not a fixed
+  // timer). No scroll lock: the page stays usable behind it.
   useEffect(() => {
+    if (pathname?.startsWith("/free-trial")) return;
+
     const dismissed = sessionStorage.getItem("popup_dismissed");
     const submittedKey = sessionStorage.getItem("popup_submitted");
     if (dismissed || submittedKey) return;
 
-    const timer = setTimeout(() => {
-      setVisible(true);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
+    const onScroll = () => {
+      const scrolled = window.scrollY + window.innerHeight;
+      const total = document.documentElement.scrollHeight;
+      if (total > 0 && scrolled / total > 0.6) {
+        setVisible(true);
+        window.removeEventListener("scroll", onScroll);
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [pathname]);
 
   useEffect(() => {
     if (visible) {
-      document.body.style.overflow = "hidden";
       // Skip autofocus on small screens — it pops the keyboard open the
       // instant the popup appears, which pushes the header off-screen.
       const isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
       if (!isSmallScreen) {
         setTimeout(() => firstInputRef.current?.focus(), 100);
       }
-    } else {
-      document.body.style.overflow = "";
     }
-    return () => {
-      document.body.style.overflow = "";
-    };
   }, [visible]);
 
   useEffect(() => {
@@ -136,18 +140,18 @@ export default function PopupForm() {
             <X size={22} />
           </button>
           <p className="eyebrow mb-2 pr-10">
-            Limited Offer
+            Free Trial Class
           </p>
           <h2
             id="popup-title"
             className="font-playfair text-xl sm:text-2xl font-bold text-white leading-tight mb-2 pr-8"
           >
-            Book Your FREE Trial Quran Class Today
+            {PRIMARY_CTA}
           </h2>
           <p className="text-white/70 text-sm">
-            Join Muslim families across America. No commitment required.
+            Tell us a bit about the student, and we&apos;ll reach out to arrange a time. No
+            card needed and no obligation to continue.
           </p>
-          <p className="text-white/60 text-xs mt-2">🇺🇸 Serving all 50 states</p>
         </div>
 
         {/* Body */}
@@ -159,7 +163,7 @@ export default function PopupForm() {
                 JazakAllah Khair!
               </h3>
               <p className="text-grey text-sm leading-relaxed">
-                We will contact you within 2 hours on WhatsApp to confirm your
+                We will contact you within a few hours on WhatsApp to confirm your
                 free trial class. May Allah bless your family&apos;s journey
                 with the Quran.
               </p>
@@ -271,11 +275,11 @@ export default function PopupForm() {
                 </li>
                 <li className="flex items-center gap-2 text-xs text-grey">
                   <ShieldCheck size={14} className="text-gold shrink-0" />
-                  Wifaq ul Madaris certified teachers
+                  qualified teachers
                 </li>
                 <li className="flex items-center gap-2 text-xs text-grey">
                   <MessageCircle size={14} className="text-gold shrink-0" />
-                  We&apos;ll follow up on WhatsApp within 2 hours
+                  We&apos;ll follow up on WhatsApp within a few hours
                 </li>
               </ul>
 
@@ -284,13 +288,13 @@ export default function PopupForm() {
                 disabled={loading}
                 className="w-full bg-gold text-navy font-semibold py-3 rounded-lg hover:bg-gold-dark transition-all duration-200 disabled:opacity-60 text-[15px]"
               >
-                {loading ? "Submitting..." : "Book My Free Trial Class"}
+                {loading ? "Submitting..." : "Book Your Free Trial"}
               </button>
 
               <div className="border-t border-gray-100 pt-3 text-center">
                 <p className="text-xs text-grey mb-2">Or connect directly:</p>
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                  href={WHATSAPP_HREF}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-navy font-medium hover:text-gold transition-colors underline"

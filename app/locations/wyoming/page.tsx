@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -9,7 +10,7 @@ import NearbyLocations from "@/components/NearbyLocations";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Wyoming",
   description:
-    "Certified online Quran classes for Muslim families across Wyoming, including Cheyenne. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families across Wyoming, including Cheyenne. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/wyoming",
   },
@@ -31,84 +32,40 @@ const breadcrumbSchema = {
   ],
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description: "Certified online Quran classes for Muslim families throughout Wyoming.",
-  areaServed: { "@type": "State", name: "Wyoming" },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
+const faqs = [
+  {
+    question: "Which time zone are classes booked in?",
+    answer: "Wyoming is on Mountain Time. Share the days and times that suit you, and every class time we confirm will be in your own time zone. When the clocks change in March and November, your class stays at the same local time.",
+  },
+  {
+    question: "Can my daughter have a female teacher?",
+    answer: "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
+  },
+  {
+    question: "What happens in the free trial class?",
+    answer:
+      "The trial is a 30-minute one-on-one class on Zoom. The teacher checks the student's current level, teaches a short lesson at that level, recommends a course and how many classes a week, and answers your questions. Parents are welcome to sit in. There is no obligation to continue.",
+  },
+  {
+    question: "How much do classes cost?",
+    answer: `${startingPriceText}, and every student's first class is free. Sibling and prepay discounts are on our pricing page.`,
+  },
+];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Wyoming is the least populous state. Does that mean there's basically no Muslim community here?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Wyoming genuinely is the least populous state in the country by Census figures, and a good number of Wyoming families have no local mosque within a reasonable drive at all. That's precisely why we built this page, not to claim a community that doesn't exist, but to make sure Wyoming families aren't left without a real option.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have students in Cheyenne already?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We're actively welcoming Wyoming families right now. Rather than claim a number we can't verify, we'd invite you to be one of our first Cheyenne-area students with a free trial class.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Cheyenne is right on the Colorado border. Is Denver actually a realistic option for us?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "For an occasional trip, maybe. Cheyenne sits roughly 100 miles from Denver on I-25, making it the shortest distance between any state we serve this way and its nearest Metro Tier city. Even so, a regular weekly drive isn't realistic for most families, which is exactly what online classes solve.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much do classes cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required.",
-      },
-    },
-  ],
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
 };
-
-const faqs = [
-  {
-    question: "Wyoming is the least populous state. Does that mean there's basically no Muslim community here?",
-    answer:
-      "Wyoming genuinely is the least populous state in the country according to Census figures, and a good number of Wyoming families have no local mosque or Islamic community within a reasonable drive at all. We say that plainly rather than invent a local scene that doesn't exist. It's exactly why this page exists in the first place, to make sure Wyoming families have a real, certified option even where a local one doesn't.",
-  },
-  {
-    question: "Do you have students in Cheyenne already?",
-    answer:
-      "We're actively welcoming Wyoming families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Cheyenne-area students and see the quality for yourself with a free trial class.",
-  },
-  {
-    question: "Cheyenne is right on the Colorado border. Is Denver actually a realistic option for us?",
-    answer:
-      "For an occasional trip, maybe. Cheyenne sits roughly 100 miles from Denver on I-25, which makes it the shortest distance between any state we serve this way and its nearest Metro Tier city, genuinely closer than any other state-to-metro pairing on this site. Even at that distance, a regular weekly drive for Quran classes isn't realistic for most working families, which is exactly the gap online classes close.",
-  },
-  {
-    question: "How much do classes cost?",
-    answer:
-      "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required, so you can experience a lesson before committing to anything.",
-  },
-];
 
 export default function WyomingPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
@@ -135,7 +92,7 @@ export default function WyomingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center">
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Wyoming" target="_blank" rel="noopener noreferrer" className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-sm text-center">
                 Chat on WhatsApp
@@ -160,12 +117,12 @@ export default function WyomingPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Wyoming genuinely is the least populous state in the country by Census figures, and its Muslim community reflects that: a good number of Wyoming families have no local mosque or Islamic community within a reasonable drive at all. We're not going to invent a local scene that doesn't exist. What Wyoming does have going for it, more than any other state we serve this way, is proximity: Cheyenne sits roughly 100 miles from Denver on I-25, the shortest distance between any state-hub page on this site and its nearest Metro Tier city.
+                Wyoming genuinely is the least populous state in the country by Census figures, and its Muslim community reflects that: a good number of Wyoming families have no local mosque or Islamic community within a reasonable drive at all. We're not going to invent a local scene that doesn't exist. What Wyoming does have going for it, more than any other state we serve this way, is proximity: Cheyenne sits roughly 100 miles from Denver on I-25, the shortest distance between any state page on this site and its nearest city page.
               </p>
               <p>
                 Our{" "}
                 <Link href="/locations/denver-colorado" className="text-gold font-semibold hover:underline">Denver location page</Link>{" "}
-                is that nearest Metro Tier community, genuinely close for southeastern Wyoming families even if a weekly drive still isn't realistic. Our online classes reach you directly in Wyoming, no trip down I-25 required.
+                is that nearest city page, genuinely close for southeastern Wyoming families even if a weekly drive still isn't realistic. Our online classes reach you directly in Wyoming, no trip down I-25 required.
               </p>
             </div>
           </div>
@@ -179,7 +136,7 @@ export default function WyomingPage() {
             <span className="eyebrow mb-4">Our Curriculum</span>
             <h2 className="heading-2 text-navy mb-6">Courses for Wyoming Families</h2>
             <p className="text-grey leading-relaxed mb-6">
-              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a Wifaq ul Madaris certified scholar. Visit our{" "}
+              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a qualified teacher. Visit our{" "}
               <Link href="/courses" className="text-gold font-semibold hover:underline">full courses page</Link>{" "}
               to see everything available, including options for kids, adults, and reverts.
             </p>
@@ -211,7 +168,7 @@ export default function WyomingPage() {
       <CTASection
         headline="Certified Quran Education for Wyoming Families"
         subtext="From Cheyenne to the most remote Wyoming town. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Wyoming"
       />

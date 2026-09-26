@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -9,7 +10,7 @@ import NearbyLocations from "@/components/NearbyLocations";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Montana",
   description:
-    "Certified online Quran classes for Muslim families across Montana, including Billings. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families across Montana, including Billings. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/montana",
   },
@@ -31,84 +32,40 @@ const breadcrumbSchema = {
   ],
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description: "Certified online Quran classes for Muslim families throughout Montana.",
-  areaServed: { "@type": "State", name: "Montana" },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
+const faqs = [
+  {
+    question: "Which time zone are classes booked in?",
+    answer: "Montana is on Mountain Time. Share the days and times that suit you, and every class time we confirm will be in your own time zone. When the clocks change in March and November, your class stays at the same local time.",
+  },
+  {
+    question: "Can my daughter have a female teacher?",
+    answer: "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
+  },
+  {
+    question: "What happens in the free trial class?",
+    answer:
+      "The trial is a 30-minute one-on-one class on Zoom. The teacher checks the student's current level, teaches a short lesson at that level, recommends a course and how many classes a week, and answers your questions. Parents are welcome to sit in. There is no obligation to continue.",
+  },
+  {
+    question: "How much do classes cost?",
+    answer: `${startingPriceText}, and every student's first class is free. Sibling and prepay discounts are on our pricing page.`,
+  },
+];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Montana and Wyoming are neighbors. Is the situation the same in both?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Not quite. Montana is the 4th-largest state by land area and borders Canada, and Billings sits over 550 miles from Denver, our nearest Metro Tier city, considerably further than Wyoming's Cheyenne is from that same city. Montana families are, on average, dealing with more remoteness than their Wyoming neighbors, not less.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have students in Billings already?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We're actively welcoming Montana families right now. Rather than claim a number we can't verify, we'd invite you to be one of our first Billings-area students with a free trial class.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you handle Montana's size and low population density?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Simply by not letting it matter. Montana is one of the largest states in the country by land area and one of the least densely populated, with a family's nearest mosque sometimes genuinely hours away by car. Since all classes are online, exactly how far your town is from Billings or the Canadian border is never a barrier.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much do classes cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required.",
-      },
-    },
-  ],
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
 };
-
-const faqs = [
-  {
-    question: "Montana and Wyoming are neighbors. Is the situation the same in both?",
-    answer:
-      "Not quite, even though the two states get lumped together often. Montana is the 4th-largest state in the country by land area and shares a long border with Canada, and Billings sits more than 550 miles from Denver, our nearest Metro Tier city, considerably further than Wyoming's Cheyenne is from that same Denver page. On average, Montana families are dealing with more genuine remoteness than their Wyoming neighbors, not less.",
-  },
-  {
-    question: "Do you have students in Billings already?",
-    answer:
-      "We're actively welcoming Montana families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Billings-area students and see the quality for yourself with a free trial class.",
-  },
-  {
-    question: "How do you handle Montana's size and low population density?",
-    answer:
-      "Simply by not letting it matter. Montana is one of the largest states in the country by land area and one of the least densely populated, and a family's nearest mosque can genuinely be hours away by car, sometimes with the Canadian border closer than the next Muslim family. Since all classes are conducted online via Zoom, exactly how far your town is from Billings, or from anything, is never a barrier to consistent Quran instruction.",
-  },
-  {
-    question: "How much do classes cost?",
-    answer:
-      "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required, so you can experience a lesson before committing to anything.",
-  },
-];
 
 export default function MontanaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
@@ -135,7 +92,7 @@ export default function MontanaPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center">
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Montana" target="_blank" rel="noopener noreferrer" className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-sm text-center">
                 Chat on WhatsApp
@@ -160,12 +117,12 @@ export default function MontanaPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Montana is the 4th-largest state in the country by land area and shares a long northern border with Canada, and its Muslim community is genuinely small and scattered across that vastness, with families sometimes hundreds of miles apart. It's easy to lump Montana in with neighboring Wyoming, but the two aren't quite the same: Billings sits more than 550 miles from Denver, our nearest Metro Tier city, a considerably longer distance than Wyoming's Cheyenne has to cover to reach that same page.
+                Montana is the 4th-largest state in the country by land area and shares a long northern border with Canada, and its Muslim community is genuinely small and scattered across that vastness, with families sometimes hundreds of miles apart. It's easy to lump Montana in with neighboring Wyoming, but the two aren't quite the same: Billings sits more than 550 miles from Denver, our nearest city page, a considerably longer distance than Wyoming's Cheyenne has to cover to reach that same page.
               </p>
               <p>
                 Even at that distance, our{" "}
                 <Link href="/locations/denver-colorado" className="text-gold font-semibold hover:underline">Denver location page</Link>{" "}
-                remains the nearest Metro Tier community we serve. Our online classes reach you directly in Montana regardless, no drive to Denver, or anywhere else, required.
+                remains the nearest city page we have. Our online classes reach you directly in Montana regardless, no drive to Denver, or anywhere else, required.
               </p>
             </div>
           </div>
@@ -179,7 +136,7 @@ export default function MontanaPage() {
             <span className="eyebrow mb-4">Our Curriculum</span>
             <h2 className="heading-2 text-navy mb-6">Courses for Montana Families</h2>
             <p className="text-grey leading-relaxed mb-6">
-              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a Wifaq ul Madaris certified scholar. Visit our{" "}
+              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a qualified teacher. Visit our{" "}
               <Link href="/courses" className="text-gold font-semibold hover:underline">full courses page</Link>{" "}
               to see everything available, including options for kids, adults, and reverts.
             </p>
@@ -211,7 +168,7 @@ export default function MontanaPage() {
       <CTASection
         headline="Certified Quran Education for Montana Families"
         subtext="From Billings to the most remote Montana town. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Montana"
       />

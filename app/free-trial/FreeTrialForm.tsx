@@ -71,9 +71,9 @@ export default function FreeTrialForm() {
           JazakAllah Khair!
         </h2>
         <p className="text-grey leading-relaxed text-sm">
-          We have received your request. We will contact you within{" "}
-          <strong className="text-navy">2 hours on WhatsApp</strong> to confirm your free trial
-          class and match you with the right teacher. In sha Allah, this is the beginning of a
+          We have received your request. We will contact you{" "}
+          <strong className="text-navy">within a few hours</strong> on WhatsApp to confirm your free trial
+          class and match you with a suitable teacher. In sha Allah, this is the beginning of a
           beautiful Quran journey for your family.
         </p>
         <div className="mt-8 bg-offwhite rounded-xl p-5 text-left">
@@ -99,10 +99,10 @@ export default function FreeTrialForm() {
     <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
       <div className="mb-6">
         <h2 className="font-playfair font-bold text-2xl text-navy mb-1">
-          Book Your Free Trial Class
+          Book Your Free Trial
         </h2>
         <p className="text-grey text-sm">
-          Fill in your details below. We respond within 2 hours on WhatsApp.
+          Fill in your details below. We reply within a few hours on WhatsApp.
         </p>
       </div>
 
@@ -157,7 +157,7 @@ export default function FreeTrialForm() {
             <p className="text-red-500 text-xs mt-1.5">{phoneError}</p>
           ) : (
             <p className="text-grey text-xs mt-1.5">
-              We will contact you on this number within 2 hours
+              We will contact you on this number within a few hours
             </p>
           )}
         </div>
@@ -270,7 +270,7 @@ export default function FreeTrialForm() {
           disabled={status === "loading"}
           className="w-full bg-gold text-navy font-bold py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-base disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {status === "loading" ? "Submitting..." : "Book My Free Trial Class →"}
+          {status === "loading" ? "Submitting..." : "Book Your Free Trial →"}
         </button>
 
         <p className="text-grey text-xs text-center">

@@ -99,7 +99,7 @@ export default function ReviewsPage() {
       <CTASection
         headline="Book a Free Trial Class"
         subtext="Meet your teacher, try a real lesson, and decide afterwards. No credit card and no commitment."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

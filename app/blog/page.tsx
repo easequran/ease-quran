@@ -183,7 +183,7 @@ export default function BlogPage() {
               href="/free-trial"
               className="inline-block bg-navy text-white font-bold px-8 py-4 rounded-full hover:bg-navy/90 transition-colors text-sm"
             >
-              Book Your Free Trial Class
+              Book Your Free Trial
             </Link>
           </div>
         </div>

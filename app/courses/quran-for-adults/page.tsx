@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
+import { teachers } from "@/lib/teachers";
 import { CheckCircle, User, BarChart2 } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
-import CourseLocations from "@/components/CourseLocations";
 import FamilyReviews from "@/components/FamilyReviews";
 import { reviewsById } from "@/lib/reviews";
 
@@ -52,53 +53,6 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Am I too old to learn the Quran?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely not. The Prophet Muhammad ﷺ said: 'The one who recites the Quran skillfully will be with the noble, righteous scribes; and the one who reads it with difficulty will have two rewards.' There is no age limit to learning the Quran. We have taught students in their 50s, 60s, and beyond. The desire to learn is what matters, not the age at which you begin.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How are adult classes different from kids' classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Adult classes are paced differently, we move at the student's natural learning speed without the gamification used for children. Instruction is entirely conversational, in plain English. Adults often have more questions and want to understand the 'why' behind rules, we welcome this. Classes are also scheduled for adult life: evenings, weekends, and early mornings.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I learn the Quran if I don't know any Arabic?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Most of our adult students start with zero Arabic knowledge. We begin with Noorani Qaida, learning Arabic letters and sounds, before moving to Quran reading. For adults, this foundation is typically built faster than with children. Many adult students are reading from the Quran within 2–4 months of starting from scratch.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long will it take me to read the Quran?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "If starting from zero: 2–4 months to complete Noorani Qaida, then 6–12 months to reach fluent Quran reading with basic Tajweed. If you can already read but with errors and weak Tajweed: 3–6 months of structured Tajweed work typically produces significant improvement. Every student's journey is different, we track your progress and give you honest timelines.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have Quran classes for seniors?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), scheduled at any time of day, and paced entirely around the student's comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "Am I too old to learn the Quran?",
@@ -123,8 +77,23 @@ const faqs = [
   {
     question: "Do you have Quran classes for seniors?",
     answer:
-      "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), scheduled at any time of day, and paced entirely around the student's comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
+      "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), arranged around the times that suit the student, and paced around their comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
   },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
+const adultTeachers = [
+  teachers.find((t) => t.slug === "ustadh-omar-khalid")!,
+  teachers.find((t) => t.slug === "ustadha-sumaiya-khan")!,
 ];
 
 export default function QuranForAdultsPage() {
@@ -172,7 +141,7 @@ export default function QuranForAdultsPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -210,11 +179,9 @@ export default function QuranForAdultsPage() {
                   Book of Allah.
                 </p>
                 <p>
-                  This course was designed specifically for you. Taught by our certified teacher from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>,
-                  with 6+ years of experience teaching Western adults. Our teacher understands the
-                  sensitivities, the time constraints, and the particular challenges that adult
-                  learners face, and has built a methodology that works.
+                  This course was designed for you. It is taught one-on-one by qualified teachers who
+              are used to teaching adults, and who understand the time pressure and the
+              embarrassment many adult beginners feel.
                 </p>
                 <p>
                   Classes are completely private, one-on-one, in English, and scheduled around
@@ -378,25 +345,31 @@ export default function QuranForAdultsPage() {
               Your Teacher
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              Specialist in Teaching Western Adults, Wifaq ul Madaris Certified
+              Teachers Who Specialise in Adult Learners
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Our certified teacher has spent 6+ years perfecting a methodology for teaching Quran to
-              Western, English-speaking adults, understanding the unique challenges of busy
-              schedules, knowledge gaps, and the need for clear English explanation, addressing
-              all of them in every class.
+              Some of the teachers who focus on adult students, understanding the busy schedules
+              and the nerves many adults feel starting from scratch.
             </p>
           </div>
-          <div className="max-w-xs mx-auto">
-            <TeacherCard
-              name="Head Teacher"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Western Adult Quran Education Specialist"
-              experience="6+ years teaching adults in the USA, UK, and Canada"
-              qualification="Certified Quran Teacher"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {adultTeachers.map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -415,7 +388,7 @@ export default function QuranForAdultsPage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Your first class is completely free. No credit card, no commitment. Experience the
@@ -446,15 +419,17 @@ export default function QuranForAdultsPage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="Quran Classes Around Irregular Work Hours"
-        intro="Adults rarely fail at Quran study for lack of interest. More often, a fixed weekly class simply clashes with work. Online one-on-one lessons can be booked around shifts, on-call weeks and changing rotas."
-        links={[
-          { slug: "las-vegas", reason: "a city that runs around the clock, where many parents work swing or graveyard shifts." },
-          { slug: "birmingham-alabama", reason: "doctors, residents and nurses at the city's large medical center fit lessons around rotating schedules." },
-          { slug: "seattle", reason: "easy rescheduling for demanding or shifting work weeks in Pacific Time." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -489,7 +464,7 @@ export default function QuranForAdultsPage() {
       <CTASection
         headline="Begin Your Quran Journey Today: At Any Age"
         subtext="Book a free adult Quran class and take the first step you have been putting off. No embarrassment, no rush, no commitment. Just a certified teacher and your sincere intention."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

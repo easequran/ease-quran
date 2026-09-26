@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import FamilyReviews from "@/components/FamilyReviews";
-import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Columbus, Ohio",
   description:
-    "Certified online Quran classes for Muslim families in Columbus, Ohio. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Columbus, Ohio. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/columbus-ohio",
   },
@@ -31,85 +30,6 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
     { "@type": "ListItem", position: 3, name: "Columbus, Ohio", item: "https://easequran.com/locations/columbus-ohio" },
-  ],
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description:
-    "Certified online Quran classes for Muslim families in Columbus, Ohio and central Ohio.",
-  areaServed: {
-    "@type": "City",
-    name: "Columbus",
-    containedInPlace: { "@type": "State", name: "Ohio" },
-  },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is online Quran learning safe for my child?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I find Quran classes near me in Columbus?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Columbus, our online classes serve any family in the Columbus area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve Columbus's large Somali Muslim community?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We warmly welcome families from Columbus's Somali community, one of the largest in the United States. All classes are in English and our teachers are experienced with students from all Muslim backgrounds including Somali families.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve families in suburbs like Dublin, Westerville, and Hilliard?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We serve all of the Columbus metro area including Dublin, Westerville, Hilliard, Gahanna, Grove City, Pickerington, and surrounding communities. Online classes reach every part of central Ohio.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are your teachers certified from recognized Islamic institutions?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Columbus Muslim families can trust our teachers' qualifications completely.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is a female teacher available for sisters in Columbus?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Sister Almas Fatima, our certified female Quran teacher, is available for sisters and children. Many Columbus families from the Somali and South Asian communities request this option.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you teach children as young as 4 or 5 years old?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We teach children starting from age 4 with Noorani Qaida. Our teachers are experienced with young learners and know how to make early Quran education engaging, fun, and effective for very young children.",
-      },
-    },
   ],
 };
 
@@ -137,28 +57,34 @@ const faqs = [
   {
     question: "Are your teachers certified from recognized Islamic institutions?",
     answer:
-      "All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. This credential represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Columbus Muslim families, from any background, can have complete confidence in the qualifications of our teachers.",
+      "Every Ease Quran teacher holds a recognized Quran qualification. This credential represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Columbus Muslim families, from any background, can have complete confidence in the qualifications of our teachers.",
   },
   {
     question: "Is a female teacher available for sisters in Columbus?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Columbus families from the Somali, South Asian, and Arab communities request a female teacher for their daughters and wives, and we are very pleased to offer this important option. Simply indicate your preference when booking.",
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
   },
   {
     question: "Do you teach children as young as 4 or 5 years old?",
     answer:
-      "Yes. We begin with Noorani Qaida for children starting from around age 4. Our teachers are specially experienced with young learners, they know how to keep very young children engaged, make the Arabic letters feel like an exciting adventure, and build the foundation for Quran reading in a way that feels natural and fun. Many Columbus parents are amazed at how quickly their young children take to it.",
+      "Yes. We begin with Noorani Qaida for children starting from around age 4. Our teachers are specially experienced with young learners, they know how to keep very young children engaged, make the Arabic letters feel like an exciting adventure, and build the foundation for Quran reading in a way that feels natural and fun.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function ColumbusOhioPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -191,7 +117,7 @@ export default function ColumbusOhioPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Columbus%20Ohio"
@@ -221,7 +147,7 @@ export default function ColumbusOhioPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Columbus, Ohio has a Muslim community of approximately 60,000 or more, and it is distinguished nationally by one of its most remarkable features: home to one of the largest Somali communities in the entire United States. The Somali Muslim community in Columbus has established deep roots since the early 1990s, building a substantial network of mosques, community organizations, halal businesses, and social services that serve what has become one of America's most significant Somali diaspora communities. The Somali presence in Columbus is not a peripheral feature of the city's Muslim life, it is a central pillar of it, with Somali Muslims playing an active role in the city's Islamic institutions, civic life, and broader community. Alongside the Somali community, Columbus hosts a growing South Asian Muslim population (Pakistani, Indian, and Bangladeshi families) increasingly established in the suburbs, as well as Arab Muslim families and students who add to the city's diverse Islamic landscape. Several active Islamic centers and schools serve the community's educational and spiritual needs across the metropolitan area.
+                Columbus, Ohio has a sizable Muslim community, and it is distinguished nationally by one of its most remarkable features: home to one of the largest Somali communities in the entire United States. The Somali Muslim community in Columbus has established deep roots since the early 1990s, building a substantial network of mosques, community organizations, halal businesses, and social services that serve what has become one of America's most significant Somali diaspora communities. The Somali presence in Columbus is not a peripheral feature of the city's Muslim life, it is a central pillar of it, with Somali Muslims playing an active role in the city's Islamic institutions, civic life, and broader community. Alongside the Somali community, Columbus hosts a growing South Asian Muslim population (Pakistani, Indian, and Bangladeshi families) increasingly established in the suburbs, as well as Arab Muslim families and students who add to the city's diverse Islamic landscape. Several active Islamic centers and schools serve the community's educational and spiritual needs across the metropolitan area.
               </p>
               <p>
                 Columbus's Muslim community benefits from the city's general affordability and quality of life, which continue to attract new Muslim families from across the country. However, the community's diversity also presents an interesting challenge: different cultural communities have different traditions around Quran education and teaching methods. Some Columbus Muslim families come from backgrounds where Quran education was community-led and group-based; others are looking for the kind of personalized, individual instruction that was not easily available in their home countries or communities. Ease Quran's model, one-on-one, structured, progress-tracked, and conducted in English, is particularly well-suited to Columbus's diverse Muslim families, providing a consistent standard of certified instruction that serves children and adults from any background equally well.
@@ -278,16 +204,14 @@ export default function ColumbusOhioPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
-            <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <FamilyReviews reviews={reviewsForSeed("columbus-ohio")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
-
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">
-              Book Free Trial Class
+              Book Your Free Trial
             </Link>
             <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Columbus%20Ohio" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
@@ -355,27 +279,6 @@ export default function ColumbusOhioPage() {
         </div>
       </section>
 
-      {/* Near Me */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow mb-4">
-              Quran Classes Near You
-            </span>
-            <h2 className="heading-2 text-navy mb-6">
-              Looking for Quran Classes Near You in Columbus?
-            </h2>
-            <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in Columbus, the best
-              teacher for your child may not be the closest one on the map. Because every Ease Quran
-              class is live and online, Columbus families connect one-on-one with certified teachers
-              without driving anywhere. You get the convenience of a teacher right in your home, with
-              none of the commute, parking, or fixed group schedule of a local center.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <NearbyLocations slug="columbus-ohio" />
 
       {/* FAQ */}
@@ -402,7 +305,7 @@ export default function ColumbusOhioPage() {
       <CTASection
         headline="Certified Quran Education for Columbus's Diverse Muslim Community"
         subtext="Serving Somali, South Asian, Arab, and all Muslim families across Columbus and central Ohio with one-on-one, expert Quran instruction. Your first class is completely free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Columbus Ohio"
       />

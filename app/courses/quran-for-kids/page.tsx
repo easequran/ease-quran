@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
+import { business } from "@/lib/business";
+import { teachers } from "@/lib/teachers";
 import { BookOpen, Star, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -58,7 +61,7 @@ const faqs = [
   {
     question: "Is it safe for kids to learn Quran online?",
     answer:
-      "Yes. All Ease Quran classes take place over a video call with a parent present. Our teachers are fully vetted and certified from Wifaq ul Madaris. We encourage parents to sit nearby during early classes. Female teachers are available for sisters and younger children.",
+      "Yes. All Ease Quran classes take place over a video call with a parent present. Every teacher holds a recognized Quran qualification and is checked before joining. We encourage parents to sit nearby during early classes. Female teachers are available for sisters and younger children.",
   },
   {
     question: "What age can my child start Quran classes?",
@@ -68,7 +71,7 @@ const faqs = [
   {
     question: "Do you have female teachers for my daughter?",
     answer:
-      "Yes. Almas Fatima is our certified female Quran teacher, available for sisters and children. She holds a Wifaq ul Madaris certification and a B.A. in Islamic Studies. Simply mention your preference when booking your free trial.",
+      "Yes. Just mention it when you book the free trial, and we can arrange a female teacher at most times.",
   },
   {
     question: "How long are kids' Quran classes?",
@@ -106,6 +109,11 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: f.answer },
   })),
 };
+
+const kidsTeachers = [
+  teachers.find((t) => t.slug === "ustadh-muhammad-hamza")!,
+  teachers.find((t) => t.slug === "almas-fatima")!,
+];
 
 export default function QuranForKidsPage() {
   return (
@@ -157,7 +165,7 @@ export default function QuranForKidsPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -193,8 +201,7 @@ export default function QuranForKidsPage() {
                   the Quran fluently with correct Tajweed.
                 </p>
                 <p>
-                  Each class is taught live, one-on-one, over a simple video call by a teacher
-                  certified from <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>.
+                  Each class is taught live, one-on-one, on Zoom by a qualified teacher.
                   Classes are taught entirely in English, so your child never feels lost or
                   overwhelmed. Female teachers are available for sisters and younger children.
                 </p>
@@ -478,7 +485,7 @@ export default function QuranForKidsPage() {
                 },
                 {
                   title: "Flexible Scheduling",
-                  desc: "Classes are available 6 days a week, morning through evening. Choose times that fit your family's routine, evenings, weekends, or after school. You can reschedule with 24 hours notice.",
+                  desc: `Classes run 7 days a week. Tell us the times that fit your family, after school, evenings or weekends, and we arrange a teacher around them. A class moved at least ${business.classNoticeHours} hours before it starts is rescheduled, not lost.`,
                 },
                 {
                   title: "Progress Tracking & Reports",
@@ -518,31 +525,28 @@ export default function QuranForKidsPage() {
               Certified Quran Teachers for Your Child
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Both teachers hold credentials from{" "}
-              <strong>Wifaq ul Madaris Al-Arabia</strong>, Pakistan&apos;s largest Islamic
-              education board, globally recognized. A female teacher is available on request.
+              Two of the teachers who teach children with us. A female teacher can be arranged at
+              most times.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <TeacherCard
-              name="Muhammad Umair"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Tajweed, Quran Reading, Kids Education Specialist"
-              experience="2+ years teaching children online"
-              qualification="Quran Teacher"
-              badge="Kids Specialist"
-            />
-            <TeacherCard
-              name="Almas Fatima"
-              image="/images/teacher-2.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Qaria e Quran, Bachelor in Islamic Studies"
-              experience="Available for sisters and children, teaching since 2022"
-              qualification="Female Quran Teacher"
-              badge="Female Teacher"
-            />
+            {kidsTeachers.map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -561,7 +565,7 @@ export default function QuranForKidsPage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Flexible monthly plans with no long-term contracts. Your child&apos;s first class is
@@ -638,7 +642,7 @@ export default function QuranForKidsPage() {
       <CTASection
         headline="Give Your Child the Gift of Quran Today"
         subtext="Join hundreds of Muslim families across America who trust Ease Quran for their children's Islamic education. Book your free trial class, no credit card, no commitment."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

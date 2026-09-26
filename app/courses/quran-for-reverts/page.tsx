@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
+import { teachers } from "@/lib/teachers";
 import { BookOpen, CheckCircle } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
-import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Quran Classes for New Muslims (Reverts) in USA",
@@ -50,53 +51,6 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "I just became Muslim, where do I start with the Quran?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Congratulations on your Shahada. The very first thing is to learn the Kalima and the words of the Shahada with correct pronunciation. Then we move to Wudu (ablution), the words of Salah (prayer), Al-Fatiha, and the short Surahs needed for prayer. Our Quran for Reverts course is specifically designed to guide you through exactly this journey, step by step, in English, with full patience and no assumptions.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need to learn Arabic before taking this course?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. We teach Arabic from absolute zero as part of this course. You will learn the Arabic alphabet and sounds as a natural part of learning to read the Quran and Duas. You do not need any prior Arabic knowledge, and the course is taught entirely in English.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the first thing a new Muslim should learn from the Quran?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The first priority is learning Surah Al-Fatiha correctly, it is recited in every Rakah of Salah. After that, three short Surahs for prayer: Al-Ikhlas, Al-Falaq, and An-Nas. Alongside this, we teach the Tashahhud and the Salat-Ibrahim (Durood) recited in Salah. Once prayer basics are covered, we work on the Arabic alphabet and Quranic reading more broadly.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are the teachers sensitive to the unique challenges reverts face?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. Our certified teacher has extensive experience teaching reverts and understands the unique emotional, social, and practical challenges of being a new Muslim in America. Classes are completely free of cultural assumptions, you will not be made to feel less Muslim for not knowing something. Every question is welcomed. The learning environment is warm, non-judgmental, and encouraging.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How quickly can a revert learn to pray in Arabic?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most new Muslims can learn the basic words of Salah within 4–8 weeks of consistent practice with 2–3 classes per week. This includes Al-Fatiha, one short Surah, the Tashahhud, and the opening Takbir. The movements of Salah can be learned from videos alongside the class. We focus on getting you praying correctly as quickly as possible, then build on that foundation.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "I just became Muslim, where do I start with the Quran?",
@@ -124,6 +78,18 @@ const faqs = [
       "Most new Muslims can learn the basic words of Salah within 4–8 weeks of consistent practice with 2–3 classes per week. This includes Al-Fatiha, one short Surah, the Tashahhud, and the opening Takbir. The movements of Salah can be learned from videos alongside the class. We focus on getting you praying correctly as quickly as possible, then build on that foundation.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
+const revertTeacher = teachers.find((t) => t.slug === "ustadha-sumaiya-khan")!;
 
 export default function QuranForRevertsPage() {
   return (
@@ -171,7 +137,7 @@ export default function QuranForRevertsPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -221,9 +187,7 @@ export default function QuranForRevertsPage() {
                   reading and Arabic skills.
                 </p>
                 <p>
-                  Taught by our certified teacher from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, with
-                  years of experience working with reverts in the USA. Our teacher understands the unique
+                  Taught one-on-one by qualified teachers who understand the unique
                   challenges: the emotional journey of conversion, the absence of a Muslim family
                   network, the practical questions no one seems to answer, and the overwhelming
                   feeling of not knowing where to start.
@@ -396,25 +360,28 @@ export default function QuranForRevertsPage() {
               Your Teacher
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              A Teacher Who Truly Understands Your Journey
+              A Teacher Who Understands Your Journey
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Ease Quran was built specifically to serve Western Muslims, including reverts.
-              Our teacher&apos;s 6+ years teaching Western students has given them deep empathy for the unique
-              challenges new Muslims face. Certified from Wifaq ul Madaris Al-Arabia, they bring
-              both scholarly credentials and genuine warmth to every class.
+              Ease Quran was built to serve Western Muslims, including reverts. Our teachers who
+              focus on this bring both real qualifications and genuine patience to every class.
             </p>
           </div>
           <div className="max-w-xs mx-auto">
             <TeacherCard
-              name="Head Teacher"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Reverts & Western Students Specialist"
-              experience="6+ years teaching reverts and Western Muslims"
-              qualification="Certified Quran Teacher"
+              name={`${revertTeacher.honorific} ${revertTeacher.name}`}
+              image={revertTeacher.photo}
+              credential={revertTeacher.qualifications.join(", ")}
+              speciality={revertTeacher.specialisation}
+              experience={revertTeacher.experience}
+              badge={revertTeacher.gender === "female" ? "Female Teacher" : undefined}
             />
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -426,7 +393,7 @@ export default function QuranForRevertsPage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Your first class is completely free. No credit card, no commitment. Meet your teacher,
@@ -457,15 +424,17 @@ export default function QuranForRevertsPage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="Support for New Muslims, Wherever You Live"
-        intro="Many reverts live in places where the local community is small, or where they do not yet know anyone at the masjid. A patient teacher online gives you a private place to start, at your own pace."
-        links={[
-          { slug: "portland-oregon", reason: "a growing East African community alongside a notable number of reverts." },
-          { slug: "los-angeles", reason: "a significant and growing revert community across the metro." },
-          { slug: "salt-lake-city-utah", reason: "a small, close-knit Muslim minority community." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -502,7 +471,7 @@ export default function QuranForRevertsPage() {
       <CTASection
         headline="Your Islamic Journey Starts Here"
         subtext="Book a free class today, no credit card, no commitment, no judgment. Just a certified, patient teacher ready to welcome you and help you take your first steps with the Quran."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

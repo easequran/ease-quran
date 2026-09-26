@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import FamilyReviews from "@/components/FamilyReviews";
-import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Los Angeles, California",
   description:
-    "Certified online Quran classes for Muslim families in Los Angeles, California. Wifaq ul Madaris certified teachers, free trial available.",
+    "Certified online Quran classes for Muslim families in Los Angeles, California. Qualified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/los-angeles",
   },
@@ -31,85 +30,6 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
     { "@type": "ListItem", position: 3, name: "Los Angeles", item: "https://easequran.com/locations/los-angeles" },
-  ],
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description:
-    "Certified online Quran classes for Muslim families in Los Angeles and the greater LA metro area.",
-  areaServed: {
-    "@type": "City",
-    name: "Los Angeles",
-    containedInPlace: { "@type": "State", name: "California" },
-  },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is online Quran learning safe for my child?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I find Quran classes near me in Los Angeles?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Los Angeles, our online classes serve any family in the Los Angeles area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve all parts of the LA metro, including the San Gabriel Valley?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We serve the entire Los Angeles metropolitan area. Culver City, Inglewood, Pomona, the San Gabriel Valley, the South Bay, Orange County, and everywhere in between. Online classes mean your location in the vast LA metro doesn't limit your access.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have experience with reverts (new Muslims) in Los Angeles?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Los Angeles has a significant and growing revert community, and we welcome adult learners who are new to Islam or learning Quran for the first time. Our teachers are experienced, non-judgmental, and begin exactly where you are.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do online classes work, do I need special equipment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "You only need a smartphone, tablet, or laptop with Zoom installed and a stable internet connection. Classes are live, interactive, and conducted with video and audio so your child can read and be corrected in real time.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is a female teacher available for sisters in Los Angeles?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Sister Almas Fatima, our certified female Quran teacher, is available for sisters and children. You can request her when booking your free trial class.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What are the available time slots for Pacific Time families?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We offer flexible Pacific Time scheduling including after-school (3–6 PM PT), evening, and weekend slots. We accommodate LA families' often non-standard schedules and can work with early morning slots as well.",
-      },
-    },
   ],
 };
 
@@ -142,23 +62,29 @@ const faqs = [
   {
     question: "Is a female teacher available for sisters in Los Angeles?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many LA-area families specifically request her for their daughters, and we are pleased to provide this option. Simply mention it when booking your free trial.",
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
   },
   {
     question: "What are the available time slots for Pacific Time families?",
     answer:
-      "We offer flexible Pacific Time scheduling including after-school slots (3–6 PM PT), evening sessions, and weekend morning and afternoon options. We know LA families often have non-standard schedules, shift work, entertainment industry hours, long commutes, and we do our best to accommodate your specific situation.",
+      "Class times are always confirmed in Pacific Time. Tell us the days and times that suit your family, after school, evenings or weekends, and we arrange a suitable teacher around them. When the clocks change in March and November, your class stays at the same local time.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function LosAngelesPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -191,7 +117,7 @@ export default function LosAngelesPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Los%20Angeles"
@@ -221,7 +147,7 @@ export default function LosAngelesPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Los Angeles, California is home to one of the most geographically dispersed Muslim communities in the United States, with an estimated population exceeding 500,000 Muslims spread across a metro area that covers thousands of square miles. LA's Muslim community is remarkably diverse and includes well-established South Asian communities in communities like Artesia and Pomona, Iranian-American Muslims across the west side and Valley, Arab communities in various parts of LA County, and a growing African American Muslim presence across South LA. The Inglewood and Culver City areas have long been home to active Islamic centers and masjids, while the San Gabriel Valley hosts a growing Pakistani and Bangladeshi Muslim presence. Notably, Los Angeles also has one of the largest and most active revert (convert) Muslim communities in the nation, reflecting the city's diverse, open culture.
+                Los Angeles, California is home to one of the most geographically dispersed Muslim communities in the United States, spread across a metro area that covers thousands of square miles. LA's Muslim community is remarkably diverse and includes well-established South Asian communities in communities like Artesia and Pomona, Iranian-American Muslims across the west side and Valley, Arab communities in various parts of LA County, and a growing African American Muslim presence across South LA. The Inglewood and Culver City areas have long been home to active Islamic centers and masjids, while the San Gabriel Valley hosts a growing Pakistani and Bangladeshi Muslim presence. Notably, Los Angeles also has one of the largest and most active revert (convert) Muslim communities in the nation, reflecting the city's diverse, open culture.
               </p>
               <p>
                 The challenge facing LA's Muslim families is perhaps the most acute of any major American city: the geography is simply enormous and the traffic is world-famous. Getting from, say, Pomona to an Islamic center in Culver City is not a 20-minute errand, it can be a two-hour ordeal during peak hours on the 10 freeway. Weekend Islamic schools in areas like Inglewood or Torrance may serve nearby families well, but they are essentially out of reach for families in the eastern suburbs. This is precisely why so many LA-area Muslim families have embraced online Quran education, not as a compromise, but as a genuinely superior solution that delivers the same certified, expert instruction without the punishing commute.
@@ -278,16 +204,14 @@ export default function LosAngelesPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
-            <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <FamilyReviews reviews={reviewsForSeed("los-angeles")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
-
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">
-              Book Free Trial Class
+              Book Your Free Trial
             </Link>
             <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Los%20Angeles" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
@@ -355,27 +279,6 @@ export default function LosAngelesPage() {
         </div>
       </section>
 
-      {/* Near Me */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow mb-4">
-              Quran Classes Near You
-            </span>
-            <h2 className="heading-2 text-navy mb-6">
-              Looking for Quran Classes Near You in Los Angeles?
-            </h2>
-            <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in Los Angeles, the best
-              teacher for your child may not be the closest one on the map. Because every Ease Quran
-              class is live and online, Los Angeles families connect one-on-one with certified teachers
-              without driving anywhere. You get the convenience of a teacher right in your home, with
-              none of the commute, parking, or fixed group schedule of a local center.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <NearbyLocations slug="los-angeles" />
 
       {/* FAQ */}
@@ -402,7 +305,7 @@ export default function LosAngelesPage() {
       <CTASection
         headline="Quran Education Without the LA Traffic"
         subtext="Serving Muslim families across the entire Los Angeles metro, from Inglewood to Pomona, Culver City to the San Gabriel Valley. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Los Angeles"
       />

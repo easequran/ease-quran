@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
+import { PRIMARY_CTA, whatsappLink } from "@/lib/business";
 
 interface PricingCardProps {
   name: string;
@@ -8,13 +9,12 @@ interface PricingCardProps {
   duration: string;
   forWho: string;
   features: string[];
-  popular?: boolean;
+  priceSuffix?: string;
+  highlightLabel?: string;
   customCta?: boolean;
   subLine?: string;
 }
 
-const WHATSAPP_NUMBER = "923195657389";
-const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I would like a custom quote for Ease Quran classes.");
 
 export default function PricingCard({
   name,
@@ -23,10 +23,12 @@ export default function PricingCard({
   duration,
   forWho,
   features,
-  popular,
+  priceSuffix,
+  highlightLabel,
   customCta,
   subLine,
 }: PricingCardProps) {
+  const popular = Boolean(highlightLabel);
   return (
     <div
       className={`relative rounded-2xl p-7 flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-eq-lg ${
@@ -37,7 +39,7 @@ export default function PricingCard({
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-navy text-xs font-bold px-5 py-1.5 rounded-full whitespace-nowrap">
-          ⭐ Most Popular
+          {highlightLabel}
         </div>
       )}
 
@@ -61,7 +63,7 @@ export default function PricingCard({
                 ${price}
               </span>
               <span className={`text-sm ${popular ? "text-white/60" : "text-grey"}`}>
-                /month
+                {priceSuffix}
               </span>
             </>
           ) : (
@@ -103,7 +105,7 @@ export default function PricingCard({
 
       {customCta ? (
         <a
-          href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+          href={whatsappLink("Hi, I would like a custom quote for Ease Quran classes.")}
           target="_blank"
           rel="noopener noreferrer"
           className="block text-center font-semibold py-3 rounded-full transition-all duration-200 border-2 border-navy text-navy hover:bg-navy hover:text-white text-[15px]"
@@ -119,7 +121,7 @@ export default function PricingCard({
               : "bg-navy text-white hover:bg-navy/90"
           }`}
         >
-          Start Free Trial
+          {PRIMARY_CTA}
         </Link>
       )}
     </div>

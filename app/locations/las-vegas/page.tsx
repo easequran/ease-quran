@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import FamilyReviews from "@/components/FamilyReviews";
-import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Las Vegas, Nevada",
   description:
-    "Certified online Quran classes for Muslim families in Las Vegas, Nevada. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Las Vegas, Nevada. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/las-vegas",
   },
@@ -34,85 +33,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description:
-    "Certified online Quran classes for Muslim families across the Las Vegas metropolitan area.",
-  areaServed: {
-    "@type": "City",
-    name: "Las Vegas",
-    containedInPlace: { "@type": "State", name: "Nevada" },
-  },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is online Quran learning safe for my child?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I find a Quran teacher near me in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Las Vegas, our online Quran academy serves any family across the valley searching for a Quran teacher near them. You connect with a certified teacher over Zoom from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can classes work around 24-hour shift work common in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Las Vegas runs on a 24-hour hospitality and service economy, and many parents work swing or graveyard shifts. Class times are booked around your actual schedule, not a fixed 9-to-5 slot.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you handle the desert heat during Las Vegas summers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Since every class is online, extreme heat never affects your child's lesson. They learn from an air-conditioned home no matter how hot it is outside.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are teachers certified from recognized Islamic institutions?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Las Vegas families can trust our teachers' qualifications.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a female Quran teacher for sisters in Las Vegas?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Sister Almas Fatima is our certified female Quran teacher available exclusively for sisters and children. Many Las Vegas families specifically request her for their daughters.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve families in Henderson and the wider valley?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We serve the entire Las Vegas valley, including Henderson, Summerlin, and North Las Vegas. Since classes are online, distance across the valley is never a barrier.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "Is online Quran learning safe for my child?",
@@ -127,7 +47,7 @@ const faqs = [
   {
     question: "Can classes work around 24-hour shift work common in Las Vegas?",
     answer:
-      "Yes. Las Vegas is one of the few American cities that genuinely runs around the clock, and a huge share of Muslim families here work in hospitality, gaming, or service jobs with swing shifts, graveyard shifts, or rotating days off instead of a standard weekday schedule. A once-a-week class at a fixed evening time simply doesn't work for a lot of Vegas parents. We book classes around your actual shift pattern, whatever it happens to be that week.",
+      "Often, yes. Tell us your shift pattern and the times that usually suit you, and we'll arrange classes around them based on teacher availability. If your shifts change, a class moved at least 4 hours before it starts is rescheduled, not lost.",
   },
   {
     question: "How do you handle the desert heat during Las Vegas summers?",
@@ -137,12 +57,12 @@ const faqs = [
   {
     question: "Are teachers certified from recognized Islamic institutions?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Las Vegas-area Muslim families can have full confidence in our teachers' qualifications.",
+      "Yes. Every Ease Quran teacher holds a recognized Quran qualification. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Las Vegas-area Muslim families can have full confidence in our teachers' qualifications.",
   },
   {
     question: "Is there a female Quran teacher for sisters in Las Vegas?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Las Vegas families specifically request her for their daughters, and we are proud to offer this option. Simply mention your preference when booking your free trial.",
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
   },
   {
     question: "Do you serve families in Henderson and the wider valley?",
@@ -151,14 +71,20 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function LasVegasPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -191,7 +117,7 @@ export default function LasVegasPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Las%20Vegas%20Nevada"
@@ -278,16 +204,14 @@ export default function LasVegasPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
-            <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <FamilyReviews reviews={reviewsForSeed("las-vegas")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
-
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">
-              Book Free Trial Class
+              Book Your Free Trial
             </Link>
             <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Las%20Vegas%20Nevada" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
@@ -355,28 +279,6 @@ export default function LasVegasPage() {
         </div>
       </section>
 
-      {/* Near Me */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow mb-4">
-              Quran Classes Near You
-            </span>
-            <h2 className="heading-2 text-navy mb-6">
-              Looking for a Quran Teacher Near You in Las Vegas?
-            </h2>
-            <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in Las Vegas, the best
-              teacher for your child may not be the closest one on the map, especially with a work
-              schedule that doesn't match a typical evening class time. Because every Ease Quran class
-              is live and online, Las Vegas families connect one-on-one with certified teachers without
-              driving anywhere. You get the convenience of a teacher right in your home, with none of
-              the commute, parking, or fixed group schedule of a local center.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <NearbyLocations slug="las-vegas" />
 
       {/* FAQ */}
@@ -403,7 +305,7 @@ export default function LasVegasPage() {
       <CTASection
         headline="Certified Quran Education Across the Las Vegas Valley"
         subtext="From the Strip to Henderson and Summerlin. Ease Quran delivers one-on-one, certified Quran instruction to your home, built around your real schedule. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Las Vegas Nevada"
       />

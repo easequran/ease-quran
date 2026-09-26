@@ -51,12 +51,12 @@ const policies = [
   {
     icon: UserCheck,
     title: "Female Teachers for Girls on Request",
-    text: "Families may request a certified female teacher for daughters and sisters at any time. When requested, all of your daughter's classes, including the trial, will be taught exclusively by a female teacher with no male teacher involvement at any point.",
+    text: "Families may ask for a female teacher for daughters and sisters, and we can arrange one at most times. When requested, all of your daughter's classes, including the trial, will be taught exclusively by a female teacher with no male teacher involvement at any point.",
   },
   {
     icon: BadgeCheck,
     title: "All Teachers Are Credential-Verified",
-    text: "Every teacher at Ease Quran holds verified certification from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. We confirm credentials before any teacher is allowed to teach a single student.",
+    text: "Every Ease Quran teacher holds a recognized Quran qualification. Before anyone teaches a single student, we see their original certificates, hear them recite, watch a demo class, and check their ID and references.",
   },
 ];
 
@@ -131,7 +131,7 @@ export default function SafetyPage() {
       <CTASection
         headline="See It for Yourself, Free"
         subtext="Book a free trial class and sit in alongside your child. No card required, no commitment, complete transparency from the first minute."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

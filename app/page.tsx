@@ -3,17 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 import CourseCard from "@/components/CourseCard";
 import TeacherCard from "@/components/TeacherCard";
+import { teachers } from "@/lib/teachers";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import FamilyReviews from "@/components/FamilyReviews";
 import { reviewsById } from "@/lib/reviews";
-import { Shield, Users, BookOpen, Star, AlertCircle, Globe, UserCheck, CheckCircle, Award } from "lucide-react";
+import { business, PRIMARY_CTA, whatsappLink } from "@/lib/business";
+import { startingPriceText, plans } from "@/lib/pricing";
+import { Shield, Users, BookOpen, Globe, CheckCircle, Award, FileCheck, Mic, Video, IdCard } from "lucide-react";
 
 export const metadata: Metadata = {
   title: { absolute: "Online Quran Classes for Kids & Adults in USA | Ease Quran Academy" },
   description:
-    "Book certified online Quran classes for your family. Wifaq ul Madaris certified teachers, free first class. Serving families across the USA.",
+    "One-on-one online Quran classes for kids and adults in the US. Qualified male and female teachers, class times arranged around your schedule, and a free trial class.",
   alternates: { canonical: "https://easequran.com" },
 };
 
@@ -21,10 +24,9 @@ const courses = [
   {
     title: "Quran for Kids",
     description:
-      "Fun, structured Quran learning designed for children ages 4–14. Patient teachers who understand how children learn.",
+      "Structured Quran learning for children ages 4 to 14, with patient teachers who understand how children learn.",
     image: "/images/Courses/online-quran-classes-for-kids.webp",
     href: "/courses/quran-for-kids",
-    badge: "Most Popular",
   },
   {
     title: "Tajweed (Quran Recitation)",
@@ -68,63 +70,49 @@ const steps = [
     number: "01",
     title: "Book Your Free Trial",
     description:
-      "Fill out our quick form or WhatsApp us. We'll schedule your free, no-commitment trial class within 24 hours.",
+      `Tell us the days and times that suit you, using the form or WhatsApp. We reply ${business.replyTime} to arrange your free trial.`,
   },
   {
     number: "02",
-    title: "Meet Your Certified Teacher",
+    title: "Meet Your Teacher",
     description:
-      "Get matched with a Wifaq ul Madaris certified teacher suited to your child's age, level, and learning style.",
+      "We match you with a suitable teacher for the student's age, level, course and preferred schedule.",
   },
   {
     number: "03",
-    title: "Start Your Quran Journey",
+    title: "Continue if It Feels Right",
     description:
-      "Learn from the comfort of your home, on your schedule. Track progress and see results from the very first class.",
+      "After the trial we send the teacher's recommendation. If you continue, classes are set around the same days and times.",
   },
 ];
 
-const painPoints = [
-  {
-    icon: AlertCircle,
-    title: "Teachers Who Cancel Last Minute",
-    description:
-      "Unreliable schedules and constant teacher changes leave your child's education inconsistent and frustrating.",
-  },
-  {
-    icon: Globe,
-    title: "Uncertified, Unverified Teachers",
-    description:
-      "You can never be sure of the credentials, background, or teaching quality of random online teachers.",
-  },
-  {
-    icon: UserCheck,
-    title: "No Female Teachers for Sisters",
-    description:
-      "Finding a qualified, female Quran teacher for your daughters or wife shouldn't be this difficult.",
-  },
+const teacherChecks = [
+  { icon: FileCheck, title: "Certificates", description: "We see each teacher's original Quran qualifications before anything else." },
+  { icon: Mic, title: "Recitation test", description: "Every teacher recites for us, so we hear their Tajweed for ourselves." },
+  { icon: Video, title: "Demo class", description: "They teach a demo lesson while we watch how they explain and correct." },
+  { icon: IdCard, title: "ID and references", description: "We confirm who they are and speak to people who know their teaching." },
 ];
 
 const faqs = [
   {
     question: "How do online Quran classes work?",
     answer:
-      "Our classes are conducted live via Zoom or Skype, one-on-one between your child and the teacher. Each session follows a structured curriculum with real-time feedback, just like an in-person class, but from the comfort of your home.",
+      `Classes are live on ${business.platform}, one-on-one between the student and the teacher. The teacher listens, corrects and explains in real time, the same way a teacher would sitting beside your child.`,
   },
   {
     question: "Are your teachers certified?",
     answer:
-      "Yes. All our teachers hold certification from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. Our founder Shah Zaib has 6+ years of experience specifically teaching Western, English-speaking students.",
+      "Every teacher holds a recognized Quran qualification. Before anyone teaches with us, we check their original certificates, hear them recite, watch a demo class, and check their ID and references.",
   },
   {
     question: "Do you have female Quran teachers?",
     answer:
-      "Absolutely. Our teacher Almas Fatima is a Qaria e Quran with a Bachelor in Islamic Studies, available specifically for sisters and children. We understand and fully respect this requirement.",
+      "Yes. You can ask for a female teacher for your daughter or for yourself, and we can arrange one at most times.",
   },
   {
     question: "What is the free trial class?",
     answer:
-      "Your first class is completely free with no credit card required and no commitment. This gives your child a chance to experience our teaching style, meet the teacher, and see if it's the right fit before you pay anything.",
+      `The first ${business.trialMinutes}-minute class is free, for every student. The teacher checks the student's level, teaches a short lesson and recommends where to start. You don't need a card, and there is no obligation to continue.`,
   },
   {
     question: "What age groups do you teach?",
@@ -134,12 +122,12 @@ const faqs = [
   {
     question: "Can I choose a specific class schedule?",
     answer:
-      "Yes. We offer flexible scheduling designed for busy families in the USA. We accommodate all US time zones and can schedule classes in mornings, evenings, and weekends.",
+      `Yes. Tell us the days and times that work for you, in your own time zone, and we arrange a suitable teacher around them. Classes run ${business.classDays}.`,
   },
   {
     question: "How much do classes cost?",
     answer:
-      "Our plans start at $40/month for 2 classes/week (8/month), 30 minutes each. Our most popular plan is Steady at $55/month for 3 classes/week (12/month). We also offer custom family and sibling discounts, see our pricing page for details.",
+      `${startingPriceText} (2 a week, 30 minutes each, about a month). The Steady plan is ${plans[1].price30} for ${plans[1].classesPerPackage} classes. Brothers and sisters get automatic discounts. See our pricing page for everything.`,
   },
   {
     question: "What if my child doesn't like the teacher?",
@@ -164,27 +152,7 @@ const cities = [
   { name: "Boston", href: "/locations/boston" },
 ];
 
-const WHATSAPP_NUMBER = "923195657389";
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi I am interested in booking a free trial Quran class"
-);
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  logo: "https://easequran.com/images/logo.png",
-  email: "info@easequran.com",
-  description:
-    "Certified online Quran academy serving Muslim families across the United States.",
-  sameAs: [
-    "https://www.facebook.com/share/18WdHQVNWT/",
-    "https://www.instagram.com/contacteasequran",
-    "https://www.linkedin.com/company/ease-quran/",
-    "https://youtube.com/@contacteasequran",
-  ],
-};
+const WHATSAPP_HREF = whatsappLink("Hi I am interested in booking a free trial Quran class");
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -196,60 +164,13 @@ const faqSchema = {
   })),
 };
 
-const teachersSchema = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Shah Zaib",
-    jobTitle: "Founder & Head Teacher",
-    description:
-      "Founder and head teacher at Ease Quran Online Academy, certified from Wifaq ul Madaris Al-Arabia, with 6+ years teaching Western, English-speaking students.",
-    worksFor: { "@type": "EducationalOrganization", name: "Ease Quran Online Academy", url: "https://easequran.com" },
-    alumniOf: { "@type": "EducationalOrganization", name: "Wifaq ul Madaris Al-Arabia" },
-    knowsAbout: ["Quran", "Tajweed", "Hifz", "Islamic Studies"],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Muhammad Umair",
-    jobTitle: "Tajweed & Hifz Specialist",
-    description:
-      "Certified Quran teacher at Ease Quran Online Academy specialising in Tajweed and Hifz, credentialed by Wifaq ul Madaris Al-Arabia.",
-    worksFor: { "@type": "EducationalOrganization", name: "Ease Quran Online Academy", url: "https://easequran.com" },
-    alumniOf: { "@type": "EducationalOrganization", name: "Wifaq ul Madaris Al-Arabia" },
-    knowsAbout: ["Tajweed", "Hifz", "Quran recitation"],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Almas Fatima",
-    jobTitle: "Female Quran Teacher — Qaria e Quran",
-    description:
-      "Certified female Quran teacher at Ease Quran Online Academy for sisters and children, holding a Wifaq ul Madaris Al-Arabia certification and a Bachelor in Islamic Studies.",
-    worksFor: { "@type": "EducationalOrganization", name: "Ease Quran Online Academy", url: "https://easequran.com" },
-    alumniOf: { "@type": "EducationalOrganization", name: "Wifaq ul Madaris Al-Arabia" },
-    knowsAbout: ["Quran for Kids", "Tajweed", "Noorani Qaida", "Islamic Studies"],
-  },
-];
-
 export default function HomePage() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {teachersSchema.map((t, i) => (
-        <script
-          key={`teacher-${i}`}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(t) }}
-        />
-      ))}
 
       {/* HERO */}
       <section className="relative min-h-[600px] lg:h-[700px] flex items-center overflow-hidden">
@@ -282,26 +203,26 @@ export default function HomePage() {
             <div>
               <div className="inline-flex items-center gap-2 bg-white/10 text-white text-xs px-4 py-2 rounded-full mb-6 border border-white/20 backdrop-blur-sm">
                 <CheckCircle size={12} className="text-gold" />
-                <span>Available in All 50 States</span>
+                <span>Online classes for families across the US</span>
               </div>
               <h1 className="heading-1 text-white mb-6">
                 Online Quran Classes{" "}
                 <span className="text-gold">Your Family</span> Can Trust
               </h1>
               <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-lg">
-                Certified, one-on-one Quran education for kids and adults across
-                America. Wifaq ul Madaris certified teachers. Female teachers available.
-                Free first class.
+                One-on-one Quran classes for children and adults, taught live on{" "}
+                {business.platform} by qualified teachers. Choose the days and times that
+                suit your family. Female teachers are available, and the first class is free.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link
                   href="/free-trial"
                   className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-center text-sm shadow-lg shadow-gold/30"
                 >
-                  Book Your Free Trial Class
+                  {PRIMARY_CTA}
                 </Link>
                 <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                  href={WHATSAPP_HREF}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-center text-sm flex items-center justify-center gap-2 backdrop-blur-sm"
@@ -318,10 +239,10 @@ export default function HomePage() {
             {/* Right: premium glass stat cards */}
             <div className="hidden lg:grid grid-cols-2 gap-4">
               {[
-                { number: "Female", label: "Teachers Available", sub: "For sisters & daughters" },
-                { number: "6+",   label: "Years Experience", sub: "With Western students" },
-                { number: "100%", label: "Certified Teachers", sub: "Wifaq ul Madaris" },
-                { number: "Free", label: "First Trial Class", sub: "No credit card needed" },
+                { number: "Female", label: "Teachers Available", sub: "For sisters and daughters" },
+                { number: business.experience.replace(" years", ""), label: "Years Teaching", sub: "Children and adults" },
+                { number: "1:1", label: "Every Class", sub: "Live on Zoom" },
+                { number: "Free", label: "First Trial Class", sub: "No card needed" },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -339,8 +260,8 @@ export default function HomePage() {
                   <Award size={24} className="text-gold" />
                 </div>
                 <div>
-                  <p className="text-white font-bold text-sm">Wifaq ul Madaris Al-Arabia Certified</p>
-                  <p className="text-white/60 text-xs mt-0.5">Pakistan's largest Islamic education board, globally recognized</p>
+                  <p className="text-white font-bold text-sm">Every teacher is checked before joining</p>
+                  <p className="text-white/60 text-xs mt-0.5">Certificates, recitation test, demo class, ID and references</p>
                 </div>
               </div>
             </div>
@@ -354,10 +275,10 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { number: "Free", label: "First Class" },
-              { number: "50", label: "States Covered" },
-              { number: "6+", label: "Years Experience" },
-              { number: "100%", label: "Certified Teachers" },
+              { number: "Free", label: "Trial Class" },
+              { number: "7", label: "Days a Week" },
+              { number: business.experience.replace(" years", ""), label: "Years Teaching" },
+              { number: "1:1", label: "Every Class" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="font-playfair font-bold text-3xl text-navy">{stat.number}</p>
@@ -368,52 +289,40 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PROBLEM SECTION */}
+      {/* HOW WE CHECK TEACHERS */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
-          <div className="text-center mb-14">
-            <span className="inline-flex items-center gap-2 bg-gold text-navy text-xs md:text-sm font-bold tracking-widest uppercase px-5 py-2.5 rounded-full shadow-md shadow-gold/30 mb-5">
-              <AlertCircle size={16} className="shrink-0" />
-              We Understand Your Struggle
-            </span>
-            <h2 className="heading-2 text-navy mt-1 mb-4">
-              Tired of Unreliable Online Quran Academies?
+          <div className="text-center mb-14 max-w-2xl mx-auto">
+            <span className="eyebrow">Our Teachers</span>
+            <h2 className="heading-2 text-navy mt-3 mb-4">
+              How We Check Every Teacher
             </h2>
-            <p className="lead max-w-2xl mx-auto leading-relaxed">
-              As a Muslim parent in America, you deserve more than broken promises and
-              amateur teachers. Here&apos;s what too many families are dealing with, and why
-              Ease Quran was built to solve every one of these problems.
+            <p className="lead leading-relaxed">
+              Our teachers teach from {business.teachersBasedIn} and work around the schedules of
+              families in the US. Every one of them holds a recognized Quran qualification, and
+              nobody teaches with us until they have passed these four checks.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-            {painPoints.map((p) => {
-              const Icon = p.icon;
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {teacherChecks.map((c) => {
+              const Icon = c.icon;
               return (
-              <div key={p.title} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
-                <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4">
-                  <Icon size={22} className="text-red-400" />
+              <div key={c.title} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm">
+                <div className="w-12 h-12 bg-gold/10 rounded-xl flex items-center justify-center mb-4">
+                  <Icon size={22} className="text-gold" />
                 </div>
-                <h3 className="card-title mb-2">{p.title}</h3>
-                <p className="text-grey text-[15px] leading-relaxed">{p.description}</p>
+                <h3 className="card-title mb-2">{c.title}</h3>
+                <p className="text-grey text-[15px] leading-relaxed">{c.description}</p>
               </div>
               );
             })}
           </div>
-          <div className="bg-navy rounded-3xl p-8 md:p-12 text-center">
-            <h3 className="font-playfair font-bold text-2xl md:text-3xl text-white mb-3">
-              Ease Quran Solves All of This
-            </h3>
-            <p className="text-white/70 max-w-2xl mx-auto mb-6 leading-relaxed">
-              Every teacher at Ease Quran is certified from Wifaq ul Madaris, rigorously
-              vetted, and trained to teach Western, English-speaking students. We offer
-              female teachers, consistent scheduling, and a free first class with zero
-              commitment.
-            </p>
+          <div className="text-center">
             <Link
               href="/free-trial"
               className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
             >
-              Try a Free Class Today
+              {PRIMARY_CTA}
             </Link>
           </div>
         </div>
@@ -457,8 +366,7 @@ export default function HomePage() {
               How It Works
             </h2>
             <p className="lead max-w-xl mx-auto">
-              Getting started with Ease Quran is simple. Three steps and your child is
-              learning with a certified Quran teacher.
+              You tell us when suits you, and we arrange the rest around that.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
@@ -480,7 +388,7 @@ export default function HomePage() {
               href="/free-trial"
               className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm mb-4"
             >
-              Book Your Free Trial Now
+              Book Your Free Trial
             </Link>
             <p className="text-grey text-sm">
               New to this?{" "}
@@ -567,7 +475,7 @@ export default function HomePage() {
                 Trust, Excellence and Genuine Care for Every Student
               </h3>
               <p className="text-grey text-[15px] leading-relaxed">
-                Certified teachers only, transparent pricing, full respect for Islamic guidelines, and a free-trial guarantee. Your trust means everything to us.
+                Qualified teachers only, clear pricing, full respect for Islamic guidelines, and a free trial before you pay anything.
               </p>
             </div>
 
@@ -579,7 +487,7 @@ export default function HomePage() {
               { icon: <Shield className="w-3.5 h-3.5 text-gold" />, label: "Trust" },
               { icon: <Award className="w-3.5 h-3.5 text-gold" />, label: "Excellence" },
               { icon: <Users className="w-3.5 h-3.5 text-gold" />, label: "Inclusivity" },
-              { icon: <Globe className="w-3.5 h-3.5 text-gold" />, label: "50 States" },
+              { icon: <Globe className="w-3.5 h-3.5 text-gold" />, label: "Across the US" },
             ].map((v) => (
               <div key={v.label} className="flex items-center gap-2 bg-offwhite border border-gold/20 rounded-full py-2 px-5">
                 {v.icon}
@@ -599,7 +507,7 @@ export default function HomePage() {
               <div className="relative rounded-3xl overflow-hidden max-w-sm mx-auto lg:mx-0" style={{ height: "480px" }}>
                 <Image
                   src="/images/founder.webp"
-                  alt="Shah Zaib - Founder of Ease Quran Online Academy, Wifaq ul Madaris Certified"
+                  alt="Shah Zaib, founder of Ease Quran Online Academy"
                   fill
                   className="object-cover object-top"
                 />
@@ -608,8 +516,8 @@ export default function HomePage() {
               <div className="absolute -bottom-5 -right-5 bg-gold rounded-2xl p-4 shadow-xl flex items-center gap-3">
                 <Award size={20} className="text-navy shrink-0" />
                 <div>
-                  <p className="font-bold text-navy text-sm">Wifaq ul Madaris</p>
-                  <p className="text-navy/70 text-xs">Globally Recognized</p>
+                  <p className="font-bold text-navy text-sm">Founder &amp; CEO</p>
+                  <p className="text-navy/70 text-xs">Ease Quran Online Academy</p>
                 </div>
               </div>
             </div>
@@ -617,29 +525,26 @@ export default function HomePage() {
               <span className="eyebrow">Meet the Founder</span>
               <h2 className="heading-2 text-navy mt-3 mb-2">Shah Zaib</h2>
               <p className="text-gold font-semibold mb-4">
-                Founder & Head Teacher · Certified from Wifaq ul Madaris
+                Founder &amp; CEO
               </p>
               <p className="text-grey leading-relaxed mb-6">
                 Shah Zaib founded Ease Quran with a mission that is deeply personal: to
                 give every Muslim family in America access to a Quran teacher they can
-                genuinely trust. Certified from Wifaq ul Madaris Al-Arabia, the largest
-                Islamic education board in Pakistan and globally recognized, Shah Zaib
-                brings 6+ years of dedicated experience teaching Western, English-speaking
-                students.
+                genuinely trust. He holds a certificate from Wifaq ul Madaris Al-Arabia, and
+                now leads the academy while our team of teachers works directly with students.
               </p>
               <blockquote className="border-l-4 border-gold pl-5 mb-6">
                 <p className="font-playfair text-lg italic text-navy leading-relaxed">
                   &ldquo;I built Ease Quran because every Muslim family in America deserves a
                   Quran teacher they can truly trust.&rdquo;
                 </p>
-                <footer className="mt-2 text-sm text-grey">— Shah Zaib, Founder</footer>
+                <footer className="mt-2 text-sm text-grey">Shah Zaib, Founder</footer>
               </blockquote>
               <div className="flex flex-wrap gap-3">
                 {[
                   "Wifaq ul Madaris Certified",
-                  "6+ Years Teaching Experience",
-                  "Speciality: Western Students",
-                  "English-Speaking Teaching Style",
+                  "Founder & CEO",
+                  "Leads the Academy",
                 ].map((badge) => (
                   <span
                     key={badge}
@@ -663,27 +568,34 @@ export default function HomePage() {
               Expert, Certified Quran Teachers
             </h2>
             <p className="lead max-w-xl mx-auto">
-              All teachers are certified from Wifaq ul Madaris and trained to deliver an
-              engaging, results-driven learning experience.
+              Some of the teachers who teach with us. We match each student with a teacher based on
+              their course, level and preferred schedule.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <TeacherCard
-              name="Muhammad Umair"
-              image="/images/teacher-1.webp"
-              credential="Certified from Wifaq ul Madaris"
-              speciality="Tajweed & Hifz Specialist"
-              experience="2 years of dedicated Quran teaching"
-            />
-            <TeacherCard
-              name="Almas Fatima"
-              image="/images/teacher-2.webp"
-              credential="Certified from Wifaq ul Madaris"
-              qualification="Qaria e Quran · Bachelor in Islamic Studies"
-              speciality="Available for sisters and children"
-              experience="Teaching since 2022"
-              badge="Female Teacher"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              teachers.find((t) => t.slug === "ustadh-ibrahim-raza")!,
+              teachers.find((t) => t.slug === "almas-fatima")!,
+              teachers.find((t) => t.slug === "ustadh-bilal-farooq")!,
+            ].map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/teachers"
+              className="inline-block border-2 border-navy text-navy font-semibold px-8 py-3 rounded-full hover:bg-navy hover:text-white transition-all duration-200 text-sm"
+            >
+              Meet All Our Teachers
+            </Link>
           </div>
         </div>
       </section>
@@ -701,21 +613,21 @@ export default function HomePage() {
             {[
               {
                 icon: <Shield className="text-gold" size={28} />,
-                title: "Verified, Certified Teachers",
+                title: "Qualified, Checked Teachers",
                 description:
-                  "Every teacher holds certification from Wifaq ul Madaris, the gold standard in Islamic education. No random tutors, no unverified teachers.",
+                  "Every teacher holds a recognized Quran qualification and passes our certificate check, recitation test, demo class and ID check before teaching.",
               },
               {
                 icon: <Users className="text-gold" size={28} />,
                 title: "Female Teachers for Sisters",
                 description:
-                  "We provide qualified female Quran teachers for sisters and children. This is a core part of how we serve Muslim families with Islamic values.",
+                  "Ask for a female teacher for your daughter or for yourself, and we can arrange one at most times.",
               },
               {
                 icon: <BookOpen className="text-gold" size={28} />,
                 title: "Designed for Western Students",
                 description:
-                  "Our teachers are specifically trained to teach English-speaking students. Classes conducted in English with cultural understanding of Muslim life in America.",
+                  "Classes are taught in English, at a pace that suits students who did not grow up reading Arabic.",
               },
             ].map((pillar) => (
               <div
@@ -757,44 +669,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* NEAR ME */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="eyebrow">Quran Classes Near You</span>
-            <h2 className="heading-2 text-navy mt-3 mb-5">
-              Searching for &ldquo;Online Quran Classes Near Me&rdquo;?
-            </h2>
-            <p className="text-grey leading-relaxed mb-4">
-              If you have been typing &ldquo;Quran classes near me&rdquo; or &ldquo;Quran teacher near
-              me&rdquo; into Google, here is the good news: the best teacher for your family does not
-              have to be the closest one. Every Ease Quran class is live, one-on-one, and online, so a
-              certified teacher is always right in your home, wherever you live in the USA.
-            </p>
-            <p className="text-grey leading-relaxed">
-              No commute, no fixed group schedule, and no settling for whoever happens to be nearby.
-              You get a Wifaq ul Madaris certified teacher matched to your child, with a free first
-              class to start.{" "}
-              <Link href="/free-trial" className="text-gold font-semibold hover:underline">
-                Book your free trial class
-              </Link>{" "}
-              from anywhere.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* USA CITIES */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="eyebrow">Available in All 50 States</span>
+            <span className="eyebrow">Class Times Near You</span>
             <h2 className="heading-2 text-navy mt-3 mb-3">
-              Online Quran Classes Available Nationwide
+              Classes Across the US
             </h2>
             <p className="lead max-w-xl mx-auto">
-              Wherever you are in America, we bring certified Quran education to your home.
-              Available to Muslim families in all 50 states.
+              Classes are online, so families anywhere in the US can join. Each page below explains
+              how scheduling works in that area.
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-8">
@@ -809,9 +694,8 @@ export default function HomePage() {
             ))}
           </div>
           <p className="text-center text-grey text-[15px]">
-            Online classes available in all 50 states •{" "}
-            <Link href="/free-trial" className="text-gold hover:underline font-medium">
-              Book a free trial from anywhere
+            <Link href="/locations" className="text-gold hover:underline font-medium">
+              See all locations
             </Link>
           </p>
         </div>
@@ -826,7 +710,7 @@ export default function HomePage() {
               Frequently Asked Questions
             </h2>
             <p className="lead max-w-xl mx-auto">
-              Everything Muslim parents in America want to know about our online Quran classes.
+              The questions parents ask us most before booking a trial.
             </p>
           </div>
           <div className="max-w-3xl mx-auto">
@@ -835,7 +719,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <p className="text-grey text-[15px] mb-4">Still have questions? We&apos;re here to help.</p>
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+              href={WHATSAPP_HREF}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-navy text-white font-semibold px-8 py-3 rounded-full hover:bg-navy/90 transition-all text-sm"

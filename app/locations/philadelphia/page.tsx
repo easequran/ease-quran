@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import FamilyReviews from "@/components/FamilyReviews";
-import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Philadelphia, Pennsylvania",
   description:
-    "Certified online Quran classes for Muslim families in Philadelphia, Pennsylvania. Wifaq ul Madaris certified teachers, free trial available.",
+    "Certified online Quran classes for Muslim families in Philadelphia, Pennsylvania. Qualified teachers, free trial available.",
   alternates: {
     canonical: "https://easequran.com/locations/philadelphia",
   },
@@ -31,85 +30,6 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
     { "@type": "ListItem", position: 3, name: "Philadelphia", item: "https://easequran.com/locations/philadelphia" },
-  ],
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description:
-    "Certified online Quran classes for Muslim families in Philadelphia, Pennsylvania and surrounding suburbs.",
-  areaServed: {
-    "@type": "City",
-    name: "Philadelphia",
-    containedInPlace: { "@type": "State", name: "Pennsylvania" },
-  },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is online Quran learning safe for my child?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I find Quran classes near me in Philadelphia?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Philadelphia, our online classes serve any family in the Philadelphia area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve Philadelphia's historic African American Muslim community?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. We warmly welcome all Muslim families in Philadelphia including those from the historic African American Muslim community. Our teachers are respectful, experienced, and serve students from all Muslim backgrounds.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve families in the Philadelphia suburbs?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We serve families across Greater Philadelphia including Cherry Hill, Camden, Delaware County, Montgomery County, and all surrounding suburbs in Pennsylvania and New Jersey.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How qualified are your teachers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Every class is one-on-one and conducted by a formally trained scholar.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a female Quran teacher available?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Sister Almas Fatima, our certified female Quran teacher, is available for sisters and children. Many Philadelphia families specifically request a female teacher for their daughters.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can adult Muslims in Philadelphia learn to read Quran for the first time?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. Many of our Philadelphia students are adults who are beginning their Quran journey for the first time. Our teachers create a supportive, non-judgmental environment for adult learners of any age or background.",
-      },
-    },
   ],
 };
 
@@ -137,12 +57,12 @@ const faqs = [
   {
     question: "How qualified are your teachers?",
     answer:
-      "All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized, whose credentials are recognized by Islamic scholars and institutions globally. Every class is a private, one-on-one session conducted by a formally trained Islamic scholar. This is the standard Philadelphia's Muslim families deserve.",
+      "Every Ease Quran teacher holds a recognized Quran qualification. Every class is a private, one-on-one session conducted by a formally trained Islamic scholar. This is the standard Philadelphia's Muslim families deserve.",
   },
   {
     question: "Is there a female Quran teacher available?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Philadelphia families, particularly those for whom having a female teacher is an Islamic priority, specifically request her, and we are glad to provide this important option.",
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
   },
   {
     question: "Can adult Muslims in Philadelphia learn to read Quran for the first time?",
@@ -151,14 +71,20 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function PhiladelphiaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -191,7 +117,7 @@ export default function PhiladelphiaPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Philadelphia%20Pennsylvania"
@@ -278,16 +204,14 @@ export default function PhiladelphiaPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
-            <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <FamilyReviews reviews={reviewsForSeed("philadelphia")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
-
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">
-              Book Free Trial Class
+              Book Your Free Trial
             </Link>
             <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Philadelphia%20Pennsylvania" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
@@ -305,7 +229,7 @@ export default function PhiladelphiaPage() {
               Courses Available for Philadelphia Families
             </h2>
             <p className="text-grey mb-8 leading-relaxed">
-              Every course taught in English, one-on-one, by a Wifaq ul Madaris certified teacher, for students of every age and background.
+              Every course taught in English, one-on-one, by a qualified teacher, for students of every age and background.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
@@ -355,27 +279,6 @@ export default function PhiladelphiaPage() {
         </div>
       </section>
 
-      {/* Near Me */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow mb-4">
-              Quran Classes Near You
-            </span>
-            <h2 className="heading-2 text-navy mb-6">
-              Looking for Quran Classes Near You in Philadelphia?
-            </h2>
-            <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in Philadelphia, the best
-              teacher for your child may not be the closest one on the map. Because every Ease Quran
-              class is live and online, Philadelphia families connect one-on-one with certified teachers
-              without driving anywhere. You get the convenience of a teacher right in your home, with
-              none of the commute, parking, or fixed group schedule of a local center.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <NearbyLocations slug="philadelphia" />
 
       {/* FAQ */}
@@ -402,7 +305,7 @@ export default function PhiladelphiaPage() {
       <CTASection
         headline="Honoring Philadelphia's Muslim Community with Quality Quran Education"
         subtext="One-on-one, certified Quran instruction for every Philadelphia family, from West Philly and Northeast to the suburbs of Delaware and Montgomery counties. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Philadelphia Pennsylvania"
       />

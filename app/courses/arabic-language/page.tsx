@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { BookOpen, Heart } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import TeacherCard from "@/components/TeacherCard";
-import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Arabic Language Classes Online",
@@ -50,53 +49,6 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the difference between Classical Arabic and Modern Standard Arabic?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Classical Arabic (Fusha) is the language of the Quran and classical Islamic texts, which has been unchanged for over 1,400 years. Modern Standard Arabic (MSA) is a contemporary form used in media, news, and formal writing across the Arab world. Our course teaches both, with an emphasis on Classical/Quranic Arabic so students can understand the Quran directly.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to understand the Quran in Arabic?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "With 3 classes per week and consistent self-study, most students begin to recognize and understand common Quranic words and phrases within 3–6 months. Understanding full verses with confidence typically takes 1–2 years. The Quran uses a relatively limited core vocabulary, the top 500 most frequent Quranic words cover approximately 75% of the text.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need to know how to read Quran first before taking Arabic language classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "It is strongly recommended that you can read Arabic script before starting the Arabic language course. If you cannot read Arabic yet, we recommend starting with Noorani Qaida. Once you can read, the Arabic language course is open to you, regardless of how well you currently read.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Arabic grammar hard for English speakers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Arabic grammar (Sarf and Nahw) is structured differently from English but is internally very logical and consistent. Our certified teacher specializes in teaching Arabic grammar to English-speaking students. All concepts are explained in plain English with English examples before transitioning to Arabic, making it accessible for native English speakers.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can children learn Arabic language alongside Quran classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Children who are already reading the Quran fluently can begin learning Arabic vocabulary and simple grammar. For younger children, we recommend focusing on Quran reading and Tajweed first, then adding Arabic language study once they are reading confidently, typically from age 10–12 onwards.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "What is the difference between Classical Arabic and Modern Standard Arabic?",
@@ -124,6 +76,16 @@ const faqs = [
       "Yes. Children who are already reading the Quran fluently can begin learning Arabic vocabulary and simple grammar. For younger children, we recommend focusing on Quran reading and Tajweed first, then adding Arabic language study once they are reading confidently, typically from age 10–12 onwards.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function ArabicLanguagePage() {
   return (
@@ -170,7 +132,7 @@ export default function ArabicLanguagePage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -206,9 +168,8 @@ export default function ArabicLanguagePage() {
                   beauty of the original Arabic. Our course gives you direct access to that depth.
                 </p>
                 <p>
-                  Taught by our certified head teacher from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, the course
-                  covers Arabic grammar (Sarf, word morphology, and Nahw, sentence structure),
+                  Taught one-on-one by a qualified teacher, the course
+              covers Arabic grammar (Sarf, word morphology, and Nahw, sentence structure),
                   Quranic vocabulary building, reading comprehension of Quranic verses, and
                   conversational Modern Standard Arabic.
                 </p>
@@ -369,28 +330,21 @@ export default function ArabicLanguagePage() {
       {/* Teacher */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
+          <div className="max-w-2xl mx-auto text-center">
             <span className="eyebrow mb-4">
-              Your Teacher
+              Who Teaches This
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              Taught by Our Founder, Wifaq ul Madaris Certified
+              Matched With a Qualified Teacher
             </h2>
-            <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Our head teacher holds formal certification from Wifaq ul Madaris Al-Arabia, with specialized training in
-              Sarf and Nahw and 6+ years of teaching Western students, uniquely qualified
-              to make Arabic grammar accessible to English speakers.
+            <p className="text-grey text-sm leading-relaxed mb-6">
+              We match you with a teacher based on the course, your level, and your preferred
+              schedule.{" "}
+              <Link href="/teachers" className="text-gold font-semibold hover:underline">
+                Meet our teachers
+              </Link>
+              .
             </p>
-          </div>
-          <div className="max-w-xs mx-auto">
-            <TeacherCard
-              name="Head Teacher"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Arabic Language (Sarf & Nahw), Quranic Arabic Specialist"
-              experience="6+ years teaching Arabic to Western English-speaking students"
-              qualification="Arabic Language Teacher"
-            />
           </div>
         </div>
       </section>
@@ -403,7 +357,7 @@ export default function ArabicLanguagePage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Invest in the most rewarding thing a Muslim can learn. Book a free first Arabic
@@ -434,14 +388,17 @@ export default function ArabicLanguagePage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="Quranic Arabic for Arab American Families"
-        intro="Plenty of children in Arabic-speaking homes still find the Quran hard to follow, because the Arabic of the Quran differs from the dialect spoken at home. Our lessons are taught in English by teachers trained in classical Quranic Arabic."
-        links={[
-          { slug: "dearborn-michigan", reason: "often called the Arab American Muslim capital of the United States." },
-          { slug: "paterson-new-jersey", reason: "home to one of the country's largest Arab American communities." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -473,7 +430,7 @@ export default function ArabicLanguagePage() {
       <CTASection
         headline="Understand the Quran in Its Own Language"
         subtext="Book a free Arabic language trial class and take your connection with the Quran to a completely new level. No credit card required."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
+import { teachers } from "@/lib/teachers";
 import { User, BookOpen } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
-import CourseLocations from "@/components/CourseLocations";
 import FamilyReviews from "@/components/FamilyReviews";
 import { reviewsForCourse } from "@/lib/reviews";
 
@@ -52,53 +53,6 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is Noorani Qaida?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Noorani Qaida is a foundational booklet used to teach beginners how to read Arabic and Quranic script. It was authored by Noor Muhammad Haqqani and is used in Islamic schools worldwide. It systematically teaches Arabic letters in isolation, their forms, vowels (Harakaat), Sukoon, Shaddah, Madd, and finally Quranic words, preparing students to read the Quran independently.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does Noorani Qaida take to complete?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Completion time varies by age and frequency of classes. Children ages 4–6 with 3 classes per week typically complete Noorani Qaida in 4–8 months. Children 7+ complete it in 2–4 months. Adults who are motivated and practice daily can complete it in 2–3 months. Each student gets a personalized pace, no rushing.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "At what age should a child start Noorani Qaida?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Children can begin Noorani Qaida from age 4. At this age, classes are 20–25 minutes and use games, visuals, and repetition to introduce Arabic letters. Most Islamic scholars recommend beginning Quran education between ages 4–6 to maximize the child's natural language absorption ability.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Noorani Qaida the same as learning the Arabic alphabet?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Noorani Qaida includes the Arabic alphabet but goes much further. After teaching all 28 letters, it covers how letters join to form words, all vowel signs (Harakaat), elongation (Madd), doubled letters (Shaddah), and finally actual Quranic words. It is a complete reading readiness program, not just an alphabet lesson.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What comes after Noorani Qaida?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "After completing Noorani Qaida, students move to reading the Quran directly, typically starting from Juz Amma (the 30th Juz). At this point, our teachers also begin introducing Tajweed rules formally. Students who want to memorize eventually progress to the Hifz program.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "What is Noorani Qaida?",
@@ -125,6 +79,21 @@ const faqs = [
     answer:
       "After completing Noorani Qaida, students move to reading the Quran directly, typically starting from Juz Amma (the 30th Juz). At this point, our teachers also begin introducing Tajweed rules formally. Students who want to memorize eventually progress to the Hifz program.",
   },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
+const nooraniTeachers = [
+  teachers.find((t) => t.slug === "ustadha-maryam-siddiqui")!,
+  teachers.find((t) => t.slug === "almas-fatima")!,
 ];
 
 export default function NooraniQaidaPage() {
@@ -172,7 +141,7 @@ export default function NooraniQaidaPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -209,11 +178,9 @@ export default function NooraniQaidaPage() {
                 </p>
                 <p>
                   Our online Noorani Qaida course follows this proven curriculum, taught entirely
-                  in English by teachers certified from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>. Whether
-                  your student is a 4-year-old being introduced to Arabic for the first time, an
-                  adult who has always wanted to read the Quran, or a revert Muslim starting from
-                  scratch. This course meets you exactly where you are.
+              in English by qualified teachers. The student might be a 4-year-old meeting
+              Arabic letters for the first time, an adult who has always wanted to read the
+              Quran, or a new Muslim starting from scratch. The course starts where they are.
                 </p>
                 <p>
                   Female teachers are available for sisters and children upon request. All classes
@@ -383,32 +350,31 @@ export default function NooraniQaidaPage() {
               Your Teachers
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              Certified Quran Teachers, Male and Female Available
+              Teachers Who Specialise in Noorani Qaida
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Both teachers hold credentials from Wifaq ul Madaris Al-Arabia and are experienced
-              in teaching beginners at all ages. A female teacher is available for sisters and children.
+              Some of the teachers who teach beginners of every age. A female teacher can be
+              arranged at most times.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <TeacherCard
-              name="Muhammad Umair"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Quran Reading, Noorani Qaida, Tajweed"
-              experience="2+ years teaching beginners of all ages online"
-              qualification="Quran Teacher"
-            />
-            <TeacherCard
-              name="Almas Fatima"
-              image="/images/teacher-2.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Qaria e Quran, Bachelor in Islamic Studies, Noorani Qaida"
-              experience="Available for sisters and children, teaching since 2022"
-              qualification="Female Quran Teacher"
-              badge="Female Teacher"
-            />
+            {nooraniTeachers.map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -427,7 +393,7 @@ export default function NooraniQaidaPage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Start your Quran journey today with a free first class. No credit card, no commitment.
@@ -458,15 +424,17 @@ export default function NooraniQaidaPage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="A First Step for Families in Growing Communities"
-        intro="Noorani Qaida is where most children and new learners begin. In fast-growing communities, families who have just moved often do not know yet where to find a teacher, and online lessons mean a child can start straight away."
-        links={[
-          { slug: "charlotte-north-carolina", reason: "a young, fast-growing community where you do not need a local network in place before your child starts." },
-          { slug: "atlanta", reason: "one of the fastest-growing Muslim communities in the South." },
-          { slug: "denver-colorado", reason: "a community shaped by resettlement and new arrivals." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -498,7 +466,7 @@ export default function NooraniQaidaPage() {
       <CTASection
         headline="Take Your First Step Toward the Quran"
         subtext="Book a free Noorani Qaida trial class today. Your first lesson is completely free, no credit card, no commitment. Just the beginning of something beautiful."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
               ${message.replace(/\n/g, "<br>")}
             </div>
             <div style="margin-top:20px;padding:12px;background:#F5A623;border-radius:6px;text-align:center;">
-              <p style="margin:0;color:#0B1E5B;font-weight:bold;">Respond within 2 hours</p>
+              <p style="margin:0;color:#0B1E5B;font-weight:bold;">We reply within a few hours</p>
             </div>
           </div>
         </div>

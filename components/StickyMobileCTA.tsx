@@ -2,10 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { PRIMARY_CTA, whatsappLink } from "@/lib/business";
 
-const WHATSAPP_URL =
-  "https://wa.me/923195657389?text=" +
-  encodeURIComponent("Hi I am interested in booking a free trial Quran class");
+const WHATSAPP_URL = whatsappLink("Hi I am interested in booking a free trial Quran class");
 
 export default function StickyMobileCTA() {
   const [visible, setVisible] = useState(false);
@@ -33,7 +32,7 @@ export default function StickyMobileCTA() {
           href="/free-trial"
           className="flex-1 flex items-center justify-center bg-gold text-navy font-bold text-sm rounded-full py-3 hover:bg-gold-dark transition-colors"
         >
-          Book Free Trial
+          {PRIMARY_CTA}
         </Link>
         <a
           href={WHATSAPP_URL}

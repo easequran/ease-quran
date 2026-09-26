@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -9,7 +10,7 @@ import NearbyLocations from "@/components/NearbyLocations";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Delaware",
   description:
-    "Certified online Quran classes for Muslim families across Delaware, including Wilmington. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families across Delaware, including Wilmington. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/delaware",
   },
@@ -31,84 +32,40 @@ const breadcrumbSchema = {
   ],
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description: "Certified online Quran classes for Muslim families throughout Delaware.",
-  areaServed: { "@type": "State", name: "Delaware" },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
+const faqs = [
+  {
+    question: "Which time zone are classes booked in?",
+    answer: "Delaware is on Eastern Time. Share the days and times that suit you, and every class time we confirm will be in your own time zone. When the clocks change in March and November, your class stays at the same local time.",
+  },
+  {
+    question: "Can my daughter have a female teacher?",
+    answer: "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
+  },
+  {
+    question: "What happens in the free trial class?",
+    answer:
+      "The trial is a 30-minute one-on-one class on Zoom. The teacher checks the student's current level, teaches a short lesson at that level, recommends a course and how many classes a week, and answers your questions. Parents are welcome to sit in. There is no obligation to continue.",
+  },
+  {
+    question: "How much do classes cost?",
+    answer: `${startingPriceText}, and every student's first class is free. Sibling and prepay discounts are on our pricing page.`,
+  },
+];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Isn't Wilmington basically part of Philadelphia? Why is Delaware its own page?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Fair question. Wilmington sits right on the Amtrak Northeast Corridor between Philadelphia and Baltimore, and a lot of Delaware families genuinely live inside the Philadelphia media and commuter market. We keep Delaware separate because the state itself, all the way down through Dover and Sussex County, deserves its own honest page rather than being folded into a city it only partly overlaps with.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have students in Wilmington already?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We're actively welcoming Delaware families right now. Rather than claim a number we can't verify, we'd invite you to be one of our first Wilmington-area students with a free trial class.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "I'm in Dover or Sussex County, much further south than Wilmington. Does that matter?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Not for us. Delaware is the second-smallest state in the country, but Dover and Sussex County are still a real drive from Wilmington's Islamic community. Since classes are online, that internal distance disappears completely, families anywhere in Delaware get the exact same certified teacher.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much do classes cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required.",
-      },
-    },
-  ],
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
 };
-
-const faqs = [
-  {
-    question: "Isn't Wilmington basically part of Philadelphia? Why is Delaware its own page?",
-    answer:
-      "Fair question. Wilmington sits right on the Amtrak Northeast Corridor between Philadelphia and Baltimore, and a genuine share of Delaware families live inside the greater Philadelphia media and commuter market, close enough that the line between the two barely matters day to day. We still give Delaware its own honest page because the rest of the state, all the way down through Dover and Sussex County, is genuinely distinct from Philadelphia and deserves to be treated that way rather than folded into a bigger city's page.",
-  },
-  {
-    question: "Do you have students in Wilmington already?",
-    answer:
-      "We're actively welcoming Delaware families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Wilmington-area students and see the quality for yourself with a free trial class.",
-  },
-  {
-    question: "I'm in Dover or Sussex County, much further south than Wilmington. Does that matter?",
-    answer:
-      "Not for us, though it matters for almost everything else. Delaware is the second-smallest state in the country, but Dover and especially Sussex County are still a real drive from Wilmington's Islamic community, more rural and considerably further from the Philadelphia corridor than the state's small size suggests on a map. Since all classes are conducted online via Zoom, that internal distance disappears completely, families anywhere in Delaware get exactly the same certified teacher.",
-  },
-  {
-    question: "How much do classes cost?",
-    answer:
-      "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required, so you can experience a lesson before committing to anything.",
-  },
-];
 
 export default function DelawarePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
@@ -135,7 +92,7 @@ export default function DelawarePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center">
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Delaware" target="_blank" rel="noopener noreferrer" className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-sm text-center">
                 Chat on WhatsApp
@@ -164,7 +121,7 @@ export default function DelawarePage() {
               </p>
               <p>
                 Given Wilmington's location, many Delaware families are also close to our{" "}
-                <Link href="/locations/philadelphia" className="text-gold font-semibold hover:underline">Philadelphia location page</Link>, our nearest Metro Tier community, though our online classes reach you directly anywhere in Delaware, from Wilmington to Sussex County.
+                <Link href="/locations/philadelphia" className="text-gold font-semibold hover:underline">Philadelphia location page</Link>, our nearest city page, though our online classes reach you directly anywhere in Delaware, from Wilmington to Sussex County.
               </p>
             </div>
           </div>
@@ -178,7 +135,7 @@ export default function DelawarePage() {
             <span className="eyebrow mb-4">Our Curriculum</span>
             <h2 className="heading-2 text-navy mb-6">Courses for Delaware Families</h2>
             <p className="text-grey leading-relaxed mb-6">
-              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a Wifaq ul Madaris certified scholar. Visit our{" "}
+              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a qualified teacher. Visit our{" "}
               <Link href="/courses" className="text-gold font-semibold hover:underline">full courses page</Link>{" "}
               to see everything available, including options for kids, adults, and reverts.
             </p>
@@ -210,7 +167,7 @@ export default function DelawarePage() {
       <CTASection
         headline="Certified Quran Education for Delaware Families"
         subtext="From Wilmington to Dover and every Delaware community. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Delaware"
       />

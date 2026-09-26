@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
@@ -34,7 +35,7 @@ const courses = [
     badge: null,
     title: "Tajweed (Quran Recitation)",
     description:
-      "Master the rules of proper Quranic recitation. Learn Makharij, Noon Sakinah, Madd rules, and more under a specialist certified from Wifaq ul Madaris.",
+      "Master the rules of proper Quranic recitation. Learn Makharij, Noon Sakinah, Madd rules and more with a qualified teacher.",
     tags: ["All Levels", "Pronunciation Focus", "Certified Teacher"],
   },
   {
@@ -148,7 +149,7 @@ export default function CoursesPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -169,10 +170,10 @@ export default function CoursesPage() {
       <section className="bg-offwhite py-5 border-b border-gray-200">
         <div className="container-custom">
           <div className="flex flex-wrap gap-6 items-center justify-center text-sm text-grey font-medium">
-            <span className="flex items-center gap-2"><span className="text-gold">✓</span> Wifaq ul Madaris Certified Teachers</span>
+            <span className="flex items-center gap-2"><span className="text-gold">✓</span> Qualified, Checked Teachers</span>
             <span className="flex items-center gap-2"><span className="text-gold">✓</span> Free First Class</span>
             <span className="flex items-center gap-2"><span className="text-gold">✓</span> Female Teachers Available</span>
-            <span className="flex items-center gap-2"><span className="text-gold">✓</span> Plans from $40/month</span>
+            <span className="flex items-center gap-2"><span className="text-gold">✓</span> {startingPriceText}</span>
             <span className="flex items-center gap-2"><span className="text-gold">✓</span> Serving all 50 US States</span>
           </div>
         </div>
@@ -189,8 +190,8 @@ export default function CoursesPage() {
               Find the Right Course for Your Family
             </h2>
             <p className="text-grey max-w-2xl mx-auto text-sm leading-relaxed">
-              Every course is taught live, one-on-one, in English by a teacher certified from
-              Wifaq ul Madaris Al-Arabia. Classes are scheduled around your family&apos;s timetable.
+              Every course is taught live, one-on-one, in English by a qualified teacher. Classes are
+              arranged around the days and times that suit your family.
             </p>
           </div>
 
@@ -282,11 +283,11 @@ export default function CoursesPage() {
               Pricing
             </span>
             <h2 className="heading-2 text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Flexible monthly plans with no long-term contracts. Cancel anytime. All plans include
-              a certified Wifaq ul Madaris teacher and progress tracking.
+              a qualified teacher.
             </p>
             <Link
               href="/pricing"
@@ -301,7 +302,7 @@ export default function CoursesPage() {
       <CTASection
         headline="Not Sure Which Course to Choose?"
         subtext="Book a free trial class and let our teacher assess your child's level. We will recommend the perfect course, no pressure, no commitment."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

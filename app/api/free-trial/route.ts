@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
               <tr><td style="padding:10px 0;font-weight:bold;color:#0B1E5B;">Heard About Us</td><td style="padding:10px 0;">${hearAboutUs || "Not specified"}</td></tr>
             </table>
             <div style="margin-top:20px;padding:12px;background:#F5A623;border-radius:6px;text-align:center;">
-              <p style="margin:0;color:#0B1E5B;font-weight:bold;">⚡ Respond within 2 hours on WhatsApp</p>
+              <p style="margin:0;color:#0B1E5B;font-weight:bold;">⚡ We reply within a few hours on WhatsApp</p>
             </div>
           </div>
         </div>
