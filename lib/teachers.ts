@@ -42,7 +42,7 @@ export const teachers: Teacher[] = [
     honorific: "Ustadha",
     name: "Almas Fatima",
     gender: "female",
-    photo: "/images/teacher-2.webp",
+    photo: "/images/teachers/female-teacher-placeholder.webp",
     experience: "Teaching since 2022",
     headline: "Female Quran Teacher for Sisters and Children",
     specialisation: "Quran for Kids, Tajweed, Noorani Qaida, Islamic Studies",
