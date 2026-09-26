@@ -53,69 +53,6 @@ export const metadata: Metadata = {
 
 // ─── Schemas ─────────────────────────────────────────────────────────────────
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How many days a week are the summer classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our summer program runs five days a week from Monday to Friday with full flexibility on timing. Morning, afternoon or evening slots available. Weekend classes also available. Each session runs 30 to 45 minutes.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What age group is the summer program for?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We work with children from age four to fourteen and also have programs for adults. Every student gets a teacher matched to their age and current level.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "My child has never touched the Quran before. Is that okay?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Completely fine. We begin with Noorani Qaida covering Arabic letters and basic pronunciation before moving into Quran reading. By end of summer most beginners read independently and recite short Surahs confidently.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I request a female teacher for my daughter?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We have certified female Quran teachers who work exclusively with girls and sisters. Just mention it when booking your free trial and we match your daughter with a female teacher from the start.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much does the summer program cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Full pricing is on our pricing page with no hidden fees. The first class is always free with no card required. Family discounts available for multiple children.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can my child join partway through the summer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. There is no fixed start date, and we take new students all year round, including mid-summer. Once you book your free trial we can start your child within 24 to 48 hours.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What does my child need for the online classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Just a laptop, tablet or phone with decent internet and a quiet space at home. We use Zoom or Google Meet. Nothing to download or buy.",
-      },
-    },
-  ],
-};
-
 const courseSchema = {
   "@context": "https://schema.org",
   "@type": "Course",
@@ -304,6 +241,16 @@ const faqs = [
       "Just a laptop, tablet or phone with a decent internet connection and a quiet spot at home. We use Zoom or Google Meet which most families already have. There is nothing to download, nothing to buy and no setup required on your end. We handle everything on our side.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 // ─── WhatsApp SVG ────────────────────────────────────────────────────────────
 

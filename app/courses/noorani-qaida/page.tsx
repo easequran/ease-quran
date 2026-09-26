@@ -52,53 +52,6 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is Noorani Qaida?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Noorani Qaida is a foundational booklet used to teach beginners how to read Arabic and Quranic script. It was authored by Noor Muhammad Haqqani and is used in Islamic schools worldwide. It systematically teaches Arabic letters in isolation, their forms, vowels (Harakaat), Sukoon, Shaddah, Madd, and finally Quranic words, preparing students to read the Quran independently.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does Noorani Qaida take to complete?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Completion time varies by age and frequency of classes. Children ages 4–6 with 3 classes per week typically complete Noorani Qaida in 4–8 months. Children 7+ complete it in 2–4 months. Adults who are motivated and practice daily can complete it in 2–3 months. Each student gets a personalized pace, no rushing.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "At what age should a child start Noorani Qaida?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Children can begin Noorani Qaida from age 4. At this age, classes are 20–25 minutes and use games, visuals, and repetition to introduce Arabic letters. Most Islamic scholars recommend beginning Quran education between ages 4–6 to maximize the child's natural language absorption ability.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Noorani Qaida the same as learning the Arabic alphabet?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Noorani Qaida includes the Arabic alphabet but goes much further. After teaching all 28 letters, it covers how letters join to form words, all vowel signs (Harakaat), elongation (Madd), doubled letters (Shaddah), and finally actual Quranic words. It is a complete reading readiness program, not just an alphabet lesson.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What comes after Noorani Qaida?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "After completing Noorani Qaida, students move to reading the Quran directly, typically starting from Juz Amma (the 30th Juz). At this point, our teachers also begin introducing Tajweed rules formally. Students who want to memorize eventually progress to the Hifz program.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "What is Noorani Qaida?",
@@ -126,6 +79,16 @@ const faqs = [
       "After completing Noorani Qaida, students move to reading the Quran directly, typically starting from Juz Amma (the 30th Juz). At this point, our teachers also begin introducing Tajweed rules formally. Students who want to memorize eventually progress to the Hifz program.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function NooraniQaidaPage() {
   return (

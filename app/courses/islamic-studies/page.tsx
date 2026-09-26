@@ -50,53 +50,6 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What topics are covered in Islamic Studies?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our Islamic Studies course covers: Aqeedah (core beliefs of Islam), the Five Pillars and their practice, Fiqh basics (Islamic jurisprudence), Seerah (the life of Prophet Muhammad ﷺ), Islamic manners and ethics, Quran stories (Qasas ul Anbiya), Islamic history from the time of the Prophet ﷺ, halal and haram basics, and Islamic etiquette for daily life.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Islamic Studies suitable for children?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Islamic Studies is designed for all ages. For children, the curriculum uses stories, illustrations, and age-appropriate language to teach Aqeedah, Islamic manners, and Prophetic stories. For adults, the content is more detailed and analytical. Almas Fatima, our female teacher, specializes in teaching children and sisters.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you follow a specific madhab in Fiqh?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our introductory Fiqh content covers principles that are agreed upon by all four major madhabs (Hanafi, Maliki, Shafi'i, Hanbali). For advanced Fiqh topics where madhabs differ, we note the differences and teach according to the Hanafi madhab by default, the most widely followed school in South Asia and among American Muslims of South Asian heritage. If you follow a different madhab, please mention this and we will accommodate where possible.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How is Islamic Studies different from a Quran class?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Quran classes focus on reading, recitation, Tajweed, and memorization of the Quran itself. Islamic Studies is the broader body of Islamic knowledge, beliefs, worship practices, history, ethics, and law, that contextualizes and complements what is recited in the Quran. We strongly recommend taking both alongside each other.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I take Islamic Studies alongside a Tajweed or Hifz course?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely, and we strongly encourage it. Many families book 3 Quran classes per week and 1–2 Islamic Studies classes per week for their children. The two subjects complement each other deeply. Islamic Studies gives context to what is being memorized or recited in Quran class.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "What topics are covered in Islamic Studies?",
@@ -124,6 +77,16 @@ const faqs = [
       "Absolutely, and we strongly encourage it. Many families book 3 Quran classes per week and 1–2 Islamic Studies classes per week for their children. The two subjects complement each other deeply. Islamic Studies gives context to what is being memorized or recited in Quran class.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function IslamicStudiesPage() {
   return (

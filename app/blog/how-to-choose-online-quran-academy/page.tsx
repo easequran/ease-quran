@@ -54,51 +54,41 @@ const articleSchema = {
     "With hundreds of online Quran academies competing for your family's trust, this guide covers the 6 most important factors, teacher certification, free trials, female teacher availability, curriculum quality, scheduling flexibility, and red flags to avoid.",
 };
 
+const faqs = [
+  {
+    question: "How much do online Quran classes cost in the USA?",
+    answer: `Prices vary a lot between academies, mainly with how many classes a week you take and how long each class is. At Ease Quran Academy, packages start at ${plans[0].price30} for ${plans[0].classesPerPackage} one-on-one classes of 30 minutes, with plans for two, three or five classes a week. You can view our exact pricing on our pricing page with no surprises.`,
+  },
+  {
+    question: "What is the best age to start Quran classes?",
+    answer:
+      "Most Quran educators agree that age 4 to 6 is an ideal starting point, as children at this stage are highly receptive to language learning and memorization. At this age, classes begin with Noorani Qaida, learning Arabic letters and basic pronunciation, before moving on to Quran recitation. That said, it is never too late to start. We have adult students who begin their Quran journey in their 30s, 40s, and beyond, and our programs are designed to meet every learner where they are.",
+  },
+  {
+    question: "Can I get a female Quran teacher for my daughter?",
+    answer:
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times, for daughters, sisters or adult women.",
+  },
+  {
+    question: "How do I know if an online Quran teacher is qualified?",
+    answer:
+      "Ask specifically about their educational credentials. Look for certifications from recognized Islamic boards such as Wifaq ul Madaris Al-Arabia, Tanzeem ul Madaris, or Rabita-tul-Madaris. A qualified teacher should also hold an Ijazah, a chain of certification tracing back to the Prophet Muhammad (PBUH), for Quran recitation. At Ease Quran Academy, we check each teacher's original certificates, hear them recite, watch a demo class, and check their ID and references before they teach a single student.",
+  },
+  {
+    question: "Is there a free trial before I pay?",
+    answer:
+      "Yes. Ease Quran Academy offers a completely free trial class with no credit card required. This gives you and your child the chance to meet the teacher, experience the class format, and ask any questions before making a financial commitment. We strongly encourage all families to take advantage of the free trial, it is the best way to know whether the academy and the teacher are the right fit.",
+  },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much do online Quran classes cost in the USA?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: `Prices vary a lot between academies, mainly with how many classes a week you take and how long each class is. At Ease Quran Academy, packages start at $${plans[0].price30} for ${plans[0].classesPerPackage} one-on-one classes of 30 minutes, with plans for two, three or five classes a week. You can view our exact pricing on our pricing page.`,
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the best age to start Quran classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most Quran educators agree that age 4 to 6 is an ideal starting point, as children at this stage are highly receptive to language learning and memorization. At this age, classes begin with Noorani Qaida, learning Arabic letters and basic pronunciation, before moving on to Quran recitation. That said, it is never too late to start, and we have adult students who begin their Quran journey in their 30s, 40s, and beyond.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I get a female Quran teacher for my daughter?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. At Ease Quran Academy, we have a dedicated team of certified female Quran teachers available for daughters, sisters, and adult women. You can specifically request a female teacher when booking your free trial class, and we will match your child or family member with an appropriate certified female instructor.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I know if an online Quran teacher is qualified?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Ask specifically about their educational credentials. Look for certifications from recognized Islamic boards such as Wifaq ul Madaris Al-Arabia, Tanzeem ul Madaris, or Rabita-tul-Madaris. A qualified teacher should also hold an Ijazah, a chain of certification tracing back to the Prophet Muhammad (PBUH), for Quran recitation. At Ease Quran Academy, every teacher's credentials are verified before they are permitted to teach.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a free trial before I pay?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Ease Quran Academy offers a completely free trial class with no credit card required. This gives you and your child the chance to meet the teacher, experience the class format, and ask any questions before making a financial commitment. We strongly encourage all families to take advantage of the free trial, it is the best way to know whether the academy and the teacher are the right fit.",
-      },
-    },
-  ],
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
 };
 
 const breadcrumbSchema = {
@@ -484,37 +474,16 @@ export default function BlogPostPage() {
                 </h2>
 
                 <div className="space-y-4 mb-10">
-                  {[
-                    {
-                      q: "How much do online Quran classes cost in the USA?",
-                      a: `Prices vary a lot between academies, mainly with how many classes a week you take and how long each class is. At Ease Quran Academy, packages start at $${plans[0].price30} for ${plans[0].classesPerPackage} one-on-one classes of 30 minutes, with plans for two, three or five classes a week. You can view our exact pricing on our pricing page with no surprises.`,
-                    },
-                    {
-                      q: "What is the best age to start Quran classes?",
-                      a: "Most Quran educators agree that age 4 to 6 is an ideal starting point, as children at this stage are highly receptive to language learning and memorization. At this age, classes begin with Noorani Qaida, learning Arabic letters and basic pronunciation, before moving on to Quran recitation. That said, it is never too late to start. We have adult students who begin their Quran journey in their 30s, 40s, and beyond, and our programs are designed to meet every learner where they are.",
-                    },
-                    {
-                      q: "Can I get a female Quran teacher for my daughter?",
-                      a: "Yes, absolutely. At Ease Quran Academy, we have a dedicated team of certified female Quran teachers available for daughters, sisters, and adult women. You can specifically request a female teacher when booking your free trial class, and we will match your child or family member with an appropriate certified female instructor from the beginning.",
-                    },
-                    {
-                      q: "How do I know if an online Quran teacher is qualified?",
-                      a: "Ask specifically about their educational credentials. Look for certifications from recognized Islamic boards such as Wifaq ul Madaris Al-Arabia, Tanzeem ul Madaris, or Rabita-tul-Madaris. A qualified teacher should also hold an Ijazah, a chain of certification tracing back to the Prophet Muhammad (PBUH), for Quran recitation. At Ease Quran Academy, every teacher's credentials are verified before they are permitted to teach, and we are happy to share this information with any family that asks.",
-                    },
-                    {
-                      q: "Is there a free trial before I pay?",
-                      a: "Yes. Ease Quran Academy offers a completely free trial class with no credit card required. This gives you and your child the chance to meet the teacher, experience the class format, and ask any questions before making a financial commitment. We strongly encourage all families to take advantage of the free trial, it is the best way to know whether the academy and the teacher are the right fit for your family.",
-                    },
-                  ].map(({ q, a }) => (
+                  {faqs.map(({ question, answer }) => (
                     <div
-                      key={q}
+                      key={question}
                       className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm"
                     >
                       <div className="bg-navy px-6 py-4">
-                        <p className="font-playfair font-semibold text-white text-base">{q}</p>
+                        <p className="font-playfair font-semibold text-white text-base">{question}</p>
                       </div>
                       <div className="px-6 py-4">
-                        <p className="text-grey leading-relaxed text-sm">{a}</p>
+                        <p className="text-grey leading-relaxed text-sm">{answer}</p>
                       </div>
                     </div>
                   ))}

@@ -50,53 +50,6 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "I just became Muslim, where do I start with the Quran?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Congratulations on your Shahada. The very first thing is to learn the Kalima and the words of the Shahada with correct pronunciation. Then we move to Wudu (ablution), the words of Salah (prayer), Al-Fatiha, and the short Surahs needed for prayer. Our Quran for Reverts course is specifically designed to guide you through exactly this journey, step by step, in English, with full patience and no assumptions.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need to learn Arabic before taking this course?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. We teach Arabic from absolute zero as part of this course. You will learn the Arabic alphabet and sounds as a natural part of learning to read the Quran and Duas. You do not need any prior Arabic knowledge, and the course is taught entirely in English.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the first thing a new Muslim should learn from the Quran?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The first priority is learning Surah Al-Fatiha correctly, it is recited in every Rakah of Salah. After that, three short Surahs for prayer: Al-Ikhlas, Al-Falaq, and An-Nas. Alongside this, we teach the Tashahhud and the Salat-Ibrahim (Durood) recited in Salah. Once prayer basics are covered, we work on the Arabic alphabet and Quranic reading more broadly.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are the teachers sensitive to the unique challenges reverts face?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. Our certified teacher has extensive experience teaching reverts and understands the unique emotional, social, and practical challenges of being a new Muslim in America. Classes are completely free of cultural assumptions, you will not be made to feel less Muslim for not knowing something. Every question is welcomed. The learning environment is warm, non-judgmental, and encouraging.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How quickly can a revert learn to pray in Arabic?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most new Muslims can learn the basic words of Salah within 4–8 weeks of consistent practice with 2–3 classes per week. This includes Al-Fatiha, one short Surah, the Tashahhud, and the opening Takbir. The movements of Salah can be learned from videos alongside the class. We focus on getting you praying correctly as quickly as possible, then build on that foundation.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "I just became Muslim, where do I start with the Quran?",
@@ -124,6 +77,16 @@ const faqs = [
       "Most new Muslims can learn the basic words of Salah within 4–8 weeks of consistent practice with 2–3 classes per week. This includes Al-Fatiha, one short Surah, the Tashahhud, and the opening Takbir. The movements of Salah can be learned from videos alongside the class. We focus on getting you praying correctly as quickly as possible, then build on that foundation.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function QuranForRevertsPage() {
   return (

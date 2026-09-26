@@ -50,53 +50,6 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is the difference between Classical Arabic and Modern Standard Arabic?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Classical Arabic (Fusha) is the language of the Quran and classical Islamic texts, which has been unchanged for over 1,400 years. Modern Standard Arabic (MSA) is a contemporary form used in media, news, and formal writing across the Arab world. Our course teaches both, with an emphasis on Classical/Quranic Arabic so students can understand the Quran directly.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to understand the Quran in Arabic?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "With 3 classes per week and consistent self-study, most students begin to recognize and understand common Quranic words and phrases within 3–6 months. Understanding full verses with confidence typically takes 1–2 years. The Quran uses a relatively limited core vocabulary, the top 500 most frequent Quranic words cover approximately 75% of the text.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need to know how to read Quran first before taking Arabic language classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "It is strongly recommended that you can read Arabic script before starting the Arabic language course. If you cannot read Arabic yet, we recommend starting with Noorani Qaida. Once you can read, the Arabic language course is open to you, regardless of how well you currently read.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Arabic grammar hard for English speakers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Arabic grammar (Sarf and Nahw) is structured differently from English but is internally very logical and consistent. Our certified teacher specializes in teaching Arabic grammar to English-speaking students. All concepts are explained in plain English with English examples before transitioning to Arabic, making it accessible for native English speakers.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can children learn Arabic language alongside Quran classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Children who are already reading the Quran fluently can begin learning Arabic vocabulary and simple grammar. For younger children, we recommend focusing on Quran reading and Tajweed first, then adding Arabic language study once they are reading confidently, typically from age 10–12 onwards.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "What is the difference between Classical Arabic and Modern Standard Arabic?",
@@ -124,6 +77,16 @@ const faqs = [
       "Yes. Children who are already reading the Quran fluently can begin learning Arabic vocabulary and simple grammar. For younger children, we recommend focusing on Quran reading and Tajweed first, then adding Arabic language study once they are reading confidently, typically from age 10–12 onwards.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function ArabicLanguagePage() {
   return (

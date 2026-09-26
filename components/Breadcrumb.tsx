@@ -14,12 +14,15 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.label,
-      ...(item.href ? { item: `https://easequran.com${item.href}` } : {}),
-    })),
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
+      ...items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 2,
+        name: item.label,
+        ...(item.href ? { item: `https://easequran.com${item.href}` } : {}),
+      })),
+    ],
   };
 
   return (

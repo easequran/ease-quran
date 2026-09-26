@@ -52,53 +52,6 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Am I too old to learn the Quran?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely not. The Prophet Muhammad ﷺ said: 'The one who recites the Quran skillfully will be with the noble, righteous scribes; and the one who reads it with difficulty will have two rewards.' There is no age limit to learning the Quran. We have taught students in their 50s, 60s, and beyond. The desire to learn is what matters, not the age at which you begin.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How are adult classes different from kids' classes?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Adult classes are paced differently, we move at the student's natural learning speed without the gamification used for children. Instruction is entirely conversational, in plain English. Adults often have more questions and want to understand the 'why' behind rules, we welcome this. Classes are also scheduled for adult life: evenings, weekends, and early mornings.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I learn the Quran if I don't know any Arabic?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Most of our adult students start with zero Arabic knowledge. We begin with Noorani Qaida, learning Arabic letters and sounds, before moving to Quran reading. For adults, this foundation is typically built faster than with children. Many adult students are reading from the Quran within 2–4 months of starting from scratch.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long will it take me to read the Quran?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "If starting from zero: 2–4 months to complete Noorani Qaida, then 6–12 months to reach fluent Quran reading with basic Tajweed. If you can already read but with errors and weak Tajweed: 3–6 months of structured Tajweed work typically produces significant improvement. Every student's journey is different, we track your progress and give you honest timelines.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have Quran classes for seniors?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), arranged around the times that suit the student, and paced around their comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "Am I too old to learn the Quran?",
@@ -126,6 +79,16 @@ const faqs = [
       "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), arranged around the times that suit the student, and paced around their comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function QuranForAdultsPage() {
   return (

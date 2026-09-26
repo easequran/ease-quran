@@ -50,53 +50,6 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Do I need to know Arabic to learn Tajweed?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. Tajweed is about pronunciation rules, how to correctly produce Arabic sounds when reciting the Quran. You do not need to understand Arabic or speak it conversationally. However, you do need to be able to read the Quran (or Noorani Qaida) at a basic level before starting Tajweed. If you cannot read yet, we recommend starting with Noorani Qaida first.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to learn Tajweed?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The basic rules of Tajweed can be learned within 3–6 months with 3 classes per week. Applying Tajweed fluently across the entire Quran takes longer, typically 1–2 years of consistent practice. Many students see noticeable improvement in their recitation within the first few weeks.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the difference between Tajweed and Qiraat?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Tajweed refers to the rules that govern correct pronunciation and recitation of the Quran. Qiraat refers to the different recognized modes of Quranic recitation transmitted from the Prophet ﷺ through different chains of narrators. Our Tajweed course covers the rules of Hafs an Asim, the most commonly used recitation in the Muslim world today.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can adults learn Tajweed from scratch?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. Many of our students are adults who grew up in Western countries and never received proper Tajweed education. Our teachers are highly experienced in teaching adults with patience and without judgment. It is never too late to improve your Quran recitation.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is online Tajweed as effective as in-person learning?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, when done correctly. Our teachers are trained to listen carefully through a microphone and correct pronunciation in real time, the same way an in-person teacher would. Students receive immediate feedback on every word. Many of our students have gone from very poor recitation to reciting confidently with proper Tajweed entirely through online classes.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "Do I need to know Arabic to learn Tajweed?",
@@ -124,6 +77,16 @@ const faqs = [
       "Yes, when done correctly. Our teachers are trained to listen carefully through a microphone and correct pronunciation in real time, the same way an in-person teacher would. Students receive immediate feedback on every word. Many of our students have gone from very poor recitation to reciting confidently with proper Tajweed entirely through online classes.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function TajweedPage() {
   return (
