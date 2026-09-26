@@ -222,7 +222,7 @@ export default function BlogPostPage() {
                     href="/free-trial"
                     className="whitespace-nowrap bg-navy text-white font-bold px-6 py-3 rounded-full hover:bg-navy/90 transition-colors text-sm"
                   >
-                    Book Your Free Trial Class →
+                    Book Your Free Trial →
                   </Link>
                 </div>
 
@@ -366,7 +366,7 @@ export default function BlogPostPage() {
                     href="/free-trial"
                     className="whitespace-nowrap bg-gold text-navy font-bold px-6 py-3 rounded-full hover:bg-gold/90 transition-colors text-sm"
                   >
-                    Book Your Free Trial Class →
+                    Book Your Free Trial →
                   </Link>
                 </div>
 
@@ -508,7 +508,7 @@ export default function BlogPostPage() {
                     href="/free-trial"
                     className="inline-block bg-navy text-white font-bold px-8 py-4 rounded-full hover:bg-navy/90 transition-colors text-sm"
                   >
-                    Book Your Free Trial Class, no Credit Card Required
+                    Book Your Free Trial
                   </Link>
                 </div>
 
