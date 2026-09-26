@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { startingPriceText } from "@/lib/pricing";
+import { teachers } from "@/lib/teachers";
 import { Users, BookOpen, Star } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -87,6 +88,11 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: f.answer },
   })),
 };
+
+const islamicStudiesTeachers = [
+  teachers.find((t) => t.slug === "almas-fatima")!,
+  teachers.find((t) => t.slug === "ustadh-yusuf-mahmood")!,
+];
 
 export default function IslamicStudiesPage() {
   return (
@@ -333,28 +339,34 @@ export default function IslamicStudiesPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <span className="eyebrow mb-4">
-              Your Teacher
+              Your Teachers
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              Taught by Our Certified Female Islamic Studies Teacher
+              Teachers Who Combine Quran and Islamic Studies
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Almas Fatima holds a B.A. in Islamic Studies and a certification from Wifaq ul
-              Madaris Al-Arabia. She brings warmth, patience, and deep scholarly knowledge to every
-              Islamic Studies class, particularly for sisters and children.
+              Some of the teachers who teach Islamic Studies alongside Quran classes, for
+              children, teens and adults.
             </p>
           </div>
-          <div className="max-w-xs mx-auto">
-            <TeacherCard
-              name="Almas Fatima"
-              image="/images/teacher-2.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Qaria e Quran, Bachelor in Islamic Studies, Islamic Education Specialist"
-              experience="Teaching Islamic Studies and Quran since 2022"
-              qualification="Female Quran & Islamic Studies Teacher"
-              badge="Islamic Studies"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {islamicStudiesTeachers.map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 

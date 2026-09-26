@@ -58,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/free-trial`, file: "app/free-trial/page.tsx", changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/contact`, file: "app/contact/page.tsx", changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/female-quran-teachers`, file: "app/female-quran-teachers/page.tsx", changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/teachers`, file: "app/teachers/page.tsx", changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/privacy-policy`, file: "app/privacy-policy/page.tsx", changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/terms-conditions`, file: "app/terms-conditions/page.tsx", changeFrequency: "yearly", priority: 0.3 },
     { url: `${base}/safety`, file: "app/safety/page.tsx", changeFrequency: "yearly", priority: 0.4 },

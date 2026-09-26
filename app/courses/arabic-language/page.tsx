@@ -5,7 +5,6 @@ import { startingPriceText } from "@/lib/pricing";
 import { BookOpen, Heart } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
-import TeacherCard from "@/components/TeacherCard";
 
 export const metadata: Metadata = {
   title: "Arabic Language Classes Online",
@@ -331,28 +330,21 @@ export default function ArabicLanguagePage() {
       {/* Teacher */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
+          <div className="max-w-2xl mx-auto text-center">
             <span className="eyebrow mb-4">
-              Your Teacher
+              Who Teaches This
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              Taught by Our Founder, Wifaq ul Madaris Certified
+              Matched With a Qualified Teacher
             </h2>
-            <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Our head teacher holds formal certification from Wifaq ul Madaris Al-Arabia, with specialized training in
-              Sarf and Nahw and 6+ years of teaching Western students, uniquely qualified
-              to make Arabic grammar accessible to English speakers.
+            <p className="text-grey text-sm leading-relaxed mb-6">
+              We match you with a teacher based on the course, your level, and your preferred
+              schedule.{" "}
+              <Link href="/teachers" className="text-gold font-semibold hover:underline">
+                Meet our teachers
+              </Link>
+              .
             </p>
-          </div>
-          <div className="max-w-xs mx-auto">
-            <TeacherCard
-              name="Head Teacher"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Arabic Language (Sarf & Nahw), Quranic Arabic Specialist"
-              experience="6+ years teaching Arabic to Western English-speaking students"
-              qualification="Arabic Language Teacher"
-            />
           </div>
         </div>
       </section>

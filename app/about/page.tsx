@@ -5,6 +5,7 @@ import TeacherCard from "@/components/TeacherCard";
 import CTASection from "@/components/CTASection";
 import { Users, Award, Globe, Heart, BarChart2, BookOpen } from "lucide-react";
 import { business, PRIMARY_CTA } from "@/lib/business";
+import { teachers } from "@/lib/teachers";
 
 export const metadata: Metadata = {
   title: "About Ease Quran",
@@ -166,7 +167,7 @@ export default function AboutPage() {
               <h2 className="heading-2 text-navy mb-2">
                 Shah Zaib
               </h2>
-              <p className="text-gold font-semibold mb-6">Founder & Head Teacher</p>
+              <p className="text-gold font-semibold mb-6">Founder & CEO</p>
 
               <div className="space-y-4 text-grey text-sm leading-relaxed">
                 <p>
@@ -302,32 +303,27 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <TeacherCard
-              name="Shah Zaib"
-              image="/images/founder.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Tajweed, Quran Reading, Hifz, Noorani Qaida"
-              experience="6+ years teaching Western students"
-              qualification="Founder & Head Teacher"
-            />
-            <TeacherCard
-              name="Muhammad Umair"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Tajweed & Hifz Specialist"
-              experience="2 years teaching online"
-              qualification="Quran Teacher"
-            />
-            <TeacherCard
-              name="Almas Fatima"
-              image="/images/teacher-2.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Qaria e Quran, Bachelor in Islamic Studies"
-              experience="Teaching since 2022, available for sisters & children"
-              qualification="Female Quran Teacher"
-              badge="Female Teacher"
-            />
+            {[
+              teachers.find((t) => t.slug === "ustadh-abdullah-ahmed")!,
+              teachers.find((t) => t.slug === "almas-fatima")!,
+              teachers.find((t) => t.slug === "ustadha-hafsa-noor")!,
+            ].map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-8">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 

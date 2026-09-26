@@ -51,6 +51,7 @@ const quickLinks = [
   { label: "Free Trial", href: "/free-trial" },
   { label: "Summer Classes", href: "/summer-quran-classes" },
   { label: "Ramadan Classes", href: "/ramadan-quran-classes" },
+  { label: "Our Teachers", href: "/teachers" },
   { label: "Female Teachers", href: "/female-quran-teachers" },
   { label: "Reviews", href: "/reviews" },
   { label: "Blog", href: "/blog" },

@@ -52,7 +52,7 @@ const simpleLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Female Teachers", href: "/female-quran-teachers" },
+  { label: "Teachers", href: "/teachers" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { startingPriceText } from "@/lib/pricing";
+import { teachers } from "@/lib/teachers";
 import { CheckCircle } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -87,6 +88,11 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: f.answer },
   })),
 };
+
+const tajweedTeachers = [
+  teachers.find((t) => t.slug === "ustadha-fatima-zahra")!,
+  teachers.find((t) => t.slug === "ustadh-abdullah-ahmed")!,
+];
 
 export default function TajweedPage() {
   return (
@@ -343,24 +349,31 @@ export default function TajweedPage() {
               Your Teachers
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              Tajweed Specialists Certified from Wifaq ul Madaris
+              Tajweed Specialists
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Both teachers have studied Tajweed formally and are certified from Wifaq ul Madaris
-              Al-Arabia, Pakistan's largest Islamic education board, globally recognized.
+              Some of the teachers who focus on Tajweed and recitation, from beginner rules to
+              advanced correction.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <TeacherCard
-              name="Muhammad Umair"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Tajweed Specialist, Quran Recitation Expert"
-              experience="2+ years teaching Tajweed to Western students online"
-              qualification="Tajweed Teacher"
-              badge="Tajweed Specialist"
-            />
+            {tajweedTeachers.map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { startingPriceText } from "@/lib/pricing";
+import { teachers } from "@/lib/teachers";
 import { BookOpen, CheckCircle } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -87,6 +88,8 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: f.answer },
   })),
 };
+
+const revertTeacher = teachers.find((t) => t.slug === "ustadha-sumaiya-khan")!;
 
 export default function QuranForRevertsPage() {
   return (
@@ -357,25 +360,28 @@ export default function QuranForRevertsPage() {
               Your Teacher
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              A Teacher Who Truly Understands Your Journey
+              A Teacher Who Understands Your Journey
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Ease Quran was built specifically to serve Western Muslims, including reverts.
-              Our teacher&apos;s 6+ years teaching Western students has given them deep empathy for the unique
-              challenges new Muslims face. Certified from Wifaq ul Madaris Al-Arabia, they bring
-              both scholarly credentials and genuine warmth to every class.
+              Ease Quran was built to serve Western Muslims, including reverts. Our teachers who
+              focus on this bring both real qualifications and genuine patience to every class.
             </p>
           </div>
           <div className="max-w-xs mx-auto">
             <TeacherCard
-              name="Head Teacher"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Reverts & Western Students Specialist"
-              experience="6+ years teaching reverts and Western Muslims"
-              qualification="Certified Quran Teacher"
+              name={`${revertTeacher.honorific} ${revertTeacher.name}`}
+              image={revertTeacher.photo}
+              credential={revertTeacher.qualifications.join(", ")}
+              speciality={revertTeacher.specialisation}
+              experience={revertTeacher.experience}
+              badge={revertTeacher.gender === "female" ? "Female Teacher" : undefined}
             />
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 

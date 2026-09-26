@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CourseCard from "@/components/CourseCard";
 import TeacherCard from "@/components/TeacherCard";
+import { teachers } from "@/lib/teachers";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -515,8 +516,8 @@ export default function HomePage() {
               <div className="absolute -bottom-5 -right-5 bg-gold rounded-2xl p-4 shadow-xl flex items-center gap-3">
                 <Award size={20} className="text-navy shrink-0" />
                 <div>
-                  <p className="font-bold text-navy text-sm">Wifaq ul Madaris</p>
-                  <p className="text-navy/70 text-xs">Founder&apos;s qualification</p>
+                  <p className="font-bold text-navy text-sm">Founder &amp; CEO</p>
+                  <p className="text-navy/70 text-xs">Ease Quran Online Academy</p>
                 </div>
               </div>
             </div>
@@ -524,13 +525,13 @@ export default function HomePage() {
               <span className="eyebrow">Meet the Founder</span>
               <h2 className="heading-2 text-navy mt-3 mb-2">Shah Zaib</h2>
               <p className="text-gold font-semibold mb-4">
-                Founder and Head Teacher
+                Founder &amp; CEO
               </p>
               <p className="text-grey leading-relaxed mb-6">
                 Shah Zaib founded Ease Quran with a mission that is deeply personal: to
                 give every Muslim family in America access to a Quran teacher they can
-                genuinely trust. He holds a certificate from Wifaq ul Madaris Al-Arabia and
-                has spent more than six years teaching English-speaking students.
+                genuinely trust. He holds a certificate from Wifaq ul Madaris Al-Arabia, and
+                now leads the academy while our team of teachers works directly with students.
               </p>
               <blockquote className="border-l-4 border-gold pl-5 mb-6">
                 <p className="font-playfair text-lg italic text-navy leading-relaxed">
@@ -542,9 +543,8 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-3">
                 {[
                   "Wifaq ul Madaris Certified",
-                  "6+ Years Teaching Experience",
-                  "Speciality: Western Students",
-                  "English-Speaking Teaching Style",
+                  "Founder & CEO",
+                  "Leads the Academy",
                 ].map((badge) => (
                   <span
                     key={badge}
@@ -572,23 +572,30 @@ export default function HomePage() {
               their course, level and preferred schedule.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <TeacherCard
-              name="Muhammad Umair"
-              image="/images/teacher-1.webp"
-              credential="Certified from Wifaq ul Madaris"
-              speciality="Tajweed & Hifz Specialist"
-              experience="2 years of dedicated Quran teaching"
-            />
-            <TeacherCard
-              name="Almas Fatima"
-              image="/images/teacher-2.webp"
-              credential="Certified from Wifaq ul Madaris"
-              qualification="Qaria e Quran · Bachelor in Islamic Studies"
-              speciality="Available for sisters and children"
-              experience="Teaching since 2022"
-              badge="Female Teacher"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              teachers.find((t) => t.slug === "ustadh-ibrahim-raza")!,
+              teachers.find((t) => t.slug === "almas-fatima")!,
+              teachers.find((t) => t.slug === "ustadh-bilal-farooq")!,
+            ].map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/teachers"
+              className="inline-block border-2 border-navy text-navy font-semibold px-8 py-3 rounded-full hover:bg-navy hover:text-white transition-all duration-200 text-sm"
+            >
+              Meet All Our Teachers
+            </Link>
           </div>
         </div>
       </section>

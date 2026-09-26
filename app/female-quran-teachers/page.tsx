@@ -8,6 +8,7 @@ import TrustBadges from "@/components/TrustBadges";
 import FamilyReviews from "@/components/FamilyReviews";
 import { reviewsForCourse } from "@/lib/reviews";
 import { business, PRIMARY_CTA, whatsappLink } from "@/lib/business";
+import { femaleTeachers } from "@/lib/teachers";
 
 export const metadata: Metadata = {
   title: "Female Quran Teachers Online",
@@ -67,6 +68,8 @@ const faqSchema = {
 };
 
 const WHATSAPP_HREF = whatsappLink("Hi I am interested in booking a female Quran teacher");
+
+const femaleTeacherList = femaleTeachers();
 
 export default function FemaleQuranTeachersPage() {
   return (
@@ -176,51 +179,46 @@ export default function FemaleQuranTeachersPage() {
         </div>
       </section>
 
-      {/* One of our female teachers */}
+      {/* Our female teachers */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <span className="eyebrow mb-4">Our Teachers</span>
-              <h2 className="heading-2 text-navy">One of Our Female Teachers</h2>
+              <h2 className="heading-2 text-navy">{femaleTeacherList.length} Female Teachers</h2>
               <p className="text-grey text-sm max-w-xl mx-auto mt-3">
-                We have several female teachers. Your teacher is matched to the student&apos;s
-                course, level and preferred schedule.
+                Your teacher is matched to the student&apos;s course, level and preferred
+                schedule.
               </p>
             </div>
 
-            <div className="bg-offwhite rounded-3xl overflow-hidden shadow-lg border border-gray-100">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                <div className="relative h-80 lg:h-auto min-h-[400px]">
-                  <Image
-                    src="/images/teacher-2.webp"
-                    alt="Almas Fatima, female Quran teacher at Ease Quran Online Academy"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-6 left-6 bg-gold text-navy text-xs font-bold px-4 py-2 rounded-full shadow-md">
-                    Qaria e Quran
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {femaleTeacherList.map((t) => (
+                <div key={t.slug} className="bg-offwhite rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                  <div className="relative" style={{ height: "220px" }}>
+                    <Image
+                      src={t.photo}
+                      alt={`${t.honorific} ${t.name}, female Quran teacher at Ease Quran Online Academy`}
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-playfair font-bold text-lg text-navy mb-1">
+                      {t.honorific} {t.name}
+                    </h3>
+                    <p className="text-gold text-sm font-semibold mb-3">{t.headline}</p>
+                    <p className="text-grey text-xs mb-1">{t.qualifications.join(", ")}</p>
+                    <p className="text-grey text-xs">{t.experience}</p>
                   </div>
                 </div>
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  <h3 className="font-playfair font-bold text-3xl text-navy mb-1">Almas Fatima</h3>
-                  <p className="text-gold font-semibold mb-6">Female Quran Teacher</p>
-                  <div className="space-y-3">
-                    {[
-                      { label: "Qualifications", value: "Qaria e Quran; Bachelor in Islamic Studies" },
-                      { label: "Teaching since", value: "2022" },
-                      { label: "Teaches", value: "Quran for Kids, Tajweed, Noorani Qaida, Islamic Studies" },
-                      { label: "Teaches", value: "Sisters, girls and young children" },
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <span className="text-gold font-bold text-sm w-32 shrink-0">{item.label}:</span>
-                        <span className="text-grey text-sm leading-relaxed">{item.value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
+            <p className="text-center mt-8">
+              <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+                See full profiles for every teacher →
+              </Link>
+            </p>
           </div>
         </div>
       </section>

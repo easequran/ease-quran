@@ -135,7 +135,7 @@ export default function RootLayout({
               founder: {
                 "@type": "Person",
                 name: "Shah Zaib",
-                jobTitle: "Founder & Head Teacher",
+                jobTitle: "Founder & CEO",
               },
               areaServed: {
                 "@type": "Country",

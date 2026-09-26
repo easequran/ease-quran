@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { startingPriceText } from "@/lib/pricing";
+import { teachers } from "@/lib/teachers";
 import { CheckCircle, User, BarChart2 } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -89,6 +90,11 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: f.answer },
   })),
 };
+
+const adultTeachers = [
+  teachers.find((t) => t.slug === "ustadh-omar-khalid")!,
+  teachers.find((t) => t.slug === "ustadha-sumaiya-khan")!,
+];
 
 export default function QuranForAdultsPage() {
   return (
@@ -339,25 +345,31 @@ export default function QuranForAdultsPage() {
               Your Teacher
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              Specialist in Teaching Western Adults, Wifaq ul Madaris Certified
+              Teachers Who Specialise in Adult Learners
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Our certified teacher has spent 6+ years perfecting a methodology for teaching Quran to
-              Western, English-speaking adults, understanding the unique challenges of busy
-              schedules, knowledge gaps, and the need for clear English explanation, addressing
-              all of them in every class.
+              Some of the teachers who focus on adult students, understanding the busy schedules
+              and the nerves many adults feel starting from scratch.
             </p>
           </div>
-          <div className="max-w-xs mx-auto">
-            <TeacherCard
-              name="Head Teacher"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Western Adult Quran Education Specialist"
-              experience="6+ years teaching adults in the USA, UK, and Canada"
-              qualification="Certified Quran Teacher"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {adultTeachers.map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 

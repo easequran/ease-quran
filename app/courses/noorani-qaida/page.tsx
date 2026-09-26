@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { startingPriceText } from "@/lib/pricing";
+import { teachers } from "@/lib/teachers";
 import { User, BookOpen } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -89,6 +90,11 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: f.answer },
   })),
 };
+
+const nooraniTeachers = [
+  teachers.find((t) => t.slug === "ustadha-maryam-siddiqui")!,
+  teachers.find((t) => t.slug === "almas-fatima")!,
+];
 
 export default function NooraniQaidaPage() {
   return (
@@ -344,32 +350,31 @@ export default function NooraniQaidaPage() {
               Your Teachers
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              Certified Quran Teachers, Male and Female Available
+              Teachers Who Specialise in Noorani Qaida
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Both teachers hold credentials from Wifaq ul Madaris Al-Arabia and are experienced
-              in teaching beginners at all ages. A female teacher is available for sisters and children.
+              Some of the teachers who teach beginners of every age. A female teacher can be
+              arranged at most times.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <TeacherCard
-              name="Muhammad Umair"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Quran Reading, Noorani Qaida, Tajweed"
-              experience="2+ years teaching beginners of all ages online"
-              qualification="Quran Teacher"
-            />
-            <TeacherCard
-              name="Almas Fatima"
-              image="/images/teacher-2.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Qaria e Quran, Bachelor in Islamic Studies, Noorani Qaida"
-              experience="Available for sisters and children, teaching since 2022"
-              qualification="Female Quran Teacher"
-              badge="Female Teacher"
-            />
+            {nooraniTeachers.map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 

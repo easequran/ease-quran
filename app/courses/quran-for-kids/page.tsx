@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { startingPriceText } from "@/lib/pricing";
 import { business } from "@/lib/business";
+import { teachers } from "@/lib/teachers";
 import { BookOpen, Star, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
@@ -108,6 +109,11 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: f.answer },
   })),
 };
+
+const kidsTeachers = [
+  teachers.find((t) => t.slug === "ustadh-muhammad-hamza")!,
+  teachers.find((t) => t.slug === "almas-fatima")!,
+];
 
 export default function QuranForKidsPage() {
   return (
@@ -524,25 +530,23 @@ export default function QuranForKidsPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <TeacherCard
-              name="Muhammad Umair"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Tajweed, Quran Reading, Kids Education Specialist"
-              experience="2+ years teaching children online"
-              qualification="Quran Teacher"
-              badge="Kids Specialist"
-            />
-            <TeacherCard
-              name="Almas Fatima"
-              image="/images/teacher-2.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Qaria e Quran, Bachelor in Islamic Studies"
-              experience="Available for sisters and children, teaching since 2022"
-              qualification="Female Quran Teacher"
-              badge="Female Teacher"
-            />
+            {kidsTeachers.map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 

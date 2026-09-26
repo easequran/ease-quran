@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { GraduationCap, CheckCircle, Award } from "lucide-react";
 import FreeTrialForm from "./FreeTrialForm";
 import { business } from "@/lib/business";
+import { teachers } from "@/lib/teachers";
 
 export const metadata: Metadata = {
   title: "Book Your Free Trial",
@@ -109,53 +111,39 @@ export default function FreeTrialPage() {
                   Some of Our Teachers
                 </h3>
                 <div className="space-y-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden bg-gold/10 shrink-0 flex items-center justify-center">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 text-gold" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" /></svg>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-navy text-sm">Shah Zaib</p>
-                      <p className="text-grey text-xs">Founder · Wifaq ul Madaris · 6+ yrs experience</p>
-                    </div>
-                    <span className="ml-auto text-xs bg-gold/10 text-gold font-semibold px-2 py-1 rounded-full">
-                      Checked
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden bg-offwhite shrink-0">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src="/images/teacher-1.webp"
-                        alt="Muhammad Umair - Quran Teacher"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-navy text-sm">Muhammad Umair</p>
-                      <p className="text-grey text-xs">Tajweed & Hifz Specialist</p>
-                    </div>
-                    <span className="ml-auto text-xs bg-gold/10 text-gold font-semibold px-2 py-1 rounded-full">
-                      Checked
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden bg-offwhite shrink-0">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src="/images/teacher-2.webp"
-                        alt="Almas Fatima - Female Quran Teacher"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-navy text-sm">Almas Fatima</p>
-                      <p className="text-grey text-xs">Female Teacher · Sisters & Children</p>
-                    </div>
-                    <span className="ml-auto text-xs bg-gold/10 text-gold font-semibold px-2 py-1 rounded-full">
-                      Checked
-                    </span>
-                  </div>
+                  {[
+                    teachers.find((t) => t.slug === "ustadh-abdullah-ahmed")!,
+                    teachers.find((t) => t.slug === "almas-fatima")!,
+                    teachers.find((t) => t.slug === "ustadha-hafsa-noor")!,
+                  ].map((t) => (
+                    <Link
+                      key={t.slug}
+                      href={`/teachers#${t.slug}`}
+                      className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+                    >
+                      <div className="w-12 h-12 rounded-full overflow-hidden bg-offwhite shrink-0">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={t.photo}
+                          alt={`${t.honorific} ${t.name}, Quran teacher`}
+                          className="w-full h-full object-cover object-top"
+                        />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-navy text-sm">{t.honorific} {t.name}</p>
+                        <p className="text-grey text-xs">{t.headline}</p>
+                      </div>
+                      <span className="ml-auto text-xs bg-gold/10 text-gold font-semibold px-2 py-1 rounded-full">
+                        Checked
+                      </span>
+                    </Link>
+                  ))}
                 </div>
+                <p className="text-center mt-5">
+                  <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+                    Meet all our teachers →
+                  </Link>
+                </p>
               </div>
 
               {/* Geo + Response */}

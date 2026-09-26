@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { hifzPlan } from "@/lib/pricing";
+import { teachersForCourse } from "@/lib/teachers";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
@@ -87,6 +88,8 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: f.answer },
   })),
 };
+
+const hifzTeachers = teachersForCourse("hifz", 2);
 
 export default function HifzPage() {
   return (
@@ -334,28 +337,34 @@ export default function HifzPage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <span className="eyebrow mb-4">
-              Your Hifz Teacher
+              Your Hifz Teachers
             </span>
             <h2 className="heading-2 text-navy mb-4">
-              Hifz Specialist Certified from Wifaq ul Madaris
+              Teachers Who Specialise in Hifz
             </h2>
             <p className="text-grey max-w-xl mx-auto text-sm leading-relaxed">
-              Muhammad Umair is our Hifz specialist, trained in the traditional Hifz methodology
-              and certified from Wifaq ul Madaris Al-Arabia, he has guided students through this
-              blessed journey with patience, discipline, and deep knowledge.
+              Some of the teachers who focus on Hifz and memorisation, trained in the traditional
+              sabaq, sabaqi and manzil methodology.
             </p>
           </div>
-          <div className="max-w-xs mx-auto">
-            <TeacherCard
-              name="Muhammad Umair"
-              image="/images/teacher-1.webp"
-              credential="Certified, Wifaq ul Madaris Al-Arabia"
-              speciality="Hifz Specialist, Tajweed & Quran Memorization"
-              experience="2+ years teaching Hifz to students in the USA online"
-              qualification="Hifz Teacher"
-              badge="Hifz Specialist"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {hifzTeachers.map((t) => (
+              <TeacherCard
+                key={t.slug}
+                name={`${t.honorific} ${t.name}`}
+                image={t.photo}
+                credential={t.qualifications.join(", ")}
+                speciality={t.specialisation}
+                experience={t.experience}
+                badge={t.gender === "female" ? "Female Teacher" : undefined}
+              />
+            ))}
           </div>
+          <p className="text-center mt-6">
+            <Link href="/teachers" className="text-gold font-semibold hover:underline text-sm">
+              Meet all our teachers →
+            </Link>
+          </p>
         </div>
       </section>
 
