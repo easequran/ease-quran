@@ -159,7 +159,7 @@ export default function PopupForm() {
                 JazakAllah Khair!
               </h3>
               <p className="text-grey text-sm leading-relaxed">
-                We will contact you within 2 hours on WhatsApp to confirm your
+                We will contact you within a few hours on WhatsApp to confirm your
                 free trial class. May Allah bless your family&apos;s journey
                 with the Quran.
               </p>
@@ -275,7 +275,7 @@ export default function PopupForm() {
                 </li>
                 <li className="flex items-center gap-2 text-xs text-grey">
                   <MessageCircle size={14} className="text-gold shrink-0" />
-                  We&apos;ll follow up on WhatsApp within 2 hours
+                  We&apos;ll follow up on WhatsApp within a few hours
                 </li>
               </ul>
 
