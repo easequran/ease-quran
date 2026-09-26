@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -9,7 +10,7 @@ import NearbyLocations from "@/components/NearbyLocations";
 export const metadata: Metadata = {
   title: "Online Quran Classes in South Dakota",
   description:
-    "Certified online Quran classes for Muslim families across South Dakota, including Sioux Falls. Wifaq ul Madaris certified teachers.",
+    "Certified online Quran classes for Muslim families across South Dakota, including Sioux Falls. Qualified teachers.",
   alternates: {
     canonical: "https://easequran.com/locations/south-dakota",
   },
@@ -31,84 +32,40 @@ const breadcrumbSchema = {
   ],
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description: "Certified online Quran classes for Muslim families throughout South Dakota.",
-  areaServed: { "@type": "State", name: "South Dakota" },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
+const faqs = [
+  {
+    question: "Which time zone are classes booked in?",
+    answer: "Eastern South Dakota, including Sioux Falls, is on Central Time, and the western half, including Rapid City, is on Mountain Time, so let us know which applies to you. Share the days and times that suit you, and every class time we confirm will be in your own time zone. When the clocks change in March and November, your class stays at the same local time.",
+  },
+  {
+    question: "Can my daughter have a female teacher?",
+    answer: "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
+  },
+  {
+    question: "What happens in the free trial class?",
+    answer:
+      "The trial is a 30-minute one-on-one class on Zoom. The teacher checks the student's current level, teaches a short lesson at that level, recommends a course and how many classes a week, and answers your questions. Parents are welcome to sit in. There is no obligation to continue.",
+  },
+  {
+    question: "How much do classes cost?",
+    answer: `${startingPriceText}, and every student's first class is free. Sibling and prepay discounts are on our pricing page.`,
+  },
+];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "I've read Sioux Falls resettles a lot of refugees. Is that true, and does it include Muslim families?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "It's true, and well documented. South Dakota, and Sioux Falls specifically, has one of the highest per-capita refugee resettlement rates in the country, supported by established resettlement agencies, and that has included Muslim families from a range of backgrounds over the years. We're glad to serve that community alongside every other Muslim family in the state.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have students in Sioux Falls already?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We're actively welcoming South Dakota families right now. Rather than claim a number we can't verify, we'd invite you to be one of our first Sioux Falls-area students with a free trial class.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What if I live far from Sioux Falls, out in a smaller South Dakota town?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "That's most of the state, and it's exactly who online classes are built for. South Dakota is large and sparsely populated outside Sioux Falls, and a family's nearest mosque can genuinely be a couple hours away by car. Since classes are online, that distance is never a barrier.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much do classes cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required.",
-      },
-    },
-  ],
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
 };
-
-const faqs = [
-  {
-    question: "I've read Sioux Falls resettles a lot of refugees. Is that true, and does it include Muslim families?",
-    answer:
-      "It's true, and genuinely well documented. South Dakota, and Sioux Falls in particular, has one of the highest per-capita refugee resettlement rates in the country, supported by established local resettlement agencies, and that history has included Muslim families from a range of backgrounds arriving over the years. We're glad to serve that community with the same certified, one-on-one instruction as every other Muslim family across the state.",
-  },
-  {
-    question: "Do you have students in Sioux Falls already?",
-    answer:
-      "We're actively welcoming South Dakota families right now. Rather than claim a specific number we can't verify, we'd simply invite you to be one of our first Sioux Falls-area students and see the quality for yourself with a free trial class.",
-  },
-  {
-    question: "What if I live far from Sioux Falls, out in a smaller South Dakota town?",
-    answer:
-      "That describes most of the state, and it's exactly who online classes are built for. South Dakota is large and sparsely populated outside Sioux Falls, and a family's nearest mosque can genuinely be a couple hours away by car. Since all classes are conducted online via Zoom, that distance from Sioux Falls, or from anywhere, is never a barrier to consistent Quran instruction.",
-  },
-  {
-    question: "How much do classes cost?",
-    answer:
-      "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required, so you can experience a lesson before committing to anything.",
-  },
-];
 
 export default function SouthDakotaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
@@ -135,7 +92,7 @@ export default function SouthDakotaPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center">
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20South%20Dakota" target="_blank" rel="noopener noreferrer" className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-sm text-center">
                 Chat on WhatsApp
@@ -164,7 +121,7 @@ export default function SouthDakotaPage() {
               </p>
               <p>
                 Many South Dakota families, particularly along the I-29 corridor, are also within reach of our{" "}
-                <Link href="/locations/minneapolis" className="text-gold font-semibold hover:underline">Minneapolis-St. Paul location page</Link>, our nearest Metro Tier community, though our online classes reach you directly in South Dakota, whether you're in Sioux Falls or hours west of it.
+                <Link href="/locations/minneapolis" className="text-gold font-semibold hover:underline">Minneapolis-St. Paul location page</Link>, our nearest city page, though our online classes reach you directly in South Dakota, whether you're in Sioux Falls or hours west of it.
               </p>
             </div>
           </div>
@@ -178,7 +135,7 @@ export default function SouthDakotaPage() {
             <span className="eyebrow mb-4">Our Curriculum</span>
             <h2 className="heading-2 text-navy mb-6">Courses for South Dakota Families</h2>
             <p className="text-grey leading-relaxed mb-6">
-              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a Wifaq ul Madaris certified scholar. Visit our{" "}
+              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a qualified teacher. Visit our{" "}
               <Link href="/courses" className="text-gold font-semibold hover:underline">full courses page</Link>{" "}
               to see everything available, including options for kids, adults, and reverts.
             </p>
@@ -210,7 +167,7 @@ export default function SouthDakotaPage() {
       <CTASection
         headline="Certified Quran Education for South Dakota Families"
         subtext="From Sioux Falls to the smallest South Dakota town. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in South Dakota"
       />

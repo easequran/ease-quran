@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Users, BookOpen, Star } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
-import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Online Islamic Studies Classes in USA",
@@ -170,7 +170,7 @@ export default function IslamicStudiesPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -206,11 +206,8 @@ export default function IslamicStudiesPage() {
                   adult needs to live their faith with confidence and understanding.
                 </p>
                 <p>
-                  The course is taught by Almas Fatima, our certified female Quran teacher who
-                  holds a B.A. in Islamic Studies and a certification from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>. She specializes
-                  in teaching sisters and children, bringing both scholarly knowledge and a warm,
-                  nurturing teaching style to every class.
+                  The course is taught one-on-one by a qualified teacher, and a female teacher can be
+              arranged for sisters and girls at most times.
                 </p>
                 <p>
                   The curriculum is divided by age and level. Children receive Islamic knowledge
@@ -406,7 +403,7 @@ export default function IslamicStudiesPage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Add Islamic Studies to your family&apos;s education plan. Book a free first class and
@@ -437,15 +434,17 @@ export default function IslamicStudiesPage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="Islamic Studies in English for Heritage Communities"
-        intro="Children growing up between a family's heritage culture and American school life often understand lessons best in English. Our Islamic Studies classes are taught in clear English, for every community."
-        links={[
-          { slug: "minneapolis", reason: "home to one of America's largest Somali Muslim communities." },
-          { slug: "northern-virginia", reason: "home to one of America's largest Afghan American communities." },
-          { slug: "st-louis-missouri", reason: "home to the largest Bosnian community outside Bosnia." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -477,7 +476,7 @@ export default function IslamicStudiesPage() {
       <CTASection
         headline="Raise Children Who Know Their Deen"
         subtext="Book a free Islamic Studies trial class today. Your first class is completely free, experience the quality before you commit to anything."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { CheckCircle, User, BarChart2 } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
-import CourseLocations from "@/components/CourseLocations";
 import FamilyReviews from "@/components/FamilyReviews";
 import { reviewsById } from "@/lib/reviews";
 
@@ -93,7 +93,7 @@ const faqSchema = {
       name: "Do you have Quran classes for seniors?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), scheduled at any time of day, and paced entirely around the student's comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
+        text: "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), arranged around the times that suit the student, and paced around their comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
       },
     },
   ],
@@ -123,7 +123,7 @@ const faqs = [
   {
     question: "Do you have Quran classes for seniors?",
     answer:
-      "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), scheduled at any time of day, and paced entirely around the student's comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
+      "Yes. We regularly work with senior Muslim students. Classes can be shorter if needed (30 minutes), arranged around the times that suit the student, and paced around their comfort. Our teachers are trained in patience and encouragement, senior students often find our classes to be a deeply rewarding and spiritually nourishing experience.",
   },
 ];
 
@@ -172,7 +172,7 @@ export default function QuranForAdultsPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -210,11 +210,9 @@ export default function QuranForAdultsPage() {
                   Book of Allah.
                 </p>
                 <p>
-                  This course was designed specifically for you. Taught by our certified teacher from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>,
-                  with 6+ years of experience teaching Western adults. Our teacher understands the
-                  sensitivities, the time constraints, and the particular challenges that adult
-                  learners face, and has built a methodology that works.
+                  This course was designed for you. It is taught one-on-one by qualified teachers who
+              are used to teaching adults, and who understand the time pressure and the
+              embarrassment many adult beginners feel.
                 </p>
                 <p>
                   Classes are completely private, one-on-one, in English, and scheduled around
@@ -415,7 +413,7 @@ export default function QuranForAdultsPage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Your first class is completely free. No credit card, no commitment. Experience the
@@ -446,15 +444,17 @@ export default function QuranForAdultsPage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="Quran Classes Around Irregular Work Hours"
-        intro="Adults rarely fail at Quran study for lack of interest. More often, a fixed weekly class simply clashes with work. Online one-on-one lessons can be booked around shifts, on-call weeks and changing rotas."
-        links={[
-          { slug: "las-vegas", reason: "a city that runs around the clock, where many parents work swing or graveyard shifts." },
-          { slug: "birmingham-alabama", reason: "doctors, residents and nurses at the city's large medical center fit lessons around rotating schedules." },
-          { slug: "seattle", reason: "easy rescheduling for demanding or shifting work weeks in Pacific Time." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -489,7 +489,7 @@ export default function QuranForAdultsPage() {
       <CTASection
         headline="Begin Your Quran Journey Today: At Any Age"
         subtext="Book a free adult Quran class and take the first step you have been putting off. No embarrassment, no rush, no commitment. Just a certified teacher and your sincere intention."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

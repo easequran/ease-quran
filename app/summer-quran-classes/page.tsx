@@ -5,7 +5,6 @@ import {
   Award,
   Users,
   BookOpen,
-  Star,
   Gift,
   Clock,
   Shield,
@@ -16,6 +15,8 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
+import FamilyReviews from "@/components/FamilyReviews";
+import { reviewsForCourse } from "@/lib/reviews";
 
 // ─── Metadata ───────────────────────────────────────────────────────────────
 
@@ -134,7 +135,7 @@ const courseSchema = {
       "@type": "Person",
       name: "Shah Zaib",
       description:
-        "Certified from Wifaq ul Madaris Al-Arabia, 6 years teaching Muslim families in the USA",
+        "Founder of Ease Quran Online Academy",
     },
   },
   audience: {
@@ -157,12 +158,11 @@ const WHATSAPP_URL =
   "https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20the%20summer%20Quran%20program%20for%20my%20child";
 
 const trustBadges = [
-  { icon: Award, label: "Wifaq ul Madaris Certified" },
+  { icon: Award, label: "Qualified, Checked Teachers" },
   { icon: Users, label: "Female Teachers Available" },
   { icon: BookOpen, label: "Ages 4 to 14" },
-  { icon: CheckCircle, label: "All 50 States" },
+  { icon: CheckCircle, label: "Families Across the US" },
   { icon: Gift, label: "Free First Class" },
-  { icon: Star, label: "100% Certified Teachers" },
 ];
 
 const problemCards = [
@@ -196,8 +196,8 @@ const features = [
   },
   {
     icon: Award,
-    title: "Certified From Wifaq ul Madaris",
-    text: "Every teacher at Ease Quran holds certification from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. When your child learns here, they are learning from someone who earned the right to teach.",
+    title: "Qualified Teachers",
+    text: "Every Ease Quran teacher holds a recognized Quran qualification. When your child learns here, they are learning from someone who earned the right to teach.",
   },
   {
     icon: Shield,
@@ -246,33 +246,6 @@ const courses = [
     text: "Beyond Quran recitation, this course covers the duas your child should know, stories from the Seerah, basic Fiqh and the values that shape a Muslim character. All taught in English by a teacher who knows how to make it stick for Western kids.",
     href: "/courses/islamic-studies",
     emoji: "🤲",
-  },
-];
-
-const testimonials = [
-  {
-    stars: 5,
-    quote:
-      "We signed up last June not really knowing what to expect. By August our daughter was reading Surah Al-Fatiha on her own and actually asking to have her class every day. The teacher is incredibly patient and my daughter genuinely looks forward to it. That was not something I expected from an online program honestly.",
-    name: "Sarah M.",
-    location: "Houston TX",
-    initials: "SM",
-  },
-  {
-    stars: 5,
-    quote:
-      "I work long hours and I needed something flexible enough to fit around my son's routine. Ease Quran sorted the schedule without any back and forth. Two months in and he finished Noorani Qaida. I have recommended them to every Muslim parent I know and I will keep doing that.",
-    name: "Ahmed K.",
-    location: "New Jersey",
-    initials: "AK",
-  },
-  {
-    stars: 5,
-    quote:
-      "Finding a qualified female teacher for my daughter was really important to me and I was worried it would be difficult. It was not. They matched us immediately and the teacher has been wonderful from day one. My daughter has grown so much in just a few months. JazakAllah Khair to the whole team.",
-    name: "Fatima R.",
-    location: "Chicago IL",
-    initials: "FR",
   },
 ];
 
@@ -401,7 +374,7 @@ export default function SummerQuranClassesPage() {
                 <Link href="/free-trial" className="text-gold font-semibold hover:underline">
                   free trial class
                 </Link>{" "}
-                with no strings attached. Serving Muslim families in all 50 states.
+                with no strings attached. Open to families anywhere in the US.
               </p>
             </div>
 
@@ -411,7 +384,7 @@ export default function SummerQuranClassesPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-yellow-400 transition-colors text-sm shadow-xl shadow-gold/30"
               >
-                Book Your Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href={WHATSAPP_URL}
@@ -482,7 +455,7 @@ export default function SummerQuranClassesPage() {
               href="/free-trial"
               className="inline-block bg-navy text-white font-bold px-8 py-3.5 rounded-full hover:bg-navy/90 transition-colors text-sm"
             >
-              Try a Free Class Today
+              Book Your Free Trial
             </Link>
           </div>
         </div>
@@ -605,52 +578,13 @@ export default function SummerQuranClassesPage() {
         </div>
       </section>
 
-      {/* ── SECTION 5: TESTIMONIALS ─────────────────────────────────── */}
+      {/* ── SECTION 5: REVIEWS ─────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="font-playfair font-bold text-2xl md:text-3xl lg:text-4xl text-navy mb-4">
-              What American Muslim Parents Are Saying
-            </h2>
-            <p className="text-grey leading-relaxed">
-              Over 500 families across all 50 states have trusted Ease Quran with their
-              children&apos;s Islamic education. Here is what some of them shared with us.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="bg-offwhite border border-gray-100 rounded-2xl p-7 flex flex-col shadow-sm"
-              >
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: t.stars }).map((_, i) => (
-                    <Star key={i} size={16} fill="#F5A623" className="text-gold" />
-                  ))}
-                </div>
-                <blockquote className="text-grey text-sm leading-relaxed flex-1 mb-6">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
-                  <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center shrink-0">
-                    <span className="text-gold font-bold text-xs">{t.initials}</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-navy text-sm">{t.name}</p>
-                    <p className="text-grey text-xs">{t.location}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Testimonial Family Image — CSS background */}
-          <div
-            className="relative rounded-2xl overflow-hidden max-w-3xl mx-auto shadow-lg min-h-[360px] md:min-h-[440px]"
-            style={{ backgroundImage: "url('/images/summer/testimonial-family.webp')", backgroundSize: "cover", backgroundPosition: "center top" }}
-            role="img"
-            aria-label="Happy Muslim family in America whose daughter completed Quran classes with Ease Quran Academy"
+          <FamilyReviews
+            reviews={reviewsForCourse("quran-for-kids")}
+            heading="What Parents Tell Us"
+            subline="Messages US parents sent us on WhatsApp, shared with their permission."
           />
         </div>
       </section>
@@ -695,7 +629,7 @@ export default function SummerQuranClassesPage() {
               href="/free-trial"
               className="inline-block bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-yellow-400 transition-colors text-sm shadow-lg shadow-black/20"
             >
-              Book a Free Trial Class
+              Book Your Free Trial
             </Link>
           </div>
         </div>
@@ -761,7 +695,7 @@ export default function SummerQuranClassesPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-yellow-400 transition-colors text-sm shadow-lg shadow-gold/20"
               >
-                Book Your Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href={WHATSAPP_URL}
@@ -775,7 +709,7 @@ export default function SummerQuranClassesPage() {
             </div>
 
             <p className="text-white/70 text-sm">
-              Serving Muslim families across all 50 states. Female teachers available. First class is free.
+              Open to families anywhere in the US. Female teachers available. First class is free.
             </p>
           </div>
         </div>

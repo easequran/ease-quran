@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown, BookOpen, Users, Star, Globe } from "lucide-react";
+import { PRIMARY_CTA } from "@/lib/business";
 
 const WHATSAPP_URL =
   "https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20booking%20a%20free%20trial%20Quran%20class";
@@ -210,7 +211,7 @@ export default function Navbar() {
                         <span className="text-grey text-[13px]">Not sure where to start?</span>
                         <Link href="/free-trial" onClick={() => setActiveDesktop(null)}
                           className="text-xs font-bold text-white bg-gold hover:bg-gold-dark px-4 py-1.5 rounded-lg transition-colors">
-                          Book Free Trial
+                          {PRIMARY_CTA}
                         </Link>
                       </div>
                     </div>
@@ -268,7 +269,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center">
               <Link href="/free-trial"
                 className="bg-gold text-navy font-bold text-[15px] px-6 py-2.5 rounded-full hover:bg-gold-dark transition-all duration-200 shadow-md hover:shadow-lg">
-                Book Free Trial
+                {PRIMARY_CTA}
               </Link>
             </div>
 
@@ -376,7 +377,7 @@ export default function Navbar() {
                 <Link href="/free-trial"
                   className="bg-gold text-navy font-bold text-center py-3.5 rounded-full hover:bg-gold-dark transition-all text-[15px]"
                   onClick={() => setMobileOpen(false)}>
-                  Book Free Trial Class
+                  {PRIMARY_CTA}
                 </Link>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2.5 bg-navy text-white font-bold py-3.5 rounded-full text-[15px] hover:bg-navy/80 transition-all border border-gold/30"

@@ -99,7 +99,7 @@ export default function FreeTrialForm() {
     <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
       <div className="mb-6">
         <h2 className="font-playfair font-bold text-2xl text-navy mb-1">
-          Book Your Free Trial Class
+          Book Your Free Trial
         </h2>
         <p className="text-grey text-sm">
           Fill in your details below. We respond within 2 hours on WhatsApp.
@@ -270,7 +270,7 @@ export default function FreeTrialForm() {
           disabled={status === "loading"}
           className="w-full bg-gold text-navy font-bold py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-base disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {status === "loading" ? "Submitting..." : "Book My Free Trial Class →"}
+          {status === "loading" ? "Submitting..." : "Book Your Free Trial →"}
         </button>
 
         <p className="text-grey text-xs text-center">

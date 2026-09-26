@@ -46,7 +46,7 @@ export default function FreeTrialPage() {
             100% Free. No Credit Card Required.
           </span>
           <h1 className="heading-1 text-white mb-4">
-            Book Your Free Quran Trial Class
+            Book Your Free Trial
           </h1>
           <p className="text-white/70 max-w-xl mx-auto text-base leading-relaxed">
             Fill in the form below and we will reach out within 2 hours on WhatsApp to schedule

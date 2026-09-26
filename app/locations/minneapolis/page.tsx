@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import FamilyReviews from "@/components/FamilyReviews";
-import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Minneapolis-St. Paul, Minnesota",
   description:
-    "Certified online Quran classes for Muslim families in Minneapolis-St. Paul. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Minneapolis-St. Paul. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/minneapolis",
   },
@@ -31,85 +30,6 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
     { "@type": "ListItem", position: 3, name: "Minneapolis-St. Paul", item: "https://easequran.com/locations/minneapolis" },
-  ],
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description:
-    "Certified online Quran classes for Muslim families in the Minneapolis-St. Paul metropolitan area.",
-  areaServed: {
-    "@type": "City",
-    name: "Minneapolis",
-    containedInPlace: { "@type": "State", name: "Minnesota" },
-  },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is online Quran learning safe for my child?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I find Quran classes near me in Minneapolis?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Minneapolis, our online classes serve any family in the Twin Cities searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve the Somali Muslim community in the Twin Cities?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Minneapolis-St. Paul is home to one of the largest Somali Muslim communities in the United States, and we are proud to serve Somali families alongside every other Muslim community in the Twin Cities.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What about Minnesota's harsh winters?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Online classes remove winter weather as a barrier entirely. No family needs to drive on icy roads or through snowstorms to reach a Quran class, every lesson happens safely from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are teachers certified from recognized Islamic institutions?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All our teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Twin Cities families can trust our teachers' qualifications.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a female teacher for sisters in Minneapolis?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Sister Almas Fatima is our certified female Quran teacher available exclusively for sisters and children. Many Twin Cities families specifically request her for their daughters.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve families in both Minneapolis and St. Paul suburbs?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We serve the entire Twin Cities metro including St. Paul, Bloomington, Eden Prairie, Brooklyn Park, Burnsville, and every suburb with a Muslim family. Online classes serve the whole metro area equally.",
-      },
-    },
   ],
 };
 
@@ -137,12 +57,12 @@ const faqs = [
   {
     question: "Are teachers certified from recognized Islamic institutions?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Twin Cities Muslim families can have full confidence in our teachers' qualifications.",
+      "Yes. Every Ease Quran teacher holds a recognized Quran qualification. This is not a casual credential, it represents years of rigorous academic study in Quran, Tajweed, Arabic, and Islamic sciences. Twin Cities Muslim families can have full confidence in our teachers' qualifications.",
   },
   {
     question: "Is there a female teacher for sisters in Minneapolis?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Twin Cities families from the Somali and South Asian communities specifically request her for their daughters and wives, and we are proud to provide this important option. Simply indicate your preference when booking.",
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
   },
   {
     question: "Do you serve families in both Minneapolis and St. Paul suburbs?",
@@ -151,14 +71,20 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function MinneapolisPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -191,7 +117,7 @@ export default function MinneapolisPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Minneapolis%20Minnesota"
@@ -221,7 +147,7 @@ export default function MinneapolisPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                The Minneapolis-St. Paul metropolitan area, commonly known as the Twin Cities, is home to the largest Somali population in the United States, and by extension one of the largest and most vibrant Somali Muslim communities in the country. Since the 1990s, tens of thousands of Somali families have settled across Minneapolis, particularly in the Cedar-Riverside neighborhood, building mosques, businesses, and community institutions that have made the Twin Cities a genuine hub of Somali-American Muslim life. Alongside this community, the Twin Cities are home to significant South Asian, Arab, and East African Muslim populations, with active masjids and Islamic centers spread across Minneapolis, St. Paul, and the surrounding suburbs. The region's overall Muslim population is estimated at over 150,000, making it one of the most religiously significant Muslim communities in the Midwest.
+                The Minneapolis-St. Paul metropolitan area, commonly known as the Twin Cities, is home to the largest Somali population in the United States, and by extension one of the largest and most vibrant Somali Muslim communities in the country. Since the 1990s, tens of thousands of Somali families have settled across Minneapolis, particularly in the Cedar-Riverside neighborhood, building mosques, businesses, and community institutions that have made the Twin Cities a genuine hub of Somali-American Muslim life. Alongside this community, the Twin Cities are home to significant South Asian, Arab, and East African Muslim populations, with active masjids and Islamic centers spread across Minneapolis, St. Paul, and the surrounding suburbs.
               </p>
               <p>
                 The challenge for Twin Cities Muslim families is Minnesota's notoriously harsh winters. From late November through March, sub-zero temperatures, snow, and icy roads make evening drives to a masjid or Islamic center genuinely difficult and sometimes unsafe, especially after Maghrib when many weekday classes would otherwise be held. Weekend Islamic schools are concentrated in specific neighborhoods and can require a significant commute for families in outer suburbs like Eden Prairie, Woodbury, or Maple Grove. Online Quran education solves this problem completely, bringing certified instruction to every Twin Cities household safely, warmly, and reliably, regardless of what the Minnesota weather is doing outside.
@@ -278,16 +204,14 @@ export default function MinneapolisPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
-            <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <FamilyReviews reviews={reviewsForSeed("minneapolis")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
-
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">
-              Book Free Trial Class
+              Book Your Free Trial
             </Link>
             <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Minneapolis%20Minnesota" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
@@ -355,27 +279,6 @@ export default function MinneapolisPage() {
         </div>
       </section>
 
-      {/* Near Me */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow mb-4">
-              Quran Classes Near You
-            </span>
-            <h2 className="heading-2 text-navy mb-6">
-              Looking for Quran Classes Near You in Minneapolis?
-            </h2>
-            <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in the Twin Cities, the best
-              teacher for your child may not be the closest one on the map. Because every Ease Quran
-              class is live and online, Minneapolis and St. Paul families connect one-on-one with certified teachers
-              without driving anywhere, even in the depths of winter. You get the convenience of a teacher right in your home, with
-              none of the commute, icy parking lot, or fixed group schedule of a local center.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <NearbyLocations slug="minneapolis" />
 
       {/* FAQ */}
@@ -402,7 +305,7 @@ export default function MinneapolisPage() {
       <CTASection
         headline="Certified Quran Education Across the Twin Cities"
         subtext="From Minneapolis and St. Paul to every Twin Cities suburb. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Minneapolis Minnesota"
       />

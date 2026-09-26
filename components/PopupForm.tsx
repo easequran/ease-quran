@@ -271,7 +271,7 @@ export default function PopupForm() {
                 </li>
                 <li className="flex items-center gap-2 text-xs text-grey">
                   <ShieldCheck size={14} className="text-gold shrink-0" />
-                  Wifaq ul Madaris certified teachers
+                  qualified teachers
                 </li>
                 <li className="flex items-center gap-2 text-xs text-grey">
                   <MessageCircle size={14} className="text-gold shrink-0" />
@@ -284,7 +284,7 @@ export default function PopupForm() {
                 disabled={loading}
                 className="w-full bg-gold text-navy font-semibold py-3 rounded-lg hover:bg-gold-dark transition-all duration-200 disabled:opacity-60 text-[15px]"
               >
-                {loading ? "Submitting..." : "Book My Free Trial Class"}
+                {loading ? "Submitting..." : "Book Your Free Trial"}
               </button>
 
               <div className="border-t border-gray-100 pt-3 text-center">

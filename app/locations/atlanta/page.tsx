@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import FamilyReviews from "@/components/FamilyReviews";
-import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Atlanta, Georgia",
   description:
-    "Certified online Quran classes for Muslim families in Atlanta, Georgia. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Atlanta, Georgia. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/atlanta",
   },
@@ -31,85 +30,6 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
     { "@type": "ListItem", position: 3, name: "Atlanta", item: "https://easequran.com/locations/atlanta" },
-  ],
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description:
-    "Certified online Quran classes for Muslim families in Atlanta, Georgia and the greater Atlanta metro area.",
-  areaServed: {
-    "@type": "City",
-    name: "Atlanta",
-    containedInPlace: { "@type": "State", name: "Georgia" },
-  },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is online Quran learning safe for my child?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I find Quran classes near me in Atlanta?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Atlanta, our online classes serve any family in the Atlanta area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve families in Atlanta's suburbs like Duluth, Lawrenceville, and Stone Mountain?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We serve the entire Atlanta metropolitan area including Duluth, Lawrenceville, Stone Mountain, Smyrna, Marietta, Alpharetta, and all surrounding communities. Online classes serve every Atlanta suburb equally.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Atlanta traffic is notorious. How does online learning help?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Atlanta's traffic is among the worst in the South, especially on I-285 and I-85. Online classes eliminate all driving entirely. Your child learns Quran from home without a single minute of Atlanta traffic.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are your teachers certified?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All Ease Quran teachers hold Wifaq ul Madaris Al-Arabia certifications, the credential of Pakistan's largest Islamic education board, globally recognized. Atlanta families can trust our teachers' qualifications completely.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is a female teacher available for sisters in Atlanta?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Sister Almas Fatima, our certified female Quran teacher, is available for sisters and children across the Atlanta area.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you teach students from Atlanta's diverse Muslim backgrounds?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely. Atlanta's Muslim community spans African American, South Asian, Arab, and West African backgrounds. We welcome all Muslim families and teach in English, making our classes accessible to the full spectrum of Atlanta's Muslim community.",
-      },
-    },
   ],
 };
 
@@ -137,12 +57,12 @@ const faqs = [
   {
     question: "Are your teachers certified?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. Atlanta's growing Muslim community deserves teachers with real, verifiable credentials, and that is exactly what we provide.",
+      "Yes. Every Ease Quran teacher holds a recognized Quran qualification. Atlanta's growing Muslim community deserves teachers with real, verifiable credentials, and that is exactly what we provide.",
   },
   {
     question: "Is a female teacher available for sisters in Atlanta?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Atlanta families from South Asian and Arab backgrounds specifically request a female teacher for their daughters and wives. Simply indicate your preference when booking the free trial class.",
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
   },
   {
     question: "Do you teach students from Atlanta's diverse Muslim backgrounds?",
@@ -151,14 +71,20 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function AtlantaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -191,7 +117,7 @@ export default function AtlantaPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Atlanta%20Georgia"
@@ -221,7 +147,7 @@ export default function AtlantaPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Atlanta, Georgia has emerged as one of the fastest-growing Muslim communities in the American South, with an estimated Muslim population exceeding 100,000 across the metropolitan area. The community's growth reflects Atlanta's broader rise as a major American city and economic hub, drawing Muslim families from across the country and internationally as the city's job market, affordability (relative to coastal cities), and quality of life continue to attract a diverse workforce. Atlanta's Muslim community is genuinely diverse, encompassing a significant African American Muslim population with deep roots in the city, a rapidly growing South Asian Muslim community concentrated in the northeast suburbs of Gwinnett County (Duluth, Lawrenceville, Norcross), Arab Muslim families in various parts of the metro, and a growing West African Muslim presence. Several major Islamic centers and masjids serve these communities, with weekend Islamic schools, full-time Islamic education programs, and community events that reflect the vitality of Atlanta's Muslim life.
+                Atlanta, Georgia has a large and growing Muslim community across the metropolitan area. The community's growth reflects Atlanta's broader rise as a major American city and economic hub, drawing Muslim families from across the country and internationally as the city's job market, affordability (relative to coastal cities), and quality of life continue to attract a diverse workforce. Atlanta's Muslim community is genuinely diverse, encompassing a significant African American Muslim population with deep roots in the city, a rapidly growing South Asian Muslim community concentrated in the northeast suburbs of Gwinnett County (Duluth, Lawrenceville, Norcross), Arab Muslim families in various parts of the metro, and a growing West African Muslim presence. Several major Islamic centers and masjids serve these communities, with weekend Islamic schools, full-time Islamic education programs, and community events that reflect the vitality of Atlanta's Muslim life.
               </p>
               <p>
                 Atlanta's unique challenge for Muslim families is the city's traffic, which is consistently ranked among the worst in the United States. The metro area's car-dependent design and extensive suburban sprawl mean that reaching an Islamic center in another part of the metro can be genuinely time-prohibitive. A family in Duluth wanting to attend a program in South Atlanta might face two hours of driving on a Saturday morning. For working parents and busy families, this makes consistent attendance at in-person Islamic education programs difficult to maintain. Online Quran education has become an increasingly popular solution for Atlanta Muslim families precisely because it removes the traffic equation entirely, bringing certified instruction directly to every household in the metro without requiring a single mile of driving on Atlanta's notoriously congested roads.
@@ -278,16 +204,14 @@ export default function AtlantaPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
-            <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <FamilyReviews reviews={reviewsForSeed("atlanta")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
-
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">
-              Book Free Trial Class
+              Book Your Free Trial
             </Link>
             <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Atlanta%20Georgia" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
@@ -355,27 +279,6 @@ export default function AtlantaPage() {
         </div>
       </section>
 
-      {/* Near Me */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow mb-4">
-              Quran Classes Near You
-            </span>
-            <h2 className="heading-2 text-navy mb-6">
-              Looking for Quran Classes Near You in Atlanta?
-            </h2>
-            <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in Atlanta, the best
-              teacher for your child may not be the closest one on the map. Because every Ease Quran
-              class is live and online, Atlanta families connect one-on-one with certified teachers
-              without driving anywhere. You get the convenience of a teacher right in your home, with
-              none of the commute, parking, or fixed group schedule of a local center.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <NearbyLocations slug="atlanta" />
 
       {/* FAQ */}
@@ -402,7 +305,7 @@ export default function AtlantaPage() {
       <CTASection
         headline="Certified Quran Education for Every Atlanta Muslim Family"
         subtext="From Gwinnett County to Cobb County, serving the full diversity of Atlanta's fast-growing Muslim community with one-on-one, certified Quran instruction. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Atlanta Georgia"
       />

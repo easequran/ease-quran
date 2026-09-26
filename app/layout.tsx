@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     template: "%s | Ease Quran Academy",
   },
   description:
-    "Join Ease Quran Online Academy for certified, one-on-one online Quran classes for kids and adults across the USA. Wifaq ul Madaris certified teachers. Book your free trial today.",
+    "Join Ease Quran Online Academy for certified, one-on-one online Quran classes for kids and adults across the USA. Qualified teachers. Book your free trial today.",
   authors: [{ name: "Ease Quran Online Academy" }],
   creator: "Ease Quran Online Academy",
   metadataBase: new URL("https://easequran.com"),
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ease Quran Online Academy | Online Quran Classes USA",
     description:
-      "Certified online Quran classes for kids and adults across the USA. Free first class. Wifaq ul Madaris certified teachers.",
+      "Certified online Quran classes for kids and adults across the USA. Free first class. Qualified teachers.",
     images: ["/images/og-image.png"],
   },
   robots: {
@@ -123,15 +123,15 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
+              "@id": "https://easequran.com/#organization",
               name: "Ease Quran Online Academy",
               alternateName: "Ease Quran",
               url: "https://easequran.com",
               logo: "https://easequran.com/images/logo.png",
               image: "https://easequran.com/images/og-image.png",
-              description: "Certified online Quran academy serving Muslim families across all 50 US states. Wifaq ul Madaris certified teachers, female teachers available, free first class.",
+              description: "Online academy teaching the Quran one-on-one to children and adults in the United States. Qualified male and female teachers, classes on Zoom, free trial class.",
               email: "info@easequran.com",
               telephone: "+923195657389",
-              foundingDate: "2019",
               founder: {
                 "@type": "Person",
                 name: "Shah Zaib",

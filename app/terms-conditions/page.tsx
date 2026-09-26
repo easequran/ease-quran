@@ -26,11 +26,12 @@ const pageSchema = {
     name: "Ease Quran Online Academy",
     url: "https://easequran.com",
   },
-  dateModified: "2025-05-16",
+  dateModified: "2026-09-26",
   inLanguage: "en-US",
 };
 
 const EFFECTIVE_DATE = "May 16, 2025";
+const UPDATED_DATE = "September 26, 2026";
 const CONTACT_EMAIL = "info@easequran.com";
 const SITE_URL = "https://easequran.com";
 
@@ -54,7 +55,7 @@ export default function TermsConditionsPage() {
             Terms &amp; Conditions
           </h1>
           <p className="text-white/60 text-sm">
-            Effective Date: {EFFECTIVE_DATE} &nbsp;·&nbsp; Last Updated: {EFFECTIVE_DATE}
+            Effective Date: {EFFECTIVE_DATE} &nbsp;·&nbsp; Last Updated: {UPDATED_DATE}
           </p>
         </div>
       </section>
@@ -92,7 +93,7 @@ export default function TermsConditionsPage() {
             </h2>
             <p className="text-grey leading-relaxed mb-4">
               Ease Quran Online Academy provides live, one-on-one online Quran education services via video
-              conferencing platforms (Zoom, Skype, or similar). Our services include but are not limited to:
+              conferencing on Zoom. Our services include but are not limited to:
             </p>
             <ul className="list-disc list-inside text-grey leading-relaxed space-y-2 mb-4 pl-2">
               <li>Quran recitation classes for children and adults (Noorani Qaida, Quran Reading)</li>
@@ -112,10 +113,10 @@ export default function TermsConditionsPage() {
               3. Free Trial Class
             </h2>
             <p className="text-grey leading-relaxed mb-4">
-              We offer one (1) free trial class to new students. The following conditions apply:
+              We offer one (1) free trial class to each new student. The following conditions apply:
             </p>
             <ul className="list-disc list-inside text-grey leading-relaxed space-y-2 mb-4 pl-2">
-              <li>The free trial is limited to one class per household.</li>
+              <li>Each student may have one free trial class, including each child in the same family.</li>
               <li>No credit card or payment is required to book a trial class.</li>
               <li>The trial class is approximately 30 minutes in duration.</li>
               <li>We reserve the right to decline a trial class booking at our sole discretion.</li>
@@ -131,18 +132,19 @@ export default function TermsConditionsPage() {
               4a. Enrollment
             </h3>
             <p className="text-grey leading-relaxed mb-4">
-              Enrollment becomes effective upon payment of the applicable monthly plan fee. A confirmed
-              schedule will be set between the student/parent and their assigned teacher. Enrollment is
+              Enrollment becomes effective upon payment for a package of classes. A confirmed
+              schedule is arranged by the academy with the student or parent, around their preferred
+              days and times. Enrollment is
               personal and non-transferable.
             </p>
             <h3 className="font-playfair font-semibold text-lg text-navy mb-3 mt-6">
               4b. Fees and Payment
             </h3>
             <ul className="list-disc list-inside text-grey leading-relaxed space-y-2 mb-4 pl-2">
-              <li>All fees are charged monthly in advance. Current pricing plans are listed on our{" "}
+              <li>Classes are paid for in packages. Each package is paid in advance, and the next package is billed when the classes in the current package have been completed. Current prices are listed on our{" "}
                 <Link href="/pricing" className="text-gold font-semibold hover:underline">Pricing page</Link>.</li>
               <li>Fees are quoted in US Dollars (USD). International students may be subject to currency conversion rates applied by their payment provider.</li>
-              <li>Payment is due before the start of each monthly billing cycle. Failure to pay may result in suspension of classes.</li>
+              <li>Payment is due before the first class of each package. We accept bank transfer, Remitly, and credit or debit card. Failure to pay may result in classes being paused.</li>
               <li>We use third-party payment processors. By making payment, you agree to their terms and privacy policies as applicable. We do not store your full payment card details.</li>
               <li>All fees are exclusive of any applicable taxes. You are responsible for any taxes imposed by your jurisdiction.</li>
             </ul>
@@ -163,33 +165,31 @@ export default function TermsConditionsPage() {
               5a. Student Cancellations
             </h3>
             <ul className="list-disc list-inside text-grey leading-relaxed space-y-2 mb-4 pl-2">
-              <li>If you need to cancel or reschedule a class, please notify your teacher or our team at least <strong className="text-navy">12 hours in advance</strong> via WhatsApp or email.</li>
-              <li>Classes cancelled with less than 12 hours&apos; notice will be forfeited unless the cancellation is due to a genuine emergency (at our discretion).</li>
-              <li>We allow a maximum of <strong className="text-navy">2 rescheduled classes per month</strong> without charge. Additional cancellations in the same month may be forfeited.</li>
+              <li>If you need to cancel or reschedule a class, please tell us at least <strong className="text-navy">4 hours before it starts</strong>, on WhatsApp or by email.</li>
+              <li>A class cancelled with at least 4 hours&apos; notice is not counted. We reschedule it or arrange a makeup class, and there is no limit on how many classes can be rescheduled this way.</li>
+              <li>If a student misses a class without telling us, the class counts as taken, because the teacher was present and waiting. In a genuine emergency, please contact us and we will consider it fairly.</li>
             </ul>
             <h3 className="font-playfair font-semibold text-lg text-navy mb-3 mt-6">
               5b. Teacher Cancellations
             </h3>
             <p className="text-grey leading-relaxed mb-4">
-              If a class is cancelled by our teacher, we will reschedule it at a mutually convenient time
-              at no additional cost. In the event of repeated teacher cancellations, we will assign a
-              replacement teacher at no charge.
+              If your teacher cannot take a class, another teacher will take it or we will arrange a makeup
+              class at no additional cost. If a teacher leaves, we will arrange a suitable new teacher.
             </p>
             <h3 className="font-playfair font-semibold text-lg text-navy mb-3 mt-6">
-              5c. Subscription Cancellation
+              5c. Stopping Classes
             </h3>
             <p className="text-grey leading-relaxed mb-4">
-              You may cancel your subscription at any time by contacting us. Cancellations take effect at
-              the end of the current billing month. We do not provide pro-rated refunds for unused classes
-              within a paid month, except where required by law.
+              You may stop classes at any time. To avoid being billed for the next package, please tell us
+              at least 7 days before it is due. There is no long-term contract.
             </p>
             <h3 className="font-playfair font-semibold text-lg text-navy mb-3 mt-6">
               5d. Refunds
             </h3>
             <ul className="list-disc list-inside text-grey leading-relaxed space-y-2 mb-4 pl-2">
-              <li>Refunds are offered at our discretion. If you are unsatisfied after your first paid month, please contact us and we will assess your situation fairly.</li>
-              <li>Refund requests must be submitted within 7 days of the charge in question.</li>
-              <li>Refunds will not be issued for classes that were attended, forfeited due to student no-show without notice, or for partial months unless we are at fault.</li>
+              <li>If you stop partway through a paid package, we refund the classes in that package that have not been used.</li>
+              <li>Classes that were taken, and classes missed without notice, are not refunded.</li>
+              <li>Refunds are sent back using a payment method we agree with you.</li>
             </ul>
 
             {/* Section 6 */}

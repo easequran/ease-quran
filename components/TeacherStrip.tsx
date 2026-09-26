@@ -22,13 +22,13 @@ const teachers = [
   },
 ];
 
-export default function TeacherStrip({ title = "Meet Your Certified Teachers" }: TeacherStripProps) {
+export default function TeacherStrip({ title = "Meet Some of Our Teachers" }: TeacherStripProps) {
   return (
     <section className="bg-white border-y border-gray-100">
       <div className="container-custom py-10">
         <div className="text-center mb-8">
           <span className="inline-block text-gold text-xs font-semibold tracking-widest uppercase mb-2">
-            Credential-Verified
+            Checked Before Joining
           </span>
           <h2 className="font-playfair font-bold text-2xl md:text-3xl text-navy">{title}</h2>
         </div>

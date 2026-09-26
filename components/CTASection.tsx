@@ -1,6 +1,5 @@
 import Link from "next/link";
-
-const WHATSAPP_NUMBER = "923195657389";
+import { PRIMARY_CTA, whatsappLink } from "@/lib/business";
 
 interface CTASectionProps {
   headline?: string;
@@ -11,18 +10,17 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  headline = "Give Your Child the Gift of Quran Today",
-  subtext = "Join hundreds of Muslim families across America who trust Ease Quran for their children's Islamic education. Book your free trial class — no credit card, no commitment.",
-  primaryCta = "Book Your Free Trial Class",
+  headline = "Start With a Free Trial Class",
+  subtext = "Tell us the days and times that suit you, and we'll arrange a free trial class with a suitable teacher. No card needed and no obligation to continue.",
+  primaryCta = PRIMARY_CTA,
   primaryHref = "/free-trial",
   whatsappText = "Hi I am interested in booking a free trial Quran class",
 }: CTASectionProps) {
-  const WHATSAPP_MESSAGE = encodeURIComponent(whatsappText);
   return (
     <section className="bg-navy section-padding">
       <div className="container-custom text-center">
         <span className="eyebrow mb-4">
-          Serving Families Across All 50 States
+          Free Trial Class
         </span>
         <h2 className="heading-2 text-white mb-5 max-w-3xl mx-auto">
           {headline}
@@ -38,7 +36,7 @@ export default function CTASection({
             {primaryCta}
           </Link>
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+            href={whatsappLink(whatsappText)}
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-[15px] flex items-center justify-center gap-2"
@@ -50,7 +48,7 @@ export default function CTASection({
           </a>
         </div>
         <p className="text-white/70 text-sm mt-6">
-          Free first class • No credit card required • Cancel anytime
+          Free trial class • No card needed • No contract
         </p>
       </div>
     </section>

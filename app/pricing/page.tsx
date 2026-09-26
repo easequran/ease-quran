@@ -5,26 +5,33 @@ import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import {
   plans,
-  additionalPlans,
+  planIncludes,
+  weekendExtraPerClass,
+  hifzPlan,
+  customPlan,
   registrationFee,
   siblingDiscounts,
   siblingPrice,
   prepayTerms,
-  prepayMonthlyEquivalent,
+  prepayPerPackage,
   prepaySavings,
   referral,
+  applyDiscounts,
 } from "@/lib/pricing";
+import { business, ORG_ID, PRIMARY_CTA, paymentMethodsText, whatsappLink } from "@/lib/business";
+
+const steady = plans[1];
+const weekendExample = steady.price30 + 4 * weekendExtraPerClass[30];
+const stackedExample = applyDiscounts(steady.price30, [siblingDiscounts[1].discount, 0.1]);
 
 export const metadata: Metadata = {
-  title: "Online Quran Class Pricing Plans",
-  description:
-    "Affordable online Quran class pricing. 30-minute plans from $40/month, 60-minute plans from $72/month. $0 registration fee. Free first trial class. Wifaq ul Madaris certified teachers.",
+  title: "Online Quran Class Pricing",
+  description: `Online Quran class packages from $${plans[0].price30} for ${plans[0].classesPerPackage} one-on-one classes. Free 30-minute trial class, no registration fee, sibling and prepay discounts.`,
   alternates: { canonical: "https://easequran.com/pricing" },
   openGraph: {
-    title: "Online Quran Class Pricing Plans | Ease Quran Academy",
-    description:
-      "Affordable online Quran class pricing. 30-minute plans from $40/month, 60-minute plans from $72/month. $0 registration fee. Free first trial class. Wifaq ul Madaris certified teachers.",
-    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran Class Pricing Plans at Ease Quran Academy" }],
+    title: "Online Quran Class Pricing | Ease Quran Academy",
+    description: `Packages from $${plans[0].price30} for ${plans[0].classesPerPackage} one-on-one Quran classes. Free trial class first, no registration fee.`,
+    images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Quran class pricing at Ease Quran Academy" }],
   },
 };
 
@@ -32,107 +39,86 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Online Quran Classes",
-  provider: {
-    "@type": "EducationalOrganization",
-    name: "Ease Quran Online Academy",
-    url: "https://easequran.com",
-  },
-  serviceType: "Online Education",
+  provider: { "@id": ORG_ID },
+  serviceType: "Online Quran education",
   areaServed: { "@type": "Country", name: "United States" },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Quran Class Plans",
+    name: "Quran class packages",
     itemListElement: [
-      ...plans.map((plan) => ({
-        "@type": "Offer",
-        name: `${plan.name} Plan (30-minute)`,
-        price: String(plan.price30),
-        priceCurrency: "USD",
-        description: `${plan.classesPerMonth} classes per month, 30 minutes each. ${plan.forWho}`,
-        url: "https://easequran.com/pricing",
-      })),
-      ...plans.map((plan) => ({
-        "@type": "Offer",
-        name: `${plan.name} Plan (60-minute)`,
-        price: String(plan.price60),
-        priceCurrency: "USD",
-        description: `${plan.classesPerMonth} classes per month, 60 minutes each. ${plan.forWho}`,
-        url: "https://easequran.com/pricing",
-      })),
-      {
-        "@type": "Offer",
-        name: "Hifz Intensive",
-        price: "130",
-        priceCurrency: "USD",
-        description: "5 sessions per week, 45 minutes each, senior teacher, weekly memorization tracking. Price from $130/month.",
-        url: "https://easequran.com/pricing",
-      },
-      {
-        "@type": "Offer",
-        name: "Custom Schedule",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          minPrice: "60",
-          maxPrice: "140",
+      ...plans.flatMap((plan) => [
+        {
+          "@type": "Offer",
+          name: `${plan.name} (30-minute classes)`,
+          price: String(plan.price30),
           priceCurrency: "USD",
+          description: `${plan.classesPerPackage} one-on-one classes of 30 minutes, ${plan.classesPerWeek} a week.`,
+          url: "https://easequran.com/pricing",
         },
-        description: "Custom schedule quote, typically $60-$140/month.",
+        {
+          "@type": "Offer",
+          name: `${plan.name} (60-minute classes)`,
+          price: String(plan.price60),
+          priceCurrency: "USD",
+          description: `${plan.classesPerPackage} one-on-one classes of 60 minutes, ${plan.classesPerWeek} a week.`,
+          url: "https://easequran.com/pricing",
+        },
+      ]),
+      {
+        "@type": "Offer",
+        name: hifzPlan.name,
+        price: String(hifzPlan.price),
+        priceCurrency: "USD",
+        description: `${hifzPlan.classesPerPackage} one-on-one Hifz classes of ${hifzPlan.minutes} minutes, ${hifzPlan.classesPerWeek} a week.`,
         url: "https://easequran.com/pricing",
       },
     ],
   },
 };
 
-const includedFeatures = [
-  "Free first trial class, no credit card required",
-  "$0 registration fee",
-  "Wifaq ul Madaris certified teacher for every session",
-  "Fully flexible scheduling: morning, evening, weekend",
-  "Cancel anytime, no long-term contracts",
-  "WhatsApp support directly with your teacher",
-  "Lessons conducted via Zoom or Google Meet",
+const policies = [
+  `Cancel or move a class at least ${business.classNoticeHours} hours before it starts and it is not counted. We reschedule it or arrange a makeup class, with no monthly limit.`,
+  "If a student misses a class without telling us, that class counts, because the teacher was there and waiting.",
+  "If your teacher can't make a class, another teacher takes it or we arrange a makeup class.",
+  `To stop, tell us at least ${business.stopNoticeDays} days before your next package is due. There is no contract.`,
+  "If you stop partway through a paid package, we refund the classes you haven't used.",
+  `You can pay by ${paymentMethodsText}.`,
 ];
 
 const pricingFaqs = [
   {
-    question: "Is there really a free trial class?",
+    question: "Is the trial class really free?",
+    answer: `Yes. The first ${business.trialMinutes}-minute class is free for every student, including each child in the same family. You don't need a card to book it, and you decide afterwards whether to continue.`,
+  },
+  {
+    question: "Why are prices shown per package and not per month?",
     answer:
-      "Yes, absolutely. Your first class is completely free, no credit card required, no commitment whatsoever. We want you to experience the quality of our teaching before you invest anything. Simply book your trial, attend the class, and decide from there. There is no pressure to continue.",
+      "You pay for a set number of classes. When those classes are finished, we send the bill for the next package. At the plan's weekly pace a package lasts about a month, but if a class is rescheduled, you never lose it or pay for it twice.",
+  },
+  {
+    question: "Do weekend classes cost more?",
+    answer: `A little. Each class on a Saturday or Sunday adds $${weekendExtraPerClass[30]} for a 30-minute class, $${weekendExtraPerClass[60]} for a 60-minute class, or $${weekendExtraPerClass[45]} for a 45-minute Hifz class. Weekday classes are charged at the normal package price.`,
   },
   {
     question: "Is there a registration fee?",
-    answer:
-      "No. The registration fee is $0. You only pay for your chosen monthly plan.",
+    answer: `No. The registration fee is $${registrationFee}. You only pay for your package of classes.`,
   },
   {
     question: "Can I change my plan later?",
     answer:
-      "Yes, you can upgrade or downgrade your plan at any time. If your child is progressing quickly and you want to increase class frequency, simply let us know and we'll adjust your plan immediately. If you need to reduce classes due to schedule changes, we'll accommodate that too. There are no penalties for changing plans.",
+      "Yes. You can move to more or fewer classes a week when your next package starts. Just tell us on WhatsApp.",
   },
   {
-    question: "How does the Weekend Priority pricing work?",
-    answer:
-      "Weekend Priority guarantees a Saturday/Sunday slot and applies a small 15% add-on, but only when every single class in your plan falls on Saturday or Sunday.",
-  },
-  {
-    question: "Do you offer discounts for multiple children?",
-    answer:
-      "Yes, automatically, no code needed. The 1st child is full price, the 2nd child gets 15% off, the 3rd child gets 25% off, and the 4th child onward gets 30% off. For example, 3 children on the Steady plan comes to $55 + $47 + $41 = $143/month total.",
-  },
-  {
-    question: "Do you offer discounts for paying in advance?",
-    answer:
-      "Yes. Pay every 3 months and save 5%, pay every 6 months and save 10%, or pay yearly and get 2 months free (you pay for 10 months of the year). The exact dollar savings for each plan are shown in the pricing table above.",
+    question: "Do discounts combine?",
+    answer: `Yes. Sibling, prepay and referral discounts all apply, one after another, and they apply to weekend extras too. For example, a second child on the Steady plan who pays for 6 packages at once pays $${steady.price30} less 15%, then less 10%, which is $${stackedExample.toFixed(2)} per package.`,
   },
   {
     question: "What payment methods do you accept?",
-    answer:
-      "We accept all major credit cards, debit cards, and PayPal. Billing is monthly by default, with quarterly, semiannual, and yearly prepay options available at a discount. Your billing information is secure and never shared.",
+    answer: `You can pay by ${paymentMethodsText}. We'll send the details when you choose your package.`,
   },
   {
-    question: "Can I cancel anytime?",
-    answer:
-      "Yes. There are absolutely no long-term contracts at Ease Quran. You can cancel your subscription at any time with just 7 days' notice before your next billing date. We believe in earning your business every single month, not locking you in.",
+    question: "How do I stop classes?",
+    answer: `Tell us at least ${business.stopNoticeDays} days before your next package is due and we won't bill you again. If you stop partway through a paid package, we refund the classes you haven't used.`,
   },
 ];
 
@@ -145,7 +131,7 @@ export default function PricingPage() {
       />
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* Background image — separate decorative element so its role="img"
+        {/* Background image: separate decorative element so its role="img"
             doesn't swallow the real heading/text content below */}
         <div
           className="absolute inset-0"
@@ -155,33 +141,24 @@ export default function PricingPage() {
             backgroundPosition: "center",
           }}
           role="img"
-          aria-label="Muslim child in an online Quran class, representing Ease Quran Academy pricing plans"
+          aria-label="Muslim child in an online Quran class"
         />
-        {/* Dark overlay for text contrast */}
         <div className="absolute inset-0 bg-navy/85" />
 
         <div className="relative z-10 container-custom section-padding text-center px-4 sm:px-6">
-          <span className="eyebrow mb-4">
-            Transparent Pricing
-          </span>
+          <span className="eyebrow mb-4">Pricing</span>
           <h1 className="font-playfair font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
-            Simple, Affordable Quran Class Pricing
+            Quran Class Pricing
           </h1>
           <p className="text-white/70 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
-            No hidden fees. No long-term contracts. $0 registration fee. Start with a completely
-            free trial class, then choose the plan that fits your child's learning goals and your
-            family's budget.
+            You pay for a package of one-on-one classes, and the next package is billed only
+            when those classes are finished. Every student starts with a free{" "}
+            {business.trialMinutes}-minute trial class, and there is no registration fee.
           </p>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm">
-            <span className="bg-white/10 text-white px-3 sm:px-4 py-2 rounded-full">
-              ✓ Free first class
-            </span>
-            <span className="bg-white/10 text-white px-3 sm:px-4 py-2 rounded-full">
-              ✓ $0 registration fee
-            </span>
-            <span className="bg-white/10 text-white px-3 sm:px-4 py-2 rounded-full">
-              ✓ Cancel anytime
-            </span>
+            <span className="bg-white/10 text-white px-3 sm:px-4 py-2 rounded-full">✓ Free trial class</span>
+            <span className="bg-white/10 text-white px-3 sm:px-4 py-2 rounded-full">✓ ${registrationFee} registration fee</span>
+            <span className="bg-white/10 text-white px-3 sm:px-4 py-2 rounded-full">✓ No contract</span>
           </div>
         </div>
       </section>
@@ -190,16 +167,12 @@ export default function PricingPage() {
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="text-center mb-10">
-            <span className="eyebrow mb-4">
-              Choose Your Plan
-            </span>
-            <h2 className="heading-2 text-navy mb-3">
-              One-to-One 30-Minute Classes
-            </h2>
+            <span className="eyebrow mb-4">Choose Your Plan</span>
+            <h2 className="heading-2 text-navy mb-3">One-on-One 30-Minute Classes</h2>
             <p className="text-grey text-sm max-w-xl mx-auto">
-              Every plan includes certified, one-on-one instruction and starts with a free trial
-              class. Upgrade or downgrade anytime. Prefer 60-minute sessions? Each card shows that
-              price too.
+              The plans differ only in how many classes you take each week. Every student gets
+              the same teachers and the same attention. Prefer 60-minute classes? Each card shows
+              that price too.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto items-stretch">
@@ -208,20 +181,21 @@ export default function PricingPage() {
                 key={plan.id}
                 name={plan.name}
                 price={plan.price30}
-                classes={`${plan.classesPerWeek} classes/week (${plan.classesPerMonth}/month)`}
-                duration="30 min/class"
+                priceSuffix={`for ${plan.classesPerPackage} classes`}
+                classes={`${plan.classesPerWeek} classes a week, about a month`}
+                duration="30 minutes each"
                 forWho={plan.forWho}
-                features={plan.features}
-                popular={plan.popular}
-                subLine={`Prefer 60-minute classes? $${plan.price60}/month`}
+                features={planIncludes}
+                highlightLabel={plan.label}
+                subLine={`60-minute classes: $${plan.price60} for ${plan.classesPerPackage}`}
               />
             ))}
           </div>
 
           <p className="text-center text-grey text-sm mt-8">
-            All prices in USD, billed monthly. $0 registration fee.{" "}
+            All prices in US dollars. Weekend classes cost a little more, explained below.{" "}
             <Link href="/free-trial" className="text-gold hover:underline font-semibold">
-              Start with a free trial →
+              {PRIMARY_CTA} →
             </Link>
           </p>
         </div>
@@ -231,15 +205,11 @@ export default function PricingPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-10">
-            <span className="eyebrow mb-4">
-              Compare Durations
-            </span>
-            <h2 className="heading-2 text-navy mb-3">
-              30-Minute vs 60-Minute Pricing
-            </h2>
+            <span className="eyebrow mb-4">Class Length</span>
+            <h2 className="heading-2 text-navy mb-3">30-Minute and 60-Minute Classes</h2>
             <p className="text-grey text-sm max-w-xl mx-auto">
-              A 60-minute class is 1.8x the 30-minute rate, not double. No toggle needed, every
-              price is listed below.
+              Younger children usually do best with 30 minutes. Older students and adults often
+              choose 60. The price is for one package of classes.
             </p>
           </div>
           <div className="max-w-3xl mx-auto overflow-x-auto -mx-4 px-4 sm:mx-auto sm:px-0">
@@ -247,29 +217,20 @@ export default function PricingPage() {
               <thead>
                 <tr className="bg-navy text-white">
                   <th className="text-left font-semibold px-4 py-3 rounded-tl-xl whitespace-nowrap">Plan</th>
-                  <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">Classes/week</th>
-                  <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">30 min</th>
-                  <th className="text-left font-semibold px-4 py-3 rounded-tr-xl whitespace-nowrap">60 min</th>
+                  <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">Classes</th>
+                  <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">30 minutes</th>
+                  <th className="text-left font-semibold px-4 py-3 rounded-tr-xl whitespace-nowrap">60 minutes</th>
                 </tr>
               </thead>
               <tbody>
                 {plans.map((plan, i) => (
-                  <tr
-                    key={plan.id}
-                    className={i % 2 === 0 ? "bg-offwhite" : "bg-white"}
-                  >
-                    <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100 whitespace-nowrap">
-                      {plan.name}
-                    </td>
+                  <tr key={plan.id} className={i % 2 === 0 ? "bg-offwhite" : "bg-white"}>
+                    <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100 whitespace-nowrap">{plan.name}</td>
                     <td className="px-4 py-3 text-grey border-b border-gray-100 whitespace-nowrap">
-                      {plan.classesPerWeek}
+                      {plan.classesPerPackage} ({plan.classesPerWeek} a week)
                     </td>
-                    <td className="px-4 py-3 text-navy font-medium border-b border-gray-100 whitespace-nowrap">
-                      ${plan.price30}/month
-                    </td>
-                    <td className="px-4 py-3 text-navy font-medium border-b border-gray-100 whitespace-nowrap">
-                      ${plan.price60}/month
-                    </td>
+                    <td className="px-4 py-3 text-navy font-medium border-b border-gray-100 whitespace-nowrap">${plan.price30}</td>
+                    <td className="px-4 py-3 text-navy font-medium border-b border-gray-100 whitespace-nowrap">${plan.price60}</td>
                   </tr>
                 ))}
               </tbody>
@@ -278,76 +239,111 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Weekend Priority */}
+      {/* Weekend classes */}
       <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="eyebrow mb-4">
-                Weekend Priority
-              </span>
-              <h2 className="heading-2 text-navy mb-4">
-                Weekend Priority — Guaranteed Sat/Sun Slot
-              </h2>
+              <span className="eyebrow mb-4">Weekend Classes</span>
+              <h2 className="heading-2 text-navy mb-4">Weekend Classes Cost a Little More</h2>
               <p className="text-grey text-sm leading-relaxed">
-                If every class in your plan is scheduled on a Saturday or Sunday, a small add-on
-                guarantees your family's preferred weekend slot.
+                Classes run {business.classDays}. Each class held on a Saturday or Sunday adds a
+                small amount to your package. Weekday classes stay at the normal price.
               </p>
             </div>
             <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
-              <table className="w-full min-w-[560px] border-collapse text-sm bg-white rounded-2xl overflow-hidden border border-gray-100">
+              <table className="w-full min-w-[360px] border-collapse text-sm bg-white rounded-2xl overflow-hidden border border-gray-100">
                 <thead>
                   <tr className="bg-navy text-white">
-                    <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">Plan</th>
-                    <th className="text-left font-semibold px-4 py-3 whitespace-nowrap">Standard price (30 min)</th>
-                    <th className="text-left font-semibold px-4 py-3">
-                      Weekend Priority (all classes Sat/Sun)
-                    </th>
+                    <th className="text-left font-semibold px-4 py-3">Class length</th>
+                    <th className="text-left font-semibold px-4 py-3">Extra for each weekend class</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {plans.map((plan, i) => (
-                    <tr key={plan.id} className={i % 2 === 0 ? "bg-offwhite" : "bg-white"}>
-                      <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100 whitespace-nowrap">
-                        {plan.name}
+                  {([30, 45, 60] as const).map((len, i) => (
+                    <tr key={len} className={i % 2 === 0 ? "bg-offwhite" : "bg-white"}>
+                      <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100">
+                        {len} minutes{len === 45 ? " (Hifz Intensive)" : ""}
                       </td>
-                      <td className="px-4 py-3 text-grey border-b border-gray-100 whitespace-nowrap">
-                        ${plan.price30}/month
-                      </td>
-                      <td className="px-4 py-3 text-navy font-medium border-b border-gray-100 whitespace-nowrap">
-                        +${plan.weekendPriority}/month (${plan.price30 + plan.weekendPriority}/month total)
+                      <td className="px-4 py-3 text-navy font-medium border-b border-gray-100">
+                        +${weekendExtraPerClass[len]}
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-center text-grey text-xs mt-4">
-              Weekend Priority is not a surcharge for using the weekend — it's an optional
-              guarantee for families who need every class on a weekend day.
-            </p>
+            <div className="mt-6 bg-navy rounded-2xl p-6 text-center">
+              <p className="text-white/70 text-xs uppercase tracking-widest mb-2">Example</p>
+              <p className="text-white text-sm">
+                Steady plan, 30-minute classes, with one of the three weekly classes on Saturday.
+                That is 4 weekend classes in the package:{" "}
+                <span className="text-gold font-semibold">
+                  ${steady.price30} + 4 × ${weekendExtraPerClass[30]} = ${weekendExample}
+                </span>
+                .
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hifz and custom */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-10">
+            <span className="eyebrow mb-4">More Options</span>
+            <h2 className="font-playfair font-bold text-2xl md:text-3xl text-navy mb-3">Hifz and Custom Schedules</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl mx-auto">
+            <div className="rounded-xl border border-gray-200 bg-offwhite p-6 flex flex-col">
+              <h3 className="font-playfair font-semibold text-lg text-navy mb-1">{hifzPlan.name}</h3>
+              <p className="text-gold font-semibold text-sm mb-2">
+                ${hifzPlan.price} for {hifzPlan.classesPerPackage} classes
+              </p>
+              <p className="text-grey text-xs mb-3">
+                {hifzPlan.classesPerWeek} classes a week · {hifzPlan.minutes} minutes each
+              </p>
+              <p className="text-grey text-sm mb-5 flex-1">{hifzPlan.description}</p>
+              <Link
+                href="/courses/hifz"
+                className="text-center font-semibold py-2.5 rounded-lg text-sm border-2 border-navy text-navy hover:bg-navy hover:text-white transition-all duration-200"
+              >
+                About the Hifz Program
+              </Link>
+            </div>
+            <div className="rounded-xl border border-gray-200 bg-offwhite p-6 flex flex-col">
+              <h3 className="font-playfair font-semibold text-lg text-navy mb-1">{customPlan.name}</h3>
+              <p className="text-gold font-semibold text-sm mb-2">{customPlan.priceLabel}</p>
+              <p className="text-grey text-xs mb-3">A schedule that doesn&apos;t fit the plans above</p>
+              <p className="text-grey text-sm mb-5 flex-1">{customPlan.description}</p>
+              <a
+                href={whatsappLink("Hi, I would like a custom quote for Ease Quran classes.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center font-semibold py-2.5 rounded-lg text-sm border-2 border-navy text-navy hover:bg-navy hover:text-white transition-all duration-200"
+              >
+                Ask for a Quote on WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Sibling Discount */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-offwhite">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="eyebrow mb-4">
-                Sibling Discount
-              </span>
-              <h2 className="heading-2 text-navy mb-4">
-                Automatic Discounts for Siblings
-              </h2>
+              <span className="eyebrow mb-4">Sibling Discount</span>
+              <h2 className="heading-2 text-navy mb-4">Discounts for Brothers and Sisters</h2>
               <p className="text-grey text-sm leading-relaxed">
-                Enroll more than one child and each additional sibling is discounted
-                automatically, no code needed.
+                Each additional child from the same family is discounted automatically. No code
+                needed.
               </p>
             </div>
             <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
-              <table className="w-full min-w-[320px] border-collapse text-sm bg-offwhite rounded-2xl overflow-hidden border border-gray-100">
+              <table className="w-full min-w-[320px] border-collapse text-sm bg-white rounded-2xl overflow-hidden border border-gray-100">
                 <thead>
                   <tr className="bg-navy text-white">
                     <th className="text-left font-semibold px-4 py-3">Child</th>
@@ -356,10 +352,8 @@ export default function PricingPage() {
                 </thead>
                 <tbody>
                   {siblingDiscounts.map((s, i) => (
-                    <tr key={s.child} className={i % 2 === 0 ? "bg-white" : "bg-offwhite"}>
-                      <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100">
-                        {s.label}
-                      </td>
+                    <tr key={s.child} className={i % 2 === 0 ? "bg-offwhite" : "bg-white"}>
+                      <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100">{s.label}</td>
                       <td className="px-4 py-3 text-navy font-medium border-b border-gray-100">
                         {s.discount === 0 ? "Full price" : `${s.discount * 100}% off`}
                       </td>
@@ -369,20 +363,15 @@ export default function PricingPage() {
               </table>
             </div>
             <div className="mt-6 bg-navy rounded-2xl p-6 text-center">
-              <p className="text-white/70 text-xs uppercase tracking-widest mb-2">
-                Worked Example
-              </p>
+              <p className="text-white/70 text-xs uppercase tracking-widest mb-2">Example</p>
               <p className="text-white text-sm">
-                3 children on the Steady plan (30-minute, ${plans[1].price30}/month each):{" "}
+                Three children on the Steady plan, 30-minute classes:{" "}
                 <span className="text-gold font-semibold">
-                  ${plans[1].price30} + ${siblingPrice(plans[1].price30, 2)} + $
-                  {siblingPrice(plans[1].price30, 3)} = $
-                  {plans[1].price30 +
-                    siblingPrice(plans[1].price30, 2) +
-                    siblingPrice(plans[1].price30, 3)}
-                  /month
+                  ${steady.price30} + ${siblingPrice(steady.price30, 2)} + $
+                  {siblingPrice(steady.price30, 3)} = $
+                  {steady.price30 + siblingPrice(steady.price30, 2) + siblingPrice(steady.price30, 3)}
                 </span>{" "}
-                total.
+                for the three packages.
               </p>
             </div>
           </div>
@@ -390,19 +379,14 @@ export default function PricingPage() {
       </section>
 
       {/* Prepay Discounts */}
-      <section className="section-padding bg-offwhite">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
-              <span className="eyebrow mb-4">
-                Prepay & Save
-              </span>
-              <h2 className="heading-2 text-navy mb-4">
-                Pay in Advance and Save
-              </h2>
+              <span className="eyebrow mb-4">Pay Ahead</span>
+              <h2 className="heading-2 text-navy mb-4">Pay for Several Packages and Save</h2>
               <p className="text-grey text-sm leading-relaxed">
-                Prices below are based on each plan's 30-minute monthly rate. Savings are shown in
-                real dollars, not just percentages.
+                Price per package when you pay for several at once, based on 30-minute classes.
               </p>
             </div>
             <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
@@ -421,27 +405,20 @@ export default function PricingPage() {
                 <tbody>
                   {plans.map((plan, i) => (
                     <tr key={plan.id} className={i % 2 === 0 ? "bg-offwhite" : "bg-white"}>
-                      <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100 whitespace-nowrap">
-                        {plan.name}
-                      </td>
+                      <td className="px-4 py-3 font-semibold text-navy border-b border-gray-100 whitespace-nowrap">{plan.name}</td>
                       {prepayTerms.map((term) => {
-                        if (term.id === "monthly") {
+                        if (term.id === "single") {
                           return (
                             <td key={term.id} className="px-4 py-3 text-grey border-b border-gray-100 whitespace-nowrap">
-                              ${plan.price30}/month
+                              ${plan.price30}
                             </td>
                           );
                         }
-                        const savings = prepaySavings(plan.price30, term.id);
-                        const monthlyEquivalent = Math.round(
-                          prepayMonthlyEquivalent(plan.price30, term.id)
-                        );
                         return (
                           <td key={term.id} className="px-4 py-3 text-navy font-medium border-b border-gray-100 whitespace-nowrap">
-                            ${monthlyEquivalent}/month
+                            ${Math.round(prepayPerPackage(plan.price30, term.id))} per package
                             <div className="text-gold text-xs font-semibold">
-                              save ${savings}
-                              {term.id === "yearly" ? "/year" : ` per ${term.months}-month term`}
+                              save ${prepaySavings(plan.price30, term.id)} in total
                             </div>
                           </td>
                         );
@@ -451,46 +428,10 @@ export default function PricingPage() {
                 </tbody>
               </table>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Plans */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-10">
-            <span className="eyebrow mb-4">
-              More Options
-            </span>
-            <h2 className="font-playfair font-bold text-2xl md:text-3xl text-navy mb-3">
-              Additional Plans
-            </h2>
-            <p className="text-grey text-sm max-w-xl mx-auto">
-              For students with more specific needs.
+            <p className="text-center text-grey text-sm mt-6 max-w-2xl mx-auto">
+              Discounts combine. Sibling, prepay and referral discounts are applied one after
+              another, and they apply to weekend extras too.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-2xl mx-auto">
-            {additionalPlans.map((plan) => (
-              <div
-                key={plan.id}
-                className="rounded-xl border border-gray-200 bg-offwhite p-6 flex flex-col"
-              >
-                <h3 className="font-playfair font-semibold text-lg text-navy mb-1">
-                  {plan.name}
-                </h3>
-                <p className="text-gold font-semibold text-sm mb-2">{plan.priceLabel}</p>
-                <p className="text-grey text-xs mb-3">
-                  {plan.sessionsPerWeek} · {plan.duration}
-                </p>
-                <p className="text-grey text-sm mb-5 flex-1">{plan.description}</p>
-                <Link
-                  href="/free-trial"
-                  className="text-center font-semibold py-2.5 rounded-lg text-sm border-2 border-navy text-navy hover:bg-navy hover:text-white transition-all duration-200"
-                >
-                  {plan.cta === "trial" ? "Start Free Trial" : "Get a Quote"}
-                </Link>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -499,28 +440,17 @@ export default function PricingPage() {
       <section className="section-padding bg-navy">
         <div className="container-custom">
           <div className="max-w-2xl mx-auto text-center">
-            <span className="eyebrow mb-4">
-              Referral Program
-            </span>
-            <h2 className="font-playfair font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-4">
-              Refer a Family
-            </h2>
+            <span className="eyebrow mb-4">Referral</span>
+            <h2 className="font-playfair font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-4">Refer a Family</h2>
             <p className="text-white/90 text-base sm:text-lg">
-              Refer a family to Ease Quran: you get{" "}
-              <span className="text-gold font-semibold">
-                {referral.referrerDiscount * 100}% off one month
-              </span>
+              When a family you refer joins, you get{" "}
+              <span className="text-gold font-semibold">{referral.referrerDiscount * 100}% off one package</span>
               , and they get{" "}
-              <span className="text-gold font-semibold">
-                {referral.refereeDiscount * 100}% off their first month
-              </span>
-              .
+              <span className="text-gold font-semibold">{referral.refereeDiscount * 100}% off their first package</span>.
             </p>
             <div className="mt-8">
               <a
-                href={`https://wa.me/923195657389?text=${encodeURIComponent(
-                  "Hi, I would like to refer a family to Ease Quran and use the referral discount."
-                )}`}
+                href={whatsappLink("Hi, I would like to refer a family to Ease Quran and use the referral discount.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
@@ -532,51 +462,37 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* What's Included in Every Plan */}
+      {/* Included and policies */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="eyebrow mb-4">
-                Every Plan Includes
-              </span>
-              <h2 className="heading-2 text-navy mb-4">
-                What's Included in Every Plan
-              </h2>
-              <p className="text-grey text-sm leading-relaxed">
-                Regardless of which plan you choose, these core features are included for every
-                student at Ease Quran. Registration fee: ${registrationFee}.
-              </p>
+              <span className="eyebrow mb-4">Every Plan</span>
+              <h2 className="heading-2 text-navy mb-4">What Every Plan Includes</h2>
             </div>
-
-            <div className="bg-offwhite rounded-2xl p-8 border border-gray-100">
+            <div className="bg-offwhite rounded-2xl p-8 border border-gray-100 mb-8">
               <ul className="space-y-4">
-                {includedFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3">
+                {planIncludes.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
                     <span className="text-gold font-bold text-lg leading-none mt-0.5">✓</span>
-                    <span className="text-navy font-medium text-sm">{feature}</span>
+                    <span className="text-navy font-medium text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="text-3xl font-playfair font-bold text-gold mb-1">100%</div>
-                <p className="text-navy text-sm font-semibold">One-on-One Sessions</p>
-                <p className="text-grey text-xs mt-1">Your child never shares a class</p>
-              </div>
-              <div className="text-center bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="text-3xl font-playfair font-bold text-gold mb-1">2 hrs</div>
-                <p className="text-navy text-sm font-semibold">Response Guarantee</p>
-                <p className="text-grey text-xs mt-1">We reply to every inquiry</p>
-              </div>
-              <div className="text-center bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <div className="text-3xl font-playfair font-bold text-gold mb-1">50</div>
-                <p className="text-navy text-sm font-semibold">States Served</p>
-                <p className="text-grey text-xs mt-1">Across all of America</p>
-              </div>
-            </div>
+            <h3 className="font-playfair font-bold text-xl text-navy mb-4">Missed Classes, Stopping and Refunds</h3>
+            <ul className="space-y-3 text-grey text-sm leading-relaxed list-disc pl-5">
+              {policies.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
+            <p className="text-grey text-sm mt-4">
+              The full details are in our{" "}
+              <Link href="/terms-conditions" className="text-gold font-semibold hover:underline">
+                terms and conditions
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>
@@ -586,12 +502,8 @@ export default function PricingPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <span className="eyebrow mb-4">
-                Pricing FAQ
-              </span>
-              <h2 className="heading-2 text-navy mb-4">
-                Frequently Asked Questions About Pricing
-              </h2>
+              <span className="eyebrow mb-4">Pricing FAQ</span>
+              <h2 className="heading-2 text-navy mb-4">Questions About Pricing</h2>
             </div>
             <FAQAccordion faqs={pricingFaqs} />
           </div>
@@ -599,9 +511,9 @@ export default function PricingPage() {
       </section>
 
       <CTASection
-        headline="Start With a Free Class. Zero Risk."
-        subtext="Your first Quran class is completely free. No credit card, no commitment. See why hundreds of Muslim families across America trust Ease Quran for their children's Islamic education."
-        primaryCta="Book Your Free Trial Class"
+        headline="Start With a Free Class"
+        subtext="Tell us the days and times that suit you, and we'll arrange a free trial class with a suitable teacher. No card needed."
+        primaryCta={PRIMARY_CTA}
         primaryHref="/free-trial"
       />
     </>

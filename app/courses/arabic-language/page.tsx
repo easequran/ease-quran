@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { BookOpen, Heart } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
-import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Arabic Language Classes Online",
@@ -170,7 +170,7 @@ export default function ArabicLanguagePage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -206,9 +206,8 @@ export default function ArabicLanguagePage() {
                   beauty of the original Arabic. Our course gives you direct access to that depth.
                 </p>
                 <p>
-                  Taught by our certified head teacher from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, the course
-                  covers Arabic grammar (Sarf, word morphology, and Nahw, sentence structure),
+                  Taught one-on-one by a qualified teacher, the course
+              covers Arabic grammar (Sarf, word morphology, and Nahw, sentence structure),
                   Quranic vocabulary building, reading comprehension of Quranic verses, and
                   conversational Modern Standard Arabic.
                 </p>
@@ -403,7 +402,7 @@ export default function ArabicLanguagePage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Invest in the most rewarding thing a Muslim can learn. Book a free first Arabic
@@ -434,14 +433,17 @@ export default function ArabicLanguagePage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="Quranic Arabic for Arab American Families"
-        intro="Plenty of children in Arabic-speaking homes still find the Quran hard to follow, because the Arabic of the Quran differs from the dialect spoken at home. Our lessons are taught in English by teachers trained in classical Quranic Arabic."
-        links={[
-          { slug: "dearborn-michigan", reason: "often called the Arab American Muslim capital of the United States." },
-          { slug: "paterson-new-jersey", reason: "home to one of the country's largest Arab American communities." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -473,7 +475,7 @@ export default function ArabicLanguagePage() {
       <CTASection
         headline="Understand the Quran in Its Own Language"
         subtext="Book a free Arabic language trial class and take your connection with the Quran to a completely new level. No credit card required."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

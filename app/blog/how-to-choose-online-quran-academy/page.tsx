@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { plans } from "@/lib/pricing";
 import { Clock, Calendar, User, ArrowLeft, CheckCircle, XCircle } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -62,7 +63,7 @@ const faqSchema = {
       name: "How much do online Quran classes cost in the USA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Online Quran classes in the USA typically range from $30 to $100+ per month depending on class frequency, session length, and the academy's teacher credentials. At Ease Quran Academy, our plans are designed to be accessible for American Muslim families, with flexible options for one, two, or five sessions per week. You can view our exact pricing on our pricing page.",
+        text: `Prices vary a lot between academies, mainly with how many classes a week you take and how long each class is. At Ease Quran Academy, packages start at $${plans[0].price30} for ${plans[0].classesPerPackage} one-on-one classes of 30 minutes, with plans for two, three or five classes a week. You can view our exact pricing on our pricing page.`,
       },
     },
     {
@@ -250,10 +251,10 @@ export default function BlogPostPage() {
                   What Is Wifaq ul Madaris, and Why It Matters
                 </h3>
                 <p className="text-grey leading-relaxed mb-4">
-                  Wifaq ul Madaris Al-Arabia Pakistan is the largest and most respected Islamic education board in South Asia. Founded in 1959, it has certified hundreds of thousands of Islamic scholars, and its qualifications are recognized by universities, governments, and Islamic institutions across the Middle East, Europe, Canada, and the United States. A teacher who has graduated from a Wifaq ul Madaris-affiliated institution has completed an intensive eight-year curriculum covering the full Quran, Hadith sciences, Islamic jurisprudence, Arabic grammar, and Tajweed theory.
+                  Wifaq ul Madaris Al-Arabia is the largest board of madrasas in Pakistan. It was founded in 1959 and sets the examinations for thousands of madrasas. A teacher who has graduated from a Wifaq ul Madaris-affiliated institution has completed an intensive eight-year curriculum covering the full Quran, Hadith sciences, Islamic jurisprudence, Arabic grammar, and Tajweed theory.
                 </p>
                 <p className="text-grey leading-relaxed mb-4">
-                  When you see a Wifaq ul Madaris certification on a teacher&apos;s profile, it carries real weight. It means the teacher was evaluated by an external board, not simply certified by their own employer. This distinction matters enormously in an industry where self-proclaimed credentials are common. At Ease Quran Academy, every teacher holds formal certification from accredited Islamic boards, and we are transparent about this because we believe parents deserve to know exactly who is teaching their children.
+                  When you see a Wifaq ul Madaris certification on a teacher&apos;s profile, it carries real weight. It means the teacher was evaluated by an external board, not simply certified by their own employer. This distinction matters enormously in an industry where self-proclaimed credentials are common. At Ease Quran Academy, every teacher holds a recognized Quran qualification, and we check the original certificates before anyone teaches with us.
                 </p>
 
                 <h3 className="font-playfair font-semibold text-xl text-navy mb-3 mt-6">
@@ -446,12 +447,12 @@ export default function BlogPostPage() {
                   How Ease Quran Academy Meets Every Standard
                 </h2>
                 <p className="text-grey leading-relaxed mb-4">
-                  Ease Quran Academy was built by Wifaq ul Madaris-certified Quran teachers who saw firsthand the frustration Muslim families in America faced when trying to find genuinely qualified, trustworthy online Quran instruction. Every policy, every hiring standard, and every curriculum decision at Ease Quran has been made with one question in mind: what would a Muslim parent in America actually need to feel confident about their child&apos;s Quran education?
+                  Ease Quran Academy was built by Quran teachers who saw firsthand the frustration Muslim families in America faced when trying to find genuinely qualified, trustworthy online Quran instruction. Every policy, every hiring standard, and every curriculum decision at Ease Quran has been made with one question in mind: what would a Muslim parent in America actually need to feel confident about their child&apos;s Quran education?
                 </p>
 
                 <ul className="space-y-4 mb-6">
                   {[
-                    "Every teacher holds formal certification from recognized Islamic boards, including Wifaq ul Madaris. Credentials are verified before any teacher is permitted to take students.",
+                    "Every teacher holds a recognized Quran qualification. Credentials are verified before any teacher is permitted to take students.",
                     "A free trial class is available to every new family, no credit card required, no pressure to continue if it is not the right fit.",
                     "We maintain a dedicated team of certified female Quran teachers available for daughters, sisters, and adult women in your family.",
                     "Our curriculum covers every level, from Noorani Qaida for 4-year-olds to Hifz programs for advanced students to specialized classes for adult beginners and new Muslims.",
@@ -486,7 +487,7 @@ export default function BlogPostPage() {
                   {[
                     {
                       q: "How much do online Quran classes cost in the USA?",
-                      a: "Online Quran classes in the USA typically range from $30 to $100+ per month depending on class frequency, session length, and the academy's teacher credentials. At Ease Quran Academy, our plans are designed to be accessible for American Muslim families, with flexible options for one, two, or five sessions per week. You can view our exact pricing on our pricing page with no surprises.",
+                      a: `Prices vary a lot between academies, mainly with how many classes a week you take and how long each class is. At Ease Quran Academy, packages start at $${plans[0].price30} for ${plans[0].classesPerPackage} one-on-one classes of 30 minutes, with plans for two, three or five classes a week. You can view our exact pricing on our pricing page with no surprises.`,
                     },
                     {
                       q: "What is the best age to start Quran classes?",
@@ -554,7 +555,7 @@ export default function BlogPostPage() {
                         Certified Quran Teachers &amp; Islamic Education Specialists
                       </p>
                       <p className="text-grey text-sm leading-relaxed">
-                        The Ease Quran Team consists of Wifaq ul Madaris-certified Quran teachers with extensive experience teaching students across the United States, Canada, the United Kingdom, and Australia. Together, they are dedicated to providing accessible, high-quality Quran education for Muslim families living in the West. Their mission: to ensure that no Muslim child in America goes without the opportunity to learn the Quran from a truly qualified teacher.
+                        The Ease Quran Team are qualified Quran teachers who teach children and adults online. Together, they are dedicated to providing accessible, high-quality Quran education for Muslim families living in the West. Their mission: to ensure that no Muslim child in America goes without the opportunity to learn the Quran from a truly qualified teacher.
                       </p>
                     </div>
                   </div>
@@ -598,7 +599,7 @@ export default function BlogPostPage() {
                   {/* Sidebar CTA */}
                   <div className="bg-gold rounded-2xl p-6 text-center">
                     <p className="font-playfair font-bold text-navy text-base mb-2">
-                      Start With a Free Class
+                      Book Your Free Trial
                     </p>
                     <p className="text-navy/80 text-xs leading-relaxed mb-4">
                       No credit card. No commitment. Just meet your teacher and decide.
@@ -607,7 +608,7 @@ export default function BlogPostPage() {
                       href="/free-trial"
                       className="block bg-navy text-white font-bold px-4 py-3 rounded-full hover:bg-navy/90 transition-colors text-sm"
                     >
-                      Book Free Trial →
+                      Book Your Free Trial →
                     </Link>
                   </div>
 

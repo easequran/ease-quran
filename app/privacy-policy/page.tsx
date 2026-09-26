@@ -26,11 +26,12 @@ const pageSchema = {
     name: "Ease Quran Online Academy",
     url: "https://easequran.com",
   },
-  dateModified: "2025-05-16",
+  dateModified: "2026-09-26",
   inLanguage: "en-US",
 };
 
 const EFFECTIVE_DATE = "May 16, 2025";
+const UPDATED_DATE = "September 26, 2026";
 const CONTACT_EMAIL = "info@easequran.com";
 const SITE_URL = "https://easequran.com";
 
@@ -54,7 +55,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-white/60 text-sm">
-            Effective Date: {EFFECTIVE_DATE} &nbsp;·&nbsp; Last Updated: {EFFECTIVE_DATE}
+            Effective Date: {EFFECTIVE_DATE} &nbsp;·&nbsp; Last Updated: {UPDATED_DATE}
           </p>
         </div>
       </section>
@@ -144,7 +145,7 @@ export default function PrivacyPolicyPage() {
             <ul className="list-disc list-inside text-grey leading-relaxed space-y-2 mb-4 pl-2">
               <li>We do not knowingly collect personal information directly from children under 13 without verifiable parental consent.</li>
               <li>All account creation, form submission, and communication is conducted by a parent or guardian on behalf of their child.</li>
-              <li>Online class sessions are conducted via video call (Zoom/Skype) and we encourage parents to be present, especially for younger children.</li>
+              <li>Online class sessions are conducted on Zoom and we encourage parents to be present, especially for younger children.</li>
               <li>We do not share any information about minor students with third parties except as necessary to deliver the educational service.</li>
             </ul>
             <p className="text-grey leading-relaxed mb-4">
@@ -160,7 +161,7 @@ export default function PrivacyPolicyPage() {
               We do not sell or rent your personal information. We may share your information only in the following limited circumstances:
             </p>
             <ul className="list-disc list-inside text-grey leading-relaxed space-y-2 mb-4 pl-2">
-              <li><strong className="text-navy">Service Providers:</strong> We use third-party tools to deliver our services, including Zoom/Skype for class delivery, email service providers for communications, and payment processors for transactions. These providers are contractually bound to use your data only as directed by us.</li>
+              <li><strong className="text-navy">Service Providers:</strong> We use third-party tools to deliver our services, including Zoom for class delivery, email service providers for communications, and payment processors for transactions. These providers are contractually bound to use your data only as directed by us.</li>
               <li><strong className="text-navy">WhatsApp:</strong> When you contact us via WhatsApp, your communications are subject to WhatsApp&apos;s own privacy policy (Meta Platforms, Inc.).</li>
               <li><strong className="text-navy">Legal Requirements:</strong> We may disclose information if required by law, court order, or to protect the rights, property, or safety of Ease Quran Academy, our students, or others.</li>
               <li><strong className="text-navy">Business Transfer:</strong> In the unlikely event of a merger or acquisition, your information may be transferred as part of that transaction, and we will notify you.</li>

@@ -7,12 +7,12 @@ import ContactForm from "./ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us: Get in Touch",
   description:
-    "Contact Ease Quran Online Academy by email or WhatsApp. We respond within 2 hours about online Quran classes for families across the USA.",
+    "Contact Ease Quran Online Academy by email or WhatsApp. Message us any time and we reply within a few hours.",
   alternates: { canonical: "https://easequran.com/contact" },
   openGraph: {
     title: "Contact Ease Quran Online Academy | Get in Touch",
     description:
-      "Contact Ease Quran Online Academy by email or WhatsApp. We respond within 2 hours about online Quran classes for families across the USA.",
+      "Contact Ease Quran Online Academy by email or WhatsApp. Message us any time and we reply within a few hours.",
     images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Contact Ease Quran Online Academy" }],
   },
 };
@@ -22,7 +22,7 @@ const contactPageSchema = {
   "@type": "ContactPage",
   name: "Contact Ease Quran Online Academy",
   url: "https://easequran.com/contact",
-  description: "Contact Ease Quran Online Academy via email, WhatsApp, or our contact form. We respond within 2 hours.",
+  description: "Contact Ease Quran Online Academy by email, WhatsApp or our contact form. We reply within a few hours.",
   mainEntity: {
     "@type": "EducationalOrganization",
     name: "Ease Quran Online Academy",
@@ -48,17 +48,17 @@ const contactFaqs = [
   {
     question: "How quickly will you respond to my inquiry?",
     answer:
-      "We guarantee a response within 2 hours during our operating hours (6am–11pm EST, 7 days a week). For the fastest response, WhatsApp is the best way to reach us. We typically reply in under 30 minutes.",
+      "Message us any time, day or night, and we reply within a few hours. WhatsApp is usually the quickest way to reach us.",
   },
   {
-    question: "Can I speak with a teacher before committing?",
+    question: "Can I see a teacher before committing?",
     answer:
-      "Absolutely. You can request a quick introductory call or WhatsApp voice message with your assigned teacher before your trial class begins. We want you to feel completely comfortable before your child's first lesson.",
+      "Yes. That is what the free trial class is for. You meet the teacher in a real 30-minute lesson, ask your questions at the end, and decide afterwards. Messages before and after classes go through the academy, not the teacher directly.",
   },
   {
     question: "Do you offer classes on weekends?",
     answer:
-      "Yes, we offer classes 7 days a week, including weekends. Many of our American students prefer Saturday and Sunday classes due to school and work schedules. Simply specify your preferred time when you book.",
+      "Yes. Classes run 7 days a week, including Saturday and Sunday. Tell us your preferred days and times when you book. Weekend classes cost a little more; the details are on our pricing page.",
   },
   {
     question: "What is the best way to contact you for urgent matters?",
@@ -130,7 +130,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-white/70 text-lg leading-relaxed">
               Have a question about our courses, teachers, or pricing? We are here to help.
-              Reach out via the form, email, or WhatsApp. We respond within 2 hours.
+              Reach out through the form, by email or on WhatsApp. We reply within a few hours.
             </p>
           </div>
         </div>
@@ -226,9 +226,8 @@ export default function ContactPage() {
                     <div>
                       <p className="text-navy font-semibold text-sm mb-0.5">Response Time</p>
                       <p className="text-grey text-sm">
-                        We respond to all inquiries{" "}
-                        <strong className="text-navy">within 2 hours</strong>, 7 days a week
-                        from 6am to 11pm EST.
+                        Message us any time. We reply{" "}
+                        <strong className="text-navy">within a few hours</strong>, 7 days a week.
                       </p>
                     </div>
                   </div>
@@ -270,7 +269,7 @@ export default function ContactPage() {
                   href="/free-trial"
                   className="inline-block bg-gold text-navy font-bold px-6 py-3 rounded-full hover:bg-gold-dark transition-colors text-sm"
                 >
-                  Book Free Trial →
+                  Book Your Free Trial →
                 </Link>
               </div>
             </div>
@@ -298,7 +297,7 @@ export default function ContactPage() {
       <CTASection
         headline="Let's Start Your Child's Quran Journey"
         subtext="Have more questions? We are always happy to help. Reach out on WhatsApp or book a completely free trial class. No credit card, no commitment."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

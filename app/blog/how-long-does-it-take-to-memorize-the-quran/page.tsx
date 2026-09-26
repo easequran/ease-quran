@@ -180,9 +180,8 @@ export default function HowLongToMemorizeQuranPage() {
               <h2 className="font-playfair font-bold text-lg text-navy mb-2">The short answer</h2>
               <p className="text-grey leading-relaxed">
                 For most students studying part time, memorizing the whole Quran takes several
-                years. In our own program, children who attend five classes a week and practice
-                daily typically finish in three to five years, and adults with three classes a
-                week often take five to eight. Full-time students can finish faster. Age, reading
+                years. A child with five classes a week who practices every day can often finish
+                in three to five years, and adults usually take longer, often five to eight. Full-time students can finish faster. Age, reading
                 fluency, daily time and revision all change the pace.
               </p>
             </div>
@@ -302,8 +301,8 @@ export default function HowLongToMemorizeQuranPage() {
             <p className={p}>
               Short, daily practice beats long, occasional sessions. A student who memorizes a
               little every day and revises every day will almost always outpace one who does a
-              big session on the weekend and nothing in between. This is also why we recommend
-              five classes a week for serious Hifz students, and require at least three.
+              big session on the weekend and nothing in between. This is also why our Hifz
+              classes run five days a week.
             </p>
 
             <h3 className={h3}>Teacher support</h3>
@@ -344,10 +343,10 @@ export default function HowLongToMemorizeQuranPage() {
               weeks around them in advance.
             </p>
 
-            <h3 className={h3}>A working adult with three classes a week</h3>
+            <h3 className={h3}>A working adult with less time at home</h3>
             <p className={p}>
               A realistic pace might be five lines a day, five days a week, which is roughly seven
-              years for the whole Quran. That fits with the five to eight years we see for adults.
+              years for the whole Quran. That is in line with the five to eight years adults commonly take.
               Many adults choose to aim for Juz Amma or a set number of Juz first, then decide
               whether to continue.
             </p>
@@ -411,7 +410,7 @@ export default function HowLongToMemorizeQuranPage() {
             </p>
             <p className={p}>
               Our Hifz students follow the sabaq, sabqi and manzil system with a teacher who tracks
-              every portion, and we recommend five classes a week. You can see plans, including
+              every portion, and classes run five days a week. You can see plans, including
               the Hifz Intensive option, on our{" "}
               <Link href="/pricing" className={a}>pricing page</Link>.
             </p>
@@ -429,7 +428,7 @@ export default function HowLongToMemorizeQuranPage() {
                 href="/free-trial"
                 className="whitespace-nowrap bg-navy text-white font-bold px-6 py-3 rounded-full hover:bg-navy/90 transition-colors text-sm"
               >
-                Book a Free Trial
+                Book Your Free Trial
               </Link>
             </div>
 

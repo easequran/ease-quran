@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
@@ -9,7 +10,7 @@ import NearbyLocations from "@/components/NearbyLocations";
 export const metadata: Metadata = {
   title: "Online Quran Classes in Idaho",
   description:
-    "Certified online Quran classes for Muslim families across Idaho, including Boise. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families across Idaho, including Boise. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/idaho",
   },
@@ -31,84 +32,40 @@ const breadcrumbSchema = {
   ],
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description: "Certified online Quran classes for Muslim families throughout Idaho.",
-  areaServed: { "@type": "State", name: "Idaho" },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
+const faqs = [
+  {
+    question: "Which time zone are classes booked in?",
+    answer: "Southern Idaho, including Boise, is on Mountain Time, while the northern panhandle is on Pacific Time, so let us know which applies to you. Share the days and times that suit you, and every class time we confirm will be in your own time zone. When the clocks change in March and November, your class stays at the same local time.",
+  },
+  {
+    question: "Can my daughter have a female teacher?",
+    answer: "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
+  },
+  {
+    question: "What happens in the free trial class?",
+    answer:
+      "The trial is a 30-minute one-on-one class on Zoom. The teacher checks the student's current level, teaches a short lesson at that level, recommends a course and how many classes a week, and answers your questions. Parents are welcome to sit in. There is no obligation to continue.",
+  },
+  {
+    question: "How much do classes cost?",
+    answer: `${startingPriceText}, and every student's first class is free. Sibling and prepay discounts are on our pricing page.`,
+  },
+];
 
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Idaho spans two time zones. How do you handle that?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Carefully. Idaho is genuinely split down the middle: the northern panhandle around Coeur d'Alene runs on Pacific Time, while Boise and the rest of the state run on Mountain Time, a full hour apart within one state. We confirm your child's exact class time against whichever zone your town actually uses at booking, so there's never any confusion.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is Boise's Muslim community big enough to have real options?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "It's genuinely small, concentrated mostly around Boise, with families scattered much further out across the rest of the state. Rather than claim a specific number of students we can't verify, we'd invite you to be one of our first Boise-area families and judge the quality for yourself with a free trial.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "I'm not near Boise. Would Salt Lake City actually be closer for me?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Possibly, depending where in Idaho you are. Our Salt Lake City location page covers the nearest Metro Tier community for southern Idaho families, though northern Idaho, in the Pacific Time panhandle, sits closer to Seattle than to Salt Lake City. Either way, our online classes reach your Idaho home directly, so the comparison is really just for context.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much do classes cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required.",
-      },
-    },
-  ],
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
 };
-
-const faqs = [
-  {
-    question: "Idaho spans two time zones. How do you handle that?",
-    answer:
-      "Carefully, and it's a genuinely fair question. Idaho is one of the few states actually split by a time zone line: the northern panhandle around Coeur d'Alene runs on Pacific Time, while Boise and the rest of the state run on Mountain Time, a full hour apart within one state's borders. We confirm your child's exact class time against whichever zone your town actually uses, both at booking and again before each session, so there's never any confusion about when class starts.",
-  },
-  {
-    question: "Is Boise's Muslim community big enough to have real options?",
-    answer:
-      "It's genuinely small, concentrated mostly around Boise, with families scattered much further out across the rest of the state and fewer local teachers or programs to choose from than a bigger city offers. Rather than claim a specific number of students we can't verify, we'd simply invite you to be one of our first Boise-area families and see the quality for yourself with a free trial class.",
-  },
-  {
-    question: "I'm not near Boise. Would Salt Lake City actually be closer for me?",
-    answer:
-      "Possibly, depending on where in Idaho you live. Our Salt Lake City location page covers the nearest Metro Tier community for most of southern Idaho, but if you're in the northern panhandle on Pacific Time, you're honestly sitting closer to Seattle than to Salt Lake City. Either way, our online classes reach your Idaho home directly over Zoom, so the comparison is mostly just useful context, not a decision you need to make.",
-  },
-  {
-    question: "How much do classes cost?",
-    answer:
-      "Plans start from $40 per month, and every family gets a completely free first trial class with no credit card required, so you can experience a lesson before committing to anything.",
-  },
-];
 
 export default function IdahoPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
@@ -135,7 +92,7 @@ export default function IdahoPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center">
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Idaho" target="_blank" rel="noopener noreferrer" className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-200 text-sm text-center">
                 Chat on WhatsApp
@@ -165,7 +122,7 @@ export default function IdahoPage() {
               <p>
                 Depending where you are in Idaho, our{" "}
                 <Link href="/locations/salt-lake-city-utah" className="text-gold font-semibold hover:underline">Salt Lake City location page</Link>{" "}
-                covers the nearest Metro Tier community for most of southern Idaho, though families in the Pacific Time panhandle are honestly sitting closer to Seattle. Either way, our online classes reach your Idaho home directly, on whichever time zone your town actually uses.
+                covers the nearest city page for most of southern Idaho, though families in the Pacific Time panhandle are honestly sitting closer to Seattle. Either way, our online classes reach your Idaho home directly, on whichever time zone your town actually uses.
               </p>
             </div>
           </div>
@@ -179,7 +136,7 @@ export default function IdahoPage() {
             <span className="eyebrow mb-4">Our Curriculum</span>
             <h2 className="heading-2 text-navy mb-6">Courses for Idaho Families</h2>
             <p className="text-grey leading-relaxed mb-6">
-              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a Wifaq ul Madaris certified scholar. Visit our{" "}
+              From Noorani Qaida for first-time readers to Tajweed, Hifz, and Islamic Studies, every course is one-on-one and taught by a qualified teacher. Visit our{" "}
               <Link href="/courses" className="text-gold font-semibold hover:underline">full courses page</Link>{" "}
               to see everything available, including options for kids, adults, and reverts.
             </p>
@@ -211,7 +168,7 @@ export default function IdahoPage() {
       <CTASection
         headline="Certified Quran Education for Idaho Families"
         subtext="From Boise to the smallest Idaho town. Ease Quran delivers one-on-one, certified Quran instruction to your home. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Idaho"
       />

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { BookOpen, CheckCircle } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
-import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Quran Classes for New Muslims (Reverts) in USA",
@@ -171,7 +171,7 @@ export default function QuranForRevertsPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -221,9 +221,7 @@ export default function QuranForRevertsPage() {
                   reading and Arabic skills.
                 </p>
                 <p>
-                  Taught by our certified teacher from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>, with
-                  years of experience working with reverts in the USA. Our teacher understands the unique
+                  Taught one-on-one by qualified teachers who understand the unique
                   challenges: the emotional journey of conversion, the absence of a Muslim family
                   network, the practical questions no one seems to answer, and the overwhelming
                   feeling of not knowing where to start.
@@ -426,7 +424,7 @@ export default function QuranForRevertsPage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Your first class is completely free. No credit card, no commitment. Meet your teacher,
@@ -457,15 +455,17 @@ export default function QuranForRevertsPage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="Support for New Muslims, Wherever You Live"
-        intro="Many reverts live in places where the local community is small, or where they do not yet know anyone at the masjid. A patient teacher online gives you a private place to start, at your own pace."
-        links={[
-          { slug: "portland-oregon", reason: "a growing East African community alongside a notable number of reverts." },
-          { slug: "los-angeles", reason: "a significant and growing revert community across the metro." },
-          { slug: "salt-lake-city-utah", reason: "a small, close-knit Muslim minority community." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -502,7 +502,7 @@ export default function QuranForRevertsPage() {
       <CTASection
         headline="Your Islamic Journey Starts Here"
         subtext="Book a free class today, no credit card, no commitment, no judgment. Just a certified, patient teacher ready to welcome you and help you take your first steps with the Quran."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

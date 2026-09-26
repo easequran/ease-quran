@@ -1,9 +1,10 @@
 import { CheckCircle, Award, BookOpen, User, Gift } from "lucide-react";
+import { business } from "@/lib/business";
 
 const badges = [
-  { icon: CheckCircle, label: "Serving USA Families" },
-  { icon: Award, label: "Wifaq ul Madaris Certified" },
-  { icon: BookOpen, label: "6+ Years Experience" },
+  { icon: CheckCircle, label: "Serving US Families" },
+  { icon: Award, label: "Qualified, Checked Teachers" },
+  { icon: BookOpen, label: `${business.experience} Teaching` },
   { icon: User, label: "Female Teachers Available" },
   { icon: Gift, label: "Free First Class" },
 ];

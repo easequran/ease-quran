@@ -91,8 +91,8 @@ export default function Footer() {
             </Link>
             <p className="text-gray-300 text-[15px] leading-relaxed mb-5">
               Certified online Quran education for Muslim families across
-              America. Wifaq ul Madaris certified teachers. Available
-              in all 50 states.
+              America. Qualified male and female teachers, with class
+              times arranged around your schedule.
             </p>
             <div className="flex items-center gap-3 mb-5">
               <a

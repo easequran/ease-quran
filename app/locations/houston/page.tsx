@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import FamilyReviews from "@/components/FamilyReviews";
-import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Houston, Texas",
   description:
-    "Certified online Quran classes for Muslim families in Houston, Texas. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Houston, Texas. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/houston",
   },
@@ -31,85 +30,6 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 1, name: "Home", item: "https://easequran.com" },
     { "@type": "ListItem", position: 2, name: "Locations", item: "https://easequran.com/locations" },
     { "@type": "ListItem", position: 3, name: "Houston", item: "https://easequran.com/locations/houston" },
-  ],
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description:
-    "Certified online Quran classes for Muslim families in Houston, Texas and surrounding suburbs.",
-  areaServed: {
-    "@type": "City",
-    name: "Houston",
-    containedInPlace: { "@type": "State", name: "Texas" },
-  },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is online Quran learning safe for my child?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I find Quran classes near me in Houston?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Houston, our online classes serve any family in the Houston area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you serve families in Sugar Land and Katy, not just central Houston?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we serve the entire Houston metropolitan area including Sugar Land, Katy, the Woodlands, Pearland, and all surrounding suburbs. Since classes are online, your exact location in Greater Houston doesn't matter.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What time slots work for Houston families in Central Time?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We offer flexible CST scheduling including after-school slots (3–7 PM CT), evenings, and weekend morning/afternoon options to accommodate Houston families' varied schedules.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are your Quran teachers formally certified?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "All our teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. Your child learns from real scholars.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a female teacher for my daughter?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Sister Almas Fatima, a certified Qaria e Quran, is available for sisters and children. Many Houston families prefer this option for their daughters.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How is this different from the Islamic schools in the Houston area?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Unlike weekend Islamic schools, our classes are one-on-one, online, and fully flexible. No driving across Houston's sprawling highway system, just open Zoom and start learning.",
-      },
-    },
   ],
 };
 
@@ -132,17 +52,17 @@ const faqs = [
   {
     question: "What time slots work for Houston families in Central Time?",
     answer:
-      "We offer flexible CST scheduling including after-school slots (3–7 PM CT), evening sessions, and weekend morning and afternoon options. We're well aware of how Houston families' schedules vary, especially with long commutes on I-10 or the Beltway, so we do our best to find a slot that works for your household.",
+      "Class times are always confirmed in Central Time. Tell us the days and times that suit your family, after school, evenings or weekends, and we arrange a suitable teacher around them. When the clocks change in March and November, your class stays at the same local time.",
   },
   {
     question: "Are your Quran teachers formally certified?",
     answer:
-      "Absolutely. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized, whose graduates are recognized by Islamic scholars and institutions globally. Houston Muslim families deserve that standard of credential.",
+      "Absolutely. Every Ease Quran teacher holds a recognized Quran qualification. Houston Muslim families deserve that standard of credential.",
   },
   {
     question: "Is there a female teacher for my daughter?",
     answer:
-      "Yes. Sister Almas Fatima, a certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Houston families, particularly from the South Asian and Arab communities, specifically request a female teacher for their daughters. You can make this request when booking your free trial.",
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
   },
   {
     question: "How is this different from Islamic schools in the Houston area?",
@@ -151,14 +71,20 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
+
 export default function HoustonPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -191,7 +117,7 @@ export default function HoustonPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Houston%20Texas"
@@ -221,10 +147,10 @@ export default function HoustonPage() {
             </h2>
             <div className="space-y-5 text-grey leading-relaxed">
               <p>
-                Houston, Texas is home to one of the fastest-growing Muslim communities in the United States, with an estimated population exceeding 100,000 Muslims spread across the city and its sprawling suburbs. The community is remarkably diverse, drawing from large South Asian (Pakistani, Indian, Bangladeshi) populations concentrated in the southwest and Sugar Land corridor, Arab communities particularly in the Memorial and Katy areas, and a longstanding African American Muslim presence throughout the city. Greater Houston boasts dozens of active Islamic centers, full-time and weekend Islamic schools, and a robust network of halal businesses, reflecting how deeply the Muslim community has established itself in the Bayou City. Communities in Sugar Land, Katy, Stafford, and Pearland have all seen significant Islamic infrastructure develop in recent years.
+                Houston, Texas has a large Muslim community spread across the city and its sprawling suburbs. The community is remarkably diverse, drawing from large South Asian (Pakistani, Indian, Bangladeshi) populations concentrated in the southwest and Sugar Land corridor, Arab communities particularly in the Memorial and Katy areas, and a longstanding African American Muslim presence throughout the city. Greater Houston boasts dozens of active Islamic centers, full-time and weekend Islamic schools, and a robust network of halal businesses, reflecting how deeply the Muslim community has established itself in the Bayou City. Communities in Sugar Land, Katy, Stafford, and Pearland have all seen significant Islamic infrastructure develop in recent years.
               </p>
               <p>
-                Yet for all its communal richness, Houston presents a unique challenge for Muslim families seeking regular Quran education: the city's geography. Houston is famously spread out, covering over 600 square miles, and its car-dependent culture means that driving a child to an Islamic center across town can easily consume 30 to 60 minutes each way, particularly during rush hour on I-10, the Beltway, or Highway 59. For working parents, this commute burden often makes consistent attendance at weekend or weekday Islamic programs simply impractical. Many Houston Muslim families rely on Ease Quran's online model precisely because it removes the commute entirely, delivering certified Quran instruction to their child's home, wherever in Greater Houston that may be.
+                Yet for all its communal richness, Houston presents a unique challenge for Muslim families seeking regular Quran education: the city's geography. Houston is famously spread out, covering over 600 square miles, and its car-dependent culture means that driving a child to an Islamic center across town can easily consume 30 to 60 minutes each way, particularly during rush hour on I-10, the Beltway, or Highway 59. For working parents, this commute burden often makes consistent attendance at weekend or weekday Islamic programs simply impractical.
               </p>
             </div>
           </div>
@@ -278,16 +204,14 @@ export default function HoustonPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
-            <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <FamilyReviews reviews={reviewsForSeed("houston")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
-
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">
-              Book Free Trial Class
+              Book Your Free Trial
             </Link>
             <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Houston%20Texas" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
@@ -355,27 +279,6 @@ export default function HoustonPage() {
         </div>
       </section>
 
-      {/* Near Me */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow mb-4">
-              Quran Classes Near You
-            </span>
-            <h2 className="heading-2 text-navy mb-6">
-              Looking for Quran Classes Near You in Houston?
-            </h2>
-            <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in Houston, the best
-              teacher for your child may not be the closest one on the map. Because every Ease Quran
-              class is live and online, Houston families connect one-on-one with certified teachers
-              without driving anywhere. You get the convenience of a teacher right in your home, with
-              none of the commute, parking, or fixed group schedule of a local center.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <NearbyLocations slug="houston" />
 
       {/* FAQ */}
@@ -402,7 +305,7 @@ export default function HoustonPage() {
       <CTASection
         headline="Start Quran Classes for Your Houston Family Today"
         subtext="No commute, no traffic, no compromises. Certified Quran education delivered to your home in Sugar Land, Katy, Pearland, the Woodlands, or anywhere in Greater Houston."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Houston Texas"
       />

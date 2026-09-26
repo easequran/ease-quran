@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { Navigation, Calendar, GraduationCap } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TrustBadges from "@/components/TrustBadges";
 import TeacherStrip from "@/components/TeacherStrip";
-import FamilyReviews from "@/components/FamilyReviews";
-import { reviewsForSeed } from "@/lib/reviews";
 import NearbyLocations from "@/components/NearbyLocations";
 
 export const metadata: Metadata = {
   title: "Online Quran Classes in Dearborn, Michigan",
   description:
-    "Certified online Quran classes for Muslim families in Dearborn, Michigan. Wifaq ul Madaris certified teachers, free trial class available.",
+    "Certified online Quran classes for Muslim families in Dearborn, Michigan. Qualified teachers, free trial class available.",
   alternates: {
     canonical: "https://easequran.com/locations/dearborn-michigan",
   },
@@ -34,85 +33,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  name: "Ease Quran Online Academy",
-  url: "https://easequran.com",
-  description:
-    "Certified online Quran classes for Muslim families in Dearborn, Michigan and the greater Detroit metro area.",
-  areaServed: {
-    "@type": "City",
-    name: "Dearborn",
-    containedInPlace: { "@type": "State", name: "Michigan" },
-  },
-  serviceType: "Online Quran Education",
-  telephone: "+923195657389",
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is online Quran learning safe for my child?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Parents may sit in on any class, classes may be recorded by parents, and there is no private teacher–student contact outside scheduled sessions. Female teachers are available for girls on request, and every teacher is credential-verified.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I find Quran classes near me in Dearborn?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Though we are not a physical school in Dearborn, our online classes serve any family in the Dearborn area searching for Quran classes or teachers near them. You connect with a certified teacher over Zoom from home.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Why would Dearborn families use online Quran classes when there are so many local Islamic centers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Even in Dearborn, with its exceptional local Islamic infrastructure, online one-on-one classes offer something group settings cannot: personalized, private instruction tailored entirely to your child's pace and level. Many Dearborn families use Ease Quran to complement local masjid programs or as their primary Quran education.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have teachers who speak Arabic for Dearborn's Arab community?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our classes are conducted in English, which is how we serve English-speaking Muslim families effectively across America. However, our teachers are fully fluent in Arabic and trained in classical Quranic Arabic, ensuring the highest quality of Quran instruction.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are your teachers certified from recognized Islamic institutions?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, Pakistan's largest Islamic education board, globally recognized. Dearborn's Muslim community understands Islamic credentials, and we take them seriously.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you also serve families in Dearborn Heights and surrounding Detroit suburbs?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We serve the entire Detroit metro area including Dearborn Heights, Inkster, Taylor, Westland, and other suburbs with Muslim populations. Online classes reach every household equally.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is there a female teacher for my daughter or wife?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Sister Almas Fatima, our certified female Quran teacher, is available for sisters and children. Many Dearborn families from the Lebanese and Yemeni communities specifically request a female teacher, and we are glad to provide that.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "Is online Quran learning safe for my child?",
@@ -127,7 +47,7 @@ const faqs = [
   {
     question: "Why would Dearborn families use online Quran classes when there are so many local Islamic centers?",
     answer:
-      "Even in Dearborn, with its exceptional local Islamic infrastructure, one-on-one online classes offer something that group settings simply cannot: fully personalized instruction where the teacher's complete attention is on your child, every minute of every class. Many Dearborn families use Ease Quran to supplement local masjid programs, to access specific courses not available locally, or because their schedules simply don't align with local class times. The personalization advantage is real, regardless of where you live.",
+      "Even in Dearborn, with its exceptional local Islamic infrastructure, one-on-one online classes offer something that group settings simply cannot: fully personalized instruction where the teacher's complete attention is on your child, every minute of every class. The personalization advantage is real, regardless of where you live.",
   },
   {
     question: "Do you have teachers who speak Arabic for Dearborn's Arab community?",
@@ -137,7 +57,7 @@ const faqs = [
   {
     question: "Are your teachers certified from recognized Islamic institutions?",
     answer:
-      "Yes. All Ease Quran teachers hold certifications from Wifaq ul Madaris Al-Arabia, one of the most respected and recognized Islamic education boards in the world. Dearborn's Muslim community has high expectations when it comes to Islamic credentials, and we fully share that standard. Our teachers are trained scholars, not volunteers.",
+      "Yes. Every Ease Quran teacher holds a recognized Quran qualification. Dearborn's Muslim community has high expectations when it comes to Islamic credentials, and we fully share that standard. Our teachers are trained scholars, not volunteers.",
   },
   {
     question: "Do you also serve families in Dearborn Heights and surrounding Detroit suburbs?",
@@ -147,18 +67,24 @@ const faqs = [
   {
     question: "Is there a female teacher for my daughter or wife?",
     answer:
-      "Yes. Sister Almas Fatima, our certified Qaria e Quran with a B.A. in Islamic Studies, is available exclusively for sisters and children. Many Dearborn families, particularly from the Lebanese, Yemeni, and Iraqi communities where modesty is deeply valued, specifically request a female teacher for their daughters and wives. Simply indicate this preference when booking your free trial class.",
+      "Yes. Ask for a female teacher when you book the free trial, and we can arrange one at most times. The trial and every regular class are then taught by a female teacher.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function DearbornMichiganPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -191,7 +117,7 @@ export default function DearbornMichiganPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm text-center"
               >
-                Book Free Trial Class
+                Book Your Free Trial
               </Link>
               <a
                 href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Dearborn%20Michigan"
@@ -224,7 +150,7 @@ export default function DearbornMichiganPage() {
                 Dearborn, Michigan holds a unique distinction in American Muslim life: it is home to the highest concentration of Arab Americans and Muslims of any city in the United States. Over 40 percent of Dearborn's population is Muslim, making it an extraordinary environment where Islamic identity is not a minority experience but a deeply embedded part of daily civic life. The city's Muslim community is anchored by large Lebanese, Yemeni, and Iraqi communities, many of whom have been established in the Dearborn area for generations. The result is a city with an exceptionally dense network of Islamic centers, mosques, halal businesses, Arabic-language schools, and cultural organizations, a level of communal infrastructure that is unmatched in any other American city. Walking down Michigan Avenue in Dearborn, one encounters an almost unbroken string of halal restaurants, Islamic bookstores, and businesses serving the community's daily needs.
               </p>
               <p>
-                Yet even in Dearborn, despite its remarkable Islamic infrastructure, there are needs that the community setting cannot fully address. One-on-one Quran instruction, tailored to each child's individual pace and level, is difficult to find consistently in any group setting, no matter how well-resourced the local community. Many Dearborn parents find that their children benefit enormously from the focused attention of a private online Quran session, where there are no distractions, no need to keep pace with a classroom, and where every minute of every lesson is devoted entirely to their child's progress. For families in the Detroit metro suburbs beyond Dearborn itself. Dearborn Heights, Inkster, Westland, Canton, access to Dearborn's Islamic infrastructure requires a drive, and online instruction brings that quality education home.
+                Yet even in Dearborn, despite its remarkable Islamic infrastructure, there are needs that the community setting cannot fully address. One-on-one Quran instruction, tailored to each child's individual pace and level, is difficult to find consistently in any group setting, no matter how well-resourced the local community. For families in the Detroit metro suburbs beyond Dearborn itself. Dearborn Heights, Inkster, Westland, Canton, access to Dearborn's Islamic infrastructure requires a drive, and online instruction brings that quality education home.
               </p>
             </div>
           </div>
@@ -278,16 +204,14 @@ export default function DearbornMichiganPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <Link href="/pricing" className="block max-w-3xl mx-auto mb-12 bg-navy rounded-2xl px-6 py-4 text-center text-sm text-white hover:bg-navy/90 transition-colors">
-            <span className="font-semibold">Plans from $40/month</span>
-            <span className="text-white/70"> &middot; most families choose Steady at $55/month for 3 classes/week &middot; </span>
+            <span className="font-semibold">{startingPriceText}</span>
+            <span className="text-white/70"> &middot; </span>
             <span className="text-gold font-semibold">first class free &rarr;</span>
           </Link>
 
-          <FamilyReviews reviews={reviewsForSeed("dearborn-michigan")} heading="Real Students, Real Results" subline="Messages US families sent us on WhatsApp, shared with their permission." />
-
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-trial" className="bg-gold text-navy font-bold px-8 py-4 rounded-full hover:bg-gold-dark transition-colors text-sm text-center">
-              Book Free Trial Class
+              Book Your Free Trial
             </Link>
             <a href="https://wa.me/923195657389?text=Hi%20I%20am%20interested%20in%20online%20Quran%20classes%20in%20Dearborn%20Michigan" target="_blank" rel="noopener noreferrer" className="border-2 border-navy/20 text-navy font-semibold px-8 py-4 rounded-full hover:bg-offwhite transition-colors text-sm text-center">
               Chat on WhatsApp
@@ -355,27 +279,6 @@ export default function DearbornMichiganPage() {
         </div>
       </section>
 
-      {/* Near Me */}
-      <section className="section-padding bg-offwhite">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <span className="eyebrow mb-4">
-              Quran Classes Near You
-            </span>
-            <h2 className="heading-2 text-navy mb-6">
-              Looking for Quran Classes Near You in Dearborn?
-            </h2>
-            <p className="text-grey leading-relaxed">
-              If you have been searching for &ldquo;Quran classes near me&rdquo; in Dearborn, the best
-              teacher for your child may not be the closest one on the map. Because every Ease Quran
-              class is live and online, Dearborn families connect one-on-one with certified teachers
-              without driving anywhere. You get the convenience of a teacher right in your home, with
-              none of the commute, parking, or fixed group schedule of a local center.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <NearbyLocations slug="dearborn-michigan" />
 
       {/* FAQ */}
@@ -402,7 +305,7 @@ export default function DearbornMichiganPage() {
       <CTASection
         headline="Private Quran Education for Dearborn's Muslim Families"
         subtext="One-on-one, certified, and fully flexible. Ease Quran brings personal Quran instruction to every home in Dearborn and across the Detroit metro. Your first class is free."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
         whatsappText="Hi I am interested in online Quran classes in Dearborn Michigan"
       />

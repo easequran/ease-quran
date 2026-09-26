@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { CheckCircle } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
-import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Online Tajweed Classes USA",
   description:
-    "Master Tajweed online with certified Wifaq ul Madaris teachers. Learn proper Quran pronunciation and recitation. Free trial class available.",
+    "Learn Tajweed online with qualified teachers. Learn proper Quran pronunciation and recitation. Free trial class available.",
   alternates: {
     canonical: "https://easequran.com/courses/tajweed",
   },
   openGraph: {
     title: "Online Tajweed Classes | Learn Quran Recitation USA",
     description:
-      "Master Tajweed online with certified Wifaq ul Madaris teachers. Learn proper Quran pronunciation and recitation. Free trial class available.",
+      "Learn Tajweed online with qualified teachers. Learn proper Quran pronunciation and recitation. Free trial class available.",
     images: [{ url: "https://easequran.com/images/og-image.png", width: 1200, height: 630, alt: "Online Tajweed Classes, Ease Quran Academy" }],
   },
 };
@@ -37,7 +37,7 @@ const courseSchema = {
   "@type": "Course",
   name: "Online Tajweed Classes",
   description:
-    "Master Tajweed online with certified Wifaq ul Madaris teachers. Learn proper Quran pronunciation, Makharij, and all rules of Tajweed.",
+    "Learn Tajweed online with qualified teachers. Learn proper Quran pronunciation, Makharij, and all rules of Tajweed.",
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
@@ -170,7 +170,7 @@ export default function TajweedPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -206,8 +206,7 @@ export default function TajweedPage() {
                   words of Allah exactly as they were revealed to the Prophet Muhammad ﷺ.
                 </p>
                 <p>
-                  Our Tajweed course is taught by specialists certified from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>. The course
+                  Our Tajweed course is taught one-on-one by qualified teachers. The course
                   covers every major rule of Tajweed, from how to correctly position your
                   tongue for each Arabic letter (Makharij) to the rules of elongation (Madd),
                   stopping points (Waqf), and beautification of the voice.
@@ -410,7 +409,7 @@ export default function TajweedPage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Flexible monthly plans, no contracts, cancel anytime. Your first Tajweed class
@@ -441,15 +440,17 @@ export default function TajweedPage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="Tajweed Practice That Fits a Commuter's Week"
-        intro="Tajweed improves through short, regular sessions with a teacher correcting you as you recite. In metros where the drive to a class can take longer than the lesson itself, learning from home is what makes that regular practice realistic."
-        links={[
-          { slug: "new-york", reason: "long commutes between boroughs leave little time for in-person classes." },
-          { slug: "northern-virginia", reason: "Beltway traffic never stands between you and your lesson." },
-          { slug: "charlotte-north-carolina", reason: "early starts in banking and finance and heavier traffic every year make evening classes across town hard to keep." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -481,7 +482,7 @@ export default function TajweedPage() {
       <CTASection
         headline="Start Reciting the Quran Beautifully"
         subtext="Book your free Tajweed trial class today and hear the difference proper Tajweed makes in your recitation. No credit card, no commitment."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

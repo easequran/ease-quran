@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { hifzPlan } from "@/lib/pricing";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
 import { BookOpen, Heart, GraduationCap } from "lucide-react";
-import CourseLocations from "@/components/CourseLocations";
 
 export const metadata: Metadata = {
   title: "Online Hifz Program USA",
@@ -37,7 +37,7 @@ const courseSchema = {
   "@type": "Course",
   name: "Online Hifz Program: Quran Memorization",
   description:
-    "Structured online Hifz program for kids and adults. Proven sabaq, sabaqi, and manzil methodology with certified Wifaq ul Madaris teachers.",
+    "Structured online Hifz program for kids and adults. The traditional sabaq, sabaqi and manzil method with qualified teachers.",
   provider: {
     "@type": "Organization",
     name: "Ease Quran Online Academy",
@@ -50,58 +50,11 @@ const courseSchema = {
   availableLanguage: "English",
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How long does it take to complete Hifz online?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The timeline depends on the student's age, daily practice time, and number of classes per week. Children who attend 5 classes per week and practice daily typically complete Hifz in 3–5 years. Adults with 3 classes per week may take 5–8 years. However, the journey itself is deeply rewarding regardless of pace, and partial Hifz (memorizing 10–15 Juz) is also a meaningful achievement.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the minimum age for starting Hifz?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We recommend children be at least 7 years old and able to read the Quran fluently with basic Tajweed before beginning Hifz. Starting Hifz before a child can read properly often leads to frustration and weak memorization. We assess each child individually in the free trial class.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How many classes per week are needed for Hifz?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "For serious Hifz progress, we recommend 5 classes per week. This allows for new sabaq (lesson) daily while maintaining revision. A minimum of 3 classes per week is required for enrollment in the Hifz program. The student must also commit to daily self-practice of at least 30–45 minutes.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What if my child forgets memorized portions?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Forgetting is a normal part of Hifz, even the Sahaba experienced this. Our program uses the traditional sabaqi (recent lesson revision) and manzil (old lesson revision) system to protect memorized portions. The teacher monitors revision systematically and never allows too many days to pass without reviewing earlier Juz.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can adults complete Hifz online?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, many adults have completed or are working toward Hifz through Ease Quran. Adults typically take longer than children but have the advantage of stronger motivation and discipline. Our teachers use memory techniques specifically designed for non-Arabic speakers, making the process much more manageable for adult students.",
-      },
-    },
-  ],
-};
-
 const faqs = [
   {
     question: "How long does it take to complete Hifz online?",
     answer:
-      "The timeline depends on the student's age, daily practice time, and number of classes per week. Children who attend 5 classes per week and practice daily typically complete Hifz in 3–5 years. Adults with 3 classes per week may take 5–8 years. However, the journey itself is deeply rewarding regardless of pace, and partial Hifz (memorizing 10–15 Juz) is also a meaningful achievement.",
+      "It depends on the student's age, reading fluency and daily practice. A child with five classes a week who practises every day can often finish in three to five years. Adults usually take longer, often five to eight years. Memorizing part of the Quran, such as 10 or 15 Juz, is also a real achievement.",
   },
   {
     question: "What is the minimum age for starting Hifz?",
@@ -111,7 +64,7 @@ const faqs = [
   {
     question: "How many classes per week are needed for Hifz?",
     answer:
-      "For serious Hifz progress, we recommend 5 classes per week. This allows for new sabaq (lesson) daily while maintaining revision. A minimum of 3 classes per week is required for enrollment in the Hifz program. The student must also commit to daily self-practice of at least 30–45 minutes.",
+      `Hifz classes run five days a week, ${hifzPlan.minutes} minutes each, so there is a new lesson every day alongside revision. The student also needs to practise at home for at least 30 to 45 minutes a day.`,
   },
   {
     question: "What if my child forgets memorized portions?",
@@ -121,9 +74,19 @@ const faqs = [
   {
     question: "Can adults complete Hifz online?",
     answer:
-      "Yes, many adults have completed or are working toward Hifz through Ease Quran. Adults typically take longer than children but have the advantage of stronger motivation and discipline. Our teachers use memory techniques specifically designed for non-Arabic speakers, making the process much more manageable for adult students.",
+      "Yes. Adults usually take longer than children, but they bring motivation and discipline. Teachers use techniques that help non-Arabic speakers, such as learning the meaning of a passage and breaking long verses into shorter parts.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
+};
 
 export default function HifzPage() {
   return (
@@ -170,7 +133,7 @@ export default function HifzPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -207,9 +170,8 @@ export default function HifzPage() {
                   Day of Judgment.
                 </p>
                 <p>
-                  Our online Hifz program is taught by Muhammad Umair, a certified Hifz specialist
-                  from <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>. The program
-                  follows the traditional three-part daily system (sabaq, sabaqi, manzil) that has
+                  Our online Hifz program is taught one-on-one by a qualified Hifz teacher. The program
+              follows the traditional three-part daily system (sabaq, sabaqi, manzil) that has
                   produced millions of Huffaz over centuries, adapted for the schedules and
                   learning styles of students in the USA.
                 </p>
@@ -259,8 +221,8 @@ export default function HifzPage() {
                 { title: "Manzil (Old Lesson Revision)", desc: "Previously memorized Juz are regularly reviewed to prevent forgetting. The teacher assigns specific Juz for the student to recite from memory each week." },
                 { title: "Tajweed Integration During Memorization", desc: "Tajweed rules are applied throughout the Hifz process. Students do not memorize incorrect pronunciation, every verse is memorized with proper Tajweed from day one." },
                 { title: "Memory Techniques for Non-Arabic Speakers", desc: "Special methods for English-speaking students: understanding verse meaning, associating mental imagery, chunking long verses, and voice recording techniques." },
-                { title: "Test and Certification Milestones", desc: "Formal tests at each Juz completion, the student recites the Juz to the teacher from memory. Certificates are issued at 5, 10, 15, 20, 25, and 30 Juz milestones." },
-                { title: "Parent Progress Reports", desc: "Monthly written reports detail which Juz are memorized, which are in active revision, and the student's Tajweed quality. Parents are always informed of their child's progress." },
+                { title: "Juz Tests", desc: "When a Juz is complete, the student recites it to the teacher from memory. A certificate is given when the whole Quran has been memorized." },
+                { title: "Progress Updates", desc: "Ask at any time and the teacher will tell you which Juz are memorized, which are in revision, and how the student's Tajweed is coming along." },
               ].map((item) => (
                 <div
                   key={item.title}
@@ -351,11 +313,11 @@ export default function HifzPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 { title: "Daily Class Structure", desc: "Every class follows three stages: (1) Manzil, student recites old lessons from memory. (2) Sabaqi, student recites recent lessons. (3) Sabaq, teacher presents the new lesson and the student memorizes with teacher guidance." },
-                { title: "Recommended Frequency", desc: "5 classes per week is strongly recommended for serious Hifz students. 3 classes per week is the minimum. Daily self-practice of 30–60 minutes between classes is essential." },
-                { title: "Class Duration", desc: "Hifz classes run 45–60 minutes per session. Younger children may begin at 30 minutes and increase as their stamina develops. Each session is intensive and focused." },
+                { title: "Five Days a Week", desc: "Hifz classes run five days a week. Daily practice of 30 to 60 minutes between classes is essential." },
+                { title: "45-Minute Classes", desc: `Each class is ${hifzPlan.minutes} minutes, which leaves time for old revision, recent revision and the new lesson.` },
                 { title: "Tajweed During Memorization", desc: "The teacher corrects Tajweed errors during every recitation. A verse memorized with wrong pronunciation is harder to fix later, we ensure accuracy from the first repetition." },
                 { title: "Self-Practice Guidance", desc: "The teacher provides a precise daily practice schedule. Students are guided on how to repeat new lessons, protect recent lessons, and cycle through old lessons at home." },
-                { title: "Milestone Celebrations", desc: "Completing each Juz is a significant achievement. We conduct formal milestone tests and issue certificates, creating motivation and a sense of accomplishment throughout the multi-year journey." },
+                { title: "Milestones", desc: "Each completed Juz is tested and celebrated, and a certificate is given when the whole Quran is memorized." },
               ].map((item) => (
                 <div key={item.title} className="bg-white/5 rounded-xl p-6 border border-white/10">
                   <h3 className="font-semibold text-gold text-sm mb-2">{item.title}</h3>
@@ -405,11 +367,11 @@ export default function HifzPage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              Hifz Intensive: ${hifzPlan.price} for {hifzPlan.classesPerPackage} Classes
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
-              Begin the greatest journey of your child&apos;s life. Book a free assessment class
-              and let our teacher evaluate readiness for the Hifz program. No credit card required.
+              Five {hifzPlan.minutes}-minute classes a week, billed per package of classes. Book a
+              free trial class first and the teacher will check whether the student is ready for Hifz.
             </p>
             <Link
               href="/pricing"
@@ -436,15 +398,17 @@ export default function HifzPage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="Hifz Without the Long Drive"
-        intro="Hifz depends on showing up nearly every day, and distance is often what quietly breaks that rhythm. For families who live far from a structured Hifz program, a daily online class removes the drive and keeps the sabaq and revision on track."
-        links={[
-          { slug: "jackson-mississippi", reason: "many families here would otherwise face a multi-hour drive to a larger city for structured Islamic education." },
-          { slug: "little-rock-arkansas", reason: "local options are limited, and some families have looked as far as Memphis or Dallas." },
-          { slug: "alaska", reason: "outside Anchorage, some towns have no mosque for hundreds of miles, so daily memorization practice has to happen at home." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -479,7 +443,7 @@ export default function HifzPage() {
       <CTASection
         headline="Begin Your Child's Hifz Journey Today"
         subtext="A free assessment class lets our teacher evaluate your child's readiness and create a personalized Hifz plan. This is the first step toward one of the greatest honors in Islam."
-        primaryCta="Book Free Assessment Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>

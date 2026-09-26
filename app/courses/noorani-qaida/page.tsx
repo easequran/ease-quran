@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { startingPriceText } from "@/lib/pricing";
 import { User, BookOpen } from "lucide-react";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
 import TeacherCard from "@/components/TeacherCard";
-import CourseLocations from "@/components/CourseLocations";
 import FamilyReviews from "@/components/FamilyReviews";
 import { reviewsForCourse } from "@/lib/reviews";
 
@@ -172,7 +172,7 @@ export default function NooraniQaidaPage() {
                 href="/free-trial"
                 className="bg-gold text-navy font-bold px-7 py-3.5 rounded-full hover:bg-gold-dark transition-all duration-200 text-sm"
               >
-                Book Free Trial
+                Book Your Free Trial
               </Link>
               <a
                 href={`https://wa.me/923195657389?text=${encodeURIComponent(
@@ -209,11 +209,9 @@ export default function NooraniQaidaPage() {
                 </p>
                 <p>
                   Our online Noorani Qaida course follows this proven curriculum, taught entirely
-                  in English by teachers certified from{" "}
-                  <strong className="text-navy">Wifaq ul Madaris Al-Arabia</strong>. Whether
-                  your student is a 4-year-old being introduced to Arabic for the first time, an
-                  adult who has always wanted to read the Quran, or a revert Muslim starting from
-                  scratch. This course meets you exactly where you are.
+              in English by qualified teachers. The student might be a 4-year-old meeting
+              Arabic letters for the first time, an adult who has always wanted to read the
+              Quran, or a new Muslim starting from scratch. The course starts where they are.
                 </p>
                 <p>
                   Female teachers are available for sisters and children upon request. All classes
@@ -427,7 +425,7 @@ export default function NooraniQaidaPage() {
               Affordable Plans
             </span>
             <h2 className="font-playfair font-bold text-3xl text-white mb-4">
-              Plans Starting at $40/Month
+              {startingPriceText}
             </h2>
             <p className="text-white/70 text-sm leading-relaxed mb-8 max-w-xl mx-auto">
               Start your Quran journey today with a free first class. No credit card, no commitment.
@@ -458,15 +456,17 @@ export default function NooraniQaidaPage() {
         </div>
       </section>
 
-      <CourseLocations
-        heading="A First Step for Families in Growing Communities"
-        intro="Noorani Qaida is where most children and new learners begin. In fast-growing communities, families who have just moved often do not know yet where to find a teacher, and online lessons mean a child can start straight away."
-        links={[
-          { slug: "charlotte-north-carolina", reason: "a young, fast-growing community where you do not need a local network in place before your child starts." },
-          { slug: "atlanta", reason: "one of the fastest-growing Muslim communities in the South." },
-          { slug: "denver-colorado", reason: "a community shaped by resettlement and new arrivals." },
-        ]}
-      />
+      <section className="py-10 bg-white">
+        <div className="container-custom text-center">
+          <p className="text-grey text-sm">
+            Classes are arranged around the days and times you choose, in your own time zone.{" "}
+            <Link href="/locations" className="text-gold font-semibold hover:underline">
+              See how scheduling works where you live
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
 
       {/* Related Courses */}
       <section className="section-padding bg-offwhite">
@@ -498,7 +498,7 @@ export default function NooraniQaidaPage() {
       <CTASection
         headline="Take Your First Step Toward the Quran"
         subtext="Book a free Noorani Qaida trial class today. Your first lesson is completely free, no credit card, no commitment. Just the beginning of something beautiful."
-        primaryCta="Book Free Trial Class"
+        primaryCta="Book Your Free Trial"
         primaryHref="/free-trial"
       />
     </>
